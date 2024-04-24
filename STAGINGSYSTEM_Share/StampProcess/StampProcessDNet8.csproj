@@ -48,5 +48,8 @@
     <Reference Include="System.Printing">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.4\System.Printing.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.4\WindowsBase.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
