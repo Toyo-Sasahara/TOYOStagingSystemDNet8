@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PrinterConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <VERSION>VER1023</VERSION>
+  <PrinterName>DocuCentre-V5080</PrinterName>
+  <PrinterSettings>
+    <PaperSize>
+      <CommonPaperSize>A0L</CommonPaperSize>
+      <PaperName>A0 (841 x 1189 mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A0P</CommonPaperSize>
+      <PaperName>A0 (841 x 1189 mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A1L</CommonPaperSize>
+      <PaperName>A1 (594x841mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A1P</CommonPaperSize>
+      <PaperName>A1 (594x841mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A2L</CommonPaperSize>
+      <PaperName>A2 (420x594mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A2P</CommonPaperSize>
+      <PaperName>A2 (420x594mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A3L</CommonPaperSize>
+      <PaperName>A3 (297x420mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>-7</Xoffset>
+      <Yoffset>-7</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A3P</CommonPaperSize>
+      <PaperName>A3 (297x420mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>-7</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A4L</CommonPaperSize>
+      <PaperName>A4 (210x297mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>-100</Xoffset>
+      <Yoffset>-7</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A4P</CommonPaperSize>
+      <PaperName>A4 (210x297mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>-6</Xoffset>
+      <Yoffset>-4</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+  </PrinterSettings>
+</PrinterConfig>

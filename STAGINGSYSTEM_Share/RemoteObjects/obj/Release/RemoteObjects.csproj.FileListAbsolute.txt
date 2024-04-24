@@ -1,0 +1,15 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\SasaLib Version.txt
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\ToyoMcMfg.Staging.RemoteObjects.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\ToyoMcMfg.Staging.RemoteObjects.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\FieldValueSet.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\SasaLib.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\FieldValueSet.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\SasaLib.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\SasaLib.dll.config
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\Release\RemoteObjects.csproj.AssemblyReference.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\Release\RemoteObjects.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\Release\ToyoMcMfg.Staging.RemoteObjects.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\Release\ToyoMcMfg.Staging.RemoteObjects.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\Release\RemoteOb.0E727741.Up2Date
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\SasaLibDelegateWriteLine.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\Release\SasaLibDelegateWriteLine.pdb

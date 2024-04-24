@@ -1,0 +1,14 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\CommonTicketClassLibrary.DNet8.csproj.AssemblyReference.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\CommonTicketClassLibrary.DNet8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\CommonTicketClassLibrary.DNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Debug\net8.0\CommonTicketClassLibrary.DNet8.dll.config
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Debug\net8.0\CommonTicketClassLibrary.DNet8.deps.json
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Debug\net8.0\CommonTicketClassLibrary.DNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Debug\net8.0\CommonTicketClassLibrary.DNet8.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Debug\net8.0\SasaLibDelegateWriteLine.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Debug\net8.0\SasaLibDelegateWriteLine.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\CommonTi.84764F58.Up2Date
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\CommonTicketClassLibrary.DNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\refint\CommonTicketClassLibrary.DNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\CommonTicketClassLibrary.DNet8.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0\ref\CommonTicketClassLibrary.DNet8.dll

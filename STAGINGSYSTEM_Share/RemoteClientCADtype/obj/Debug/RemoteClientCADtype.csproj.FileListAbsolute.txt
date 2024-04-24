@@ -1,0 +1,19 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\SasaLib Version.txt
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\RemoteClientCADtype.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\RemoteClientCADtype.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\DefineCOMDS.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\SasaLib.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\SasaLibDelegateWriteLine.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\ToyoMcMfg.Staging.RemoteObjects.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\FieldValueSet.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\SasaLibDelegateWriteLine.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\ToyoMcMfg.Staging.RemoteObjects.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\SasaLib.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\SasaLib.dll.config
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\DefineCOMDS.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\FieldValueSet.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\RemoteClientCADtype.csproj.AssemblyReference.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\RemoteClientCADtype.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\RemoteCl.58E692B6.Up2Date
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\RemoteClientCADtype.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\RemoteClientCADtype.pdb

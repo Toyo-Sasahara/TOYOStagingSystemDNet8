@@ -1,0 +1,15 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\SasaLib Version.txt
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\ToyoMcMfg.Staging.RemoteObjects.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\ToyoMcMfg.Staging.RemoteObjects.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\FieldValueSet.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\SasaLibDelegateWriteLine.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\SasaLib.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\SasaLibDelegateWriteLine.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\FieldValueSet.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\SasaLib.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\bin\x64\Debug\SasaLib.dll.config
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\x64\Debug\RemoteObjects.csproj.AssemblyReference.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\x64\Debug\RemoteObjects.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\x64\Debug\RemoteOb.0E727741.Up2Date
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\x64\Debug\ToyoMcMfg.Staging.RemoteObjects.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\obj\x64\Debug\ToyoMcMfg.Staging.RemoteObjects.pdb

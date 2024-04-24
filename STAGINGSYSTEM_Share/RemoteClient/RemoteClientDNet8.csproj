@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Deterministic>false</Deterministic>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <Deterministic>false</Deterministic>
+	  <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AssemblyTitle>RemoteClient</AssemblyTitle>
+    <Product>RemoteClient</Product>
+    <Copyright>Copyright ©  2018</Copyright>
+    <InformationalVersion>RemoteClient 1.22.08.xx [.NET Framework 4.8]</InformationalVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
+    <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+    <ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
+    <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
+    <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
+</Project>

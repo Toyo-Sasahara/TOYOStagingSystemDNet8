@@ -1,0 +1,9 @@
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\bin\Debug\DefineCOMDS.dll
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\bin\Debug\DefineCOMDS.pdb
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\bin\Debug\SasaLibDelegateWriteLine.dll
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\bin\Debug\SasaLibDelegateWriteLine.pdb
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Debug\DefineCOMDS.csproj.AssemblyReference.cache
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Debug\DefineCOMDS.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Debug\DefineCO.DC580586.Up2Date
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Debug\DefineCOMDS.dll
+C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Debug\DefineCOMDS.pdb

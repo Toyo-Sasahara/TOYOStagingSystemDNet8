@@ -1,0 +1,11 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\bin\Release\SasaLib Version.txt
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\bin\Release\StageServerConfig.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\bin\Release\StageServerConfig.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\bin\Release\SasaLib.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\bin\Release\SasaLib.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\bin\Release\SasaLib.dll.config
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\obj\Release\StageServerConfig.csproj.AssemblyReference.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\obj\Release\StageServerConfig.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\obj\Release\StageServerConfig.csproj.CopyComplete
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\obj\Release\StageServerConfig.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\obj\Release\StageServerConfig.pdb

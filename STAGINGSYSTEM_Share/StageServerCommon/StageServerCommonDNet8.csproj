@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ToyoStageService</RootNamespace>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+    <AssemblyTitle>ToyoMcMfg.Staging</AssemblyTitle>
+    <Product>ToyoMcMfg.Staging</Product>
+    <Copyright>Copyright ©  2018</Copyright>
+    <InformationalVersion>ToyoMcMfg.Staging 1.22.08.xx [.NET Framework 4.8]</InformationalVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.Barcode\SasaLibDNet8.Barcode.csproj" />
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.NumberingSupport\SasaLibDNet8.NumberingSupport.csproj" />
+    <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
+    <ProjectReference Include="..\CommonTicketClassLibrary\CommonTicketClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+    <ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
+    <ProjectReference Include="..\GenerateTIFFdrawing\GenerateTIFFdrawingDNet8.csproj" />
+    <ProjectReference Include="..\MailNotice\MailNoticeDNet8.csproj" />
+    <ProjectReference Include="..\PrintService\StageServerPrinterServiceDNet8.csproj" />
+    <ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
+    <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
+    <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
+    <ProjectReference Include="..\TitleFieldPosition\TitleFieldPositionDNet8.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CreateNewDB.sql" />
+    <Content Include="設定ファイル\Drive-C,ProgramData\TOYOCOMMON\BarcodeConf.XML" />
+    <Content Include="設定ファイル\Drive-C,ProgramData\TOYOCOMMON\StampConf.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ObjectLock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Printing">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.4\System.Printing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

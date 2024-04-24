@@ -1,0 +1,11 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Release\SasaLib Version.txt
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Release\GenerateTIFFdrawing.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Release\GenerateTIFFdrawing.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Release\SasaLib.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Release\SasaLib.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Release\SasaLib.dll.config
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Release\GenerateTIFFdrawing.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Release\GenerateTIFFdrawing.csproj.CopyComplete
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Release\GenerateTIFFdrawing.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Release\GenerateTIFFdrawing.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Release\GenerateTIFFdrawing.csproj.AssemblyReference.cache

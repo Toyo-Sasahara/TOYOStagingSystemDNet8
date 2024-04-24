@@ -1,0 +1,30 @@
+﻿2022-09-17
+[assembly: AssemblyInformationalVersion("SasaLib 1.22.08.xx [.NET Framework 4.8]")]
+[assembly: AssemblyVersion("1.22.08.14")]
+[assembly: AssemblyFileVersion("1.22.08.14")]
+
+
+2022-08-19
+[assembly: AssemblyInformationalVersion("SasaLib 1.22.08.xx [.NET Framework 4.8]")]
+[assembly: AssemblyVersion("1.22.08.06")]
+[assembly: AssemblyFileVersion("1.22.08.06")]
+
+2022-08-13 master Version を　1.22.08.04 に統一
+2022-08-13 master SasaLib stdole.dll を7.0.3300.0にバージョンダウン、
+
+2022-08-08 master Visual Studio 2022 に対応したブランチを統合した
+[assembly: AssemblyInformationalVersion("SasaLib 1.22.08.xx [.NET Framework 4.8]")]
+[assembly: AssemblyVersion("1.22.08.01")]
+[assembly: AssemblyFileVersion("1.22.08.01")]
+
+
+2022-03-05
+[assembly: AssemblyVersion("1.22.03.04")]
+[assembly: AssemblyFileVersion("1.22.03.04")]
+[assembly: AssemblyInformationalVersion("1.22.03.04 [.NET Framework 4.8]")]
+
+2021-09-04 FileVersion 1.21.09.04 .NET Framework 4.6.19
+
+2021-08-09 FileVersion 1.21.08.09 .NET Framework 4.6.1
+
+2020-12-20 FileVersion 1.21.07.29 .NET Framework 4.6.1

@@ -1,0 +1,442 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BE14356-60C6-4AAB-BC0E-96E2D06CB30C}|..\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj|c:\\users\\sasahara\\source\\repos\\sasalibdnet8\\sasalibdnet8\\pipelib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FCA8D1-A0BB-447F-A341-A4BBCFCAF713}|STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stampprocess\\stampconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FCA8D1-A0BB-447F-A341-A4BBCFCAF713}|STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj|solutionrelative:stagingsystem_share\\stampprocess\\stampconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FCA8D1-A0BB-447F-A341-A4BBCFCAF713}|STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stampprocess\\stampprocessdnet8.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{63FCA8D1-A0BB-447F-A341-A4BBCFCAF713}|STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj|solutionrelative:stagingsystem_share\\stampprocess\\stampprocessdnet8.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\remoteservercommand_showprinterqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\remoteservercommand_showprinterqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BEC020B-F998-4880-A756-292AAEC81825}|STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\printservice\\printerstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BEC020B-F998-4880-A756-292AAEC81825}|STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj|solutionrelative:stagingsystem_share\\printservice\\printerstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\pipeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\pipeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BE14356-60C6-4AAB-BC0E-96E2D06CB30C}|..\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj|c:\\users\\sasahara\\source\\repos\\sasalibdnet8\\sasalibdnet8\\clslogondummy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\remoteclient\\remoteclientdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|solutionrelative:stagingsystem_share\\remoteclient\\remoteclientdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\remoteservercommand_titlefieldtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\remoteservercommand_titlefieldtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\memorymapdfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\memorymapdfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\databaseinsert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\databaseinsert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\databaseupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\databaseupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\databasedelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\databasedelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BEC020B-F998-4880-A756-292AAEC81825}|STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\printservice\\printerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BEC020B-F998-4880-A756-292AAEC81825}|STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj|solutionrelative:stagingsystem_share\\printservice\\printerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BE14356-60C6-4AAB-BC0E-96E2D06CB30C}|..\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj|c:\\users\\sasahara\\source\\repos\\sasalibdnet8\\sasalibdnet8\\withfakeaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BEC020B-F998-4880-A756-292AAEC81825}|STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\printservice\\stageserverprinterservicednet8.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{2BEC020B-F998-4880-A756-292AAEC81825}|STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj|solutionrelative:stagingsystem_share\\printservice\\stageserverprinterservicednet8.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1365,
+          "SelectedChildIndex": 35,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3822e751-eb69-4b0e-b301-595a9e4c74d5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:10:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:18:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StampProcessDNet8",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-24T17:01:55.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StampConfig.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampConfig.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StampProcess\\StampConfig.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampConfig.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StampProcess\\StampConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:59:10.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PipeLib.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\PipeLib.cs",
+              "RelativeDocumentMoniker": "..\\SasaLibDNet8\\SasaLibDNet8\\PipeLib.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\PipeLib.cs",
+              "RelativeToolTip": "..\\SasaLibDNet8\\SasaLibDNet8\\PipeLib.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:56:39.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RemoteServerCommand_ShowPrinterQueue.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_ShowPrinterQueue.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_ShowPrinterQueue.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_ShowPrinterQueue.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_ShowPrinterQueue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:49:43.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RemoteClientDataBase.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAMwHAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:48:54.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClsLogonDummy.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "RelativeDocumentMoniker": "..\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "RelativeToolTip": "..\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:48:47.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PrinterStatuses.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\PrinterStatuses.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\PrintService\\PrinterStatuses.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\PrinterStatuses.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\PrintService\\PrinterStatuses.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAASwI8AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:40:26.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RemoteServerCommand_TitleFieldTest.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_TitleFieldTest.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_TitleFieldTest.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_TitleFieldTest.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\RemoteServerCommand_TitleFieldTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:48:18.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PIPEClient.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\PIPEClient.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\PIPEClient.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\PIPEClient.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\PIPEClient.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAewEsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:48:10.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MemoryMapdFile.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\MemoryMapdFile.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\MemoryMapdFile.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\MemoryMapdFile.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\MemoryMapdFile.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAewDwAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:47:13.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataBaseInsert.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseInsert.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseInsert.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseInsert.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseInsert.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:47:06.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataBaseUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseUpdate.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseUpdate.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseUpdate.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseUpdate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:47:01.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:46:38.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataBaseDelete.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseDelete.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseDelete.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseDelete.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseDelete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:46:22.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WithFakeAccount.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\WithFakeAccount.cs",
+              "RelativeDocumentMoniker": "..\\SasaLibDNet8\\SasaLibDNet8\\WithFakeAccount.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\WithFakeAccount.cs",
+              "RelativeToolTip": "..\\SasaLibDNet8\\SasaLibDNet8\\WithFakeAccount.cs",
+              "ViewState": "AQIAAA4BAAAAAAAAAAAQwCcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:43:58.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PrinterService.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\PrinterService.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\PrintService\\PrinterService.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\PrinterService.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\PrintService\\PrinterService.cs",
+              "ViewState": "AQIAAA0BAAAAAAAAAAAhwB4BAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T16:43:25.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StageServerPrinterServiceDNet8",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-24T16:40:02.505Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 426,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<OutputType>Library</OutputType>
+		<RootNamespace>StagingSystemTools</RootNamespace>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Deterministic>false</Deterministic>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<AssemblyTitle>GenerateTIFFdrawing</AssemblyTitle>
+		<Description>GenerateTIFFdrawing</Description>
+		<Company>東陽機械製作所 技術開発部CAD運用管理</Company>
+		<Product>Commitシステム関連 TIFFイメージコンバーター</Product>
+		<Copyright>Copyright ©  2018,2019,2020,2021 東陽機械製作所 技術開発部CAD運用管理</Copyright>
+		<InformationalVersion>GenerateTIFFdrawing 1.22.08.xx [.NET Framework 4.8]</InformationalVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+		<ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+	</ItemGroup>
+  <Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
+</Project>
