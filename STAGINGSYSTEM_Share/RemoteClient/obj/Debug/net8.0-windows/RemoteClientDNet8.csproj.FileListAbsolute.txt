@@ -132,6 +132,7 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Remot
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClient\obj\Debug\net8.0-windows\RemoteClientDNet8.csproj.AssemblyReference.cache
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClient\obj\Debug\net8.0-windows\RemoteClientDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClient\obj\Debug\net8.0-windows\RemoteClientDNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClient\obj\Debug\net8.0-windows\RemoteClientDNet8.sourcelink.json
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClient\obj\Debug\net8.0-windows\ILLink.Substitutions.xml
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClient\obj\Debug\net8.0-windows\RemoteCl.932557FA.Up2Date
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClient\obj\Debug\net8.0-windows\RemoteClientDNet8.dll

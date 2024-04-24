@@ -33,6 +33,7 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Commo
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.NumberingSupport.dll.config
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDelegateWriteLine.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.PictureBoxControlLibrary.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\CommonTicketClassLibraryDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\CommonTicketClassLibraryDNet8.dll.config
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\FieldValueSetDNet8.pdb
@@ -40,7 +41,6 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Commo
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\RemoteClientDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.PictureBoxControlLibrary.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\cs\PresentationCore.resources.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\de\PresentationCore.resources.dll
@@ -155,6 +155,7 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Commo
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\obj\Debug\net8.0-windows\CommonCommitLogicDNet8.csproj.GenerateResource.cache
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\obj\Debug\net8.0-windows\CommonCommitLogicDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\obj\Debug\net8.0-windows\CommonCommitLogicDNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\obj\Debug\net8.0-windows\CommonCommitLogicDNet8.sourcelink.json
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\obj\Debug\net8.0-windows\ILLink.Substitutions.xml
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\obj\Debug\net8.0-windows\CommonCo.54F26E49.Up2Date
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonCommitLogic\obj\Debug\net8.0-windows\CommonCommitLogicDNet8.dll

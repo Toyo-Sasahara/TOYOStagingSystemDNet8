@@ -2,3 +2,4 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Stamp
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.csproj.AssemblyReference.cache
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.sourcelink.json

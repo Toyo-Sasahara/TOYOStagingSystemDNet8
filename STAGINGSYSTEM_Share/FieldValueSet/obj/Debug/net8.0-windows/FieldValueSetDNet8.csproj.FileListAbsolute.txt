@@ -137,6 +137,7 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Field
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\obj\Debug\net8.0-windows\FieldValueSetDNet8.csproj.AssemblyReference.cache
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\obj\Debug\net8.0-windows\FieldValueSetDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\obj\Debug\net8.0-windows\FieldValueSetDNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\obj\Debug\net8.0-windows\FieldValueSetDNet8.sourcelink.json
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\obj\Debug\net8.0-windows\ILLink.Substitutions.xml
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\obj\Debug\net8.0-windows\FieldVal.FBE2C086.Up2Date
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\obj\Debug\net8.0-windows\FieldValueSetDNet8.dll

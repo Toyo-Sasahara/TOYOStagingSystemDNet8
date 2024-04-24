@@ -7,6 +7,7 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Commo
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0-windows\CommonTicketClassLibraryDNet8.csproj.AssemblyReference.cache
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0-windows\CommonTicketClassLibraryDNet8.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0-windows\CommonTicketClassLibraryDNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0-windows\CommonTicketClassLibraryDNet8.sourcelink.json
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0-windows\CommonTi.1A8F269D.Up2Date
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0-windows\CommonTicketClassLibraryDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Debug\net8.0-windows\refint\CommonTicketClassLibraryDNet8.dll

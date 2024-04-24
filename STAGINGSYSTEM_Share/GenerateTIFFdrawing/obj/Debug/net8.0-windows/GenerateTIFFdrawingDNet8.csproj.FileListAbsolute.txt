@@ -130,3 +130,4 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Gener
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Debug\net8.0-windows\refint\GenerateTIFFdrawingDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Debug\net8.0-windows\GenerateTIFFdrawingDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Debug\net8.0-windows\ref\GenerateTIFFdrawingDNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Debug\net8.0-windows\GenerateTIFFdrawingDNet8.sourcelink.json
