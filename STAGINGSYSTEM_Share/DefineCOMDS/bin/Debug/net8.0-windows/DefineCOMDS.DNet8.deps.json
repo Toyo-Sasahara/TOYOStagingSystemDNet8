@@ -31,14 +31,6 @@
         "runtime": {
           "SasaLibDelegateWriteLine.dll": {}
         }
-      },
-      "SasaLib/1.24.4.162": {
-        "runtime": {
-          "SasaLib.dll": {
-            "assemblyVersion": "1.24.4.162",
-            "fileVersion": "1.24.4.162"
-          }
-        }
       }
     }
   },
@@ -69,11 +61,6 @@
     },
     "SasaLib.DelegateWriteLine/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SasaLib/1.24.4.162": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

@@ -33,16 +33,16 @@ build_property.UnoDisableHotRestartHelperGeneration =
 build_property.RuntimeIdentifier = 
 build_property.UnoRuntimeIdentifier = 
 build_property.UnoHotReloadMode = 
-build_property.SolutionFileName = TOYOSTAGINGSYSTEM.DNet8.sln
+build_property.SolutionFileName = AutocadTOYOaddinCommitDNet8.sln
 build_property.LangName = ja-JP
 build_property.LangID = 1041
-build_property.SolutionDir = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\
+build_property.SolutionDir = C:\Users\sasahara\source\repos\AutocadTOYOaddinCommitDNet8\
 build_property.SolutionExt = .sln
 build_property.UseHostCompilerIfAvailable = false
 build_property.DefineExplicitDefaults = true
 build_property.Platform = AnyCPU
-build_property.SolutionPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\TOYOSTAGINGSYSTEM.DNet8.sln
-build_property.SolutionName = TOYOSTAGINGSYSTEM.DNet8
+build_property.SolutionPath = C:\Users\sasahara\source\repos\AutocadTOYOaddinCommitDNet8\AutocadTOYOaddinCommitDNet8.sln
+build_property.SolutionName = AutocadTOYOaddinCommitDNet8
 build_property.VSIDEResolvedNonMSBuildProjectOutputs = <VSIDEResolvedNonMSBuildProjectOutputs />
 build_property.DevEnvDir = C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\
 build_property.UseWPF = 
@@ -89,4 +89,36 @@ build_metadata.AdditionalFiles.Link =
 build_metadata.AdditionalFiles.TargetPath = 
 build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj
 build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj
+build_metadata.AdditionalFiles.XamlRuntime = 
+
+[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/RemoteClientCADtype/RemoteClientCADtypeDNet8.csproj]
+build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj
+build_metadata.AdditionalFiles.XamlRuntime = 
+
+[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/DefineCOMDS/DefineCOMDS.DNet8.csproj]
+build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\DefineCOMDS\DefineCOMDS.DNet8.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\DefineCOMDS\DefineCOMDS.DNet8.csproj
+build_metadata.AdditionalFiles.XamlRuntime = 
+
+[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM/STAGINGSYSTEM_Share/FieldValueSet/FieldValueSet.csproj]
+build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj
+build_metadata.AdditionalFiles.XamlRuntime = 
+
+[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/RemoteObjects/RemoteObjectsDNet8.csproj]
+build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsDNet8.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsDNet8.csproj
 build_metadata.AdditionalFiles.XamlRuntime = 

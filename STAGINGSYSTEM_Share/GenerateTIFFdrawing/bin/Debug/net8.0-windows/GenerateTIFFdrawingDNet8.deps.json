@@ -9,9 +9,11 @@
       "GenerateTIFFdrawingDNet8/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
+          "RemoteClientCADtypeDNet8": "1.0.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
-          "System.Data.DataSetExtensions": "4.5.0"
+          "System.Data.DataSetExtensions": "4.5.0",
+          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.27744"
         },
         "runtime": {
           "GenerateTIFFdrawingDNet8.dll": {}
@@ -638,6 +640,38 @@
           }
         }
       },
+      "DefineCOMDS.DNet8/1.0.0": {
+        "dependencies": {
+          "FieldValueSet": "1.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "SasaLib.DelegateWriteLine": "1.0.0",
+          "System.Data.DataSetExtensions": "4.5.0"
+        },
+        "runtime": {
+          "DefineCOMDS.DNet8.dll": {}
+        }
+      },
+      "FieldValueSet/1.0.0": {
+        "dependencies": {
+          "SasaLib.DelegateWriteLine": "1.0.0"
+        },
+        "runtime": {
+          "FieldValueSet.dll": {}
+        }
+      },
+      "RemoteClientCADtypeDNet8/1.0.0": {
+        "dependencies": {
+          "DefineCOMDS.DNet8": "1.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "SasaLib.DelegateWriteLine": "1.0.0",
+          "SasaLibDNet8": "1.0.0",
+          "System.Data.DataSetExtensions": "4.5.0",
+          "ToyoMcMfg.Staging.RemoteObjects": "1.0.0"
+        },
+        "runtime": {
+          "RemoteClientCADtypeDNet8.dll": {}
+        }
+      },
       "SasaLib.DelegateWriteLine/1.0.0": {
         "runtime": {
           "SasaLibDelegateWriteLine.dll": {}
@@ -666,6 +700,7 @@
           "System.ObjectModel": "4.3.0",
           "System.Runtime.Extensions": "4.3.1",
           "System.Runtime.Handles": "4.3.0",
+          "System.Threading": "4.3.0",
           "System.Windows.Extensions": "8.0.0",
           "Uno.UI": "5.3.0-dev.422",
           "runtime.native.System.IO.Compression": "4.3.2",
@@ -986,6 +1021,26 @@
           },
           "zh-Hant/PresentationUI.resources.dll": {
             "locale": "zh-Hant"
+          }
+        }
+      },
+      "ToyoMcMfg.Staging.RemoteObjects/1.0.0": {
+        "dependencies": {
+          "FieldValueSet": "1.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "SasaLib.DelegateWriteLine": "1.0.0",
+          "SasaLibDNet8": "1.0.0",
+          "System.Data.DataSetExtensions": "4.5.0"
+        },
+        "runtime": {
+          "ToyoMcMfg.Staging.RemoteObjects.dll": {}
+        }
+      },
+      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.27744": {
+        "runtime": {
+          "ToyoMcMfg.Staging.RemoteObjects.dll": {
+            "assemblyVersion": "1.24.424.27744",
+            "fileVersion": "1.24.424.27744"
           }
         }
       },
@@ -1903,6 +1958,21 @@
       "path": "uno.ui/5.3.0-dev.422",
       "hashPath": "uno.ui.5.3.0-dev.422.nupkg.sha512"
     },
+    "DefineCOMDS.DNet8/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FieldValueSet/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RemoteClientCADtypeDNet8/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "SasaLib.DelegateWriteLine/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1910,6 +1980,16 @@
     },
     "SasaLibDNet8/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ToyoMcMfg.Staging.RemoteObjects/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.27744": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

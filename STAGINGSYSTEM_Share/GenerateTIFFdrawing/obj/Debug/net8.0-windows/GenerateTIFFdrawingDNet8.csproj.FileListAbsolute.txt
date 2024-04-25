@@ -131,3 +131,11 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Gener
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Debug\net8.0-windows\refint\GenerateTIFFdrawingDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Debug\net8.0-windows\GenerateTIFFdrawingDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\obj\Debug\net8.0-windows\ref\GenerateTIFFdrawingDNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\FieldValueSet.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\RemoteClientCADtypeDNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\RemoteClientCADtypeDNet8.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\FieldValueSet.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.pdb

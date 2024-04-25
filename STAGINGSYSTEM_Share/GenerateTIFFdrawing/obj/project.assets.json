@@ -1248,6 +1248,52 @@
           "buildTransitive/net7.0-windows/Uno.UI.targets": {}
         }
       },
+      "DefineCOMDS.DNet8/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FieldValueSet": "1.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "SasaLib.DelegateWriteLine": "1.0.0",
+          "System.Data.DataSetExtensions": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/DefineCOMDS.DNet8.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DefineCOMDS.DNet8.dll": {}
+        }
+      },
+      "FieldValueSet/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "SasaLib.DelegateWriteLine": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FieldValueSet.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FieldValueSet.dll": {}
+        }
+      },
+      "RemoteClientCADtypeDNet8/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "DefineCOMDS.DNet8": "1.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "SasaLib.DelegateWriteLine": "1.0.0",
+          "SasaLibDNet8": "1.0.0",
+          "System.Data.DataSetExtensions": "4.5.0",
+          "ToyoMcMfg.Staging.RemoteObjects": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RemoteClientCADtypeDNet8.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RemoteClientCADtypeDNet8.dll": {}
+        }
+      },
       "SasaLib.DelegateWriteLine/1.0.0": {
         "type": "project",
         "compile": {
@@ -1282,6 +1328,7 @@
           "System.ObjectModel": "4.3.0",
           "System.Runtime.Extensions": "4.3.1",
           "System.Runtime.Handles": "4.3.0",
+          "System.Threading": "4.3.0",
           "System.Windows.Extensions": "8.0.0",
           "Uno.UI": "5.3.0-dev.422",
           "runtime.native.System.IO.Compression": "4.3.2",
@@ -1292,6 +1339,23 @@
         },
         "runtime": {
           "bin/placeholder/SasaLibDNet8.dll": {}
+        }
+      },
+      "ToyoMcMfg.Staging.RemoteObjects/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FieldValueSet": "1.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "SasaLib.DelegateWriteLine": "1.0.0",
+          "SasaLibDNet8": "1.0.0",
+          "System.Data.DataSetExtensions": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/ToyoMcMfg.Staging.RemoteObjects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ToyoMcMfg.Staging.RemoteObjects.dll": {}
         }
       }
     }
@@ -4682,6 +4746,21 @@
         "uno.ui.nuspec"
       ]
     },
+    "DefineCOMDS.DNet8/1.0.0": {
+      "type": "project",
+      "path": "../DefineCOMDS/DefineCOMDS.DNet8.csproj",
+      "msbuildProject": "../DefineCOMDS/DefineCOMDS.DNet8.csproj"
+    },
+    "FieldValueSet/1.0.0": {
+      "type": "project",
+      "path": "../../../TOYOSTAGINGSYSTEM/STAGINGSYSTEM_Share/FieldValueSet/FieldValueSet.csproj",
+      "msbuildProject": "../../../TOYOSTAGINGSYSTEM/STAGINGSYSTEM_Share/FieldValueSet/FieldValueSet.csproj"
+    },
+    "RemoteClientCADtypeDNet8/1.0.0": {
+      "type": "project",
+      "path": "../RemoteClientCADtype/RemoteClientCADtypeDNet8.csproj",
+      "msbuildProject": "../RemoteClientCADtype/RemoteClientCADtypeDNet8.csproj"
+    },
     "SasaLib.DelegateWriteLine/1.0.0": {
       "type": "project",
       "path": "../../../SasaLibTestFrame/SasaLib.DelegateWriteLine/SasaLib.DelegateWriteLine.csproj",
@@ -4691,11 +4770,17 @@
       "type": "project",
       "path": "../../../SasaLibDNet8/SasaLibDNet8/SasaLibDNet8.csproj",
       "msbuildProject": "../../../SasaLibDNet8/SasaLibDNet8/SasaLibDNet8.csproj"
+    },
+    "ToyoMcMfg.Staging.RemoteObjects/1.0.0": {
+      "type": "project",
+      "path": "../RemoteObjects/RemoteObjectsDNet8.csproj",
+      "msbuildProject": "../RemoteObjects/RemoteObjectsDNet8.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Microsoft.CSharp >= 4.7.0",
+      "RemoteClientCADtypeDNet8 >= 1.0.0",
       "SasaLib.DelegateWriteLine >= 1.0.0",
       "SasaLibDNet8 >= 1.0.0",
       "System.Data.DataSetExtensions >= 4.5.0"
@@ -4737,6 +4822,9 @@
             },
             "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+            },
+            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
             }
           }
         }
