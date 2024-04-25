@@ -216,7 +216,7 @@ namespace StageServerRemote
                         List<KeyValuePair<string, string>> nameAndAlias = new List<KeyValuePair<string, string>>();
                         using (var reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                         {
-                            nameAndAlias = reader.ReadObject<List<KeyValuePair<string, string>>>();
+                            nameAndAlias = reader.ReadObject<List<KeyValuePair<string, string>>>(Verbose:true);
 
                             SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"printeInfos.Count ={nameAndAlias.Count}件あります");
 

@@ -1,0 +1,132 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ServerControlCenterApplication</RootNamespace>
+    <AssemblyName>ServerControlCenter</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\ad.local\ToolDist\ClickOnce\承認・登録サーバーコントロールセンター\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>%28ClickOnce版%29図面登録承認サーバーコントロールセンター</ProductName>
+    <PublisherName>東陽機械製作所 CAD管理者</PublisherName>
+    <SuiteName>業務支援ツール</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>211</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>08BEFC8D5F251726BF5B8F1229270453BA619051</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="AccountUserForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="LogWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TabControl07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TabControl01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TabControl03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TabControl05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TabControl04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TabControl02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TabControl06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.ArcSuitePreview\SasaLibDNet8.ArcSuitePreview.csproj" />
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.NumberingSupport\SasaLibDNet8.NumberingSupport.csproj" />
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
+    <ProjectReference Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\CommonTicketClassLibrary\CommonTicketClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawingDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SQLSearchConditonsCreate\SQLSearchConditonsCreateDBNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\StageServerConfig\StageServerConfigDNet8.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestImages\TESTIMAGE-A0.tif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestImages\TESTIMAGE-A1.tif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestImages\TESTIMAGE-A2.tif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestImages\TESTIMAGE-A3.tif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestImages\TESTIMAGE-A4.tif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+</Project>

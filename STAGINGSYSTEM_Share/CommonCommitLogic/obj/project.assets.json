@@ -1705,7 +1705,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FieldValueSetDNet8": "1.0.0",
+          "FieldValueSet": "1.0.0",
           "Microsoft.CSharp": "4.7.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "System.Data.DataSetExtensions": "4.5.0"
@@ -1717,20 +1717,16 @@
           "bin/placeholder/DefineCOMDS.DNet8.dll": {}
         }
       },
-      "FieldValueSetDNet8/1.0.0": {
+      "FieldValueSet/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Microsoft.CSharp": "4.7.0",
-          "SasaLib.DelegateWriteLine": "1.0.0",
-          "SasaLibDNet8": "1.0.0",
-          "System.Data.DataSetExtensions": "4.5.0"
+          "SasaLib.DelegateWriteLine": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/FieldValueSetDNet8.dll": {}
+          "bin/placeholder/FieldValueSet.dll": {}
         },
         "runtime": {
-          "bin/placeholder/FieldValueSetDNet8.dll": {}
+          "bin/placeholder/FieldValueSet.dll": {}
         }
       },
       "RemoteClientCADtypeDNet8/1.0.0": {
@@ -1756,7 +1752,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "DefineCOMDS.DNet8": "1.0.0",
-          "FieldValueSetDNet8": "1.0.0",
+          "FieldValueSet": "1.0.0",
           "Microsoft.CSharp": "4.7.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
@@ -1865,7 +1861,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FieldValueSetDNet8": "1.0.0",
           "RemoteClientCADtypeDNet8": "1.0.0",
           "RemoteClientDNet8": "1.0.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
@@ -1902,7 +1897,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FieldValueSetDNet8": "1.0.0",
+          "FieldValueSet": "1.0.0",
           "Microsoft.CSharp": "4.7.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
@@ -1919,7 +1914,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FieldValueSetDNet8": "1.0.0",
+          "FieldValueSet": "1.0.0",
           "Microsoft.CSharp": "4.7.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
@@ -6069,10 +6064,10 @@
       "path": "../DefineCOMDS/DefineCOMDS.DNet8.csproj",
       "msbuildProject": "../DefineCOMDS/DefineCOMDS.DNet8.csproj"
     },
-    "FieldValueSetDNet8/1.0.0": {
+    "FieldValueSet/1.0.0": {
       "type": "project",
-      "path": "../FieldValueSet/FieldValueSetDNet8.csproj",
-      "msbuildProject": "../FieldValueSet/FieldValueSetDNet8.csproj"
+      "path": "../../../TOYOSTAGINGSYSTEM/STAGINGSYSTEM_Share/FieldValueSet/FieldValueSet.csproj",
+      "msbuildProject": "../../../TOYOSTAGINGSYSTEM/STAGINGSYSTEM_Share/FieldValueSet/FieldValueSet.csproj"
     },
     "RemoteClientCADtypeDNet8/1.0.0": {
       "type": "project",
@@ -6128,7 +6123,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "CommonTicketClassLibraryDNet8 >= 1.0.0",
-      "FieldValueSetDNet8 >= 1.0.0",
+      "FieldValueSet >= 1.0.0",
       "Microsoft.CSharp >= 4.7.0",
       "RemoteClientCADtypeDNet8 >= 1.0.0",
       "RemoteClientDNet8 >= 1.0.0",
@@ -6190,9 +6185,6 @@
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj"
-            },
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
             },
@@ -6201,6 +6193,9 @@
             },
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+            },
+            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
             }
           }
         }

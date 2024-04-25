@@ -338,7 +338,7 @@ namespace StageServerRemote
 
                         using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                         {
-                            DBresultList = reader.ReadObject<List<FieldValueSet>>(); //⑤read
+                            DBresultList = reader.ReadObject<List<FieldValueSet>>(WriteLine:DebugConsole.WriteLine ,Verbose:true); //⑤read
                             Count = DBresultList.Count;
                         }
                     }

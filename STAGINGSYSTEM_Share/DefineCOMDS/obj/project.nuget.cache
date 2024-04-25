@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "i3iYXzG1xvJdyOEgPPqUAtVP+Ij96W62jL8Qi7aRcgeilzKl2WVOXMsYYCtC95XGG0ELGk9Ixb1O3NL2jKROWg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sasahara\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\sasahara\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

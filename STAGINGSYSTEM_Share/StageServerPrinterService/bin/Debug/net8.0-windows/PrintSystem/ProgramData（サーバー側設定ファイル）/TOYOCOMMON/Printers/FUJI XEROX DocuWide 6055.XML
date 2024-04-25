@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PrinterConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <VERSION>VER1023</VERSION>
+  <PrinterName>FUJI XEROX DocuWide 6055</PrinterName>
+  <PrinterSettings>
+    <PaperSize>
+      <CommonPaperSize>A0L</CommonPaperSize>
+      <PaperName>A0 (841×1189mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A0P</CommonPaperSize>
+      <PaperName>A0 (841×1189mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A1L</CommonPaperSize>
+      <PaperName>A1 (594×841mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A1P</CommonPaperSize>
+      <PaperName>A1 (594×841mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A2L</CommonPaperSize>
+      <PaperName>A2 (420×594mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A2P</CommonPaperSize>
+      <PaperName>A2 (420×594mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A3L</CommonPaperSize>
+      <PaperName>A3 (297×420mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>-3</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <CommonPaperSize>A3P</CommonPaperSize>
+      <PaperName>A3 (297×420mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+	  <Comment>未使用</Comment>
+      <CommonPaperSize>A4L</CommonPaperSize>
+      <PaperName>A4 (210×297mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+    <PaperSize>
+	  <Comment>使用します</Comment>
+      <CommonPaperSize>A4P</CommonPaperSize>
+      <PaperName>A4 (210×297mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>-3</Xoffset>
+      <Yoffset>-3</Yoffset>
+      <SourceName>自動</SourceName>
+    </PaperSize>
+  </PrinterSettings>
+</PrinterConfig>

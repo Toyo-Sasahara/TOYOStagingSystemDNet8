@@ -1,7 +1,90 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|c:\\users\\sasahara\\source\\repos\\toyostagingsystem.dnet8\\stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|solutionrelative:stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|c:\\users\\sasahara\\source\\repos\\toyostagingsystem.dnet8\\stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditonscreatedbnet8.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|solutionrelative:stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditonscreatedbnet8.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|c:\\users\\sasahara\\source\\repos\\toyostagingsystem.dnet8\\stagingsystem_share\\stageservercommon\\databasesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\databasesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BE14356-60C6-4AAB-BC0E-96E2D06CB30C}|..\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj|c:\\users\\sasahara\\source\\repos\\sasalibdnet8\\sasalibdnet8\\binaryreaderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920E4898-5862-4601-9CA4-D98BAA04DBA3}|STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\definecomds\\cmds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920E4898-5862-4601-9CA4-D98BAA04DBA3}|STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj|solutionrelative:stagingsystem_share\\definecomds\\cmds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17568CEA-C4B4-42DA-AF89-1A8DD12CB9D5}|STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\remoteobjects\\remoteobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17568CEA-C4B4-42DA-AF89-1A8DD12CB9D5}|STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj|solutionrelative:stagingsystem_share\\remoteobjects\\remoteobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17EF3D2D-E27B-4671-B39C-D23F6151DE31}|STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\sharedclasslibrary\\commonsqlsyntax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17EF3D2D-E27B-4671-B39C-D23F6151DE31}|STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj|solutionrelative:stagingsystem_share\\sharedclasslibrary\\commonsqlsyntax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\remoteclient\\remoteclientdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|solutionrelative:stagingsystem_share\\remoteclient\\remoteclientdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\remoteclient\\remoteclientdrawregist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|solutionrelative:stagingsystem_share\\remoteclient\\remoteclientdrawregist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\remoteclient\\remoteclientdnet8.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|solutionrelative:stagingsystem_share\\remoteclient\\remoteclientdnet8.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\remoteclient\\remoteclientdrawcapture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66AB9A02-40C3-42B4-827F-A617E68FAADB}|STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj|solutionrelative:stagingsystem_share\\remoteclient\\remoteclientdrawcapture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol06.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol06.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol04.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol04.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol03.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol03.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\remotepipeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\remotepipeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\command_servercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\command_servercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\committest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\committest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BE14356-60C6-4AAB-BC0E-96E2D06CB30C}|..\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj|c:\\users\\sasahara\\source\\repos\\sasalibdnet8\\sasalibdnet8\\clslogondummy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\command_status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\command_status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\command_maincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\command_maincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +92,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1365,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Bookmark",
@@ -108,12 +191,47 @@
               "Name": "ST:4:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SQLSearchConditions.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:43:46.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SQLSearchConditonsCreateDBNet8",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-25T04:43:44.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataBaseSearch.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "ViewState": "AQIAAGABAAAAAAAAAAApwG4BAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:42:13.229Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+              "Name": "ST:2:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
               "$type": "Bookmark",
@@ -137,11 +255,241 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BinaryReaderExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\BinaryReaderExtensions.cs",
+              "RelativeDocumentMoniker": "..\\SasaLibDNet8\\SasaLibDNet8\\BinaryReaderExtensions.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\BinaryReaderExtensions.cs",
+              "RelativeToolTip": "..\\SasaLibDNet8\\SasaLibDNet8\\BinaryReaderExtensions.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAmwGoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:26:53.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CommonSqlSyntax.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\CommonSqlSyntax.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\SharedClassLibrary\\CommonSqlSyntax.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\CommonSqlSyntax.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\SharedClassLibrary\\CommonSqlSyntax.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:24:07.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RemoteClientDRAWREGIST.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWREGIST.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWREGIST.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWREGIST.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWREGIST.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAcwIgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:19:51.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TabControl02.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl02.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl02.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl02.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl02.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAApwIkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:00:33.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RemoteObjects.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjects.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjects.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjects.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjects.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:24:36.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CMDS.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\CMDS.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\DefineCOMDS\\CMDS.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\CMDS.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\DefineCOMDS\\CMDS.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:25:24.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RemoteClientDNet8.csproj",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxMAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-25T04:19:01.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RemoteClientDataBase.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
+              "ViewState": "AQIAAIEDAAAAAAAAAAAmwJwDAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:02:21.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RemoteClientDRAWCAPTURE.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWCAPTURE.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWCAPTURE.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWCAPTURE.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWCAPTURE.cs",
+              "ViewState": "AQIAAMwAAAAAAAAAAAAawNwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:00:16.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TabControl06.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl06.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl06.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl06.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl06.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAAArwJ0AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:02:28.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TabControl04.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl04.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl04.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl04.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl04.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAnwEYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:02:13.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TabControl03.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl03.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl03.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl03.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl03.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:00:51.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RemotePipeClient.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\RemotePipeClient.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\RemotePipeClient.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\RemotePipeClient.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\RemotePipeClient.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAnwHAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:00:17.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CommitTest.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\CommitTest.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\CommitTest.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\CommitTest.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\CommitTest.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAnwCUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:00:05.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClsLogonDummy.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "RelativeDocumentMoniker": "..\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "RelativeToolTip": "..\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:59:41.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Command_Status.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_Status.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_Status.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_Status.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_Status.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:59:15.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Command_ServerControl.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_ServerControl.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_ServerControl.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_ServerControl.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_ServerControl.cs",
+              "ViewState": "AQIAAG4BAAAAAAAAAAApwHwBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:59:14.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Command_MAINCOMMAND.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_MAINCOMMAND.cs",
+              "RelativeDocumentMoniker": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_MAINCOMMAND.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_MAINCOMMAND.cs",
+              "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_MAINCOMMAND.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:59:07.119Z",
+              "EditorCaption": ""
             }
           ]
         },

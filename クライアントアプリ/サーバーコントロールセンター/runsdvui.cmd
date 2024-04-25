@@ -1,0 +1,2 @@
+cd /d "C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM_CLIENTS\@サーバーコントロールセンター" &msbuild "サービスコントロールセンター.csproj" /t:sdvViewer /p:configuration="Debug" /p:platform="Any CPU" /p:SolutionDir="C:\Users\sasahara\Source\Repos\TOYOSTAGINGSYSTEM_CLIENTS" 
+exit %errorlevel% 

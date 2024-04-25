@@ -214,88 +214,8 @@
               "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
-          "dependencies": {
-            "Microsoft.CSharp": {
-              "target": "Package",
-              "version": "[4.7.0, )"
-            },
-            "System.Data.DataSetExtensions": {
-              "target": "Package",
-              "version": "[4.5.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj",
-        "projectName": "FieldValueSetDNet8",
-        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj",
-        "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0-windows"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
-            "projectReferences": {
-              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
-              },
-              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
               }
             }
           }
@@ -377,8 +297,8 @@
               "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSetDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
               }
             }
           }
@@ -511,6 +431,25 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj",
+        "projectName": "FieldValueSet",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

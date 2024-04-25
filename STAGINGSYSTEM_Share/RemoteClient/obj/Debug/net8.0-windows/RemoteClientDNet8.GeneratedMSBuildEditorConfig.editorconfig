@@ -91,20 +91,20 @@ build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\SasaLib
 build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj
 build_metadata.AdditionalFiles.XamlRuntime = 
 
+[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM/STAGINGSYSTEM_Share/FieldValueSet/FieldValueSet.csproj]
+build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj
+build_metadata.AdditionalFiles.XamlRuntime = 
+
 [C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/DefineCOMDS/DefineCOMDS.DNet8.csproj]
 build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
 build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\DefineCOMDS\DefineCOMDS.DNet8.csproj
 build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\DefineCOMDS\DefineCOMDS.DNet8.csproj
-build_metadata.AdditionalFiles.XamlRuntime = 
-
-[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/FieldValueSet/FieldValueSetDNet8.csproj]
-build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
-build_metadata.AdditionalFiles.Link = 
-build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetDNet8.csproj
-build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetDNet8.csproj
 build_metadata.AdditionalFiles.XamlRuntime = 
 
 [C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/RemoteObjects/RemoteObjectsDNet8.csproj]

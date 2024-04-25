@@ -1,7 +1,6 @@
 ﻿using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
-using System.Management;
 using System.Text;
 
 namespace STAGINGSYSTEM_COMMANDS

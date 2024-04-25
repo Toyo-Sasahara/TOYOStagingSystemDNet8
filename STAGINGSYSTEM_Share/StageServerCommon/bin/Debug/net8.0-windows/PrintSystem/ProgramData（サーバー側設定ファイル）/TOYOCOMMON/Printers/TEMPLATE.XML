@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PrinterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <VERSION>VER1023</VERSION>
+  <PrinterName>コントロールパネルのプリンタ名</PrinterName>
+  <PrinterSettings>
+    <PaperSize>
+      <Comment>イメージデータがA0横向き</Comment>
+      <CommonPaperSize>A0L</CommonPaperSize>
+      <PaperName>A0 (841 x 1189 mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA0縦向き</Comment>
+      <CommonPaperSize>A0P</CommonPaperSize>
+      <PaperName>A0 (841 x 1189 mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA1横向き</Comment>
+      <CommonPaperSize>A1L</CommonPaperSize>
+      <PaperName>A1 (594 x 841 mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA1縦向き</Comment>
+      <CommonPaperSize>A1P</CommonPaperSize>
+      <PaperName>A1 (594 x 841 mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA2横向き</Comment>
+      <CommonPaperSize>A2L</CommonPaperSize>
+      <PaperName>A2 (420 x 594 mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA2縦向き</Comment>
+      <CommonPaperSize>A2P</CommonPaperSize>
+      <PaperName>A2 (420 x 594 mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>0</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA3横向き</Comment>
+      <CommonPaperSize>A3L</CommonPaperSize>
+      <PaperName>A3 (297 x 420 mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>-7</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA3縦向き</Comment>
+      <CommonPaperSize>A3P</CommonPaperSize>
+      <PaperName>A3 (297 x 420 mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>0</Xoffset>
+      <Yoffset>-7</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA4横向き</Comment>
+      <CommonPaperSize>A4L</CommonPaperSize>
+      <PaperName>A4 (210 x 297 mm)</PaperName>
+      <LandScape>true</LandScape>
+      <Xoffset>-100</Xoffset>
+      <Yoffset>-7</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+    <PaperSize>
+      <Comment>イメージデータがA4縦向き</Comment>
+      <CommonPaperSize>A4P</CommonPaperSize>
+      <PaperName>A4 (210 x 297 mm)</PaperName>
+      <LandScape>false</LandScape>
+      <Xoffset>-10</Xoffset>
+      <Yoffset>-7</Yoffset>
+      <SourceName>自動トレイ選択</SourceName>
+    </PaperSize>
+  </PrinterSettings>
+</PrinterConfig>
