@@ -32,11 +32,11 @@
     <ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
     <ProjectReference Include="..\GenerateTIFFdrawing\GenerateTIFFdrawingDNet8.csproj" />
     <ProjectReference Include="..\MailNotice\MailNoticeDNet8.csproj" />
-    <ProjectReference Include="..\PrintService\StageServerPrinterServiceDNet8.csproj" />
     <ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
     <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
     <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
     <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
+    <ProjectReference Include="..\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
     <ProjectReference Include="..\TitleFieldPosition\TitleFieldPositionDNet8.csproj" />
   </ItemGroup>
   <ItemGroup>

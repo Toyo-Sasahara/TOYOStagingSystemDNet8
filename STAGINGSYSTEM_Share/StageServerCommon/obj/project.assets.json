@@ -5810,8 +5810,8 @@
     },
     "PrintSystem/1.0.0": {
       "type": "project",
-      "path": "../PrintService/StageServerPrinterServiceDNet8.csproj",
-      "msbuildProject": "../PrintService/StageServerPrinterServiceDNet8.csproj"
+      "path": "../StageServerPrinterService/StageServerPrinterServiceDNet8.csproj",
+      "msbuildProject": "../StageServerPrinterService/StageServerPrinterServiceDNet8.csproj"
     },
     "RemoteClientCADtypeDNet8/1.0.0": {
       "type": "project",
@@ -5944,9 +5944,6 @@
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj"
-            },
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
             },
@@ -5958,6 +5955,9 @@
             },
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj"
+            },
+            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerPrinterService\\StageServerPrinterServiceDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerPrinterService\\StageServerPrinterServiceDNet8.csproj"
             },
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\TitleFieldPosition\\TitleFieldPositionDNet8.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\TitleFieldPosition\\TitleFieldPositionDNet8.csproj"

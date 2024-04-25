@@ -5994,8 +5994,8 @@
     },
     "PrintSystem/1.0.0": {
       "type": "project",
-      "path": "../PrintService/StageServerPrinterServiceDNet8.csproj",
-      "msbuildProject": "../PrintService/StageServerPrinterServiceDNet8.csproj"
+      "path": "../StageServerPrinterService/StageServerPrinterServiceDNet8.csproj",
+      "msbuildProject": "../StageServerPrinterService/StageServerPrinterServiceDNet8.csproj"
     },
     "RemoteClientCADtypeDNet8/1.0.0": {
       "type": "project",

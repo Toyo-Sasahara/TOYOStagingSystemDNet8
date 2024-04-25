@@ -179,12 +179,12 @@ build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTA
 build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawingDNet8.csproj
 build_metadata.AdditionalFiles.XamlRuntime = 
 
-[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/PrintService/StageServerPrinterServiceDNet8.csproj]
+[C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/StageServerPrinterService/StageServerPrinterServiceDNet8.csproj]
 build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\PrintService\StageServerPrinterServiceDNet8.csproj
-build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\PrintService\StageServerPrinterServiceDNet8.csproj
+build_metadata.AdditionalFiles.FullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj
 build_metadata.AdditionalFiles.XamlRuntime = 
 
 [C:/Users/sasahara/source/repos/TOYOSTAGINGSYSTEM.DNet8/STAGINGSYSTEM_Share/RemoteClientCADtype/RemoteClientCADtypeDNet8.csproj]
