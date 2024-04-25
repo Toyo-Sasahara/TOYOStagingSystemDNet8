@@ -4727,11 +4727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
       "projectName": "ToyoMcMfg.Staging.RemoteObjects",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

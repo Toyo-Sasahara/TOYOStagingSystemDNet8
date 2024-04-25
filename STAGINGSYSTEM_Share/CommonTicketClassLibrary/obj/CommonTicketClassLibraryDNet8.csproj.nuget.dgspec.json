@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {}
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {}
   },
   "projects": {
     "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
@@ -19,14 +19,14 @@
         "net48": {}
       }
     },
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
         "projectName": "CommonTicketClassLibraryDNet8",
-        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

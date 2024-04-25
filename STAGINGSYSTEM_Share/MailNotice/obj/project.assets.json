@@ -4709,11 +4709,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
       "projectName": "MailNoticeDNet8",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\MailNotice\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

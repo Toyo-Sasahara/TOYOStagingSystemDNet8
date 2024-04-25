@@ -4771,11 +4771,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj",
       "projectName": "StageServerConfigDNet8",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4801,11 +4801,11 @@
             "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
+            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
+            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
             }
           }
         }

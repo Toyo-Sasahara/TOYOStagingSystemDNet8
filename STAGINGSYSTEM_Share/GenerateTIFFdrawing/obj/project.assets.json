@@ -4793,11 +4793,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\GenerateTIFFdrawing\\GenerateTIFFdrawingDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\GenerateTIFFdrawing\\GenerateTIFFdrawingDNet8.csproj",
       "projectName": "GenerateTIFFdrawingDNet8",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\GenerateTIFFdrawing\\GenerateTIFFdrawingDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\GenerateTIFFdrawing\\GenerateTIFFdrawingDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\GenerateTIFFdrawing\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\GenerateTIFFdrawing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4823,8 +4823,8 @@
             "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
+            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
             }
           }
         }

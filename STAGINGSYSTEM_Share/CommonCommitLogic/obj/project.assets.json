@@ -6144,11 +6144,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
       "projectName": "CommonCommitLogicDNet8",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6183,17 +6183,17 @@
             "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
+            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
+            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
+            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
             },
             "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
               "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"

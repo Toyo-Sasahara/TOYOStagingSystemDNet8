@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8dpe5poHPK0qZoh4q2v28EGTgNkuXLPhXHk+8zqHhyv7ID2bY6/+QV760Nas0DmnClxibvxunykC/NrLKm+/Iw==",
+  "dgSpecHash": "8ChijN7fuAFShAaYtg8FN62tnxsv+4Rz9sViMfU+08D1Jj8udKAq6wHIo1zmyqRAabFBeUfaq2Dy7IjH5Mhowg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+  "projectFilePath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasahara\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sasahara\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

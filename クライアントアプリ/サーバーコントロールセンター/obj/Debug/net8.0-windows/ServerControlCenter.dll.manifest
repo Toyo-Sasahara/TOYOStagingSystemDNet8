@@ -77,7 +77,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>sE2Qx+okvK9vN/l61hKDhfC94mqabkWOGU+EdjIhDY4=</dsig:DigestValue>
+      <dsig:DigestValue>efSTKGwndnWoCAwmITEoVISDq4B1WtMK4TnZH8xfaCE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="cs\PresentationCore.resources.dll" size="108832">
@@ -224,13 +224,13 @@
       <dsig:DigestValue>FFcjfnh3JOF6D3G/gM9bdXVQSgyE8xyNPOfTu9qcm6w=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DefineCOMDS.DNet8.dll" size="12288">
+  <file name="DefineCOMDS.DNet8.dll" size="13312">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>j2lOuhQEqTQB3zZqMYEVIh5Rx1WkNNpRpFswqLUmoag=</dsig:DigestValue>
+      <dsig:DigestValue>rWnXUYlN6ShGId4XWAJnSpu3l7HmRrukZOe9qOhzVRw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="DirectWriteForwarder.dll" size="538904">
@@ -314,13 +314,13 @@
       <dsig:DigestValue>cdaa5V7CB53S3T8kCi1feSqMFFVzxL3VYk47U70joPA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="FieldValueSet.dll" size="8704">
+  <file name="FieldValueSet.dll" size="8192">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hb9wyR+EjdCJv9WYPZzqsGoe47PxVF/9GYL6TUJ2Cj8=</dsig:DigestValue>
+      <dsig:DigestValue>V2HsxcSqSnyWlswHNcxjaZR1zxBRnq8tO0fe2SWljf0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="fr\PresentationCore.resources.dll" size="113312">
@@ -395,13 +395,13 @@
       <dsig:DigestValue>KgBWw02OcgTRuoQ3mnhHIRT2OgmQBdDU+h/pK+KldcY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GenerateTIFFdrawingDNet8.dll" size="24576">
+  <file name="GenerateTIFFdrawingDNet8.dll" size="24064">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>iurU/L/tROxwLGxSnbkhyX37ND45cbHj1xbmIRlQyUQ=</dsig:DigestValue>
+      <dsig:DigestValue>PmbppUkoL9+2ZVAk9ObqTy8peUhDoeUJ7BGgeJ4Fm4E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Google.Protobuf.dll" size="472864">
@@ -419,7 +419,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yx6kN/mnCO/qd2gbM+wz/4M7hVcS5HHfflmqev/ofYQ=</dsig:DigestValue>
+      <dsig:DigestValue>PWwRuPvsrD8GSpnv+bj3R7sJuK5MHz7v9KfQ/XE6axM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="it\PresentationCore.resources.dll" size="111776">
@@ -941,7 +941,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3fDWuwHAVcCZPMbt+2tbZAalz2XMRkDk5BhPbSmvDpw=</dsig:DigestValue>
+      <dsig:DigestValue>oZ1Uhi504LTyaUGkfZD+/0Ih7C6bO822rUfZ2Gr84dU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="RemoteClientDNet8.dll" size="138240">
@@ -950,7 +950,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>x4dbPIw9YXEtXnYQ3AXOWhputJevfqgJDExM5vY1r08=</dsig:DigestValue>
+      <dsig:DigestValue>dFOgmfJvc6H+WV3OZbkNtST07T8gvPqgxwvo8GOPmAM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ru\PresentationCore.resources.dll" size="138400">
@@ -1367,31 +1367,22 @@
       <dsig:DigestValue>FEbWsm2kmlqfNmly+J9OI2+RaVXzHdw467liF8HKzpw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SasaLib.dll" size="252416">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3qcITVFm1S3i0lVr5Nft7ZMnhlLJenV3ROvc/B33Vig=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="SasaLibDelegateWriteLine.dll" size="4096">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>q8mP3JLtCiLyIctaHtR5McVzn7GaIWPpkoQVU/TslmY=</dsig:DigestValue>
+      <dsig:DigestValue>EVS7OJVPWYug5hI3pVF7FJrzh+qf8DqU2WV2s+lD3No=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SasaLibDNet8.ArcSuitePreview.dll" size="116224">
+  <file name="SasaLibDNet8.ArcSuitePreview.dll" size="116736">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>VItOLRVpgnzRuiPfG4zBh7i9mqIrRd91HLz3gjFh0Y4=</dsig:DigestValue>
+      <dsig:DigestValue>F8rmOeMpgYDtBJHjAzM84jqQIG7FFQE91jUOw7FbOac=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SasaLibDNet8.dll" size="253952">
@@ -1400,7 +1391,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mHlG01bMuiREwcpFyT0KcshGBJBAfpLw8KI0s17wzAc=</dsig:DigestValue>
+      <dsig:DigestValue>I4mYZbfxXJVZXN6m36FqFGL5dyCFCVgvU4UGJqZdRoI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SasaLibDNet8.MySQLConnect.dll" size="13312">
@@ -1409,16 +1400,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EwjC4d90mzI7lRkkpwCZIki0vIesMgdw4X/IYd7H+DE=</dsig:DigestValue>
+      <dsig:DigestValue>CLrExjUx+3U+TTDlPyGp2mYoL+mwungT+O5oBZ5wDfM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SasaLibDNet8.NumberingSupport.dll" size="92160">
+  <file name="SasaLibDNet8.NumberingSupport.dll" size="92672">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>DTR1U2XD9Qc/Z8upxidznvC4NiKdTm72/jIqHVfVu7M=</dsig:DigestValue>
+      <dsig:DigestValue>M7vK3yj6QaztkaBd59A/zaKGzIXQhAVQ5jIC7U78REU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SasaLibDNet8.PictureBoxControlLibrary.dll" size="20480">
@@ -1427,7 +1418,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>w4Uiwcy4VR6baE5iVkhLrC8OPSKKT1cl0syQ4FL5tkI=</dsig:DigestValue>
+      <dsig:DigestValue>zspLVlRH/xqyaufqwYZBS+dojW5jH7f7LZBCR/DIHO4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ServerControlCenter.dll" size="270848">
@@ -1436,7 +1427,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>pPUGEaKv74RUbor0OavBZ3oYzOiHwDZp0Pc1hjr9sI8=</dsig:DigestValue>
+      <dsig:DigestValue>xrmlTi4BD95d+dYUndfHW9uI+D1bbxscX9kVgBiNBDw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ServerControlCenter.dll.config" size="2734">
@@ -1457,13 +1448,13 @@
       <dsig:DigestValue>yXg/cOOK2+OuL++i8CWi3F/PUyLzRjFXNQGf8jmhILo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SharedClassLibraryDNet8.dll" size="11264">
+  <file name="SharedClassLibraryDNet8.dll" size="12288">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>e9xWCCLdkUtOpdrTT0fmRD3nn9qInf3sgkpBU0AxmC8=</dsig:DigestValue>
+      <dsig:DigestValue>G93K2EXMLOLgoDDDpMnzMAXWUJkxT2DlgZqJR+3jVCU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SQLSearchConditonsCreateDBNet8.dll" size="6144">
@@ -1472,7 +1463,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yN8h9thhz4xIkUgwuqhrmfQq9xFJsJFnhNvykkDJFUY=</dsig:DigestValue>
+      <dsig:DigestValue>fe6gosA8+gLbPVBbzUtiQEtkkIJnKpCSlOfRGBCU7VY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="StageServerConfigDNet8.dll" size="46592">
@@ -1481,7 +1472,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CuQAMworcD5ROZS/5XpVCHNN37QLFSmzl4RpPIhwGNg=</dsig:DigestValue>
+      <dsig:DigestValue>9F+JTXAqKDivWyFKjR6+g1RBmCCT0svlDfDvKrf9xNE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="stdole.dll" size="16304">
@@ -1610,13 +1601,13 @@
       <dsig:DigestValue>tJPcZECCn/kg2sR3N3RjMlM7NFYAXbtee7tStZrwmjU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ToyoMcMfg.Staging.RemoteObjects.dll" size="10752">
+  <file name="ToyoMcMfg.Staging.RemoteObjects.dll" size="11776">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fOra5gawnMATPwZBMA+q7UIxIN69bjxiAJt344Msr9k=</dsig:DigestValue>
+      <dsig:DigestValue>PSmDEnFGxl5oRjebyKqIl6QTG4gWpGYvZSTwlQFBBX8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="tr\PresentationCore.resources.dll" size="107808">

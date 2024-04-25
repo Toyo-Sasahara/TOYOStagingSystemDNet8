@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj": {}
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj": {}
   },
   "projects": {
     "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
@@ -188,14 +188,14 @@
         "net48": {}
       }
     },
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
         "projectName": "DefineCOMDS.DNet8",
-        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -268,14 +268,14 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj",
         "projectName": "AddtinalConfig",
-        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\OSCommandExecutionSupportDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\OSCommandExecutionSupport\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -301,8 +301,8 @@
               "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
               }
             }
           }
@@ -351,14 +351,14 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
         "projectName": "RemoteClientDNet8",
-        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -384,14 +384,14 @@
               "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
               },
-              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
               },
               "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
@@ -446,14 +446,14 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
         "projectName": "ToyoMcMfg.Staging.RemoteObjects",
-        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -529,14 +529,14 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
         "projectName": "SharedClassLibraryDNet8",
-        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
