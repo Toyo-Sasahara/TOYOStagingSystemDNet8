@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using SasaLib;
@@ -11,6 +12,7 @@ namespace ToyoStageService
     /// <summary>
     /// GUIDコードをクライアントに創出する予定
     /// </summary>
+    [SupportedOSPlatform("windows")]
     public class PresentTicketCode
     {
         static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;

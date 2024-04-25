@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace CommonCommitLogic
 {
+    [SupportedOSPlatform("windows")]
     public partial class CommitPreviewImage : UserControl
     {
         static bool EnableLeftButtonDrag = false;

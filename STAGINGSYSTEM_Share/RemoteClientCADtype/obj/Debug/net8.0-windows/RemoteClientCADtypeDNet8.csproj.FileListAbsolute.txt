@@ -1,7 +1,9 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib Version.txt
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\RemoteClientCADtypeDNet8.deps.json
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\RemoteClientCADtypeDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\RemoteClientCADtypeDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\FieldValueSet.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLibDelegateWriteLine.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLibDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.dll
@@ -10,6 +12,7 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Remot
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\PresentationCore.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\PresentationFramework.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\System.Printing.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\System.Windows.Forms.Primitives.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\Accessibility.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
@@ -28,7 +31,10 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Remot
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLibDelegateWriteLine.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\FieldValueSet.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\System.Windows.Forms.xml
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib.dll.config
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\System.Windows.Forms.Primitives.xml
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.xml
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\System.Security.Permissions.xml
@@ -148,9 +154,3 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Remot
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\net8.0-windows\refint\RemoteClientCADtypeDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\net8.0-windows\RemoteClientCADtypeDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\obj\Debug\net8.0-windows\ref\RemoteClientCADtypeDNet8.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib Version.txt
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\FieldValueSet.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\FieldValueSet.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteClientCADtype\bin\Debug\net8.0-windows\SasaLib.dll.config

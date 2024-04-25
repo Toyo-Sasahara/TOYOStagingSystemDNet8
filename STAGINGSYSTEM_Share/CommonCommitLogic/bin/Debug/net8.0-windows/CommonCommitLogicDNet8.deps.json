@@ -947,6 +947,7 @@
           "System.ObjectModel": "4.3.0",
           "System.Runtime.Extensions": "4.3.1",
           "System.Runtime.Handles": "4.3.0",
+          "System.Threading": "4.3.0",
           "System.Windows.Extensions": "8.0.0",
           "Uno.UI": "5.3.0-dev.422",
           "runtime.native.System.IO.Compression": "4.3.2",

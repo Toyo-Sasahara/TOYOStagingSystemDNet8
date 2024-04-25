@@ -1,6 +1,8 @@
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib Version.txt
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.deps.json
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\FieldValueSet.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLibDelegateWriteLine.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLibDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Windows.Forms.dll
@@ -8,6 +10,7 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Share
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\PresentationCore.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\PresentationFramework.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Printing.dll
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Windows.Forms.Primitives.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\Accessibility.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
@@ -24,7 +27,10 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Share
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.DirectoryServices.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLibDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLibDelegateWriteLine.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\FieldValueSet.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Windows.Forms.xml
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib.pdb
+C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib.dll.config
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Windows.Forms.Primitives.xml
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.xml
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\System.Security.Permissions.xml
@@ -144,9 +150,3 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Share
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\obj\Debug\net8.0-windows\refint\SharedClassLibraryDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\obj\Debug\net8.0-windows\SharedClassLibraryDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\obj\Debug\net8.0-windows\ref\SharedClassLibraryDNet8.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib Version.txt
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\FieldValueSet.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\FieldValueSet.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\bin\Debug\net8.0-windows\SasaLib.dll.config

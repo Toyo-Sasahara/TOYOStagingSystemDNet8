@@ -12,9 +12,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.Versioning;
 
 namespace CommonCommitLogic
 {
+    [SupportedOSPlatform("windows")]
     public class CommitSupportCadDrawingFile
     {
 

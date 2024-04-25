@@ -5,11 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace CommonCommitLogic
 {
+    [SupportedOSPlatform("windows")]
     internal class CommitSupport
     {
         CommitParam commitParam;

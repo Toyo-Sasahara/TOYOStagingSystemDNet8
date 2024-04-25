@@ -16,6 +16,7 @@ using System.Threading;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Runtime.Versioning;
 
 namespace CommonCommitLogic
 {
@@ -39,6 +40,7 @@ namespace CommonCommitLogic
     /// コミット実行
     /// UIからのイベント発生時に呼ばれる
     /// </summary>
+    [SupportedOSPlatform("windows")]
     public class Commit
     {
         /// <summary>

@@ -14,12 +14,14 @@ using System.Windows.Forms;
 using SasaLib;
 using System.Threading;
 using System.Security.Cryptography;
+using System.Runtime.Versioning;
 
 namespace CommonCommitLogic
 {
     /// <summary>
     /// コミットダイアログクラス
     /// </summary>
+    [SupportedOSPlatform("windows")]
     public partial class CommitDialogForm : Form
     {
         /// <summary>
