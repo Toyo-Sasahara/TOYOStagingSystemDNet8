@@ -1617,6 +1617,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
+          "RemoteClientCADtypeDNet8": "1.0.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
           "System.Data.DataSetExtensions": "4.5.0"
@@ -1747,6 +1748,7 @@
           "System.ObjectModel": "4.3.0",
           "System.Runtime.Extensions": "4.3.1",
           "System.Runtime.Handles": "4.3.0",
+          "System.Threading": "4.3.0",
           "System.Windows.Extensions": "8.0.0",
           "Uno.UI": "5.3.0-dev.422",
           "runtime.native.System.IO.Compression": "4.3.2",

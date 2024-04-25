@@ -363,6 +363,10 @@
               "target": "Package",
               "version": "[4.3.0, )"
             },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "System.Windows.Extensions": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -608,6 +612,9 @@
               },
               "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              },
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
               }
             }
           }
