@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|solutionrelative:stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|c:\\users\\sasahara\\source\\repos\\toyostagingsystem.dnet8\\stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditonscreatedbnet8.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditonscreatedbnet8.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D1073A28-8C6F-4D00-89B9-F8D5DE789865}|STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj|solutionrelative:stagingsystem_share\\sqlsearchconditonscreate\\sqlsearchconditonscreatedbnet8.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{FC0D135B-63E6-4876-B807-AD185613D898}|\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\\u30B5\u30FC\u30D3\u30B9\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FCDNet8.csproj|solutionrelative:\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\tabcontrol02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|c:\\users\\sasahara\\source\\repos\\toyostagingsystem.dnet8\\stagingsystem_share\\stageservercommon\\databasesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\stagingsystem_share\\stageservercommon\\databasesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30D8CF9A-7D95-40EC-919C-0707AD6BACB7}|STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj|solutionrelative:stagingsystem_share\\stageservercommon\\databasesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -92,7 +92,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1365,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 32,
           "Children": [
             {
               "$type": "Bookmark",
@@ -191,49 +191,6 @@
               "Name": "ST:4:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SQLSearchConditions.cs",
-              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
-              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
-              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
-              "RelativeToolTip": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:43:46.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SQLSearchConditonsCreateDBNet8",
-              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
-              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
-              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
-              "RelativeToolTip": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-25T04:43:44.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataBaseSearch.cs",
-              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
-              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
-              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
-              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
-              "ViewState": "AQIAAGABAAAAAAAAAAApwG4BAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:42:13.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
@@ -255,7 +212,52 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:2:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SQLSearchConditions.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:43:46.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SQLSearchConditonsCreateDBNet8",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\SQLSearchConditonsCreate\\SQLSearchConditonsCreateDBNet8.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-25T04:43:44.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataBaseSearch.cs",
+              "DocumentMoniker": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "RelativeDocumentMoniker": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "ToolTip": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "RelativeToolTip": "STAGINGSYSTEM_Share\\StageServerCommon\\DataBaseSearch.cs",
+              "ViewState": "AQIAAGABAAAAAAAAAAApwG4BAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:42:13.229Z"
             },
             {
               "$type": "Document",
@@ -267,8 +269,7 @@
               "RelativeToolTip": "..\\SasaLibDNet8\\SasaLibDNet8\\BinaryReaderExtensions.cs",
               "ViewState": "AQIAAE8AAAAAAAAAAAAmwGoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:26:53.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:26:53.057Z"
             },
             {
               "$type": "Document",
@@ -280,8 +281,7 @@
               "RelativeToolTip": "STAGINGSYSTEM_Share\\SharedClassLibrary\\CommonSqlSyntax.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:24:07.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:24:07.694Z"
             },
             {
               "$type": "Document",
@@ -293,8 +293,7 @@
               "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWREGIST.cs",
               "ViewState": "AQIAAHsAAAAAAAAAAAAcwIgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:19:51.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:19:51.721Z"
             },
             {
               "$type": "Document",
@@ -306,8 +305,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl02.cs",
               "ViewState": "AQIAAHsAAAAAAAAAAAApwIkAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T03:00:33.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T03:00:33.773Z"
             },
             {
               "$type": "Document",
@@ -319,8 +317,7 @@
               "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjects.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:24:36.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:24:36.17Z"
             },
             {
               "$type": "Document",
@@ -332,8 +329,7 @@
               "RelativeToolTip": "STAGINGSYSTEM_Share\\DefineCOMDS\\CMDS.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:25:24.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:25:24.576Z"
             },
             {
               "$type": "Document",
@@ -345,8 +341,7 @@
               "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvxMAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-25T04:19:01.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:19:01.964Z"
             },
             {
               "$type": "Document",
@@ -358,8 +353,7 @@
               "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDataBase.cs",
               "ViewState": "AQIAAIEDAAAAAAAAAAAmwJwDAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:02:21.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:02:21.324Z"
             },
             {
               "$type": "Document",
@@ -371,8 +365,7 @@
               "RelativeToolTip": "STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDRAWCAPTURE.cs",
               "ViewState": "AQIAAMwAAAAAAAAAAAAawNwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T04:00:16.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T04:00:16.071Z"
             },
             {
               "$type": "Document",
@@ -384,8 +377,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl06.cs",
               "ViewState": "AQIAAJoAAAAAAAAAAAArwJ0AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T03:02:28.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T03:02:28.088Z"
             },
             {
               "$type": "Document",
@@ -397,8 +389,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl04.cs",
               "ViewState": "AQIAADkAAAAAAAAAAAAnwEYAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T03:02:13.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T03:02:13.201Z"
             },
             {
               "$type": "Document",
@@ -410,8 +401,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\TabControl03.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T03:00:51.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T03:00:51.201Z"
             },
             {
               "$type": "Document",
@@ -423,8 +413,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\RemotePipeClient.cs",
               "ViewState": "AQIAAGIAAAAAAAAAAAAnwHAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T03:00:17.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T03:00:17.97Z"
             },
             {
               "$type": "Document",
@@ -436,8 +425,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\CommitTest.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAnwCUAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T03:00:05.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T03:00:05.155Z"
             },
             {
               "$type": "Document",
@@ -449,8 +437,7 @@
               "RelativeToolTip": "..\\SasaLibDNet8\\SasaLibDNet8\\ClsLogonDummy.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwsAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T02:59:41.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T02:59:41.929Z"
             },
             {
               "$type": "Document",
@@ -462,8 +449,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_Status.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T02:59:15.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T02:59:15.451Z"
             },
             {
               "$type": "Document",
@@ -475,8 +461,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_ServerControl.cs",
               "ViewState": "AQIAAG4BAAAAAAAAAAApwHwBAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T02:59:14.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T02:59:14.587Z"
             },
             {
               "$type": "Document",
@@ -488,8 +473,7 @@
               "RelativeToolTip": "\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A2\u30D7\u30EA\\\u30B5\u30FC\u30D0\u30FC\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u30BB\u30F3\u30BF\u30FC\\Command_MAINCOMMAND.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T02:59:07.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T02:59:07.119Z"
             }
           ]
         },
