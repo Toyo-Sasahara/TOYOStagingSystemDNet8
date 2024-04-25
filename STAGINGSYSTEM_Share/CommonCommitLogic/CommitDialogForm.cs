@@ -321,6 +321,8 @@ namespace CommonCommitLogic
         /// <exception cref="Exception"></exception>
         private void SupportArcSuite_ArcSuiteSearchResultChanged(Object sender, ArcSuiteSearchResult arcSuiteSearchResult)
         {
+            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+
             DebugConsole.WriteLine(@"ArcSuiteSearchResultChanged イベントがキックされました");
 
             _arcSuiteSearchResult = arcSuiteSearchResult;
@@ -348,7 +350,12 @@ namespace CommonCommitLogic
                     case ArcSuiteSearchResult.DESCRIPTION_ComparResult_MessagetypeEnum.検索結果複数ArcSuiteに同番図面あり類番図面あり:
                         InvokeRequired_Control_Text(ArcSuiteInformation_label, $"【危険】ArcSuite検索結果複数・ {commitTarget_partnumber} が見つかりましたが類番図面も存在します！！", System.Drawing.Color.Red);
 
-                        InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+                        //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
+                        try
+                        {
+                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+                        }
+                        catch { }
                         InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸして類番を確認", Color.Red);
                         InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true); // アークスイート結果表示ボタンイネーブル
 
@@ -383,7 +390,15 @@ namespace CommonCommitLogic
                     case ArcSuiteSearchResult.DESCRIPTION_ComparResult_MessagetypeEnum.検索結果１件ArcSuiteに同番図面有り表題は相違:
                         InvokeRequired_Control_Text(ArcSuiteInformation_label, $"【危険】ArcSuite検索結果１件・ {commitTarget_partnumber} が見つかりました。しかし名称・説明が違います！！", System.Drawing.Color.Red);
 
-                        InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+                        //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
+                        try
+                        {
+                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+                        }
+                        catch (Exception)
+                        {
+
+                        }
                         InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸしてArcuSuiteの\r\n図面を表示", Color.Red);
                         InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true); // アークスイート結果表示ボタンイネーブル
 
@@ -1149,7 +1164,15 @@ namespace CommonCommitLogic
 
             InvokeRequired_Control_Text(button, buttonMsg);
 
-            button.Image = Properties.Resources.エマージェンシーバックグラウンド;
+            //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
+            try
+            {
+                button.Image = Properties.Resources.エマージェンシーバックグラウンド;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "CommitDialogForm.ButtonBackgroundImageWarrningSet(..)にて例外");
+            }
         }
 
         /// <summary>
