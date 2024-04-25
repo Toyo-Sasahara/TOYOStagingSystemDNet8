@@ -5082,11 +5082,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerPrinterService\\StageServerPrinterServiceDNet8.csproj",
       "projectName": "PrintSystem",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\StageServerPrinterServiceDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerPrinterService\\StageServerPrinterServiceDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\PrintService\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerPrinterService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -16,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailNoticeDNet8", "STAGINGS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSCommandExecutionSupportDNet8", "STAGINGSYSTEM_Share\OSCommandExecutionSupport\OSCommandExecutionSupportDNet8.csproj", "{CF5A2AA0-4D6E-484D-97CF-E90D48A4CA5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StageServerPrinterServiceDNet8", "STAGINGSYSTEM_Share\PrintService\StageServerPrinterServiceDNet8.csproj", "{2BEC020B-F998-4880-A756-292AAEC81825}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StageServerPrinterServiceDNet8", "STAGINGSYSTEM_Share\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj", "{2BEC020B-F998-4880-A756-292AAEC81825}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteClientDNet8", "STAGINGSYSTEM_Share\RemoteClient\RemoteClientDNet8.csproj", "{66AB9A02-40C3-42B4-827F-A617E68FAADB}"
 EndProject
