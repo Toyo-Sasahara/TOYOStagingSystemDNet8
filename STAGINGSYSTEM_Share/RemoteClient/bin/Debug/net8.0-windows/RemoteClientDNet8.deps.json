@@ -16,7 +16,7 @@
           "SharedClassLibraryDNet8": "1.0.0",
           "System.Data.DataSetExtensions": "4.5.0",
           "ToyoMcMfg.Staging.RemoteObjects": "1.0.0",
-          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.14737"
+          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.20948"
         },
         "runtime": {
           "RemoteClientDNet8.dll": {}
@@ -1038,11 +1038,11 @@
           "ToyoMcMfg.Staging.RemoteObjects.dll": {}
         }
       },
-      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.14737": {
+      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.20948": {
         "runtime": {
           "ToyoMcMfg.Staging.RemoteObjects.dll": {
-            "assemblyVersion": "1.24.424.14737",
-            "fileVersion": "1.24.424.14737"
+            "assemblyVersion": "1.24.424.20948",
+            "fileVersion": "1.24.424.20948"
           }
         }
       },
@@ -1990,7 +1990,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.14737": {
+    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.20948": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
