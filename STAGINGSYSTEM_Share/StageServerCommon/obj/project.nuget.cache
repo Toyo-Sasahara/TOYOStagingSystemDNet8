@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ef6fYLKFm6uhNicRuCYq35YiGbqeSggBZMJ2j5jEYZIYm/MTnPcNMF0PIg4Q6pu+/lQ1PmjkTSn1Btokyw4mBA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj",
+  "dgSpecHash": "RfLaSlhL+aHtX1CE3oHsBxpzNaCC12QghKEJQWJypfzyFOa9ULiEjqInGVRn/Nd8AhPMLLvs4M9i17VNs7trMQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasahara\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\sasahara\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
@@ -61,7 +61,7 @@
     "C:\\Users\\sasahara\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\sasahara\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
@@ -94,5 +94,33 @@
     "C:\\Users\\sasahara\\.nuget\\packages\\uno.ui\\5.3.0-dev.422\\uno.ui.5.3.0-dev.422.nupkg.sha512",
     "C:\\Users\\sasahara\\.nuget\\packages\\zstdsharp.port\\0.7.1\\zstdsharp.port.0.7.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
+      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
+      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
+      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }
