@@ -104,7 +104,6 @@ namespace CommonCommitLogic
             commitPreviewImage = new CommitPreviewImage();
             toolTip1 = new System.Windows.Forms.ToolTip(components);
             CadFileInformation_groupBox = new System.Windows.Forms.GroupBox();
-            button1 = new System.Windows.Forms.Button();
             panel2.SuspendLayout();
             Variant_panel.SuspendLayout();
             panel4.SuspendLayout();
@@ -135,10 +134,10 @@ namespace CommonCommitLogic
             panel2.Controls.Add(panel7);
             panel2.Controls.Add(PanelCustomer);
             panel2.Controls.Add(PanelDrawingNumber);
-            panel2.Location = new System.Drawing.Point(5, 22);
+            panel2.Location = new System.Drawing.Point(4, 18);
             panel2.Margin = new System.Windows.Forms.Padding(1);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(698, 286);
+            panel2.Size = new System.Drawing.Size(598, 229);
             panel2.TabIndex = 14;
             // 
             // Variant_panel
@@ -153,10 +152,10 @@ namespace CommonCommitLogic
             Variant_panel.Controls.Add(label11);
             Variant_panel.Controls.Add(VariantNew_textBox);
             Variant_panel.Controls.Add(VariantNumber_MIN_textBox);
-            Variant_panel.Location = new System.Drawing.Point(357, 205);
-            Variant_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Variant_panel.Location = new System.Drawing.Point(306, 164);
+            Variant_panel.Margin = new System.Windows.Forms.Padding(4);
             Variant_panel.Name = "Variant_panel";
-            Variant_panel.Size = new System.Drawing.Size(325, 74);
+            Variant_panel.Size = new System.Drawing.Size(279, 60);
             Variant_panel.TabIndex = 83;
             // 
             // AllVariantNumberRegistMode_checkbox
@@ -164,8 +163,8 @@ namespace CommonCommitLogic
             AllVariantNumberRegistMode_checkbox.AutoSize = true;
             AllVariantNumberRegistMode_checkbox.Enabled = false;
             AllVariantNumberRegistMode_checkbox.ForeColor = System.Drawing.Color.Red;
-            AllVariantNumberRegistMode_checkbox.Location = new System.Drawing.Point(9, 40);
-            AllVariantNumberRegistMode_checkbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            AllVariantNumberRegistMode_checkbox.Location = new System.Drawing.Point(8, 32);
+            AllVariantNumberRegistMode_checkbox.Margin = new System.Windows.Forms.Padding(4);
             AllVariantNumberRegistMode_checkbox.Name = "AllVariantNumberRegistMode_checkbox";
             AllVariantNumberRegistMode_checkbox.Size = new System.Drawing.Size(202, 19);
             AllVariantNumberRegistMode_checkbox.TabIndex = 43;
@@ -179,7 +178,7 @@ namespace CommonCommitLogic
             label9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold);
             label9.ForeColor = System.Drawing.Color.Red;
             label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label9.Location = new System.Drawing.Point(4, 6);
+            label9.Location = new System.Drawing.Point(3, 5);
             label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(49, 18);
@@ -192,7 +191,7 @@ namespace CommonCommitLogic
             label15.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold);
             label15.ForeColor = System.Drawing.Color.Red;
             label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label15.Location = new System.Drawing.Point(211, 6);
+            label15.Location = new System.Drawing.Point(181, 5);
             label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label15.Name = "label15";
             label15.Size = new System.Drawing.Size(37, 18);
@@ -207,7 +206,7 @@ namespace CommonCommitLogic
             label14.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold);
             label14.ForeColor = System.Drawing.Color.Red;
             label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label14.Location = new System.Drawing.Point(59, 6);
+            label14.Location = new System.Drawing.Point(51, 5);
             label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label14.Name = "label14";
             label14.Size = new System.Drawing.Size(14, 18);
@@ -222,7 +221,7 @@ namespace CommonCommitLogic
             label13.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold);
             label13.ForeColor = System.Drawing.Color.Red;
             label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label13.Location = new System.Drawing.Point(190, 6);
+            label13.Location = new System.Drawing.Point(163, 5);
             label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(14, 18);
@@ -234,11 +233,11 @@ namespace CommonCommitLogic
             VariantNumber_MAX_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             VariantNumber_MAX_textBox.Enabled = false;
             VariantNumber_MAX_textBox.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
-            VariantNumber_MAX_textBox.Location = new System.Drawing.Point(146, 2);
-            VariantNumber_MAX_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            VariantNumber_MAX_textBox.Location = new System.Drawing.Point(125, 2);
+            VariantNumber_MAX_textBox.Margin = new System.Windows.Forms.Padding(4);
             VariantNumber_MAX_textBox.Name = "VariantNumber_MAX_textBox";
             VariantNumber_MAX_textBox.ReadOnly = true;
-            VariantNumber_MAX_textBox.Size = new System.Drawing.Size(41, 25);
+            VariantNumber_MAX_textBox.Size = new System.Drawing.Size(36, 25);
             VariantNumber_MAX_textBox.TabIndex = 39;
             VariantNumber_MAX_textBox.Text = "---";
             VariantNumber_MAX_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -251,7 +250,7 @@ namespace CommonCommitLogic
             label11.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold);
             label11.ForeColor = System.Drawing.Color.Red;
             label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label11.Location = new System.Drawing.Point(122, 6);
+            label11.Location = new System.Drawing.Point(105, 5);
             label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(18, 18);
@@ -263,10 +262,10 @@ namespace CommonCommitLogic
             VariantNew_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             VariantNew_textBox.Enabled = false;
             VariantNew_textBox.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
-            VariantNew_textBox.Location = new System.Drawing.Point(257, 2);
-            VariantNew_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            VariantNew_textBox.Location = new System.Drawing.Point(67, 2);
+            VariantNew_textBox.Margin = new System.Windows.Forms.Padding(4);
             VariantNew_textBox.Name = "VariantNew_textBox";
-            VariantNew_textBox.Size = new System.Drawing.Size(61, 25);
+            VariantNew_textBox.Size = new System.Drawing.Size(36, 25);
             VariantNew_textBox.TabIndex = 37;
             VariantNew_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -276,7 +275,7 @@ namespace CommonCommitLogic
             VariantNumber_MIN_textBox.Enabled = false;
             VariantNumber_MIN_textBox.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             VariantNumber_MIN_textBox.Location = new System.Drawing.Point(78, 2);
-            VariantNumber_MIN_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            VariantNumber_MIN_textBox.Margin = new System.Windows.Forms.Padding(4);
             VariantNumber_MIN_textBox.Name = "VariantNumber_MIN_textBox";
             VariantNumber_MIN_textBox.ReadOnly = true;
             VariantNumber_MIN_textBox.Size = new System.Drawing.Size(41, 25);
@@ -289,21 +288,21 @@ namespace CommonCommitLogic
             panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel4.Controls.Add(DrawingTypeTextBox);
             panel4.Controls.Add(label12);
-            panel4.Location = new System.Drawing.Point(4, 242);
-            panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel4.Location = new System.Drawing.Point(3, 194);
+            panel4.Margin = new System.Windows.Forms.Padding(4);
             panel4.Name = "panel4";
-            panel4.Size = new System.Drawing.Size(346, 37);
+            panel4.Size = new System.Drawing.Size(297, 30);
             panel4.TabIndex = 80;
             // 
             // DrawingTypeTextBox
             // 
             DrawingTypeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             DrawingTypeTextBox.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            DrawingTypeTextBox.Location = new System.Drawing.Point(94, 2);
-            DrawingTypeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            DrawingTypeTextBox.Location = new System.Drawing.Point(81, 2);
+            DrawingTypeTextBox.Margin = new System.Windows.Forms.Padding(4);
             DrawingTypeTextBox.Name = "DrawingTypeTextBox";
             DrawingTypeTextBox.ReadOnly = true;
-            DrawingTypeTextBox.Size = new System.Drawing.Size(245, 23);
+            DrawingTypeTextBox.Size = new System.Drawing.Size(196, 23);
             DrawingTypeTextBox.TabIndex = 36;
             DrawingTypeTextBox.Text = "  --";
             // 
@@ -312,7 +311,7 @@ namespace CommonCommitLogic
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label12.Location = new System.Drawing.Point(4, 6);
+            label12.Location = new System.Drawing.Point(3, 5);
             label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(71, 16);
@@ -323,10 +322,10 @@ namespace CommonCommitLogic
             // 
             panel1.Controls.Add(label4);
             panel1.Controls.Add(TicketCodeLinkLabel);
-            panel1.Location = new System.Drawing.Point(5, 4);
-            panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel1.Location = new System.Drawing.Point(4, 3);
+            panel1.Margin = new System.Windows.Forms.Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(293, 32);
+            panel1.Size = new System.Drawing.Size(251, 26);
             panel1.TabIndex = 78;
             // 
             // label4
@@ -334,8 +333,8 @@ namespace CommonCommitLogic
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label4.Location = new System.Drawing.Point(6, 14);
-            label4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            label4.Location = new System.Drawing.Point(5, 11);
+            label4.Margin = new System.Windows.Forms.Padding(4);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(65, 12);
             label4.TabIndex = 76;
@@ -345,8 +344,8 @@ namespace CommonCommitLogic
             // 
             TicketCodeLinkLabel.AutoSize = true;
             TicketCodeLinkLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            TicketCodeLinkLabel.Location = new System.Drawing.Point(89, 14);
-            TicketCodeLinkLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            TicketCodeLinkLabel.Location = new System.Drawing.Point(76, 11);
+            TicketCodeLinkLabel.Margin = new System.Windows.Forms.Padding(4);
             TicketCodeLinkLabel.Name = "TicketCodeLinkLabel";
             TicketCodeLinkLabel.Size = new System.Drawing.Size(168, 15);
             TicketCodeLinkLabel.TabIndex = 77;
@@ -360,11 +359,11 @@ namespace CommonCommitLogic
             panel6.Controls.Add(label3);
             panel6.Controls.Add(AUTHORlabel);
             panel6.Controls.Add(AUTHORDATElabel);
-            panel6.Location = new System.Drawing.Point(562, 111);
-            panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel6.Location = new System.Drawing.Point(482, 89);
+            panel6.Margin = new System.Windows.Forms.Padding(4);
             panel6.Name = "panel6";
-            panel6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            panel6.Size = new System.Drawing.Size(120, 86);
+            panel6.Padding = new System.Windows.Forms.Padding(4);
+            panel6.Size = new System.Drawing.Size(103, 69);
             panel6.TabIndex = 71;
             // 
             // label3
@@ -372,7 +371,7 @@ namespace CommonCommitLogic
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label3.Location = new System.Drawing.Point(7, 4);
+            label3.Location = new System.Drawing.Point(6, 3);
             label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(83, 12);
@@ -384,7 +383,7 @@ namespace CommonCommitLogic
             AUTHORlabel.AutoSize = true;
             AUTHORlabel.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             AUTHORlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            AUTHORlabel.Location = new System.Drawing.Point(4, 26);
+            AUTHORlabel.Location = new System.Drawing.Point(3, 21);
             AUTHORlabel.Margin = new System.Windows.Forms.Padding(0);
             AUTHORlabel.Name = "AUTHORlabel";
             AUTHORlabel.Size = new System.Drawing.Size(55, 16);
@@ -396,7 +395,7 @@ namespace CommonCommitLogic
             AUTHORDATElabel.AutoSize = true;
             AUTHORDATElabel.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             AUTHORDATElabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            AUTHORDATElabel.Location = new System.Drawing.Point(4, 60);
+            AUTHORDATElabel.Location = new System.Drawing.Point(3, 48);
             AUTHORDATElabel.Margin = new System.Windows.Forms.Padding(0);
             AUTHORDATElabel.Name = "AUTHORDATElabel";
             AUTHORDATElabel.Size = new System.Drawing.Size(55, 16);
@@ -409,10 +408,10 @@ namespace CommonCommitLogic
             panel9.Controls.Add(MachineTypelabel);
             panel9.Controls.Add(label7);
             panel9.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            panel9.Location = new System.Drawing.Point(166, 44);
-            panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel9.Location = new System.Drawing.Point(142, 35);
+            panel9.Margin = new System.Windows.Forms.Padding(4);
             panel9.Name = "panel9";
-            panel9.Size = new System.Drawing.Size(132, 60);
+            panel9.Size = new System.Drawing.Size(113, 48);
             panel9.TabIndex = 75;
             // 
             // MachineTypelabel
@@ -420,7 +419,7 @@ namespace CommonCommitLogic
             MachineTypelabel.AutoSize = true;
             MachineTypelabel.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             MachineTypelabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            MachineTypelabel.Location = new System.Drawing.Point(6, 30);
+            MachineTypelabel.Location = new System.Drawing.Point(5, 24);
             MachineTypelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             MachineTypelabel.Name = "MachineTypelabel";
             MachineTypelabel.Size = new System.Drawing.Size(103, 16);
@@ -432,7 +431,7 @@ namespace CommonCommitLogic
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label7.Location = new System.Drawing.Point(6, 4);
+            label7.Location = new System.Drawing.Point(5, 3);
             label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(41, 12);
@@ -444,10 +443,10 @@ namespace CommonCommitLogic
             PanelMaterial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             PanelMaterial.Controls.Add(label8);
             PanelMaterial.Controls.Add(MATERIALlabel);
-            PanelMaterial.Location = new System.Drawing.Point(5, 44);
-            PanelMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            PanelMaterial.Location = new System.Drawing.Point(4, 35);
+            PanelMaterial.Margin = new System.Windows.Forms.Padding(4);
             PanelMaterial.Name = "PanelMaterial";
-            PanelMaterial.Size = new System.Drawing.Size(157, 60);
+            PanelMaterial.Size = new System.Drawing.Size(135, 48);
             PanelMaterial.TabIndex = 73;
             // 
             // label8
@@ -455,7 +454,7 @@ namespace CommonCommitLogic
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label8.Location = new System.Drawing.Point(4, 4);
+            label8.Location = new System.Drawing.Point(3, 3);
             label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(62, 12);
@@ -467,7 +466,7 @@ namespace CommonCommitLogic
             MATERIALlabel.AutoSize = true;
             MATERIALlabel.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             MATERIALlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            MATERIALlabel.Location = new System.Drawing.Point(4, 30);
+            MATERIALlabel.Location = new System.Drawing.Point(3, 24);
             MATERIALlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             MATERIALlabel.Name = "MATERIALlabel";
             MATERIALlabel.Size = new System.Drawing.Size(127, 16);
@@ -480,11 +479,11 @@ namespace CommonCommitLogic
             panel7.Controls.Add(label2);
             panel7.Controls.Add(DESIGNERlabel);
             panel7.Controls.Add(CHECKDATElabel);
-            panel7.Location = new System.Drawing.Point(429, 111);
-            panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel7.Location = new System.Drawing.Point(368, 89);
+            panel7.Margin = new System.Windows.Forms.Padding(4);
             panel7.Name = "panel7";
-            panel7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            panel7.Size = new System.Drawing.Size(120, 86);
+            panel7.Padding = new System.Windows.Forms.Padding(4);
+            panel7.Size = new System.Drawing.Size(103, 69);
             panel7.TabIndex = 72;
             // 
             // label2
@@ -492,7 +491,7 @@ namespace CommonCommitLogic
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label2.Location = new System.Drawing.Point(7, 4);
+            label2.Location = new System.Drawing.Point(6, 3);
             label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(83, 12);
@@ -504,7 +503,7 @@ namespace CommonCommitLogic
             DESIGNERlabel.AutoSize = true;
             DESIGNERlabel.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             DESIGNERlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            DESIGNERlabel.Location = new System.Drawing.Point(7, 26);
+            DESIGNERlabel.Location = new System.Drawing.Point(6, 21);
             DESIGNERlabel.Margin = new System.Windows.Forms.Padding(0);
             DESIGNERlabel.Name = "DESIGNERlabel";
             DESIGNERlabel.Size = new System.Drawing.Size(55, 16);
@@ -516,7 +515,7 @@ namespace CommonCommitLogic
             CHECKDATElabel.AutoSize = true;
             CHECKDATElabel.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             CHECKDATElabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            CHECKDATElabel.Location = new System.Drawing.Point(7, 60);
+            CHECKDATElabel.Location = new System.Drawing.Point(6, 48);
             CHECKDATElabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             CHECKDATElabel.Name = "CHECKDATElabel";
             CHECKDATElabel.Size = new System.Drawing.Size(55, 16);
@@ -528,10 +527,10 @@ namespace CommonCommitLogic
             PanelCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             PanelCustomer.Controls.Add(lFIRSTCUSTOMERlabe);
             PanelCustomer.Controls.Add(CUSTOMERlabel);
-            PanelCustomer.Location = new System.Drawing.Point(307, 44);
-            PanelCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            PanelCustomer.Location = new System.Drawing.Point(263, 35);
+            PanelCustomer.Margin = new System.Windows.Forms.Padding(4);
             PanelCustomer.Name = "PanelCustomer";
-            PanelCustomer.Size = new System.Drawing.Size(375, 60);
+            PanelCustomer.Size = new System.Drawing.Size(322, 48);
             PanelCustomer.TabIndex = 74;
             // 
             // lFIRSTCUSTOMERlabe
@@ -539,7 +538,7 @@ namespace CommonCommitLogic
             lFIRSTCUSTOMERlabe.AutoSize = true;
             lFIRSTCUSTOMERlabe.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             lFIRSTCUSTOMERlabe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lFIRSTCUSTOMERlabe.Location = new System.Drawing.Point(6, 34);
+            lFIRSTCUSTOMERlabe.Location = new System.Drawing.Point(5, 27);
             lFIRSTCUSTOMERlabe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lFIRSTCUSTOMERlabe.Name = "lFIRSTCUSTOMERlabe";
             lFIRSTCUSTOMERlabe.Size = new System.Drawing.Size(95, 16);
@@ -551,7 +550,7 @@ namespace CommonCommitLogic
             CUSTOMERlabel.AutoSize = true;
             CUSTOMERlabel.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             CUSTOMERlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            CUSTOMERlabel.Location = new System.Drawing.Point(6, 4);
+            CUSTOMERlabel.Location = new System.Drawing.Point(5, 3);
             CUSTOMERlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             CUSTOMERlabel.Name = "CUSTOMERlabel";
             CUSTOMERlabel.Size = new System.Drawing.Size(29, 12);
@@ -567,10 +566,10 @@ namespace CommonCommitLogic
             PanelDrawingNumber.Controls.Add(label1);
             PanelDrawingNumber.Controls.Add(PARTNUMBER_linklabel);
             PanelDrawingNumber.Controls.Add(TITLE_Label_label);
-            PanelDrawingNumber.Location = new System.Drawing.Point(4, 111);
-            PanelDrawingNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            PanelDrawingNumber.Location = new System.Drawing.Point(3, 89);
+            PanelDrawingNumber.Margin = new System.Windows.Forms.Padding(4);
             PanelDrawingNumber.Name = "PanelDrawingNumber";
-            PanelDrawingNumber.Size = new System.Drawing.Size(346, 123);
+            PanelDrawingNumber.Size = new System.Drawing.Size(297, 99);
             PanelDrawingNumber.TabIndex = 43;
             // 
             // label16
@@ -579,7 +578,7 @@ namespace CommonCommitLogic
             label16.AutoSize = true;
             label16.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label16.Location = new System.Drawing.Point(303, 26);
+            label16.Location = new System.Drawing.Point(260, 21);
             label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label16.Name = "label16";
             label16.Size = new System.Drawing.Size(30, 13);
@@ -591,11 +590,11 @@ namespace CommonCommitLogic
             REVNUMBERtextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             REVNUMBERtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             REVNUMBERtextBox.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
-            REVNUMBERtextBox.Location = new System.Drawing.Point(300, 51);
-            REVNUMBERtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            REVNUMBERtextBox.Location = new System.Drawing.Point(257, 41);
+            REVNUMBERtextBox.Margin = new System.Windows.Forms.Padding(4);
             REVNUMBERtextBox.Name = "REVNUMBERtextBox";
             REVNUMBERtextBox.ReadOnly = true;
-            REVNUMBERtextBox.Size = new System.Drawing.Size(39, 27);
+            REVNUMBERtextBox.Size = new System.Drawing.Size(34, 27);
             REVNUMBERtextBox.TabIndex = 79;
             REVNUMBERtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -606,8 +605,8 @@ namespace CommonCommitLogic
             PARTNUMBER_CAUTION_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             PARTNUMBER_CAUTION_label.ForeColor = System.Drawing.Color.Red;
             PARTNUMBER_CAUTION_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            PARTNUMBER_CAUTION_label.Location = new System.Drawing.Point(6, 100);
-            PARTNUMBER_CAUTION_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            PARTNUMBER_CAUTION_label.Location = new System.Drawing.Point(5, 80);
+            PARTNUMBER_CAUTION_label.Margin = new System.Windows.Forms.Padding(4);
             PARTNUMBER_CAUTION_label.Name = "PARTNUMBER_CAUTION_label";
             PARTNUMBER_CAUTION_label.Size = new System.Drawing.Size(174, 13);
             PARTNUMBER_CAUTION_label.TabIndex = 78;
@@ -619,7 +618,7 @@ namespace CommonCommitLogic
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label1.Location = new System.Drawing.Point(5, 1);
+            label1.Location = new System.Drawing.Point(4, 1);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(94, 12);
@@ -631,10 +630,10 @@ namespace CommonCommitLogic
             PARTNUMBER_linklabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             PARTNUMBER_linklabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             PARTNUMBER_linklabel.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
-            PARTNUMBER_linklabel.Location = new System.Drawing.Point(4, 51);
+            PARTNUMBER_linklabel.Location = new System.Drawing.Point(3, 41);
             PARTNUMBER_linklabel.Margin = new System.Windows.Forms.Padding(0);
             PARTNUMBER_linklabel.Name = "PARTNUMBER_linklabel";
-            PARTNUMBER_linklabel.Size = new System.Drawing.Size(289, 33);
+            PARTNUMBER_linklabel.Size = new System.Drawing.Size(248, 27);
             PARTNUMBER_linklabel.TabIndex = 36;
             PARTNUMBER_linklabel.TabStop = true;
             PARTNUMBER_linklabel.Text = "図面番号";
@@ -646,7 +645,7 @@ namespace CommonCommitLogic
             TITLE_Label_label.AutoSize = true;
             TITLE_Label_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             TITLE_Label_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            TITLE_Label_label.Location = new System.Drawing.Point(4, 26);
+            TITLE_Label_label.Location = new System.Drawing.Point(3, 21);
             TITLE_Label_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             TITLE_Label_label.Name = "TITLE_Label_label";
             TITLE_Label_label.Size = new System.Drawing.Size(46, 13);
@@ -659,10 +658,10 @@ namespace CommonCommitLogic
             CadFileWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
             CadFileWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             CadFileWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
-            CadFileWarningIgnore_button.Location = new System.Drawing.Point(574, 26);
-            CadFileWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            CadFileWarningIgnore_button.Location = new System.Drawing.Point(492, 21);
+            CadFileWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4);
             CadFileWarningIgnore_button.Name = "CadFileWarningIgnore_button";
-            CadFileWarningIgnore_button.Size = new System.Drawing.Size(124, 46);
+            CadFileWarningIgnore_button.Size = new System.Drawing.Size(106, 37);
             CadFileWarningIgnore_button.TabIndex = 85;
             CadFileWarningIgnore_button.Text = "警告無視";
             CadFileWarningIgnore_button.UseVisualStyleBackColor = false;
@@ -674,10 +673,10 @@ namespace CommonCommitLogic
             CadFileInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             CadFileInformation_label.ForeColor = System.Drawing.Color.Red;
             CadFileInformation_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            CadFileInformation_label.Location = new System.Drawing.Point(9, 20);
-            CadFileInformation_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            CadFileInformation_label.Location = new System.Drawing.Point(8, 16);
+            CadFileInformation_label.Margin = new System.Windows.Forms.Padding(4);
             CadFileInformation_label.Name = "CadFileInformation_label";
-            CadFileInformation_label.Size = new System.Drawing.Size(561, 66);
+            CadFileInformation_label.Size = new System.Drawing.Size(460, 47);
             CadFileInformation_label.TabIndex = 84;
             CadFileInformation_label.TabStop = true;
             CadFileInformation_label.Text = "CadFileInformation_label";
@@ -685,16 +684,15 @@ namespace CommonCommitLogic
             // ArcSuite_groupBox
             // 
             ArcSuite_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            ArcSuite_groupBox.Controls.Add(button1);
             ArcSuite_groupBox.Controls.Add(SameRevWarningIgnore_button);
             ArcSuite_groupBox.Controls.Add(ArcSuiteWarningIgnore_button);
             ArcSuite_groupBox.Controls.Add(ArcSuiteInformation_label);
             ArcSuite_groupBox.Controls.Add(ArcSuiteDrawingShow_button);
-            ArcSuite_groupBox.Location = new System.Drawing.Point(10, 954);
-            ArcSuite_groupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ArcSuite_groupBox.Location = new System.Drawing.Point(9, 763);
+            ArcSuite_groupBox.Margin = new System.Windows.Forms.Padding(4);
             ArcSuite_groupBox.Name = "ArcSuite_groupBox";
-            ArcSuite_groupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            ArcSuite_groupBox.Size = new System.Drawing.Size(707, 115);
+            ArcSuite_groupBox.Padding = new System.Windows.Forms.Padding(4);
+            ArcSuite_groupBox.Size = new System.Drawing.Size(606, 93);
             ArcSuite_groupBox.TabIndex = 82;
             ArcSuite_groupBox.TabStop = false;
             ArcSuite_groupBox.Text = "●ArcSuiteシステム・図面登録済み調査";
@@ -705,10 +703,10 @@ namespace CommonCommitLogic
             SameRevWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
             SameRevWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             SameRevWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
-            SameRevWarningIgnore_button.Location = new System.Drawing.Point(574, 61);
-            SameRevWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            SameRevWarningIgnore_button.Location = new System.Drawing.Point(492, 49);
+            SameRevWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4);
             SameRevWarningIgnore_button.Name = "SameRevWarningIgnore_button";
-            SameRevWarningIgnore_button.Size = new System.Drawing.Size(124, 46);
+            SameRevWarningIgnore_button.Size = new System.Drawing.Size(106, 37);
             SameRevWarningIgnore_button.TabIndex = 84;
             SameRevWarningIgnore_button.Text = "警告無視";
             SameRevWarningIgnore_button.UseVisualStyleBackColor = false;
@@ -720,10 +718,10 @@ namespace CommonCommitLogic
             ArcSuiteWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
             ArcSuiteWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             ArcSuiteWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
-            ArcSuiteWarningIgnore_button.Location = new System.Drawing.Point(574, 19);
-            ArcSuiteWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ArcSuiteWarningIgnore_button.Location = new System.Drawing.Point(492, 15);
+            ArcSuiteWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4);
             ArcSuiteWarningIgnore_button.Name = "ArcSuiteWarningIgnore_button";
-            ArcSuiteWarningIgnore_button.Size = new System.Drawing.Size(124, 46);
+            ArcSuiteWarningIgnore_button.Size = new System.Drawing.Size(106, 37);
             ArcSuiteWarningIgnore_button.TabIndex = 83;
             ArcSuiteWarningIgnore_button.Text = "警告無視";
             ArcSuiteWarningIgnore_button.UseVisualStyleBackColor = false;
@@ -735,10 +733,10 @@ namespace CommonCommitLogic
             ArcSuiteInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             ArcSuiteInformation_label.ForeColor = System.Drawing.Color.Red;
             ArcSuiteInformation_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            ArcSuiteInformation_label.Location = new System.Drawing.Point(6, 22);
-            ArcSuiteInformation_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ArcSuiteInformation_label.Location = new System.Drawing.Point(5, 18);
+            ArcSuiteInformation_label.Margin = new System.Windows.Forms.Padding(4);
             ArcSuiteInformation_label.Name = "ArcSuiteInformation_label";
-            ArcSuiteInformation_label.Size = new System.Drawing.Size(405, 85);
+            ArcSuiteInformation_label.Size = new System.Drawing.Size(347, 69);
             ArcSuiteInformation_label.TabIndex = 82;
             ArcSuiteInformation_label.TabStop = true;
             ArcSuiteInformation_label.Text = "ArcSuiteInformation_label";
@@ -748,10 +746,10 @@ namespace CommonCommitLogic
             ArcSuiteDrawingShow_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             ArcSuiteDrawingShow_button.ImageKey = "(なし)";
             ArcSuiteDrawingShow_button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            ArcSuiteDrawingShow_button.Location = new System.Drawing.Point(414, 19);
+            ArcSuiteDrawingShow_button.Location = new System.Drawing.Point(355, 15);
             ArcSuiteDrawingShow_button.Margin = new System.Windows.Forms.Padding(0);
             ArcSuiteDrawingShow_button.Name = "ArcSuiteDrawingShow_button";
-            ArcSuiteDrawingShow_button.Size = new System.Drawing.Size(156, 65);
+            ArcSuiteDrawingShow_button.Size = new System.Drawing.Size(134, 52);
             ArcSuiteDrawingShow_button.TabIndex = 17;
             ArcSuiteDrawingShow_button.Text = "ArcSuiteDrawingShow_button";
             ArcSuiteDrawingShow_button.UseVisualStyleBackColor = true;
@@ -763,10 +761,10 @@ namespace CommonCommitLogic
             panel3.Controls.Add(PlotFileCreate_label);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(PaperSizeLabel);
-            panel3.Location = new System.Drawing.Point(7, 376);
-            panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel3.Location = new System.Drawing.Point(6, 301);
+            panel3.Margin = new System.Windows.Forms.Padding(4);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(693, 58);
+            panel3.Size = new System.Drawing.Size(594, 46);
             panel3.TabIndex = 79;
             // 
             // PlotFileCreate_label
@@ -774,10 +772,10 @@ namespace CommonCommitLogic
             PlotFileCreate_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             PlotFileCreate_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             PlotFileCreate_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            PlotFileCreate_label.Location = new System.Drawing.Point(6, 34);
-            PlotFileCreate_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            PlotFileCreate_label.Location = new System.Drawing.Point(5, 27);
+            PlotFileCreate_label.Margin = new System.Windows.Forms.Padding(4);
             PlotFileCreate_label.Name = "PlotFileCreate_label";
-            PlotFileCreate_label.Size = new System.Drawing.Size(670, 21);
+            PlotFileCreate_label.Size = new System.Drawing.Size(574, 17);
             PlotFileCreate_label.TabIndex = 79;
             PlotFileCreate_label.TabStop = true;
             PlotFileCreate_label.Text = "######################################";
@@ -787,8 +785,8 @@ namespace CommonCommitLogic
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label5.Location = new System.Drawing.Point(6, 11);
-            label5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            label5.Location = new System.Drawing.Point(5, 9);
+            label5.Margin = new System.Windows.Forms.Padding(4);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(53, 12);
             label5.TabIndex = 76;
@@ -799,8 +797,8 @@ namespace CommonCommitLogic
             PaperSizeLabel.AutoSize = true;
             PaperSizeLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             PaperSizeLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            PaperSizeLabel.Location = new System.Drawing.Point(75, 5);
-            PaperSizeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            PaperSizeLabel.Location = new System.Drawing.Point(64, 4);
+            PaperSizeLabel.Margin = new System.Windows.Forms.Padding(4);
             PaperSizeLabel.Name = "PaperSizeLabel";
             PaperSizeLabel.Size = new System.Drawing.Size(58, 24);
             PaperSizeLabel.TabIndex = 77;
@@ -810,7 +808,7 @@ namespace CommonCommitLogic
             // ImageRezolutonInfo_label
             // 
             ImageRezolutonInfo_label.AutoSize = true;
-            ImageRezolutonInfo_label.Location = new System.Drawing.Point(13, 350);
+            ImageRezolutonInfo_label.Location = new System.Drawing.Point(11, 280);
             ImageRezolutonInfo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             ImageRezolutonInfo_label.Name = "ImageRezolutonInfo_label";
             ImageRezolutonInfo_label.Size = new System.Drawing.Size(143, 15);
@@ -822,10 +820,10 @@ namespace CommonCommitLogic
             // 
             PreviewButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             PreviewButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            PreviewButton.Location = new System.Drawing.Point(540, 344);
+            PreviewButton.Location = new System.Drawing.Point(463, 275);
             PreviewButton.Margin = new System.Windows.Forms.Padding(0);
             PreviewButton.Name = "PreviewButton";
-            PreviewButton.Size = new System.Drawing.Size(160, 29);
+            PreviewButton.Size = new System.Drawing.Size(137, 23);
             PreviewButton.TabIndex = 17;
             PreviewButton.Text = "大きいウィンドウで表示";
             PreviewButton.UseVisualStyleBackColor = true;
@@ -835,10 +833,10 @@ namespace CommonCommitLogic
             // 
             Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             Cancel_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            Cancel_Button.Location = new System.Drawing.Point(604, 44);
+            Cancel_Button.Location = new System.Drawing.Point(518, 35);
             Cancel_Button.Margin = new System.Windows.Forms.Padding(0);
             Cancel_Button.Name = "Cancel_Button";
-            Cancel_Button.Size = new System.Drawing.Size(93, 29);
+            Cancel_Button.Size = new System.Drawing.Size(80, 23);
             Cancel_Button.TabIndex = 13;
             Cancel_Button.Text = "キャンセル";
             Cancel_Button.UseVisualStyleBackColor = true;
@@ -848,10 +846,10 @@ namespace CommonCommitLogic
             // 
             CommitExecute_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             CommitExecute_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            CommitExecute_Button.Location = new System.Drawing.Point(447, 44);
+            CommitExecute_Button.Location = new System.Drawing.Point(383, 35);
             CommitExecute_Button.Margin = new System.Windows.Forms.Padding(0);
             CommitExecute_Button.Name = "CommitExecute_Button";
-            CommitExecute_Button.Size = new System.Drawing.Size(154, 29);
+            CommitExecute_Button.Size = new System.Drawing.Size(132, 23);
             CommitExecute_Button.TabIndex = 12;
             CommitExecute_Button.Text = "コミット開始";
             CommitExecute_Button.UseVisualStyleBackColor = true;
@@ -866,11 +864,11 @@ namespace CommonCommitLogic
             COMMITSTART_groupBox.Controls.Add(label6);
             COMMITSTART_groupBox.Controls.Add(CommitExecute_Button);
             COMMITSTART_groupBox.Controls.Add(Cancel_Button);
-            COMMITSTART_groupBox.Location = new System.Drawing.Point(10, 1069);
-            COMMITSTART_groupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            COMMITSTART_groupBox.Location = new System.Drawing.Point(9, 855);
+            COMMITSTART_groupBox.Margin = new System.Windows.Forms.Padding(4);
             COMMITSTART_groupBox.Name = "COMMITSTART_groupBox";
-            COMMITSTART_groupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            COMMITSTART_groupBox.Size = new System.Drawing.Size(707, 79);
+            COMMITSTART_groupBox.Padding = new System.Windows.Forms.Padding(4);
+            COMMITSTART_groupBox.Size = new System.Drawing.Size(606, 63);
             COMMITSTART_groupBox.TabIndex = 15;
             COMMITSTART_groupBox.TabStop = false;
             // 
@@ -880,10 +878,10 @@ namespace CommonCommitLogic
             ErrorOccurred_Label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             ErrorOccurred_Label.ForeColor = System.Drawing.Color.Red;
             ErrorOccurred_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            ErrorOccurred_Label.Location = new System.Drawing.Point(27, 22);
-            ErrorOccurred_Label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ErrorOccurred_Label.Location = new System.Drawing.Point(23, 18);
+            ErrorOccurred_Label.Margin = new System.Windows.Forms.Padding(4);
             ErrorOccurred_Label.Name = "ErrorOccurred_Label";
-            ErrorOccurred_Label.Size = new System.Drawing.Size(673, 15);
+            ErrorOccurred_Label.Size = new System.Drawing.Size(577, 12);
             ErrorOccurred_Label.TabIndex = 86;
             ErrorOccurred_Label.TabStop = true;
             ErrorOccurred_Label.Text = "ErrorOccurred_Label";
@@ -892,10 +890,10 @@ namespace CommonCommitLogic
             // Printer_Info_button
             // 
             Printer_Info_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            Printer_Info_button.Location = new System.Drawing.Point(348, 45);
-            Printer_Info_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Printer_Info_button.Location = new System.Drawing.Point(298, 36);
+            Printer_Info_button.Margin = new System.Windows.Forms.Padding(4);
             Printer_Info_button.Name = "Printer_Info_button";
-            Printer_Info_button.Size = new System.Drawing.Size(91, 28);
+            Printer_Info_button.Size = new System.Drawing.Size(78, 22);
             Printer_Info_button.TabIndex = 16;
             Printer_Info_button.Text = "印刷機状態";
             Printer_Info_button.UseVisualStyleBackColor = true;
@@ -906,7 +904,7 @@ namespace CommonCommitLogic
             StageServerHostLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             StageServerHostLabel.AutoSize = true;
             StageServerHostLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
-            StageServerHostLabel.Location = new System.Drawing.Point(97, 42);
+            StageServerHostLabel.Location = new System.Drawing.Point(83, 34);
             StageServerHostLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             StageServerHostLabel.Name = "StageServerHostLabel";
             StageServerHostLabel.Size = new System.Drawing.Size(132, 24);
@@ -917,7 +915,7 @@ namespace CommonCommitLogic
             // 
             label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(5, 54);
+            label6.Location = new System.Drawing.Point(4, 43);
             label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(80, 15);
@@ -930,10 +928,10 @@ namespace CommonCommitLogic
             NumberingInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             NumberingInformation_label.ForeColor = System.Drawing.Color.Red;
             NumberingInformation_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            NumberingInformation_label.Location = new System.Drawing.Point(7, 19);
-            NumberingInformation_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            NumberingInformation_label.Location = new System.Drawing.Point(9, 763);
+            NumberingInformation_label.Margin = new System.Windows.Forms.Padding(4);
             NumberingInformation_label.Name = "NumberingInformation_label";
-            NumberingInformation_label.Size = new System.Drawing.Size(404, 52);
+            NumberingInformation_label.Size = new System.Drawing.Size(346, 42);
             NumberingInformation_label.TabIndex = 77;
             NumberingInformation_label.TabStop = true;
             NumberingInformation_label.Text = "NumberingInformation_label";
@@ -944,11 +942,11 @@ namespace CommonCommitLogic
             NUMBERING_groupBox.Controls.Add(NumberingWebServer_button);
             NUMBERING_groupBox.Controls.Add(NumberingWarningIgnore_button);
             NUMBERING_groupBox.Controls.Add(NumberingInformation_label);
-            NUMBERING_groupBox.Location = new System.Drawing.Point(10, 865);
-            NUMBERING_groupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            NUMBERING_groupBox.Location = new System.Drawing.Point(9, 692);
+            NUMBERING_groupBox.Margin = new System.Windows.Forms.Padding(4);
             NUMBERING_groupBox.Name = "NUMBERING_groupBox";
-            NUMBERING_groupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            NUMBERING_groupBox.Size = new System.Drawing.Size(707, 82);
+            NUMBERING_groupBox.Padding = new System.Windows.Forms.Padding(4);
+            NUMBERING_groupBox.Size = new System.Drawing.Size(606, 66);
             NUMBERING_groupBox.TabIndex = 86;
             NUMBERING_groupBox.TabStop = false;
             NUMBERING_groupBox.Text = "●採番システム・採番済み調査";
@@ -958,10 +956,10 @@ namespace CommonCommitLogic
             NumberingWebServer_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             NumberingWebServer_button.ImageKey = "(なし)";
             NumberingWebServer_button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            NumberingWebServer_button.Location = new System.Drawing.Point(414, 11);
+            NumberingWebServer_button.Location = new System.Drawing.Point(355, 9);
             NumberingWebServer_button.Margin = new System.Windows.Forms.Padding(0);
             NumberingWebServer_button.Name = "NumberingWebServer_button";
-            NumberingWebServer_button.Size = new System.Drawing.Size(156, 65);
+            NumberingWebServer_button.Size = new System.Drawing.Size(134, 52);
             NumberingWebServer_button.TabIndex = 79;
             NumberingWebServer_button.Text = "NumberingWebServer_button";
             NumberingWebServer_button.UseVisualStyleBackColor = true;
@@ -973,10 +971,10 @@ namespace CommonCommitLogic
             NumberingWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
             NumberingWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             NumberingWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
-            NumberingWarningIgnore_button.Location = new System.Drawing.Point(574, 19);
-            NumberingWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            NumberingWarningIgnore_button.Location = new System.Drawing.Point(492, 15);
+            NumberingWarningIgnore_button.Margin = new System.Windows.Forms.Padding(4);
             NumberingWarningIgnore_button.Name = "NumberingWarningIgnore_button";
-            NumberingWarningIgnore_button.Size = new System.Drawing.Size(124, 46);
+            NumberingWarningIgnore_button.Size = new System.Drawing.Size(106, 37);
             NumberingWarningIgnore_button.TabIndex = 78;
             NumberingWarningIgnore_button.Text = "警告無視";
             NumberingWarningIgnore_button.UseVisualStyleBackColor = false;
@@ -986,11 +984,11 @@ namespace CommonCommitLogic
             // 
             CADTITLE_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             CADTITLE_groupBox.Controls.Add(panel2);
-            CADTITLE_groupBox.Location = new System.Drawing.Point(10, 446);
+            CADTITLE_groupBox.Location = new System.Drawing.Point(9, 357);
             CADTITLE_groupBox.Margin = new System.Windows.Forms.Padding(0);
             CADTITLE_groupBox.Name = "CADTITLE_groupBox";
-            CADTITLE_groupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            CADTITLE_groupBox.Size = new System.Drawing.Size(707, 314);
+            CADTITLE_groupBox.Padding = new System.Windows.Forms.Padding(4);
+            CADTITLE_groupBox.Size = new System.Drawing.Size(606, 251);
             CADTITLE_groupBox.TabIndex = 87;
             CADTITLE_groupBox.TabStop = false;
             CADTITLE_groupBox.Text = "●コミットする表題欄情報";
@@ -1003,11 +1001,11 @@ namespace CommonCommitLogic
             CommitPreview_groupBox.Controls.Add(ImageRezolutonInfo_label);
             CommitPreview_groupBox.Controls.Add(panel3);
             CommitPreview_groupBox.Controls.Add(PreviewButton);
-            CommitPreview_groupBox.Location = new System.Drawing.Point(10, 4);
-            CommitPreview_groupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            CommitPreview_groupBox.Location = new System.Drawing.Point(9, 3);
+            CommitPreview_groupBox.Margin = new System.Windows.Forms.Padding(4);
             CommitPreview_groupBox.Name = "CommitPreview_groupBox";
-            CommitPreview_groupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            CommitPreview_groupBox.Size = new System.Drawing.Size(707, 439);
+            CommitPreview_groupBox.Padding = new System.Windows.Forms.Padding(4);
+            CommitPreview_groupBox.Size = new System.Drawing.Size(606, 351);
             CommitPreview_groupBox.TabIndex = 88;
             CommitPreview_groupBox.TabStop = false;
             CommitPreview_groupBox.Text = "●ArcSuite登録イメージ   (中央ボタンスクロール 拡大・縮小、ｸﾘｯｸで移動、ﾀﾞﾌﾞﾙｸﾘｯｸでﾘｾｯﾄ)";
@@ -1016,10 +1014,10 @@ namespace CommonCommitLogic
             // 
             TitleFit_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             TitleFit_button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            TitleFit_button.Location = new System.Drawing.Point(441, 344);
+            TitleFit_button.Location = new System.Drawing.Point(378, 275);
             TitleFit_button.Margin = new System.Windows.Forms.Padding(0);
             TitleFit_button.Name = "TitleFit_button";
-            TitleFit_button.Size = new System.Drawing.Size(98, 29);
+            TitleFit_button.Size = new System.Drawing.Size(84, 23);
             TitleFit_button.TabIndex = 82;
             TitleFit_button.Text = "全体表示";
             TitleFit_button.UseVisualStyleBackColor = true;
@@ -1030,10 +1028,10 @@ namespace CommonCommitLogic
             commitPreviewImage.DebugMode = false;
             commitPreviewImage.ErrorImage = null;
             commitPreviewImage.Image = (System.Drawing.Image)resources.GetObject("commitPreviewImage.Image");
-            commitPreviewImage.Location = new System.Drawing.Point(7, 22);
+            commitPreviewImage.Location = new System.Drawing.Point(6, 18);
             commitPreviewImage.Margin = new System.Windows.Forms.Padding(1);
             commitPreviewImage.Name = "commitPreviewImage";
-            commitPreviewImage.Size = new System.Drawing.Size(691, 321);
+            commitPreviewImage.Size = new System.Drawing.Size(592, 257);
             commitPreviewImage.TabIndex = 81;
             // 
             // CadFileInformation_groupBox
@@ -1041,31 +1039,20 @@ namespace CommonCommitLogic
             CadFileInformation_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             CadFileInformation_groupBox.Controls.Add(CadFileInformation_label);
             CadFileInformation_groupBox.Controls.Add(CadFileWarningIgnore_button);
-            CadFileInformation_groupBox.Location = new System.Drawing.Point(10, 764);
-            CadFileInformation_groupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            CadFileInformation_groupBox.Location = new System.Drawing.Point(9, 611);
+            CadFileInformation_groupBox.Margin = new System.Windows.Forms.Padding(4);
             CadFileInformation_groupBox.Name = "CadFileInformation_groupBox";
-            CadFileInformation_groupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            CadFileInformation_groupBox.Size = new System.Drawing.Size(707, 94);
+            CadFileInformation_groupBox.Padding = new System.Windows.Forms.Padding(4);
+            CadFileInformation_groupBox.Size = new System.Drawing.Size(606, 75);
             CadFileInformation_groupBox.TabIndex = 89;
             CadFileInformation_groupBox.TabStop = false;
             CadFileInformation_groupBox.Text = "●CAD図面ファイル調査";
-            // 
-            // button1
-            // 
-            button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            button1.Image = Resources.エマージェンシーバックグラウンド;
-            button1.Location = new System.Drawing.Point(16, 41);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(151, 56);
-            button1.TabIndex = 85;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // CommitDialogForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(730, 1070);
+            ClientSize = new System.Drawing.Size(626, 921);
             ControlBox = false;
             Controls.Add(CadFileInformation_groupBox);
             Controls.Add(COMMITSTART_groupBox);
@@ -1073,7 +1060,7 @@ namespace CommonCommitLogic
             Controls.Add(CADTITLE_groupBox);
             Controls.Add(NUMBERING_groupBox);
             Controls.Add(ArcSuite_groupBox);
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Margin = new System.Windows.Forms.Padding(4);
             MaximumSize = new System.Drawing.Size(773, 1190);
             Name = "CommitDialogForm";
             SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -1187,6 +1174,5 @@ namespace CommonCommitLogic
         public System.Windows.Forms.Label CadFileInformation_label;
         private System.Windows.Forms.GroupBox CadFileInformation_groupBox;
         private System.Windows.Forms.Button SameRevWarningIgnore_button;
-        private System.Windows.Forms.Button button1;
     }
 }
