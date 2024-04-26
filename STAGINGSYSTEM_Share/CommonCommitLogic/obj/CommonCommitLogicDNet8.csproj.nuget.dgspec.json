@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj": {}
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj",
         "projectName": "SasaLibDNet8.ArcSuitePreview",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -33,29 +31,29 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               }
             }
           }
@@ -111,22 +109,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj",
         "projectName": "SasaLibDNet8.MySQLConnect",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -140,11 +136,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               }
             }
           }
@@ -189,22 +185,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj",
         "projectName": "SasaLibDNet8.NumberingSupport",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -218,23 +212,23 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               }
             }
           }
@@ -273,22 +267,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj",
         "projectName": "SasaLibDNet8.PictureBoxControlLibrary",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\SasaLibDNet8.PictureBoxControlLibrary.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8PagePictureControlInfo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -302,11 +294,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               }
             }
           }
@@ -354,22 +346,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj",
         "projectName": "SasaLibDNet8",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -383,8 +373,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               }
             }
           }
@@ -525,11 +515,11 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj",
         "projectName": "SasaLib.DelegateWriteLine",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}
@@ -540,22 +530,20 @@
         "net48": {}
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
         "projectName": "CommonCommitLogicDNet8",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\CommonCommitLogicDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonCommitLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -569,35 +557,35 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.ArcSuitePreview\\SasaLibDNet8.ArcSuitePreview.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.MySQLConnect\\SasaLibDNet8.MySQLConnect.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
               }
             }
           }
@@ -649,22 +637,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
         "projectName": "CommonTicketClassLibraryDNet8",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -678,8 +664,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               }
             }
           }
@@ -732,22 +718,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
         "projectName": "DefineCOMDS.DNet8",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -761,11 +745,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
               }
             }
           }
@@ -814,22 +798,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj",
         "projectName": "RemoteClientCADtypeDNet8",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -843,17 +825,17 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               }
             }
           }
@@ -902,22 +884,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
         "projectName": "RemoteClientDNet8",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -931,23 +911,23 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
               }
             }
           }
@@ -999,22 +979,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
         "projectName": "ToyoMcMfg.Staging.RemoteObjects",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -1028,14 +1006,14 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
               }
             }
           }
@@ -1084,22 +1062,20 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
         "projectName": "SharedClassLibraryDNet8",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj",
         "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\obj\\",
+        "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -1113,14 +1089,14 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj"
               }
             }
           }
@@ -1169,16 +1145,16 @@
         }
       }
     },
-    "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
+    "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj",
+        "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj",
         "projectName": "FieldValueSet",
-        "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj",
+        "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOSTAGINGSYSTEM\\STAGINGSYSTEM_Share\\FieldValueSet\\FieldValueSet.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+              "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               }
             }
           }

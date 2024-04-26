@@ -3,7 +3,7 @@ build_property.XamlSourceGeneratorTracingFolder =
 build_property.TargetFramework = net8.0-windows
 build_property.TargetFramework = net8.0-windows
 build_property.ProjectTypeGuidsProperty = 
-build_property.MSBuildProjectFullPath = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsDNet8.csproj
+build_property.MSBuildProjectFullPath = C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsDNet8.csproj
 build_property.RootNamespace = ToyoMcMfg.Staging.RemoteObjects
 build_property.RootNamespace = ToyoMcMfg.Staging.RemoteObjects
 build_property.DefineConstantsProperty = TRACE,DEBUG,NET,NET8_0,NETCOREAPP,HAS_UNO,UNO_HAS_FRAMEWORKELEMENT_MEASUREOVERRIDE,UNO_HAS_NO_IDEPENDENCYOBJECT
@@ -65,7 +65,7 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.ProjectDir = C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\RemoteObjects\
+build_property.ProjectDir = C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\RemoteObjects\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 

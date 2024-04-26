@@ -11,12 +11,14 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.Versioning;
 
 
 
 /// <summary>
 /// TIFF CTTI4 図面を生成
 /// </summary>
+[SupportedOSPlatform("windows")]
 public class GenerateTIFFdrawing
 {
     static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;

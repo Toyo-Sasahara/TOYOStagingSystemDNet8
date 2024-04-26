@@ -26,7 +26,7 @@
           "ToyoMcMfg.Staging.RemoteObjects": "1.0.0",
           "PrintSystem.Reference": "0.0.0.0",
           "System.Printing": "8.0.0.0",
-          "ToyoMcMfg.Staging.RemoteObjects.Reference": "0.0.0.0"
+          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.14025"
         },
         "runtime": {
           "StageServerCommonDNet8.dll": {}
@@ -836,6 +836,7 @@
       "GenerateTIFFdrawingDNet8/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
+          "RemoteClientCADtypeDNet8": "1.0.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
           "System.Data.DataSetExtensions": "4.5.0"
@@ -1011,6 +1012,7 @@
           "System.ObjectModel": "4.3.0",
           "System.Runtime.Extensions": "4.3.1",
           "System.Runtime.Handles": "4.3.0",
+          "System.Threading": "4.3.0",
           "System.Windows.Extensions": "8.0.0",
           "Uno.UI": "5.3.0-dev.422",
           "runtime.native.System.IO.Compression": "4.3.2",
@@ -1362,25 +1364,17 @@
           }
         }
       },
-      "ToyoMcMfg.Staging.RemoteObjects.Reference/0.0.0.0": {
+      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.14025": {
         "runtime": {
           "ToyoMcMfg.Staging.RemoteObjects.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "1.24.424.14025",
+            "fileVersion": "1.24.424.14025"
           }
         }
       },
       "BarcodeLib/1.24.4.162": {
         "runtime": {
           "BarcodeLib.dll": {
-            "assemblyVersion": "1.24.4.162",
-            "fileVersion": "1.24.4.162"
-          }
-        }
-      },
-      "SasaLib/1.24.4.162": {
-        "runtime": {
-          "SasaLib.dll": {
             "assemblyVersion": "1.24.4.162",
             "fileVersion": "1.24.4.162"
           }
@@ -2525,17 +2519,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ToyoMcMfg.Staging.RemoteObjects.Reference/0.0.0.0": {
+    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.14025": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "BarcodeLib/1.24.4.162": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SasaLib/1.24.4.162": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

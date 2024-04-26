@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q4Vmj/smRLX9Erz0SE3bI0OWg0R/zX7OHoJdjImDswFciGbZAzIGW3dxixtk5hZl9R/K4ZiNhnKjzuFrVR8eAw==",
-  "success": false,
-  "projectFilePath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\クライアントアプリ\\サーバーコントロールセンター\\サービスコントロールセンターDNet8.csproj",
+  "dgSpecHash": "nUtkGr8ecnFHP5H9Jn2FOF/AP49mySpDS6KtJ08wu7vzWZHmsrQK+kIdGOLbfL3it5b8WeEApDoTipA3pnWNkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\クライアントアプリ\\サーバーコントロールセンター\\サービスコントロールセンターDNet8.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasahara\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\sasahara\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
@@ -68,7 +68,7 @@
     "C:\\Users\\sasahara\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
-    "C:\\Users\\sasahara\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
@@ -101,42 +101,5 @@
     "C:\\Users\\sasahara\\.nuget\\packages\\uno.ui\\5.3.0-dev.422\\uno.ui.5.3.0-dev.422.nupkg.sha512",
     "C:\\Users\\sasahara\\.nuget\\packages\\zstdsharp.port\\0.7.1\\zstdsharp.port.0.7.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

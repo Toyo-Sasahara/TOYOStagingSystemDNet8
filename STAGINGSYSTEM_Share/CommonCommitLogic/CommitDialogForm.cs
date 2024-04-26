@@ -15,6 +15,7 @@ using SasaLib;
 using System.Threading;
 using System.Security.Cryptography;
 using System.Runtime.Versioning;
+using CommonCommitLogicDNet8.Properties;
 
 namespace CommonCommitLogic
 {
@@ -321,7 +322,7 @@ namespace CommonCommitLogic
         /// <exception cref="Exception"></exception>
         private void SupportArcSuite_ArcSuiteSearchResultChanged(Object sender, ArcSuiteSearchResult arcSuiteSearchResult)
         {
-            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
 
             DebugConsole.WriteLine(@"ArcSuiteSearchResultChanged イベントがキックされました");
 
@@ -353,7 +354,7 @@ namespace CommonCommitLogic
                         //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
                         try
                         {
-                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
                         }
                         catch { }
                         InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸして類番を確認", Color.Red);
@@ -393,7 +394,7 @@ namespace CommonCommitLogic
                         //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
                         try
                         {
-                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Properties.Resources.エマージェンシーバックグラウンド);
+                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
                         }
                         catch (Exception)
                         {
@@ -1167,7 +1168,7 @@ namespace CommonCommitLogic
             //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
             try
             {
-                button.Image = Properties.Resources.エマージェンシーバックグラウンド;
+                button.Image = Resources.エマージェンシーバックグラウンド;
             }
             catch (Exception ex)
             {
