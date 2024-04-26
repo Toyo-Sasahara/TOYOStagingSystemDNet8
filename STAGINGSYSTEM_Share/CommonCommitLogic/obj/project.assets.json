@@ -1821,17 +1821,17 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": "1.0.0",
-          "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": "1.0.0",
-          "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": "1.0.0",
-          "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": "1.0.0",
+          "CommonTicketClassLibraryDNet8": "1.0.0",
           "NeoSmart.AsyncLock": "3.2.1",
+          "RemoteClientCADtypeDNet8": "1.0.0",
+          "RemoteClientDNet8": "1.0.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
           "SasaLibDNet8.NumberingSupport": "1.0.0",
           "SasaLibDNet8.PictureBoxControlLibrary": "1.0.0",
           "System.Configuration.ConfigurationManager": "8.0.0",
-          "System.Drawing.Common": "8.0.4"
+          "System.Drawing.Common": "8.0.4",
+          "ToyoMcMfg.Staging.RemoteObjects": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SasaLibDNet8.ArcSuitePreview.dll": {}
@@ -1862,12 +1862,12 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": "1.0.0",
-          "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": "1.0.0",
-          "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": "1.0.0",
+          "RemoteClientCADtypeDNet8": "1.0.0",
+          "RemoteClientDNet8": "1.0.0",
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
-          "SasaLibDNet8.MySQLConnect": "1.0.0"
+          "SasaLibDNet8.MySQLConnect": "1.0.0",
+          "ToyoMcMfg.Staging.RemoteObjects": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SasaLibDNet8.NumberingSupport.dll": {}
@@ -6208,6 +6208,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6245,43 +6250,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "プロジェクト 'C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。",
-      "libraryId": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }

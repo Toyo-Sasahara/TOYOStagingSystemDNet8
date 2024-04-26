@@ -45,17 +45,17 @@
               "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
+              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\CommonTicketClassLibrary\\CommonTicketClassLibraryDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
+              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
+              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               }
             }
           }
@@ -64,6 +64,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -148,6 +153,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -217,14 +227,14 @@
               "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
                 "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
+              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClientCADtype\\RemoteClientCADtypeDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
+              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteClient\\RemoteClientDNet8.csproj"
               },
-              "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOSTAGINGSYSTEM.DNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+              "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+                "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
               }
             }
           }
@@ -233,6 +243,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -300,6 +315,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -373,6 +393,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -581,6 +606,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -658,6 +688,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -739,6 +774,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -822,6 +862,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -911,6 +956,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -994,6 +1044,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -1074,6 +1129,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
