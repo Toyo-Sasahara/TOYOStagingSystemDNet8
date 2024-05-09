@@ -20,7 +20,7 @@
           "SasaLibDNet8.NumberingSupport": "1.0.0",
           "System.Data.DataSetExtensions": "4.5.0",
           "ToyoMcMfg.Staging.RemoteObjects": "1.0.0",
-          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.23848"
+          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.27828"
         },
         "runtime": {
           "CommonCommitLogicDNet8.dll": {}
@@ -1346,11 +1346,11 @@
           "ToyoMcMfg.Staging.RemoteObjects.dll": {}
         }
       },
-      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.23848": {
+      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.27828": {
         "runtime": {
           "ToyoMcMfg.Staging.RemoteObjects.dll": {
-            "assemblyVersion": "1.24.424.23848",
-            "fileVersion": "1.24.424.23848"
+            "assemblyVersion": "1.24.424.27828",
+            "fileVersion": "1.24.424.27828"
           }
         }
       },
@@ -2515,7 +2515,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.23848": {
+    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.27828": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
