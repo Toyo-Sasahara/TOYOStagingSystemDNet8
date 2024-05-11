@@ -176,7 +176,6 @@ C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\Common
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.dll
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.MySQLConnect.dll
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.NumberingSupport.dll
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.PictureBoxControlLibrary.dll
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.dll
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.dll
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\Interop.IWshRuntimeLibrary.dll
@@ -204,7 +203,6 @@ C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\Common
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\RemoteClientDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.pdb
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.pdb
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SasaLibDNet8.PictureBoxControlLibrary.pdb
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.pdb
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\cs\PresentationCore.resources.dll
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\CommonCommitLogic\bin\Debug\net8.0-windows\de\PresentationCore.resources.dll
