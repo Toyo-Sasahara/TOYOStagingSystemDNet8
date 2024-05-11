@@ -4652,22 +4652,25 @@
   },
   "packageFolders": {
     "C:\\Users\\sasahara\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
       "projectName": "MailNoticeDNet8",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4681,11 +4684,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
             }
           }
         }
