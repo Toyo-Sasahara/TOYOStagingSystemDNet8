@@ -150,7 +150,7 @@
             },
             "stdole": {
               "target": "Package",
-              "version": "[17.9.37000, )"
+              "version": "[7.0.3300, )"
             }
           },
           "imports": [
