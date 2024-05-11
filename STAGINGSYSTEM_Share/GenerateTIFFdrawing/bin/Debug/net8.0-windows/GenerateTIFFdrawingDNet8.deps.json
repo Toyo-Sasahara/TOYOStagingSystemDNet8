@@ -13,7 +13,7 @@
           "SasaLib.DelegateWriteLine": "1.0.0",
           "SasaLibDNet8": "1.0.0",
           "System.Data.DataSetExtensions": "4.5.0",
-          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.10535"
+          "ToyoMcMfg.Staging.RemoteObjects.Reference": "1.24.424.32287"
         },
         "runtime": {
           "GenerateTIFFdrawingDNet8.dll": {}
@@ -1025,11 +1025,11 @@
           "ToyoMcMfg.Staging.RemoteObjects.dll": {}
         }
       },
-      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.10535": {
+      "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.32287": {
         "runtime": {
           "ToyoMcMfg.Staging.RemoteObjects.dll": {
-            "assemblyVersion": "1.24.424.10535",
-            "fileVersion": "1.24.424.10535"
+            "assemblyVersion": "1.24.424.32287",
+            "fileVersion": "1.24.424.32287"
           }
         }
       },
@@ -1970,7 +1970,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.10535": {
+    "ToyoMcMfg.Staging.RemoteObjects.Reference/1.24.424.32287": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
