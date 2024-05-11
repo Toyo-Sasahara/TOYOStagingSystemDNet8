@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0KdvUrGpmNCsHCauSswa+doL6tCgtmXqgc4q6kMCoRxl16SDXnC1NDTGNSXZjTBz32+gY4fAwYCaA5moitRZFQ==",
+  "dgSpecHash": "lquonVkSgniP+MiJbNvUtQVJ7ZaaGaoIohUm/tYcmVKizt3JAx9vGdo9yTp3QeyRtRXhFlNc+M8NOPeS5pSteA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerPrinterService\\StageServerPrinterServiceDNet8.csproj",
+  "projectFilePath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerPrinterService\\StageServerPrinterServiceDNet8.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasahara\\.nuget\\packages\\indigina.printing\\1.2.14\\indigina.printing.1.2.14.nupkg.sha512",
     "C:\\Users\\sasahara\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
@@ -52,7 +52,7 @@
     "C:\\Users\\sasahara\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\sasahara\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
