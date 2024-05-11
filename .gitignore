@@ -482,3 +482,4 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+/.vs/TOYOStagingSystemDNet8/DesignTimeBuild/.dtbcache.v2
