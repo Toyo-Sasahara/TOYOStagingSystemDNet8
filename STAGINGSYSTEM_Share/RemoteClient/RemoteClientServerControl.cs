@@ -103,6 +103,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -176,6 +177,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -249,6 +251,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -322,6 +325,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -395,6 +399,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -468,6 +473,7 @@ namespace RemoteClient
 
             DateTime dt1 = DateTime.Now;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
             {
 
@@ -561,6 +567,7 @@ namespace RemoteClient
 
             resultMessage = null;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);
@@ -627,6 +634,7 @@ namespace RemoteClient
             connectClients = new List<AcceptPipeCommand>();
 
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);

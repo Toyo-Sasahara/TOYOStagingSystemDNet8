@@ -113,6 +113,7 @@ namespace StageServerRemote
 
             List<ClientPreInputTICKET> preInputTickets;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -215,6 +216,7 @@ namespace StageServerRemote
             {
                 if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+                // TODO: ClsLogonDummy を 書き換える必要
                 using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
                 {
                     try

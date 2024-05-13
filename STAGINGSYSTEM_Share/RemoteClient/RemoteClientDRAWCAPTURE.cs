@@ -105,6 +105,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -177,6 +178,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -254,6 +256,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -331,6 +334,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -409,6 +413,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -492,6 +497,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -564,6 +570,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -652,6 +659,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -780,6 +788,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -964,6 +973,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1126,7 +1136,7 @@ namespace StageServerRemote
         public async Task<List<string>> DatabaseBackup(string DistnationFolder, SasaLibDelegateWriteLine delegateWriteLine = null)
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
-
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1209,7 +1219,7 @@ namespace StageServerRemote
         public async Task<List<string>> DatabaseRestore(string DistnationFolder, DateTime createTime, SasaLibDelegateWriteLine delegateWriteLine = null)
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
-
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1298,7 +1308,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1388,7 +1398,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1482,6 +1492,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1559,6 +1570,7 @@ namespace StageServerRemote
             if (SourceFullFileName == null)
                 return false;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 //SasaLib.StopWatch stopWatch = new StopWatch($"GetImageFromPIPE");
@@ -1621,6 +1633,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
