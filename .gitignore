@@ -598,3 +598,7 @@ $RECYCLE.BIN/
 /STAGINGSYSTEM_Share/CommonCommitLogic/bin/Debug/net8.0-windows/SasaLibDelegateWriteLine.dll
 /STAGINGSYSTEM_Share/CommonCommitLogic/bin/Debug/net8.0-windows/SasaLibDelegateWriteLine.pdb
 /STAGINGSYSTEM_Share/CommonCommitLogic/obj/Debug/net8.0-windows/CommonCo.54F26E49.Up2Date
+/STAGINGSYSTEM_Share/RemoteClient/bin/Debug/net8.0-windows/Interop.IWshRuntimeLibrary.dll
+/STAGINGSYSTEM_Share/SharedClassLibrary/bin/Debug/net8.0-windows/Interop.IWshRuntimeLibrary.dll
+/STAGINGSYSTEM_Share/RemoteClientCADtype/bin/Debug/net8.0-windows/Interop.IWshRuntimeLibrary.dll
+/STAGINGSYSTEM_Share/RemoteObjects/bin/Debug/net8.0-windows/Interop.IWshRuntimeLibrary.dll
