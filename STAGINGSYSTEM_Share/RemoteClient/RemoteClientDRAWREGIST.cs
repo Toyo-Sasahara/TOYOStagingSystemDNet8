@@ -295,6 +295,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -372,6 +373,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -436,6 +438,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -512,6 +515,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -610,6 +614,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -677,6 +682,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -752,6 +758,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -831,7 +838,7 @@ namespace StageServerRemote
             SasaLib.EventsSummary evt = new EventsSummary("ToyoRMDRAWCAPTUREserviceControl", 2003);
             string msg1 = $"① GetArcSuiteLatestDrawingFile(...)実行開始";
             evt.Add(msg1, OutConsole: false);
-
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -988,6 +995,8 @@ namespace StageServerRemote
             evt.Add(msg1, OutConsole: false);
 
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
+
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -1329,6 +1338,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -1397,6 +1407,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
             delegateWriteLine($"{ArcSuiteAttrField} {ArcSuiteAttrValue}\n{ArcSuiteUserID},{ArcSuiteUserPassword}");
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -1473,6 +1484,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -1544,6 +1556,8 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1624,6 +1638,8 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
+
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1696,6 +1712,7 @@ namespace StageServerRemote
 
             List<FieldValueSet> LinkDownRecords = new List<FieldValueSet>();
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1776,6 +1793,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1863,6 +1881,8 @@ namespace StageServerRemote
             if (delegateWriteLine == null) { delegateWriteLine = Console.WriteLine; IsOutMsg = false; }
 
             DateTime dt1 = DateTime.Now;
+
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
             {
                 try
@@ -1970,6 +1990,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
             {
                 try
@@ -2039,6 +2060,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2107,6 +2129,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2171,6 +2194,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2230,6 +2254,7 @@ namespace StageServerRemote
             bool IsOutMsg = false;
             if (delegateWriteLine == null) { delegateWriteLine = Console.WriteLine; IsOutMsg = false; }
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
             {
                 try
@@ -2300,6 +2325,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2363,6 +2389,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2427,6 +2454,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2494,6 +2522,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2586,6 +2615,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -2679,6 +2709,8 @@ namespace StageServerRemote
                 int ClientTimeOut = 10000;
                 //bool PipeConnectionStatus = false;
                 int ReadStreamStringTimeOut = 10000;
+
+                // TODO: ClsLogonDummy を 書き換える必要
                 using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
                 {
                     try
@@ -2760,6 +2792,8 @@ namespace StageServerRemote
 
                 if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
                 int ClientTimeOut = 10000;
+
+                // TODO: ClsLogonDummy を 書き換える必要
                 using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
                 {
                     try
@@ -2842,6 +2876,8 @@ namespace StageServerRemote
                 int ClientTimeOut = 10000;
                 //bool PipeConnectionStatus = false;
                 //int ReadStreamStringTimeOut = 10000;
+
+                // TODO: ClsLogonDummy を 書き換える必要
                 using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
                 {
                     try
@@ -2925,6 +2961,8 @@ namespace StageServerRemote
                 int ClientTimeOut = 10000;
                 //bool PipeConnectionStatus = false;
                 //int ReadStreamStringTimeOut = 10000;
+
+                // TODO: ClsLogonDummy を 書き換える必要
                 using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
                 {
                     try

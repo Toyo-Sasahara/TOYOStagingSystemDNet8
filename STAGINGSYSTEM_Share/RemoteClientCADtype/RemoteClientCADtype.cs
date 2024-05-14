@@ -254,6 +254,7 @@ namespace StageServerRemote
 
             ArrayList result = null;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(ClientDomainName, ClientUserName, ClientUserPassword, ClsLogon))
             {
 

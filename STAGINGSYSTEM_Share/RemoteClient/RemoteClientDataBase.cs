@@ -197,6 +197,7 @@ namespace StageServerRemote
         {
             InSearchWorking = true;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -285,6 +286,7 @@ namespace StageServerRemote
         {
             InSearchWorking = true;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -374,6 +376,7 @@ namespace StageServerRemote
         {
             InSearchWorking = true;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy,debugConsoleMsg:false))
             {
                 try
@@ -465,6 +468,7 @@ namespace StageServerRemote
         {
             int count = -1;
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -554,6 +558,7 @@ namespace StageServerRemote
                 DelegateWriteLine = DebugConsole.WriteLine;
 
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -637,6 +642,7 @@ namespace StageServerRemote
         /// <returns></returns>
         public bool ApprovedCancels3(List<ApprovedCancel> CancelList)
         {
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -725,6 +731,7 @@ namespace StageServerRemote
         /// <param name="StampTemplate">押印時に使用するスタンプの枠</param>
         public bool Approved2b(string GUIDBASE64, string USERID, out string ApprovedMessage, string StampTemplate = "StampBase.bmp")
         {
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 bool result = false;
@@ -812,6 +819,7 @@ namespace StageServerRemote
         {
             GlovalValues.Mylog.LogRotateWriteLine($"Approved2c()開始します ClientTimeOut:{ClientTimeOut}, ReadStreamStringTimeOut:{ReadStreamStringTimeOut}, ReadHandShakeStreamStringTimeOut:{ReadHandShakeStreamStringTimeOut}");
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 bool result = false;
@@ -932,6 +940,7 @@ namespace StageServerRemote
                 return null;
             }
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1008,6 +1017,7 @@ namespace StageServerRemote
         {
             string keys = string.Join(",", FieldList);
 
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1075,7 +1085,7 @@ namespace StageServerRemote
             if (DelegateWriteLine == null)
                 DelegateWriteLine = DebugConsole.WriteLine;
 
-
+            // TODO: ClsLogonDummy を 書き換える必要
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
