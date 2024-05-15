@@ -184,6 +184,19 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.VisualStudio.Interop/17.9.37000": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.VisualStudio.Interop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.VisualStudio.Interop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -366,13 +379,20 @@
           }
         }
       },
-      "stdole/7.0.3300": {
+      "stdole/17.9.37000": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Interop": "17.9.37000"
+        },
         "compile": {
-          "lib/net10/stdole.dll": {}
+          "lib/net6.0/stdole.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net10/stdole.dll": {}
+          "lib/net6.0/stdole.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Buffers/4.5.1": {
@@ -1773,7 +1793,7 @@
           "System.Collections.Specialized": "4.3.0",
           "System.Data.SqlClient": "4.8.6",
           "System.Diagnostics.EventLog": "8.0.0",
-          "System.Drawing.Common": "8.0.4",
+          "System.Drawing.Common": "8.0.5",
           "System.Drawing.Primitives": "4.3.0",
           "System.IO.Compression": "4.3.0",
           "System.IO.Compression.ZipFile": "4.3.0",
@@ -1793,21 +1813,24 @@
           "System.Windows.Extensions": "8.0.0",
           "Uno.UI": "5.3.0-dev.422",
           "runtime.native.System.IO.Compression": "4.3.2",
-          "stdole": "7.0.3300"
+          "stdole": "17.9.37000"
         },
         "compile": {
           "bin/placeholder/SasaLibDNet8.dll": {}
         },
         "runtime": {
           "bin/placeholder/SasaLibDNet8.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
       },
       "SasaLibDNet8.Barcode/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "SasaLibDNet8": "1.0.0",
-          "System.Drawing.Common": "8.0.4"
+          "System.Drawing.Common": "8.0.5"
         },
         "compile": {
           "bin/placeholder/SasaLibDNet8.Barcode.dll": {}
@@ -1847,7 +1870,10 @@
         },
         "runtime": {
           "bin/placeholder/SasaLibDNet8.NumberingSupport.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
       },
       "SharedClassLibraryDNet8/1.0.0": {
         "type": "project",
@@ -2309,6 +2335,27 @@
         "runtime.json"
       ]
     },
+    "Microsoft.VisualStudio.Interop/17.9.37000": {
+      "sha512": "lIHdpk2g0PpIy2PiYCf6TFXZmS0tHC3shGhTrh1knmQ6M/BpYnuKmdJ5Ysknfm+MVEDUg+uYTcvaLqhF6C+O7w==",
+      "type": "package",
+      "path": "microsoft.visualstudio.interop/17.9.37000",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net20/Microsoft.VisualStudio.Interop.dll",
+        "lib/net20/Microsoft.VisualStudio.Interop.xml",
+        "lib/net472/Microsoft.VisualStudio.Interop.dll",
+        "lib/net472/Microsoft.VisualStudio.Interop.xml",
+        "lib/net6.0/Microsoft.VisualStudio.Interop.dll",
+        "lib/net6.0/Microsoft.VisualStudio.Interop.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Interop.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Interop.xml",
+        "microsoft.visualstudio.interop.17.9.37000.nupkg.sha512",
+        "microsoft.visualstudio.interop.nuspec"
+      ]
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "type": "package",
@@ -2562,15 +2609,26 @@
         "version.txt"
       ]
     },
-    "stdole/7.0.3300": {
-      "sha512": "p9WhjNp/gM2z80u+xNA1XXFek57iybUUJaDnQooKfdct3vGIpmDzLdL7Rq4ZmFzZc3LN3SFs5bRIE7j/+gLn5Q==",
+    "stdole/17.9.37000": {
+      "sha512": "Fbut94Js30JtoKQlcNF1+JZJW6UTrWzWa8y3GpPCBUJqGrzkvW6kSJBkyaeY4F3Jdk0rYZrFc6UjF6fjvQ3DJQ==",
       "type": "package",
-      "path": "stdole/7.0.3300",
+      "path": "stdole/17.9.37000",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net10/stdole.dll",
-        "stdole.7.0.3300.nupkg.sha512",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net20/stdole.dll",
+        "lib/net20/stdole.xml",
+        "lib/net45/stdole.dll",
+        "lib/net45/stdole.xml",
+        "lib/net472/stdole.dll",
+        "lib/net472/stdole.xml",
+        "lib/net6.0/stdole.dll",
+        "lib/net6.0/stdole.xml",
+        "lib/netstandard2.0/stdole.dll",
+        "lib/netstandard2.0/stdole.xml",
+        "stdole.17.9.37000.nupkg.sha512",
         "stdole.nuspec"
       ]
     },
@@ -6044,22 +6102,25 @@
   },
   "packageFolders": {
     "C:\\Users\\sasahara\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
+      "projectUniqueName": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
       "projectName": "StampProcessDNet8",
-      "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
+      "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StampProcess\\StampProcessDNet8.csproj",
       "packagesPath": "C:\\Users\\sasahara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StampProcess\\obj\\",
+      "outputPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StampProcess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\sasahara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6073,35 +6134,35 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8.NumberingSupport\\SasaLibDNet8.NumberingSupport.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibDNet8\\SasaLibDNet8\\SasaLibDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\SasaLibTestFrame\\SasaLib.DelegateWriteLine\\SasaLib.DelegateWriteLine.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\DefineCOMDS\\DefineCOMDS.DNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\MailNotice\\MailNoticeDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\RemoteObjects\\RemoteObjectsDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\SharedClassLibrary\\SharedClassLibraryDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerCommon\\StageServerCommonDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\StageServerConfig\\StageServerConfigDNet8.csproj"
             },
-            "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\TitleFieldPosition\\TitleFieldPositionDNet8.csproj": {
-              "projectPath": "C:\\Users\\sasahara\\source\\repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\TitleFieldPosition\\TitleFieldPositionDNet8.csproj"
+            "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\TitleFieldPosition\\TitleFieldPositionDNet8.csproj": {
+              "projectPath": "C:\\Users\\sasahara\\Source\\Repos\\TOYOStagingSystemDNet8\\STAGINGSYSTEM_Share\\TitleFieldPosition\\TitleFieldPositionDNet8.csproj"
             }
           }
         }
@@ -6110,11 +6171,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6167,11 +6223,19 @@
   },
   "logs": [
     {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "パッケージ 'stdole 7.0.3300' はプロジェクトのターゲット フレームワーク 'net8.0-windows7.0' ではなく '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' を使用して復元されました。このパッケージは、使用しているプロジェクトとの完全な互換性がない可能性があります。",
-      "libraryId": "stdole",
+      "code": "NU1605",
+      "level": "Error",
+      "message": "エラーとして警告: System.Drawing.Common の 8.0.5 から 8.0.4 へのパッケージ ダウングレードが検出されました。別のバージョンを選択するには、プロジェクトから直接パッケージを参照してください。 \r\n StampProcessDNet8 -> SasaLibDNet8 -> System.Drawing.Common (>= 8.0.5) \r\n StampProcessDNet8 -> System.Drawing.Common (>= 8.0.4)",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "エラーとして警告: System.Drawing.Common の 8.0.5 から 8.0.4 へのパッケージ ダウングレードが検出されました。別のバージョンを選択するには、プロジェクトから直接パッケージを参照してください。 \r\n StampProcessDNet8 -> StageServerCommonDNet8 -> SasaLibDNet8.Barcode -> System.Drawing.Common (>= 8.0.5) \r\n StampProcessDNet8 -> System.Drawing.Common (>= 8.0.4)",
+      "libraryId": "System.Drawing.Common",
       "targetGraphs": [
         "net8.0-windows7.0"
       ]
