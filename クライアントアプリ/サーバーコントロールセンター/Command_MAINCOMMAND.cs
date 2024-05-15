@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,8 @@ using ToyoMcMfg.Staging.RemoteObjects;
 
 namespace ServerControlCenterApplication
 {
+    [SupportedOSPlatform("windows")]
+
 
     public static class Command_MAINCOMMAND
     {

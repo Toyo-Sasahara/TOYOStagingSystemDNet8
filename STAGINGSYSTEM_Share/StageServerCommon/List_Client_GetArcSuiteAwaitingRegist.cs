@@ -18,9 +18,12 @@ using ToyoMcMfg.Staging.DataBaseConfig;
 using System.Xml.XPath;
 using System.Diagnostics.Eventing.Reader;
 using STAGINGSYSTEM_COMMANDS;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// 承認クライアントからの接続情報を扱うクラス
     /// </summary>

@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 using SIP = System.IO.Path;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using SharedClassLibrary;
+using System.Runtime.Versioning;
 /*
 
 ALTER DATABASE DATABASE1 SET SINGLE_USER WITH ROLLBACK IMMEDIATE
@@ -26,6 +27,8 @@ GO
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// STAGESERVERデータベースをリストア
     /// </summary>

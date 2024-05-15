@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ToyoStageService
 {
+
     /// <summary>
     /// 
     /// </summary>
@@ -18,6 +20,8 @@ namespace ToyoStageService
     /// </summary>
     public static class LockHundring
     {
+        [SupportedOSPlatform("windows")]
+
         static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
 
         /// <summary>
@@ -142,6 +146,8 @@ namespace ToyoStageService
     /// </summary>
     public static class LockFileTable
     {
+        [SupportedOSPlatform("windows")]
+
         private static List<string> LockFileList = new List<string>();
 
         /// <summary>

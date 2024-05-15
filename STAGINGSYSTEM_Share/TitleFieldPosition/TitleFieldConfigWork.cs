@@ -7,9 +7,12 @@ using SasaLib.PrintConfig;
 using System.Diagnostics;
 using SasaLib;
 using TitleFieldPosition;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// スタンプ用コンフィグ 初期作成
     /// </summary> 

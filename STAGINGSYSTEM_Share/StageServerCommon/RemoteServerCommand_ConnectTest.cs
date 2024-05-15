@@ -4,9 +4,12 @@ using System.Diagnostics;
 using System.IO.Pipes;
 using SharedClassLibrary;
 using System.Threading.Tasks;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// ToyoDRAWCAPTUREREGISTseviceから使用される
     /// </summary>

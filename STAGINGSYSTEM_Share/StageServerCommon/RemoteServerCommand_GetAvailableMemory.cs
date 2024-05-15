@@ -8,9 +8,12 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Text;
 using System.Reflection;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// メモリ情報を取得
     /// </summary>

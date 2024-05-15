@@ -6,10 +6,13 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace TitleFieldPosition
 {
+    [SupportedOSPlatform("windows")]
+
     public class TestTitleFied
     {
         public MemoryStream CreateTestDrawing(CommonPaperSize cp, float Dpi, string FullFileName, string titleImage = "TestTitleFieldBase.bmp",float titleDpi = 400)

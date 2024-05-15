@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.Versioning;
 using ToyoMcMfg.Staging.DataBaseConfig;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
 
     /// <summary>
     /// データベースに対する実務オペレーションクラス

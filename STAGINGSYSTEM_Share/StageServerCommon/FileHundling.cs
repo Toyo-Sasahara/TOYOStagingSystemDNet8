@@ -5,10 +5,13 @@ using System.Diagnostics;
 using System.IO;
 using SIP = System.IO.Path;
 using ToyoMcMfg.Staging.DataBaseConfig;
+using System.Runtime.Versioning;
 
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     public class FileHundling
     {
         static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;

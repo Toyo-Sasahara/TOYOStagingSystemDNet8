@@ -3,10 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using SasaLib;
 using SasaLib.PrintConfig;
+[SupportedOSPlatform("windows")]
 
 /// <summary>
 /// TIFF書き出し設定(標準用紙サイズに対するオフセット値)を保持するクラス

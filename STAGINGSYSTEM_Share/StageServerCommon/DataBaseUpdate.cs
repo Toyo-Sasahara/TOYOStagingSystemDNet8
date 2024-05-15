@@ -12,9 +12,12 @@ using ToyoMcMfg.Staging.DataBaseConfig;
 using MailNotice;
 using System.Security.AccessControl;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     ///■ステージデータベース更新クラス
     /// ※サブデータベースへの適応も行う

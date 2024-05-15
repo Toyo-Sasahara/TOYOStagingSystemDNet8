@@ -16,9 +16,12 @@ using ToyoMcMfg.Staging.DataBaseConfig;
 using SharedClassLibrary;
 using System.Windows.Forms;
 using MailNotice;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// ■ステージデータベース検索クラス
     /// </summary>

@@ -15,9 +15,12 @@ using SIP = System.IO.Path;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using SharedClassLibrary;
 using System.Windows.Forms;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// 
     /// </summary>

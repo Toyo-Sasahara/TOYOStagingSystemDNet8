@@ -7,12 +7,15 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using ToyoMcMfg.Staging.DataBaseConfig;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// ■ステージデータベース内容と実体を消去
     /// ※サブデータベースへの適応も行う

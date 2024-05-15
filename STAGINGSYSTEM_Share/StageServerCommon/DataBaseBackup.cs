@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 using SIP = System.IO.Path;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using SharedClassLibrary;
+using System.Runtime.Versioning;
 /*
 BACKUP DATABASE DATABASE1 TO DISK='D:\SQLDBBACKUP.BAK' WITH INIT
 GO
@@ -21,6 +22,8 @@ GO
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// STAGESERVERデータベースをバックアップ
     /// </summary>
