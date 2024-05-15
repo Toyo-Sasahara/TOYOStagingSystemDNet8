@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
 
     /// <summary>
     /// 
@@ -20,8 +21,6 @@ namespace ToyoStageService
     /// </summary>
     public static class LockHundring
     {
-        [SupportedOSPlatform("windows")]
-
         static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
 
         /// <summary>

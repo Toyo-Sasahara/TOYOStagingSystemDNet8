@@ -209,11 +209,6 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Stamp
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\ref\StampProcessDNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\SQLSearchConditonsCreateDBNet8.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\SQLSearchConditonsCreateDBNet8.pdb
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\Substitutions\UpriResources.Substitutions.xml
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.csproj.AssemblyReference.cache
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.csproj.CoreCompileInputs.cache
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.sourcelink.json
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StampProcessDNet8\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\StampConf.XML
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StampProcessDNet8\StampBase.bmp
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StampProcessDNet8\StampBase2.bmp
@@ -284,6 +279,11 @@ C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampP
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\SQLSearchConditonsCreateDBNet8.pdb
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\Autodesk.Inventor.Interop.xml
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\BarcodeLib.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\Substitutions\UpriResources.Substitutions.xml
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.csproj.AssemblyReference.cache
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.sourcelink.json
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\ILLink.Substitutions.xml
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampPro.9771CC7C.Up2Date
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.dll
