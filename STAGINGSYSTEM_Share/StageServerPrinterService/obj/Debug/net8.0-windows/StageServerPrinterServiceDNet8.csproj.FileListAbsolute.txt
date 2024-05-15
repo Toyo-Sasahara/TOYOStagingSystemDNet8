@@ -159,3 +159,48 @@ C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\Stage
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\refint\PrintSystem.dll
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\PrintSystem.pdb
 C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\ref\PrintSystem.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\DocuCentre-V5080.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\DocuCentre-VII C3373 試作開発課.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055Folder.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-A.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-B.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\SII Teriostar LP-1030.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\TEMPLATE.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\StageServerConfigDNet8\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\StageServerConfig.XML
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem.dll.config
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem.deps.json
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\PrintSystem.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\FieldValueSet.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\MailNoticeDNet8.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\RemoteClientDNet8.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\SasaLibDelegateWriteLine.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\SasaLibDNet8.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\StageServerConfigDNet8.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\Interop.IWshRuntimeLibrary.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\Autodesk.Inventor.Interop.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\SasaLibDNet8.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\SasaLibDelegateWriteLine.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\MailNoticeDNet8.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\RemoteClientDNet8.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\SharedClassLibraryDNet8.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\StageServerConfigDNet8.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\DefineCOMDS.DNet8.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\FieldValueSet.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\ToyoMcMfg.Staging.RemoteObjects.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\bin\Debug\net8.0-windows\Autodesk.Inventor.Interop.xml
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\Substitutions\UpriResources.Substitutions.xml
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\StageServerPrinterServiceDNet8.csproj.AssemblyReference.cache
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\StageServerPrinterServiceDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\StageServerPrinterServiceDNet8.csproj.CoreCompileInputs.cache
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\StageServerPrinterServiceDNet8.sourcelink.json
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\ILLink.Substitutions.xml
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\StageSer.46501428.Up2Date
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\PrintSystem.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\refint\PrintSystem.dll
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\PrintSystem.pdb
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StageServerPrinterService\obj\Debug\net8.0-windows\ref\PrintSystem.dll

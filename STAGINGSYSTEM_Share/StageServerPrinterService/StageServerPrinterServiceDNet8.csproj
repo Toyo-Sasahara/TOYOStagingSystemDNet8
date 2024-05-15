@@ -49,9 +49,4 @@
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\SII Teriostar LP-1030.XML" />
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\TEMPLATE.XML" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Printing">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.4\System.Printing.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>
