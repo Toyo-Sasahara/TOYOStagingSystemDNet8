@@ -661,3 +661,6 @@ $RECYCLE.BIN/
 /STAGINGSYSTEM_Share/TitleFieldPosition/obj/Debug/net8.0-windows/TitleFieldPositionDNet8.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
 /STAGINGSYSTEM_Share/StageServerPrinterService/obj/Debug/net8.0-windows/StageServerPrinterServiceDNet8.csproj.FileListAbsolute.txt
 /クライアントアプリ/サーバーコントロールセンター/obj/Debug/net8.0-windows/apphost.exe
+/STAGINGSYSTEM_Share/SQLSearchConditonsCreate/obj/SQLSearchConditonsCreateDBNet8.csproj.nuget.g.props
+/STAGINGSYSTEM_Share/TitleFieldPosition/obj/TitleFieldPositionDNet8.csproj.nuget.g.props
+/STAGINGSYSTEM_Share/MailNotice/obj/MailNoticeDNet8.csproj.nuget.g.props
