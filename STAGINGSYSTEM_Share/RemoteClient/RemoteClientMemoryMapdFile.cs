@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using SasaLib;
@@ -8,6 +9,7 @@ using StageServerRemote;
 
 namespace ServerControlCenterApplication
 {
+    [SupportedOSPlatform("windows")]
     public class RemoteClientMemoryMapdFile
     {
         public enum ServerMode { Master, Slave }

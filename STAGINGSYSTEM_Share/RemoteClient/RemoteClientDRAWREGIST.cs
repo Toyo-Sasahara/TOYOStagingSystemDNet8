@@ -18,9 +18,12 @@ using System.Threading.Tasks;
 using System.Threading;
 using STAGINGSYSTEM_COMMANDS;
 using SasaLibDummy;
+using System.Runtime.Versioning;
 
 namespace StageServerRemote
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// ■【2019-06-29】リモート操作を集めたクラス
     /// </summary>

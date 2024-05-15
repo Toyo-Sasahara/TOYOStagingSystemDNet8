@@ -1,11 +1,13 @@
 ﻿using SasaLib;
 using STAGINGSYSTEM_COMMANDS;
 using System;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace StageServerRemote
 {
-   
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// ●サーバから返答された識別文字列が正規のものかをチェックする
     /// このアセンブリから利用されるデリゲートメソッドを定義する

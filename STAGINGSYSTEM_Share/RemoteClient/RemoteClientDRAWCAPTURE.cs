@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ using ToyoStageService;
 
 namespace StageServerRemote
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// DRAWCAPTUEserviceとのリモート接続クラス
     /// </summary>

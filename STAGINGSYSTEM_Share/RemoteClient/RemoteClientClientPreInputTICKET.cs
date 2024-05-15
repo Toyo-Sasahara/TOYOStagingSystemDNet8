@@ -14,6 +14,7 @@ using System.IO;
 using System.IO.Pipes;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace StageServerRemote
 {
+    [SupportedOSPlatform("windows")]
+
     public class RemoteClientClientPreInputTICKET : RMCsupport
     {
         private readonly string pipename;

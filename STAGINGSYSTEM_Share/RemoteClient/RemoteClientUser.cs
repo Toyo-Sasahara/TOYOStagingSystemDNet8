@@ -10,9 +10,12 @@ using SasaLib.PIPE;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using STAGINGSYSTEM_COMMANDS;
 using SasaLibDummy;
+using System.Runtime.Versioning;
 
 namespace StageServerRemote
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// ●リモートにてユーザーに関する操作を実行するクラス
     /// </summary>

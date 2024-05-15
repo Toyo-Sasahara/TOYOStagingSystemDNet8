@@ -11,6 +11,8 @@ using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Runtime.Versioning;
+[SupportedOSPlatform("windows")]
 
 [Serializable] // パイプでオブジェクトを送受信するため、シリアル化のマークが必要
 public class CommonTicket
