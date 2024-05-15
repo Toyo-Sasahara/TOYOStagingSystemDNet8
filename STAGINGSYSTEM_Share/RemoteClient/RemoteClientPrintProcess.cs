@@ -4,9 +4,12 @@ using System.Diagnostics;
 using System.IO.Pipes;
 using STAGINGSYSTEM_COMMANDS;
 using SasaLibDummy;
+using System.Runtime.Versioning;
 
 namespace StageServerRemote
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// ●リモートにて印刷させるクラス
     /// </summary>

@@ -8,10 +8,14 @@ using System.Collections;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
+using System.Runtime.Versioning;
 using System.Text;
+
 
 namespace StageServerRemote
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// CadType エミュレータに関するクラス
     /// </summary>

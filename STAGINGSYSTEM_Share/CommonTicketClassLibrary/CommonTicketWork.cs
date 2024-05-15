@@ -8,7 +8,8 @@ using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-
+using System.Runtime.Versioning;
+[SupportedOSPlatform("windows")]
 public class CommonTicketWork
 {
     static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;

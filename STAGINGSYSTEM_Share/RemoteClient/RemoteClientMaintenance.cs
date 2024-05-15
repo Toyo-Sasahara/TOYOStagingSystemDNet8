@@ -1,13 +1,14 @@
 ﻿using SasaLib;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
 
 namespace StageServerRemote
 {
-
+    [SupportedOSPlatform("windows")]
     /// <summary>
     /// メンテナンスを実行するクラス
     /// </summary>

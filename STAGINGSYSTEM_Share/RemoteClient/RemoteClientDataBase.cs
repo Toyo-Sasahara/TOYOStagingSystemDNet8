@@ -15,9 +15,12 @@ using System.Data;
 using STAGINGSYSTEM_COMMANDS;
 using SasaLibDummy;
 using SharedClassLibrary;
+using System.Runtime.Versioning;
 
 namespace StageServerRemote
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// リモートにてデータベースに関する操作を行うクラス
     /// </summary>
