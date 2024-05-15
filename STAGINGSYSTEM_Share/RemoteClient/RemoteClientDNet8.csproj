@@ -6,8 +6,9 @@
 		<Deterministic>false</Deterministic>
 	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	  <Deterministic>false</Deterministic>
+	  <UseWPF>true</UseWPF>
 	  <UseWindowsForms>true</UseWindowsForms>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+	  <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <AssemblyTitle>RemoteClient</AssemblyTitle>
     <InformationalVersion>RemoteClient 1.22.08.xx [.NET Framework 4.8]</InformationalVersion>

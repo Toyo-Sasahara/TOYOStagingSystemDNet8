@@ -5,7 +5,6 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<OutputType>Library</OutputType>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<UseWindowsForms>true</UseWindowsForms>
 		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
 		<AssemblyTitle>CommonCommitDialog</AssemblyTitle>
 		<Copyright></Copyright>
