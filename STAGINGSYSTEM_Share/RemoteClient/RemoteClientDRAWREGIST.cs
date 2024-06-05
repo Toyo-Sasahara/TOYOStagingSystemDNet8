@@ -1397,6 +1397,85 @@ namespace StageServerRemote
         }
 
         /// <summary>
+        /// ■DB内にArcSuite登録予定を示すフラグをに立てる(複数指定) 失敗したリストを返す　"SetRegistWaitingFlag2"
+        /// </summary>
+        /// <param name="GUIDBASE64List"></param>
+        /// <param name="USERID"></param>
+        /// <param name="errList"></param>
+        /// <param name="delegateWriteLine"></param>
+        /// <returns></returns>
+        public bool SetRegistWaitingFlag2(List<string> GUIDBASE64List, string USERID, ref List<string> errList, SasaLibDelegateWriteLine delegateWriteLine = null)
+        {
+            if (delegateWriteLine == null)
+                delegateWriteLine = Console.WriteLine;
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            {
+                NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+                // 待機中のサーバーへ接続
+                try
+                {
+                    pipeCltStream.Connect(ClientTimeOut);
+                }
+                catch (Exception ex)
+                {
+                    PipeConnectionStatus = false;
+                    AnserMessage = $"PIPE接続失敗 {ex.Message}";
+                    delegateWriteLine($"東陽機械技術部 承認登録クライアント PIEP接続失敗{ex.Message}\n");
+                    return false;
+                }
+                // サーバーからの書き込みを受け取ります。
+                StreamString stst = new StreamString(pipeCltStream);
+                // ① サーバーメッセージを受信
+                bool OperationCanceledException;
+                bool AggregateException;
+
+                string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+                if (OperationCanceledException || AggregateException)
+                {
+                    delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+                    return false;
+                }
+                // ② サーバーメッセージをチェック
+                if (CheckFirstMessage(input0))
+                {
+                    // ③コマンド送信
+                    int writeResult = stst.WriteString(CMDS.DR_SetRegistWaitingFlag2);
+                    // ④GUIDBASE64Listオブジェクトを送信
+                    using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
+                    {
+                        writer.WriteObject(GUIDBASE64List); //④send
+                    }
+                    // ⑤承認実行者のID 例 0123 を送信
+                    stst.WriteString(USERID);
+
+                    // ⑥失敗した一覧を受信
+                    using (var reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
+                    {
+                        errList = reader.ReadObject<List<string>>(WriteLine: delegateWriteLine, Verbose: false); //⑤read
+                    }
+
+                }
+                else
+                {
+                    delegateWriteLine("Server could not be verified.");
+                    return false;
+                }
+                //
+
+                pipeCltStream.Close();
+            }
+
+
+            delegateWriteLine($"GUIDBASE64List.Count = {GUIDBASE64List.Count}");
+            for (int i = 0; i > GUIDBASE64List.Count; i++)
+            {
+                delegateWriteLine($"index = {i}");
+            }
+
+            return true;
+        }
+
+        /// <summary>
         /// ■ArcSuite図面の属性を変更（複数候補）。"MergeArcSuiteAtrtribute"
         /// </summary>
         /// <param name="ZUBANlistStr">属性を変更する図番のコレクション</param>

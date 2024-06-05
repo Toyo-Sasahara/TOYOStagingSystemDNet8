@@ -1,9 +1,4 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace STAGINGSYSTEM_COMMANDS
+﻿namespace STAGINGSYSTEM_COMMANDS
 {
     public static class CMDS
     {
@@ -215,6 +210,11 @@ namespace STAGINGSYSTEM_COMMANDS
         /// ■登録予定のレコードのフラグを立てる
         /// </summary>
         public const string DR_SetRegistWaitingFlag = "SetRegistWaitingFlag";
+
+        /// <summary>
+        /// ■登録予定のレコードのフラグを立てる.失敗の結果返却あり
+        /// </summary>
+        public const string DR_SetRegistWaitingFlag2 = "SetRegistWaitingFlag2";
 
         /// <summary>
         /// ■ アークスイートから属性検索
