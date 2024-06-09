@@ -97,7 +97,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetSYSTEMWATCHserviceVersion
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -170,7 +170,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 ShowPrinterQueue
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -240,7 +240,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetSYSTEMWATCHserviceMmapvalue
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -329,7 +329,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 SetDRAWWATCHserviceMmapvalue
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -407,7 +407,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 ConnectTest
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -497,7 +497,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 TitleFieldTest
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -591,7 +591,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetSTAGINGSYSTEMwatchLogLevel
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -686,7 +686,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 SetSTAGINGSYSTEMwatchLogLevel
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -781,7 +781,7 @@ namespace StageServerRemote
 
             availableMemory = 0f;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetAvailableMemory
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -853,7 +853,7 @@ namespace StageServerRemote
 
             availableMemory = 0;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetUsedMemory
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try

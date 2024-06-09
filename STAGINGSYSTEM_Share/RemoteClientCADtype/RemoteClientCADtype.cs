@@ -10,6 +10,8 @@ using System.IO;
 using System.IO.Pipes;
 using System.Runtime.Versioning;
 using System.Text;
+using Windows.Web.Syndication;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace StageServerRemote
@@ -58,9 +60,9 @@ namespace StageServerRemote
 
         string PipeServerName;
         string PipeNameDR;
-        string ClientDomainName;
-        string ClientUserName;
-        string ClientUserPassword;
+        string DomainName;
+        string UserName;
+        string UserPassword;
         bool ClsLogon;
 
         /// <summary>
@@ -83,9 +85,9 @@ namespace StageServerRemote
         {
             this.PipeServerName = PipeServerName;
             this.PipeNameDR = PipeName;
-            this.ClientDomainName = ClientDomainName;
-            this.ClientUserName = ClientUserName;
-            this.ClientUserPassword = ClientUserPassword;
+            this.DomainName = ClientDomainName;
+            this.UserName = ClientUserName;
+            this.UserPassword = ClientUserPassword;
             this.ClsLogon = ClsLogon;
         }
 
@@ -258,10 +260,79 @@ namespace StageServerRemote
 
             ArrayList result = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要
-            using (new ClsLogonDummy(ClientDomainName, ClientUserName, ClientUserPassword, ClsLogon))
-            {
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
+            //{
 
+            //    NamedPipeClientStream pipeClientst = new NamedPipeClientStream(this.PipeServerName, this.PipeNameDR);
+
+            //    // 待機中のサーバーへ接続
+            //    try
+            //    {
+            //        pipeClientst.Connect(ClientTimeOut);
+
+            //        ArrayList AnsArrayList = new ArrayList();
+
+            //        // サーバーからの書き込みを受け取ります。
+            //        StreamString stst = new StreamString(pipeClientst);
+
+            //        // ①接続文字の受信とチェック
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6004, $"RemoteClientCADtype.GetArcSuiteAttribute(..) PIPE接続失敗。ハンドシェイクでタイムアウト");
+            //            return null;
+            //        }
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            // ②コマンド名送信
+            //            int writeResult = stst.WriteString(CMDS.DR_GetArcSuiteAtrtribute1);
+
+            //            // ③検索図面番号送信
+            //            stst.WriteString(ZUBAN);
+
+            //            // ④検索結果表示属性設定CSVの記述を送信
+            //            stst.WriteString(Attrstr);
+
+            //            // ⑤サーバーからArrayListを受信
+            //            using (BinaryReader reader = new BinaryReader(pipeClientst, Encoding.UTF8, true))
+            //            {
+            //                var anser = reader.ReadObject<ArrayList>();
+            //                AnsArrayList = anser;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            WriteLine($"※エラー RemoteClientCADtype.GetArcSuiteAttribute(...)：サーバーからの接続回答が期待したものと違います {input0}");
+            //            pipeClientst.Close();
+            //            return null;
+            //        }
+
+            //        pipeClientst.Close();
+
+            //        result = AnsArrayList;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        WriteLine($"※エラー RemoteClientCADtype.GetArcSuiteAttribute(...)：PIPEサーバー接続エラー {ex.Message}");
+            //        try
+            //        {
+            //            pipeClientst.Close();
+            //            result = null;
+            //        }
+            //        catch
+            //        {
+            //            WriteLine($"※エラー RemoteClientCADtype.GetArcSuiteAttribute(...)：PIPEサーバークローズに失敗しています　 return nullを実行");
+            //            result = null;
+            //        }
+            //    }
+            //}
+
+            // TODO: ClsLogonDummy を 書き換えた GetArcSuiteAttribute
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
+            {
                 NamedPipeClientStream pipeClientst = new NamedPipeClientStream(this.PipeServerName, this.PipeNameDR);
 
                 // 待機中のサーバーへ接続
@@ -282,7 +353,8 @@ namespace StageServerRemote
                     if (OperationCanceledException || AggregateException)
                     {
                         SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6004, $"RemoteClientCADtype.GetArcSuiteAttribute(..) PIPE接続失敗。ハンドシェイクでタイムアウト");
-                        return null;
+                        result = null;
+                        return;
                     }
                     if (CheckFirstMessage(input0))
                     {
@@ -306,7 +378,8 @@ namespace StageServerRemote
                     {
                         WriteLine($"※エラー RemoteClientCADtype.GetArcSuiteAttribute(...)：サーバーからの接続回答が期待したものと違います {input0}");
                         pipeClientst.Close();
-                        return null;
+                        result = null;
+                        return;
                     }
 
                     pipeClientst.Close();
@@ -327,7 +400,10 @@ namespace StageServerRemote
                         result = null;
                     }
                 }
-            }
+
+            });
+
+
             return result;
         }
 

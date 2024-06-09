@@ -106,7 +106,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 RELOAD_STAGESERVERCONFIG
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -180,7 +180,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 RELOAD_STAMPCONF
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -254,7 +254,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 RELOAD_BARCODECONF
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -328,7 +328,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 SAVE_STAGESERVERCONFIG
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -402,7 +402,7 @@ namespace RemoteClient
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 SAVE_STAGESERVERDATABASECONFIG
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -476,7 +476,7 @@ namespace RemoteClient
 
             DateTime dt1 = DateTime.Now;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 Check_Status_CurrentMode
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
             {
 
@@ -570,7 +570,7 @@ namespace RemoteClient
 
             resultMessage = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 StressTest
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);
@@ -637,7 +637,7 @@ namespace RemoteClient
             connectClients = new List<AcceptPipeCommand>();
 
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetActiveSessionCommandList
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);

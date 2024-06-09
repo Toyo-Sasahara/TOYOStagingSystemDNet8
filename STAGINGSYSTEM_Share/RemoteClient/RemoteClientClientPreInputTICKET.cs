@@ -46,7 +46,7 @@ namespace StageServerRemote
         /// <summary>
         /// 
         /// </summary>
-        internal bool ClsLogonDummy { get; set; }
+        internal bool ClsLogon { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -82,19 +82,19 @@ namespace StageServerRemote
         /// <param name="DomainName">接続強制ユーザーのドメイン</param>
         /// <param name="UserName">接続強制ユーザー名</param>
         /// <param name="UserPassword">接続強制ユーザーパスワード</param>
-        /// <param name="ClsLogonDummy">接続強制を許可するスイッチこのスイッチがfalseの場合接続強制アカウントは使用されない</param>
+        /// <param name="ClsLogon">接続強制を許可するスイッチこのスイッチがfalseの場合接続強制アカウントは使用されない</param>
         /// <param name="PipeName">接続先パイプ名</param>
         public RemoteClientClientPreInputTICKET(string DomainName,
             string UserName,
             string UserPassword,
-            bool ClsLogonDummy,
+            bool ClsLogon,
             string PipeServerName,
             string PipeName)
         {
             this.DomainName = DomainName;
             this.UserName = UserName;
             this.UserPassword = UserPassword;
-            this.ClsLogonDummy = ClsLogonDummy;
+            this.ClsLogon = ClsLogon;
 
             this.PipeServerName = PipeServerName;
             this.pipename = PipeName;
@@ -114,10 +114,76 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            List<ClientPreInputTICKET> preInputTickets;
+            //List<ClientPreInputTICKET> preInputTickets;
 
-            // TODO: ClsLogonDummy を 書き換える必要
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+            //        // 待機中のサーバーへ接続
+            //        try
+            //        {
+            //            pipeCltStream.Connect(ClientTimeOut);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            PipeConnectionStatus = false;
+
+            //            delegateWriteLine($"PIPEサーバーへの接続エラー {ex.Message}");
+            //            return null;
+            //        }
+            //        // サーバーからのサーバ識別文字列を受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return null;
+            //        }
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            //delegateWriteLine($"ステージサーバーからの接続文字列{input0}は期待値です");
+            //            int writeResult = stst.WriteString(CMDS.DR_AddClientPreInputTICKETCODE);
+
+            //            using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                writer.WriteObject(ticket);
+            //            }
+
+            //            using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                preInputTickets = reader.ReadObject<List<ClientPreInputTICKET>>(); // ｻｰﾊﾞｰからオブジェクト受信
+            //            }
+
+            //            pipeCltStream.Close();
+
+            //            return preInputTickets;
+            //        }
+            //        else
+            //        {
+            //            delegateWriteLine($"PIPEサーバーへのからの接続文字列{input0}が期待と違います");
+            //            pipeCltStream.Close();
+            //            return null;
+            //        }
+            //        // Give the client process some time to display results before exiting.
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+
+            //        delegateWriteLine($"PIPEサーバー接続エラー\n{ex.Message}");
+            //        //SasaLib.Eventlog.Log.WriteEntry("TOYODATABASE", EventLogEntryType.Error, 6001, $"PIPEサーバー接続エラー\n{ex.Message}");
+            //    }
+            //    return null;
+            //}
+
+            // TODO: ClsLogonDummy を 書き換えた AddClientPreInputTICKETCODE
+            List<ClientPreInputTICKET> result = null;
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 try
                 {
@@ -132,7 +198,8 @@ namespace StageServerRemote
                         PipeConnectionStatus = false;
 
                         delegateWriteLine($"PIPEサーバーへの接続エラー {ex.Message}");
-                        return null;
+                        result = null;
+                        return;
                     }
                     // サーバーからのサーバ識別文字列を受け取ります。
                     StreamString stst = new StreamString(pipeCltStream);
@@ -143,7 +210,8 @@ namespace StageServerRemote
                     if (OperationCanceledException || AggregateException)
                     {
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                        return null;
+                        result = null;
+                        return;
                     }
                     if (CheckFirstMessage(input0))
                     {
@@ -153,22 +221,19 @@ namespace StageServerRemote
                         using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
                         {
                             writer.WriteObject(ticket);
+
+
+                            using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
+                            {
+                                result = reader.ReadObject<List<ClientPreInputTICKET>>(); // ｻｰﾊﾞｰからオブジェクト受信
+                            }
+                            //pipeCltStream.Close();
                         }
-
-                        using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
-                        {
-                            preInputTickets = reader.ReadObject<List<ClientPreInputTICKET>>(); // ｻｰﾊﾞｰからオブジェクト受信
-                        }
-
-                        pipeCltStream.Close();
-
-                        return preInputTickets;
                     }
                     else
                     {
                         delegateWriteLine($"PIPEサーバーへのからの接続文字列{input0}が期待と違います");
                         pipeCltStream.Close();
-                        return null;
                     }
                     // Give the client process some time to display results before exiting.
                 }
@@ -179,8 +244,9 @@ namespace StageServerRemote
                     delegateWriteLine($"PIPEサーバー接続エラー\n{ex.Message}");
                     //SasaLib.Eventlog.Log.WriteEntry("TOYODATABASE", EventLogEntryType.Error, 6001, $"PIPEサーバー接続エラー\n{ex.Message}");
                 }
-                return null;
-            }
+            });
+
+            return result;
         }
 
         /// <summary>
@@ -219,8 +285,75 @@ namespace StageServerRemote
             {
                 if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-                // TODO: ClsLogonDummy を 書き換える必要
-                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+                //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+                //{
+                //    try
+                //    {
+                //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(this.PipeServerName, pipename);
+                //        // 待機中のサーバーへ接続
+                //        try
+                //        {
+                //            pipeCltStream.Connect(ClientTimeOut);
+                //        }
+                //        catch (Exception ex)
+                //        {
+                //            PipeConnectionStatus = false;
+
+                //            delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
+                //            return null;
+                //        }
+                //        // サーバーからのサーバ識別文字列を受け取ります。
+                //        StreamString stst = new StreamString(pipeCltStream);
+                //        bool OperationCanceledException;
+                //        bool AggregateException;
+
+                //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+                //        if (OperationCanceledException || AggregateException)
+                //        {
+                //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+                //            return null;
+                //        }
+                //        if (CheckFirstMessage(input0))
+                //        {
+                //            int writeResult = stst.WriteString(CMDS.DR_RemovePreInputTIKECTCODEs);
+                //            if (writeResult == -1)
+                //                throw new Exception("PIPEコマンドを送信できませんでした");
+
+                //            using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
+                //            {
+                //                // サーバーに送出
+                //                writer.WriteObject(TICKETCODEs);
+                //            }
+
+                //            using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
+                //            {
+                //                result = reader.ReadObject<List<string>>(); // ｻｰﾊﾞｰからオブジェクト受信
+                //            }
+
+                //            pipeCltStream.Close();
+
+                //            return result;
+                //        }
+                //        else
+                //        {
+                //            delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
+                //            pipeCltStream.Close();
+                //            return null;
+                //        }
+                //        // Give the client process some time to display results before exiting.
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        PipeConnectionStatus = false;
+                //        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
+                //    }
+                //    return null;
+                //}
+
+
+                // TODO: ClsLogonDummy を 書き換えた RemovePreInputTIKECTCODEs
+                List<string> result2 = new List<string>();
+                new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
                 {
                     try
                     {
@@ -235,7 +368,8 @@ namespace StageServerRemote
                             PipeConnectionStatus = false;
 
                             delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
-                            return null;
+                            result2 = null;
+                            return;
                         }
                         // サーバーからのサーバ識別文字列を受け取ります。
                         StreamString stst = new StreamString(pipeCltStream);
@@ -246,7 +380,8 @@ namespace StageServerRemote
                         if (OperationCanceledException || AggregateException)
                         {
                             delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                            return null;
+                            result2 = null;
+                            return;
                         }
                         if (CheckFirstMessage(input0))
                         {
@@ -267,13 +402,15 @@ namespace StageServerRemote
 
                             pipeCltStream.Close();
 
-                            return result;
+                            result2 = null;
+                            return;
                         }
                         else
                         {
                             delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
                             pipeCltStream.Close();
-                            return null;
+                            result2 = null;
+                            return;
                         }
                         // Give the client process some time to display results before exiting.
                     }
@@ -282,8 +419,11 @@ namespace StageServerRemote
                         PipeConnectionStatus = false;
                         delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     }
-                    return null;
-                }
+                    result2 = null;
+                    return;
+                });
+
+                return result2;
             }
             catch (Exception ex)
             {

@@ -99,7 +99,7 @@ namespace StageServerRemote
 
             string keys = string.Join(",", SelectKeys);
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 Search
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try

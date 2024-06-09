@@ -69,7 +69,7 @@ namespace StageServerRemote
         /// <param name="PlotterSettingXML"></param>
         internal void PrintStart(string imageFilePath, string PlotterSettingXML = "")
         {
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 PrintStart
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try

@@ -109,7 +109,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterInfo
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -182,7 +182,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterShortCutName
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -260,7 +260,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterNameAndAlias
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -338,7 +338,6 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
             //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             //{
             //    try
@@ -409,6 +408,7 @@ namespace StageServerRemote
             //    return null;
             //}
 
+            //TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterIsFailStatus
             // クライアントから送られてきた 検索結果で出力するカラム名のListを取得す
             List<KeyValuePair<string, bool>> nameAndAlias = new List<KeyValuePair<string, bool>>();
 
@@ -489,7 +489,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterSettingFromPaperSize
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -573,7 +573,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 CHECK_DRAWING_TYPE
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -646,7 +646,6 @@ namespace StageServerRemote
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
-            // TODO: ClsLogonDummy を 書き換える必要
             //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             //{
             //    try
@@ -720,6 +719,7 @@ namespace StageServerRemote
             //    return $"PIPEサーバー接続エラー";
             //}
 
+            // TODO: ClsLogonDummy を 書き換えた CommitRecepitonState
             string output = null;
             new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogonDummy, () =>
             {
@@ -816,7 +816,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 FileSend
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -945,7 +945,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 FileRecv
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1130,7 +1130,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetFileList
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1293,7 +1293,7 @@ namespace StageServerRemote
         public async Task<List<string>> DatabaseBackup(string DistnationFolder, SasaLibDelegateWriteLine delegateWriteLine = null)
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 DatabaseBackup
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1376,7 +1376,7 @@ namespace StageServerRemote
         public async Task<List<string>> DatabaseRestore(string DistnationFolder, DateTime createTime, SasaLibDelegateWriteLine delegateWriteLine = null)
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 DatabaseRestore
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1465,7 +1465,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 SetDRAWCAPTUREserviceLogLevel
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1555,7 +1555,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetDRAWCAPTUREserviceLogLevel
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1649,7 +1649,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetDRAWCAPTUREserviceVersion
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
@@ -1727,7 +1727,7 @@ namespace StageServerRemote
             if (SourceFullFileName == null)
                 return false;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 GetTextFileFromPIPE
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 //SasaLib.StopWatch stopWatch = new StopWatch($"GetImageFromPIPE");
@@ -1790,7 +1790,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要
+            // TODO: ClsLogonDummy を 書き換える必要 ConnectTest
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try
