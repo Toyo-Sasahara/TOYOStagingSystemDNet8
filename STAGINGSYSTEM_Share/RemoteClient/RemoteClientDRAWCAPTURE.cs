@@ -721,7 +721,7 @@ namespace StageServerRemote
             //}
 
             string output = null;
-            new WithFakeAccount(DomainName, UserName, UserPassword, true, () =>
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogonDummy, () =>
             {
                 output = _bbb();
             });

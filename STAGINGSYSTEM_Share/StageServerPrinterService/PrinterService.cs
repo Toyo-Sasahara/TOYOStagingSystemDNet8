@@ -6,9 +6,12 @@ using System.Text;
 using System.Diagnostics;
 using MailNotice;
 using System.Security.Principal;
+using System.Runtime.Versioning;
 
 namespace ToyoStageService
 {
+    [SupportedOSPlatform("windows")]
+
     /// <summary>
     /// 印刷を賄う基本クラス。１イメージにつき1インスタンスを作成
     /// </summary>
