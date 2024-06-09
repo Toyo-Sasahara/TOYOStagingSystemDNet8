@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
 using System.Runtime.Versioning;
+using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -221,7 +222,7 @@ namespace StageServerRemote
                         List<KeyValuePair<string, string>> nameAndAlias = new List<KeyValuePair<string, string>>();
                         using (var reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                         {
-                            nameAndAlias = reader.ReadObject<List<KeyValuePair<string, string>>>(Verbose:true);
+                            nameAndAlias = reader.ReadObject<List<KeyValuePair<string, string>>>(Verbose: true);
 
                             SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"printeInfos.Count ={nameAndAlias.Count}件あります");
 
@@ -338,8 +339,83 @@ namespace StageServerRemote
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+            //        // 待機中のサーバーへ接続
+            //        try
+            //        {
+            //            pipeCltStream.Connect(ClientTimeOut);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            PipeConnectionStatus = false;
+
+            //            delegateWriteLine($"※RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)にて例外発生 {ex.Message}");
+            //            return null;
+            //        }
+            //        // サーバーからのサーバ識別文字列を受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+            //        //string input0 = ss.ReadString();
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return null;
+            //        }
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            //SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"ステージサーバーからの接続文字列{input0}は期待値です");
+            //            int writeResult = stst.WriteString(CMDS.DC_GetCommitPrinterIsFailStatus);
+
+
+            //            // クライアントから送られてきた 検索結果で出力するカラム名のListを取得す
+            //            List<KeyValuePair<string, bool>> nameAndAlias = new List<KeyValuePair<string, bool>>();
+            //            using (var reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                nameAndAlias = reader.ReadObject<List<KeyValuePair<string, bool>>>();
+
+            //                SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"printeInfos.Count ={nameAndAlias.Count}件あります");
+
+            //                foreach (var x in nameAndAlias)
+            //                {
+            //                    delegateWriteLine($"ｽﾃｰｼﾞｻｰﾊﾞｰ{PipeServerName}が準備しているプリンタの故障状態 x ={x.Key} {x.Value}");
+            //                }
+            //            }
+            //            pipeCltStream.Close();
+
+            //            return nameAndAlias;
+            //        }
+            //        else
+            //        {
+            //            delegateWriteLine($"※RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)　PIPEサーバーへのからの接続文字列{input0}が期待と違います");
+            //            pipeCltStream.Close();
+            //            return null;
+            //        }
+            //        // Give the client process some time to display results before exiting.
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+
+            //        delegateWriteLine($"※RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)　例外発生{ex.Message}");
+            //        SasaLib.Eventlog.Log.WriteEntry("TOYODATABASE", EventLogEntryType.Error, 6000, $"RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)　例外発生 {ex.Message}");
+            //    }
+            //    return null;
+            //}
+
+            // クライアントから送られてきた 検索結果で出力するカラム名のListを取得す
+            List<KeyValuePair<string, bool>> nameAndAlias = new List<KeyValuePair<string, bool>>();
+
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogonDummy, () =>
             {
+                Console.WriteLine("During impersonation: " + WindowsIdentity.GetCurrent().Name);
+
                 try
                 {
                     NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
@@ -353,7 +429,7 @@ namespace StageServerRemote
                         PipeConnectionStatus = false;
 
                         delegateWriteLine($"※RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)にて例外発生 {ex.Message}");
-                        return null;
+                        nameAndAlias = null;
                     }
                     // サーバーからのサーバ識別文字列を受け取ります。
                     StreamString stst = new StreamString(pipeCltStream);
@@ -365,7 +441,7 @@ namespace StageServerRemote
                     if (OperationCanceledException || AggregateException)
                     {
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                        return null;
+                        nameAndAlias = null;
                     }
                     if (CheckFirstMessage(input0))
                     {
@@ -373,8 +449,6 @@ namespace StageServerRemote
                         int writeResult = stst.WriteString(CMDS.DC_GetCommitPrinterIsFailStatus);
 
 
-                        // クライアントから送られてきた 検索結果で出力するカラム名のListを取得す
-                        List<KeyValuePair<string, bool>> nameAndAlias = new List<KeyValuePair<string, bool>>();
                         using (var reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                         {
                             nameAndAlias = reader.ReadObject<List<KeyValuePair<string, bool>>>();
@@ -388,13 +462,12 @@ namespace StageServerRemote
                         }
                         pipeCltStream.Close();
 
-                        return nameAndAlias;
                     }
                     else
                     {
                         delegateWriteLine($"※RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)　PIPEサーバーへのからの接続文字列{input0}が期待と違います");
                         pipeCltStream.Close();
-                        return null;
+                        nameAndAlias = null;
                     }
                     // Give the client process some time to display results before exiting.
                 }
@@ -405,10 +478,10 @@ namespace StageServerRemote
                     delegateWriteLine($"※RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)　例外発生{ex.Message}");
                     SasaLib.Eventlog.Log.WriteEntry("TOYODATABASE", EventLogEntryType.Error, 6000, $"RemoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(..)　例外発生 {ex.Message}");
                 }
-                return null;
-            }
 
+            });
 
+            return nameAndAlias;
         }
 
 
@@ -574,8 +647,89 @@ namespace StageServerRemote
 
             //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
             // TODO: ClsLogonDummy を 書き換える必要
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);
+            //        // 待機中のサーバーへ接続
+            //        try
+            //        {
+            //            pipeCltStream.Connect(ClientTimeOut);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            PipeConnectionStatus = false;
+
+            //            SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"PIPEサーバーへの接続エラー {ex.Message}");
+            //            delegateWriteLine($"PIPEサーバーへの接続エラー {ex.Message} RemoteClientDRAWCAPTURE.CommitRecepitonState(..)");
+            //            string msg;
+            //            if (ClsLogonDummy)
+            //                msg = $"コミット受付サーバーは停止しているようです。\nサーバー{Hostname}の ネットワークパイプ:{pipename} に接続できません\nRemoteClientDRAWCAPTURE.CommitRecepitonState(..)\nClsLogonDummy:{ClsLogonDummy} DomainName:{DomainName} UserName:{UserName} UserPassword:{UserPassword} 例外:{ex.Message}";
+            //            else
+            //                msg = $"コミット受付サーバーは停止しているようです。\nサーバー{Hostname}の ネットワークパイプ:{pipename} に接続できません\nRemoteClientDRAWCAPTURE.CommitRecepitonState(..)\n例外:{ex.Message}";
+
+            //            return msg;
+            //        }
+            //        // サーバーからのサーバ識別文字列を受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+            //        //string input0 = ss.ReadString();
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return null;
+            //        }
+
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            //SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"ステージサーバーからの接続文字列{input0}は期待値です");
+
+
+            //            int writeResult = stst.WriteString(CMDS.DC_CommitRecepitonState,timeoutmsec:15000);
+
+            //            if (writeResult <= 0)
+            //                throw new Exception("PIPEコマンドを送信できませんでした");
+
+            //            //string CommitRecepitonState = ss.ReadString();
+            //            string CommitRecepitonState = stst.ReadString(ReadStreamStringTimeOut, null);
+
+            //            pipeCltStream.Close();
+
+
+            //            return CommitRecepitonState;
+            //        }
+            //        else
+            //        {
+            //            SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"PIPEサーバーへのからの接続文字列{input0}が期待と違います");
+            //            delegateWriteLine($"PIPEサーバーへのからの接続文字列{input0}が期待と違います");
+            //            pipeCltStream.Close();
+            //            return $"ステージサーバーからの接続文字列{input0}が期待と違います";
+            //        }
+            //        // Give the client process some time to display results before exiting.
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+            //        delegateWriteLine($"PIPEサーバー接続エラー\n{ex.Message}");
+            //        SasaLib.Eventlog.Log.WriteEntry("TOYODATABASE", EventLogEntryType.Error, 6000, $"PIPEサーバー接続エラー\n{ex.Message}");
+            //    }
+            //    return $"PIPEサーバー接続エラー";
+            //}
+
+            string output = null;
+            new WithFakeAccount(DomainName, UserName, UserPassword, true, () =>
             {
+                output = _bbb();
+            });
+
+            return output;
+
+            string _bbb()
+                {
                 try
                 {
                     NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);
@@ -614,9 +768,9 @@ namespace StageServerRemote
                     if (CheckFirstMessage(input0))
                     {
                         //SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"ステージサーバーからの接続文字列{input0}は期待値です");
-                        
 
-                        int writeResult = stst.WriteString(CMDS.DC_CommitRecepitonState,timeoutmsec:15000);
+
+                        int writeResult = stst.WriteString(CMDS.DC_CommitRecepitonState, timeoutmsec: 15000);
 
                         if (writeResult <= 0)
                             throw new Exception("PIPEコマンドを送信できませんでした");
@@ -855,7 +1009,7 @@ namespace StageServerRemote
                             {
                                 DataSize = reader.ReadObject<long>(); // [■#6 Client <- Server Data] データサイズ受信
 
-                                if (DataSize>0)
+                                if (DataSize > 0)
                                 {
                                     delegateWriteLine($"■RemoteClientDRAWCAPTURE.FileRecv(..) Server result #6 データサイズ受信 \"{DataSize}\"");
                                 }
