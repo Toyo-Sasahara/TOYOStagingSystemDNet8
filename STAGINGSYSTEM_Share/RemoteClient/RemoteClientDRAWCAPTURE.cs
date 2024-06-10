@@ -1051,7 +1051,7 @@ namespace StageServerRemote
                                     resultMsg = $"書出し完了 {LocalDistFullFileName} , {buf.Length}";
 
 
-                                    // TODO: ここにresult5内の文字列を使いファイルのﾀｲﾑｽﾀﾝﾌﾟを解析
+                                    // result5内の文字列を使いファイルのﾀｲﾑｽﾀﾝﾌﾟを解析
                                     DateTime createTime;
                                     DateTime lastWrteTime;
                                     if (GetTimeStampFromReceveMessageTime(result5, out createTime, out lastWrteTime))
