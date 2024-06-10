@@ -41,7 +41,7 @@ namespace RemoteClient
         /// <summary>
         /// 
         /// </summary>
-        internal bool ClsLogonDummy { get; set; }
+        internal bool ClsLogon { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -87,7 +87,7 @@ namespace RemoteClient
             this.DomainName = DomainName;
             this.UserName = UserName;
             this.UserPassword = UserPassword;
-            this.ClsLogonDummy = ClsLogonDummy;
+            this.ClsLogon = ClsLogonDummy;
 
             this.Hostname = PipeServerName;
             this.pipename = PipeName;
@@ -107,7 +107,7 @@ namespace RemoteClient
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 RELOAD_STAGESERVERCONFIG
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -181,7 +181,7 @@ namespace RemoteClient
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 RELOAD_STAMPCONF
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -255,7 +255,7 @@ namespace RemoteClient
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 RELOAD_BARCODECONF
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -329,7 +329,7 @@ namespace RemoteClient
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 SAVE_STAGESERVERCONFIG
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -403,7 +403,7 @@ namespace RemoteClient
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 SAVE_STAGESERVERDATABASECONFIG
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -477,7 +477,7 @@ namespace RemoteClient
             DateTime dt1 = DateTime.Now;
 
             // TODO: ClsLogonDummy を 書き換える必要 Check_Status_CurrentMode
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon, debugConsoleMsg: false))
             {
 
                 try
@@ -564,14 +564,69 @@ namespace RemoteClient
         /// <param name="wait_minitus_timestr">パイプコマンドが終了までかかる時間を文字列で分指定</param>
         /// <param name="delegateWriteLine"></param>
         /// <returns></returns>
-        public bool StressTest(int readWrteStringTimeOut, out string resultMessage, string wait_minitus_timestr = "1" , SasaLibDelegateWriteLine delegateWriteLine = null)
+        public bool StressTest(int readWrteStringTimeOut, out string resultMessage, string wait_minitus_timestr = "1", SasaLibDelegateWriteLine delegateWriteLine = null)
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             resultMessage = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要 StressTest
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //{
+            //    NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);
+            //    // 待機中のサーバーへ接続
+            //    try
+            //    {
+            //        pipeCltStream.Connect(ClientTimeOut);
+            //        // サーバーからの書き込みを受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return false;
+            //        }
+            //        if (CheckFirstMessage(input0, delegateWriteLine))
+            //        {
+            //            var receved = SendPipeCommandAndReceveMessage(stst, CMDS.DC_DR_StressTest, 5000);
+
+            //            delegateWriteLine($"RemoteClientServerControl.StressTest(..)  コマンド名 \"StressTest\" 送信\r\n\tサーバーからの送信を受信:”{receved}”");
+
+            //            stst.WriteString(wait_minitus_timestr);
+
+            //            resultMessage = stst.ReadString(readWrteStringTimeOut);
+            //            delegateWriteLine($"RemoteClientServerControl.StressTest(..)  コマンド負荷時間 \"{wait_minitus_timestr}\" 分  を送信\r\n\tサーバーからの送信を受信:”{resultMessage}”");
+
+            //            resultMessage = stst.ReadString(-1);
+            //            delegateWriteLine($"RemoteClientServerControl.StressTest(..) コマンド終了 結果を受信\r\n\tサーバーからの送信を受信:”{resultMessage}”");
+            //        }
+            //        else
+            //        {
+            //            delegateWriteLine($"▲ CheckFirstMessage(input0) の戻り値が false");
+            //            return false;
+            //        }
+            //        ///
+            //        pipeCltStream.Close();
+            //        return true;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        delegateWriteLine($"RemoteClientServerControl.StressTest(..)\n" +
+            //            $"Hostname:{Hostname}, ClsLogonDummy:{ClsLogonDummy}, DomainName:{DomainName}, UserName:{UserName}, UserPassword:{UserPassword}" +
+            //            $" PIEP接続失敗\n{ex.Message}\n{ex.InnerException}");
+            //        pipeCltStream.Close();
+            //        return false;
+            //    }
+
+            //}
+
+            string serverResultTesttMsg = null;
+            bool anser = false;
+
+            // TODO: ClsLogonDummy を 書き換えた RemoteClientServerControl:StressTest
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);
                 // 待機中のサーバーへ接続
@@ -587,41 +642,47 @@ namespace RemoteClient
                     if (OperationCanceledException || AggregateException)
                     {
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                        return false;
+                        anser = false;
+                        return;
                     }
-                    if (CheckFirstMessage(input0,delegateWriteLine))
+                    if (CheckFirstMessage(input0, delegateWriteLine))
                     {
-                        var  receved = SendPipeCommandAndReceveMessage(stst, CMDS.DC_DR_StressTest, 5000);
+                        var receved = SendPipeCommandAndReceveMessage(stst, CMDS.DC_DR_StressTest, 5000);
 
                         delegateWriteLine($"RemoteClientServerControl.StressTest(..)  コマンド名 \"StressTest\" 送信\r\n\tサーバーからの送信を受信:”{receved}”");
 
                         stst.WriteString(wait_minitus_timestr);
 
-                        resultMessage = stst.ReadString(readWrteStringTimeOut);
-                        delegateWriteLine($"RemoteClientServerControl.StressTest(..)  コマンド負荷時間 \"{wait_minitus_timestr}\" 分  を送信\r\n\tサーバーからの送信を受信:”{resultMessage}”");
+                        string resultMessage1 = stst.ReadString(readWrteStringTimeOut);
+                        delegateWriteLine($"RemoteClientServerControl.StressTest(..)  コマンド負荷時間 \"{wait_minitus_timestr}\" 分  を送信\r\n\tサーバーからの送信を受信:”{resultMessage1}”");
 
-                        resultMessage = stst.ReadString(-1);
-                        delegateWriteLine($"RemoteClientServerControl.StressTest(..) コマンド終了 結果を受信\r\n\tサーバーからの送信を受信:”{resultMessage}”");
+                        serverResultTesttMsg = stst.ReadString(-1);
+                        delegateWriteLine($"RemoteClientServerControl.StressTest(..) コマンド終了 結果を受信\r\n\tサーバーからの送信を受信:”{serverResultTesttMsg}”");
                     }
                     else
                     {
                         delegateWriteLine($"▲ CheckFirstMessage(input0) の戻り値が false");
-                        return false;
+                        anser = false;
+                        return;
                     }
                     ///
                     pipeCltStream.Close();
-                    return true;
+                    anser = true;
+                    return;
                 }
                 catch (Exception ex)
                 {
                     delegateWriteLine($"RemoteClientServerControl.StressTest(..)\n" +
-                        $"Hostname:{Hostname}, ClsLogonDummy:{ClsLogonDummy}, DomainName:{DomainName}, UserName:{UserName}, UserPassword:{UserPassword}" +
+                        $"Hostname:{Hostname}, ClsLogonDummy:{ClsLogon}, DomainName:{DomainName}, UserName:{UserName}, UserPassword:{UserPassword}" +
                         $" PIEP接続失敗\n{ex.Message}\n{ex.InnerException}");
                     pipeCltStream.Close();
-                    return false;
+                    anser = false;
+                    return;
                 }
+            });
 
-            }
+            resultMessage = serverResultTesttMsg;
+            return anser;
         }
 
         /// <summary>
@@ -638,7 +699,7 @@ namespace RemoteClient
 
 
             // TODO: ClsLogonDummy を 書き換える必要 GetActiveSessionCommandList
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(Hostname, pipename);
                 // 待機中のサーバーへ接続
@@ -684,7 +745,7 @@ namespace RemoteClient
                 catch (Exception ex)
                 {
                     delegateWriteLine($"RemoteClientDRAWCAPTURE.GetPipeServerJobList(..)\n" +
-                        $"Hostname:{Hostname}, ClsLogonDummy:{ClsLogonDummy}, DomainName:{DomainName}, UserName:{UserName}, UserPassword:{UserPassword}" +
+                        $"Hostname:{Hostname}, ClsLogonDummy:{ClsLogon}, DomainName:{DomainName}, UserName:{UserName}, UserPassword:{UserPassword}" +
                         $" PIEP接続失敗\n{ex.Message}\n{ex.InnerException}");
                     pipeCltStream.Close();
                     return false;
