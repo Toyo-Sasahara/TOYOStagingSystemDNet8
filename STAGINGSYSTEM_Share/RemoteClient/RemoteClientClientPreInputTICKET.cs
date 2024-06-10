@@ -278,7 +278,6 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-            List<string> result;
 
 
             try
@@ -350,9 +349,8 @@ namespace StageServerRemote
                 //    return null;
                 //}
 
-
-                // TODO: ClsLogonDummy を 書き換えた RemovePreInputTIKECTCODEs
-                List<string> result2 = new List<string>();
+                List<string> result = null;
+                // TODO: ClsLogonDummy を 書き換えた RemoteClientClientPreInputTICKET:RemovePreInputTIKECTCODEs
                 new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
                 {
                     try
@@ -368,7 +366,7 @@ namespace StageServerRemote
                             PipeConnectionStatus = false;
 
                             delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
-                            result2 = null;
+                            result = null;
                             return;
                         }
                         // サーバーからのサーバ識別文字列を受け取ります。
@@ -380,7 +378,7 @@ namespace StageServerRemote
                         if (OperationCanceledException || AggregateException)
                         {
                             delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                            result2 = null;
+                            result = null;
                             return;
                         }
                         if (CheckFirstMessage(input0))
@@ -402,14 +400,12 @@ namespace StageServerRemote
 
                             pipeCltStream.Close();
 
-                            result2 = null;
-                            return;
                         }
                         else
                         {
                             delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
                             pipeCltStream.Close();
-                            result2 = null;
+                            result = null;
                             return;
                         }
                         // Give the client process some time to display results before exiting.
@@ -419,11 +415,11 @@ namespace StageServerRemote
                         PipeConnectionStatus = false;
                         delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     }
-                    result2 = null;
+                    result = null;
                     return;
                 });
 
-                return result2;
+                return result;
             }
             catch (Exception ex)
             {

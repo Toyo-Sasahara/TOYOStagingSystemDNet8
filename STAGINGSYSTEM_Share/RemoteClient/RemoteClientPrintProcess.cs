@@ -22,7 +22,7 @@ namespace StageServerRemote
         string DomainName;
         string UserName;
         string UserPassword;
-        bool ClsLogonDummy;
+        bool ClsLogon;
         string PipeServerName;
         string PipeName;
 
@@ -56,7 +56,7 @@ namespace StageServerRemote
             DomainName = ForcedDomainName;
             UserName = ForcedUserName;
             UserPassword = ForcedUserPassword;
-            ClsLogonDummy = ForcedAccountFlag;
+            ClsLogon = ForcedAccountFlag;
             this.PipeServerName = PipeServerName;
             this.PipeName = PipeName;
         }
@@ -69,8 +69,64 @@ namespace StageServerRemote
         /// <param name="PlotterSettingXML"></param>
         internal void PrintStart(string imageFilePath, string PlotterSettingXML = "")
         {
-            // TODO: ClsLogonDummy を 書き換える必要 PrintStart
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, PipeName);
+
+            //        // 待機中のサーバーへ接続
+            //        try
+            //        {
+            //            pipeCltStream.Connect(ClientTimeOut);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            PipeConnectionStatus = false;
+            //            AnserMessage = $"PIPE接続失敗 {ex.Message}";
+            //            SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6004, $"RemoteClientPrintProcess.PrintStart(..) PIPE接続失敗。ハンドシェイクでタイムアウト {ex.Message}");
+            //            return;
+            //        }
+
+            //        // サーバーからの書き込みを受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6004, "最初のハンドシェイクにてタイムアウトが発生");
+            //            return;
+            //        }
+
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            int writeResult = stst.WriteString(CMDS.DR_PrintStart);
+            //            if (writeResult == -1)
+            //                throw new Exception("PIPEコマンドを送信できませんでした");
+
+            //            stst.WriteString(imageFilePath);
+
+            //            stst.WriteString(PlotterSettingXML);
+            //        }
+            //        else
+            //        {
+            //            SharedClassLibrary.DebugClass.ConsoleDebugOut(0, "Server could not be verified.");
+            //        }
+            //        pipeCltStream.Close();
+            //        // Give the client process some time to display results before exiting.
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+            //        SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"PIPEサーバー接続エラー 例外 {ex.Message}");
+            //    }
+            //}
+
+            // TODO: ClsLogonDummy を 書き換えた RemoteClientPrintProcess:PrintStart
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 try
                 {
@@ -124,7 +180,9 @@ namespace StageServerRemote
                     PipeConnectionStatus = false;
                     SharedClassLibrary.DebugClass.ConsoleDebugOut(0, $"PIPEサーバー接続エラー 例外 {ex.Message}");
                 }
-            }
+
+            });
+
         }
     }
 }

@@ -471,7 +471,7 @@ namespace StageServerRemote
         {
             int count = -1;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteAwaitingRegist
+            // TODO: ClsLogonDummy を 書き換える必要 Update
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
             {
                 try

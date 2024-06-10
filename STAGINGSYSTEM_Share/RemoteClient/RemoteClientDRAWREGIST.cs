@@ -19,6 +19,7 @@ using System.Threading;
 using STAGINGSYSTEM_COMMANDS;
 using SasaLibDummy;
 using System.Runtime.Versioning;
+using Windows.System.RemoteSystems;
 
 namespace StageServerRemote
 {
@@ -47,7 +48,7 @@ namespace StageServerRemote
         /// <summary>
         /// 
         /// </summary>
-        internal bool ClsLogonDummy { get; set; }
+        internal bool ClsLogon { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -92,7 +93,7 @@ namespace StageServerRemote
             this.DomainName = DomainName;
             this.UserName = UserName;
             this.UserPassword = UserPassword;
-            this.ClsLogonDummy = ClsLogonDummy;
+            this.ClsLogon = ClsLogonDummy;
 
             this.PipeServerName = PipeServerName;
             this.pipename = PipeName;
@@ -120,7 +121,7 @@ namespace StageServerRemote
                 RemoteClientDataBase dbSearch = new RemoteClientDataBase(DomainName,
                     UserName,
                     UserPassword,
-                    ClsLogonDummy,
+                    ClsLogon,
                     PipeServerName, pipename);
 
                 dbSearch.DataBaseSearch(SearchKey, SearchValue, Keys);
@@ -151,7 +152,7 @@ namespace StageServerRemote
                 RemoteClientDataBase dbSearch = new RemoteClientDataBase(DomainName,
                     UserName,
                     UserPassword,
-                    ClsLogonDummy,
+                    ClsLogon,
                     PipeServerName,
                     pipename);
 
@@ -187,7 +188,7 @@ namespace StageServerRemote
                 RemoteClientDataBase dbSearch = new RemoteClientDataBase(DomainName,
                     UserName,
                     UserPassword,
-                    ClsLogonDummy,
+                    ClsLogon,
                     PipeServerName,
                     pipename);
 
@@ -251,7 +252,7 @@ namespace StageServerRemote
             RemoteClientDataBase dbSearch = new RemoteClientDataBase(DomainName,
                 UserName,
                 UserPassword,
-                ClsLogonDummy,
+                ClsLogon,
                 PipeServerName,
                 pipename);
 
@@ -275,7 +276,7 @@ namespace StageServerRemote
             RemoteClientDataBase dbSearch = new RemoteClientDataBase(DomainName,
                 UserName,
                 UserPassword,
-                ClsLogonDummy,
+                ClsLogon,
                 PipeServerName,
                 pipename);
 
@@ -298,17 +299,82 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteAttribute
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
+            //{
+            //    NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+
+            //    // 待機中のサーバーへ接続
+            //    try
+            //    {
+            //        pipeCltStream.Connect(ClientTimeOut);
+
+            //        ArrayList AnsArrayList = new ArrayList();
+
+            //        // サーバーからの書き込みを受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+
+            //        // ①接続文字の受信とチェック
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return null;
+            //        }
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            // ②コマンド名送信
+            //            int writeResult = stst.WriteString(CMDS.DR_GetArcSuiteAtrtribute);
+
+            //            // ③検索図面番号送信
+            //            using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                // サーバーに送出
+            //                writer.WriteObject(ZUBANlist);
+            //            }
+            //            // ④サーバーからArrayListを受信
+            //            using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                AnsArrayList = reader.ReadObject<ArrayList>();
+            //            }
+            //        }
+            //        else if (input0 == null)
+            //        {
+            //            delegateWriteLine($"コミットサーバーに接続できませんでした(タイムアウト)");
+            //            return null;
+            //        }
+            //        else
+            //        {
+            //            delegateWriteLine($"▲サーバーからの接続回答が期待したものと違います {input0}");
+            //            pipeCltStream.Close();
+            //            return null;
+            //        }
+
+            //        pipeCltStream.Close();
+            //        //
+            //        return AnsArrayList;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
+            //        pipeCltStream.Close();
+            //        return null;
+            //    }
+            //}
+
+            NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+            ArrayList AnsArrayList = new ArrayList();
+
+            // TODO: ClsLogonDummy を 書き換えた RemoteClientDRAWREGIST:GetArcSuiteAttribute
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
-                NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
 
                 // 待機中のサーバーへ接続
                 try
                 {
                     pipeCltStream.Connect(ClientTimeOut);
-
-                    ArrayList AnsArrayList = new ArrayList();
 
                     // サーバーからの書き込みを受け取ります。
                     StreamString stst = new StreamString(pipeCltStream);
@@ -321,7 +387,8 @@ namespace StageServerRemote
                     if (OperationCanceledException || AggregateException)
                     {
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                        return null;
+                        AnsArrayList = null;
+                        return;
                     }
                     if (CheckFirstMessage(input0))
                     {
@@ -343,26 +410,31 @@ namespace StageServerRemote
                     else if (input0 == null)
                     {
                         delegateWriteLine($"コミットサーバーに接続できませんでした(タイムアウト)");
-                        return null;
+                        AnsArrayList = null;
+                        return;
                     }
                     else
                     {
                         delegateWriteLine($"▲サーバーからの接続回答が期待したものと違います {input0}");
                         pipeCltStream.Close();
-                        return null;
+                        AnsArrayList = null;
+                        return;
                     }
 
                     pipeCltStream.Close();
                     //
-                    return AnsArrayList;
                 }
                 catch (Exception ex)
                 {
                     delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     pipeCltStream.Close();
-                    return null;
+                    AnsArrayList = null;
+                    return;
                 }
-            }
+
+            });
+
+            return AnsArrayList;
         }
 
         /// <summary>
@@ -377,7 +449,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteAttribute
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -442,7 +514,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteAttribute2
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -519,7 +591,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteAttribute3
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -618,7 +690,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteAttributeFromObjectId
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -686,7 +758,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -762,7 +834,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteLatestDrawing
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -782,7 +854,7 @@ namespace StageServerRemote
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
                         return null;
                     }
-                    if (CheckFirstMessage(input0,delegateWriteLine))
+                    if (CheckFirstMessage(input0, delegateWriteLine))
                     {
                         // ②コマンド名送信
                         int writeResult = stst.WriteString(CMDS.DR_GetArcSuiteLatestDrawing);
@@ -842,7 +914,7 @@ namespace StageServerRemote
             string msg1 = $"① GetArcSuiteLatestDrawingFile(...)実行開始";
             evt.Add(msg1, OutConsole: false);
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteLatestDrawingFile
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -1000,7 +1072,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteLatestDrawingFiles
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -1342,7 +1414,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
             // TODO: ClsLogonDummy を 書き換える必要 SetRegistWaitingFlag
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -1408,7 +1480,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -1490,7 +1562,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
             delegateWriteLine($"{ArcSuiteAttrField} {ArcSuiteAttrValue}\n{ArcSuiteUserID},{ArcSuiteUserPassword}");
             // TODO: ClsLogonDummy を 書き換える必要 MergeArcSuiteAttribute
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -1567,7 +1639,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
             // TODO: ClsLogonDummy を 書き換える必要 MergeArcSuiteAttribute1
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                 // 待機中のサーバーへ接続
@@ -1640,7 +1712,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 SystemCheckFileStore
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -1722,7 +1794,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 SystemCheckFileStoreRepare
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -1795,7 +1867,7 @@ namespace StageServerRemote
             List<FieldValueSet> LinkDownRecords = new List<FieldValueSet>();
 
             // TODO: ClsLogonDummy を 書き換える必要 SystemCheckTICKETFILEexist
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -1876,7 +1948,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 ConnectTest
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -1965,7 +2037,7 @@ namespace StageServerRemote
             DateTime dt1 = DateTime.Now;
 
             // TODO: ClsLogonDummy を 書き換える必要 CheckArcSuiteAndDatabaseServer
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon, debugConsoleMsg: false))
             {
                 try
                 {
@@ -2072,8 +2144,68 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 ApprovalRecepitonState
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon, debugConsoleMsg: false))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+            //        // 待機中のサーバーへ接続
+            //        try
+            //        {
+            //            pipeCltStream.Connect(ClientTimeOut);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            PipeConnectionStatus = false;
+
+            //            delegateWriteLine($"PIPEサーバーへの接続エラー {ex.Message}");
+            //            return $"承認受付サーバーは停止しているようです。\nサーバー{PipeServerName}の ネットワークパイプ:{pipename} に接続できません";
+            //        }
+            //        // サーバーからのサーバ識別文字列を受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return null;
+            //        }
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            //delegateWriteLine($"ステージサーバーからの接続文字列{input0}は期待値です");
+            //            int writeResult = stst.WriteString(CMDS.DR_ApprovalRecepitonState);
+
+            //            if (writeResult == -1)
+            //                throw new Exception($"ハンドシェイク後のコマンド送信に失敗 \"{CMDS.DR_ApprovalRecepitonState}\"");
+
+            //            string ApprovalRecepitonState = stst.ReadString(ReadStreamStringTimeOut, null);
+
+            //            pipeCltStream.Close();
+
+            //            return ApprovalRecepitonState;
+            //        }
+            //        else
+            //        {
+            //            delegateWriteLine($"PIPEサーバーへのからの接続文字列{input0}が期待と違います");
+            //            pipeCltStream.Close();
+            //            return $"ステージサーバーからの接続文字列{input0}が期待と違います";
+            //        }
+            //        // Give the client process some time to display results before exiting.
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+
+            //        delegateWriteLine($"PIPEサーバー接続エラー\n{ex.Message}");
+            //    }
+            //    return $"PIPEサーバー接続エラー";
+            //}
+
+            string result = null;
+            // TODO: ClsLogonDummy を 書き換えた RemoteClientDRAWREGIST:ApprovalRecepitonState
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 try
                 {
@@ -2088,7 +2220,8 @@ namespace StageServerRemote
                         PipeConnectionStatus = false;
 
                         delegateWriteLine($"PIPEサーバーへの接続エラー {ex.Message}");
-                        return $"承認受付サーバーは停止しているようです。\nサーバー{PipeServerName}の ネットワークパイプ:{pipename} に接続できません";
+                        result = $"承認受付サーバーは停止しているようです。\nサーバー{PipeServerName}の ネットワークパイプ:{pipename} に接続できません";
+                        return;
                     }
                     // サーバーからのサーバ識別文字列を受け取ります。
                     StreamString stst = new StreamString(pipeCltStream);
@@ -2099,7 +2232,8 @@ namespace StageServerRemote
                     if (OperationCanceledException || AggregateException)
                     {
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                        return null;
+                        result = null;
+                        return;
                     }
                     if (CheckFirstMessage(input0))
                     {
@@ -2113,24 +2247,28 @@ namespace StageServerRemote
 
                         pipeCltStream.Close();
 
-                        return ApprovalRecepitonState;
+                        result = ApprovalRecepitonState;
+                        return;
                     }
                     else
                     {
                         delegateWriteLine($"PIPEサーバーへのからの接続文字列{input0}が期待と違います");
                         pipeCltStream.Close();
-                        return $"ステージサーバーからの接続文字列{input0}が期待と違います";
+                        result = $"ステージサーバーからの接続文字列{input0}が期待と違います";
+                        return;
                     }
                     // Give the client process some time to display results before exiting.
                 }
                 catch (Exception ex)
                 {
                     PipeConnectionStatus = false;
-
                     delegateWriteLine($"PIPEサーバー接続エラー\n{ex.Message}");
+                    result = $"PIPEサーバー接続エラー";
+                    return;
                 }
-                return $"PIPEサーバー接続エラー";
-            }
+            });
+
+            return result;
         }
 
         /// <summary>
@@ -2143,7 +2281,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetDatabaseHOSTNAME
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2212,7 +2350,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetCommitFolderPATH
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2277,7 +2415,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetFileStoreFolderPATH
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2337,7 +2475,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null) { delegateWriteLine = Console.WriteLine; IsOutMsg = false; }
 
             // TODO: ClsLogonDummy を 書き換える必要 Get_Status_ARCSUITE_SERVERHOST
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon, debugConsoleMsg: false))
             {
                 try
                 {
@@ -2408,7 +2546,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetArcSuiteWorkingFolderPATH
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2472,7 +2610,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GETPIPECONNECTION
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2537,7 +2675,7 @@ namespace StageServerRemote
                 delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 SetDRAWREGISTserviceLogLevel
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2605,7 +2743,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetDRAWREGISTserviceLogLevel
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2698,7 +2836,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 GetDRAWREGISTserviceVersion
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -2793,7 +2931,7 @@ namespace StageServerRemote
                 int ReadStreamStringTimeOut = 10000;
 
                 // TODO: ClsLogonDummy を 書き換える必要 GetPipeCommandLog
-                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon, debugConsoleMsg: false))
                 {
                     try
                     {
@@ -2876,7 +3014,7 @@ namespace StageServerRemote
                 int ClientTimeOut = 10000;
 
                 // TODO: ClsLogonDummy を 書き換える必要 GetAuthorizedUser
-                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon, debugConsoleMsg: false))
                 {
                     try
                     {
@@ -2960,7 +3098,7 @@ namespace StageServerRemote
                 //int ReadStreamStringTimeOut = 10000;
 
                 // TODO: ClsLogonDummy を 書き換える必要 GetCommonApprovalWaitingTicketList
-                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy, debugConsoleMsg: false))
+                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon, debugConsoleMsg: false))
                 {
                     try
                     {
@@ -3045,7 +3183,7 @@ namespace StageServerRemote
                 //int ReadStreamStringTimeOut = 10000;
 
                 // TODO: ClsLogonDummy を 書き換える必要 RemovePreInputTIKECTCODEs
-                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+                using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
                 {
                     try
                     {
