@@ -109,7 +109,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterInfo
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:GetCommitPrinterInfo
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -182,7 +182,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterShortCutName
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWREGIST:GetCommitPrinterShortCutName
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -260,7 +260,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterNameAndAlias
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:GetCommitPrinterNameAndAlias
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -408,7 +408,7 @@ namespace StageServerRemote
             //    return null;
             //}
 
-            //TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterIsFailStatus
+            //TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:GetCommitPrinterIsFailStatus
             // クライアントから送られてきた 検索結果で出力するカラム名のListを取得す
             List<KeyValuePair<string, bool>> nameAndAlias = new List<KeyValuePair<string, bool>>();
 
@@ -489,7 +489,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetCommitPrinterSettingFromPaperSize
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:GetCommitPrinterSettingFromPaperSize
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -573,7 +573,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 CHECK_DRAWING_TYPE
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:CHECK_DRAWING_TYPE
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -816,7 +816,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要 FileSend
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:FileSend
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -945,7 +945,7 @@ namespace StageServerRemote
 
             System.IO.FileStream sourceFs = null;
 
-            // TODO: ClsLogonDummy を 書き換える必要 FileRecv
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:FileRecv
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -1412,7 +1412,7 @@ namespace StageServerRemote
         public async Task<List<string>> DatabaseBackup(string DistnationFolder, SasaLibDelegateWriteLine delegateWriteLine = null)
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要 DatabaseBackup
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:DatabaseBackup
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -1495,7 +1495,7 @@ namespace StageServerRemote
         public async Task<List<string>> DatabaseRestore(string DistnationFolder, DateTime createTime, SasaLibDelegateWriteLine delegateWriteLine = null)
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要 DatabaseRestore
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:DatabaseRestore
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -1584,7 +1584,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要 SetDRAWCAPTUREserviceLogLevel
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:SetDRAWCAPTUREserviceLogLevel
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -1674,7 +1674,7 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
-            // TODO: ClsLogonDummy を 書き換える必要 GetDRAWCAPTUREserviceLogLevel
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:GetDRAWCAPTUREserviceLogLevel
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -1768,7 +1768,7 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetDRAWCAPTUREserviceVersion
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:GetDRAWCAPTUREserviceVersion
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
@@ -1846,7 +1846,7 @@ namespace StageServerRemote
             if (SourceFullFileName == null)
                 return false;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetTextFileFromPIPE
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDRAWCAPTURE:GetTextFileFromPIPE
             using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 //SasaLib.StopWatch stopWatch = new StopWatch($"GetImageFromPIPE");
@@ -1909,8 +1909,84 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 ConnectTest
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+
+
+            //        // 待機中のサーバーへ接続
+            //        pipeCltStream.Connect(ClientTimeOut);
+
+            //        delegateWriteLine($"待機中のサーバーへ接続しました {PipeServerName} {pipename}");
+
+            //        // サーバーからのサーバ識別文字列を受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return false;
+            //        }
+
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            delegateWriteLine($"サーバーからの接続文字列{input0}は期待値です");
+
+            //            string command = CMDS.DC_DR_SW_ConnectTest;
+            //            delegateWriteLine($"【{command}】を送信");
+            //            stst.WriteString(command);
+
+
+            //            string str = sendTestMsg;
+            //            delegateWriteLine($"【{str}】を送信");
+            //            stst.WriteString(str);
+
+            //            /// サーバーから結果情報を取得
+            //            string AnserMessage = stst.ReadString(ReadStreamStringTimeOut, null);
+            //            delegateWriteLine($"ConnectTest()【{AnserMessage}】を受信しました");
+
+            //            if (str == AnserMessage)
+            //            {
+            //                delegateWriteLine($"送信内容と受信内容が一致したので、接続テストは問題ありません");
+            //                pipeCltStream.Close();
+
+            //                delegateWriteLine($"ConnectTestt({sendTestMsg})正常終了");
+            //                return true;
+            //            }
+            //            else
+            //            {
+            //                delegateWriteLine($"送信内容と受信内容が不一致！！、接続テスト失敗");
+            //                pipeCltStream.Close();
+
+            //                delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了");
+            //                return false;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了。サーバーからの接続文字列{input0}が期待と違います");
+            //            pipeCltStream.Close();
+            //            return false;
+            //        }
+            //        // Give the client process some time to display results before exiting.
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+            //        delegateWriteLine($"ｽﾃｰｼﾞﾝｸﾞｻｰﾊﾞｰ{PipeServerName} が応答しません。\n {ex.Message}");
+            //        return false;
+            //    }
+            //}
+
+            bool result = false;
+            // TODO: ClsLogonDummy を 書き換えた
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 try
                 {
@@ -1932,7 +2008,8 @@ namespace StageServerRemote
                     if (OperationCanceledException || AggregateException)
                     {
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                        return false;
+                        result = false;
+                        return;
                     }
 
                     if (CheckFirstMessage(input0))
@@ -1958,7 +2035,8 @@ namespace StageServerRemote
                             pipeCltStream.Close();
 
                             delegateWriteLine($"ConnectTestt({sendTestMsg})正常終了");
-                            return true;
+                            result = true;
+                            return;
                         }
                         else
                         {
@@ -1966,14 +2044,16 @@ namespace StageServerRemote
                             pipeCltStream.Close();
 
                             delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了");
-                            return false;
+                            result = false;
+                            return;
                         }
                     }
                     else
                     {
                         delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了。サーバーからの接続文字列{input0}が期待と違います");
                         pipeCltStream.Close();
-                        return false;
+                        result = false;
+                        return;
                     }
                     // Give the client process some time to display results before exiting.
                 }
@@ -1981,9 +2061,13 @@ namespace StageServerRemote
                 {
                     PipeConnectionStatus = false;
                     delegateWriteLine($"ｽﾃｰｼﾞﾝｸﾞｻｰﾊﾞｰ{PipeServerName} が応答しません。\n {ex.Message}");
-                    return false;
+                    result = false;
+                    return;
                 }
-            }
+
+            });
+
+            return result;
         }
 
         #endregion

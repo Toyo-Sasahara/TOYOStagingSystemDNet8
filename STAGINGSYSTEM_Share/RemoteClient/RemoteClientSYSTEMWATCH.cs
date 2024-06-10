@@ -10,6 +10,7 @@ using System.IO.Pipes;
 using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.XPath;
 using ToyoMcMfg.Staging.RemoteObjects;
 
 namespace StageServerRemote
@@ -41,7 +42,7 @@ namespace StageServerRemote
         /// <summary>
         /// 
         /// </summary>
-        internal bool ClsLogonDummy { get; set; }
+        internal bool ClsLogon { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -82,7 +83,7 @@ namespace StageServerRemote
             this.DomainName = DomainName;
             this.UserName = UserName;
             this.UserPassword = UserPassword;
-            this.ClsLogonDummy = ClsLogonDummy;
+            this.ClsLogon = ClsLogonDummy;
             this.PipeServerName = PipeServerName;
             this.pipename = PipeName;
         }
@@ -97,8 +98,8 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetSYSTEMWATCHserviceVersion
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:GetSYSTEMWATCHserviceVersion
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -170,8 +171,8 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 ShowPrinterQueue
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:ShowPrinterQueue
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -240,8 +241,8 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetSYSTEMWATCHserviceMmapvalue
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:GetSYSTEMWATCHserviceMmapvalue
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -329,8 +330,8 @@ namespace StageServerRemote
         {
             if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 SetDRAWWATCHserviceMmapvalue
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:SetDRAWWATCHserviceMmapvalue
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -407,8 +408,84 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 ConnectTest
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
+
+
+            //        // 待機中のサーバーへ接続
+            //        pipeCltStream.Connect(ClientTimeOut);
+
+            //        delegateWriteLine($"待機中のサーバーへ接続しました {PipeServerName} {pipename}");
+
+            //        // サーバーからのサーバ識別文字列を受け取ります。
+            //        StreamString stst = new StreamString(pipeCltStream);
+
+            //        bool OperationCanceledException;
+            //        bool AggregateException;
+
+            //        string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
+            //        if (OperationCanceledException || AggregateException)
+            //        {
+            //            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+            //            return false;
+            //        }
+
+            //        if (CheckFirstMessage(input0))
+            //        {
+            //            delegateWriteLine($"サーバーからの接続文字列{input0}は期待値です");
+
+            //            string command = CMDS.DC_DR_SW_ConnectTest;
+            //            delegateWriteLine($"【{command}】を送信");
+            //            stst.WriteString(command);
+
+
+            //            string str = sendTestMsg;
+            //            delegateWriteLine($"【{str}】を送信");
+            //            stst.WriteString(str);
+
+            //            /// サーバーから結果情報を取得
+            //            string AnserMessage = stst.ReadString(ReadStreamStringTimeOut, null);
+            //            delegateWriteLine($"ConnectTest()【{AnserMessage}】を受信しました");
+
+            //            if (str == AnserMessage)
+            //            {
+            //                delegateWriteLine($"送信内容と受信内容が一致したので、接続テストは問題ありません");
+            //                pipeCltStream.Close();
+
+            //                delegateWriteLine($"ConnectTestt({sendTestMsg})正常終了");
+            //                return true;
+            //            }
+            //            else
+            //            {
+            //                delegateWriteLine($"送信内容と受信内容が不一致！！、接続テスト失敗");
+            //                pipeCltStream.Close();
+
+            //                delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了");
+            //                return false;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了。サーバーからの接続文字列{input0}が期待と違います");
+            //            pipeCltStream.Close();
+            //            return false;
+            //        }
+            //        // Give the client process some time to display results before exiting.
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+            //        delegateWriteLine($"ｽﾃｰｼﾞﾝｸﾞｻｰﾊﾞｰ{PipeServerName} が応答しません。\n {ex.Message}");
+            //        return false;
+            //    }
+            //}
+
+            bool result = false;
+            // TODO: ClsLogonDummy を 書き換えた
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon , () =>
             {
                 try
                 {
@@ -430,7 +507,8 @@ namespace StageServerRemote
                     if (OperationCanceledException || AggregateException)
                     {
                         delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
-                        return false;
+                        result = false;
+                        return;
                     }
 
                     if (CheckFirstMessage(input0))
@@ -456,7 +534,8 @@ namespace StageServerRemote
                             pipeCltStream.Close();
 
                             delegateWriteLine($"ConnectTestt({sendTestMsg})正常終了");
-                            return true;
+                            result = true;
+                            return;
                         }
                         else
                         {
@@ -464,14 +543,16 @@ namespace StageServerRemote
                             pipeCltStream.Close();
 
                             delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了");
-                            return false;
+                            result = false;
+                            return;
                         }
                     }
                     else
                     {
                         delegateWriteLine($"ConnectTestt({sendTestMsg})エラー終了。サーバーからの接続文字列{input0}が期待と違います");
                         pipeCltStream.Close();
-                        return false;
+                        result = false;
+                        return;
                     }
                     // Give the client process some time to display results before exiting.
                 }
@@ -479,9 +560,13 @@ namespace StageServerRemote
                 {
                     PipeConnectionStatus = false;
                     delegateWriteLine($"ｽﾃｰｼﾞﾝｸﾞｻｰﾊﾞｰ{PipeServerName} が応答しません。\n {ex.Message}");
-                    return false;
+                    result = false;
+                    return;
                 }
-            }
+
+            });
+
+            return result;
         }
 
         /// <summary>
@@ -497,8 +582,8 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 TitleFieldTest
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:TitleFieldTest
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -591,8 +676,8 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetSTAGINGSYSTEMwatchLogLevel
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:GetSTAGINGSYSTEMwatchLogLevel
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -686,8 +771,8 @@ namespace StageServerRemote
             if (delegateWriteLine == null)
                 delegateWriteLine = Console.WriteLine;
 
-            // TODO: ClsLogonDummy を 書き換える必要 SetSTAGINGSYSTEMwatchLogLevel
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:SetSTAGINGSYSTEMwatchLogLevel
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -781,8 +866,8 @@ namespace StageServerRemote
 
             availableMemory = 0f;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetAvailableMemory
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:GetAvailableMemory
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -853,8 +938,8 @@ namespace StageServerRemote
 
             availableMemory = 0;
 
-            // TODO: ClsLogonDummy を 書き換える必要 GetUsedMemory
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientSYSTEMWATCH:GetUsedMemory
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {

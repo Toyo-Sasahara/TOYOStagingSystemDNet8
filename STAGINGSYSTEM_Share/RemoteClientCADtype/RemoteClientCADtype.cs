@@ -330,7 +330,7 @@ namespace StageServerRemote
             //    }
             //}
 
-            // TODO: ClsLogonDummy を 書き換えた GetArcSuiteAttribute
+            // TODO: ClsLogonDummy を 書き換えた RemoteClientCADtype:GetArcSuiteAttribute
             new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 NamedPipeClientStream pipeClientst = new NamedPipeClientStream(this.PipeServerName, this.PipeNameDR);
