@@ -7,16 +7,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
+using Windows.UI.Xaml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 //using ToyoMcMfg.Staging.RemoteObjects;
 
 namespace ServerControlCenterApplication
 {
+    [SupportedOSPlatform("windows")]
+
     public partial class TabControl03 : UserControl
     {
         Form1 mainForm;
@@ -458,6 +462,62 @@ namespace ServerControlCenterApplication
             }
         }
 
+        /// <summary>
+        /// ●アークスイート登録待ちを検索
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GetArcSuiteAwaitingRegist_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(UserID_textBox.Text))
+                    return;
+
+                #region ArcSuite登録待機一覧リストを作成
+                List<SqlSearchStringValue> sqlSearchFiledValues = new List<SqlSearchStringValue>(){
+                    // REGISTWAITINGFLAG が　1であり、なおかつREGISTWAITINGFLAGGEDTIME時刻が、pasttTImeStringより前のものをリスト化する
+                    new SqlSearchStringValue{Field = "REGISTWAITINGFLAG",      Ooperator = "=",   Value="1",   Logic="AND"},
+                    new SqlSearchStringValue{Field = "REGISTEDUSERID",            Ooperator = "=",   Value= $"'{UserID_textBox.Text}'",  Logic="AND"},
+                    new SqlSearchStringValue{Field = "APPROVEDHOST",            Ooperator = "LIKE",   Value= $"'{ SasaLib.Net.GetHOSTNAME()}%'"},
+            };
+                RemoteClientDataBase rMdataBase = new RemoteClientDataBase(
+                        SccConfig.Config.ClientDomainName,
+                        SccConfig.Config.ClientUserName,
+                        SccConfig.Config.ClientUserPassword,
+                        SccConfig.Config.ClsLogon,
+                        SccConfig.Config.StageServerHost,
+                        SccConfig.Config.PipeNameDR
+                    );
+
+                List<FieldValueSet> DBresultList1 = rMdataBase.GetArcSuiteAwaitingRegist(sqlSearchFiledValues, UserID_textBox.Text, 9999, "ORDER BY APPROVEDDATE ASC");
+                #endregion
+
+
+                if (DBresultList1.Count > 0)
+                {
+
+                    LogWindowWriteLine($"ArcSuite登録待ちリスト・現在{DBresultList1.Count}件");
+                    foreach (FieldValueSet f in DBresultList1)
+                    {
+                        LogWindowWriteLine($"{f.Sucess} {f.Message} {f.SearchKey("TICKETCODE")}");
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+            }
+
+        }
+
+
+
         private void CheckDrawingTypeButton_Click(object sender, EventArgs e)
         {
             CheckDrwingTypeAnserTextBox.Text = Command_MAINCOMMAND.CheckDrawingType(PARTNUMBERtextBox.Text, LogWindowWriteLine);
@@ -508,5 +568,6 @@ namespace ServerControlCenterApplication
         {
 
         }
+
     }
 }

@@ -1985,7 +1985,7 @@ namespace StageServerRemote
             //}
 
             bool result = false;
-            // TODO: ClsLogonDummy を 書き換えた
+            // TODO: ClsLogonDummy を 書き換えた RemoteClientDRAWCAPTURE:ConnectTest
             new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 try

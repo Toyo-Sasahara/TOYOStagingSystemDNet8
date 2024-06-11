@@ -34,7 +34,7 @@ namespace StageServerRemote
         private readonly string DomainName;
         private readonly string UserName;
         private readonly string UserPassword;
-        private readonly bool ClsLogonDummy;
+        private readonly bool ClsLogon;
         private readonly string PipeServerName;
         private readonly string PipeName;
 
@@ -95,7 +95,7 @@ namespace StageServerRemote
             DomainName = ForcedDomainName;
             UserName = ForcedUserName;
             UserPassword = ForcedUserPassword;
-            ClsLogonDummy = ForcedAccountFlag;
+            ClsLogon = ForcedAccountFlag;
             this.PipeServerName = PipeServerName;
             this.PipeName = PipeName;
         }
@@ -113,7 +113,7 @@ namespace StageServerRemote
         {
             InSearchWorking = true;
 
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -201,7 +201,7 @@ namespace StageServerRemote
             InSearchWorking = true;
 
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RemoteClientDataBase:DataBaseSearch4
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -290,7 +290,7 @@ namespace StageServerRemote
             InSearchWorking = true;
 
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RemoteClientDataBase:DataBaseSearch4a
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -379,8 +379,89 @@ namespace StageServerRemote
         {
             InSearchWorking = true;
 
-            // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:GetArcSuiteAwaitingRegist
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy,debugConsoleMsg:false))
+            //using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy,debugConsoleMsg:false))
+            //{
+            //    try
+            //    {
+            //        NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, PipeName, PipeDirection.InOut, PipeOptions.None, TokenImpersonationLevel.Impersonation);
+
+            //        // 待機中のサーバーへ接続
+            //        try
+            //        {
+            //            pipeCltStream.Connect(ClientTimeOut);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            PipeConnectionStatus = false;
+            //            AnserMessage = $"PIPE接続失敗 {ex.Message}";
+            //            SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6003, $"東陽機械技術部 承認登録クライアント PIEP接続失敗{ex.Message}");
+
+            //            InSearchWorking = false;
+            //            return null;
+            //        }
+
+            //        StreamString stst = new StreamString(pipeCltStream);
+
+            //        //① サーバーとのハンドシェイクをチェック。
+            //        if (CheckFirstMessage(stst.ReadString(ReadStreamStringTimeOut, null)))
+            //        {
+            //            // ②コマンド送信
+            //            int writeResult = stst.WriteString(CMDS.DR_GetArcSuiteAwaitingRegist); //send
+
+            //            // ③従業員ＩＤ
+            //            stst.WriteString(toyoUSERID);
+
+            //            // ④対象テーブル名送信
+            //            stst.WriteString("FILESTORE"); //send
+
+            //            // ⑤検索キーフィールドと検索値　findKeyValueを送信
+            //            using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                writer.WriteObject(sqlSearchFieldValues); //④send
+            //            }
+
+            //            // ⑥ 検索結果に使用する FieldListを送信
+            //            using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                writer.WriteObject(new List<string>() { "*" }); //④send
+            //            }
+
+            //            // ⑦ 追加オプションを送信
+            //            stst.WriteString($"TOP ({AnsLines.ToString()})"); //send
+            //            // ⑧ORDER BY オプション送信
+            //            stst.WriteString($"{ORDERBYSTR}"); //send
+
+            //            // ⑨検索結果を受信
+            //            using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
+            //            {
+            //                DBresultList = reader.ReadObject<List<FieldValueSet>>(); //⑤read
+            //                Count = DBresultList.Count;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            SharedClassLibrary.DebugClass.ConsoleDebugOut(0, "サーバとのハンドシェイクに失敗");
+            //        }
+
+            //        pipeCltStream.Close();
+
+            //        InSearchWorking = false;
+            //        return DBresultList;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        PipeConnectionStatus = false;
+            //        Console.WriteLine($"GetArcSuiteAwaitingRegist PIPEサーバー接続エラー 例外:{ex.Message}");
+
+            //        InSearchWorking = false;
+            //        return null;
+            //    }
+            //}
+
+            List<FieldValueSet> dBresultList = null;
+
+            // TODO: ClsLogonDummy を 書き換えた
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 try
                 {
@@ -398,7 +479,7 @@ namespace StageServerRemote
                         SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6003, $"東陽機械技術部 承認登録クライアント PIEP接続失敗{ex.Message}");
 
                         InSearchWorking = false;
-                        return null;
+                        return;
                     }
 
                     StreamString stst = new StreamString(pipeCltStream);
@@ -429,14 +510,14 @@ namespace StageServerRemote
 
                         // ⑦ 追加オプションを送信
                         stst.WriteString($"TOP ({AnsLines.ToString()})"); //send
-                        // ⑧ORDER BY オプション送信
+                                                                          // ⑧ORDER BY オプション送信
                         stst.WriteString($"{ORDERBYSTR}"); //send
 
                         // ⑨検索結果を受信
                         using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                         {
-                            DBresultList = reader.ReadObject<List<FieldValueSet>>(); //⑤read
-                            Count = DBresultList.Count;
+                            dBresultList = reader.ReadObject<List<FieldValueSet>>(); //⑤read
+                            Count = dBresultList.Count;
                         }
                     }
                     else
@@ -447,7 +528,7 @@ namespace StageServerRemote
                     pipeCltStream.Close();
 
                     InSearchWorking = false;
-                    return DBresultList;
+                    return;
                 }
                 catch (Exception ex)
                 {
@@ -455,9 +536,11 @@ namespace StageServerRemote
                     Console.WriteLine($"GetArcSuiteAwaitingRegist PIPEサーバー接続エラー 例外:{ex.Message}");
 
                     InSearchWorking = false;
-                    return null;
+                    return;
                 }
-            }
+            });
+
+            return dBresultList;
         }
 
         /// <summary>
@@ -472,7 +555,7 @@ namespace StageServerRemote
             int count = -1;
 
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:Update
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -562,7 +645,7 @@ namespace StageServerRemote
 
 
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RemoteClientDataBase:ApprovedCancels2
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -646,7 +729,7 @@ namespace StageServerRemote
         public bool ApprovedCancels3(List<ApprovedCancel> CancelList)
         {
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RemoteClientDataBase:ApprovedCancels3
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -735,7 +818,7 @@ namespace StageServerRemote
         public bool Approved2b(string GUIDBASE64, string USERID, out string ApprovedMessage, string StampTemplate = "StampBase.bmp")
         {
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RemoteClientDataBase:Approved2b
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 bool result = false;
                 ApprovedMessage = null;
@@ -823,7 +906,7 @@ namespace StageServerRemote
             GlovalValues.Mylog.LogRotateWriteLine($"Approved2c()開始します ClientTimeOut:{ClientTimeOut}, ReadStreamStringTimeOut:{ReadStreamStringTimeOut}, ReadHandShakeStreamStringTimeOut:{ReadHandShakeStreamStringTimeOut}");
 
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RemoteClientDataBase:Approved2c
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 bool result = false;
 
@@ -944,7 +1027,7 @@ namespace StageServerRemote
             }
 
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RemoteClientDataBase:DataBaseSearch
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -1021,7 +1104,7 @@ namespace StageServerRemote
             string keys = string.Join(",", FieldList);
 
             // TODO: RemoteClientDataBase:ClsLogonDummy を 書き換える必要 SearchNull
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
@@ -1089,7 +1172,7 @@ namespace StageServerRemote
                 DelegateWriteLine = DebugConsole.WriteLine;
 
             // TODO: ClsLogonDummy を 書き換える必要 RemoteClientDataBase:RecordAndEntityfileDelete
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogonDummy))
+            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
             {
                 try
                 {
