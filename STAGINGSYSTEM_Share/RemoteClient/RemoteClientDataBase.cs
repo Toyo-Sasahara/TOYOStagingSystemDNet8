@@ -634,7 +634,7 @@ namespace StageServerRemote
         public event EventHandler <List<string>> OnApprovedCancel3Result;
 
         /// <summary>
-        /// ■押印クリア・データベース更新（GUIDBASE64コードのList形式にて指定） (RMCmaintenance.ApprovedCancel(..)より呼び出し)
+        /// ■（削除予定）押印クリア・データベース更新（GUIDBASE64コードのList形式にて指定） (RMCmaintenance.ApprovedCancel(..)より呼び出し)
         /// </summary>
         /// <param name="GUIDBASE64s"></param>
         /// <returns></returns>

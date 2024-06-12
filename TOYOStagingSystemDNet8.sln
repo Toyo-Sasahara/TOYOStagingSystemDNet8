@@ -53,8 +53,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SasaLibDNet8.SysConfigurato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SasaLibDNet8.VariableControlPipeServer", "..\SasaLibDNet8\SasaLibDNet8.VariableControlPipeServer\SasaLibDNet8.VariableControlPipeServer.csproj", "{3EB185DB-DE93-42BB-840D-31AAFF979797}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaSaLibDNet8TestAPP", "..\SasaLibDNet8\SaSaLibDnet8TestApp\SaSaLibDNet8TestAPP.csproj", "{285B706D-F27A-4A0D-BA94-0401F7CCEF01}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TitleFieldPositionDNet8", "STAGINGSYSTEM_Share\TitleFieldPosition\TitleFieldPositionDNet8.csproj", "{FAEB4090-6D2A-4CD4-8343-BD667FB8836C}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "STAGINGSYSTEM_Share.AssemblyInfo", "STAGINGSYSTEM_Share\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.shproj", "{5450B106-83A6-4F83-8650-388A9487F691}"
@@ -269,14 +267,6 @@ Global
 		{3EB185DB-DE93-42BB-840D-31AAFF979797}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3EB185DB-DE93-42BB-840D-31AAFF979797}.Release|x64.ActiveCfg = Release|x64
 		{3EB185DB-DE93-42BB-840D-31AAFF979797}.Release|x64.Build.0 = Release|x64
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Debug|x64.ActiveCfg = Debug|x64
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Debug|x64.Build.0 = Debug|x64
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Release|x64.ActiveCfg = Release|x64
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01}.Release|x64.Build.0 = Release|x64
 		{FAEB4090-6D2A-4CD4-8343-BD667FB8836C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FAEB4090-6D2A-4CD4-8343-BD667FB8836C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAEB4090-6D2A-4CD4-8343-BD667FB8836C}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -345,7 +335,6 @@ Global
 		{89C74189-EE5E-44D5-9FDF-9550AD88A8CF} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{70461995-4EFB-4F3D-9AE1-C3905BA6A58D} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{3EB185DB-DE93-42BB-840D-31AAFF979797} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
-		{285B706D-F27A-4A0D-BA94-0401F7CCEF01} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{FAEB4090-6D2A-4CD4-8343-BD667FB8836C} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{2CEA5067-2CB0-4197-940A-3FF57CC55849} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{FC0D135B-63E6-4876-B807-AD185613D898} = {4A29BB97-3155-447A-B352-7808B96075FE}
@@ -363,7 +352,6 @@ Global
 		..\SasaLibTestFrame\SasaLib.AssemblyVersion\SasaLib.AssemblyVersion.projitems*{15e1860d-7f25-4592-ba35-dc2ed26fa221}*SharedItemsImports = 4
 		..\AutocadTOYOaddinCommitDNet8\AssemblyInfo\AssemblyInfo.projitems*{17568cea-c4b4-42da-af89-1a8dd12cb9d5}*SharedItemsImports = 5
 		..\AutocadTOYOaddinCommitDNet8\AssemblyInfo\AssemblyInfo.projitems*{17ef3d2d-e27b-4671-b39c-d23f6151de31}*SharedItemsImports = 5
-		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{285b706d-f27a-4a0d-ba94-0401f7ccef01}*SharedItemsImports = 5
 		STAGINGSYSTEM_Share\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.projitems*{2bec020b-f998-4880-a756-292aaec81825}*SharedItemsImports = 4
 		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{2cea5067-2cb0-4197-940a-3ff57cc55849}*SharedItemsImports = 13
 		STAGINGSYSTEM_Share\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.projitems*{30d8cf9a-7d95-40ec-919c-0707ad6bacb7}*SharedItemsImports = 4

@@ -3,12 +3,12 @@
     public static class CMDS
     {
         /// <summary>
-        /// StagingService コネクトキーワード
+        /// 
         /// </summary>
         public const string ConnectKeyword = @"接続可能バージョン2018-11-21";
 
         /// <summary>
-        /// ■アークスイートサーバーの生存状態をチェック
+        /// ■
         /// </summary>
         public const string DR_Status_SERVER_ALIVE = "SERVER ALIVE";
 
@@ -48,9 +48,8 @@
         public const string DC_CommitRecepitonState = "CommitRecepitonState";
 
         /// <summary>
-        /// □外部から見たコミットフォルダ（UNCとして設定）を返します。
+        /// □外部から見たコミットフォルダを返します。
         /// </summary>
-        /// TODO 未参照
         public const string DC_GetCOMMITFolder = "GetCOMMITFolder";
 
         /// <summary>
@@ -73,7 +72,6 @@
         /// <summary>
         /// □コミット先としてホストしているプリンタシステム名を返す
         /// (XMLプリンタ設定ファイルでのプリンタショートカット名とDescriptionをList<keyValuePare<string,string>>)で返す
-        /// TODO 未参照
         /// </summary>
         public const string DC_GetCommitPrinterShortCutNameAndDescription = "GetCommitPrinterShortCutNameAndDescription";
 
@@ -135,7 +133,6 @@
 
         /// <summary>
         /// □チケットコードが押印候補バッファに既存かをチェックする
-        /// TODO 未参照
         /// </summary>
         public const string DR_CheckClientPreInputTICKETCODES = "CheckClientPreInputTICKETCODES";
 
@@ -146,7 +143,6 @@
 
         /// <summary>
         /// □共通押印候補バッファから指定したオブジェクト(List<ClientInputTICKET>型)を削除()
-        /// TODO 未参照
         /// </summary>
         public const string DR_RemovePreInputClientInputTICKETs = "RemovePreInputClientInputTICKETs";
 
@@ -182,7 +178,6 @@
 
         /// <summary>
         /// □クリッピングしてImage読込（イメージをPIPEで送出）
-        /// TODO 未参照
         /// </summary>
         public const string DR_LoadClipedImage = "LoadClipedImage";
 
@@ -202,7 +197,7 @@
         public const string DR_Approved2c = "Approved2c";
 
         /// <summary>
-        /// ■押印クリア・データベース更新（GUIDBASE64コードのList形式にて指定）　2022/08/24 時点  クライアントから呼び出しを確認 RMCmaintenance.ApprovedCancel(..)からコマンドよびだし
+        /// ■（削除予定）押印クリア・データベース更新（GUIDBASE64コードのList形式にて指定）　2022/08/24 時点  クライアントから呼び出しを確認 RMCmaintenance.ApprovedCancel(..)からコマンドよびだし
         /// </summary>
         public const string DR_ApprovedCancels2 = "ApprovedCancels2";
 
@@ -212,7 +207,7 @@
         public const string DR_ApprovedCancels3 = "ApprovedCancels3";
 
         /// <summary>
-        /// ■登録予定のレコードのフラグを立てる
+        /// ■（削除予定）登録予定のレコードのフラグを立てる
         /// </summary>
         public const string DR_SetRegistWaitingFlag = "SetRegistWaitingFlag";
 
@@ -307,7 +302,7 @@
         public const string DR_GetAuthorizedUser = "GetAuthorizedUser";
 
         /// <summary>
-        /// ■SetMemMapdFile
+        ///  ■SetMemMapdFile
         /// </summary>
         public const string SW_SetMemMapdFile = "SetMemMapdFile";
 
@@ -544,19 +539,16 @@
 
         /// <summary>
         /// □ コミットフォルダの残りのチケットファイル個数をカウント
-        /// TODO 未参照
         /// </summary>
         public const string DR_SystemCheck_BEFORE_COMMIT_COUNT = "BEFORE_COMMIT_COUNT";
 
         /// <summary>
         /// □ ステージングフォルダのチェットファイル個数をカウント
         /// </summary>
-        /// TODO 未参照
         public const string DR_SystemCheck_FILEFOLDER_COUNT = "FILEFOLDER_COUNT";
 
         /// <summary>
         /// □ ステージングサーバで管理しているプリンタを返す
-        /// TODO 未参照
         /// </summary>
         public const string DR_SystemCheck_ListCommitPrinters = "ListCommitPrinters";
 

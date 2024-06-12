@@ -1405,7 +1405,7 @@ namespace StageServerRemote
         #region ●メソッド ArcSuite登録指示/ ArcSuite属性値変更系
 
         /// <summary>
-        /// ■DB内にArcSuite登録予定を示すフラグをに立てる(複数指定)　"SetRegistWaitingFlag"
+        /// ■（削除予定）DB内にArcSuite登録予定を示すフラグをに立てる(複数指定)　"SetRegistWaitingFlag"
         /// </summary>
         /// <param name="GUIDBASE64List">登録予定のGUIDBASE64コレクション</param>
         /// <param name="USERID"></param>

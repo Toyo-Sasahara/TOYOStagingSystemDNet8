@@ -1,4 +1,5 @@
-﻿using MailNotice;
+﻿
+using MailNotice;
 using SasaLib;
 using SasaLib.PrintConfig;
 using System;
@@ -12,11 +13,10 @@ using TitleFieldPosition;
 
 namespace ToyoStageService
 {
-    [SupportedOSPlatform("windows")]
-
     /// <summary>
     /// 承認印捺印処理
     /// </summary>
+    [SupportedOSPlatform("windows")]
     public class StampProcess
     {
         static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
@@ -65,7 +65,7 @@ namespace ToyoStageService
             {
                 SasaLib.Eventlog.Log.WriteEntry("ToyoSTAMPprocess", EventLogEntryType.Error, 5001, $"※{AssemblyInternalName}\nStampProcess(...) スタンプ元イメージ読込失敗 {ImageFilePath}");
                 MailNotice.SendEmailFromCommonLibrary("ToyoSTAMPprocess", "重大エラー",
-                    $"※{AssemblyInternalName}\nStampProcess(...) スタンプ元イメージ読込失敗 {ImageFilePath}",mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
+                    $"※{AssemblyInternalName}\nStampProcess(...) スタンプ元イメージ読込失敗 {ImageFilePath}", mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
             }
         }
 
@@ -165,7 +165,7 @@ namespace ToyoStageService
                     $"※{AssemblyInternalName}\nStampProcess.StampingGo(...)にて例外発生\n" +
                     $"ImageFile=押印先ファイル:{baseImageFullFileName},押印日;{Line2},所属部署:{Line1},押印者名:{Line3},押印座標:{X},{Y}\n" +
                     $"スタンプテンプレートファイル；{StampTemplate}" +
-                    $"{ex.Message}",mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
+                    $"{ex.Message}", mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
 
                 return false;
             }
@@ -220,7 +220,7 @@ namespace ToyoStageService
                 MailNotice.SendEmailFromCommonLibrary("ToyoSTAMPprocess", "重大エラー",
                     $"※{AssemblyInternalName}\nStampProcess.StampingEraceGo(...)にて例外発生\n" +
                     $"ImageFile=押印先ファイル:{ImagePath},押印座標:{X},{Y}\n" +
-                    $"{ex.Message}",mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
+                    $"{ex.Message}", mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
 
                 return false;
             }
@@ -232,38 +232,43 @@ namespace ToyoStageService
         /// </summary>
         /// <param name="fullPath"></param>
         /// <returns></returns>
-        private bool LoadImage(string fullPath)
+        private bool LoadImage(string soucefullPath)
         {
+            string distFullPath = null;
             try
             {
-                try
-                {
+                var tempFilenameWithoutExtension = "[" + System.IO.Path.GetFileNameWithoutExtension(soucefullPath) + "]" + "_" + Path.GetRandomFileName();
 
-                    File.Copy(fullPath, SasaLib.FileFolder.ChangeExtension(fullPath, "TMP"), true);
-                    System.Drawing.Image orgImage = System.Drawing.Image.FromFile(SasaLib.FileFolder.ChangeExtension(fullPath, "TMP"));
-                    MemoryStream ms = new MemoryStream();
-                    ImageUtil.ImageToTIFF1bppCCITT4Stream(orgImage, ms);
+                distFullPath = SasaLib.FileFolder.ChangeExtension(tempFilenameWithoutExtension, "TMP");
 
-                    orgImage.Dispose();
-
-                    OriginalImage = ImageUtil.TiffStreamToImage(ms);
-
-                    ms.Dispose();
-
-                    SasaLib.FileFolder.RemoveFile(SasaLib.FileFolder.ChangeExtension(fullPath, "TMP"));
-
-                    return true;
-
-                }
-                catch (IOException ioex)
-                {
-                    SasaLib.Eventlog.Log.WriteEntry("ToyoSTAMPprocess", EventLogEntryType.Error, 5001, $"※イメージファイル読込失敗 {fullPath}\nIOException.Message={ioex.Message}");
-                    return false;
-                }
+                File.Copy(soucefullPath, distFullPath, true);
             }
             catch (Exception ex)
             {
-                SasaLib.Eventlog.Log.WriteEntry("ToyoSTAMPprocess", EventLogEntryType.Error, 5001, $"※イメージ読込失敗 {fullPath}\nException.Message={ex.Message}");
+                SasaLib.Eventlog.Log.WriteEntry("ToyoSTAMPprocess", EventLogEntryType.Error, 5001, $"※イメージファイル\"{soucefullPath}\"読込およびテンポラリファイル\"{distFullPath}\"作成失敗 \nIOException.Message={ex.Message}");
+                return false;
+            }
+
+            try
+            {
+                System.Drawing.Image orgImage = System.Drawing.Image.FromFile(distFullPath);
+                MemoryStream ms = new MemoryStream();
+                ImageUtil.ImageToTIFF1bppCCITT4Stream(orgImage, ms);
+
+                orgImage.Dispose();
+
+                OriginalImage = ImageUtil.TiffStreamToImage(ms);
+
+                ms.Dispose();
+
+                SasaLib.FileFolder.RemoveFile(distFullPath);
+
+                return true;
+
+            }
+            catch (IOException ioex)
+            {
+                SasaLib.Eventlog.Log.WriteEntry("ToyoSTAMPprocess", EventLogEntryType.Error, 5001, $"※イメージファイル\"{distFullPath}\"読込失敗 \nIOException.Message={ioex.Message} {ioex.InnerException}");
                 return false;
             }
         }
@@ -406,7 +411,7 @@ namespace ToyoStageService
                 MailNotice.SendEmailFromCommonLibrary("ToyoSTAMPprocess", "重大エラー",
                     $"※GetStampImg(..) にて必須ファイル不足\n" +
                     $"{StampBaseTemplateFullPath}がありません。サービスを終了します\n" +
-                    $"",mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
+                    $"", mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
                 Environment.Exit(1);
                 //アプリケーションを強制終了します
                 Environment.Exit(1);
@@ -486,7 +491,7 @@ namespace ToyoStageService
                 MailNotice.SendEmailFromCommonLibrary("ToyoSTAMPprocess", "重大エラー",
                     $"※GetStampImg(..) にて例外発生\n" +
                     $"StampBaseTemplateFullPath:{StampBaseTemplateFullPath}\n" +
-                    $"{ex.Message}",mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
+                    $"{ex.Message}", mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
 
                 return null;
             }
@@ -521,7 +526,7 @@ namespace ToyoStageService
                 MailNotice.SendEmailFromCommonLibrary("ToyoSTAMPprocess", "重大エラー",
                     $"GetStampImg(..) にて必須ファイル不足\n" +
                     $"{StampBaseTemplateFullPath}がありません。サービスを終了します\n" +
-                    $"",mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
+                    $"", mailAccount, StageServerConfig.Config.EMAILFROMCOMMONSERVICEADDR);
                 //アプリケーションを強制終了します
                 Environment.Exit(1);
             }
