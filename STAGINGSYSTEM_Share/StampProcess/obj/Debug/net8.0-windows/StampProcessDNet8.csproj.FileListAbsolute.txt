@@ -218,7 +218,6 @@ C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampP
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StampProcessDNet8\StampBase.bmp
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StampProcessDNet8\StampBase2.bmp
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StampProcessDNet8\StampEraceBase.bmp
-C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StageServerCommonDNet8\CreateNewDB.sql
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StageServerCommonDNet8\設定ファイル\Drive-C,ProgramData\TOYOCOMMON\BarcodeConf.XML
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StageServerCommonDNet8\設定ファイル\Drive-C,ProgramData\TOYOCOMMON\StampConf.XML
 C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\StageServerConfigDNet8\ProgramData（サーバー側設定ファイル）\TOYOCOMMON\StageServerConfig.XML

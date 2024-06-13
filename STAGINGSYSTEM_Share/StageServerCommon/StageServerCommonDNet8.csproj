@@ -40,7 +40,6 @@
     <ProjectReference Include="..\TitleFieldPosition\TitleFieldPositionDNet8.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CreateNewDB.sql" />
     <Content Include="設定ファイル\Drive-C,ProgramData\TOYOCOMMON\BarcodeConf.XML" />
     <Content Include="設定ファイル\Drive-C,ProgramData\TOYOCOMMON\StampConf.XML" />
   </ItemGroup>
@@ -50,5 +49,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ObjectLock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\CheckSubHostConfig.cs" Link="CheckSubHostConfig.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseBackup.cs" Link="DataBaseBackup.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseDelete.cs" Link="DataBaseDelete.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseInsert.cs" Link="DataBaseInsert.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseOrganization.cs" Link="DataBaseOrganization.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBasePracticalOperations.cs" Link="DataBasePracticalOperations.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseRestore.cs" Link="DataBaseRestore.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseSearch.cs" Link="DataBaseSearch.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseUpdate.cs" Link="DataBaseUpdate.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileHundling.cs" Link="FileHundling.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileLockContorol.cs" Link="FileLockContorol.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_AcceptCommand.cs" Link="List_Client_AcceptCommand.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_GetArcSuiteAwaitingRegist.cs" Link="List_Client_GetArcSuiteAwaitingRegist.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_InputTICKET.cs" Link="List_Client_InputTICKET.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\MemoryMapdFile.cs" Link="MemoryMapdFile.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEClient.cs" Link="PIPEClient.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEServer.cs" Link="PIPEServer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_ConnectTest.cs" Link="RemoteServerCommand_ConnectTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_GetAvailableMemory.cs" Link="RemoteServerCommand_GetAvailableMemory.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_GetMemMapdFile.cs" Link="RemoteServerCommand_GetMemMapdFile.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_MakePrinterConfigTemplate .cs" Link="RemoteServerCommand_MakePrinterConfigTemplate .cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_SetMemMapdFile.cs" Link="RemoteServerCommand_SetMemMapdFile.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_ShowPrinterQueue.cs" Link="RemoteServerCommand_ShowPrinterQueue.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_TitleFieldTest.cs" Link="RemoteServerCommand_TitleFieldTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StageServerCommon.cs" Link="StageServerCommon.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\TicketProcess.cs" Link="TicketProcess.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\UserDataBase.cs" Link="UserDataBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\CreateNewDB.sql" Link="CreateNewDB.sql" />
   </ItemGroup>
 </Project>

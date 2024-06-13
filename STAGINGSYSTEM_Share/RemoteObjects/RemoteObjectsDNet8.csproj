@@ -24,6 +24,10 @@
 		<UseVSHostingProcess>false</UseVSHostingProcess>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjects.cs" Link="RemoteObjects.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsInfo.cs" Link="RemoteObjectsInfo.cs" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
 		<ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
 		<ProjectReference Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj" />

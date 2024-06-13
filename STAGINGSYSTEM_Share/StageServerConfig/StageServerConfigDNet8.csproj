@@ -13,6 +13,18 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\FieldInfoControl.cs" Link="FieldInfoControl.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\GetSubHostServerMode.cs" Link="GetSubHostServerMode.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\MemoryMappedFileControl.cs" Link="MemoryMappedFileControl.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\RemoteServerCommand_GetVaule.cs" Link="RemoteServerCommand_GetVaule.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\RemoteServerCommand_GetVauleList.cs" Link="RemoteServerCommand_GetVauleList.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\RemoteServerCommand_SetValue.cs" Link="RemoteServerCommand_SetValue.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\SharedConfigValue.cs" Link="SharedConfigValue.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\StageServerConfig.cs" Link="StageServerConfig.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\StageServerConfigInfo.cs" Link="StageServerConfigInfo.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\StageServerConfigWork.cs" Link="StageServerConfigWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\StageServerConfig.XML" />
   </ItemGroup>
   <ItemGroup>
