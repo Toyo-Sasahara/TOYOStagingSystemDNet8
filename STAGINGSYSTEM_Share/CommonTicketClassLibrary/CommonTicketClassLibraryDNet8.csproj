@@ -21,6 +21,11 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\CommonTicket.cs" Link="CommonTicket.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\CommonTicketClassLibraryInfo.cs" Link="CommonTicketClassLibraryInfo.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\CommonTicketWork.cs" Link="CommonTicketWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

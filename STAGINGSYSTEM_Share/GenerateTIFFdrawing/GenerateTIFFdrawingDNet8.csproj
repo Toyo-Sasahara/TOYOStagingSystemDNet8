@@ -20,6 +20,13 @@
 		<UseVSHostingProcess>false</UseVSHostingProcess>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawing.cs" Link="GenerateTIFFdrawing.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawingInfo.cs" Link="GenerateTIFFdrawingInfo.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\ImagePositonConfig.cs" Link="ImagePositonConfig.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\ImagePositonConfigWork.cs" Link="ImagePositonConfigWork.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\TestGenerateTIFF.cs" Link="TestGenerateTIFF.cs" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
 		<ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
 		<ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />

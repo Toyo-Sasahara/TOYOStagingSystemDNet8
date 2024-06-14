@@ -12,6 +12,10 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\OSCommandExecutionSupport\OSCommandExecutionSupport.cs" Link="OSCommandExecutionSupport.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\OSCommandExecutionSupport\Utility_FileFolder.cs" Link="Utility_FileFolder.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
     <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
     <ProjectReference Include="..\RemoteClient\RemoteClientDNet8.csproj" />

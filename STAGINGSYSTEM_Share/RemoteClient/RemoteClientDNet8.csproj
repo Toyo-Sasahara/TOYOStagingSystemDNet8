@@ -16,6 +16,9 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientClientPreInputTICKET.cs" Link="RemoteClientClientPreInputTICKET.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDataBase.cs" Link="RemoteClientDataBase.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDRAWCAPTURE.cs" Link="RemoteClientDRAWCAPTURE.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDRAWREGIST.cs" Link="RemoteClientDRAWREGIST.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientMaintenance.cs" Link="RemoteClientMaintenance.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientMemoryMapdFile.cs" Link="RemoteClientMemoryMapdFile.cs" />
@@ -28,8 +31,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
     <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
-    <ProjectReference Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj" />
     <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+    <ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
     <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
     <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
   </ItemGroup>

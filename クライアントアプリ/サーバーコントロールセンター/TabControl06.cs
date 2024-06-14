@@ -119,7 +119,7 @@ namespace ServerControlCenterApplication
                 DomainName:SccConfig.Config.ClientDomainName,
                 UserName:SccConfig.Config.ClientUserName,
                 UserPassword:SccConfig.Config.ClientUserPassword,
-                ClsLogonDummy:SccConfig.Config.ClsLogon,
+                ClsLogon:SccConfig.Config.ClsLogon,
                 PipeServerName:SccConfig.Config.StageServerHost,
                 PipeName:SccConfig.Config.PipeNameDR
                 );
@@ -156,7 +156,7 @@ namespace ServerControlCenterApplication
                 DomainName: SccConfig.Config.ClientDomainName,
                 UserName: SccConfig.Config.ClientUserName,
                 UserPassword: SccConfig.Config.ClientUserPassword,
-                ClsLogonDummy: SccConfig.Config.ClsLogon,
+                ClsLogon: SccConfig.Config.ClsLogon,
                 PipeServerName: SccConfig.Config.StageServerHost,
                 PipeName: SccConfig.Config.PipeNameDR
                 );

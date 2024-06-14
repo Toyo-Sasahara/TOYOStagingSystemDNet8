@@ -360,7 +360,8 @@ namespace ServerControlCenterApplication
                 sb.AppendLine($"{TICKETCODE}{PARTNUMBER}");
             }
 
-            bool ans = rMdataBase.ApprovedCancels3(CancelList);
+            var CancelErrorGUIDBASE64List = new List<string>();
+            bool ans = rMdataBase.ApprovedCancels3(CancelList, out CancelErrorGUIDBASE64List);
 
             if (ans == true)
             {
@@ -368,8 +369,12 @@ namespace ServerControlCenterApplication
             }
             else
             {
-                GlovalValues.Mylog.WriteLine($"次の押印キャンセルはいずれかまたはすべて失敗しました\n{sb.ToString()}");
+                // カンマ区切りの文字列に変換
+                string cancelErrsListString = String.Join(",", CancelErrorGUIDBASE64List);
+
+                GlovalValues.Mylog.WriteLine($"次の押印キャンセルはいずれかまたはすべて失敗しました\n{cancelErrsListString}");
             }
+
 
         }
 

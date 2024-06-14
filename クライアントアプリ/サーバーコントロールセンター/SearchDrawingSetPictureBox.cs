@@ -14,10 +14,14 @@ using System.Text;
 using ToyoMcMfg.Staging.RemoteObjects;
 using ClientApp.Forms;
 using System.Linq;
+using System.Runtime.Versioning;
 
 /// <summary>
 /// ステージサーバーを検索し結果をListViewに表示。選択した図面をPictureBoxに表示する
 /// </summary>
+#if NETCOREAPP
+[SupportedOSPlatform("windows")]
+#endif
 public class SearchDrawingSetPictureBox
 {
 
@@ -661,7 +665,8 @@ public class SearchDrawingSetPictureBox
                     sb.AppendLine($"{TICKETCODE}{PARTNUMBER}");
                 }
 
-                bool result = rMdataBase.ApprovedCancels3(CancelList);
+                var CancelErrorGUIDBASE64List = new List<string>();
+                bool result = rMdataBase.ApprovedCancels3(CancelList, out CancelErrorGUIDBASE64List);
                 if (result == true)
                 {
                     GlovalValues.Mylog.WriteLine($"次の押印キャンセルが成功しています\n{sb.ToString()}");

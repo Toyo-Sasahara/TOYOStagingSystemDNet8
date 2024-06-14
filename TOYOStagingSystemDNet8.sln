@@ -65,15 +65,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "クライアントアプリ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "サービスコントロールセンターDNet8", "クライアントアプリ\サーバーコントロールセンター\サービスコントロールセンターDNet8.csproj", "{FC0D135B-63E6-4876-B807-AD185613D898}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldValueSet", "..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj", "{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLSearchConditonsCreateDBNet8", "STAGINGSYSTEM_Share\SQLSearchConditonsCreate\SQLSearchConditonsCreateDBNet8.csproj", "{D1073A28-8C6F-4D00-89B9-F8D5DE789865}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Framework", ".NET Framework", "{E65C2EA3-7361-41F4-9309-83E502449CD7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Framework", ".NET Framework", "{B53E81B4-E54F-460D-96FE-4C83AB9C77FE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SasaLibDNet8.PictureBoxControlLibrary", "..\SasaLibDNet8\SasaLibDNet8.PictureBoxControlLibrary\SasaLibDNet8.PictureBoxControlLibrary.csproj", "{63EB64A1-25DC-4781-80E0-DA1286F29732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldValueSetDNet8", "STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetDNet8.csproj", "{C66417A1-6E8D-43B3-B467-D555B2B4128E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -283,14 +281,6 @@ Global
 		{FC0D135B-63E6-4876-B807-AD185613D898}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC0D135B-63E6-4876-B807-AD185613D898}.Release|x64.ActiveCfg = Release|Any CPU
 		{FC0D135B-63E6-4876-B807-AD185613D898}.Release|x64.Build.0 = Release|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Debug|x64.Build.0 = Debug|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Release|x64.ActiveCfg = Release|Any CPU
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072}.Release|x64.Build.0 = Release|Any CPU
 		{D1073A28-8C6F-4D00-89B9-F8D5DE789865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1073A28-8C6F-4D00-89B9-F8D5DE789865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1073A28-8C6F-4D00-89B9-F8D5DE789865}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -307,6 +297,14 @@ Global
 		{63EB64A1-25DC-4781-80E0-DA1286F29732}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63EB64A1-25DC-4781-80E0-DA1286F29732}.Release|x64.ActiveCfg = Release|x64
 		{63EB64A1-25DC-4781-80E0-DA1286F29732}.Release|x64.Build.0 = Release|x64
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Debug|x64.Build.0 = Debug|Any CPU
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Release|x64.ActiveCfg = Release|Any CPU
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -338,11 +336,10 @@ Global
 		{FAEB4090-6D2A-4CD4-8343-BD667FB8836C} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{2CEA5067-2CB0-4197-940A-3FF57CC55849} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{FC0D135B-63E6-4876-B807-AD185613D898} = {4A29BB97-3155-447A-B352-7808B96075FE}
-		{DA8719C0-7CF0-484F-B5A6-0B38E2C70072} = {B53E81B4-E54F-460D-96FE-4C83AB9C77FE}
 		{D1073A28-8C6F-4D00-89B9-F8D5DE789865} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{E65C2EA3-7361-41F4-9309-83E502449CD7} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
-		{B53E81B4-E54F-460D-96FE-4C83AB9C77FE} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{63EB64A1-25DC-4781-80E0-DA1286F29732} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
+		{C66417A1-6E8D-43B3-B467-D555B2B4128E} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69119819-4D3C-4E24-B854-453C41AA04D3}
@@ -371,7 +368,6 @@ Global
 		..\AutocadTOYOaddinCommitDNet8\AssemblyInfo\AssemblyInfo.projitems*{920e4898-5862-4601-9ca4-d98baa04dba3}*SharedItemsImports = 5
 		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{af5f071a-bacb-401f-af72-8d08b522cdee}*SharedItemsImports = 5
 		STAGINGSYSTEM_Share\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.projitems*{cf5a2aa0-4d6e-484d-97cf-e90d48a4ca5e}*SharedItemsImports = 4
-		..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.projitems*{da8719c0-7cf0-484f-b5a6-0b38e2c70072}*SharedItemsImports = 4
 		STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems*{e56aed0a-8411-4bc8-9ebf-060f6aa75703}*SharedItemsImports = 5
 		STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems*{f1726255-75e5-4129-a1f0-ddcc73e6e3d1}*SharedItemsImports = 5
 		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{f9f67e53-ea93-4968-a446-03f6eb0edd0b}*SharedItemsImports = 5

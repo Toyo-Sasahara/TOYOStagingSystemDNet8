@@ -14,6 +14,18 @@
 		<Nullable>disable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ArcSuiteSearchResult.cs" Link="ArcSuiteSearchResult.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CadDrawingFIle.cs" Link="CadDrawingFIle.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\Commit.cs" Link="Commit.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitParam.cs" Link="CommitParam.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitSuport.cs" Link="CommitSuport.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitSupportArcSuite.cs" Link="CommitSupportArcSuite.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitSupportCadDrawingFile.cs" Link="CommitSupportCadDrawingFile.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitSupportNumbering.cs" Link="CommitSupportNumbering.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ReserveNumber.cs" Link="ReserveNumber.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TypeNumber.cs" Link="TypeNumber.cs" />
+	</ItemGroup>
+	<ItemGroup>
 		<Compile Update="CommitPreviewImage.cs">
 			<SubType>UserControl</SubType>
 		</Compile>
@@ -29,8 +41,8 @@
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.NumberingSupport\SasaLibDNet8.NumberingSupport.csproj" />
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
 		<ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
-		<ProjectReference Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.csproj" />
 		<ProjectReference Include="..\CommonTicketClassLibrary\CommonTicketClassLibraryDNet8.csproj" />
+		<ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
 		<ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
 		<ProjectReference Include="..\RemoteClient\RemoteClientDNet8.csproj" />
 		<ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
