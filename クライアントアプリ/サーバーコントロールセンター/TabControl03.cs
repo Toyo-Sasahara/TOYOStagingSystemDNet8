@@ -303,7 +303,24 @@ namespace ServerControlCenterApplication
 
             List<string> GUIDBASE64s = new List<string>() { GUIDBASE64 };
 
-            rmarcSuite.SetRegistWaitingFlag(GUIDBASE64s, UserID_textBox.Text);
+            //rmarcSuite.SetRegistWaitingFlag(GUIDBASE64s, UserID_textBox.Text);
+
+            logWindowControl.WriteLine($"強制通常登録実行 (SetRegistWaitingFlag2)");
+
+            List<string> errList = new List<string>();
+            rmarcSuite.SetRegistWaitingFlag2(GUIDBASE64s, UserID_textBox.Text, ref errList);
+
+            if (errList.Count > 0)
+            {
+                // カンマ区切りの文字列に変換
+                string result = String.Join(",", errList);
+
+                logWindowControl.WriteLine($"※強制通常登録実行結果・エラーが含まれます。失敗したもの ({result})");
+            }
+            else
+            {
+                logWindowControl.WriteLine($"強制通常登録実行 エラーはありませんでした。");
+            }
 
         }
 

@@ -687,7 +687,7 @@ namespace CommonCommitLogic
                 }
                 catch (Exception ex)
                 {
-                    ErrMsg = $"製図日の日付フォーマットに異常があります -> \"{strAUTHORDATE}\"";
+                    ErrMsg = $"製図日の日付フォーマットに異常があります -> \"{strAUTHORDATE}\" {ex.Message} {ex.InnerException}";
                     result = false;
                 }
             }
@@ -704,7 +704,7 @@ namespace CommonCommitLogic
                 }
                 catch (Exception ex)
                 {
-                    ErrMsg = $"設計日の日付フォーマットに異常があります -> \"{strCHECKDATE}\"";
+                    ErrMsg = $"設計日の日付フォーマットに異常があります -> \"{strCHECKDATE}\" {ex.Message} {ex.InnerException}";
                     result = false;
                 }
             }

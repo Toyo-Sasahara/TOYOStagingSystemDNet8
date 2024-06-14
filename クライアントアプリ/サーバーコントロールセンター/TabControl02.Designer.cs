@@ -32,7 +32,7 @@ namespace ServerControlCenterApplication
             this.DebugGroupBox1 = new System.Windows.Forms.GroupBox();
             this.ResultSearchPattern_label = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.logWindowControl1 = new ServerControlCenterApplication.LogWindowControl();
+            this.logWindowControl = new ServerControlCenterApplication.LogWindowControl();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.Get_ARCSUITEIDisNull_And_APPROVEDUSERisNotNull_Button = new System.Windows.Forms.Button();
             this.Get_ARCSUITEID_IsNotNULL_fromDB_Button = new System.Windows.Forms.Button();
@@ -145,12 +145,12 @@ namespace ServerControlCenterApplication
             // 
             // logWindowControl1
             // 
-            this.logWindowControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logWindowControl1.Location = new System.Drawing.Point(868, 6);
-            this.logWindowControl1.Name = "logWindowControl1";
-            this.logWindowControl1.Size = new System.Drawing.Size(757, 107);
-            this.logWindowControl1.TabIndex = 105;
-            this.logWindowControl1.Load += new System.EventHandler(this.logWindowControl1_Load);
+            this.logWindowControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logWindowControl.Location = new System.Drawing.Point(868, 6);
+            this.logWindowControl.Name = "logWindowControl1";
+            this.logWindowControl.Size = new System.Drawing.Size(757, 107);
+            this.logWindowControl.TabIndex = 105;
+            this.logWindowControl.Load += new System.EventHandler(this.logWindowControl1_Load);
             // 
             // groupBox13
             // 
@@ -745,7 +745,7 @@ namespace ServerControlCenterApplication
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.accountUserForm);
-            this.Controls.Add(this.logWindowControl1);
+            this.Controls.Add(this.logWindowControl);
             this.Controls.Add(this.DebugGroupBox1);
             this.Name = "TabControl02";
             this.Size = new System.Drawing.Size(1632, 808);
@@ -805,7 +805,7 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.TextBox MAXSEARCHtextBox;
         private System.Windows.Forms.Button SelectedRecord_Delete_button;
         internal AccountUserForm accountUserForm;
-        private LogWindowControl logWindowControl1;
+        private LogWindowControl logWindowControl;
         private System.Windows.Forms.Button Get_ARCSUITEID_IsNULL_fromDB_Button;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button COMMITHOST_search_button;

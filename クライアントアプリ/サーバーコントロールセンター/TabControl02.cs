@@ -39,7 +39,7 @@ namespace ServerControlCenterApplication
             this.mainForm = form;
             InitializeComponent();
 
-            sh2 = new SearchDrawingSetPictureBox(DebugListView2, ResultSearchPattern_label, previewArcSuiteForm, logWindowControl1.WriteLine);
+            sh2 = new SearchDrawingSetPictureBox(DebugListView2, ResultSearchPattern_label, previewArcSuiteForm, logWindowControl.WriteLine);
 
         }
 
@@ -54,7 +54,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void TabControl02_VisibleChanged(object sender, EventArgs e)
         {
-            logWindowControl1.WriteLine("TabControl02_VisibleChanged(..)実行・・・\r\n");
+            logWindowControl.WriteLine("TabControl02_VisibleChanged(..)実行・・・\r\n");
 
             Task.Run(() =>
             {
@@ -137,7 +137,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.ArcSuiteRegisteredList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
             sh2.Search(sqlSearchStringValues, "ArcSuite登録済み", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
 
         }
@@ -154,7 +154,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.ARCSUITEIDisNull_And_APPROVEDUSERisNotNull(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
             sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
 
@@ -170,7 +170,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.APPROVEDDATEisNotNull_And_REGISTEDTIMEisZero_And_REGISTWAITINGFLAGisZero(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
             sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
 
@@ -187,7 +187,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.ApprovableList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "設計承認が可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
@@ -211,8 +211,8 @@ namespace ServerControlCenterApplication
                         {
                             string TICKETCODE = selects.SubItems["TICKETCODE"].Text;
 
-                            logWindowControl1.WriteLine($"押印強制実行");
-                            Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE, UserID_textBox.Text, Approved2cResult, logWindowControl1.WriteLine);
+                            logWindowControl.WriteLine($"押印強制実行");
+                            Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE, UserID_textBox.Text, Approved2cResult, logWindowControl.WriteLine);
                         }
                     }
                 }
@@ -222,7 +222,7 @@ namespace ServerControlCenterApplication
 
         private void Approved2cResult(Object sender, ApprovedStatus resultAnser)
         {
-            logWindowControl1.WriteLine($"イベントがキックされた ApprovedStatus.ApprovedSucess = {resultAnser.ApprovedSucess}");
+            logWindowControl.WriteLine($"イベントがキックされた ApprovedStatus.ApprovedSucess = {resultAnser.ApprovedSucess}");
 
         }
 
@@ -249,7 +249,7 @@ namespace ServerControlCenterApplication
                         {
                             string TICKETCODE = selects.SubItems["TICKETCODE"].Text;
 
-                            logWindowControl1.WriteLine($"強制通常登録実行");
+                            logWindowControl.WriteLine($"強制通常登録実行 (SetRegistWaitingFlag2)");
 
                             //登録可能のフラグを立てる
                             RemoteClientDRAWREGIST rmarcSuite = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
@@ -263,7 +263,22 @@ namespace ServerControlCenterApplication
 
                             List<string> GUIDBASE64s = new List<string>() { GUIDBASE64 };
 
-                            rmarcSuite.SetRegistWaitingFlag(GUIDBASE64s, UserID_textBox.Text);
+                            //rmarcSuite.SetRegistWaitingFlag(GUIDBASE64s, UserID_textBox.Text);
+
+                            List<string> errList = new List<string>();
+                            rmarcSuite.SetRegistWaitingFlag2(GUIDBASE64s, UserID_textBox.Text, ref errList);
+
+                            if (errList.Count > 0)
+                            {
+                                // カンマ区切りの文字列に変換
+                                string result = String.Join(",", errList);
+
+                                logWindowControl.WriteLine($"※強制通常登録実行結果・エラーが含まれます。失敗したもの ({result})");
+                            }
+                            else
+                            {
+                                logWindowControl.WriteLine($"強制通常登録実行 エラーはありませんでした。");
+                            }
 
                         }
                     }
@@ -285,7 +300,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.ApprovableFinulList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "最終承認可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
@@ -302,7 +317,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.ArcSuiteNotRegisteredList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "ArcSuite未登録", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
@@ -319,7 +334,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.ArcSuiteRegistrationScheduled(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "アークスイート登録指示あり", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
@@ -336,7 +351,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.LISTALL(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "無条件（全てのデータ）", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
@@ -354,7 +369,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.ApprovalUser(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "承認ユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
 
@@ -373,7 +388,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.CommitUser(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "コミットユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
         }
@@ -391,7 +406,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.PaperSize(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "ペーパーサイズ名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
 
@@ -405,7 +420,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.CommitHost(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "コミットホスト名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
 
@@ -550,7 +565,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.TICKETCODE(name);
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "TICKETCODEで検索");
 
@@ -566,7 +581,7 @@ namespace ServerControlCenterApplication
             var sqlSearchStringValues = SqlSyntax.PARTNUMBER(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
-            logWindowControl1.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sh2.Search(sqlSearchStringValues, "TICKETCODEで検索");
 
