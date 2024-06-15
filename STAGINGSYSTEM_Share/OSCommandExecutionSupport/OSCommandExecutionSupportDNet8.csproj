@@ -13,7 +13,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\OSCommandExecutionSupport\OSCommandExecutionSupport.cs" Link="OSCommandExecutionSupport.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\OSCommandExecutionSupport\Utility_FileFolder.cs" Link="Utility_FileFolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />

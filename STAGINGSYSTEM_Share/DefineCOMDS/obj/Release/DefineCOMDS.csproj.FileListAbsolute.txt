@@ -1,6 +1,0 @@
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\bin\Release\DefineCOMDS.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\bin\Release\DefineCOMDS.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Release\DefineCOMDS.csproj.AssemblyReference.cache
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Release\DefineCOMDS.csproj.CoreCompileInputs.cache
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Release\DefineCOMDS.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\obj\Release\DefineCOMDS.pdb

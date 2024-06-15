@@ -25,7 +25,7 @@ namespace ServerControlCenterApplication
 
         }
 
-        [System.Diagnostics.DebuggerStepThrough]
+        //[System.Diagnostics.DebuggerStepThrough]
         public void WriteLine(string msg)
         {
             try

@@ -1,7 +1,0 @@
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Release\CommonTicketClassLibrary.dll.config
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Release\CommonTicketClassLibrary.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\bin\Release\CommonTicketClassLibrary.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Release\CommonTicketClassLibrary.csproj.CoreCompileInputs.cache
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Release\CommonTicketClassLibrary.dll
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Release\CommonTicketClassLibrary.pdb
-C:\Users\sasahara\source\repos\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonTicketClassLibrary\obj\Release\CommonTicketClassLibrary.csproj.AssemblyReference.cache

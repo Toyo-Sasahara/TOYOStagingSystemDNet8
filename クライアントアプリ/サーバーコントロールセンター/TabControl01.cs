@@ -53,7 +53,7 @@ namespace ServerControlCenterApplication
                 {
                     accountUserForm.SetToControls();
 
-                    mainForm.CommitPrinters.GetData();
+                    mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
@@ -83,6 +83,7 @@ namespace ServerControlCenterApplication
         {
             accountUserForm.StageServerHostName_comboBox_SetText(SccConfig.Config.StageServerHost);
 
+            logWindowControl.WriteLine("TabControl01_Load(..) 実行");
         }
 
         /// <summary>
@@ -100,7 +101,7 @@ namespace ServerControlCenterApplication
                 {
                     accountUserForm.SetToControls();
 
-                    mainForm.CommitPrinters.GetData();
+                    mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
@@ -132,7 +133,9 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void reloadPrinter_button_Click(object sender, EventArgs e)
         {
-            mainForm.CommitPrinters.GetData();
+            mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
+
+            logWindowControl.WriteLine(" mainForm.CommitPrinters.GetData(..) 実行されました");
         }
 
 

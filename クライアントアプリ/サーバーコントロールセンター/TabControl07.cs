@@ -1,4 +1,6 @@
-﻿using SasaLib;
+﻿using Org.BouncyCastle.Utilities;
+using SasaLib;
+using SasaLib.PIPE;
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
+using System.IO;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.Versioning;
 namespace ServerControlCenterApplication
 {
     public partial class TabControl07 : UserControl
@@ -219,6 +224,73 @@ namespace ServerControlCenterApplication
                                                 );
             long availableMemory;
             var result = remoteClientSW.GetUsedMemory("ToyoSTAGINGSYSTEMwatch", out availableMemory, LogWindowWriteLine);
+
+        }
+
+        private void ObjecttoByteViaJSONbutton_Click(object sender, EventArgs e)
+        {
+            Bitmap orgObject = Properties.Resources.イメージ読込中;
+
+            // オブジェクトをバイト配列に変換
+            var converter = new ObjectConverter<Bitmap>();
+            long sz;
+            Exception ex;
+
+
+            var bytes = converter.ToByteArrayViaJSON2(orgObject, out ex);
+            Bitmap anserobject = converter.FromByteArrayViaJSON2(bytes, out ex);
+
+            DebugForm_PictureBox.Image = anserobject;
+
+        }
+
+        private void ObjecttoBytebutton_Click(object sender, EventArgs e)
+        {
+            Image orgObject = Properties.Resources.イメージ読込中;
+
+            // オブジェクトをバイト配列に変換
+            var converter = new ObjectConverter<Image>();
+            long sz;
+            Exception ex;
+
+            var bytes = converter.ToByteArray(orgObject);
+
+            Image image = converter.FromByteArray(bytes);
+
+            DebugForm_PictureBox.Image = image;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Image orgObject = Properties.Resources.イメージ読込中;
+
+            // オブジェクトをバイト配列に変換
+            var converter = new ObjectConverter<Image>();
+            long sz;
+            Exception ex;
+
+            var bytes = converter.ToByteArrayViaDirect2((Bitmap)orgObject);
+
+            Bitmap input = (Bitmap)converter.FromByteArrayViaDirect2(bytes);
+
+            DebugForm_PictureBox.Image = input;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Image orgObject = Properties.Resources.イメージ読込中;
+
+            // オブジェクトをバイト配列に変換
+            var converter = new ObjectConverter<Image>();
+            long sz;
+            Exception ex;
+
+            var bytes = converter.ToByteArrayFromBitmap((Bitmap)orgObject,System.Drawing.Imaging.ImageFormat.Jpeg);
+
+            Bitmap input = (Bitmap)converter.FromByteArrayToBitmap(bytes,out ex);
+
+            DebugForm_PictureBox.Image = input;
 
         }
     }

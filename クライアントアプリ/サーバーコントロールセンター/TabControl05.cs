@@ -16,9 +16,13 @@ using SasaLib.PIPE;
 using StageServerRemote;
 using RemoteClient;
 using STAGINGSYSTEM_COMMANDS;
+using System.Runtime.Versioning;
 
 namespace ServerControlCenterApplication
 {
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl05 : UserControl
     {
         int count;
@@ -721,14 +725,14 @@ namespace ServerControlCenterApplication
                     object receveFieldType;
                     using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                     {
-                        receveFieldType = reader.ReadObject<System.Type>(); // 変数型情報受信
+                        receveFieldType = reader.ReadObject<System.Type>(WriteLine:logWindowControl.WriteLine,Verbose:true); // 変数型情報受信
                     }
                     logWindowControl.WriteLine($"ｻｰﾊﾞｰから型情報受信 = 【{receveFieldType}】");
 
                     object receveObj;
                     using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                     {
-                        receveObj = reader.ReadObject<Object>(); // ｻｰﾊﾞｰからオブジェクト受信
+                        receveObj = reader.ReadObject<Object>(WriteLine: logWindowControl.WriteLine, Verbose: true); // ｻｰﾊﾞｰからオブジェクト受信
                     }
 
                     object value = Convert.ChangeType(receveObj, receveFieldType as System.Type); // 受信オブジェクトを変換

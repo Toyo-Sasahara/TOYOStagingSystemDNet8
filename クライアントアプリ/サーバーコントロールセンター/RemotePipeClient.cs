@@ -10,9 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using STAGINGSYSTEM_COMMANDS;
 using SasaLibDummy;
+using System.Runtime.Versioning;
 
 namespace ServerControlCenterApplication
 {
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     internal class RemotePipeClient : RMCsupport
     {
         private readonly string pipeName;
@@ -107,9 +111,12 @@ namespace ServerControlCenterApplication
 
             if (pingOK == false)
                 return false;
-            DebugConsole.WriteLine($"接続先 {serverHostname} {pipeName} 接続文字列:{CMDS.ConnectKeyword}");
 
-            using (new ClsLogonDummy(DomainName, UserName, UserPassword, ClsLogon))
+            DebugConsole.WriteLine($"接続先 {serverHostname} {pipeName} 接続文字列:{CMDS.ConnectKeyword}");
+            bool result = false;
+            
+            // TODO: ClsLogonDummy を 書き換えた
+            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
             {
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(serverHostname, pipeName);
                 try
@@ -123,7 +130,8 @@ namespace ServerControlCenterApplication
                     {
                         ////PipeConnectionStatus = false;
                         DebugConsole.WriteLine($"※Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname} PIPE名:{pipeName} 実行コマンド:{CommandName} NamedPipeClientStream.Connect(..)にて例外検知 {ex.Message}");
-                        return false;
+                        result = false;
+                        return;
                     }
                     // サーバーからのサーバ識別文字列を受け取ります。
                     StreamString stst = new StreamString(pipeCltStream);
@@ -134,7 +142,8 @@ namespace ServerControlCenterApplication
                     if (OperationCanceledException || AggregateException)
                     {
                         SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6004, $"RemotePipeClient.Command_ConnnectStart(..) PIPE接続失敗。ハンドシェイクでタイムアウト");
-                        return false;
+                        result = false;
+                        return;
                     }
                     if (CheckFirstMessage(input0))
                     {
@@ -151,7 +160,8 @@ namespace ServerControlCenterApplication
                     {
                         WriteLine($"※PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} ステージサーバーからの接続文字列{input0}が期待と違います");
                         pipeCltStream.Close();
-                        return false;
+                        result = false;
+                        return;
                     }
                     // Give the client process some time to display results before exiting.
                 }
@@ -168,9 +178,10 @@ namespace ServerControlCenterApplication
                         SasaLib.Eventlog.Log.WriteEntry("TOYODATABASE", EventLogEntryType.Error, 6002, $"RemotePipeClient.Command_ConnnectStart(..) 、PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} 例外発生 {ex.Message} ");
                     }
                 }
-            }
+            });
 
-            return true;
+
+            return result;
         }
 
         /// <summary>

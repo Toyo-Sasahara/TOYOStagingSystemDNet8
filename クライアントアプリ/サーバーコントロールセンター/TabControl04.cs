@@ -110,7 +110,7 @@ namespace ServerControlCenterApplication
 
                         accountUserForm.SetToControls();
 
-                        mainForm.CommitPrinters.GetData();
+                        mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
 
                         ReadMMPFAndSetInTheFormContorols();
                         DRAWREGISTservice_DebugLevel = Command_ServerControl.SetOrGet_DRAWREGISTserviceDEBUGLevel(int.Parse(DRAWREGISTservice_DebugLevelComboBox.Text), false, logWindowControl.WriteLine).ToString();

@@ -1,4 +1,6 @@
-﻿using SasaLib.PrintConfig;
+﻿using SasaLib;
+using SasaLib.ArcSuitePreview;
+using SasaLib.PrintConfig;
 using SharedClassLibrary;
 using StageServerRemote;
 using System;
@@ -30,43 +32,51 @@ namespace ServerControlCenterApplication
         }
 
 
-        public async void GetData()
+        public async void GetData(SasaLibDelegateWriteLine WriteLine = null)
         {
+            if (WriteLine == null) WriteLine =Console.WriteLine;
+
+
             RemoteClientDRAWCAPTURE remoteClientDRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDC);
             remoteClientDRAWCAPTURE.ClientTimeOut = 10000;
 
-            
-            resultGetCommitPrinterShortCutName =  Task.Run(() =>
-            {
-                var result = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName();
-                return result;
-            }).Result;
 
-            resultGetCommitPrinterNameAndAlias = Task.Run(() =>
-            {
-                var result = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias();
-                return result;
-            }).Result;
+            //resultGetCommitPrinterShortCutName =  Task.Run(() =>
+            //{
+            //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName();
+            //    return result;
+            //}).Result;
+            resultGetCommitPrinterShortCutName = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(WriteLine);
+            WriteLine("resultGetCommitPrinterShortCutName データ取得 実行されました");
+            //resultGetCommitPrinterNameAndAlias = Task.Run(() =>
+            //{
+            //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias();
+            //    return result;
+            //}).Result;
+            resultGetCommitPrinterNameAndAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(WriteLine);
+            WriteLine("resultGetCommitPrinterNameAndAlias データ取得 実行されました");
+            //resultGetCommitPrinterIsFailStatus = Task.Run(() =>
+            //{
+            //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus();
+            //    return result;
+            //}).Result;
+            resultGetCommitPrinterIsFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(WriteLine);
+            WriteLine("resultGetCommitPrinterIsFailStatus データ取得 実行されました");
+            //resultGetCommitPrinterInfo = Task.Run(() =>
+            //{
+            //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterInfo();
+            //    return result;
+            //}).Result;
+            resultGetCommitPrinterInfo = remoteClientDRAWCAPTURE.GetCommitPrinterInfo(WriteLine);
+            WriteLine($"resultGetCommitPrinterInfo データ取得 実行されました resultGetCommitPrinterInfo.Count = {resultGetCommitPrinterInfo.Count}");
+            //resultGetCommitPrinterSettingFromPaperSize = await Task.Run(() =>
+            //{
+            //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize();
+            //    return result;
+            //});
 
-            resultGetCommitPrinterIsFailStatus = Task.Run(() =>
-            {
-                var result = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus();
-                return result;
-            }).Result;
-
-            resultGetCommitPrinterInfo = Task.Run(() =>
-            {
-                var result = remoteClientDRAWCAPTURE.GetCommitPrinterInfo();
-                return result;
-            }).Result;
-
-            var resultTask = await Task.Run(() =>
-            {
-                var result = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize();
-                return result;
-            });
-
-            resultGetCommitPrinterSettingFromPaperSize = resultTask;
+            resultGetCommitPrinterSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize(WriteLine);
+            WriteLine("resultGetCommitPrinterSettingFromPaperSize データ取得 実行されました");
 
         }
 

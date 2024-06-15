@@ -10,6 +10,8 @@
 		<AssemblyTitle>SharedClassLibrary</AssemblyTitle>
 		<Nullable>disable</Nullable>
 		<PlatformTarget>x64</PlatformTarget>
+		<AssemblyName>SharedClassLibrary</AssemblyName>
+		<RootNamespace>ToyoStageService</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\AcceptPipeCommand.cs" Link="AcceptPipeCommand.cs" />
