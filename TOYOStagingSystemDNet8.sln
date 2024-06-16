@@ -71,7 +71,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Framework", ".NET Fram
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SasaLibDNet8.PictureBoxControlLibrary", "..\SasaLibDNet8\SasaLibDNet8.PictureBoxControlLibrary\SasaLibDNet8.PictureBoxControlLibrary.csproj", "{63EB64A1-25DC-4781-80E0-DA1286F29732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldValueSetDNet8", "STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetDNet8.csproj", "{C66417A1-6E8D-43B3-B467-D555B2B4128E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieldValueSetDNet8", "STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetDNet8.csproj", "{C66417A1-6E8D-43B3-B467-D555B2B4128E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

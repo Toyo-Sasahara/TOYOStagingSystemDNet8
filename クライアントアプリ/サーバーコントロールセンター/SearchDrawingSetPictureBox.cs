@@ -68,13 +68,13 @@ public class SearchDrawingSetPictureBox
     /// </summary>
     /// <param name="listview"></param>
     /// <param name="pixturebox"></param>
-    /// <param name="delegateWriteLine"></param>
-    public SearchDrawingSetPictureBox(System.Windows.Forms.ListView listview, System.Windows.Forms.Label label, PreviewImageForm previewArcSuiteForm, SasaLibDelegateWriteLine delegateWriteLine)
+    /// <param name="WriteLine"></param>
+    public SearchDrawingSetPictureBox(System.Windows.Forms.ListView listview, System.Windows.Forms.Label label, PreviewImageForm previewArcSuiteForm, SasaLibDelegateWriteLine WriteLine)
     {
-        if (delegateWriteLine == null)
+        if (WriteLine == null)
             this.WriteLine = Console.WriteLine;
         else
-            this.WriteLine = delegateWriteLine;
+            this.WriteLine = WriteLine;
 
         this.listview = listview;
         this.label = label;
@@ -398,6 +398,12 @@ public class SearchDrawingSetPictureBox
     /// <param name="e"></param>
     public void GetAndViewDRAWINGimage(System.Drawing.Image WaitImage, PictureBox pictureBox = null)
     {
+        BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.Bitmap;
+        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
+        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.JSON;
+        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.JSON2;
+        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.Direct;
+        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.Direct2;
 
         if (pictureBox == null)
             pictureBox = this.pictureBox;
@@ -423,15 +429,17 @@ public class SearchDrawingSetPictureBox
 
                 string TICKETCODE = selectedFieldValueSet.SearchKey("TICKETCODE");
 
-                //pictureBox.Image = WaitImage;
 
                 previewArcSuiteForm.SetImage(WaitImage);
                 var task = Task.Run(() =>
                 {
-                    var resultImage = remoteClient.GetImageFromPIPE(selectedFieldValueSet.SearchKey("GUIDBASE64"));
+                    //var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), binaryConvertTYPE);
+                    var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), WriteLine, binaryConvertTYPE);
 
                     if (resultImage != null)
                     {
+                        WriteLine($"イメージを受信");
+
                         System.Drawing.Bitmap bitmap = new Bitmap(resultImage);
 
                         try

@@ -255,7 +255,7 @@ namespace ServerControlCenterApplication
 
             var bytes = converter.ToByteArray(orgObject);
 
-            Image image = converter.FromByteArray(bytes);
+            Image image = converter.FromByteArray(bytes, out ex);
 
             DebugForm_PictureBox.Image = image;
         }
