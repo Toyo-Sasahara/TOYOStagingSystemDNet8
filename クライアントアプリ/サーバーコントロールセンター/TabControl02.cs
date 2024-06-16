@@ -18,9 +18,15 @@ using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
 using ToyoStageService;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
 
 namespace ServerControlCenterApplication
 {
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl02 : UserControl
     {
         Form1 mainForm;

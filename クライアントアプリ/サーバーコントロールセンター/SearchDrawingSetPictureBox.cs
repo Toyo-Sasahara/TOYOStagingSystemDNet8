@@ -398,12 +398,6 @@ public class SearchDrawingSetPictureBox
     /// <param name="e"></param>
     public void GetAndViewDRAWINGimage(System.Drawing.Image WaitImage, PictureBox pictureBox = null)
     {
-        BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.Bitmap;
-        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
-        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.JSON;
-        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.JSON2;
-        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.Direct;
-        //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.Direct2;
 
         if (pictureBox == null)
             pictureBox = this.pictureBox;
@@ -434,6 +428,8 @@ public class SearchDrawingSetPictureBox
                 var task = Task.Run(() =>
                 {
                     //var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), binaryConvertTYPE);
+                    BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
+                    //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
                     var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), WriteLine, binaryConvertTYPE);
 
                     if (resultImage != null)

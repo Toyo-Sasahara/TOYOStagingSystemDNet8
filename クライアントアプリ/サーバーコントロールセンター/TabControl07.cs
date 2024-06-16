@@ -1,22 +1,21 @@
-﻿using Org.BouncyCastle.Utilities;
-using SasaLib;
-using SasaLib.PIPE;
+﻿using SasaLib.PIPE;
 using StageServerRemote;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.IO;
-using System.Reflection.Metadata.Ecma335;
+#if NETCOREAPP
 using System.Runtime.Versioning;
+#endif
+
 namespace ServerControlCenterApplication
 {
+    /// <summary>
+    /// 
+    /// </summary>
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl07 : UserControl
     {
         Form1 mainForm;
@@ -227,7 +226,7 @@ namespace ServerControlCenterApplication
 
         }
 
-        private void ObjecttoByteViaJSONbutton_Click(object sender, EventArgs e)
+        private void ObjecttoByteViaJsonSerializer_Click(object sender, EventArgs e)
         {
             Bitmap orgObject = Properties.Resources.イメージ読込中;
 
@@ -237,8 +236,8 @@ namespace ServerControlCenterApplication
             Exception ex;
 
 
-            var bytes = converter.ToByteArrayViaJSON2(orgObject, out ex);
-            Bitmap anserobject = converter.FromByteArrayViaJSON2(bytes, out ex);
+            var bytes = converter.ToByteArrayViaJsonSerializer(orgObject, out ex);
+            Bitmap anserobject = converter.FromByteArrayViaJsonSerializer(bytes, out ex);
 
             DebugForm_PictureBox.Image = anserobject;
 
@@ -269,15 +268,15 @@ namespace ServerControlCenterApplication
             long sz;
             Exception ex;
 
-            var bytes = converter.ToByteArrayViaDirect2((Bitmap)orgObject);
+            var bytes = converter.ToByteArrayViaDirect2((Bitmap)orgObject, out ex);
 
-            Bitmap input = (Bitmap)converter.FromByteArrayViaDirect2(bytes);
+            Bitmap input = (Bitmap)converter.FromByteArrayViaDirect2(bytes, out ex);
 
             DebugForm_PictureBox.Image = input;
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void FromByteArrayToBitmap_button_Click(object sender, EventArgs e)
         {
             Image orgObject = Properties.Resources.イメージ読込中;
 
@@ -286,9 +285,9 @@ namespace ServerControlCenterApplication
             long sz;
             Exception ex;
 
-            var bytes = converter.ToByteArrayFromBitmap((Bitmap)orgObject,System.Drawing.Imaging.ImageFormat.Jpeg);
+            var bytes = converter.ToByteArrayFromBitmap((Bitmap)orgObject, System.Drawing.Imaging.ImageFormat.Jpeg, out ex);
 
-            Bitmap input = (Bitmap)converter.FromByteArrayToBitmap(bytes,out ex);
+            Bitmap input = (Bitmap)converter.FromByteArrayToBitmap(bytes, out ex);
 
             DebugForm_PictureBox.Image = input;
 

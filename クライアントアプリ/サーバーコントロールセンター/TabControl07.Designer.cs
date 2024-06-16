@@ -46,17 +46,17 @@ namespace ServerControlCenterApplication
             this.label18 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.FromByteArrayToBitmap_button = new System.Windows.Forms.Button();
             this.DebugForm_PictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.ObjecttoBytebutton = new System.Windows.Forms.Button();
-            this.ObjecttoByteViaJSONbutton = new System.Windows.Forms.Button();
+            this.ObjecttoByteViaJsonSerializer_button = new System.Windows.Forms.Button();
             this.GetSWusedMemory_button = new System.Windows.Forms.Button();
             this.GetDCusedMemory_button = new System.Windows.Forms.Button();
             this.GetDRusedMemory_button = new System.Windows.Forms.Button();
             this.GetAvailableMemory_button = new System.Windows.Forms.Button();
             this.logWindowControl = new LogWindowControl();
             this.accountUserForm = new AccountUserForm();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -242,11 +242,11 @@ namespace ServerControlCenterApplication
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.FromByteArrayToBitmap_button);
             this.groupBox1.Controls.Add(this.DebugForm_PictureBox);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.ObjecttoBytebutton);
-            this.groupBox1.Controls.Add(this.ObjecttoByteViaJSONbutton);
+            this.groupBox1.Controls.Add(this.ObjecttoByteViaJsonSerializer_button);
             this.groupBox1.Controls.Add(this.GetSWusedMemory_button);
             this.groupBox1.Controls.Add(this.GetDCusedMemory_button);
             this.groupBox1.Controls.Add(this.GetDRusedMemory_button);
@@ -259,6 +259,18 @@ namespace ServerControlCenterApplication
             this.groupBox1.TabIndex = 137;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "サーバー利用可能メモリ取得";
+            // 
+            // FromByteArrayToBitmap_button
+            // 
+            this.FromByteArrayToBitmap_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            this.FromByteArrayToBitmap_button.Location = new System.Drawing.Point(322, 78);
+            this.FromByteArrayToBitmap_button.Margin = new System.Windows.Forms.Padding(4);
+            this.FromByteArrayToBitmap_button.Name = "FromByteArrayToBitmap_button";
+            this.FromByteArrayToBitmap_button.Size = new System.Drawing.Size(176, 29);
+            this.FromByteArrayToBitmap_button.TabIndex = 120;
+            this.FromByteArrayToBitmap_button.Text = "FromByteArrayToBitmap";
+            this.FromByteArrayToBitmap_button.UseVisualStyleBackColor = true;
+            this.FromByteArrayToBitmap_button.Click += FromByteArrayToBitmap_button_Click;
             // 
             // DebugForm_PictureBox
             // 
@@ -296,17 +308,17 @@ namespace ServerControlCenterApplication
             this.ObjecttoBytebutton.UseVisualStyleBackColor = true;
             this.ObjecttoBytebutton.Click += ObjecttoBytebutton_Click;
             // 
-            // ObjecttoByteViaJSONbutton
+            // ObjecttoByteViaJsonSerializer_button
             // 
-            this.ObjecttoByteViaJSONbutton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.ObjecttoByteViaJSONbutton.Location = new System.Drawing.Point(322, 41);
-            this.ObjecttoByteViaJSONbutton.Margin = new System.Windows.Forms.Padding(4);
-            this.ObjecttoByteViaJSONbutton.Name = "ObjecttoByteViaJSONbutton";
-            this.ObjecttoByteViaJSONbutton.Size = new System.Drawing.Size(176, 29);
-            this.ObjecttoByteViaJSONbutton.TabIndex = 116;
-            this.ObjecttoByteViaJSONbutton.Text = "ObjecttoByte[] Via JSON";
-            this.ObjecttoByteViaJSONbutton.UseVisualStyleBackColor = true;
-            this.ObjecttoByteViaJSONbutton.Click += ObjecttoByteViaJSONbutton_Click;
+            this.ObjecttoByteViaJsonSerializer_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            this.ObjecttoByteViaJsonSerializer_button.Location = new System.Drawing.Point(322, 13);
+            this.ObjecttoByteViaJsonSerializer_button.Margin = new System.Windows.Forms.Padding(4);
+            this.ObjecttoByteViaJsonSerializer_button.Name = "ObjecttoByteViaJsonSerializer_button";
+            this.ObjecttoByteViaJsonSerializer_button.Size = new System.Drawing.Size(176, 43);
+            this.ObjecttoByteViaJsonSerializer_button.TabIndex = 116;
+            this.ObjecttoByteViaJsonSerializer_button.Text = "ObjecttoByte[] Via JsonSerializer";
+            this.ObjecttoByteViaJsonSerializer_button.UseVisualStyleBackColor = true;
+            this.ObjecttoByteViaJsonSerializer_button.Click += ObjecttoByteViaJsonSerializer_Click;
             // 
             // GetSWusedMemory_button
             // 
@@ -377,18 +389,6 @@ namespace ServerControlCenterApplication
             this.accountUserForm.Paint += accountUserForm1_Paint;
             this.accountUserForm.Leave += accountUserForm_Leave;
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.button2.Location = new System.Drawing.Point(322, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 29);
-            this.button2.TabIndex = 120;
-            this.button2.Text = "ObjecttoByte[] ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += button2_Click;
-            // 
             // TabControl07
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -437,10 +437,10 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button GetDRusedMemory_button;
         private System.Windows.Forms.Button GetDCusedMemory_button;
         private System.Windows.Forms.Button GetSWusedMemory_button;
-        private System.Windows.Forms.Button ObjecttoByteViaJSONbutton;
+        private System.Windows.Forms.Button ObjecttoByteViaJsonSerializer_button;
         private System.Windows.Forms.Button ObjecttoBytebutton;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.PictureBox DebugForm_PictureBox;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button FromByteArrayToBitmap_button;
     }
 }
