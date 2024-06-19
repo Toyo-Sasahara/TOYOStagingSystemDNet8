@@ -428,7 +428,7 @@ public class SearchDrawingSetPictureBox
                 var task = Task.Run(() =>
                 {
                     //var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), binaryConvertTYPE);
-                    BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
+                    BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.Bitmap;
                     //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
                     var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), WriteLine, binaryConvertTYPE);
 

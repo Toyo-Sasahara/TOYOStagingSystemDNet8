@@ -230,14 +230,16 @@ namespace ServerControlCenterApplication
         {
             Bitmap orgObject = Properties.Resources.イメージ読込中;
 
+            DebugForm_PictureBox.Image = null;
+
             // オブジェクトをバイト配列に変換
             var converter = new ObjectConverter<Bitmap>();
             long sz;
             Exception ex;
 
 
-            var bytes = converter.ToByteArrayViaJsonSerializer(orgObject, out ex);
-            Bitmap anserobject = converter.FromByteArrayViaJsonSerializer(bytes, out ex);
+            var bytes = converter.ToByteArrayViaJsonSerializer(orgObject);
+            Bitmap anserobject = converter.FromByteArrayViaJsonSerializer(bytes);
 
             DebugForm_PictureBox.Image = anserobject;
 
@@ -247,6 +249,8 @@ namespace ServerControlCenterApplication
         {
             Image orgObject = Properties.Resources.イメージ読込中;
 
+            DebugForm_PictureBox.Image = null;
+
             // オブジェクトをバイト配列に変換
             var converter = new ObjectConverter<Image>();
             long sz;
@@ -254,14 +258,16 @@ namespace ServerControlCenterApplication
 
             var bytes = converter.ToByteArray(orgObject);
 
-            Image image = converter.FromByteArray(bytes, out ex);
+            Image image = converter.FromByteArray(bytes);
 
             DebugForm_PictureBox.Image = image;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Direct2_button_Click(object sender, EventArgs e)
         {
             Image orgObject = Properties.Resources.イメージ読込中;
+
+            DebugForm_PictureBox.Image = null;
 
             // オブジェクトをバイト配列に変換
             var converter = new ObjectConverter<Image>();
@@ -270,7 +276,7 @@ namespace ServerControlCenterApplication
 
             var bytes = converter.ToByteArrayViaDirect2((Bitmap)orgObject, out ex);
 
-            Bitmap input = (Bitmap)converter.FromByteArrayViaDirect2(bytes, out ex);
+            Bitmap input = (Bitmap)converter.FromByteArrayViaDirect2(bytes);
 
             DebugForm_PictureBox.Image = input;
 
@@ -278,6 +284,8 @@ namespace ServerControlCenterApplication
 
         private void FromByteArrayToBitmap_button_Click(object sender, EventArgs e)
         {
+            DebugForm_PictureBox.Image = null;
+
             Image orgObject = Properties.Resources.イメージ読込中;
 
             // オブジェクトをバイト配列に変換
@@ -285,9 +293,9 @@ namespace ServerControlCenterApplication
             long sz;
             Exception ex;
 
-            var bytes = converter.ToByteArrayFromBitmap((Bitmap)orgObject, System.Drawing.Imaging.ImageFormat.Jpeg, out ex);
+            var bytes = converter.ToByteArrayFromBitmap((Bitmap)orgObject, System.Drawing.Imaging.ImageFormat.Jpeg);
 
-            Bitmap input = (Bitmap)converter.FromByteArrayToBitmap(bytes, out ex);
+            Bitmap input = (Bitmap)converter.FromByteArrayToBitmap(bytes);
 
             DebugForm_PictureBox.Image = input;
 
