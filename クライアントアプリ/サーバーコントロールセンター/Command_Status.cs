@@ -42,14 +42,14 @@ namespace ServerControlCenterApplication
         /// <summary>
         /// ■DRサーバー ConnectTest
         /// </summary>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
-        public static bool DR_ConnectTest(string testMessage, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool DR_ConnectTest(string testMessage, SasaLibDelegateWriteLine WriteLine = null)
         {
             ///　？ローカルメソッド
             void localLogWrite(string msg)
             {
-                delegateWriteLine(msg);
+                WriteLine(msg);
             }
 
             RemoteClientDRAWREGIST rmClientDR = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
@@ -65,12 +65,12 @@ namespace ServerControlCenterApplication
 
         }
 
-        public static bool DC_ConnectTest(string testMessage, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool DC_ConnectTest(string testMessage, SasaLibDelegateWriteLine WriteLine = null)
         {
             ///　？ローカルメソッド
             void localLogWrite(string msg)
             {
-                delegateWriteLine(msg);
+                WriteLine(msg);
             }
 
             RemoteClientDRAWCAPTURE rmClientDC = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
@@ -90,9 +90,9 @@ namespace ServerControlCenterApplication
         /// ■DCサーバーの待機状態問い合わせ
         /// Status CURRENT MODE
         /// </summary>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
-        public static string DC_ServerMode(SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static string DC_ServerMode(SasaLibDelegateWriteLine WriteLine = null)
         {
             RemoteClientServerControl rmClientDC = new RemoteClientServerControl(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -101,7 +101,7 @@ namespace ServerControlCenterApplication
                 SccConfig.Config.StageServerHost,
                 SccConfig.Config.PipeNameDR);
 
-            string curSERVERMODE = rmClientDC.Check_Status_CurrentMode(delegateWriteLine);
+            string curSERVERMODE = rmClientDC.Check_Status_CurrentMode(WriteLine);
 
             return curSERVERMODE;
 

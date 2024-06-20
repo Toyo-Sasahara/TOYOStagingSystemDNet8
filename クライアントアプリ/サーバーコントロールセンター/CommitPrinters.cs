@@ -46,28 +46,28 @@ namespace ServerControlCenterApplication
             //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName();
             //    return result;
             //}).Result;
-            resultGetCommitPrinterShortCutName = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(WriteLine);
+            resultGetCommitPrinterShortCutName = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(WriteLine:WriteLine);
             WriteLine("resultGetCommitPrinterShortCutName データ取得 実行されました");
             //resultGetCommitPrinterNameAndAlias = Task.Run(() =>
             //{
             //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias();
             //    return result;
             //}).Result;
-            resultGetCommitPrinterNameAndAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(WriteLine);
+            resultGetCommitPrinterNameAndAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(WriteLine: WriteLine);
             WriteLine("resultGetCommitPrinterNameAndAlias データ取得 実行されました");
             //resultGetCommitPrinterIsFailStatus = Task.Run(() =>
             //{
             //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus();
             //    return result;
             //}).Result;
-            resultGetCommitPrinterIsFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(WriteLine);
+            resultGetCommitPrinterIsFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(WriteLine: WriteLine);
             WriteLine("resultGetCommitPrinterIsFailStatus データ取得 実行されました");
             //resultGetCommitPrinterInfo = Task.Run(() =>
             //{
             //    var result = remoteClientDRAWCAPTURE.GetCommitPrinterInfo();
             //    return result;
             //}).Result;
-            resultGetCommitPrinterInfo = remoteClientDRAWCAPTURE.GetCommitPrinterInfo(WriteLine);
+            resultGetCommitPrinterInfo = remoteClientDRAWCAPTURE.GetCommitPrinterInfo(WriteLine: WriteLine);
             WriteLine($"resultGetCommitPrinterInfo データ取得 実行されました resultGetCommitPrinterInfo.Count = {resultGetCommitPrinterInfo.Count}");
             //resultGetCommitPrinterSettingFromPaperSize = await Task.Run(() =>
             //{
@@ -75,7 +75,7 @@ namespace ServerControlCenterApplication
             //    return result;
             //});
 
-            resultGetCommitPrinterSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize(WriteLine);
+            resultGetCommitPrinterSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize(WriteLine: WriteLine);
             WriteLine("resultGetCommitPrinterSettingFromPaperSize データ取得 実行されました");
 
         }

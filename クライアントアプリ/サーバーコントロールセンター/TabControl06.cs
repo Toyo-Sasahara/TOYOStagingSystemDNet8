@@ -160,7 +160,7 @@ namespace ServerControlCenterApplication
                 PipeServerName: SccConfig.Config.StageServerHost,
                 PipeName: SccConfig.Config.PipeNameDR
                 );
-            remoteClientDRAWREGIST.GetArcSuiteLatestDrawingFiles(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, ref fileLists, out resultMsg, logWindowControl.WriteLine);
+            remoteClientDRAWREGIST.GetArcSuiteLatestDrawingFiles(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, ref fileLists, out resultMsg, WriteLine:logWindowControl.WriteLine);
         }
 
 

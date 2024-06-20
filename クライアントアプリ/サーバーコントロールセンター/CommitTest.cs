@@ -149,7 +149,7 @@ namespace ServerControlCenterApplication
                         CreateSoftware: "SOLIDWORKS", comticketparams: ref prms, ref variantparams,
                         WorkingExportTicketFilePath: WorknigTicketFilePath,
                         RequestPrinter: RequestPrinterStr, PrintingTimeStr: "", 
-                        PrintOutOnly: PrintOutOnly, delegateWriteLine: delegateWriteLine);
+                        PrintOutOnly: PrintOutOnly, WriteLine: delegateWriteLine);
 
                     if (ans != null)
                     {
@@ -270,7 +270,7 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="TICKETCODE"></param>
         /// <returns></returns>
-        public static bool IsTICKETCODEexist(string TICKETCODE, out FieldValueSet result, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool IsTICKETCODEexist(string TICKETCODE, out FieldValueSet result, SasaLibDelegateWriteLine WriteLine = null)
         {
             SqlFieldValue sqlStr = new SqlFieldValue()
             {
@@ -291,7 +291,7 @@ namespace ServerControlCenterApplication
             }
             else
             {
-                delegateWriteLine($"検索結果 {ans.Count} 件");
+                WriteLine($"検索結果 {ans.Count} 件");
                 result = null;
                 return false;
             }
@@ -399,7 +399,7 @@ namespace ServerControlCenterApplication
         private static CommonTicket GetAttrAndTicketSave(string template_Ticket_File, string GUIDstr,
             string NativeCADFilePath, CommonPaperSize currentPaperSize, string CreateSoftware,
             ref List<CommonTicket.Param> comticketparams, ref List<CommonTicket.Param> variantparams,
-             string WorkingExportTicketFilePath, string RequestPrinter = "", string PrintingTimeStr = "", bool PrintOutOnly = false, SasaLibDelegateWriteLine delegateWriteLine = null)
+             string WorkingExportTicketFilePath, string RequestPrinter = "", string PrintingTimeStr = "", bool PrintOutOnly = false, SasaLibDelegateWriteLine WriteLine = null)
         {
             ///
             string NativeActiveDocFileNameWithoutExtention = SasaLib.FileFolder.GetFileNameWithoutExtension(NativeCADFilePath);

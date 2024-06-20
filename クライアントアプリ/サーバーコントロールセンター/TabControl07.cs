@@ -126,7 +126,7 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameDC
                                                 );
             string msg;
-            var ans = remoteClientDC.FileSend(SourceFromLocalFullFileName_textBox.Text, SendToServerRullFileName.Text, out msg, LogWindowWriteLine);
+            var ans = remoteClientDC.FileSend(SourceFromLocalFullFileName_textBox.Text, SendToServerRullFileName.Text, out msg, WriteLine:LogWindowWriteLine) ;
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace ServerControlCenterApplication
 
 
             string msg;
-            var ans = remoteClientDC.FileRecv(ReceveFullFileName_textBox.Text, ReceveToLocalFullFileName_textBox.Text, out msg, LogWindowWriteLine);
+            var ans = remoteClientDC.FileRecv(ReceveFullFileName_textBox.Text, ReceveToLocalFullFileName_textBox.Text, out msg, WriteLine: LogWindowWriteLine);
 
         }
 
@@ -180,7 +180,7 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             float availableMemory;
-            var result = remoteClientSW.GetAvailableMemory(out availableMemory, LogWindowWriteLine);
+            var result = remoteClientSW.GetAvailableMemory(out availableMemory, WriteLine: LogWindowWriteLine);
 
         }
 
@@ -194,7 +194,7 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             long availableMemory;
-            var result = remoteClientSW.GetUsedMemory("ToyoDRAWREGISTservice", out availableMemory, LogWindowWriteLine);
+            var result = remoteClientSW.GetUsedMemory("ToyoDRAWREGISTservice", out availableMemory, WriteLine: LogWindowWriteLine);
 
         }
 
@@ -208,7 +208,7 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             long availableMemory;
-            var result = remoteClientSW.GetUsedMemory("ToyoDRAWCAPTUREservice", out availableMemory, LogWindowWriteLine);
+            var result = remoteClientSW.GetUsedMemory("ToyoDRAWCAPTUREservice", out availableMemory, WriteLine: LogWindowWriteLine);
 
         }
 
@@ -222,7 +222,7 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             long availableMemory;
-            var result = remoteClientSW.GetUsedMemory("ToyoSTAGINGSYSTEMwatch", out availableMemory, LogWindowWriteLine);
+            var result = remoteClientSW.GetUsedMemory("ToyoSTAGINGSYSTEMwatch", out availableMemory, WriteLine: LogWindowWriteLine);
 
         }
 
@@ -274,7 +274,7 @@ namespace ServerControlCenterApplication
             long sz;
             Exception ex;
 
-            var bytes = converter.ToByteArrayViaDirect2((Bitmap)orgObject, out ex);
+            var bytes = converter.ToByteArrayViaDirect2((Bitmap)orgObject);
 
             Bitmap input = (Bitmap)converter.FromByteArrayViaDirect2(bytes);
 

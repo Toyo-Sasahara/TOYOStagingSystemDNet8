@@ -33,14 +33,14 @@ namespace ServerControlCenterApplication
 
         public static int ReadHandShakeStreamStringTimeOut { get; set; } = 10000;
 
-        public static async void Backup(string BackupDistFolder, int level, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static async void Backup(string BackupDistFolder, int level, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             if (string.IsNullOrWhiteSpace(BackupDistFolder))
             {
-                delegateWriteLine("バックアップ先未定義");
+                WriteLine("バックアップ先未定義");
                 return;
             }
 
@@ -53,11 +53,11 @@ namespace ServerControlCenterApplication
                 SccConfig.Config.StageServerHost,
                 SccConfig.Config.PipeNameDC);
 
-            delegateWriteLine($"データベースバックアップ開始.保存先フォルダ：{BackupDistFolder}");
+            WriteLine($"データベースバックアップ開始.保存先フォルダ：{BackupDistFolder}");
             List<string> anser = await remoteClientDrawCapture.DatabaseBackup(BackupDistFolder);
             foreach (string ans in anser)
             {
-                delegateWriteLine($"RemoteClientDrawCapture.DatabaseBackup(..) 戻り値：{ans}");
+                WriteLine($"RemoteClientDrawCapture.DatabaseBackup(..) 戻り値：{ans}");
             }
         }
 
@@ -66,15 +66,15 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="BackupSourceFolder"></param>
         /// <param name="createDate"></param>
-        /// <param name="delegateWriteLine"></param>
-        public static async void Restore(string BackupSourceFolder, DateTime createDate, SasaLibDelegateWriteLine delegateWriteLine = null)
+        /// <param name="WriteLine"></param>
+        public static async void Restore(string BackupSourceFolder, DateTime createDate, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             if (string.IsNullOrWhiteSpace(BackupSourceFolder))
             {
-                delegateWriteLine("バックアップソースフォルダ未定義");
+                WriteLine("バックアップソースフォルダ未定義");
                 return;
             }
 
@@ -87,11 +87,11 @@ namespace ServerControlCenterApplication
                 SccConfig.Config.StageServerHost,
                 SccConfig.Config.PipeNameDC);
 
-            delegateWriteLine($"データベースリストア開始.ソースフォルダ：{BackupSourceFolder} 日付{createDate.ToString("yyyy-MM-dd_HHmmss")}");
+            WriteLine($"データベースリストア開始.ソースフォルダ：{BackupSourceFolder} 日付{createDate.ToString("yyyy-MM-dd_HHmmss")}");
             List<string> anser = await remoteClientDrawCapture.DatabaseRestore(BackupSourceFolder, createDate);
             foreach (string ans in anser)
             {
-                delegateWriteLine($"remoteClientDrawCapture.DatabaseRestore(..) 戻り値：{ans}");
+                WriteLine($"remoteClientDrawCapture.DatabaseRestore(..) 戻り値：{ans}");
             }
         }
 
@@ -99,10 +99,10 @@ namespace ServerControlCenterApplication
         ///  ■SetDRAWREGISTserviceLogLevel(level)
         /// </summary>
         /// <param name="level"></param>
-        public static int SetOrGet_DRAWREGISTserviceDEBUGLevel(int level, bool set = true, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static int SetOrGet_DRAWREGISTserviceDEBUGLevel(int level, bool set = true, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWREGIST remoteDRAWREGIST = new RemoteClientDRAWREGIST(
                 SccConfig.Config.ClientDomainName,
@@ -116,7 +116,7 @@ namespace ServerControlCenterApplication
             remoteDRAWREGIST.ReadStreamStringTimeOut = 8000;
 
             string DRAWREGISTserviceLogLevelcurrent = remoteDRAWREGIST.GetDRAWREGISTserviceLogLevel();
-            delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWREGISTserviceの変更前のログレベルは {DRAWREGISTserviceLogLevelcurrent} です");
+            WriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWREGISTserviceの変更前のログレベルは {DRAWREGISTserviceLogLevelcurrent} です");
 
             if (set == false)
             {
@@ -128,7 +128,7 @@ namespace ServerControlCenterApplication
             remoteDRAWREGIST.SetDRAWREGISTserviceLogLevel(level);
 
             string DRAWREGISTserviceLogLevelchanged = remoteDRAWREGIST.GetDRAWREGISTserviceLogLevel();
-            delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWREGISTserviceの変更後のログレベルは {DRAWREGISTserviceLogLevelchanged} です");
+            WriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWREGISTserviceの変更後のログレベルは {DRAWREGISTserviceLogLevelchanged} です");
             return int.Parse(DRAWREGISTserviceLogLevelchanged);
 
         }
@@ -137,10 +137,10 @@ namespace ServerControlCenterApplication
         /// ■SetDRAWCAPTUREserviceLogLevel(level)
         /// </summary>
         /// <param name="level"></param>
-        public static int SetOrGet_DRAWCAPTUREserviceDEBUGLevel(int level, bool set = true, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static int SetOrGet_DRAWCAPTUREserviceDEBUGLevel(int level, bool set = true, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWCAPTURE remoteDRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -153,7 +153,7 @@ namespace ServerControlCenterApplication
             remoteDRAWCAPTURE.ReadStreamStringTimeOut = 5000;
 
             string DRAWRCAPTUREserviceLogLevelcurrent = remoteDRAWCAPTURE.GetDRAWCAPTUREserviceLogLevel();
-            delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWCAPTUREserviceの変更前のログレベルは {DRAWRCAPTUREserviceLogLevelcurrent} です");
+            WriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWCAPTUREserviceの変更前のログレベルは {DRAWRCAPTUREserviceLogLevelcurrent} です");
 
             remoteDRAWCAPTURE.SetDRAWCAPTUREserviceLogLevel(level);
 
@@ -165,7 +165,7 @@ namespace ServerControlCenterApplication
 
 
             string DRAWRCAPTUREserviceLogLevelchanged = remoteDRAWCAPTURE.GetDRAWCAPTUREserviceLogLevel();
-            delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} のDRAWCAPTUREserviceの変更後のログレベルは {DRAWRCAPTUREserviceLogLevelchanged} です");
+            WriteLine($"サーバー:{SccConfig.Config.StageServerHost} のDRAWCAPTUREserviceの変更後のログレベルは {DRAWRCAPTUREserviceLogLevelchanged} です");
             return int.Parse(DRAWRCAPTUREserviceLogLevelchanged);
         }
 
@@ -174,12 +174,12 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="level"></param>
         /// <param name="set"></param>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
-        public static int SetOrGet_STAGINGSYSTEMwatchDEBUGLevel(int level, bool set = true, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static int SetOrGet_STAGINGSYSTEMwatchDEBUGLevel(int level, bool set = true, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientSYSTEMWATCH remoteSYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -192,7 +192,7 @@ namespace ServerControlCenterApplication
             remoteSYSTEMWATCH.ReadStreamStringTimeOut = 5000;
 
             string STAGINGSYSTMwatchLogLevelcurrent = remoteSYSTEMWATCH.GetSTAGINGSYSTEMwatchLogLevel();
-            delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} の STAGINGSYSTEMwatchの変更前のログレベルは {STAGINGSYSTMwatchLogLevelcurrent} です");
+            WriteLine($"サーバー:{SccConfig.Config.StageServerHost} の STAGINGSYSTEMwatchの変更前のログレベルは {STAGINGSYSTMwatchLogLevelcurrent} です");
 
             remoteSYSTEMWATCH.SetSTAGINGSYSTEMwatchLogLevel(level);
 
@@ -203,18 +203,18 @@ namespace ServerControlCenterApplication
             }
 
             string STAGINGSYSTMwatchLogLevelchanged = remoteSYSTEMWATCH.GetSTAGINGSYSTEMwatchLogLevel();
-            delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} のSTAGINGSYSTEMwatchの変更後のログレベルは {STAGINGSYSTMwatchLogLevelcurrent} です");
+            WriteLine($"サーバー:{SccConfig.Config.StageServerHost} のSTAGINGSYSTEMwatchの変更後のログレベルは {STAGINGSYSTMwatchLogLevelcurrent} です");
             return int.Parse(STAGINGSYSTMwatchLogLevelchanged);
         }
 
         /// <summary>
         /// ■バージョン情報確認（DRAWREGISTservice）
         /// </summary>
-        /// <param name="delegateWriteLine"></param>
-        public static string GetDRAWREGISTserviceVersion(SasaLibDelegateWriteLine delegateWriteLine = null)
+        /// <param name="WriteLine"></param>
+        public static string GetDRAWREGISTserviceVersion(SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWREGIST remoteDRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -227,18 +227,18 @@ namespace ServerControlCenterApplication
             ///　？ローカルメソッド
             void localLogWrite(string msg)
             {
-                delegateWriteLine(msg);
+                WriteLine(msg);
             }
 
             try
             {
                 version = remoteDRAWREGIST.GetDRAWREGISTserviceVersion(localLogWrite);
-                delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWREGISTserviceのバージョンは {version} です");
+                WriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWREGISTserviceのバージョンは {version} です");
             }
             catch (Exception ex)
             {
                 version = null;
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
             }
             return version;
         }
@@ -246,11 +246,11 @@ namespace ServerControlCenterApplication
         /// <summary>
         /// ■バージョン情報確認（DRAWCAPTUREservice）
         /// </summary>
-        /// <param name="delegateWriteLine"></param>
-        public static string GetDRAWCAPTUREserviceVersion(SasaLibDelegateWriteLine delegateWriteLine = null)
+        /// <param name="WriteLine"></param>
+        public static string GetDRAWCAPTUREserviceVersion(SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWCAPTURE remoteDRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -262,12 +262,12 @@ namespace ServerControlCenterApplication
             try
             {
                 version = remoteDRAWCAPTURE.GetDRAWCAPTUREserviceVersion(SccConfig.Config.StageServerHost);
-                delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWCAPTUREserviceのバージョンは {version} です");
+                WriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWCAPTUREserviceのバージョンは {version} です");
             }
             catch (Exception ex)
             {
                 version = null;
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
             }
             return version;
         }
@@ -275,11 +275,11 @@ namespace ServerControlCenterApplication
         /// <summary>
         /// ■バージョン情報確認（DRAWWATCHservice）
         /// </summary>
-        /// <param name="delegateWriteLine"></param>
-        public static string GetSYSTEMWATCHserviceVersion(SasaLibDelegateWriteLine delegateWriteLine = null)
+        /// <param name="WriteLine"></param>
+        public static string GetSYSTEMWATCHserviceVersion(SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientSYSTEMWATCH remoteDRAWWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -291,12 +291,12 @@ namespace ServerControlCenterApplication
             try
             {
                 version = remoteDRAWWATCH.GetSYSTEMWATCHserviceVersion(SccConfig.Config.StageServerHost);
-                delegateWriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWWATCHserviceのバージョンは {version} です");
+                WriteLine($"サーバー:{SccConfig.Config.StageServerHost} の DRAWWATCHserviceのバージョンは {version} です");
             }
             catch (Exception ex)
             {
                 version = null;
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
             }
             return version;
         }
@@ -306,11 +306,11 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="Label"></param>
         /// <param name="typestr"></param>
-        /// <param name="delegateWriteLine"></param>
-        public static void GetSYSTEMWATCHserviceMmap(string Label, string typestr, SasaLibDelegateWriteLine delegateWriteLine = null)
+        /// <param name="WriteLine"></param>
+        public static void GetSYSTEMWATCHserviceMmap(string Label, string typestr, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientSYSTEMWATCH remoteDRAWCAPTURE = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -323,19 +323,19 @@ namespace ServerControlCenterApplication
             {
                 case "string":
                     string MSG = (string)remoteDRAWCAPTURE.GetSYSTEMWATCHserviceMmapvalue(SccConfig.Config.StageServerHost, Label, "string");
-                    delegateWriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
+                    WriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
                         $"MMapラベル：{Label} 型\"string\" 取得しました：{MSG}");
                     break;
 
                 case "bool":
                     bool result = (bool)remoteDRAWCAPTURE.GetSYSTEMWATCHserviceMmapvalue(SccConfig.Config.StageServerHost, Label, "bool");
-                    delegateWriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
+                    WriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
                         $"MMapラベル：{Label} 型\"bool\" 取得しました：{result}");
                     break;
 
                 case "int":
                     int resultint = (int)remoteDRAWCAPTURE.GetSYSTEMWATCHserviceMmapvalue(SccConfig.Config.StageServerHost, Label, "int");
-                    delegateWriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
+                    WriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
                         $"MMapラベル：{Label} 型\"intl\" 取得しました：{resultint}");
                     break;
 
@@ -355,14 +355,14 @@ namespace ServerControlCenterApplication
         /// <param name="ClsLogon"></param>
         /// <param name="StageServerHost"></param>
         /// <param name="pipeName"></param>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
         public static string GetPipeCommandLog(string ClientDomainName, string ClientUserName, string ClientUserPassword, bool ClsLogon,
             string StageServerHost, string pipeName,
-            SasaLibDelegateWriteLine delegateWriteLine = null)
+            SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWREGIST remoteDRAWREGIST = new RemoteClientDRAWREGIST(ClientDomainName,
                 ClientUserName,
@@ -374,7 +374,7 @@ namespace ServerControlCenterApplication
 
             try
             {
-                if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
+                if (WriteLine == null) WriteLine = Console.WriteLine;
                 int ClientTimeOut = 2000;
                 //bool PipeConnectionStatus = false;
                 int ReadStreamStringTimeOut = 5000;
@@ -392,7 +392,7 @@ namespace ServerControlCenterApplication
                         {
                             //PipeConnectionStatus = false;
 
-                            delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
+                            WriteLine($"PIPEサーバー接続エラー {ex.Message}");
                             return "Error";
                         }
                         // サーバーからのサーバ識別文字列を受け取ります。
@@ -403,7 +403,7 @@ namespace ServerControlCenterApplication
                         string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
                         if (OperationCanceledException || AggregateException)
                         {
-                            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+                            WriteLine($"最初のハンドシェイクにてタイムアウトが発生");
                             return null;
                         }
                         if (CheckFirstMessage(input0))
@@ -421,7 +421,7 @@ namespace ServerControlCenterApplication
                         }
                         else
                         {
-                            delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
+                            WriteLine($"サーバーからの接続文字列{input0}が期待と違います");
                             pipeCltStream.Close();
                             return "エラー";
                         }
@@ -430,7 +430,7 @@ namespace ServerControlCenterApplication
                     catch (Exception ex)
                     {
                         //PipeConnectionStatus = false;
-                        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
+                        WriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     }
                     return "エラー";
                 }
@@ -438,15 +438,15 @@ namespace ServerControlCenterApplication
             catch (Exception ex)
             {
                 version = null;
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
             }
             return version;
         }
 
-        internal static List<ClientPreInputTICKET> AddClientPreInputTICKETCODE(string pipeName, ClientPreInputTICKET ticket, SasaLibDelegateWriteLine delegateWriteLine = null)
+        internal static List<ClientPreInputTICKET> AddClientPreInputTICKETCODE(string pipeName, ClientPreInputTICKET ticket, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWREGIST remoteDRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -459,7 +459,7 @@ namespace ServerControlCenterApplication
 
             try
             {
-                if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
+                if (WriteLine == null) WriteLine = Console.WriteLine;
                 int ClientTimeOut = 2000;
                 //bool PipeConnectionStatus = false;
                 //int ReadStreamStringTimeOut = 5000;
@@ -477,7 +477,7 @@ namespace ServerControlCenterApplication
                         {
                             //PipeConnectionStatus = false;
 
-                            delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
+                            WriteLine($"PIPEサーバー接続エラー {ex.Message}");
                             return null;
                         }
                         // サーバーからのサーバ識別文字列を受け取ります。
@@ -488,7 +488,7 @@ namespace ServerControlCenterApplication
                         string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
                         if (OperationCanceledException || AggregateException)
                         {
-                            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+                            WriteLine($"最初のハンドシェイクにてタイムアウトが発生");
                             return null;
                         }
                         if (CheckFirstMessage(input0))
@@ -511,7 +511,7 @@ namespace ServerControlCenterApplication
                         }
                         else
                         {
-                            delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
+                            WriteLine($"サーバーからの接続文字列{input0}が期待と違います");
                             pipeCltStream.Close();
                             return null;
                         }
@@ -520,22 +520,22 @@ namespace ServerControlCenterApplication
                     catch (Exception ex)
                     {
                         //PipeConnectionStatus = false;
-                        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
+                        WriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     }
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
                 return null;
             }
         }
 
-        internal static List<string> RemovePreInputTIKECTCODEs(string pipeName, List<string> ticketcodes, SasaLibDelegateWriteLine delegateWriteLine = null)
+        internal static List<string> RemovePreInputTIKECTCODEs(string pipeName, List<string> ticketcodes, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWREGIST remoteDRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -548,7 +548,7 @@ namespace ServerControlCenterApplication
 
             try
             {
-                if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
+                if (WriteLine == null) WriteLine = Console.WriteLine;
                 int ClientTimeOut = 2000;
                 //bool PipeConnectionStatus = false;
                 //int ReadStreamStringTimeOut = 5000;
@@ -566,7 +566,7 @@ namespace ServerControlCenterApplication
                         {
                             //PipeConnectionStatus = false;
 
-                            delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
+                            WriteLine($"PIPEサーバー接続エラー {ex.Message}");
                             return null;
                         }
                         // サーバーからのサーバ識別文字列を受け取ります。
@@ -577,7 +577,7 @@ namespace ServerControlCenterApplication
                         string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
                         if (OperationCanceledException || AggregateException)
                         {
-                            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+                            WriteLine($"最初のハンドシェイクにてタイムアウトが発生");
                             return null;
                         }
                         if (CheckFirstMessage(input0))
@@ -600,7 +600,7 @@ namespace ServerControlCenterApplication
                         }
                         else
                         {
-                            delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
+                            WriteLine($"サーバーからの接続文字列{input0}が期待と違います");
                             pipeCltStream.Close();
                             return null;
                         }
@@ -609,22 +609,22 @@ namespace ServerControlCenterApplication
                     catch (Exception ex)
                     {
                         //PipeConnectionStatus = false;
-                        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
+                        WriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     }
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
                 return null;
             }
         }
 
-        internal static List<ClientPreInputTICKET> GetCommonApprovalWaitingTicketList(string pipeName, List<string> ticketcodes, SasaLibDelegateWriteLine delegateWriteLine = null)
+        internal static List<ClientPreInputTICKET> GetCommonApprovalWaitingTicketList(string pipeName, List<string> ticketcodes, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWREGIST remoteDRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -637,7 +637,7 @@ namespace ServerControlCenterApplication
 
             try
             {
-                if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
+                if (WriteLine == null) WriteLine = Console.WriteLine;
                 int ClientTimeOut = 2000;
                 //bool PipeConnectionStatus = false;
                 //int ReadStreamStringTimeOut = 5000;
@@ -655,7 +655,7 @@ namespace ServerControlCenterApplication
                         {
                             //PipeConnectionStatus = false;
 
-                            delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
+                            WriteLine($"PIPEサーバー接続エラー {ex.Message}");
                             return null;
                         }
                         // サーバーからのサーバ識別文字列を受け取ります。
@@ -666,7 +666,7 @@ namespace ServerControlCenterApplication
                         string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
                         if (OperationCanceledException || AggregateException)
                         {
-                            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+                            WriteLine($"最初のハンドシェイクにてタイムアウトが発生");
                             return null;
                         }
                         if (CheckFirstMessage(input0))
@@ -684,7 +684,7 @@ namespace ServerControlCenterApplication
                         }
                         else
                         {
-                            delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
+                            WriteLine($"サーバーからの接続文字列{input0}が期待と違います");
                             pipeCltStream.Close();
                             return null;
                         }
@@ -693,14 +693,14 @@ namespace ServerControlCenterApplication
                     catch (Exception ex)
                     {
                         //PipeConnectionStatus = false;
-                        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
+                        WriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     }
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
                 return null;
             }
         }
@@ -709,12 +709,12 @@ namespace ServerControlCenterApplication
         /// ■ 現在の接続しているクライアントを表す構造体を得る
         /// </summary>
         /// <param name="pipeName"></param>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
-        internal static List<AcceptPipeCommand> GetAuthorizedUser(string pipeName, SasaLibDelegateWriteLine delegateWriteLine = null)
+        internal static List<AcceptPipeCommand> GetAuthorizedUser(string pipeName, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             RemoteClientDRAWREGIST remoteDRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
@@ -727,7 +727,7 @@ namespace ServerControlCenterApplication
 
             try
             {
-                if (delegateWriteLine == null) delegateWriteLine = Console.WriteLine;
+                if (WriteLine == null) WriteLine = Console.WriteLine;
                 int ClientTimeOut = 2000;
                 //bool PipeConnectionStatus = false;
                 //int ReadStreamStringTimeOut = 5000;
@@ -745,7 +745,7 @@ namespace ServerControlCenterApplication
                         {
                             //PipeConnectionStatus = false;
 
-                            delegateWriteLine($"PIPEサーバー接続エラー {ex.Message}");
+                            WriteLine($"PIPEサーバー接続エラー {ex.Message}");
                             return null;
                         }
                         // サーバーからのサーバ識別文字列を受け取ります。
@@ -756,7 +756,7 @@ namespace ServerControlCenterApplication
                         string input0 = stst.ReadString(ReadHandShakeStreamStringTimeOut, out OperationCanceledException, out AggregateException, null);
                         if (OperationCanceledException || AggregateException)
                         {
-                            delegateWriteLine($"最初のハンドシェイクにてタイムアウトが発生");
+                            WriteLine($"最初のハンドシェイクにてタイムアウトが発生");
                             return null;
                         }
                         if (CheckFirstMessage(input0))
@@ -774,7 +774,7 @@ namespace ServerControlCenterApplication
                         }
                         else
                         {
-                            delegateWriteLine($"サーバーからの接続文字列{input0}が期待と違います");
+                            WriteLine($"サーバーからの接続文字列{input0}が期待と違います");
                             pipeCltStream.Close();
                             return null;
                         }
@@ -783,15 +783,15 @@ namespace ServerControlCenterApplication
                     catch (Exception ex)
                     {
                         //PipeConnectionStatus = false;
-                        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
-                        delegateWriteLine($"PIPEサーバー接続エラー{ex.Message}");
+                        WriteLine($"PIPEサーバー接続エラー{ex.Message}");
+                        WriteLine($"PIPEサーバー接続エラー{ex.Message}");
                     }
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                delegateWriteLine(ex.Message);
+                WriteLine(ex.Message);
                 return null;
             }
         }

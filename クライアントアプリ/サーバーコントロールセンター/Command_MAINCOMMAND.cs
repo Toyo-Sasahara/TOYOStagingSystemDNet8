@@ -28,17 +28,17 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="PARTNUMBER"></param>
         /// <returns></returns>
-        public static string CheckDrawingType(string PARTNUMBER, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static string CheckDrawingType(string PARTNUMBER, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             var hostname = SccConfig.Config.StageServerHost;
 
             RemoteClientDRAWCAPTURE stageserver = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDC);
             var DrawingType = stageserver.CHECK_DRAWING_TYPE(hostname, PARTNUMBER);
 
-            delegateWriteLine($"接続先[{SccConfig.Config.StageServerHost}],パイプ名:[{SccConfig.Config.PipeNameDC}], 調査した図番:{PARTNUMBER} 結果：{DrawingType}");
+            WriteLine($"接続先[{SccConfig.Config.StageServerHost}],パイプ名:[{SccConfig.Config.PipeNameDC}], 調査した図番:{PARTNUMBER} 結果：{DrawingType}");
 
             return DrawingType;
         }
@@ -48,10 +48,10 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="TICKETCODE"></param>
         /// <returns></returns>
-        public static bool IsTICKETCODEexist(string TICKETCODE, out FieldValueSet result, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool IsTICKETCODEexist(string TICKETCODE, out FieldValueSet result, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             SqlFieldValue sqlStr = new SqlFieldValue()
             {
@@ -72,7 +72,7 @@ namespace ServerControlCenterApplication
             }
             else
             {
-                delegateWriteLine($"検索結果 {ans.Count} 件");
+                WriteLine($"検索結果 {ans.Count} 件");
                 result = null;
                 return false;
             }
@@ -120,7 +120,7 @@ namespace ServerControlCenterApplication
         /// <param name="Label"></param>
         /// <param name="typestr"></param>
         /// <param name="Value"></param>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         //public static void SetDRAWWATCHserviceMmap(string Label, string typestr, object Value, SasaLibDelegateWriteLine delegateWriteLine = null)
         //{
         //    if (delegateWriteLine == null)
@@ -149,10 +149,10 @@ namespace ServerControlCenterApplication
         /// <param name="Message"></param>
         /// <param name="delegateWriteLine"></param>
         /// <returns></returns>
-        public static bool CheckCommitRecepitonState(out string Message, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool CheckCommitRecepitonState(out string Message, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             var StageServerHost = SccConfig.Config.StageServerHost;
             var ClientDomainName = SccConfig.Config.ClientDomainName;
@@ -171,7 +171,7 @@ namespace ServerControlCenterApplication
                 );
             string msg = remoteDC.CommitRecepitonState(StageServerHost);
 
-            delegateWriteLine($"\\\\{StageServerHost}\\PIPE\\{PipeName} サーバーからの返答 {msg}");
+            WriteLine($"\\\\{StageServerHost}\\PIPE\\{PipeName} サーバーからの返答 {msg}");
 
             if (msg == "NORMAL" || msg == "" || msg == null)
             {
@@ -189,12 +189,12 @@ namespace ServerControlCenterApplication
         /// 承認システム受付状態をチェックする
         /// </summary>
         /// <param name="Message"></param>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
-        public static bool CheckApprovalRecepitonState(out string Message, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool CheckApprovalRecepitonState(out string Message, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             var StageServerHost = SccConfig.Config.StageServerHost;
             var ClientDomainName = SccConfig.Config.ClientDomainName;
@@ -211,9 +211,9 @@ namespace ServerControlCenterApplication
                 StageServerHost,
                 PipeName
                 );
-            string msg = remoteDR.ApprovalRecepitonState(delegateWriteLine);
+            string msg = remoteDR.ApprovalRecepitonState(WriteLine);
 
-            delegateWriteLine($"\\\\{StageServerHost}\\PIPE\\{PipeName} サーバーからの返答 {msg}");
+            WriteLine($"\\\\{StageServerHost}\\PIPE\\{PipeName} サーバーからの返答 {msg}");
 
             if (msg == "NORMAL")
             {
@@ -233,12 +233,12 @@ namespace ServerControlCenterApplication
         /// <param name="ZUBANstrings"></param>
         /// <param name="DownloadFolder"></param>
         /// <param name="listResult"></param>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
-        public static bool GetArcSuiteContents(string target_ServiceID_CabinetID, List<string> ZUBANstrings, string DownloadFolder, out List<string> listResult, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool GetArcSuiteContents(string target_ServiceID_CabinetID, List<string> ZUBANstrings, string DownloadFolder, out List<string> listResult, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             var StageServerHost = SccConfig.Config.StageServerHost;
             var ClientDomainName = SccConfig.Config.ClientDomainName;
@@ -255,7 +255,7 @@ namespace ServerControlCenterApplication
                 StageServerHost,
                 PipeName
                 );
-            listResult = remoteDR.GetArcSuiteContents(target_ServiceID_CabinetID, ZUBANstrings, DownloadFolder, delegateWriteLine);
+            listResult = remoteDR.GetArcSuiteContents(target_ServiceID_CabinetID, ZUBANstrings, DownloadFolder, WriteLine:WriteLine);
 
             if (listResult == null)
                 return false;
@@ -268,12 +268,12 @@ namespace ServerControlCenterApplication
         /// ■ArcSuiteから図面を検索し見つかればSystem.Drawing.Imageオブジェクトとして取得する。（最初の1ページのみ）
         /// </summary>
         /// <param name="ZUBAN"></param>
-        /// <param name="delegateWriteLine"></param>
+        /// <param name="WriteLine"></param>
         /// <returns></returns>
-        public static System.Drawing.Image GetArcSuiteLatestDrawing(string ZUBAN, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static System.Drawing.Image GetArcSuiteLatestDrawing(string ZUBAN, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             var StageServerHost = SccConfig.Config.StageServerHost;
             var ClientDomainName = SccConfig.Config.ClientDomainName;
@@ -290,7 +290,7 @@ namespace ServerControlCenterApplication
                 StageServerHost,
                 PipeName
                 );
-            System.Drawing.Image listResult = remoteDR.GetArcSuiteLatestDrawing(ZUBAN, delegateWriteLine);
+            System.Drawing.Image listResult = remoteDR.GetArcSuiteLatestDrawing(ZUBAN, WriteLine: WriteLine);
 
             if (listResult == null)
                 return null;
@@ -298,10 +298,10 @@ namespace ServerControlCenterApplication
                 return listResult;
         }
 
-        public static bool GetArcSuiteLatestDrawingFile(string target_ServiceID_CabinetID, string ZUBAN, string LocalDistFullFileName, SasaLibDelegateWriteLine delegateWriteLine = null)
+        public static bool GetArcSuiteLatestDrawingFile(string target_ServiceID_CabinetID, string ZUBAN, string LocalDistFullFileName, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (delegateWriteLine == null)
-                delegateWriteLine = Console.WriteLine;
+            if (WriteLine == null)
+                WriteLine = Console.WriteLine;
 
             var StageServerHost = SccConfig.Config.StageServerHost;
             var ClientDomainName = SccConfig.Config.ClientDomainName;
@@ -320,7 +320,7 @@ namespace ServerControlCenterApplication
                 );
 
             string resultMsg;
-            bool result = remoteDR.GetArcSuiteLatestDrawingFile(target_ServiceID_CabinetID, ZUBAN, LocalDistFullFileName, out resultMsg, delegateWriteLine);
+            bool result = remoteDR.GetArcSuiteLatestDrawingFile(target_ServiceID_CabinetID, ZUBAN, LocalDistFullFileName, out resultMsg, WriteLine: WriteLine);
 
             return result;
         }
