@@ -22,6 +22,7 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\GlovalValues.cs" Link="GlovalValues.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PresentTicketCode.cs" Link="PresentTicketCode.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PrinterInfo.cs" Link="PrinterInfo.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PrinterStatus.cs" Link="PrinterStatus.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\ServerLog.cs" Link="ServerLog.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\SharedClassLibraryInfo.cs" Link="SharedClassLibraryInfo.cs" />
 	</ItemGroup>

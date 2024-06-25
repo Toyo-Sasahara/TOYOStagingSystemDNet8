@@ -23,12 +23,13 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PrinterStatus.cs" Link="PrinterStatus.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\ClassTest.cs" Link="ClassTest.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrintConfig.cs" Link="PrintConfig.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrinterConfigData.cs" Link="PrinterConfigData.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrinterService.cs" Link="PrinterService.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrinterServiceInfo.cs" Link="PrinterServiceInfo.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrinterStatuses.cs" Link="PrinterStatuses.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrintersStatusHelper.cs" Link="PrintersStatusHelper.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrintProcess.cs" Link="PrintProcess.cs" />
   </ItemGroup>
   <ItemGroup>
