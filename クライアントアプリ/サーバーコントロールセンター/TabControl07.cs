@@ -237,7 +237,7 @@ namespace ServerControlCenterApplication
             long sz;
             Exception ex;
 
-
+            string jsontxt;
             var bytes = converter.ToByteArrayViaJsonSerializer(orgObject);
             Bitmap anserobject = converter.FromByteArrayViaJsonSerializer(bytes);
 

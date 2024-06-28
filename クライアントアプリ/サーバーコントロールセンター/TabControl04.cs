@@ -209,7 +209,7 @@ namespace ServerControlCenterApplication
 
             mmapdFile.RemoteServerCommand_DATABASE_EventView_Send = RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Checked;
 
-            bool ans = mmapdFile.ReadPropertiesAndSetInTheMMPF(logWindowControl.WriteLine);
+            bool ans = mmapdFile.ReadPropertiesAndSetInTheMMPF(WriteLine:logWindowControl.WriteLine);
 
             return ans;
         }
@@ -560,7 +560,7 @@ namespace ServerControlCenterApplication
 
             /// 処理１
             // メモリマップドファイルをプロパティに読込する
-            var ans = mmapdFile.ReadMMPFAndSetInTheProperties(logWindowControl.WriteLine);
+            var ans = mmapdFile.ReadMMPFAndSetInTheProperties(WriteLine:logWindowControl.WriteLine);
 
 
             if (ans)

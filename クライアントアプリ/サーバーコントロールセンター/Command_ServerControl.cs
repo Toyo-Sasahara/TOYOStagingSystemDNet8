@@ -322,19 +322,19 @@ namespace ServerControlCenterApplication
             switch (typestr)
             {
                 case "string":
-                    string MSG = (string)remoteDRAWCAPTURE.GetSYSTEMWATCHserviceMmapvalue(SccConfig.Config.StageServerHost, Label, "string");
+                    string MSG = (string)remoteDRAWCAPTURE.GetMmapvalue(Label, "string");
                     WriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
                         $"MMapラベル：{Label} 型\"string\" 取得しました：{MSG}");
                     break;
 
                 case "bool":
-                    bool result = (bool)remoteDRAWCAPTURE.GetSYSTEMWATCHserviceMmapvalue(SccConfig.Config.StageServerHost, Label, "bool");
+                    bool result = (bool)remoteDRAWCAPTURE.GetMmapvalue(Label, "bool");
                     WriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
                         $"MMapラベル：{Label} 型\"bool\" 取得しました：{result}");
                     break;
 
                 case "int":
-                    int resultint = (int)remoteDRAWCAPTURE.GetSYSTEMWATCHserviceMmapvalue(SccConfig.Config.StageServerHost, Label, "int");
+                    int resultint = (int)remoteDRAWCAPTURE.GetMmapvalue(Label, "int");
                     WriteLine($"GetSYSTEMWATCHserviceMmapvalue(...)\n" +
                         $"MMapラベル：{Label} 型\"intl\" 取得しました：{resultint}");
                     break;
