@@ -15,6 +15,7 @@ using ToyoMcMfg.Staging.RemoteObjects;
 using ClientApp.Forms;
 using System.Linq;
 using System.Runtime.Versioning;
+using Google.Protobuf;
 
 /// <summary>
 /// ステージサーバーを検索し結果をListViewに表示。選択した図面をPictureBoxに表示する
@@ -427,10 +428,7 @@ public class SearchDrawingSetPictureBox
                 previewArcSuiteForm.SetImage(WaitImage);
                 var task = Task.Run(() =>
                 {
-                    //var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), binaryConvertTYPE);
-                    BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
-                    //BinaryConvertTYPE binaryConvertTYPE = BinaryConvertTYPE.IFormatter;
-                    var resultImage = remoteClient.GetImageFromPIPE_Type2(selectedFieldValueSet.SearchKey("GUIDBASE64"), WriteLine, binaryConvertTYPE);
+                    var resultImage = remoteClient.GetImageFromPIPE(selectedFieldValueSet.SearchKey("GUIDBASE64"),WriteLine:WriteLine);
 
                     if (resultImage != null)
                     {

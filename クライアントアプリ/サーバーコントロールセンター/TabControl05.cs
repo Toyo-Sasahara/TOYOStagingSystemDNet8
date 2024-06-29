@@ -333,7 +333,7 @@ namespace ServerControlCenterApplication
 
             var mydocumentfolder = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            var ans = remoteClientSW.TitleFieldTest(@"C:\TOYOSVC\titlefiledtest.tif", System.IO.Path.Combine(mydocumentfolder, "titlefiledtest.tif"), SasaLib.PrintConfig.CommonPaperSize.A4P, LogWindowWriteLine);
+            var ans = remoteClientSW.TitleFieldTest(@"C:\TOYOSVC\titlefiledtest.tif", System.IO.Path.Combine(mydocumentfolder, "titlefiledtest.tif"), SasaLib.PrintConfig.CommonPaperSize.A4P, WriteLine:LogWindowWriteLine);
 
             LogWindowWriteLine($"{ans}");
         }

@@ -48,7 +48,7 @@ namespace ServerControlCenterApplication
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FromByteArrayToBitmap_button = new System.Windows.Forms.Button();
             this.DebugForm_PictureBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Direct2_button = new System.Windows.Forms.Button();
             this.ObjecttoBytebutton = new System.Windows.Forms.Button();
             this.ObjecttoByteViaJsonSerializer_button = new System.Windows.Forms.Button();
             this.GetSWusedMemory_button = new System.Windows.Forms.Button();
@@ -244,7 +244,7 @@ namespace ServerControlCenterApplication
             // 
             this.groupBox1.Controls.Add(this.FromByteArrayToBitmap_button);
             this.groupBox1.Controls.Add(this.DebugForm_PictureBox);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Direct2_button);
             this.groupBox1.Controls.Add(this.ObjecttoBytebutton);
             this.groupBox1.Controls.Add(this.ObjecttoByteViaJsonSerializer_button);
             this.groupBox1.Controls.Add(this.GetSWusedMemory_button);
@@ -268,7 +268,7 @@ namespace ServerControlCenterApplication
             this.FromByteArrayToBitmap_button.Name = "FromByteArrayToBitmap_button";
             this.FromByteArrayToBitmap_button.Size = new System.Drawing.Size(176, 29);
             this.FromByteArrayToBitmap_button.TabIndex = 120;
-            this.FromByteArrayToBitmap_button.Text = "FromByteArrayToBitmap";
+            this.FromByteArrayToBitmap_button.Text = "Bitmap使用";
             this.FromByteArrayToBitmap_button.UseVisualStyleBackColor = true;
             this.FromByteArrayToBitmap_button.Click += FromByteArrayToBitmap_button_Click;
             // 
@@ -284,17 +284,17 @@ namespace ServerControlCenterApplication
             this.DebugForm_PictureBox.TabIndex = 119;
             this.DebugForm_PictureBox.TabStop = false;
             // 
-            // button1
+            // Direct2_button
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(322, 141);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 29);
-            this.button1.TabIndex = 118;
-            this.button1.Text = "ObjecttoByte[] ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += button1_Click;
+            this.Direct2_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            this.Direct2_button.Location = new System.Drawing.Point(322, 141);
+            this.Direct2_button.Margin = new System.Windows.Forms.Padding(4);
+            this.Direct2_button.Name = "Direct2_button";
+            this.Direct2_button.Size = new System.Drawing.Size(176, 29);
+            this.Direct2_button.TabIndex = 118;
+            this.Direct2_button.Text = "Direct2使用";
+            this.Direct2_button.UseVisualStyleBackColor = true;
+            this.Direct2_button.Click += Direct2_button_Click;
             // 
             // ObjecttoBytebutton
             // 
@@ -304,7 +304,7 @@ namespace ServerControlCenterApplication
             this.ObjecttoBytebutton.Name = "ObjecttoBytebutton";
             this.ObjecttoBytebutton.Size = new System.Drawing.Size(176, 29);
             this.ObjecttoBytebutton.TabIndex = 117;
-            this.ObjecttoBytebutton.Text = "ObjecttoByte[] ";
+            this.ObjecttoBytebutton.Text = "IFormatter使用";
             this.ObjecttoBytebutton.UseVisualStyleBackColor = true;
             this.ObjecttoBytebutton.Click += ObjecttoBytebutton_Click;
             // 
@@ -316,7 +316,7 @@ namespace ServerControlCenterApplication
             this.ObjecttoByteViaJsonSerializer_button.Name = "ObjecttoByteViaJsonSerializer_button";
             this.ObjecttoByteViaJsonSerializer_button.Size = new System.Drawing.Size(176, 43);
             this.ObjecttoByteViaJsonSerializer_button.TabIndex = 116;
-            this.ObjecttoByteViaJsonSerializer_button.Text = "ObjecttoByte[] Via JsonSerializer";
+            this.ObjecttoByteViaJsonSerializer_button.Text = "JsonSerializer使用";
             this.ObjecttoByteViaJsonSerializer_button.UseVisualStyleBackColor = true;
             this.ObjecttoByteViaJsonSerializer_button.Click += ObjecttoByteViaJsonSerializer_Click;
             // 
@@ -439,7 +439,7 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button GetSWusedMemory_button;
         private System.Windows.Forms.Button ObjecttoByteViaJsonSerializer_button;
         private System.Windows.Forms.Button ObjecttoBytebutton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Direct2_button;
         public System.Windows.Forms.PictureBox DebugForm_PictureBox;
         private System.Windows.Forms.Button FromByteArrayToBitmap_button;
     }
