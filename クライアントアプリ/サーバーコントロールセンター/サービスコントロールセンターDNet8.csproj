@@ -115,6 +115,18 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\Account.cs" Link="Account.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\Command_MAINCOMMAND.cs" Link="Command_MAINCOMMAND.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\Command_ServerControl.cs" Link="Command_ServerControl.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\Command_Status.cs" Link="Command_Status.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\CommitPrinters.cs" Link="CommitPrinters.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\CommitTest.cs" Link="CommitTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\SearchDrawingSetPictureBox.cs" Link="SearchDrawingSetPictureBox.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\SqlFieldValuexConverter.cs" Link="SqlFieldValuexConverter.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\SqlSyntax.cs" Link="SqlSyntax.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\StaticCommonVars.cs" Link="StaticCommonVars.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="TestImages\TESTIMAGE-A0.tif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

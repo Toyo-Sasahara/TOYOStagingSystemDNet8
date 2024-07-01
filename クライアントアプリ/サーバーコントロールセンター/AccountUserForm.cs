@@ -5,12 +5,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ServerControlCenterApplication
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    [SupportedOSPlatform("windows")]
     public partial class AccountUserForm : UserControl
     {
         public System.Windows.Forms.Control parentControl { get; set; }

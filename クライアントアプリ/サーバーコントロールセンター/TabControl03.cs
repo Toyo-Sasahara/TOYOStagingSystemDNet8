@@ -19,8 +19,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ServerControlCenterApplication
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [SupportedOSPlatform("windows")]
-
     public partial class TabControl03 : UserControl
     {
         Form1 mainForm;
@@ -98,7 +100,7 @@ namespace ServerControlCenterApplication
 
             TICKETCODE_textBox.Text = TICKETCODE_textBox.Text.Trim();
 
-            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, LogWindowWriteLine))
+            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, objectConvNew:true, WriteLine:LogWindowWriteLine))
             {
                 string PARTNUMBER = result.SearchKey("PARTNUMBER");
                 string GUIDBASE64 = result.SearchKey("GUIDBASE64");
@@ -141,14 +143,14 @@ namespace ServerControlCenterApplication
             TICKETCODE_textBox.Text = TICKETCODE_textBox.Text.Trim();
 
             FieldValueSet result;
-            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, LogWindowWriteLine))
+            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, objectConvNew: true, WriteLine: LogWindowWriteLine))
             {
                 string PARTNUMBER = result.SearchKey("PARTNUMBER");
                 string GUIDBASE64 = result.SearchKey("GUIDBASE64");
                 LogWindowWriteLine($"チケット：{TICKETCODE_textBox.Text} 見つかりました GUIDBASE64={GUIDBASE64} , PARTNUMBER={PARTNUMBER}");
 
                 LogWindowWriteLine($"押印強制実行 チケット：{TICKETCODE_textBox.Text}");
-                Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE_textBox.Text, UserID_textBox.Text, Approved2cResult, LogWindowWriteLine);
+                Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE_textBox.Text, UserID_textBox.Text, Approved2cResult, objectConvNew: true, WriteLine: LogWindowWriteLine);
 
             }
             else
@@ -343,7 +345,7 @@ namespace ServerControlCenterApplication
         {
             FieldValueSet fieldValueSet;
 
-            Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out fieldValueSet, LogWindowWriteLine);
+            Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out fieldValueSet, objectConvNew: true, WriteLine: LogWindowWriteLine);
 
             // 削除リスト
             List<ApprovedCancel> CancelList = new List<ApprovedCancel>()

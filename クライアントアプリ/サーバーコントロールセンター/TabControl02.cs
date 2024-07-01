@@ -24,9 +24,10 @@ using System.Runtime.Versioning;
 
 namespace ServerControlCenterApplication
 {
-#if NETCOREAPP
+    /// <summary>
+    /// 
+    /// </summary>
     [SupportedOSPlatform("windows")]
-#endif
     public partial class TabControl02 : UserControl
     {
         Form1 mainForm;
@@ -218,7 +219,7 @@ namespace ServerControlCenterApplication
                             string TICKETCODE = selects.SubItems["TICKETCODE"].Text;
 
                             logWindowControl.WriteLine($"押印強制実行");
-                            Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE, UserID_textBox.Text, Approved2cResult, logWindowControl.WriteLine);
+                            Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE, UserID_textBox.Text, Approved2cResult, objectConvNew:true, WriteLine:logWindowControl.WriteLine);
                         }
                     }
                 }

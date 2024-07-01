@@ -14,9 +14,14 @@ using SasaLib.NumberingSupport;
 using System.Threading;
 using SasaLib.ArcSuitePreview;
 using ClientApp.Forms;
+using System.Runtime.Versioning;
 
 namespace ServerControlCenterApplication
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    [SupportedOSPlatform("windows")]
     public partial class TabControl06 : UserControl
     {
         Form1 mainForm;
@@ -124,7 +129,7 @@ namespace ServerControlCenterApplication
                 PipeName:SccConfig.Config.PipeNameDR
                 );
 
-            if (Command_MAINCOMMAND.GetArcSuiteContents(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, out resultList, logWindowControl.WriteLine) != false)
+            if (Command_MAINCOMMAND.GetArcSuiteContents(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, out resultList, objectConvNew:true, WriteLine:logWindowControl.WriteLine) != false)
             {
                 foreach (var downloadFilePath in resultList)
                 {
@@ -169,7 +174,7 @@ namespace ServerControlCenterApplication
             logWindowControl.WriteLine($"【GetArcSuiteLatestDrawing】コマンドテスト開始。検索図番：{GetArcSuiteZUBAN_textBox.Text}");
 
             var zuban = GetArcSuiteZUBAN_textBox.Text;
-            var img = Command_MAINCOMMAND.GetArcSuiteLatestDrawing(zuban, logWindowControl.WriteLine);
+            var img = Command_MAINCOMMAND.GetArcSuiteLatestDrawing(zuban, objectConvNew:true, WriteLine:logWindowControl.WriteLine);
 
             if (previewArcSuiteForm.Visible == false)
                 previewArcSuiteForm.Show(this);

@@ -20,9 +20,10 @@ using System.Runtime.Versioning;
 
 namespace ServerControlCenterApplication
 {
-#if NETCOREAPP
+    /// <summary>
+    /// 
+    /// </summary>
     [SupportedOSPlatform("windows")]
-#endif
     public partial class TabControl05 : UserControl
     {
         int count;
@@ -866,7 +867,7 @@ namespace ServerControlCenterApplication
             string DRAWNNUMBER = DRAWNUMBER_textBox.Text;
 
 
-            List<ClientPreInputTICKET> CommonApprovalWaitingTicketList = Command_ServerControl.GetCommonApprovalWaitingTicketList(SccConfig.Config.PipeNameDR, ticketcodes);
+            List<ClientPreInputTICKET> CommonApprovalWaitingTicketList = Command_ServerControl.GetCommonApprovalWaitingTicketList(SccConfig.Config.PipeNameDR, true, DebugConsole.WriteLine);
             if (CommonApprovalWaitingTicketList != null)
             {
                 if (CommonApprovalWaitingTicketList.Count > 0)
@@ -903,7 +904,7 @@ namespace ServerControlCenterApplication
             {
                 do
                 {
-                    List<AcceptPipeCommand> connectClients = Command_ServerControl.GetAuthorizedUser(SccConfig.Config.PipeNameDR, LogWindowWriteLine);
+                    List<AcceptPipeCommand> connectClients = Command_ServerControl.GetAuthorizedUser(SccConfig.Config.PipeNameDR, objectConvNew:true, LogWindowWriteLine);
 
                     if (connectClients != null)
                     {

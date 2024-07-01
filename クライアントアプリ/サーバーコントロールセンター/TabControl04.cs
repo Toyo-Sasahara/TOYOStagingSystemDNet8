@@ -14,9 +14,14 @@ using SasaLib.PIPE;
 using ToyoStageService;
 using RemoteClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Runtime.Versioning;
 
 namespace ServerControlCenterApplication
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    [SupportedOSPlatform("windows")]
     public partial class TabControl04 : UserControl
     {
         Form1 mainForm;
@@ -110,7 +115,7 @@ namespace ServerControlCenterApplication
 
                         accountUserForm.SetToControls();
 
-                        mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
+                        mainForm.CommitPrinters.GetData(objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
                         ReadMMPFAndSetInTheFormContorols();
                         DRAWREGISTservice_DebugLevel = Command_ServerControl.SetOrGet_DRAWREGISTserviceDEBUGLevel(int.Parse(DRAWREGISTservice_DebugLevelComboBox.Text), false, logWindowControl.WriteLine).ToString();

@@ -8,6 +8,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,10 @@ using System.Windows.Forms;
 
 namespace ServerControlCenterApplication
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    [SupportedOSPlatform("windows")]
     public partial class TabControl01 : UserControl
     {
         Form1 mainForm;
@@ -53,7 +58,7 @@ namespace ServerControlCenterApplication
                 {
                     accountUserForm.SetToControls();
 
-                    mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
+                    mainForm.CommitPrinters.GetData(objectConvNew:true, WriteLine:logWindowControl.WriteLine);
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
@@ -101,7 +106,7 @@ namespace ServerControlCenterApplication
                 {
                     accountUserForm.SetToControls();
 
-                    mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
+                    mainForm.CommitPrinters.GetData(objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
@@ -133,7 +138,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void reloadPrinter_button_Click(object sender, EventArgs e)
         {
-            mainForm.CommitPrinters.GetData(logWindowControl.WriteLine);
+            mainForm.CommitPrinters.GetData(objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
             logWindowControl.WriteLine(" mainForm.CommitPrinters.GetData(..) 実行されました");
         }
@@ -274,7 +279,7 @@ namespace ServerControlCenterApplication
             string TICKETCODE;
 
             /// テスト用イメージとチケットファイル作成
-            bool ans = CommitTest.CreateTicketAndTiffImage(SccConfig.Config.CommitPath, TemplateTiffFullpath, out TICKETCODE, prms, variantparams, TIFFpositonChangeTemplateConfigFullFileName, printerName, PrintOutOnly: PrintOUtOnly_checkBox.Checked, delegateWriteLine: LogWindowWriteLine);
+            bool ans = CommitTest.CreateTicketAndTiffImage(SccConfig.Config.CommitPath, TemplateTiffFullpath, out TICKETCODE, prms, variantparams, TIFFpositonChangeTemplateConfigFullFileName, printerName, PrintOutOnly: PrintOUtOnly_checkBox.Checked, WriteLine: LogWindowWriteLine);
 
             if (ans)
             {

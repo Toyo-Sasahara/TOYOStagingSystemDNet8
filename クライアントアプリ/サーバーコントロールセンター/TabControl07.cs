@@ -4,6 +4,10 @@ using System;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
+
+using System.Data;
+
 #if NETCOREAPP
 using System.Runtime.Versioning;
 #endif
@@ -13,13 +17,32 @@ namespace ServerControlCenterApplication
     /// <summary>
     /// 
     /// </summary>
-#if NETCOREAPP
     [SupportedOSPlatform("windows")]
-#endif
     public partial class TabControl07 : UserControl
     {
         Form1 mainForm;
 
+        public struct ParamX
+        {
+            public string Field { get; set; }
+            public object Value { get; set; }
+            public SqlDbType SqlDBType { get; set; }
+        }
+
+        public class SqlFieldValuex
+        {
+            /// <summary>
+            /// フィールド
+            /// </summary>
+            public string Field { get; set; }
+
+            /// <summary>
+            /// データタイプ
+            /// </summary>
+            public SqlDbType SqlDBType { get; set; }
+
+            public List<ParamX> ParamXs = new List<ParamX>();
+        }
 
         /// <summary>
         /// ■コンストラクタ
