@@ -17,6 +17,7 @@
   <ItemGroup>
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSet.cs" Link="FieldValueSet.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetInfo.cs" Link="FieldValueSetInfo.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetJsonConverter.cs" Link="FieldValueSetJsonConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

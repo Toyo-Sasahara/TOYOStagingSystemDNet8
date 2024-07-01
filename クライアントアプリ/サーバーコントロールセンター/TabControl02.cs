@@ -100,7 +100,7 @@ namespace ServerControlCenterApplication
         {
             if (DebugListView2.SelectedItems.Count == 0)
                 return;
-            sh2.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中);
+            sh2.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中,objectConvNew:true);
             if (previewArcSuiteForm.Visible == false)
                 previewArcSuiteForm.Show(this);
         }
@@ -145,7 +145,7 @@ namespace ServerControlCenterApplication
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
-            sh2.Search(sqlSearchStringValues, "ArcSuite登録済み", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "ArcSuite登録済み", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
         }
 
@@ -162,7 +162,7 @@ namespace ServerControlCenterApplication
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
-            sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace ServerControlCenterApplication
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
-            sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
         }
 
 
@@ -196,7 +196,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "設計承認が可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "設計承認が可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
         }
 
         private void ForcedSign_button_Click(object sender, EventArgs e)
@@ -309,7 +309,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "最終承認可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "最終承認可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
         }
 
         /// <summary>
@@ -326,7 +326,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "ArcSuite未登録", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "ArcSuite未登録", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew:true, WriteLine:logWindowControl.WriteLine);
         }
 
         /// <summary>
@@ -343,7 +343,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "アークスイート登録指示あり", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "アークスイート登録指示あり", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
         }
 
         /// <summary>
@@ -360,7 +360,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "無条件（全てのデータ）", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "無条件（全てのデータ）", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text,objectConvNew:true, WriteLine:logWindowControl.WriteLine);
         }
 
         /// <summary>
@@ -378,7 +378,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "承認ユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "承認ユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
         }
 
@@ -397,7 +397,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "コミットユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "コミットユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
         }
 
         /// <summary>
@@ -415,7 +415,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "ペーパーサイズ名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "ペーパーサイズ名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
         }
 
@@ -429,7 +429,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "コミットホスト名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text);
+            sh2.Search(sqlSearchStringValues, "コミットホスト名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
         }
 
@@ -574,7 +574,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "TICKETCODEで検索");
+            sh2.Search(sqlSearchStringValues, "TICKETCODEで検索", objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
         }
 
@@ -590,7 +590,7 @@ namespace ServerControlCenterApplication
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "TICKETCODEで検索");
+            sh2.Search(sqlSearchStringValues, "TICKETCODEで検索", objectConvNew: true, WriteLine: logWindowControl.WriteLine);
 
         }
 
