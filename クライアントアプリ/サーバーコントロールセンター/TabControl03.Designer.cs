@@ -31,6 +31,7 @@ namespace ServerControlCenterApplication
         {
             groupBox9 = new System.Windows.Forms.GroupBox();
             TICKETCODE_DIRECT_panel = new System.Windows.Forms.Panel();
+            objectConvNew_CheckBox = new System.Windows.Forms.CheckBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
             button1 = new System.Windows.Forms.Button();
             TextBox = new System.Windows.Forms.TextBox();
@@ -57,7 +58,8 @@ namespace ServerControlCenterApplication
             CheckDrwingTypeAnserTextBox = new System.Windows.Forms.TextBox();
             CheckDrawingTypeButton = new System.Windows.Forms.Button();
             PARTNUMBERtextBox = new System.Windows.Forms.TextBox();
-            objectConvNew_CheckBox = new System.Windows.Forms.CheckBox();
+            logWindowControl1 = new LogWindowControl();
+            accountUserForm1 = new AccountUserForm();
             groupBox9.SuspendLayout();
             TICKETCODE_DIRECT_panel.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -101,6 +103,16 @@ namespace ServerControlCenterApplication
             TICKETCODE_DIRECT_panel.Size = new System.Drawing.Size(733, 681);
             TICKETCODE_DIRECT_panel.TabIndex = 96;
             TICKETCODE_DIRECT_panel.Paint += TICKETCODE_DIRECT_panel_Paint;
+            // 
+            // objectConvNew_CheckBox
+            // 
+            objectConvNew_CheckBox.AutoSize = true;
+            objectConvNew_CheckBox.Location = new System.Drawing.Point(620, 8);
+            objectConvNew_CheckBox.Name = "objectConvNew_CheckBox";
+            objectConvNew_CheckBox.Size = new System.Drawing.Size(110, 19);
+            objectConvNew_CheckBox.TabIndex = 115;
+            objectConvNew_CheckBox.Text = "objectConvNew";
+            objectConvNew_CheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -395,20 +407,29 @@ namespace ServerControlCenterApplication
             PARTNUMBERtextBox.TabIndex = 0;
             PARTNUMBERtextBox.Text = "01-01001-TM";
             // 
-            // objectConvNew_CheckBox
+            // logWindowControl1
             // 
-            objectConvNew_CheckBox.AutoSize = true;
-            objectConvNew_CheckBox.Location = new System.Drawing.Point(620, 8);
-            objectConvNew_CheckBox.Name = "objectConvNew_CheckBox";
-            objectConvNew_CheckBox.Size = new System.Drawing.Size(110, 19);
-            objectConvNew_CheckBox.TabIndex = 115;
-            objectConvNew_CheckBox.Text = "objectConvNew";
-            objectConvNew_CheckBox.UseVisualStyleBackColor = true;
+            logWindowControl1.Location = new System.Drawing.Point(760, 302);
+            logWindowControl1.Margin = new System.Windows.Forms.Padding(4);
+            logWindowControl1.Name = "logWindowControl1";
+            logWindowControl1.Size = new System.Drawing.Size(593, 530);
+            logWindowControl1.TabIndex = 139;
+            // 
+            // accountUserForm1
+            // 
+            accountUserForm1.Location = new System.Drawing.Point(12, 4);
+            accountUserForm1.Margin = new System.Windows.Forms.Padding(4);
+            accountUserForm1.Name = "accountUserForm1";
+            accountUserForm1.parentControl = null;
+            accountUserForm1.Size = new System.Drawing.Size(1003, 126);
+            accountUserForm1.TabIndex = 140;
             // 
             // TabControl03
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(accountUserForm1);
+            Controls.Add(logWindowControl1);
             Controls.Add(groupBox12);
             Controls.Add(panel3);
             Controls.Add(groupBox9);
@@ -450,8 +471,6 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button ApprovedRsetOneButton;
         private System.Windows.Forms.Button DirectDeleteButton;
         private System.Windows.Forms.Button ArcSuiteTestRegistButton;
-        internal AccountUserForm accountUserForm;
-        private LogWindowControl logWindowControl;
         private System.Windows.Forms.TextBox UserID_textBox;
         private System.Windows.Forms.Button UnSetPRIORITYREGISTFLAGisNullButton;
         private System.Windows.Forms.Button ArcSuiteTestRegistResetButton;
@@ -467,5 +486,9 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GetArcSuiteAwaitingRegist_button;
         private System.Windows.Forms.CheckBox objectConvNew_CheckBox;
+        private LogWindowControl logWindowControl;
+        private AccountUserForm accountUserForm;
+        private LogWindowControl logWindowControl1;
+        private AccountUserForm accountUserForm1;
     }
 }

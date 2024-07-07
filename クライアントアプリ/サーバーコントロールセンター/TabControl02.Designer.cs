@@ -30,8 +30,14 @@ namespace ServerControlCenterApplication
         private void InitializeComponent()
         {
             DebugGroupBox1 = new System.Windows.Forms.GroupBox();
+            objectConvNew_checkBox = new System.Windows.Forms.CheckBox();
+            TitleOnly_checkBox = new System.Windows.Forms.CheckBox();
             ResultSearchPattern_label = new System.Windows.Forms.Label();
             groupBox10 = new System.Windows.Forms.GroupBox();
+            groupBox15 = new System.Windows.Forms.GroupBox();
+            curGUIDBASE64Label = new System.Windows.Forms.Label();
+            DirectPrintButton = new System.Windows.Forms.Button();
+            PrinterSelcomboBox = new System.Windows.Forms.ComboBox();
             PreviewFormShow_button = new System.Windows.Forms.Button();
             groupBox11 = new System.Windows.Forms.GroupBox();
             groupBox9 = new System.Windows.Forms.GroupBox();
@@ -85,14 +91,11 @@ namespace ServerControlCenterApplication
             ORDERBY_comboBox = new System.Windows.Forms.ComboBox();
             label16 = new System.Windows.Forms.Label();
             MAXSEARCHtextBox2 = new System.Windows.Forms.TextBox();
-            TitleOnly_checkBox = new System.Windows.Forms.CheckBox();
-            objectConvNew_checkBox = new System.Windows.Forms.CheckBox();
-            PrinterSelcomboBox = new System.Windows.Forms.ComboBox();
-            curGUIDBASE64Label = new System.Windows.Forms.Label();
-            DirectPrintButton = new System.Windows.Forms.Button();
-            groupBox15 = new System.Windows.Forms.GroupBox();
+            accountUserForm1 = new AccountUserForm();
+            logWindowControl1 = new LogWindowControl();
             DebugGroupBox1.SuspendLayout();
             groupBox10.SuspendLayout();
+            groupBox15.SuspendLayout();
             groupBox11.SuspendLayout();
             groupBox9.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -106,7 +109,6 @@ namespace ServerControlCenterApplication
             groupBox4.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox12.SuspendLayout();
-            groupBox15.SuspendLayout();
             SuspendLayout();
             // 
             // DebugGroupBox1
@@ -126,6 +128,26 @@ namespace ServerControlCenterApplication
             DebugGroupBox1.Size = new System.Drawing.Size(1795, 581);
             DebugGroupBox1.TabIndex = 101;
             DebugGroupBox1.TabStop = false;
+            // 
+            // objectConvNew_checkBox
+            // 
+            objectConvNew_checkBox.AutoSize = true;
+            objectConvNew_checkBox.Location = new System.Drawing.Point(1658, 20);
+            objectConvNew_checkBox.Name = "objectConvNew_checkBox";
+            objectConvNew_checkBox.Size = new System.Drawing.Size(110, 19);
+            objectConvNew_checkBox.TabIndex = 123;
+            objectConvNew_checkBox.Text = "objectConvNew";
+            objectConvNew_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // TitleOnly_checkBox
+            // 
+            TitleOnly_checkBox.AutoSize = true;
+            TitleOnly_checkBox.Location = new System.Drawing.Point(1519, 23);
+            TitleOnly_checkBox.Name = "TitleOnly_checkBox";
+            TitleOnly_checkBox.Size = new System.Drawing.Size(110, 19);
+            TitleOnly_checkBox.TabIndex = 122;
+            TitleOnly_checkBox.Text = "タイトル拡大表示";
+            TitleOnly_checkBox.UseVisualStyleBackColor = true;
             // 
             // ResultSearchPattern_label
             // 
@@ -153,6 +175,45 @@ namespace ServerControlCenterApplication
             groupBox10.Size = new System.Drawing.Size(1781, 101);
             groupBox10.TabIndex = 92;
             groupBox10.TabStop = false;
+            // 
+            // groupBox15
+            // 
+            groupBox15.Controls.Add(curGUIDBASE64Label);
+            groupBox15.Controls.Add(DirectPrintButton);
+            groupBox15.Controls.Add(PrinterSelcomboBox);
+            groupBox15.Location = new System.Drawing.Point(678, 23);
+            groupBox15.Name = "groupBox15";
+            groupBox15.Size = new System.Drawing.Size(241, 70);
+            groupBox15.TabIndex = 108;
+            groupBox15.TabStop = false;
+            groupBox15.Text = "groupBox15";
+            // 
+            // curGUIDBASE64Label
+            // 
+            curGUIDBASE64Label.AutoSize = true;
+            curGUIDBASE64Label.Location = new System.Drawing.Point(160, 19);
+            curGUIDBASE64Label.Name = "curGUIDBASE64Label";
+            curGUIDBASE64Label.Size = new System.Drawing.Size(38, 15);
+            curGUIDBASE64Label.TabIndex = 1;
+            curGUIDBASE64Label.Text = "label2";
+            // 
+            // DirectPrintButton
+            // 
+            DirectPrintButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            DirectPrintButton.Location = new System.Drawing.Point(6, 41);
+            DirectPrintButton.Name = "DirectPrintButton";
+            DirectPrintButton.Size = new System.Drawing.Size(229, 23);
+            DirectPrintButton.TabIndex = 2;
+            DirectPrintButton.Text = "button2";
+            DirectPrintButton.UseVisualStyleBackColor = true;
+            // 
+            // PrinterSelcomboBox
+            // 
+            PrinterSelcomboBox.FormattingEnabled = true;
+            PrinterSelcomboBox.Location = new System.Drawing.Point(6, 17);
+            PrinterSelcomboBox.Name = "PrinterSelcomboBox";
+            PrinterSelcomboBox.Size = new System.Drawing.Size(148, 23);
+            PrinterSelcomboBox.TabIndex = 0;
             // 
             // PreviewFormShow_button
             // 
@@ -779,69 +840,29 @@ namespace ServerControlCenterApplication
             MAXSEARCHtextBox2.TabIndex = 93;
             MAXSEARCHtextBox2.Text = "50000";
             // 
-            // TitleOnly_checkBox
+            // accountUserForm1
             // 
-            TitleOnly_checkBox.AutoSize = true;
-            TitleOnly_checkBox.Location = new System.Drawing.Point(1519, 23);
-            TitleOnly_checkBox.Name = "TitleOnly_checkBox";
-            TitleOnly_checkBox.Size = new System.Drawing.Size(110, 19);
-            TitleOnly_checkBox.TabIndex = 122;
-            TitleOnly_checkBox.Text = "タイトル拡大表示";
-            TitleOnly_checkBox.UseVisualStyleBackColor = true;
+            accountUserForm1.Location = new System.Drawing.Point(0, 4);
+            accountUserForm1.Margin = new System.Windows.Forms.Padding(4);
+            accountUserForm1.Name = "accountUserForm1";
+            accountUserForm1.parentControl = null;
+            accountUserForm1.Size = new System.Drawing.Size(1003, 126);
+            accountUserForm1.TabIndex = 106;
             // 
-            // objectConvNew_checkBox
+            // logWindowControl1
             // 
-            objectConvNew_checkBox.AutoSize = true;
-            objectConvNew_checkBox.Location = new System.Drawing.Point(1658, 20);
-            objectConvNew_checkBox.Name = "objectConvNew_checkBox";
-            objectConvNew_checkBox.Size = new System.Drawing.Size(110, 19);
-            objectConvNew_checkBox.TabIndex = 123;
-            objectConvNew_checkBox.Text = "objectConvNew";
-            objectConvNew_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // PrinterSelcomboBox
-            // 
-            PrinterSelcomboBox.FormattingEnabled = true;
-            PrinterSelcomboBox.Location = new System.Drawing.Point(6, 17);
-            PrinterSelcomboBox.Name = "PrinterSelcomboBox";
-            PrinterSelcomboBox.Size = new System.Drawing.Size(148, 23);
-            PrinterSelcomboBox.TabIndex = 0;
-            // 
-            // curGUIDBASE64Label
-            // 
-            curGUIDBASE64Label.AutoSize = true;
-            curGUIDBASE64Label.Location = new System.Drawing.Point(160, 19);
-            curGUIDBASE64Label.Name = "curGUIDBASE64Label";
-            curGUIDBASE64Label.Size = new System.Drawing.Size(38, 15);
-            curGUIDBASE64Label.TabIndex = 1;
-            curGUIDBASE64Label.Text = "label2";
-            // 
-            // DirectPrintButton
-            // 
-            DirectPrintButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            DirectPrintButton.Location = new System.Drawing.Point(6, 41);
-            DirectPrintButton.Name = "DirectPrintButton";
-            DirectPrintButton.Size = new System.Drawing.Size(229, 23);
-            DirectPrintButton.TabIndex = 2;
-            DirectPrintButton.Text = "button2";
-            DirectPrintButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox15
-            // 
-            groupBox15.Controls.Add(curGUIDBASE64Label);
-            groupBox15.Controls.Add(DirectPrintButton);
-            groupBox15.Controls.Add(PrinterSelcomboBox);
-            groupBox15.Location = new System.Drawing.Point(678, 23);
-            groupBox15.Name = "groupBox15";
-            groupBox15.Size = new System.Drawing.Size(241, 70);
-            groupBox15.TabIndex = 108;
-            groupBox15.TabStop = false;
-            groupBox15.Text = "groupBox15";
+            logWindowControl1.Location = new System.Drawing.Point(1048, 150);
+            logWindowControl1.Margin = new System.Windows.Forms.Padding(4);
+            logWindowControl1.Name = "logWindowControl1";
+            logWindowControl1.Size = new System.Drawing.Size(518, 255);
+            logWindowControl1.TabIndex = 107;
             // 
             // TabControl02
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(logWindowControl1);
+            Controls.Add(accountUserForm1);
             Controls.Add(groupBox1);
             Controls.Add(DebugGroupBox1);
             Margin = new System.Windows.Forms.Padding(4);
@@ -852,6 +873,8 @@ namespace ServerControlCenterApplication
             DebugGroupBox1.ResumeLayout(false);
             DebugGroupBox1.PerformLayout();
             groupBox10.ResumeLayout(false);
+            groupBox15.ResumeLayout(false);
+            groupBox15.PerformLayout();
             groupBox11.ResumeLayout(false);
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
@@ -874,8 +897,6 @@ namespace ServerControlCenterApplication
             groupBox2.PerformLayout();
             groupBox12.ResumeLayout(false);
             groupBox12.PerformLayout();
-            groupBox15.ResumeLayout(false);
-            groupBox15.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -944,5 +965,7 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.ComboBox PrinterSelcomboBox;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Button DirectPrintButton;
+        private AccountUserForm accountUserForm1;
+        private LogWindowControl logWindowControl1;
     }
 }

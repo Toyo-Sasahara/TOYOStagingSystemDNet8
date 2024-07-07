@@ -71,10 +71,6 @@ namespace ServerControlCenterApplication
             accountUserForm.ControlChanged(sender, e);
         }
 
-        private void accountUserForm3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
         private void TICKETCODEtextBox_Click(object sender, EventArgs e)
