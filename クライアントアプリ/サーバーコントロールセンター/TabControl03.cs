@@ -1,4 +1,5 @@
 ﻿using SasaLib;
+using SasaLib.Winlogon;
 using SharedClassLibrary;
 using StageServerRemote;
 using System;
@@ -7,22 +8,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
-using Windows.UI.Xaml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 //using ToyoMcMfg.Staging.RemoteObjects;
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    [SupportedOSPlatform("windows")]
     public partial class TabControl03 : UserControl
     {
         Form1 mainForm;
@@ -100,7 +95,7 @@ namespace ServerControlCenterApplication
 
             TICKETCODE_textBox.Text = TICKETCODE_textBox.Text.Trim();
 
-            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, objectConvNew:true, WriteLine:LogWindowWriteLine))
+            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, objectConvNew: objectConvNew_CheckBox.Checked, WriteLine: LogWindowWriteLine))
             {
                 string PARTNUMBER = result.SearchKey("PARTNUMBER");
                 string GUIDBASE64 = result.SearchKey("GUIDBASE64");
@@ -120,7 +115,7 @@ namespace ServerControlCenterApplication
         {
 
 
-            RemoteClientDRAWREGIST rMmainClientLogic = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
+            RemoteClientDRAWREGIST rmc_DRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
                 SccConfig.Config.ClientUserPassword,
                 SccConfig.Config.ClsLogon,
@@ -128,7 +123,7 @@ namespace ServerControlCenterApplication
                 SccConfig.Config.PipeNameDR);
 
             // 部分表示
-            Drawing_pictureBox.Image = rMmainClientLogic.GetImageFromPIPE2(GUIDBASE64);
+            Drawing_pictureBox.Image = rmc_DRAWREGIST.GetImageFromPIPE2(GUIDBASE64, objectConvNew: objectConvNew_CheckBox.Checked, WriteLine: logWindowControl.WriteLine);
 
         }
 
@@ -143,14 +138,14 @@ namespace ServerControlCenterApplication
             TICKETCODE_textBox.Text = TICKETCODE_textBox.Text.Trim();
 
             FieldValueSet result;
-            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, objectConvNew: true, WriteLine: LogWindowWriteLine))
+            if (Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out result, objectConvNew: objectConvNew_CheckBox.Checked, WriteLine: LogWindowWriteLine))
             {
                 string PARTNUMBER = result.SearchKey("PARTNUMBER");
                 string GUIDBASE64 = result.SearchKey("GUIDBASE64");
                 LogWindowWriteLine($"チケット：{TICKETCODE_textBox.Text} 見つかりました GUIDBASE64={GUIDBASE64} , PARTNUMBER={PARTNUMBER}");
 
                 LogWindowWriteLine($"押印強制実行 チケット：{TICKETCODE_textBox.Text}");
-                Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE_textBox.Text, UserID_textBox.Text, Approved2cResult, objectConvNew: true, WriteLine: LogWindowWriteLine);
+                Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE_textBox.Text, UserID_textBox.Text, Approved2cResult, objectConvNew: objectConvNew_CheckBox.Checked, WriteLine: logWindowControl.WriteLine);
 
             }
             else
@@ -189,8 +184,10 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="TICKETCODE"></param>
         /// <returns></returns>
-        private bool IsTICKETCODEexist(string TICKETCODE)
+        private bool IsTICKETCODEexist(string TICKETCODE, bool objectConvNew = false, SasaLibDelegateWriteLine WriteLine = null)
         {
+            if (WriteLine == null) WriteLine = DebugConsole.WriteLine;
+
             SqlFieldValue value = new SqlFieldValue()
             {
                 Field = "TICKETCODE",
@@ -198,9 +195,9 @@ namespace ServerControlCenterApplication
                 SqlDBType = System.Data.SqlDbType.NVarChar
             };
 
-            RemoteClientDataBase rMdataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+            RemoteClientDataBase rmc_DataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
 
-            var ans = rMdataBase.DataBaseSearch3(value);
+            var ans = rmc_DataBase.DataBaseSearch3(value, objectConvNew: objectConvNew);
 
             LogWindowWriteLine($"検索結果 {ans.Count} 件");
 
@@ -231,9 +228,9 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void ApprovedRsetOneButton_Click(object sender, EventArgs e)
         {
-            if (IsTICKETCODEexist(TICKETCODE_textBox.Text))
+            if (IsTICKETCODEexist(TICKETCODE_textBox.Text, objectConvNew_CheckBox.Checked, logWindowControl.WriteLine))
             {
-                RemoteClientMaintenance rMmaintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+                RemoteClientMaintenance rmc_Maintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
 
                 //rMmaintenance.ApprovedCancel2Status += ApprovedCancel2Status;
 
@@ -243,7 +240,7 @@ namespace ServerControlCenterApplication
                     var ans2 = MessageBox.Show($"ほんとうに続行しますか？\r\n{TICKETCODE_textBox.Text}", "", MessageBoxButtons.YesNo);
                     if (ans2 == DialogResult.Yes)
                     {
-                        var cancelans = rMmaintenance.ApprovedCancel2(TICKETCODE_textBox.Text, ApprovedCancel2Status);
+                        var cancelans = rmc_Maintenance.ApprovedCancel2(TICKETCODE_textBox.Text, ApprovedCancel2Status, objectConvNew: objectConvNew_CheckBox.Checked, WriteLine: logWindowControl.WriteLine);
                     }
                 }
             }
@@ -260,10 +257,10 @@ namespace ServerControlCenterApplication
 
         private void DirectDeleteButton_Click(object sender, EventArgs e)
         {
-            if (IsTICKETCODEexist(TICKETCODE_textBox.Text))
+            if (IsTICKETCODEexist(TICKETCODE_textBox.Text, objectConvNew_CheckBox.Checked, logWindowControl.WriteLine))
             {
 
-                RemoteClientMaintenance rMmaintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+                RemoteClientMaintenance rmc_Maintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
 
                 string GUIDBASE64 = SasaLib.GUIDExtensions.GetB64StringFromB64FnameString(TICKETCODE_textBox.Text);
 
@@ -274,7 +271,7 @@ namespace ServerControlCenterApplication
                     var ans2 = MessageBox.Show($"ほんとうに続行しますか？\r\n{TICKETCODE_textBox.Text}", "", MessageBoxButtons.YesNo);
                     if (ans2 == DialogResult.Yes)
                     {
-                        var deleteAns = rMmaintenance.RecordAndEntityfileDelete(GUIDBASE64);
+                        var deleteAns = rmc_Maintenance.RecordAndEntityfileDelete(GUIDBASE64);
                         MessageBox.Show($"結果{deleteAns}");
 
                     }
@@ -294,7 +291,7 @@ namespace ServerControlCenterApplication
         private void ArcSuiteTestRegistButton_Click(object sender, EventArgs e)
         {
             //登録可能のフラグを立てる
-            RemoteClientDRAWREGIST rmarcSuite = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
+            RemoteClientDRAWREGIST rmc_DRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
                 SccConfig.Config.ClientUserPassword,
                 SccConfig.Config.ClsLogon,
@@ -310,7 +307,7 @@ namespace ServerControlCenterApplication
             logWindowControl.WriteLine($"強制通常登録実行 (SetRegistWaitingFlag2)");
 
             List<string> errList = new List<string>();
-            rmarcSuite.SetRegistWaitingFlag2(GUIDBASE64s, UserID_textBox.Text, ref errList);
+            rmc_DRAWREGIST.SetRegistWaitingFlag2(GUIDBASE64s, UserID_textBox.Text, ref errList, objectConvNew: objectConvNew_CheckBox.Checked, WriteLine: logWindowControl.WriteLine);
 
             if (errList.Count > 0)
             {
@@ -345,7 +342,7 @@ namespace ServerControlCenterApplication
         {
             FieldValueSet fieldValueSet;
 
-            Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out fieldValueSet, objectConvNew: true, WriteLine: LogWindowWriteLine);
+            Command_MAINCOMMAND.IsTICKETCODEexist(TICKETCODE_textBox.Text, out fieldValueSet, objectConvNew: objectConvNew_CheckBox.Checked, LogWindowWriteLine);
 
             // 削除リスト
             List<ApprovedCancel> CancelList = new List<ApprovedCancel>()
@@ -362,14 +359,14 @@ namespace ServerControlCenterApplication
 
 
             // キャンセル指示発動
-            RemoteClientDataBase rMdataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName,
+            RemoteClientDataBase rmc_DataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
                 SccConfig.Config.ClientUserPassword,
                 SccConfig.Config.ClsLogon,
                 SccConfig.Config.StageServerHost,
                 SccConfig.Config.PipeNameDR);
 
-            rMdataBase.OnApprovedCancel3Result += ApprovedCancel3Status;
+            rmc_DataBase.OnApprovedCancel3Result += ApprovedCancel3Status;
 
             StringBuilder sb = new StringBuilder();
             foreach (var item in CancelList)
@@ -380,7 +377,7 @@ namespace ServerControlCenterApplication
             }
 
             var CancelErrorGUIDBASE64List = new List<string>();
-            bool ans = rMdataBase.ApprovedCancels3(CancelList, out CancelErrorGUIDBASE64List);
+            bool ans = rmc_DataBase.ApprovedCancels3(CancelList, out CancelErrorGUIDBASE64List);
 
             if (ans == true)
             {
@@ -394,12 +391,11 @@ namespace ServerControlCenterApplication
                 GlovalValues.Mylog.WriteLine($"次の押印キャンセルはいずれかまたはすべて失敗しました\n{cancelErrsListString}");
             }
 
-
         }
 
         private void UnSetPRIORITYREGISTFLAGisNullButton_Click_1(object sender, EventArgs e)
         {
-            if (IsTICKETCODEexist(TICKETCODE_textBox.Text))
+            if (IsTICKETCODEexist(TICKETCODE_textBox.Text, objectConvNew_CheckBox.Checked, logWindowControl.WriteLine))
             {
 
                 var ans2 = MessageBox.Show($"優先登録フラグを設定します\r\n{TICKETCODE_textBox.Text}", "", MessageBoxButtons.YesNo);
@@ -417,7 +413,7 @@ namespace ServerControlCenterApplication
                         SqlDBType = System.Data.SqlDbType.NVarChar
                     });
 
-                    RemoteClientDataBase rMdataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName,
+                    RemoteClientDataBase rmc_DataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName,
                         SccConfig.Config.ClientUserName,
                         SccConfig.Config.ClientUserPassword,
                         SccConfig.Config.ClsLogon,
@@ -426,7 +422,7 @@ namespace ServerControlCenterApplication
 
                     foreach (string GUIDBASE64 in GUIDBASE64List)
                     {
-                        int count = rMdataBase.Update(GUIDBASE64, updateDatabseObj);
+                        int count = rmc_DataBase.Update(GUIDBASE64, updateDatabseObj, objectConvNew: objectConvNew_CheckBox.Checked);
                         LogWindowWriteLine($"更新結果＝{count}行");
                     }
 
@@ -446,7 +442,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void UnsetPRIORITYREGISTFLAGisNullButton_Click(object sender, EventArgs e)
         {
-            if (IsTICKETCODEexist(TICKETCODE_textBox.Text))
+            if (IsTICKETCODEexist(TICKETCODE_textBox.Text, objectConvNew_CheckBox.Checked, logWindowControl.WriteLine))
             {
 
                 var ans2 = MessageBox.Show($"優先登録フラグを解除します\r\n{TICKETCODE_textBox.Text}", "", MessageBoxButtons.YesNo);
@@ -464,7 +460,7 @@ namespace ServerControlCenterApplication
                         SqlDBType = System.Data.SqlDbType.NVarChar
                     });
 
-                    RemoteClientDataBase rMdataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName,
+                    RemoteClientDataBase rmc_DataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName,
                         SccConfig.Config.ClientUserName,
                         SccConfig.Config.ClientUserPassword,
                         SccConfig.Config.ClsLogon,
@@ -473,7 +469,7 @@ namespace ServerControlCenterApplication
 
                     foreach (string GUIDBASE64 in GUIDBASE64List)
                     {
-                        int count = rMdataBase.Update(GUIDBASE64, updateDatabseObj);
+                        int count = rmc_DataBase.Update(GUIDBASE64, updateDatabseObj);
                         LogWindowWriteLine($"更新結果＝{count}行");
                     }
 
@@ -487,7 +483,7 @@ namespace ServerControlCenterApplication
         }
 
         /// <summary>
-        /// ●アークスイート登録待ちを検索
+        /// 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -499,13 +495,8 @@ namespace ServerControlCenterApplication
                     return;
 
                 #region ArcSuite登録待機一覧リストを作成
-                List<SqlSearchStringValue> sqlSearchFiledValues = new List<SqlSearchStringValue>(){
-                    // REGISTWAITINGFLAG が　1であり、なおかつREGISTWAITINGFLAGGEDTIME時刻が、pasttTImeStringより前のものをリスト化する
-                    new SqlSearchStringValue{Field = "REGISTWAITINGFLAG",      Ooperator = "=",   Value="1",   Logic="AND"},
-                    new SqlSearchStringValue{Field = "REGISTEDUSERID",            Ooperator = "=",   Value= $"'{UserID_textBox.Text}'",  Logic="AND"},
-                    new SqlSearchStringValue{Field = "APPROVEDHOST",            Ooperator = "LIKE",   Value= $"'{ SasaLib.Net.GetHOSTNAME()}%'"},
-            };
-                RemoteClientDataBase rMdataBase = new RemoteClientDataBase(
+
+                RemoteClientDataBase rmc_DataBase = new RemoteClientDataBase(
                         SccConfig.Config.ClientDomainName,
                         SccConfig.Config.ClientUserName,
                         SccConfig.Config.ClientUserPassword,
@@ -514,7 +505,9 @@ namespace ServerControlCenterApplication
                         SccConfig.Config.PipeNameDR
                     );
 
-                List<FieldValueSet> DBresultList1 = rMdataBase.GetArcSuiteAwaitingRegist(sqlSearchFiledValues, UserID_textBox.Text, 9999, "ORDER BY APPROVEDDATE ASC");
+                string hostname = SasaLib.Net.GetHOSTNAME();
+
+                List<FieldValueSet> DBresultList1 = rmc_DataBase.GetArcSuiteAwaitingRegist(hostname, UserID_textBox.Text, 9999, "ORDER BY APPROVEDDATE ASC", objectConvNew: objectConvNew_CheckBox.Checked);
                 #endregion
 
 
@@ -527,7 +520,10 @@ namespace ServerControlCenterApplication
                         LogWindowWriteLine($"{f.Sucess} {f.Message} {f.SearchKey("TICKETCODE")}");
 
                     }
-
+                }
+                else
+                {
+                    LogWindowWriteLine($"ArcSuite登録待ちリストはありません");
                 }
             }
             catch (Exception ex)
@@ -539,8 +535,6 @@ namespace ServerControlCenterApplication
             }
 
         }
-
-
 
         private void CheckDrawingTypeButton_Click(object sender, EventArgs e)
         {
@@ -593,5 +587,9 @@ namespace ServerControlCenterApplication
 
         }
 
+        private void DirectPrintButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

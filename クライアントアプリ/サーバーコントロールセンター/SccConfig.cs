@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-using SasaLib;
-using SharedClassLibrary;
-
-/// <summary>
+﻿/// <summary>
 /// クライアントアプリケーション各設定
 /// </summary>
 public class SccConfig : SasaLib.XmlSettingFile
@@ -76,17 +65,17 @@ public class SccConfig : SasaLib.XmlSettingFile
     /// <summary>
     /// ToyoDRAWREGISTservice接続用パイプ名
     /// </summary>
-    public string PipeNameDR { get;  set; } = "ApprovalServer";
+    public string PipeNameDR { get; set; } = "ApprovalServer";
 
     /// <summary>
     ///  ToyoDRAWCAPTUREservice接続用パイプ名
     /// </summary>
-    public string PipeNameDC { get;  set; } = "CaptureService";
+    public string PipeNameDC { get; set; } = "CaptureService";
 
     /// <summary>
     ///  ToyoDRAWATCHservice接続用パイプ名
     /// </summary>
-    public string PipeNameSW { get;  set; } = "WatchService";
+    public string PipeNameSW { get; set; } = "WatchService";
 
     /// <summary>
     /// コミットフォルダ
@@ -101,7 +90,10 @@ public class SccConfig : SasaLib.XmlSettingFile
     [System.Xml.Serialization.XmlIgnore] //保存したくないメンバーは以下に宣言
     public string NotSaved;
 
-
+    /// <summary>
+    /// Read/WriteObjectメソッドにて転送データの状況を詳細
+    /// </summary>
+    internal bool ReadWriteObjectVerbose { get; set; } = true;
 
 
     /// <summary>

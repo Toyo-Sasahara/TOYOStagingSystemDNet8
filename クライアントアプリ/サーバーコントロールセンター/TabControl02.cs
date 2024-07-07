@@ -8,7 +8,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-//using System.Runtime.Remoting.Metadata;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,22 +17,15 @@ using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
 using ToyoStageService;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-#if NETCOREAPP
-using System.Runtime.Versioning;
-#endif
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    [SupportedOSPlatform("windows")]
     public partial class TabControl02 : UserControl
     {
         Form1 mainForm;
 
 
-        SearchDrawingSetPictureBox sh2;
+        SearchDrawingSetPictureBox sdhelper;
 
         internal PreviewImageForm previewArcSuiteForm = new PreviewImageForm();
 
@@ -46,7 +38,7 @@ namespace ServerControlCenterApplication
             this.mainForm = form;
             InitializeComponent();
 
-            sh2 = new SearchDrawingSetPictureBox(DebugListView2, ResultSearchPattern_label, previewArcSuiteForm, logWindowControl.WriteLine);
+            sdhelper = new SearchDrawingSetPictureBox(DebugListView2, ResultSearchPattern_label, previewArcSuiteForm, logWindowControl.WriteLine);
 
         }
 
@@ -100,7 +92,7 @@ namespace ServerControlCenterApplication
         {
             if (DebugListView2.SelectedItems.Count == 0)
                 return;
-            sh2.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中,objectConvNew:true);
+            sdhelper.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中, titleOnly: TitleOnly_checkBox.Checked, objectConvNew: object_ConvNew_CheckBox.Checked);
             if (previewArcSuiteForm.Visible == false)
                 previewArcSuiteForm.Show(this);
         }
@@ -110,7 +102,7 @@ namespace ServerControlCenterApplication
             if (DebugListView2.SelectedItems.Count == 0)
                 return;
 
-            var TICKETCODE = sh2.GetSelectedData("TICKETCODE");
+            var TICKETCODE = sdhelper.GetSelectedData("TICKETCODE");
         }
 
         private void DebugListView2_DoubleClick(object sender, EventArgs e)
@@ -118,7 +110,7 @@ namespace ServerControlCenterApplication
             if (DebugListView2.SelectedItems.Count == 0)
                 return;
 
-            var SANITIZEDPARTNUMBER = sh2.GetSelectedData("SANITIZEDPARTNUMBER");
+            var SANITIZEDPARTNUMBER = sdhelper.GetSelectedData("SANITIZEDPARTNUMBER");
 
             string ArcSuiteURL = $"http://{SccConfig.Config.ArcSuiteDmsHost}/ArcSuite/docspace/sdk/search.do" +
                                 $"?enc=UTF-8&service=cn%3Ddrep_service%40ass1%2Cou%3Dcomponents%2Cdc%3D" +
@@ -139,13 +131,13 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void Get_ARCSUITEID_IsNotNULL_fromDB_Button_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.ArcSuiteRegisteredList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
-            sh2.Search(sqlSearchStringValues, "ArcSuite登録済み", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "ArcSuite登録済み", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
 
         }
 
@@ -156,13 +148,13 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void Get_ARCSUITEIDisNull_And_APPROVEDUSERisNotNull_Button_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.ARCSUITEIDisNull_And_APPROVEDUSERisNotNull(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
-            sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
         /// <summary>
@@ -172,13 +164,13 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void Get_APPROVEDDATEisNotNull_And_REGISTEDTIMEisZero_And_REGISTWAITINGFLAGisZero_Button_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.APPROVEDDATEisNotNull_And_REGISTEDTIMEisZero_And_REGISTWAITINGFLAGisZero(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
-            sh2.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "承認済みだがArcSuite未登録かつArcSuite登録指示フラグが無い", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
 
@@ -189,16 +181,21 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void FindeCanApprovalButton_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.ApprovableList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "設計承認が可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "設計承認が可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ForcedSign_button_Click(object sender, EventArgs e)
         {
             if (DebugListView2.SelectedItems.Count == 0)
@@ -219,7 +216,7 @@ namespace ServerControlCenterApplication
                             string TICKETCODE = selects.SubItems["TICKETCODE"].Text;
 
                             logWindowControl.WriteLine($"押印強制実行");
-                            Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE, UserID_textBox.Text, Approved2cResult, objectConvNew:true, WriteLine:logWindowControl.WriteLine);
+                            Command_MAINCOMMAND.ApprovedMainProcessDebug(TICKETCODE, UserID_textBox.Text, Approved2cResult, objectConvNew: object_ConvNew_CheckBox.Checked, logWindowControl.WriteLine);
                         }
                     }
                 }
@@ -259,7 +256,7 @@ namespace ServerControlCenterApplication
                             logWindowControl.WriteLine($"強制通常登録実行 (SetRegistWaitingFlag2)");
 
                             //登録可能のフラグを立てる
-                            RemoteClientDRAWREGIST rmarcSuite = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
+                            RemoteClientDRAWREGIST rmc_DRAWREGIST = new RemoteClientDRAWREGIST(SccConfig.Config.ClientDomainName,
                                 SccConfig.Config.ClientUserName,
                                 SccConfig.Config.ClientUserPassword,
                                 SccConfig.Config.ClsLogon,
@@ -273,7 +270,7 @@ namespace ServerControlCenterApplication
                             //rmarcSuite.SetRegistWaitingFlag(GUIDBASE64s, UserID_textBox.Text);
 
                             List<string> errList = new List<string>();
-                            rmarcSuite.SetRegistWaitingFlag2(GUIDBASE64s, UserID_textBox.Text, ref errList);
+                            rmc_DRAWREGIST.SetRegistWaitingFlag2(GUIDBASE64s, UserID_textBox.Text, ref errList, objectConvNew: object_ConvNew_CheckBox.Checked, logWindowControl.WriteLine);
 
                             if (errList.Count > 0)
                             {
@@ -302,14 +299,14 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void FindFinalCanApproval_button_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.ApprovableFinulList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "最終承認可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "最終承認可能", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
         /// <summary>
@@ -319,14 +316,14 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void Get_ARCSUITEID_IsNULL_fromDB_Button_Click_1(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.ArcSuiteNotRegisteredList(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "ArcSuite未登録", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew:true, WriteLine:logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "ArcSuite未登録", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
         /// <summary>
@@ -336,14 +333,14 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void REGISTWAITTINGFLAGbutton_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.ArcSuiteRegistrationScheduled(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "アークスイート登録指示あり", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "アークスイート登録指示あり", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
         /// <summary>
@@ -353,14 +350,14 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void FindAll_button_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.LISTALL(int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "無条件（全てのデータ）", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text,objectConvNew:true, WriteLine:logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "無条件（全てのデータ）", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
         /// <summary>
@@ -371,14 +368,14 @@ namespace ServerControlCenterApplication
         private void REGISTUSERsearch_button_Click(object sender, EventArgs e)
         {
             var name = REGISTUSERNAME_textBox.Text;
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.ApprovalUser(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "承認ユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "承認ユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
 
         }
 
@@ -390,14 +387,14 @@ namespace ServerControlCenterApplication
         private void CommitUserSearch_button_Click(object sender, EventArgs e)
         {
             var name = COMMITUSERNAME_textBox.Text;
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.CommitUser(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "コミットユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "コミットユーザー名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
         }
 
         /// <summary>
@@ -408,35 +405,35 @@ namespace ServerControlCenterApplication
         private void PaperSizeSearchButton_Click(object sender, EventArgs e)
         {
             var name = PaperSizeComboBox.Text;
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.PaperSize(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "ペーパーサイズ名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "ペーパーサイズ名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
 
         }
 
         private void COMMITHOST_search_button_Click(object sender, EventArgs e)
         {
             var name = COMMITHOST_textBox.Text;
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.CommitHost(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "コミットホスト名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "コミットホスト名で検索", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: object_ConvNew_CheckBox.Checked);
 
         }
 
 
         private void DebugListBoxItemsClearButton_Click(object sender, EventArgs e)
         {
-            sh2.clear();
+            sdhelper.clear();
             ResultSearchPattern_label.Text = "検索待ち";
         }
 
@@ -455,7 +452,7 @@ namespace ServerControlCenterApplication
             {
                 if (DebugListView2.SelectedItems.Count == 1)
                 {
-                    sh2.DeleteSelectedDBresultListRecordOne();
+                    sdhelper.DeleteSelectedDBresultListRecordOne();
                 }
                 else
                 {
@@ -463,7 +460,7 @@ namespace ServerControlCenterApplication
                     {
                         if (DebugListView2.SelectedItems.Count > 1)
                         {
-                            sh2.Delete_SelectedDBresultListRecords();
+                            sdhelper.Delete_SelectedDBresultListRecords();
                         }
                     }
                 }
@@ -479,8 +476,8 @@ namespace ServerControlCenterApplication
             {
                 if (DebugListView2.SelectedItems.Count == 1)
                 {
-                    sh2.ApprovdReset_SelectedDBresultListRecordOne();
-                    sh2.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中);
+                    sdhelper.ApprovdReset_SelectedDBresultListRecordOne(objectConvNew: object_ConvNew_CheckBox.Checked, logWindowControl.WriteLine);
+                    sdhelper.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中);
                 }
                 else
                 {
@@ -488,14 +485,18 @@ namespace ServerControlCenterApplication
                     {
                         if (DebugListView2.SelectedItems.Count > 1)
                         {
-                            sh2.ApprovdReset_SelectedDBresultListRecords();
+                            sdhelper.ApprovdReset_SelectedDBresultListRecords();
                         }
                     }
                 }
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectedRecord_FinalApprovedReset_Button_Click(object sender, EventArgs e)
         {
             if (DebugListView2.SelectedItems.Count == 0)
@@ -505,9 +506,9 @@ namespace ServerControlCenterApplication
             {
                 if (DebugListView2.SelectedItems.Count == 1)
                 {
-                    sh2.FinalApprovdReset_SelectedDBresultListRecordOne();
+                    sdhelper.FinalApprovdReset_SelectedDBresultListRecordOne(objectConvNew: object_ConvNew_CheckBox.Checked, logWindowControl.WriteLine);
 
-                    sh2.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中);
+                    sdhelper.GetAndViewDRAWINGimage(Properties.Resources.イメージ読込中);
                 }
                 else
                 {
@@ -567,14 +568,14 @@ namespace ServerControlCenterApplication
             ;
 
             var name = TICKETCODE_textBox.Text;
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.TICKETCODE(name);
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "TICKETCODEで検索", objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "TICKETCODEで検索", objectConvNew: object_ConvNew_CheckBox.Checked);
 
         }
 
@@ -583,14 +584,14 @@ namespace ServerControlCenterApplication
 
 
             var name = PARTNUMBER_textbox.Text;
-            sh2.clear();
+            sdhelper.clear();
 
             var sqlSearchStringValues = SqlSyntax.PARTNUMBER(name, int.Parse(TimeSpanDateTextBox.Text));
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
-            sh2.Search(sqlSearchStringValues, "TICKETCODEで検索", objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+            sdhelper.Search(sqlSearchStringValues, "TICKETCODEで検索", objectConvNew: object_ConvNew_CheckBox.Checked);
 
         }
 
@@ -601,6 +602,48 @@ namespace ServerControlCenterApplication
 
         private void label16_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void DebugListView2_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            //並び替える（ListViewItemSorterを設定するとSortが自動的に呼び出される）
+            //ListViewItemSorterを指定する
+            DebugListView2.ListViewItemSorter = new ListViewItemComparer(e.Column);
+        }
+
+        private void ClearListView_button_Click(object sender, EventArgs e)
+        {
+            sdhelper.clear();
+        }
+
+        int printerSelIndex1;
+
+        private void PrinterSelcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            printerSelIndex1 = PrinterSelcomboBox.SelectedIndex;
+        }
+
+        private void PrinterSelcomboBox_DropDown(object sender, EventArgs e)
+        {
+            logWindowControl.Clear();
+            mainForm.CommitPrinters.GetData(objectConvNew: true, logWindowControl.WriteLine);
+
+            mainForm.CommitPrinters.SetComboBox(ref PrinterSelcomboBox);
+
+        }
+
+        private void DirectPrintButton_Click(object sender, EventArgs e)
+        {
+            string printername = PrinterSelcomboBox.SelectedText;
+
+            RemoteClientMaintenance rMmaintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+
+            var GUIDBASE64 = sdhelper.GetSelectedData("GUIDBASE64");
+
+
+
+            rMmaintenance.PlotouDrawingGUIDBASE64(GUIDBASE64, PrinterSelcomboBox.Text);
 
         }
     }

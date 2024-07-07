@@ -25,16 +25,21 @@ namespace ServerControlCenterApplication
 
         }
 
-        //[System.Diagnostics.DebuggerStepThrough]
+        public void Clear()
+        {
+            LogWindow_textBox.Clear();
+        }
+
+        [System.Diagnostics.DebuggerStepThrough]
         public void WriteLine(string msg)
         {
             try
             {
-                    Invoke(new Action(() =>
-                    {
-                        /// UIを操作する処理
-                        LogWindow_textBox.AppendText(msg + "\r\n");
-                    }));
+                Invoke(new Action(() =>
+                {
+                    /// UIを操作する処理
+                    LogWindow_textBox.AppendText(msg + "\r\n");
+                }));
             }
             catch (Exception ex)
             {

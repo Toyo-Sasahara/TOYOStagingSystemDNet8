@@ -51,14 +51,13 @@ namespace ServerControlCenterApplication
             DirectDeleteButton = new System.Windows.Forms.Button();
             UserID_textBox = new System.Windows.Forms.TextBox();
             ApprovedMainProcessDebugButton = new System.Windows.Forms.Button();
-            accountUserForm = new AccountUserForm();
-            logWindowControl = new LogWindowControl();
             panel3 = new System.Windows.Forms.Panel();
+            GetArcSuiteAwaitingRegist_button = new System.Windows.Forms.Button();
             groupBox12 = new System.Windows.Forms.GroupBox();
             CheckDrwingTypeAnserTextBox = new System.Windows.Forms.TextBox();
             CheckDrawingTypeButton = new System.Windows.Forms.Button();
             PARTNUMBERtextBox = new System.Windows.Forms.TextBox();
-            GetArcSuiteAwaitingRegist_button = new System.Windows.Forms.Button();
+            objectConvNew_CheckBox = new System.Windows.Forms.CheckBox();
             groupBox9.SuspendLayout();
             TICKETCODE_DIRECT_panel.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -75,9 +74,9 @@ namespace ServerControlCenterApplication
             groupBox9.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             groupBox9.Controls.Add(TICKETCODE_DIRECT_panel);
             groupBox9.Location = new System.Drawing.Point(5, 136);
-            groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox9.Margin = new System.Windows.Forms.Padding(4);
             groupBox9.Name = "groupBox9";
-            groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox9.Padding = new System.Windows.Forms.Padding(4);
             groupBox9.Size = new System.Drawing.Size(747, 715);
             groupBox9.TabIndex = 92;
             groupBox9.TabStop = false;
@@ -86,6 +85,7 @@ namespace ServerControlCenterApplication
             // TICKETCODE_DIRECT_panel
             // 
             TICKETCODE_DIRECT_panel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            TICKETCODE_DIRECT_panel.Controls.Add(objectConvNew_CheckBox);
             TICKETCODE_DIRECT_panel.Controls.Add(groupBox1);
             TICKETCODE_DIRECT_panel.Controls.Add(panel2);
             TICKETCODE_DIRECT_panel.Controls.Add(panel1);
@@ -96,7 +96,7 @@ namespace ServerControlCenterApplication
             TICKETCODE_DIRECT_panel.Controls.Add(ApprovedRsetOneButton);
             TICKETCODE_DIRECT_panel.Controls.Add(DirectDeleteButton);
             TICKETCODE_DIRECT_panel.Location = new System.Drawing.Point(7, 15);
-            TICKETCODE_DIRECT_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            TICKETCODE_DIRECT_panel.Margin = new System.Windows.Forms.Padding(4);
             TICKETCODE_DIRECT_panel.Name = "TICKETCODE_DIRECT_panel";
             TICKETCODE_DIRECT_panel.Size = new System.Drawing.Size(733, 681);
             TICKETCODE_DIRECT_panel.TabIndex = 96;
@@ -106,10 +106,10 @@ namespace ServerControlCenterApplication
             // 
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(TextBox);
-            groupBox1.Location = new System.Drawing.Point(499, 8);
-            groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox1.Location = new System.Drawing.Point(499, 30);
+            groupBox1.Margin = new System.Windows.Forms.Padding(4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox1.Padding = new System.Windows.Forms.Padding(4);
             groupBox1.Size = new System.Drawing.Size(220, 205);
             groupBox1.TabIndex = 114;
             groupBox1.TabStop = false;
@@ -118,7 +118,7 @@ namespace ServerControlCenterApplication
             // button1
             // 
             button1.Location = new System.Drawing.Point(55, 172);
-            button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            button1.Margin = new System.Windows.Forms.Padding(4);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(114, 25);
             button1.TabIndex = 114;
@@ -130,7 +130,7 @@ namespace ServerControlCenterApplication
             // 
             TextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             TextBox.Location = new System.Drawing.Point(7, 22);
-            TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            TextBox.Margin = new System.Windows.Forms.Padding(4);
             TextBox.Multiline = true;
             TextBox.Name = "TextBox";
             TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -143,7 +143,7 @@ namespace ServerControlCenterApplication
             panel2.Controls.Add(UnSetPRIORITYREGISTFLAGisNullButton);
             panel2.Controls.Add(SetPRIORITYREGISTFLAGisNullButton);
             panel2.Location = new System.Drawing.Point(243, 114);
-            panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel2.Margin = new System.Windows.Forms.Padding(4);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(229, 62);
             panel2.TabIndex = 112;
@@ -151,7 +151,7 @@ namespace ServerControlCenterApplication
             // UnSetPRIORITYREGISTFLAGisNullButton
             // 
             UnSetPRIORITYREGISTFLAGisNullButton.Location = new System.Drawing.Point(4, 4);
-            UnSetPRIORITYREGISTFLAGisNullButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            UnSetPRIORITYREGISTFLAGisNullButton.Margin = new System.Windows.Forms.Padding(4);
             UnSetPRIORITYREGISTFLAGisNullButton.Name = "UnSetPRIORITYREGISTFLAGisNullButton";
             UnSetPRIORITYREGISTFLAGisNullButton.Size = new System.Drawing.Size(220, 25);
             UnSetPRIORITYREGISTFLAGisNullButton.TabIndex = 109;
@@ -162,7 +162,7 @@ namespace ServerControlCenterApplication
             // SetPRIORITYREGISTFLAGisNullButton
             // 
             SetPRIORITYREGISTFLAGisNullButton.Location = new System.Drawing.Point(5, 32);
-            SetPRIORITYREGISTFLAGisNullButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            SetPRIORITYREGISTFLAGisNullButton.Margin = new System.Windows.Forms.Padding(4);
             SetPRIORITYREGISTFLAGisNullButton.Name = "SetPRIORITYREGISTFLAGisNullButton";
             SetPRIORITYREGISTFLAGisNullButton.Size = new System.Drawing.Size(220, 25);
             SetPRIORITYREGISTFLAGisNullButton.TabIndex = 87;
@@ -176,7 +176,7 @@ namespace ServerControlCenterApplication
             panel1.Controls.Add(ArcSuiteTestRegistButton);
             panel1.Controls.Add(ArcSuiteTestRegistResetButton);
             panel1.Location = new System.Drawing.Point(10, 114);
-            panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel1.Margin = new System.Windows.Forms.Padding(4);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(229, 62);
             panel1.TabIndex = 111;
@@ -184,7 +184,7 @@ namespace ServerControlCenterApplication
             // ArcSuiteTestRegistButton
             // 
             ArcSuiteTestRegistButton.Location = new System.Drawing.Point(4, 5);
-            ArcSuiteTestRegistButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ArcSuiteTestRegistButton.Margin = new System.Windows.Forms.Padding(4);
             ArcSuiteTestRegistButton.Name = "ArcSuiteTestRegistButton";
             ArcSuiteTestRegistButton.Size = new System.Drawing.Size(220, 25);
             ArcSuiteTestRegistButton.TabIndex = 63;
@@ -195,7 +195,7 @@ namespace ServerControlCenterApplication
             // ArcSuiteTestRegistResetButton
             // 
             ArcSuiteTestRegistResetButton.Location = new System.Drawing.Point(4, 32);
-            ArcSuiteTestRegistResetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ArcSuiteTestRegistResetButton.Margin = new System.Windows.Forms.Padding(4);
             ArcSuiteTestRegistResetButton.Name = "ArcSuiteTestRegistResetButton";
             ArcSuiteTestRegistResetButton.Size = new System.Drawing.Size(220, 25);
             ArcSuiteTestRegistResetButton.TabIndex = 110;
@@ -208,7 +208,7 @@ namespace ServerControlCenterApplication
             Drawing_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             Drawing_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             Drawing_pictureBox.Location = new System.Drawing.Point(10, 304);
-            Drawing_pictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Drawing_pictureBox.Margin = new System.Windows.Forms.Padding(4);
             Drawing_pictureBox.Name = "Drawing_pictureBox";
             Drawing_pictureBox.Size = new System.Drawing.Size(709, 363);
             Drawing_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,9 +222,9 @@ namespace ServerControlCenterApplication
             groupBox6.Controls.Add(PrinterSelcomboBox);
             groupBox6.Enabled = false;
             groupBox6.Location = new System.Drawing.Point(10, 184);
-            groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox6.Margin = new System.Windows.Forms.Padding(4);
             groupBox6.Name = "groupBox6";
-            groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox6.Padding = new System.Windows.Forms.Padding(4);
             groupBox6.Size = new System.Drawing.Size(294, 112);
             groupBox6.TabIndex = 88;
             groupBox6.TabStop = false;
@@ -245,7 +245,7 @@ namespace ServerControlCenterApplication
             DirectPrintButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             DirectPrintButton.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             DirectPrintButton.Location = new System.Drawing.Point(7, 74);
-            DirectPrintButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            DirectPrintButton.Margin = new System.Windows.Forms.Padding(4);
             DirectPrintButton.Name = "DirectPrintButton";
             DirectPrintButton.Size = new System.Drawing.Size(276, 29);
             DirectPrintButton.TabIndex = 28;
@@ -257,7 +257,7 @@ namespace ServerControlCenterApplication
             PrinterSelcomboBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             PrinterSelcomboBox.FormattingEnabled = true;
             PrinterSelcomboBox.Location = new System.Drawing.Point(7, 22);
-            PrinterSelcomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            PrinterSelcomboBox.Margin = new System.Windows.Forms.Padding(4);
             PrinterSelcomboBox.Name = "PrinterSelcomboBox";
             PrinterSelcomboBox.Size = new System.Drawing.Size(276, 23);
             PrinterSelcomboBox.TabIndex = 78;
@@ -265,7 +265,7 @@ namespace ServerControlCenterApplication
             // TICKETCODE_textBox
             // 
             TICKETCODE_textBox.Location = new System.Drawing.Point(7, 6);
-            TICKETCODE_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            TICKETCODE_textBox.Margin = new System.Windows.Forms.Padding(4);
             TICKETCODE_textBox.Name = "TICKETCODE_textBox";
             TICKETCODE_textBox.Size = new System.Drawing.Size(209, 23);
             TICKETCODE_textBox.TabIndex = 64;
@@ -275,7 +275,7 @@ namespace ServerControlCenterApplication
             // DirectSearchButton
             // 
             DirectSearchButton.Location = new System.Drawing.Point(224, 5);
-            DirectSearchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            DirectSearchButton.Margin = new System.Windows.Forms.Padding(4);
             DirectSearchButton.Name = "DirectSearchButton";
             DirectSearchButton.Size = new System.Drawing.Size(147, 25);
             DirectSearchButton.TabIndex = 65;
@@ -286,7 +286,7 @@ namespace ServerControlCenterApplication
             // ApprovedRsetOneButton
             // 
             ApprovedRsetOneButton.Location = new System.Drawing.Point(378, 6);
-            ApprovedRsetOneButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ApprovedRsetOneButton.Margin = new System.Windows.Forms.Padding(4);
             ApprovedRsetOneButton.Name = "ApprovedRsetOneButton";
             ApprovedRsetOneButton.Size = new System.Drawing.Size(114, 25);
             ApprovedRsetOneButton.TabIndex = 67;
@@ -297,7 +297,7 @@ namespace ServerControlCenterApplication
             // DirectDeleteButton
             // 
             DirectDeleteButton.Location = new System.Drawing.Point(224, 36);
-            DirectDeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            DirectDeleteButton.Margin = new System.Windows.Forms.Padding(4);
             DirectDeleteButton.Name = "DirectDeleteButton";
             DirectDeleteButton.Size = new System.Drawing.Size(147, 25);
             DirectDeleteButton.TabIndex = 86;
@@ -308,7 +308,7 @@ namespace ServerControlCenterApplication
             // UserID_textBox
             // 
             UserID_textBox.Location = new System.Drawing.Point(4, 4);
-            UserID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            UserID_textBox.Margin = new System.Windows.Forms.Padding(4);
             UserID_textBox.Name = "UserID_textBox";
             UserID_textBox.Size = new System.Drawing.Size(47, 23);
             UserID_textBox.TabIndex = 107;
@@ -317,34 +317,13 @@ namespace ServerControlCenterApplication
             // ApprovedMainProcessDebugButton
             // 
             ApprovedMainProcessDebugButton.Location = new System.Drawing.Point(59, 2);
-            ApprovedMainProcessDebugButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            ApprovedMainProcessDebugButton.Margin = new System.Windows.Forms.Padding(4);
             ApprovedMainProcessDebugButton.Name = "ApprovedMainProcessDebugButton";
             ApprovedMainProcessDebugButton.Size = new System.Drawing.Size(102, 25);
             ApprovedMainProcessDebugButton.TabIndex = 63;
             ApprovedMainProcessDebugButton.Text = "手動押印実行";
             ApprovedMainProcessDebugButton.UseVisualStyleBackColor = true;
             ApprovedMainProcessDebugButton.Click += ApprovedMainProcessDebugButton_Click;
-            // 
-            // accountUserForm
-            // 
-            accountUserForm.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            accountUserForm.Location = new System.Drawing.Point(0, 0);
-            accountUserForm.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            accountUserForm.Name = "accountUserForm";
-            accountUserForm.parentControl = null;
-            accountUserForm.Size = new System.Drawing.Size(1458, 138);
-            accountUserForm.TabIndex = 135;
-            accountUserForm.Paint += accountUserForm3_Paint;
-            accountUserForm.Leave += accountUserForm_Leave;
-            // 
-            // logWindowControl
-            // 
-            logWindowControl.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            logWindowControl.Location = new System.Drawing.Point(758, 349);
-            logWindowControl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            logWindowControl.Name = "logWindowControl";
-            logWindowControl.Size = new System.Drawing.Size(891, 495);
-            logWindowControl.TabIndex = 136;
             // 
             // panel3
             // 
@@ -353,57 +332,10 @@ namespace ServerControlCenterApplication
             panel3.Controls.Add(ApprovedMainProcessDebugButton);
             panel3.Controls.Add(UserID_textBox);
             panel3.Location = new System.Drawing.Point(24, 184);
-            panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            panel3.Margin = new System.Windows.Forms.Padding(4);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(168, 69);
             panel3.TabIndex = 137;
-            // 
-            // groupBox12
-            // 
-            groupBox12.Controls.Add(CheckDrwingTypeAnserTextBox);
-            groupBox12.Controls.Add(CheckDrawingTypeButton);
-            groupBox12.Controls.Add(PARTNUMBERtextBox);
-            groupBox12.Location = new System.Drawing.Point(758, 159);
-            groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            groupBox12.Name = "groupBox12";
-            groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            groupBox12.Size = new System.Drawing.Size(180, 135);
-            groupBox12.TabIndex = 138;
-            groupBox12.TabStop = false;
-            groupBox12.Text = "図面種類を調査";
-            // 
-            // CheckDrwingTypeAnserTextBox
-            // 
-            CheckDrwingTypeAnserTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            CheckDrwingTypeAnserTextBox.Location = new System.Drawing.Point(7, 101);
-            CheckDrwingTypeAnserTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            CheckDrwingTypeAnserTextBox.Name = "CheckDrwingTypeAnserTextBox";
-            CheckDrwingTypeAnserTextBox.ReadOnly = true;
-            CheckDrwingTypeAnserTextBox.Size = new System.Drawing.Size(165, 23);
-            CheckDrwingTypeAnserTextBox.TabIndex = 2;
-            CheckDrwingTypeAnserTextBox.Text = "図面タイプ";
-            // 
-            // CheckDrawingTypeButton
-            // 
-            CheckDrawingTypeButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            CheckDrawingTypeButton.Location = new System.Drawing.Point(7, 54);
-            CheckDrawingTypeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            CheckDrawingTypeButton.Name = "CheckDrawingTypeButton";
-            CheckDrawingTypeButton.Size = new System.Drawing.Size(166, 40);
-            CheckDrawingTypeButton.TabIndex = 1;
-            CheckDrawingTypeButton.Text = "図面種類\r\n特定メソッドをテスト";
-            CheckDrawingTypeButton.UseVisualStyleBackColor = true;
-            CheckDrawingTypeButton.Click += CheckDrawingTypeButton_Click;
-            // 
-            // PARTNUMBERtextBox
-            // 
-            PARTNUMBERtextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            PARTNUMBERtextBox.Location = new System.Drawing.Point(7, 22);
-            PARTNUMBERtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            PARTNUMBERtextBox.Name = "PARTNUMBERtextBox";
-            PARTNUMBERtextBox.Size = new System.Drawing.Size(165, 23);
-            PARTNUMBERtextBox.TabIndex = 0;
-            PARTNUMBERtextBox.Text = "01-01001-TM";
             // 
             // GetArcSuiteAwaitingRegist_button
             // 
@@ -416,16 +348,71 @@ namespace ServerControlCenterApplication
             GetArcSuiteAwaitingRegist_button.UseVisualStyleBackColor = true;
             GetArcSuiteAwaitingRegist_button.Click += GetArcSuiteAwaitingRegist_button_Click;
             // 
+            // groupBox12
+            // 
+            groupBox12.Controls.Add(CheckDrwingTypeAnserTextBox);
+            groupBox12.Controls.Add(CheckDrawingTypeButton);
+            groupBox12.Controls.Add(PARTNUMBERtextBox);
+            groupBox12.Location = new System.Drawing.Point(758, 159);
+            groupBox12.Margin = new System.Windows.Forms.Padding(4);
+            groupBox12.Name = "groupBox12";
+            groupBox12.Padding = new System.Windows.Forms.Padding(4);
+            groupBox12.Size = new System.Drawing.Size(180, 135);
+            groupBox12.TabIndex = 138;
+            groupBox12.TabStop = false;
+            groupBox12.Text = "図面種類を調査";
+            // 
+            // CheckDrwingTypeAnserTextBox
+            // 
+            CheckDrwingTypeAnserTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            CheckDrwingTypeAnserTextBox.Location = new System.Drawing.Point(7, 101);
+            CheckDrwingTypeAnserTextBox.Margin = new System.Windows.Forms.Padding(4);
+            CheckDrwingTypeAnserTextBox.Name = "CheckDrwingTypeAnserTextBox";
+            CheckDrwingTypeAnserTextBox.ReadOnly = true;
+            CheckDrwingTypeAnserTextBox.Size = new System.Drawing.Size(165, 23);
+            CheckDrwingTypeAnserTextBox.TabIndex = 2;
+            CheckDrwingTypeAnserTextBox.Text = "図面タイプ";
+            // 
+            // CheckDrawingTypeButton
+            // 
+            CheckDrawingTypeButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            CheckDrawingTypeButton.Location = new System.Drawing.Point(7, 54);
+            CheckDrawingTypeButton.Margin = new System.Windows.Forms.Padding(4);
+            CheckDrawingTypeButton.Name = "CheckDrawingTypeButton";
+            CheckDrawingTypeButton.Size = new System.Drawing.Size(166, 40);
+            CheckDrawingTypeButton.TabIndex = 1;
+            CheckDrawingTypeButton.Text = "図面種類\r\n特定メソッドをテスト";
+            CheckDrawingTypeButton.UseVisualStyleBackColor = true;
+            CheckDrawingTypeButton.Click += CheckDrawingTypeButton_Click;
+            // 
+            // PARTNUMBERtextBox
+            // 
+            PARTNUMBERtextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            PARTNUMBERtextBox.Location = new System.Drawing.Point(7, 22);
+            PARTNUMBERtextBox.Margin = new System.Windows.Forms.Padding(4);
+            PARTNUMBERtextBox.Name = "PARTNUMBERtextBox";
+            PARTNUMBERtextBox.Size = new System.Drawing.Size(165, 23);
+            PARTNUMBERtextBox.TabIndex = 0;
+            PARTNUMBERtextBox.Text = "01-01001-TM";
+            // 
+            // objectConvNew_CheckBox
+            // 
+            objectConvNew_CheckBox.AutoSize = true;
+            objectConvNew_CheckBox.Location = new System.Drawing.Point(620, 8);
+            objectConvNew_CheckBox.Name = "objectConvNew_CheckBox";
+            objectConvNew_CheckBox.Size = new System.Drawing.Size(110, 19);
+            objectConvNew_CheckBox.TabIndex = 115;
+            objectConvNew_CheckBox.Text = "objectConvNew";
+            objectConvNew_CheckBox.UseVisualStyleBackColor = true;
+            // 
             // TabControl03
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(groupBox12);
             Controls.Add(panel3);
-            Controls.Add(logWindowControl);
-            Controls.Add(accountUserForm);
             Controls.Add(groupBox9);
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "TabControl03";
             Size = new System.Drawing.Size(1653, 855);
             Load += TabControl3_Load;
@@ -479,5 +466,6 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.TextBox TextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GetArcSuiteAwaitingRegist_button;
+        private System.Windows.Forms.CheckBox objectConvNew_CheckBox;
     }
 }

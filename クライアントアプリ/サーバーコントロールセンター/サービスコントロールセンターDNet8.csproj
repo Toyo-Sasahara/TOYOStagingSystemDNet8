@@ -121,6 +121,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\Command_Status.cs" Link="Command_Status.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\CommitPrinters.cs" Link="CommitPrinters.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\CommitTest.cs" Link="CommitTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\ListViewItemComparer.cs" Link="ListViewItemComparer.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\SearchDrawingSetPictureBox.cs" Link="SearchDrawingSetPictureBox.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\SqlFieldValuexConverter.cs" Link="SqlFieldValuexConverter.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\SqlSyntax.cs" Link="SqlSyntax.cs" />

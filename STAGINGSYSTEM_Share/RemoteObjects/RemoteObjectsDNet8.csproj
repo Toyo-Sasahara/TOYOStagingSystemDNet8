@@ -24,7 +24,9 @@
 		<UseVSHostingProcess>false</UseVSHostingProcess>
 	</PropertyGroup>
 	<ItemGroup>
-	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjects.cs" Link="RemoteObjects.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedCancel.cs" Link="ApprovedCancel.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedCancelJsonConverter.cs" Link="ApprovedCancelJsonConverter.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedStatus.cs" Link="ApprovedStatus.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsInfo.cs" Link="RemoteObjectsInfo.cs" />
 	</ItemGroup>
 	<ItemGroup>
