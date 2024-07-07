@@ -88,7 +88,7 @@ namespace CommonCommitLogic
         private ArcSuiteSearchResult _arcSuiteSearchResult;
 
         // 2020/03/04[日] 0:00:00
-        private string[] dateStringFormat = { "yyyy-MM-dd", "yyyy/MM/dd", "yyyy/MM/dd HH:mm:ss", "yyyy/MM/dd[ddd] H:mm:ss", "yyyy/MM/dd[ddd] HH:mm:ss" };
+        private string[] dateStringFormat = { "yyyy-MM-dd", "yyyy/MM/dd", "yyyy/MM/dd H:mm:ss", "yyyy/MM/dd HH:mm:ss", "yyyy/MM/dd[ddd] H:mm:ss", "yyyy/MM/dd[ddd] HH:mm:ss" };
 
 
         /// <summary>
