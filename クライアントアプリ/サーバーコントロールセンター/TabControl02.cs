@@ -29,6 +29,7 @@ namespace ServerControlCenterApplication
 
         internal PreviewImageForm previewArcSuiteForm = new PreviewImageForm();
 
+
         /// <summary>
         /// ■コンストラクタ
         /// </summary>

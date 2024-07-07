@@ -58,8 +58,8 @@ namespace ServerControlCenterApplication
             CheckDrwingTypeAnserTextBox = new System.Windows.Forms.TextBox();
             CheckDrawingTypeButton = new System.Windows.Forms.Button();
             PARTNUMBERtextBox = new System.Windows.Forms.TextBox();
-            logWindowControl1 = new LogWindowControl();
-            accountUserForm1 = new AccountUserForm();
+            logWindowControl = new LogWindowControl();
+            accountUserForm = new AccountUserForm();
             groupBox9.SuspendLayout();
             TICKETCODE_DIRECT_panel.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -409,27 +409,27 @@ namespace ServerControlCenterApplication
             // 
             // logWindowControl1
             // 
-            logWindowControl1.Location = new System.Drawing.Point(760, 302);
-            logWindowControl1.Margin = new System.Windows.Forms.Padding(4);
-            logWindowControl1.Name = "logWindowControl1";
-            logWindowControl1.Size = new System.Drawing.Size(593, 530);
-            logWindowControl1.TabIndex = 139;
+            logWindowControl.Location = new System.Drawing.Point(760, 302);
+            logWindowControl.Margin = new System.Windows.Forms.Padding(4);
+            logWindowControl.Name = "logWindowControl1";
+            logWindowControl.Size = new System.Drawing.Size(593, 530);
+            logWindowControl.TabIndex = 139;
             // 
             // accountUserForm1
             // 
-            accountUserForm1.Location = new System.Drawing.Point(12, 4);
-            accountUserForm1.Margin = new System.Windows.Forms.Padding(4);
-            accountUserForm1.Name = "accountUserForm1";
-            accountUserForm1.parentControl = null;
-            accountUserForm1.Size = new System.Drawing.Size(1003, 126);
-            accountUserForm1.TabIndex = 140;
+            accountUserForm.Location = new System.Drawing.Point(12, 4);
+            accountUserForm.Margin = new System.Windows.Forms.Padding(4);
+            accountUserForm.Name = "accountUserForm1";
+            accountUserForm.parentControl = null;
+            accountUserForm.Size = new System.Drawing.Size(1003, 126);
+            accountUserForm.TabIndex = 140;
             // 
             // TabControl03
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(accountUserForm1);
-            Controls.Add(logWindowControl1);
+            Controls.Add(accountUserForm);
+            Controls.Add(logWindowControl);
             Controls.Add(groupBox12);
             Controls.Add(panel3);
             Controls.Add(groupBox9);
@@ -488,7 +488,5 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.CheckBox objectConvNew_CheckBox;
         private LogWindowControl logWindowControl;
         private AccountUserForm accountUserForm;
-        private LogWindowControl logWindowControl1;
-        private AccountUserForm accountUserForm1;
     }
 }

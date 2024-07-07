@@ -53,12 +53,12 @@ namespace ServerControlCenterApplication
             SEARCHMAXtextBox = new System.Windows.Forms.TextBox();
             MAXSEARCHtextBox = new System.Windows.Forms.TextBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
+            object_ConvNew_CheckBox = new System.Windows.Forms.CheckBox();
             groupBox14 = new System.Windows.Forms.GroupBox();
             TimeSpanDateTextBox = new System.Windows.Forms.TextBox();
             label15 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             groupBox13 = new System.Windows.Forms.GroupBox();
-            object_ConvNew_CheckBox = new System.Windows.Forms.CheckBox();
             groupBox3 = new System.Windows.Forms.GroupBox();
             button1 = new System.Windows.Forms.Button();
             Get_ARCSUITEIDisNull_And_APPROVEDUSERisNotNull_Button = new System.Windows.Forms.Button();
@@ -121,17 +121,19 @@ namespace ServerControlCenterApplication
             DebugGroupBox1.Controls.Add(DebugListView2);
             DebugGroupBox1.Controls.Add(SEARCHMAXtextBox);
             DebugGroupBox1.Controls.Add(MAXSEARCHtextBox);
-            DebugGroupBox1.Location = new System.Drawing.Point(7, 425);
+            DebugGroupBox1.Location = new System.Drawing.Point(7, 443);
             DebugGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             DebugGroupBox1.Name = "DebugGroupBox1";
             DebugGroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            DebugGroupBox1.Size = new System.Drawing.Size(1795, 581);
+            DebugGroupBox1.Size = new System.Drawing.Size(1795, 563);
             DebugGroupBox1.TabIndex = 101;
             DebugGroupBox1.TabStop = false;
             // 
             // objectConvNew_checkBox
             // 
             objectConvNew_checkBox.AutoSize = true;
+            objectConvNew_checkBox.Checked = true;
+            objectConvNew_checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
             objectConvNew_checkBox.Location = new System.Drawing.Point(1658, 20);
             objectConvNew_checkBox.Name = "objectConvNew_checkBox";
             objectConvNew_checkBox.Size = new System.Drawing.Size(110, 19);
@@ -168,7 +170,7 @@ namespace ServerControlCenterApplication
             groupBox10.Controls.Add(groupBox11);
             groupBox10.Controls.Add(SortButton);
             groupBox10.Controls.Add(DebugListBoxItemsClearButton);
-            groupBox10.Location = new System.Drawing.Point(9, 470);
+            groupBox10.Location = new System.Drawing.Point(9, 452);
             groupBox10.Margin = new System.Windows.Forms.Padding(4);
             groupBox10.Name = "groupBox10";
             groupBox10.Padding = new System.Windows.Forms.Padding(4);
@@ -352,7 +354,7 @@ namespace ServerControlCenterApplication
             DebugListView2.Location = new System.Drawing.Point(9, 46);
             DebugListView2.Margin = new System.Windows.Forms.Padding(4);
             DebugListView2.Name = "DebugListView2";
-            DebugListView2.Size = new System.Drawing.Size(1775, 418);
+            DebugListView2.Size = new System.Drawing.Size(1775, 400);
             DebugListView2.TabIndex = 94;
             DebugListView2.UseCompatibleStateImageBehavior = false;
             DebugListView2.SelectedIndexChanged += DebugListView2_SelectedIndexChanged;
@@ -380,6 +382,7 @@ namespace ServerControlCenterApplication
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(object_ConvNew_CheckBox);
             groupBox1.Controls.Add(groupBox14);
             groupBox1.Controls.Add(groupBox13);
             groupBox1.Controls.Add(groupBox12);
@@ -387,16 +390,28 @@ namespace ServerControlCenterApplication
             groupBox1.Margin = new System.Windows.Forms.Padding(4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            groupBox1.Size = new System.Drawing.Size(1040, 269);
+            groupBox1.Size = new System.Drawing.Size(1040, 297);
             groupBox1.TabIndex = 105;
             groupBox1.TabStop = false;
+            // 
+            // object_ConvNew_CheckBox
+            // 
+            object_ConvNew_CheckBox.AutoSize = true;
+            object_ConvNew_CheckBox.Checked = true;
+            object_ConvNew_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            object_ConvNew_CheckBox.Location = new System.Drawing.Point(9, 15);
+            object_ConvNew_CheckBox.Name = "object_ConvNew_CheckBox";
+            object_ConvNew_CheckBox.Size = new System.Drawing.Size(110, 19);
+            object_ConvNew_CheckBox.TabIndex = 121;
+            object_ConvNew_CheckBox.Text = "objectConvNew";
+            object_ConvNew_CheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox14
             // 
             groupBox14.Controls.Add(TimeSpanDateTextBox);
             groupBox14.Controls.Add(label15);
             groupBox14.Controls.Add(label4);
-            groupBox14.Location = new System.Drawing.Point(7, 109);
+            groupBox14.Location = new System.Drawing.Point(7, 137);
             groupBox14.Margin = new System.Windows.Forms.Padding(4);
             groupBox14.Name = "groupBox14";
             groupBox14.Padding = new System.Windows.Forms.Padding(4);
@@ -438,7 +453,6 @@ namespace ServerControlCenterApplication
             // 
             // groupBox13
             // 
-            groupBox13.Controls.Add(object_ConvNew_CheckBox);
             groupBox13.Controls.Add(groupBox3);
             groupBox13.Controls.Add(Get_ARCSUITEID_IsNotNULL_fromDB_Button);
             groupBox13.Controls.Add(FindeCanApprovalButton);
@@ -460,16 +474,6 @@ namespace ServerControlCenterApplication
             groupBox13.TabIndex = 123;
             groupBox13.TabStop = false;
             groupBox13.Text = "各種の検索を実行";
-            // 
-            // object_ConvNew_CheckBox
-            // 
-            object_ConvNew_CheckBox.AutoSize = true;
-            object_ConvNew_CheckBox.Location = new System.Drawing.Point(38, 212);
-            object_ConvNew_CheckBox.Name = "object_ConvNew_CheckBox";
-            object_ConvNew_CheckBox.Size = new System.Drawing.Size(110, 19);
-            object_ConvNew_CheckBox.TabIndex = 121;
-            object_ConvNew_CheckBox.Text = "objectConvNew";
-            object_ConvNew_CheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -788,7 +792,7 @@ namespace ServerControlCenterApplication
             groupBox12.Controls.Add(ORDERBY_comboBox);
             groupBox12.Controls.Add(label16);
             groupBox12.Controls.Add(MAXSEARCHtextBox2);
-            groupBox12.Location = new System.Drawing.Point(7, 15);
+            groupBox12.Location = new System.Drawing.Point(7, 43);
             groupBox12.Margin = new System.Windows.Forms.Padding(4);
             groupBox12.Name = "groupBox12";
             groupBox12.Padding = new System.Windows.Forms.Padding(4);
@@ -846,15 +850,16 @@ namespace ServerControlCenterApplication
             accountUserForm1.Margin = new System.Windows.Forms.Padding(4);
             accountUserForm1.Name = "accountUserForm1";
             accountUserForm1.parentControl = null;
-            accountUserForm1.Size = new System.Drawing.Size(1003, 126);
+            accountUserForm1.Size = new System.Drawing.Size(1047, 126);
             accountUserForm1.TabIndex = 106;
             // 
             // logWindowControl1
             // 
-            logWindowControl1.Location = new System.Drawing.Point(1048, 150);
+            logWindowControl1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            logWindowControl1.Location = new System.Drawing.Point(1055, 19);
             logWindowControl1.Margin = new System.Windows.Forms.Padding(4);
             logWindowControl1.Name = "logWindowControl1";
-            logWindowControl1.Size = new System.Drawing.Size(518, 255);
+            logWindowControl1.Size = new System.Drawing.Size(720, 426);
             logWindowControl1.TabIndex = 107;
             // 
             // TabControl02
@@ -879,10 +884,10 @@ namespace ServerControlCenterApplication
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             groupBox14.ResumeLayout(false);
             groupBox14.PerformLayout();
             groupBox13.ResumeLayout(false);
-            groupBox13.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
