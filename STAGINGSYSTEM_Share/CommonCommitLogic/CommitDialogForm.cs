@@ -16,6 +16,8 @@ using System.Threading;
 using System.Security.Cryptography;
 using System.Runtime.Versioning;
 using CommonCommitLogicDNet8.Properties;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace CommonCommitLogic
 {
@@ -84,6 +86,10 @@ namespace CommonCommitLogic
         /// nullの場合はまだ確認されていない
         /// </summary>
         private ArcSuiteSearchResult _arcSuiteSearchResult;
+
+        // 2020/03/04[日] 0:00:00
+        private string[] dateStringFormat = { "yyyy-MM-dd", "yyyy/MM/dd", "yyyy/MM/dd HH:mm:ss", "yyyy/MM/dd[ddd] H:mm:ss", "yyyy/MM/dd[ddd] HH:mm:ss" };
+
 
         /// <summary>
         /// 検索結果が1件のみに通用するアークスイート検索図
@@ -681,13 +687,17 @@ namespace CommonCommitLogic
             {
                 // 製図日
                 string strAUTHORDATE = (string)ticketXml.GetParamKeyValue("AUTHORDATE");
+
                 try
                 {
-                    AUTHORDATElabel.Text = DateTime.Parse(strAUTHORDATE).ToString("yyyy/MM/dd");
+                    DateTime dateTime;
+                    if (!SasaLib.StringUtil.TryParseExactMultiple_CurrentCulture(strAUTHORDATE, dateStringFormat, out dateTime))
+                        throw new Exception($"iProperty 時刻文字列変換失敗 {strAUTHORDATE}");
+                    AUTHORDATElabel.Text = dateTime.ToString("yyyy/MM/dd");
                 }
                 catch (Exception ex)
                 {
-                    ErrMsg = $"製図日の日付フォーマットに異常があります -> \"{strAUTHORDATE}\" {ex.Message} {ex.InnerException}";
+                    ErrMsg = $"製図日の日付フォーマットに異常があります -> \"{ticketXml.GetParamKeyValue("AUTHORDATE")}\" {ex.Message} {ex.InnerException}";
                     result = false;
                 }
             }
@@ -699,6 +709,10 @@ namespace CommonCommitLogic
                 string strCHECKDATE = (string)ticketXml.GetParamKeyValue("CHECKDATE");
                 try
                 {
+                    DateTime dateTime;
+                    if (!SasaLib.StringUtil.TryParseExactMultiple_CurrentCulture(strCHECKDATE, dateStringFormat, out dateTime))
+                        throw new Exception($"iProperty 時刻文字列変換失敗 {strCHECKDATE}");
+                    AUTHORDATElabel.Text = dateTime.ToString("yyyy/MM/dd");
 
                     CHECKDATElabel.Text = DateTime.Parse(strCHECKDATE).ToString("yyyy/MM/dd");
                 }
@@ -1203,14 +1217,14 @@ namespace CommonCommitLogic
                             {
                                 if (arcSuiteUserDrawingRev >= cadRevInt)
                                 {
-                                   // MessageBox.Show(this, $"警告.CAD側の表題欄Rev番号が {cadRev} です。ArcSuite側の表題欄Rev番号は {arcSuiteUserDrawingRev} です", "■東陽ｱﾄﾞｲﾝ警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    // MessageBox.Show(this, $"警告.CAD側の表題欄Rev番号が {cadRev} です。ArcSuite側の表題欄Rev番号は {arcSuiteUserDrawingRev} です", "■東陽ｱﾄﾞｲﾝ警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     WriteLine($"※【警告】\"{PARTNUMBER_linklabel.Text}\" CAD側の表題欄Rev番号が {cadRev}は取替図にふさわしくありません。ArcSuite側の図面は {arcSuiteUserDrawingRev} です。ダイアログは閉じられます");
 
                                     InvokeRequired_Control_Text(SameRevWarningIgnore_button, "警告解除", Color.Red, Color.Yellow);
                                     InvokeRequired_Control_Enabled(SameRevWarningIgnore_button, true, true);
 
                                     InvokeRequired_Control_Text(ArcSuiteInformation_label, $"コミットしようとする図面の表題欄Rev番号は '{cadRevInt}' ですが、" +
-                                        $"ArcSuite登録済み最新既存図の方は '{arcSuiteUserDrawingRev}' です。取替図にふさわしくありませんが問題無いでしょうか？", Color.Red,default);
+                                        $"ArcSuite登録済み最新既存図の方は '{arcSuiteUserDrawingRev}' です。取替図にふさわしくありませんが問題無いでしょうか？", Color.Red, default);
 
                                 }
                             }
