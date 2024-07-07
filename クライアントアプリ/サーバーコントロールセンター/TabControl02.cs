@@ -37,6 +37,8 @@ namespace ServerControlCenterApplication
         {
             this.mainForm = form;
             InitializeComponent();
+            logWindowControl = new LogWindowControl();
+            accountUserForm = new AccountUserForm();
 
             sdhelper = new SearchDrawingSetPictureBox(DebugListView2, ResultSearchPattern_label, previewArcSuiteForm, logWindowControl.WriteLine);
 
