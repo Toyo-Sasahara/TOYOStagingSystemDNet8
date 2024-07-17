@@ -18,6 +18,7 @@ using System.Runtime.Versioning;
 using CommonCommitLogicDNet8.Properties;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using EnvDTE;
 
 namespace CommonCommitLogic
 {
@@ -87,10 +88,6 @@ namespace CommonCommitLogic
         /// </summary>
         private ArcSuiteSearchResult _arcSuiteSearchResult;
 
-        // 2020/03/04[日] 0:00:00
-        private string[] dateStringFormat = { "yyyy-MM-dd", "yyyy/MM/dd", "yyyy/MM/dd H:mm:ss", "yyyy/MM/dd HH:mm:ss", "yyyy/MM/dd[ddd] H:mm:ss", "yyyy/MM/dd[ddd] HH:mm:ss" };
-
-
         /// <summary>
         /// 検索結果が1件のみに通用するアークスイート検索図
         /// </summary>
@@ -138,10 +135,16 @@ namespace CommonCommitLogic
         /// </summary>
         private CommitSupportArcSuite supportArcSuite;
 
+        private bool CanUseVariantTypeDrawing { get; set; }
+
+        private Helper helper = new Helper();
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public CommitDialogForm(CommitParam Config, CommitSupportCadDrawingFile supportCadDrawingFile, CommitSupportArcSuite supportArcSuite, CommitSupportNumbering supportNumbering, SasaLibDelegateWriteLine WriteLine, bool PrintOutOnly = false)
+        public CommitDialogForm(CommitParam Config, CommitSupportCadDrawingFile supportCadDrawingFile,
+            CommitSupportArcSuite supportArcSuite, CommitSupportNumbering supportNumbering,
+            SasaLibDelegateWriteLine WriteLine, bool PrintOutOnly = false, bool CanUseVariantTypeDrawing = false)
         {
             this.commitParam = Config;
             this.PrintOutOnly = PrintOutOnly;
@@ -150,7 +153,7 @@ namespace CommonCommitLogic
             this.supportCadDrawingFile = supportCadDrawingFile;
             this.supportNumbering = supportNumbering;
             this.supportArcSuite = supportArcSuite;
-
+            this.CanUseVariantTypeDrawing = CanUseVariantTypeDrawing;
 
             //this.AtiveDocFullFilename = supportCadDrawingFile.CadDocumentFullfileName;
             ////string activeDocName = System.IO.Path.GetFileName(activeDocFullFileName);
@@ -200,8 +203,8 @@ namespace CommonCommitLogic
 
             ErrorOccurred_Label.Visible = false; // コミットロック中ラベルを非表示へ
 
-            Variant_panel.Visible = false; // 表図面はまだ未対応
-            Variant_panel.Enabled = false; // 表図面はまだ未対応
+            Variant_panel.Visible = false;
+            Variant_panel.Enabled = false;
             PARTNUMBER_CAUTION_label.Text = $"";
 
         }
@@ -251,19 +254,40 @@ namespace CommonCommitLogic
             // 図面種類をコントロールへ指定
             DrawingTypeTextBox.Text = typeNumber.TypeName;
 
-            if (typeNumber.isVariant)
+            if (CanUseVariantTypeDrawing)
             {
+                if (typeNumber.isVariant)
+                {
+                    Variant_panel.Enabled = true;
+                    Variant_panel.Visible = true;
+                }
+                else
+                {
+                    Variant_panel.Enabled = false;
+                    Variant_panel.Visible = false;
+                }
 
-                CommitExecute_Button.Text = "表形式図はコミット非対応";
-
-                Variant_panel.Enabled = true;
-
-                MessageBox.Show("表形式図はコミット操作ができません。\r\n登録担当者による手動スキャニングおよび登録依頼が必要です", "重要");
             }
             else
             {
-                Variant_panel.Enabled = false;
+                if (typeNumber.isVariant)
+                {
+
+                    CommitExecute_Button.Text = "表形式図はコミット非対応";
+
+                    Variant_panel.Enabled = false;
+                    Variant_panel.Visible = false;
+
+                    MessageBox.Show("表形式図はコミット操作ができません。\r\n登録担当者による手動スキャニングおよび登録依頼が必要です", "重要");
+                }
+                else
+                {
+                    Variant_panel.Enabled = false;
+                    Variant_panel.Visible = false;
+
+                }
             }
+
 
             CommitButtonEnableJudge();
 
@@ -328,8 +352,6 @@ namespace CommonCommitLogic
         /// <exception cref="Exception"></exception>
         private void SupportArcSuite_ArcSuiteSearchResultChanged(Object sender, ArcSuiteSearchResult arcSuiteSearchResult)
         {
-            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
-
             DebugConsole.WriteLine(@"ArcSuiteSearchResultChanged イベントがキックされました");
 
             _arcSuiteSearchResult = arcSuiteSearchResult;
@@ -357,12 +379,7 @@ namespace CommonCommitLogic
                     case ArcSuiteSearchResult.DESCRIPTION_ComparResult_MessagetypeEnum.検索結果複数ArcSuiteに同番図面あり類番図面あり:
                         InvokeRequired_Control_Text(ArcSuiteInformation_label, $"【危険】ArcSuite検索結果複数・ {commitTarget_partnumber} が見つかりましたが類番図面も存在します！！", System.Drawing.Color.Red);
 
-                        //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
-                        try
-                        {
-                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
-                        }
-                        catch { }
+                        InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
                         InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸして類番を確認", Color.Red);
                         InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true); // アークスイート結果表示ボタンイネーブル
 
@@ -397,15 +414,7 @@ namespace CommonCommitLogic
                     case ArcSuiteSearchResult.DESCRIPTION_ComparResult_MessagetypeEnum.検索結果１件ArcSuiteに同番図面有り表題は相違:
                         InvokeRequired_Control_Text(ArcSuiteInformation_label, $"【危険】ArcSuite検索結果１件・ {commitTarget_partnumber} が見つかりました。しかし名称・説明が違います！！", System.Drawing.Color.Red);
 
-                        //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
-                        try
-                        {
-                            InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
-                        }
-                        catch (Exception)
-                        {
-
-                        }
+                        InvokeRequired_Button_ImageSet(ArcSuiteDrawingShow_button, Resources.エマージェンシーバックグラウンド);
                         InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸしてArcuSuiteの\r\n図面を表示", Color.Red);
                         InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true); // アークスイート結果表示ボタンイネーブル
 
@@ -685,19 +694,16 @@ namespace CommonCommitLogic
             AUTHORlabel.Text = (string)ticketXml.GetParamKeyValue("AUTHOR");
             if (string.IsNullOrWhiteSpace(AUTHORlabel.Text) == false)
             {
+                CultureInfo provider = CultureInfo.CurrentCulture;
                 // 製図日
                 string strAUTHORDATE = (string)ticketXml.GetParamKeyValue("AUTHORDATE");
-
                 try
                 {
-                    DateTime dateTime;
-                    if (!SasaLib.StringUtil.TryParseExactMultiple_CurrentCulture(strAUTHORDATE, dateStringFormat, out dateTime))
-                        throw new Exception($"iProperty 時刻文字列変換失敗 {strAUTHORDATE}");
-                    AUTHORDATElabel.Text = dateTime.ToString("yyyy/MM/dd");
+                    AUTHORDATElabel.Text = DateTime.Parse(strAUTHORDATE).ToString("yyyy/MM/dd");
                 }
                 catch (Exception ex)
                 {
-                    ErrMsg = $"製図日の日付フォーマットに異常があります -> \"{ticketXml.GetParamKeyValue("AUTHORDATE")}\" {ex.Message} {ex.InnerException}";
+                    ErrMsg = $"製図日の日付フォーマットに異常があります -> \"{strAUTHORDATE}\" {ex.Message} {ex.InnerException}";
                     result = false;
                 }
             }
@@ -709,10 +715,6 @@ namespace CommonCommitLogic
                 string strCHECKDATE = (string)ticketXml.GetParamKeyValue("CHECKDATE");
                 try
                 {
-                    DateTime dateTime;
-                    if (!SasaLib.StringUtil.TryParseExactMultiple_CurrentCulture(strCHECKDATE, dateStringFormat, out dateTime))
-                        throw new Exception($"iProperty 時刻文字列変換失敗 {strCHECKDATE}");
-                    AUTHORDATElabel.Text = dateTime.ToString("yyyy/MM/dd");
 
                     CHECKDATElabel.Text = DateTime.Parse(strCHECKDATE).ToString("yyyy/MM/dd");
                 }
@@ -1013,7 +1015,7 @@ namespace CommonCommitLogic
                             {
                                 //string ArcSuiteURL = Config.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", CommitDialogForm.stArcSuitePreview.user_zuban);
                                 string ArcSuiteURL = commitParam.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", ArcsuitePreview.user_zuban);
-                                Process.Start(ArcSuiteURL);
+                                System.Diagnostics.Process.Start(ArcSuiteURL);
                             }
                         } // WebでArcSuite図面検索
                     }
@@ -1044,20 +1046,79 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private void CommitExecute_Button_Click(object sender, EventArgs e)
         {
-
-            if (_typeNumber != null && _typeNumber.isVariant)
+            if (CanUseVariantTypeDrawing)
             {
-                close_permition = false;
+                if (ticketXml.Variants != null && ticketXml.Variants.Count > 0)
+                {
+                    if (string.IsNullOrWhiteSpace(ActiveVariantEnd_textBox.Text))
+                    {
+                        close_permition = false;
 
-                DialogResult dialogResult = MessageBox.Show("※表形式です！！現時点は非対応。印刷したら手動承認後、表図面登録棚に提出してください", $"", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show("※表図面の場合は有効な最大枝番の指定が必要です", $"", MessageBoxButtons.YesNo);
 
+                        this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                        return;
+                    }
+                    else
+                    {
+                        //ticketXml.Variants;
+                        List<CommonTicket.Variant> newVariants = new List<CommonTicket.Variant>();
+                        foreach (CommonTicket.Variant variant in ticketXml.Variants)
+                        {
+                            string prefix;
+                            string rangePart;
+                            string rangeStart;
+                            string rangeEnd;
+                            string suffix;
 
-                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-                return;
+                            helper.ParseString2(variant.PRARTNUMBER, out prefix, out rangePart, out rangeStart, out rangeEnd, out suffix);
+
+                            int number;
+                            bool success = int.TryParse(rangeStart, out number);
+
+                            int number2;
+                            bool success2 = int.TryParse(ActiveVariantEnd_textBox.Text, out number2);
+
+                            if (success && success2)
+                            {
+                                // 変換成功した場合の処理
+                                if (number <= number2)
+                                {
+                                    newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = true });
+                                }
+                                else
+                                {
+                                    newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = false });
+                                }
+
+                            }
+                            else
+                            {
+                                // 変換失敗した場合の処理
+                                throw new Exception("表図面の範囲文字列の取得・変換に失敗");
+                            }
+                        }
+                        ticketXml.Variants = newVariants;
+                    }
+                }
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
             }
+            else
+            {
+                if (ticketXml.Variants != null && ticketXml.Variants.Count > 0)
+                {
+                    close_permition = false;
 
-            this.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Close();
+                    DialogResult dialogResult = MessageBox.Show("※表形式です！！現時点は非対応。印刷したら手動承認後、表図面登録棚に提出してください", $"", MessageBoxButtons.YesNo);
+
+
+                    this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                    return;
+                }
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
+            }
         }
 
         /// <summary>
@@ -1124,10 +1185,10 @@ namespace CommonCommitLogic
                 commitParam.StageServerHost, commitParam.PipeNameDC);
 
 
-            var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName();
-            var printerAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias();
-            var printerFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus();
-            var printerSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize();
+            var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: true);
+            var printerAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(objectConvNew: true);
+            var printerFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(objectConvNew: true);
+            var printerSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize(objectConvNew: true);
 
             StringBuilder sb = new StringBuilder();
 
@@ -1179,15 +1240,7 @@ namespace CommonCommitLogic
 
             InvokeRequired_Control_Text(button, buttonMsg);
 
-            //TODO: 恐らく WindowsFormsリソース関連でエラーとなる
-            try
-            {
-                button.Image = Resources.エマージェンシーバックグラウンド;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message}", "CommitDialogForm.ButtonBackgroundImageWarrningSet(..)にて例外");
-            }
+            button.Image = Resources.エマージェンシーバックグラウンド;
         }
 
         /// <summary>
@@ -1343,5 +1396,9 @@ namespace CommonCommitLogic
 
         }
 
+        private void ChangeNormalOrVariant_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,6 +22,7 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitSupportArcSuite.cs" Link="CommitSupportArcSuite.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitSupportCadDrawingFile.cs" Link="CommitSupportCadDrawingFile.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitSupportNumbering.cs" Link="CommitSupportNumbering.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\Helper.cs" Link="Helper.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ReserveNumber.cs" Link="ReserveNumber.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TypeNumber.cs" Link="TypeNumber.cs" />
 	</ItemGroup>

@@ -10,9 +10,11 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\CMDS.cs" Link="CMDS.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\ConfigFilesFullPath.cs" Link="ConfigFilesFullPath.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\KWD.cs" Link="KWD.cs" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
 		<ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
 	</ItemGroup>
 	<ItemGroup>
