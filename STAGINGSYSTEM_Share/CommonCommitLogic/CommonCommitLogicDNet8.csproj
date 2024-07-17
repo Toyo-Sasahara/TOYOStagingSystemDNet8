@@ -12,6 +12,7 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<Deterministic>false</Deterministic>
 		<Nullable>disable</Nullable>
+		<RootNamespace>CommonCommitLogic</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ArcSuiteSearchResult.cs" Link="ArcSuiteSearchResult.cs" />
