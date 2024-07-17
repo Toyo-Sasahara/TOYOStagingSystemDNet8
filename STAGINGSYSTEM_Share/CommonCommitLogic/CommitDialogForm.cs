@@ -699,7 +699,12 @@ namespace CommonCommitLogic
                 string strAUTHORDATE = (string)ticketXml.GetParamKeyValue("AUTHORDATE");
                 try
                 {
-                    AUTHORDATElabel.Text = DateTime.Parse(strAUTHORDATE).ToString("yyyy/MM/dd");
+                    DateTime authorDatetime;
+                    bool result1 = StringUtil.TryParseExactMultiple_CurrentCulture(strAUTHORDATE, new List<string> { "yyyy/MM/dd", "yyyy/MM/dd[ddd] H:mm:ss" }.ToArray(), out authorDatetime);
+                    if (result)
+                        AUTHORDATElabel.Text = authorDatetime.ToString("yyyy/MM/dd");
+                    else
+                        throw new Exception();
                 }
                 catch (Exception ex)
                 {
@@ -715,8 +720,12 @@ namespace CommonCommitLogic
                 string strCHECKDATE = (string)ticketXml.GetParamKeyValue("CHECKDATE");
                 try
                 {
-
-                    CHECKDATElabel.Text = DateTime.Parse(strCHECKDATE).ToString("yyyy/MM/dd");
+                    DateTime checkDatetime;
+                    bool result1 = StringUtil.TryParseExactMultiple_CurrentCulture(strCHECKDATE, new List<string> { "yyyy/MM/dd", "yyyy/MM/dd[ddd] H:mm:ss" }.ToArray(), out checkDatetime);
+                    if (result)
+                        CHECKDATElabel.Text = checkDatetime.ToString("yyyy/MM/dd");
+                    else
+                        throw new Exception();
                 }
                 catch (Exception ex)
                 {
@@ -724,6 +733,7 @@ namespace CommonCommitLogic
                     result = false;
                 }
             }
+
 
             if (commitParam.PrinterDriverName != "")
             {
