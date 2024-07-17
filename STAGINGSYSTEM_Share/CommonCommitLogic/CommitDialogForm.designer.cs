@@ -36,13 +36,15 @@ namespace CommonCommitLogic
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommitDialogForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.Variant_panel = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ChangeNormalOrVariant_button = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.ActiveVariantEnd_textBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.VariantNumber_MAX_textBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.VariantNumber_MIN_textBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DrawingTypeTextBox = new System.Windows.Forms.TextBox();
@@ -104,8 +106,6 @@ namespace CommonCommitLogic
             this.commitPreviewImage = new CommitPreviewImage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.CadFileInformation_groupBox = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.Variant_panel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -146,7 +146,7 @@ namespace CommonCommitLogic
             // 
             this.Variant_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Variant_panel.Controls.Add(this.label11);
-            this.Variant_panel.Controls.Add(this.button1);
+            this.Variant_panel.Controls.Add(this.ChangeNormalOrVariant_button);
             this.Variant_panel.Controls.Add(this.label10);
             this.Variant_panel.Controls.Add(this.ActiveVariantEnd_textBox);
             this.Variant_panel.Controls.Add(this.label9);
@@ -160,6 +160,45 @@ namespace CommonCommitLogic
             this.Variant_panel.Name = "Variant_panel";
             this.Variant_panel.Size = new System.Drawing.Size(292, 60);
             this.Variant_panel.TabIndex = 83;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Enabled = false;
+            this.label11.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(105, 5);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 18);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "≦";
+            // 
+            // ChangeNormalOrVariant_button
+            // 
+            this.ChangeNormalOrVariant_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            this.ChangeNormalOrVariant_button.Location = new System.Drawing.Point(180, 33);
+            this.ChangeNormalOrVariant_button.Name = "ChangeNormalOrVariant_button";
+            this.ChangeNormalOrVariant_button.Size = new System.Drawing.Size(106, 23);
+            this.ChangeNormalOrVariant_button.TabIndex = 46;
+            this.ChangeNormalOrVariant_button.Text = "表図面⇔通常図";
+            this.ChangeNormalOrVariant_button.UseVisualStyleBackColor = true;
+            this.ChangeNormalOrVariant_button.Click += ChangeNormalOrVariant_button_Click;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("メイリオ", 9F);
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(6, 33);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 18);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "有効の最大枝番号:";
             // 
             // ActiveVariantEnd_textBox
             // 
@@ -243,21 +282,6 @@ namespace CommonCommitLogic
             this.VariantNumber_MAX_textBox.TabIndex = 39;
             this.VariantNumber_MAX_textBox.Text = "---";
             this.VariantNumber_MAX_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Enabled = false;
-            this.label11.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(105, 5);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 18);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "≦";
             // 
             // VariantNumber_MIN_textBox
             // 
@@ -1038,29 +1062,6 @@ namespace CommonCommitLogic
             this.CadFileInformation_groupBox.TabStop = false;
             this.CadFileInformation_groupBox.Text = "●CAD図面ファイル調査";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("メイリオ", 9F);
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(6, 33);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 18);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "有効の最大枝番号:";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(180, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "表図面⇔通常図";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // CommitDialogForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1186,7 +1187,7 @@ namespace CommonCommitLogic
         private System.Windows.Forms.Button SameRevWarningIgnore_button;
         private CommonCommitLogic.CommitPreviewImage commitPreviewImage;
         internal System.Windows.Forms.TextBox ActiveVariantEnd_textBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ChangeNormalOrVariant_button;
         public System.Windows.Forms.Label label10;
     }
 }
