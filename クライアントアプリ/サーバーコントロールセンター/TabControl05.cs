@@ -305,14 +305,14 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void DR_ConnectTest_button_Click(object sender, EventArgs e)
         {
-            Command_Status.DR_ConnectTest($"{AssemblyInternalName} {PIPETESTMSG_textBox.Text}", LogWindowWriteLine);
+            Command_Status.DR_ConnectTest($"{AssemblyInternalName} {PIPETESTMSG_textBox.Text}", WriteLine:LogWindowWriteLine);
 
         }
 
 
         private void DC_ConnectTest_button_Click(object sender, EventArgs e)
         {
-            Command_Status.DC_ConnectTest($"{AssemblyInternalName} {PIPETESTMSG_textBox.Text}", LogWindowWriteLine);
+            Command_Status.DC_ConnectTest($"{AssemblyInternalName} {PIPETESTMSG_textBox.Text}", WriteLine:LogWindowWriteLine);
 
         }
 

@@ -645,8 +645,7 @@ namespace ServerControlCenterApplication
             var GUIDBASE64 = sdhelper.GetSelectedData("GUIDBASE64");
 
 
-
-            rMmaintenance.PlotouDrawingGUIDBASE64(GUIDBASE64, PrinterSelcomboBox.Text);
+            rMmaintenance.PrintOutDrawingForGUIDBASE64(GUIDBASE64, PrinterSelcomboBox.Text);
 
         }
     }

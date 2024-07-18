@@ -12,6 +12,8 @@ using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToyoStageService;
+using static CommonTicket;
 //using ToyoMcMfg.Staging.RemoteObjects;
 
 namespace ServerControlCenterApplication
@@ -162,7 +164,6 @@ namespace ServerControlCenterApplication
             string DESCRIPTION = DESCRIPTION_textBox.Text;
             string MATERIAL = MATERIAL_textBox.Text;
 
-            string printerName = (string)PrinterSel_comboBox.SelectedValue;
 
 
 
@@ -192,17 +193,19 @@ namespace ServerControlCenterApplication
             CommitTest.UpdateComonTicketParam(ref prms, "FIRSTCUSTOMER", "〇１製薬");
             CommitTest.UpdateComonTicketParam(ref prms, "CUSTOMER", "〇２製薬");
 
-            List<CommonTicket.Param> variantparams = new List<CommonTicket.Param>();
+            List<CommonTicket.Variant> variant = new List<CommonTicket.Variant>();
 
             if (VARIANT_Type_checkBox.Checked)
             {
-                CommitTest.UpdateComonTicketParam(ref prms, "VARIANT", "1");
+                // TextBox.Text を改行で分割して List<string> に変換
+                List<string> lines = VARIANT_PARTNUMBER_textBox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
 
-                CommitTest.UpdateComonTicketParam(ref variantparams, "PARTNUMBER", VARIANT_PARTNUMBER_textBox.Text);
+                CommitTest.UpdateComonTicketVariant(ref variant, lines, true);
             }
 
+            string printerName = (string)PrinterSel_comboBox.SelectedValue;
 
-            ComitTestStart(TemplateFile, prms, variantparams, printerName);
+            ComitTestStart(TemplateFile, prms, variant, printerName);
         }
 
         private void CommitContinuouslyTest_Button_Click(object sender, EventArgs e)
@@ -241,7 +244,8 @@ namespace ServerControlCenterApplication
             CommitTest.UpdateComonTicketParam(ref prms, "FIRSTCUSTOMER", "〇１製薬");
             CommitTest.UpdateComonTicketParam(ref prms, "CUSTOMER", "〇２製薬");
 
-            List<CommonTicket.Param> variantparams = new List<CommonTicket.Param>();
+
+            List<CommonTicket.Variant> variantparams = new List<CommonTicket.Variant>();
 
 
             foreach (var pp in TESTIMAGEDraw_TexstTextBox2.Lines)
@@ -251,7 +255,17 @@ namespace ServerControlCenterApplication
                     string TemplateFile = TESTIMAGE_comboBox.Text;
                     CommitTest.UpdateComonTicketParam(ref prms, "PARTNUMBER", pp);
 
-                    string printerName = (string)PrinterSel_comboBox2.SelectedValue;
+                    string printerName;
+
+                    if (CommtiNoPrintout_checkBox.Checked)
+                    {
+                        printerName = KWD.NoPrintCommitPrinter;
+                    }
+                    else
+                    {
+                        printerName = (string)PrinterSel_comboBox2.SelectedValue;
+                    }
+
 
                     var ticketcode = ComitTestStart(TemplateFile, prms, variantparams, printerName);
 
@@ -261,7 +275,7 @@ namespace ServerControlCenterApplication
             }
         }
 
-        string ComitTestStart(string TemplateFile, List<CommonTicket.Param> prms, List<CommonTicket.Param> variantparams, string printerName)
+        string ComitTestStart(string TemplateFile, List<CommonTicket.Param> prms, List<CommonTicket.Variant> variantparams, string printerName)
         {
 
             string CurrentProcessPath = FileFolder.GetCurrentProcessePath();
