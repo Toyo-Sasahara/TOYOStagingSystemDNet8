@@ -86,10 +86,10 @@
             this.サービス接続情報.Controls.Add(this.DrawcapturePIPEnameTextBox);
             this.サービス接続情報.Dock = System.Windows.Forms.DockStyle.Fill;
             this.サービス接続情報.Location = new System.Drawing.Point(0, 0);
-            this.サービス接続情報.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.サービス接続情報.Margin = new System.Windows.Forms.Padding(4);
             this.サービス接続情報.Name = "サービス接続情報";
-            this.サービス接続情報.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.サービス接続情報.Size = new System.Drawing.Size(1221, 129);
+            this.サービス接続情報.Padding = new System.Windows.Forms.Padding(4);
+            this.サービス接続情報.Size = new System.Drawing.Size(1200, 129);
             this.サービス接続情報.TabIndex = 0;
             this.サービス接続情報.TabStop = false;
             this.サービス接続情報.Text = "サービス接続情報";
@@ -101,7 +101,7 @@
             this.panel10.Controls.Add(this.DR_ConnectTest_button);
             this.panel10.Controls.Add(this.PIPETESTMSG_textBox);
             this.panel10.Location = new System.Drawing.Point(898, 19);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(141, 100);
             this.panel10.TabIndex = 128;
@@ -110,7 +110,7 @@
             // 
             this.SW_ConnectTest_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.SW_ConnectTest_button.Location = new System.Drawing.Point(6, 71);
-            this.SW_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SW_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4);
             this.SW_ConnectTest_button.Name = "SW_ConnectTest_button";
             this.SW_ConnectTest_button.Size = new System.Drawing.Size(132, 22);
             this.SW_ConnectTest_button.TabIndex = 127;
@@ -122,7 +122,7 @@
             // 
             this.DC_ConnectTest_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.DC_ConnectTest_button.Location = new System.Drawing.Point(7, 26);
-            this.DC_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DC_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4);
             this.DC_ConnectTest_button.Name = "DC_ConnectTest_button";
             this.DC_ConnectTest_button.Size = new System.Drawing.Size(132, 22);
             this.DC_ConnectTest_button.TabIndex = 126;
@@ -134,7 +134,7 @@
             // 
             this.DR_ConnectTest_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.DR_ConnectTest_button.Location = new System.Drawing.Point(6, 49);
-            this.DR_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DR_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4);
             this.DR_ConnectTest_button.Name = "DR_ConnectTest_button";
             this.DR_ConnectTest_button.Size = new System.Drawing.Size(132, 22);
             this.DR_ConnectTest_button.TabIndex = 1;
@@ -146,7 +146,7 @@
             // 
             this.PIPETESTMSG_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.PIPETESTMSG_textBox.Location = new System.Drawing.Point(9, 4);
-            this.PIPETESTMSG_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PIPETESTMSG_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.PIPETESTMSG_textBox.Name = "PIPETESTMSG_textBox";
             this.PIPETESTMSG_textBox.Size = new System.Drawing.Size(128, 23);
             this.PIPETESTMSG_textBox.TabIndex = 125;
@@ -158,9 +158,9 @@
             this.groupBox2.Controls.Add(this.SW_Shudown_button);
             this.groupBox2.Controls.Add(this.DR_Shudown_button);
             this.groupBox2.Location = new System.Drawing.Point(1046, 19);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(135, 100);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
@@ -169,7 +169,7 @@
             // DC_Shudown_button
             // 
             this.DC_Shudown_button.Location = new System.Drawing.Point(7, 15);
-            this.DC_Shudown_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DC_Shudown_button.Margin = new System.Windows.Forms.Padding(4);
             this.DC_Shudown_button.Name = "DC_Shudown_button";
             this.DC_Shudown_button.Size = new System.Drawing.Size(121, 25);
             this.DC_Shudown_button.TabIndex = 18;
@@ -180,7 +180,7 @@
             // SW_Shudown_button
             // 
             this.SW_Shudown_button.Location = new System.Drawing.Point(7, 65);
-            this.SW_Shudown_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SW_Shudown_button.Margin = new System.Windows.Forms.Padding(4);
             this.SW_Shudown_button.Name = "SW_Shudown_button";
             this.SW_Shudown_button.Size = new System.Drawing.Size(121, 25);
             this.SW_Shudown_button.TabIndex = 16;
@@ -191,7 +191,7 @@
             // DR_Shudown_button
             // 
             this.DR_Shudown_button.Location = new System.Drawing.Point(7, 40);
-            this.DR_Shudown_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DR_Shudown_button.Margin = new System.Windows.Forms.Padding(4);
             this.DR_Shudown_button.Name = "DR_Shudown_button";
             this.DR_Shudown_button.Size = new System.Drawing.Size(121, 25);
             this.DR_Shudown_button.TabIndex = 17;
@@ -216,9 +216,9 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.CommitServerHostLabel);
             this.groupBox1.Location = new System.Drawing.Point(674, 19);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(221, 100);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -228,7 +228,7 @@
             // 
             this.CommitPathTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.CommitPathTextBox.Location = new System.Drawing.Point(103, 56);
-            this.CommitPathTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CommitPathTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CommitPathTextBox.Name = "CommitPathTextBox";
             this.CommitPathTextBox.ReadOnly = true;
             this.CommitPathTextBox.Size = new System.Drawing.Size(105, 23);
@@ -239,7 +239,7 @@
             // 
             this.CommitShareNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.CommitShareNameTextBox.Location = new System.Drawing.Point(103, 20);
-            this.CommitShareNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CommitShareNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CommitShareNameTextBox.Name = "CommitShareNameTextBox";
             this.CommitShareNameTextBox.Size = new System.Drawing.Size(105, 23);
             this.CommitShareNameTextBox.TabIndex = 1;
@@ -270,7 +270,7 @@
             // DrawWatchPIPEnameTextBox
             // 
             this.DrawWatchPIPEnameTextBox.Location = new System.Drawing.Point(507, 96);
-            this.DrawWatchPIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DrawWatchPIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrawWatchPIPEnameTextBox.Name = "DrawWatchPIPEnameTextBox";
             this.DrawWatchPIPEnameTextBox.ReadOnly = true;
             this.DrawWatchPIPEnameTextBox.Size = new System.Drawing.Size(159, 23);
@@ -283,7 +283,7 @@
             this.StageServerHostName_comboBox.FormattingEnabled = true;
             this.StageServerHostName_comboBox.Items.AddRange(new object[] { "CS1", "CS2", "CS3", "ADS1", "ADS2", "DC3", "DC4", "ACVLT1", "ACVLT3", "SWEPDM2", "localhost" });
             this.StageServerHostName_comboBox.Location = new System.Drawing.Point(9, 41);
-            this.StageServerHostName_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StageServerHostName_comboBox.Margin = new System.Windows.Forms.Padding(4);
             this.StageServerHostName_comboBox.Name = "StageServerHostName_comboBox";
             this.StageServerHostName_comboBox.Size = new System.Drawing.Size(150, 43);
             this.StageServerHostName_comboBox.TabIndex = 11;
@@ -294,7 +294,7 @@
             // 
             this.ClientImpersonationCheckBox.AutoSize = true;
             this.ClientImpersonationCheckBox.Location = new System.Drawing.Point(173, 40);
-            this.ClientImpersonationCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientImpersonationCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClientImpersonationCheckBox.Name = "ClientImpersonationCheckBox";
             this.ClientImpersonationCheckBox.Size = new System.Drawing.Size(86, 19);
             this.ClientImpersonationCheckBox.TabIndex = 3;
@@ -305,7 +305,7 @@
             // LogonPasswordTextBox
             // 
             this.LogonPasswordTextBox.Location = new System.Drawing.Point(474, 39);
-            this.LogonPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogonPasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.LogonPasswordTextBox.Name = "LogonPasswordTextBox";
             this.LogonPasswordTextBox.PasswordChar = '*';
             this.LogonPasswordTextBox.Size = new System.Drawing.Size(100, 23);
@@ -325,7 +325,7 @@
             // LogonUserTextBox
             // 
             this.LogonUserTextBox.Location = new System.Drawing.Point(366, 39);
-            this.LogonUserTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogonUserTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.LogonUserTextBox.Name = "LogonUserTextBox";
             this.LogonUserTextBox.Size = new System.Drawing.Size(100, 23);
             this.LogonUserTextBox.TabIndex = 5;
@@ -334,7 +334,7 @@
             // DrawregistPIPEnameTextBox
             // 
             this.DrawregistPIPEnameTextBox.Location = new System.Drawing.Point(337, 96);
-            this.DrawregistPIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DrawregistPIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrawregistPIPEnameTextBox.Name = "DrawregistPIPEnameTextBox";
             this.DrawregistPIPEnameTextBox.ReadOnly = true;
             this.DrawregistPIPEnameTextBox.Size = new System.Drawing.Size(159, 23);
@@ -344,7 +344,7 @@
             // LogonDomainTextBox
             // 
             this.LogonDomainTextBox.Location = new System.Drawing.Point(282, 39);
-            this.LogonDomainTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogonDomainTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.LogonDomainTextBox.Name = "LogonDomainTextBox";
             this.LogonDomainTextBox.Size = new System.Drawing.Size(76, 23);
             this.LogonDomainTextBox.TabIndex = 4;
@@ -403,7 +403,7 @@
             // DrawcapturePIPEnameTextBox
             // 
             this.DrawcapturePIPEnameTextBox.Location = new System.Drawing.Point(170, 96);
-            this.DrawcapturePIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DrawcapturePIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrawcapturePIPEnameTextBox.Name = "DrawcapturePIPEnameTextBox";
             this.DrawcapturePIPEnameTextBox.ReadOnly = true;
             this.DrawcapturePIPEnameTextBox.Size = new System.Drawing.Size(159, 23);
@@ -415,9 +415,9 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(this.サービス接続情報);
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "AccountUserForm";
-            Size = new System.Drawing.Size(1221, 129);
+            Size = new System.Drawing.Size(1200, 129);
             this.サービス接続情報.ResumeLayout(false);
             this.サービス接続情報.PerformLayout();
             this.panel10.ResumeLayout(false);
