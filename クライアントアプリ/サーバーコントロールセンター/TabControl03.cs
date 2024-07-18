@@ -35,6 +35,7 @@ namespace ServerControlCenterApplication
 
         private void TabControl3_Load(object sender, EventArgs e)
         {
+            accountUserForm.WriteLine = logWindowControl.WriteLine;
 
         }
 
@@ -71,6 +72,10 @@ namespace ServerControlCenterApplication
             accountUserForm.ControlChanged(sender, e);
         }
 
+        private void accountUserForm3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
 
         private void TICKETCODEtextBox_Click(object sender, EventArgs e)
@@ -585,6 +590,12 @@ namespace ServerControlCenterApplication
 
         private void DirectPrintButton_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void logwindowClear_button_Click(object sender, EventArgs e)
+        {
+            logWindowControl.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
 
         }
     }

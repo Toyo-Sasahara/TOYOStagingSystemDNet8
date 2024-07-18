@@ -591,6 +591,15 @@ namespace ServerControlCenterApplication
             logWindowControl.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
 
         }
+
+        private void PrinterSel_comboBox_DropDown(object sender, EventArgs e)
+        {
+            logWindowControl.Clear();
+            mainForm.CommitPrinters.GetData(objectConvNew: true, logWindowControl.WriteLine);
+
+            mainForm.CommitPrinters.SetComboBox(ref PrinterSel_comboBox);
+
+        }
     }
 
 

@@ -30,7 +30,13 @@ namespace ServerControlCenterApplication
         private void InitializeComponent()
         {
             this.MMapdValueGroupBox = new System.Windows.Forms.GroupBox();
+            this.objectConvNew_checkBox = new System.Windows.Forms.CheckBox();
             this.MMapdValue_panel = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.SUB_FileStoreForderUNC_textBox = new System.Windows.Forms.TextBox();
+            this.SUB_DATASOURCE_textBox = new System.Windows.Forms.TextBox();
+            this.REPLICATIONTOSUBHOST_checkBox = new System.Windows.Forms.CheckBox();
+            this.SUB_DBHOST_textBox = new System.Windows.Forms.TextBox();
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -47,9 +53,6 @@ namespace ServerControlCenterApplication
             this.COMMITACCEPTFALSEMSG_TextBox = new System.Windows.Forms.TextBox();
             this.SetMMapdButton = new System.Windows.Forms.Button();
             this.GetMMapdButton = new System.Windows.Forms.Button();
-            this.ClientImpersonationPanel = new System.Windows.Forms.Panel();
-            this.CheckMasterOrSlave_button = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.FileStoreCheckButton = new System.Windows.Forms.Button();
             this.FILESTORERepareButton = new System.Windows.Forms.Button();
@@ -83,7 +86,7 @@ namespace ServerControlCenterApplication
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.RestoreTargetServer_label = new System.Windows.Forms.Label();
+            this.RestoreOrderTargetServer_label = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.DataBaseBackupCreateTime_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.RestoreTargetSerer_comboBox = new System.Windows.Forms.ComboBox();
@@ -91,21 +94,26 @@ namespace ServerControlCenterApplication
             this.RestoreStart_button = new System.Windows.Forms.Button();
             this.RestoreSourceFolder_textBox = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.BackupOrderTargetServer_label = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BackupDistServer_comboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.DATABASEbackupButton = new System.Windows.Forms.Button();
             this.BackupFolderPathTextBox = new System.Windows.Forms.TextBox();
+            this.GetBackupStatusButton = new System.Windows.Forms.Button();
             this.GetNumberOfJob_button = new System.Windows.Forms.Button();
             this.PrinterSel_comboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.logwindowClear_button = new System.Windows.Forms.Button();
             this.logWindowControl = new ServerControlCenterApplication.LogWindowControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.accountUserForm = new ServerControlCenterApplication.AccountUserForm();
             this.MMapdValueGroupBox.SuspendLayout();
             this.MMapdValue_panel.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.ClientImpersonationPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.DEBUGLevelGroup.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -113,22 +121,39 @@ namespace ServerControlCenterApplication
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MMapdValueGroupBox
             // 
+            this.MMapdValueGroupBox.Controls.Add(this.objectConvNew_checkBox);
             this.MMapdValueGroupBox.Controls.Add(this.MMapdValue_panel);
             this.MMapdValueGroupBox.Controls.Add(this.SetMMapdButton);
             this.MMapdValueGroupBox.Controls.Add(this.GetMMapdButton);
             this.MMapdValueGroupBox.Location = new System.Drawing.Point(3, 116);
             this.MMapdValueGroupBox.Name = "MMapdValueGroupBox";
-            this.MMapdValueGroupBox.Size = new System.Drawing.Size(615, 209);
+            this.MMapdValueGroupBox.Size = new System.Drawing.Size(615, 307);
             this.MMapdValueGroupBox.TabIndex = 125;
             this.MMapdValueGroupBox.TabStop = false;
             this.MMapdValueGroupBox.Text = "メモリマップドファイル制御 (ToyoSTAGINGSYSTEMwatch)";
             // 
+            // objectConvNew_checkBox
+            // 
+            this.objectConvNew_checkBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.objectConvNew_checkBox.AutoSize = true;
+            this.objectConvNew_checkBox.Checked = true;
+            this.objectConvNew_checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.objectConvNew_checkBox.Location = new System.Drawing.Point(496, 8);
+            this.objectConvNew_checkBox.Name = "objectConvNew_checkBox";
+            this.objectConvNew_checkBox.Size = new System.Drawing.Size(113, 17);
+            this.objectConvNew_checkBox.TabIndex = 147;
+            this.objectConvNew_checkBox.Text = "objectConvNew";
+            this.objectConvNew_checkBox.UseVisualStyleBackColor = true;
+            // 
             // MMapdValue_panel
             // 
+            this.MMapdValue_panel.Controls.Add(this.groupBox2);
             this.MMapdValue_panel.Controls.Add(this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox);
             this.MMapdValue_panel.Controls.Add(this.panel1);
             this.MMapdValue_panel.Controls.Add(this.TESTMODE_CheckBox);
@@ -138,21 +163,70 @@ namespace ServerControlCenterApplication
             this.MMapdValue_panel.Controls.Add(this.ArcSuiteRegistrationCycle_CheckBox);
             this.MMapdValue_panel.Controls.Add(this.COMMITACCEPT_CheckBox);
             this.MMapdValue_panel.Controls.Add(this.COMMITACCEPTFALSEMSG_TextBox);
-            this.MMapdValue_panel.Location = new System.Drawing.Point(11, 19);
+            this.MMapdValue_panel.Location = new System.Drawing.Point(11, 31);
             this.MMapdValue_panel.Name = "MMapdValue_panel";
-            this.MMapdValue_panel.Size = new System.Drawing.Size(603, 155);
+            this.MMapdValue_panel.Size = new System.Drawing.Size(603, 242);
             this.MMapdValue_panel.TabIndex = 146;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.SUB_FileStoreForderUNC_textBox);
+            this.groupBox2.Controls.Add(this.SUB_DATASOURCE_textBox);
+            this.groupBox2.Controls.Add(this.REPLICATIONTOSUBHOST_checkBox);
+            this.groupBox2.Controls.Add(this.SUB_DBHOST_textBox);
+            this.groupBox2.Location = new System.Drawing.Point(4, 125);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(267, 87);
+            this.groupBox2.TabIndex = 147;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "データレプリケーション";
+            // 
+            // SUB_FileStoreForderUNC_textBox
+            // 
+            this.SUB_FileStoreForderUNC_textBox.Location = new System.Drawing.Point(53, 62);
+            this.SUB_FileStoreForderUNC_textBox.Name = "SUB_FileStoreForderUNC_textBox";
+            this.SUB_FileStoreForderUNC_textBox.Size = new System.Drawing.Size(208, 20);
+            this.SUB_FileStoreForderUNC_textBox.TabIndex = 148;
+            this.SUB_FileStoreForderUNC_textBox.Text = "--";
+            // 
+            // SUB_DATASOURCE_textBox
+            // 
+            this.SUB_DATASOURCE_textBox.Location = new System.Drawing.Point(173, 36);
+            this.SUB_DATASOURCE_textBox.Name = "SUB_DATASOURCE_textBox";
+            this.SUB_DATASOURCE_textBox.Size = new System.Drawing.Size(87, 20);
+            this.SUB_DATASOURCE_textBox.TabIndex = 147;
+            this.SUB_DATASOURCE_textBox.Text = "--";
+            // 
+            // REPLICATIONTOSUBHOST_checkBox
+            // 
+            this.REPLICATIONTOSUBHOST_checkBox.AutoSize = true;
+            this.REPLICATIONTOSUBHOST_checkBox.CheckAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.REPLICATIONTOSUBHOST_checkBox.Location = new System.Drawing.Point(6, 18);
+            this.REPLICATIONTOSUBHOST_checkBox.Name = "REPLICATIONTOSUBHOST_checkBox";
+            this.REPLICATIONTOSUBHOST_checkBox.Size = new System.Drawing.Size(178, 17);
+            this.REPLICATIONTOSUBHOST_checkBox.TabIndex = 145;
+            this.REPLICATIONTOSUBHOST_checkBox.Text = "REPLICATIONTOSUBHOST";
+            this.REPLICATIONTOSUBHOST_checkBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.REPLICATIONTOSUBHOST_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // SUB_DBHOST_textBox
+            // 
+            this.SUB_DBHOST_textBox.Location = new System.Drawing.Point(53, 36);
+            this.SUB_DBHOST_textBox.Name = "SUB_DBHOST_textBox";
+            this.SUB_DBHOST_textBox.Size = new System.Drawing.Size(62, 20);
+            this.SUB_DBHOST_textBox.TabIndex = 146;
+            this.SUB_DBHOST_textBox.Text = "--";
             // 
             // RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox
             // 
+            this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.AutoSize = true;
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.CheckAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Location = new System.Drawing.Point(7, 130);
+            this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Location = new System.Drawing.Point(7, 218);
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Name = "RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox";
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Size = new System.Drawing.Size(324, 17);
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.TabIndex = 134;
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Text = "RemoteServerCommand_DATABASE_EventView_Send";
-            this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -161,7 +235,7 @@ namespace ServerControlCenterApplication
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Location = new System.Drawing.Point(4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(338, 30);
+            this.panel1.Size = new System.Drawing.Size(343, 30);
             this.panel1.TabIndex = 144;
             // 
             // panel8
@@ -223,9 +297,10 @@ namespace ServerControlCenterApplication
             // 
             // TESTMODE_CheckBox
             // 
+            this.TESTMODE_CheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TESTMODE_CheckBox.AutoSize = true;
             this.TESTMODE_CheckBox.CheckAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.TESTMODE_CheckBox.Location = new System.Drawing.Point(430, 130);
+            this.TESTMODE_CheckBox.Location = new System.Drawing.Point(504, 218);
             this.TESTMODE_CheckBox.Name = "TESTMODE_CheckBox";
             this.TESTMODE_CheckBox.Size = new System.Drawing.Size(91, 17);
             this.TESTMODE_CheckBox.TabIndex = 129;
@@ -236,7 +311,7 @@ namespace ServerControlCenterApplication
             // ImmediateryPrinting_CheckBox
             // 
             this.ImmediateryPrinting_CheckBox.AutoSize = true;
-            this.ImmediateryPrinting_CheckBox.Location = new System.Drawing.Point(7, 112);
+            this.ImmediateryPrinting_CheckBox.Location = new System.Drawing.Point(7, 102);
             this.ImmediateryPrinting_CheckBox.Name = "ImmediateryPrinting_CheckBox";
             this.ImmediateryPrinting_CheckBox.Size = new System.Drawing.Size(304, 17);
             this.ImmediateryPrinting_CheckBox.TabIndex = 128;
@@ -247,7 +322,7 @@ namespace ServerControlCenterApplication
             // APPROVINGACCEPT_CheckBox
             // 
             this.APPROVINGACCEPT_CheckBox.AutoSize = true;
-            this.APPROVINGACCEPT_CheckBox.Location = new System.Drawing.Point(7, 94);
+            this.APPROVINGACCEPT_CheckBox.Location = new System.Drawing.Point(7, 84);
             this.APPROVINGACCEPT_CheckBox.Name = "APPROVINGACCEPT_CheckBox";
             this.APPROVINGACCEPT_CheckBox.Size = new System.Drawing.Size(266, 17);
             this.APPROVINGACCEPT_CheckBox.TabIndex = 127;
@@ -257,9 +332,9 @@ namespace ServerControlCenterApplication
             // 
             // APPROVINGACCEPTFALSEMSG_TextBox
             // 
-            this.APPROVINGACCEPTFALSEMSG_TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.APPROVINGACCEPTFALSEMSG_TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.APPROVINGACCEPTFALSEMSG_TextBox.Location = new System.Drawing.Point(285, 92);
+            this.APPROVINGACCEPTFALSEMSG_TextBox.Location = new System.Drawing.Point(285, 82);
             this.APPROVINGACCEPTFALSEMSG_TextBox.Name = "APPROVINGACCEPTFALSEMSG_TextBox";
             this.APPROVINGACCEPTFALSEMSG_TextBox.Size = new System.Drawing.Size(310, 20);
             this.APPROVINGACCEPTFALSEMSG_TextBox.TabIndex = 126;
@@ -268,7 +343,7 @@ namespace ServerControlCenterApplication
             // ArcSuiteRegistrationCycle_CheckBox
             // 
             this.ArcSuiteRegistrationCycle_CheckBox.AutoSize = true;
-            this.ArcSuiteRegistrationCycle_CheckBox.Location = new System.Drawing.Point(7, 53);
+            this.ArcSuiteRegistrationCycle_CheckBox.Location = new System.Drawing.Point(7, 43);
             this.ArcSuiteRegistrationCycle_CheckBox.Name = "ArcSuiteRegistrationCycle_CheckBox";
             this.ArcSuiteRegistrationCycle_CheckBox.Size = new System.Drawing.Size(523, 17);
             this.ArcSuiteRegistrationCycle_CheckBox.TabIndex = 124;
@@ -279,7 +354,7 @@ namespace ServerControlCenterApplication
             // COMMITACCEPT_CheckBox
             // 
             this.COMMITACCEPT_CheckBox.AutoSize = true;
-            this.COMMITACCEPT_CheckBox.Location = new System.Drawing.Point(7, 74);
+            this.COMMITACCEPT_CheckBox.Location = new System.Drawing.Point(7, 64);
             this.COMMITACCEPT_CheckBox.Name = "COMMITACCEPT_CheckBox";
             this.COMMITACCEPT_CheckBox.Size = new System.Drawing.Size(246, 17);
             this.COMMITACCEPT_CheckBox.TabIndex = 125;
@@ -289,9 +364,9 @@ namespace ServerControlCenterApplication
             // 
             // COMMITACCEPTFALSEMSG_TextBox
             // 
-            this.COMMITACCEPTFALSEMSG_TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.COMMITACCEPTFALSEMSG_TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.COMMITACCEPTFALSEMSG_TextBox.Location = new System.Drawing.Point(285, 72);
+            this.COMMITACCEPTFALSEMSG_TextBox.Location = new System.Drawing.Point(285, 62);
             this.COMMITACCEPTFALSEMSG_TextBox.Name = "COMMITACCEPTFALSEMSG_TextBox";
             this.COMMITACCEPTFALSEMSG_TextBox.Size = new System.Drawing.Size(310, 20);
             this.COMMITACCEPTFALSEMSG_TextBox.TabIndex = 121;
@@ -299,7 +374,8 @@ namespace ServerControlCenterApplication
             // 
             // SetMMapdButton
             // 
-            this.SetMMapdButton.Location = new System.Drawing.Point(160, 180);
+            this.SetMMapdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SetMMapdButton.Location = new System.Drawing.Point(155, 279);
             this.SetMMapdButton.Name = "SetMMapdButton";
             this.SetMMapdButton.Size = new System.Drawing.Size(143, 22);
             this.SetMMapdButton.TabIndex = 130;
@@ -309,7 +385,8 @@ namespace ServerControlCenterApplication
             // 
             // GetMMapdButton
             // 
-            this.GetMMapdButton.Location = new System.Drawing.Point(8, 180);
+            this.GetMMapdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GetMMapdButton.Location = new System.Drawing.Point(6, 279);
             this.GetMMapdButton.Name = "GetMMapdButton";
             this.GetMMapdButton.Size = new System.Drawing.Size(143, 22);
             this.GetMMapdButton.TabIndex = 118;
@@ -317,50 +394,20 @@ namespace ServerControlCenterApplication
             this.GetMMapdButton.UseVisualStyleBackColor = true;
             this.GetMMapdButton.Click += new System.EventHandler(this.GetMMapdButton_Click);
             // 
-            // ClientImpersonationPanel
-            // 
-            this.ClientImpersonationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClientImpersonationPanel.Controls.Add(this.CheckMasterOrSlave_button);
-            this.ClientImpersonationPanel.Controls.Add(this.button4);
-            this.ClientImpersonationPanel.Location = new System.Drawing.Point(183, 331);
-            this.ClientImpersonationPanel.Name = "ClientImpersonationPanel";
-            this.ClientImpersonationPanel.Size = new System.Drawing.Size(407, 39);
-            this.ClientImpersonationPanel.TabIndex = 127;
-            // 
-            // CheckMasterOrSlave_button
-            // 
-            this.CheckMasterOrSlave_button.Location = new System.Drawing.Point(13, 3);
-            this.CheckMasterOrSlave_button.Name = "CheckMasterOrSlave_button";
-            this.CheckMasterOrSlave_button.Size = new System.Drawing.Size(177, 25);
-            this.CheckMasterOrSlave_button.TabIndex = 122;
-            this.CheckMasterOrSlave_button.Text = "---";
-            this.CheckMasterOrSlave_button.UseVisualStyleBackColor = true;
-            this.CheckMasterOrSlave_button.Click += new System.EventHandler(this.CheckMasterOrSlave_button_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(199, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 25);
-            this.button4.TabIndex = 121;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.FileStoreCheckButton);
             this.panel3.Controls.Add(this.FILESTORERepareButton);
             this.panel3.Controls.Add(this.FINDfilelinkdowmnButton1);
-            this.panel3.Location = new System.Drawing.Point(3, 331);
+            this.panel3.Location = new System.Drawing.Point(14, 441);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(168, 100);
             this.panel3.TabIndex = 126;
             // 
             // FileStoreCheckButton
             // 
-            this.FileStoreCheckButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.FileStoreCheckButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FileStoreCheckButton.Font = new System.Drawing.Font("メイリオ", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FileStoreCheckButton.Location = new System.Drawing.Point(3, 3);
@@ -373,7 +420,7 @@ namespace ServerControlCenterApplication
             // 
             // FILESTORERepareButton
             // 
-            this.FILESTORERepareButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.FILESTORERepareButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FILESTORERepareButton.Font = new System.Drawing.Font("メイリオ", 8.25F);
             this.FILESTORERepareButton.Location = new System.Drawing.Point(3, 65);
@@ -386,7 +433,7 @@ namespace ServerControlCenterApplication
             // 
             // FINDfilelinkdowmnButton1
             // 
-            this.FINDfilelinkdowmnButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.FINDfilelinkdowmnButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FINDfilelinkdowmnButton1.Location = new System.Drawing.Point(3, 34);
             this.FINDfilelinkdowmnButton1.Name = "FINDfilelinkdowmnButton1";
@@ -405,7 +452,7 @@ namespace ServerControlCenterApplication
             this.DEBUGLevelGroup.Controls.Add(this.label12);
             this.DEBUGLevelGroup.Controls.Add(this.DRAWCAPTUREservice_DebugLevelComboBox);
             this.DEBUGLevelGroup.Controls.Add(this.DRAWREGISTservice_DebugLevelComboBox);
-            this.DEBUGLevelGroup.Location = new System.Drawing.Point(3, 436);
+            this.DEBUGLevelGroup.Location = new System.Drawing.Point(14, 550);
             this.DEBUGLevelGroup.Name = "DEBUGLevelGroup";
             this.DEBUGLevelGroup.Size = new System.Drawing.Size(602, 79);
             this.DEBUGLevelGroup.TabIndex = 128;
@@ -527,9 +574,9 @@ namespace ServerControlCenterApplication
             this.groupBox5.Controls.Add(this.CHECKPIPECONNECTIONbutton);
             this.groupBox5.Controls.Add(this.ARCSUITESENDPATHbutton);
             this.groupBox5.Controls.Add(this.GetArcSuiteDMSHostNameButton);
-            this.groupBox5.Location = new System.Drawing.Point(632, 509);
+            this.groupBox5.Location = new System.Drawing.Point(627, 622);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(779, 136);
+            this.groupBox5.Size = new System.Drawing.Size(790, 136);
             this.groupBox5.TabIndex = 131;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
@@ -537,7 +584,7 @@ namespace ServerControlCenterApplication
             // CreateTicketTemplate_button
             // 
             this.CreateTicketTemplate_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateTicketTemplate_button.Location = new System.Drawing.Point(636, 20);
+            this.CreateTicketTemplate_button.Location = new System.Drawing.Point(647, 20);
             this.CreateTicketTemplate_button.Name = "CreateTicketTemplate_button";
             this.CreateTicketTemplate_button.Size = new System.Drawing.Size(131, 47);
             this.CreateTicketTemplate_button.TabIndex = 133;
@@ -548,7 +595,7 @@ namespace ServerControlCenterApplication
             // WriteTextFileDist_textbox
             // 
             this.WriteTextFileDist_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.WriteTextFileDist_textbox.Location = new System.Drawing.Point(235, 99);
+            this.WriteTextFileDist_textbox.Location = new System.Drawing.Point(246, 99);
             this.WriteTextFileDist_textbox.Name = "WriteTextFileDist_textbox";
             this.WriteTextFileDist_textbox.Size = new System.Drawing.Size(532, 20);
             this.WriteTextFileDist_textbox.TabIndex = 100;
@@ -558,7 +605,7 @@ namespace ServerControlCenterApplication
             // LoadTextFileSource_textBox
             // 
             this.LoadTextFileSource_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadTextFileSource_textBox.Location = new System.Drawing.Point(235, 73);
+            this.LoadTextFileSource_textBox.Location = new System.Drawing.Point(246, 73);
             this.LoadTextFileSource_textBox.Name = "LoadTextFileSource_textBox";
             this.LoadTextFileSource_textBox.Size = new System.Drawing.Size(532, 20);
             this.LoadTextFileSource_textBox.TabIndex = 99;
@@ -568,7 +615,7 @@ namespace ServerControlCenterApplication
             // GetTextFileTestButton
             // 
             this.GetTextFileTestButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GetTextFileTestButton.Location = new System.Drawing.Point(164, 73);
+            this.GetTextFileTestButton.Location = new System.Drawing.Point(175, 73);
             this.GetTextFileTestButton.Name = "GetTextFileTestButton";
             this.GetTextFileTestButton.Size = new System.Drawing.Size(64, 46);
             this.GetTextFileTestButton.TabIndex = 98;
@@ -579,7 +626,7 @@ namespace ServerControlCenterApplication
             // GetCOMMITFolderButton
             // 
             this.GetCOMMITFolderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GetCOMMITFolderButton.Location = new System.Drawing.Point(10, 74);
+            this.GetCOMMITFolderButton.Location = new System.Drawing.Point(21, 74);
             this.GetCOMMITFolderButton.Name = "GetCOMMITFolderButton";
             this.GetCOMMITFolderButton.Size = new System.Drawing.Size(147, 47);
             this.GetCOMMITFolderButton.TabIndex = 93;
@@ -591,7 +638,7 @@ namespace ServerControlCenterApplication
             // 
             this.ConnectCheckButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ConnectCheckButton.Font = new System.Drawing.Font("MS UI Gothic", 9F);
-            this.ConnectCheckButton.Location = new System.Drawing.Point(10, 20);
+            this.ConnectCheckButton.Location = new System.Drawing.Point(21, 20);
             this.ConnectCheckButton.Name = "ConnectCheckButton";
             this.ConnectCheckButton.Size = new System.Drawing.Size(147, 47);
             this.ConnectCheckButton.TabIndex = 54;
@@ -602,7 +649,7 @@ namespace ServerControlCenterApplication
             // CHECKPIPECONNECTIONbutton
             // 
             this.CHECKPIPECONNECTIONbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CHECKPIPECONNECTIONbutton.Location = new System.Drawing.Point(472, 20);
+            this.CHECKPIPECONNECTIONbutton.Location = new System.Drawing.Point(483, 20);
             this.CHECKPIPECONNECTIONbutton.Name = "CHECKPIPECONNECTIONbutton";
             this.CHECKPIPECONNECTIONbutton.Size = new System.Drawing.Size(147, 47);
             this.CHECKPIPECONNECTIONbutton.TabIndex = 95;
@@ -614,7 +661,7 @@ namespace ServerControlCenterApplication
             // 
             this.ARCSUITESENDPATHbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ARCSUITESENDPATHbutton.Font = new System.Drawing.Font("MS UI Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ARCSUITESENDPATHbutton.Location = new System.Drawing.Point(164, 20);
+            this.ARCSUITESENDPATHbutton.Location = new System.Drawing.Point(175, 20);
             this.ARCSUITESENDPATHbutton.Name = "ARCSUITESENDPATHbutton";
             this.ARCSUITESENDPATHbutton.Size = new System.Drawing.Size(147, 47);
             this.ARCSUITESENDPATHbutton.TabIndex = 94;
@@ -625,7 +672,7 @@ namespace ServerControlCenterApplication
             // GetArcSuiteDMSHostNameButton
             // 
             this.GetArcSuiteDMSHostNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GetArcSuiteDMSHostNameButton.Location = new System.Drawing.Point(318, 20);
+            this.GetArcSuiteDMSHostNameButton.Location = new System.Drawing.Point(329, 20);
             this.GetArcSuiteDMSHostNameButton.Name = "GetArcSuiteDMSHostNameButton";
             this.GetArcSuiteDMSHostNameButton.Size = new System.Drawing.Size(147, 47);
             this.GetArcSuiteDMSHostNameButton.TabIndex = 97;
@@ -644,7 +691,7 @@ namespace ServerControlCenterApplication
             this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Location = new System.Drawing.Point(3, 523);
+            this.groupBox4.Location = new System.Drawing.Point(10, 640);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(602, 118);
             this.groupBox4.TabIndex = 132;
@@ -737,34 +784,34 @@ namespace ServerControlCenterApplication
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.RestoreTargetServer_label);
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.RestoreOrderTargetServer_label);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.DataBaseBackupCreateTime_dateTimePicker);
             this.panel4.Controls.Add(this.RestoreTargetSerer_comboBox);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.RestoreStart_button);
             this.panel4.Controls.Add(this.RestoreSourceFolder_textBox);
-            this.panel4.Location = new System.Drawing.Point(1006, 412);
+            this.panel4.Location = new System.Drawing.Point(388, 17);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(405, 90);
+            this.panel4.Size = new System.Drawing.Size(388, 90);
             this.panel4.TabIndex = 129;
             // 
-            // RestoreTargetServer_label
+            // RestoreOrderTargetServer_label
             // 
-            this.RestoreTargetServer_label.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.RestoreTargetServer_label.Location = new System.Drawing.Point(303, 29);
-            this.RestoreTargetServer_label.Name = "RestoreTargetServer_label";
-            this.RestoreTargetServer_label.Size = new System.Drawing.Size(86, 31);
-            this.RestoreTargetServer_label.TabIndex = 116;
-            this.RestoreTargetServer_label.Text = "---";
-            this.RestoreTargetServer_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RestoreTargetServer_label.Paint += new System.Windows.Forms.PaintEventHandler(this.RestoreTargetServer_label_Paint);
+            this.RestoreOrderTargetServer_label.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.RestoreOrderTargetServer_label.Location = new System.Drawing.Point(205, 56);
+            this.RestoreOrderTargetServer_label.Name = "RestoreOrderTargetServer_label";
+            this.RestoreOrderTargetServer_label.Size = new System.Drawing.Size(86, 31);
+            this.RestoreOrderTargetServer_label.TabIndex = 116;
+            this.RestoreOrderTargetServer_label.Text = "---";
+            this.RestoreOrderTargetServer_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RestoreOrderTargetServer_label.Paint += new System.Windows.Forms.PaintEventHandler(this.RestoreTargetServer_label_Paint);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 33);
+            this.label5.Location = new System.Drawing.Point(80, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 116;
@@ -774,7 +821,7 @@ namespace ServerControlCenterApplication
             // 
             this.DataBaseBackupCreateTime_dateTimePicker.CustomFormat = "yyyy-MM-dd_HHmmss";
             this.DataBaseBackupCreateTime_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DataBaseBackupCreateTime_dateTimePicker.Location = new System.Drawing.Point(71, 63);
+            this.DataBaseBackupCreateTime_dateTimePicker.Location = new System.Drawing.Point(11, 63);
             this.DataBaseBackupCreateTime_dateTimePicker.Name = "DataBaseBackupCreateTime_dateTimePicker";
             this.DataBaseBackupCreateTime_dateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DataBaseBackupCreateTime_dateTimePicker.Size = new System.Drawing.Size(169, 20);
@@ -792,7 +839,7 @@ namespace ServerControlCenterApplication
             "ADS1",
             "ADS2",
             "ACVLT1"});
-            this.RestoreTargetSerer_comboBox.Location = new System.Drawing.Point(184, 3);
+            this.RestoreTargetSerer_comboBox.Location = new System.Drawing.Point(11, 33);
             this.RestoreTargetSerer_comboBox.Name = "RestoreTargetSerer_comboBox";
             this.RestoreTargetSerer_comboBox.Size = new System.Drawing.Size(67, 21);
             this.RestoreTargetSerer_comboBox.TabIndex = 113;
@@ -801,15 +848,15 @@ namespace ServerControlCenterApplication
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 8);
+            this.label4.Location = new System.Drawing.Point(11, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 13);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 112;
-            this.label4.Text = "バックアップデータソースサーバー";
+            this.label4.Text = "サーバー";
             // 
             // RestoreStart_button
             // 
-            this.RestoreStart_button.Location = new System.Drawing.Point(303, 61);
+            this.RestoreStart_button.Location = new System.Drawing.Point(297, 62);
             this.RestoreStart_button.Name = "RestoreStart_button";
             this.RestoreStart_button.Size = new System.Drawing.Size(86, 21);
             this.RestoreStart_button.TabIndex = 98;
@@ -819,29 +866,49 @@ namespace ServerControlCenterApplication
             // 
             // RestoreSourceFolder_textBox
             // 
-            this.RestoreSourceFolder_textBox.Location = new System.Drawing.Point(85, 29);
+            this.RestoreSourceFolder_textBox.Location = new System.Drawing.Point(83, 33);
             this.RestoreSourceFolder_textBox.Name = "RestoreSourceFolder_textBox";
-            this.RestoreSourceFolder_textBox.Size = new System.Drawing.Size(169, 20);
+            this.RestoreSourceFolder_textBox.Size = new System.Drawing.Size(300, 20);
             this.RestoreSourceFolder_textBox.TabIndex = 99;
             this.RestoreSourceFolder_textBox.TextChanged += new System.EventHandler(this.RestoreSourceFolder_textBox_TextChanged);
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.BackupOrderTargetServer_label);
+            this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.BackupDistServer_comboBox);
-            this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.DATABASEbackupButton);
             this.panel6.Controls.Add(this.BackupFolderPathTextBox);
-            this.panel6.Location = new System.Drawing.Point(632, 413);
+            this.panel6.Location = new System.Drawing.Point(6, 17);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(368, 90);
+            this.panel6.Size = new System.Drawing.Size(376, 90);
             this.panel6.TabIndex = 129;
+            // 
+            // BackupOrderTargetServer_label
+            // 
+            this.BackupOrderTargetServer_label.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.BackupOrderTargetServer_label.Location = new System.Drawing.Point(113, 53);
+            this.BackupOrderTargetServer_label.Name = "BackupOrderTargetServer_label";
+            this.BackupOrderTargetServer_label.Size = new System.Drawing.Size(86, 31);
+            this.BackupOrderTargetServer_label.TabIndex = 119;
+            this.BackupOrderTargetServer_label.Text = "---";
+            this.BackupOrderTargetServer_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 118;
+            this.label2.Text = "サーバー";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 38);
+            this.label6.Location = new System.Drawing.Point(90, 8);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 13);
             this.label6.TabIndex = 117;
@@ -859,28 +926,18 @@ namespace ServerControlCenterApplication
             "ADS1",
             "ADS2",
             "ACVLT1"});
-            this.BackupDistServer_comboBox.Location = new System.Drawing.Point(95, 6);
+            this.BackupDistServer_comboBox.Location = new System.Drawing.Point(10, 32);
             this.BackupDistServer_comboBox.Name = "BackupDistServer_comboBox";
             this.BackupDistServer_comboBox.Size = new System.Drawing.Size(67, 21);
             this.BackupDistServer_comboBox.TabIndex = 113;
             this.BackupDistServer_comboBox.SelectedIndexChanged += new System.EventHandler(this.BackupDistServer_comboBox_SelectedIndexChanged);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 112;
-            this.label2.Text = "バックアップ先";
-            // 
             // DATABASEbackupButton
             // 
             this.DATABASEbackupButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DATABASEbackupButton.Location = new System.Drawing.Point(93, 58);
+            this.DATABASEbackupButton.Location = new System.Drawing.Point(205, 54);
             this.DATABASEbackupButton.Name = "DATABASEbackupButton";
-            this.DATABASEbackupButton.Size = new System.Drawing.Size(225, 27);
+            this.DATABASEbackupButton.Size = new System.Drawing.Size(166, 27);
             this.DATABASEbackupButton.TabIndex = 98;
             this.DATABASEbackupButton.Text = "データベースバックアップ";
             this.DATABASEbackupButton.UseVisualStyleBackColor = true;
@@ -889,10 +946,21 @@ namespace ServerControlCenterApplication
             // BackupFolderPathTextBox
             // 
             this.BackupFolderPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BackupFolderPathTextBox.Location = new System.Drawing.Point(95, 32);
+            this.BackupFolderPathTextBox.Location = new System.Drawing.Point(83, 32);
             this.BackupFolderPathTextBox.Name = "BackupFolderPathTextBox";
-            this.BackupFolderPathTextBox.Size = new System.Drawing.Size(224, 20);
+            this.BackupFolderPathTextBox.Size = new System.Drawing.Size(288, 20);
             this.BackupFolderPathTextBox.TabIndex = 99;
+            // 
+            // GetBackupStatusButton
+            // 
+            this.GetBackupStatusButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GetBackupStatusButton.Location = new System.Drawing.Point(587, 110);
+            this.GetBackupStatusButton.Name = "GetBackupStatusButton";
+            this.GetBackupStatusButton.Size = new System.Drawing.Size(197, 27);
+            this.GetBackupStatusButton.TabIndex = 118;
+            this.GetBackupStatusButton.Text = "GetStatus";
+            this.GetBackupStatusButton.UseVisualStyleBackColor = true;
+            this.GetBackupStatusButton.Click += new System.EventHandler(this.GetBackupStatusButton_Click);
             // 
             // GetNumberOfJob_button
             // 
@@ -926,30 +994,69 @@ namespace ServerControlCenterApplication
             // 
             this.panel2.Controls.Add(this.PrinterSel_comboBox);
             this.panel2.Controls.Add(this.GetNumberOfJob_button);
-            this.panel2.Location = new System.Drawing.Point(183, 378);
+            this.panel2.Location = new System.Drawing.Point(188, 488);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(409, 53);
             this.panel2.TabIndex = 139;
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.logwindowClear_button);
+            this.panel5.Controls.Add(this.logWindowControl);
+            this.panel5.Location = new System.Drawing.Point(627, 116);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(790, 354);
+            this.panel5.TabIndex = 140;
+            // 
+            // logwindowClear_button
+            // 
+            this.logwindowClear_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.logwindowClear_button.Location = new System.Drawing.Point(711, 325);
+            this.logwindowClear_button.Name = "logwindowClear_button";
+            this.logwindowClear_button.Size = new System.Drawing.Size(75, 23);
+            this.logwindowClear_button.TabIndex = 136;
+            this.logwindowClear_button.Text = "区切り線";
+            this.logwindowClear_button.UseVisualStyleBackColor = true;
+            this.logwindowClear_button.Click += new System.EventHandler(this.logwindowClear_button_Click);
+            // 
             // logWindowControl
             // 
-            this.logWindowControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.logWindowControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logWindowControl.Location = new System.Drawing.Point(624, 116);
+            this.logWindowControl.Location = new System.Drawing.Point(4, 5);
             this.logWindowControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.logWindowControl.Name = "logWindowControl";
-            this.logWindowControl.Size = new System.Drawing.Size(788, 292);
+            this.logWindowControl.Size = new System.Drawing.Size(782, 314);
             this.logWindowControl.TabIndex = 135;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.GetBackupStatusButton);
+            this.groupBox1.Controls.Add(this.panel6);
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Location = new System.Drawing.Point(627, 476);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(790, 140);
+            this.groupBox1.TabIndex = 141;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "バックアップ／リストア";
             // 
             // accountUserForm
             // 
+            this.accountUserForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.accountUserForm.Location = new System.Drawing.Point(0, 0);
             this.accountUserForm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.accountUserForm.Name = "accountUserForm";
             this.accountUserForm.parentControl = null;
-            this.accountUserForm.Size = new System.Drawing.Size(1410, 111);
+            this.accountUserForm.Size = new System.Drawing.Size(1411, 111);
             this.accountUserForm.TabIndex = 134;
+            this.accountUserForm.WriteLine = null;
             this.accountUserForm.Paint += new System.Windows.Forms.PaintEventHandler(this.accountUserForm5_Paint);
             this.accountUserForm.Leave += new System.EventHandler(this.accountUserForm_Leave);
             // 
@@ -957,30 +1064,30 @@ namespace ServerControlCenterApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.logWindowControl);
             this.Controls.Add(this.accountUserForm);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.DEBUGLevelGroup);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.ClientImpersonationPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.MMapdValueGroupBox);
             this.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Name = "TabControl04";
-            this.Size = new System.Drawing.Size(1436, 652);
+            this.Size = new System.Drawing.Size(1421, 765);
             this.Load += new System.EventHandler(this.TabControl04_Load);
             this.VisibleChanged += new System.EventHandler(this.TabControl04_VisibleChanged);
             this.MMapdValueGroupBox.ResumeLayout(false);
+            this.MMapdValueGroupBox.PerformLayout();
             this.MMapdValue_panel.ResumeLayout(false);
             this.MMapdValue_panel.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.ClientImpersonationPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.DEBUGLevelGroup.ResumeLayout(false);
             this.DEBUGLevelGroup.PerformLayout();
@@ -993,6 +1100,8 @@ namespace ServerControlCenterApplication
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1008,9 +1117,6 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.CheckBox COMMITACCEPT_CheckBox;
         private System.Windows.Forms.CheckBox ArcSuiteRegistrationCycle_CheckBox;
         private System.Windows.Forms.TextBox COMMITACCEPTFALSEMSG_TextBox;
-        private System.Windows.Forms.Panel ClientImpersonationPanel;
-        private System.Windows.Forms.Button CheckMasterOrSlave_button;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button FileStoreCheckButton;
         private System.Windows.Forms.Button FILESTORERepareButton;
@@ -1048,12 +1154,11 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button RestoreStart_button;
         internal System.Windows.Forms.TextBox RestoreSourceFolder_textBox;
         private System.Windows.Forms.DateTimePicker DataBaseBackupCreateTime_dateTimePicker;
-        private System.Windows.Forms.Label RestoreTargetServer_label;
+        private System.Windows.Forms.Label RestoreOrderTargetServer_label;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.ComboBox BackupDistServer_comboBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button DATABASEbackupButton;
         internal System.Windows.Forms.TextBox BackupFolderPathTextBox;
         private System.Windows.Forms.Button StartDeCryptButton;
@@ -1070,5 +1175,17 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.RadioButton SERVERMODE_Slave_RadioButton;
         private System.Windows.Forms.RadioButton SERVERMODE_Master_RadioButton;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox objectConvNew_checkBox;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button logwindowClear_button;
+        private System.Windows.Forms.Button GetBackupStatusButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label BackupOrderTargetServer_label;
+        private System.Windows.Forms.CheckBox REPLICATIONTOSUBHOST_checkBox;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox SUB_FileStoreForderUNC_textBox;
+        private System.Windows.Forms.TextBox SUB_DATASOURCE_textBox;
+        private System.Windows.Forms.TextBox SUB_DBHOST_textBox;
     }
 }

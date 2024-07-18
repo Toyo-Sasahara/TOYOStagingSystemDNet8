@@ -30,6 +30,10 @@ namespace ServerControlCenterApplication
         private void InitializeComponent()
         {
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.GetCommitPath_button = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.objectConvNew_heckBox = new System.Windows.Forms.CheckBox();
+            this.GetPipeServerJobList_button_button = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.TitleFieldTest_button = new System.Windows.Forms.Button();
@@ -38,21 +42,16 @@ namespace ServerControlCenterApplication
             this.waitMin_textBox = new System.Windows.Forms.TextBox();
             this.DR_StressTest_button = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.GetPipeServerJobList_button_button = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.delyaTime_textBox = new System.Windows.Forms.TextBox();
-            this.GetCommitRecepitonStateButton = new System.Windows.Forms.Button();
+            this.CheckCommitRecepitonStateButton = new System.Windows.Forms.Button();
             this.RecepitonStateLoadTest_CheckBox = new System.Windows.Forms.CheckBox();
-            this.GetApprovalRecepitonStateButton = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.DC_ConnectTest_button = new System.Windows.Forms.Button();
-            this.DR_ConnectTest_button = new System.Windows.Forms.Button();
-            this.PIPETESTMSG_textBox = new System.Windows.Forms.TextBox();
+            this.CheckApprovalRecepitonState = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.GetAuthorizedUser_LoopCheck_checkBox = new System.Windows.Forms.CheckBox();
             this.GetAuthorizedUser_button = new System.Windows.Forms.Button();
-            this.DW_GetPipeCommandLog_button = new System.Windows.Forms.Button();
+            this.SW_GetPipeCommandLog_button = new System.Windows.Forms.Button();
             this.DR_GetPipeCommandLog_button = new System.Windows.Forms.Button();
             this.DC_GetPipeCommandLog_button = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -81,19 +80,22 @@ namespace ServerControlCenterApplication
             this.DC_ReloadConfig_button = new System.Windows.Forms.Button();
             this.DR_ReloadConfig_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ListAllValue_button = new System.Windows.Forms.Button();
+            this.objectConvNew_checkBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.GropBox1 = new System.Windows.Forms.GroupBox();
-            this.STAGINGSYSTEMwatch_radiobutton = new System.Windows.Forms.RadioButton();
-            this.DRAWREGISTservice_radioButton = new System.Windows.Forms.RadioButton();
-            this.DRAWCAPTUREservice_radioButton = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.StageServerConfig_VarbleType_textbox = new System.Windows.Forms.TextBox();
             this.StageServerConfig_Value_comboBox = new System.Windows.Forms.ComboBox();
             this.StageServerConfig_GetSet_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.StageServerConfig_VarbleName_comboBox = new System.Windows.Forms.ComboBox();
+            this.ListAllValue_button = new System.Windows.Forms.Button();
+            this.GropBox1 = new System.Windows.Forms.GroupBox();
+            this.STAGINGSYSTEMwatch_radiobutton = new System.Windows.Forms.RadioButton();
+            this.DRAWREGISTservice_radioButton = new System.Windows.Forms.RadioButton();
+            this.DRAWCAPTUREservice_radioButton = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.ArcSuiteTicketConfigSave_button = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.DR_ReloadBarcodeConf_button = new System.Windows.Forms.Button();
             this.DC_ReloadBarcodeConf_button = new System.Windows.Forms.Button();
@@ -102,58 +104,105 @@ namespace ServerControlCenterApplication
             this.DR_ReloadStampConf_button = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.DR_SAVE_STAGESERVERCONFIG_button = new System.Windows.Forms.Button();
             this.DW_SAVE_STAGESERVERCONFIG_button = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.GetCommonApprovalWaitingTicketList_button = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.objcetConvNew_checkBox2 = new System.Windows.Forms.CheckBox();
+            this.logwindowClear_button = new System.Windows.Forms.Button();
             this.logWindowControl = new ServerControlCenterApplication.LogWindowControl();
             this.accountUserForm = new ServerControlCenterApplication.AccountUserForm();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.DR_SAVE_STAGESERVERCONFIG_button = new System.Windows.Forms.Button();
             this.groupBox16.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.GropBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.GropBox1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox16
             // 
-            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox16.Controls.Add(this.button2);
-            this.groupBox16.Controls.Add(this.button1);
+            this.groupBox16.Controls.Add(this.GetCommitPath_button);
+            this.groupBox16.Controls.Add(this.panel8);
             this.groupBox16.Controls.Add(this.TitleFieldTest_button);
             this.groupBox16.Controls.Add(this.panel5);
-            this.groupBox16.Controls.Add(this.GetPipeServerJobList_button_button);
             this.groupBox16.Controls.Add(this.panel4);
-            this.groupBox16.Controls.Add(this.panel10);
             this.groupBox16.Controls.Add(this.groupBox4);
             this.groupBox16.Controls.Add(this.groupBox7);
             this.groupBox16.Controls.Add(this.panel9);
             this.groupBox16.Controls.Add(this.panel7);
             this.groupBox16.Location = new System.Drawing.Point(3, 271);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(524, 489);
+            this.groupBox16.Size = new System.Drawing.Size(641, 536);
             this.groupBox16.TabIndex = 118;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "チェック";
             // 
+            // GetCommitPath_button
+            // 
+            this.GetCommitPath_button.Location = new System.Drawing.Point(359, 190);
+            this.GetCommitPath_button.Name = "GetCommitPath_button";
+            this.GetCommitPath_button.Size = new System.Drawing.Size(153, 21);
+            this.GetCommitPath_button.TabIndex = 160;
+            this.GetCommitPath_button.Text = "GetCommitPath";
+            this.GetCommitPath_button.UseVisualStyleBackColor = true;
+            this.GetCommitPath_button.Click += new System.EventHandler(this.GetCommitPath_button_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.objectConvNew_heckBox);
+            this.panel8.Controls.Add(this.GetPipeServerJobList_button_button);
+            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.button1);
+            this.panel8.Location = new System.Drawing.Point(321, 397);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(197, 86);
+            this.panel8.TabIndex = 159;
+            // 
+            // objectConvNew_heckBox
+            // 
+            this.objectConvNew_heckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.objectConvNew_heckBox.AutoSize = true;
+            this.objectConvNew_heckBox.Checked = true;
+            this.objectConvNew_heckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.objectConvNew_heckBox.Location = new System.Drawing.Point(4, 5);
+            this.objectConvNew_heckBox.Name = "objectConvNew_heckBox";
+            this.objectConvNew_heckBox.Size = new System.Drawing.Size(113, 17);
+            this.objectConvNew_heckBox.TabIndex = 159;
+            this.objectConvNew_heckBox.Text = "objectConvNew";
+            this.objectConvNew_heckBox.UseVisualStyleBackColor = true;
+            // 
+            // GetPipeServerJobList_button_button
+            // 
+            this.GetPipeServerJobList_button_button.Location = new System.Drawing.Point(3, 22);
+            this.GetPipeServerJobList_button_button.Name = "GetPipeServerJobList_button_button";
+            this.GetPipeServerJobList_button_button.Size = new System.Drawing.Size(189, 21);
+            this.GetPipeServerJobList_button_button.TabIndex = 150;
+            this.GetPipeServerJobList_button_button.Text = "DR Pipeｻｰﾊﾞ実行中ｾｯｼｮﾝ";
+            this.GetPipeServerJobList_button_button.UseVisualStyleBackColor = true;
+            this.GetPipeServerJobList_button_button.Click += new System.EventHandler(this.DR_GetActiveSessionCommandList_button_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(319, 459);
+            this.button2.Location = new System.Drawing.Point(4, 64);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 21);
             this.button2.TabIndex = 158;
@@ -163,7 +212,7 @@ namespace ServerControlCenterApplication
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(319, 436);
+            this.button1.Location = new System.Drawing.Point(4, 43);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(189, 21);
             this.button1.TabIndex = 157;
@@ -175,8 +224,9 @@ namespace ServerControlCenterApplication
             // 
             this.TitleFieldTest_button.Location = new System.Drawing.Point(385, 306);
             this.TitleFieldTest_button.Name = "TitleFieldTest_button";
-            this.TitleFieldTest_button.Size = new System.Drawing.Size(123, 40);
+            this.TitleFieldTest_button.Size = new System.Drawing.Size(153, 21);
             this.TitleFieldTest_button.TabIndex = 148;
+            this.TitleFieldTest_button.Text = "TitleFieldTest";
             this.TitleFieldTest_button.UseVisualStyleBackColor = true;
             this.TitleFieldTest_button.Click += new System.EventHandler(this.TitleFieldTest_button_Click);
             // 
@@ -229,24 +279,14 @@ namespace ServerControlCenterApplication
             this.label4.TabIndex = 152;
             this.label4.Text = "分";
             // 
-            // GetPipeServerJobList_button_button
-            // 
-            this.GetPipeServerJobList_button_button.Location = new System.Drawing.Point(318, 413);
-            this.GetPipeServerJobList_button_button.Name = "GetPipeServerJobList_button_button";
-            this.GetPipeServerJobList_button_button.Size = new System.Drawing.Size(189, 21);
-            this.GetPipeServerJobList_button_button.TabIndex = 150;
-            this.GetPipeServerJobList_button_button.Text = "DR Pipeｻｰﾊﾞ実行中ｾｯｼｮﾝ";
-            this.GetPipeServerJobList_button_button.UseVisualStyleBackColor = true;
-            this.GetPipeServerJobList_button_button.Click += new System.EventHandler(this.DR_GetActiveSessionCommandList_button_Click);
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.delyaTime_textBox);
-            this.panel4.Controls.Add(this.GetCommitRecepitonStateButton);
+            this.panel4.Controls.Add(this.CheckCommitRecepitonStateButton);
             this.panel4.Controls.Add(this.RecepitonStateLoadTest_CheckBox);
-            this.panel4.Controls.Add(this.GetApprovalRecepitonStateButton);
+            this.panel4.Controls.Add(this.CheckApprovalRecepitonState);
             this.panel4.Location = new System.Drawing.Point(12, 306);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(367, 85);
@@ -269,15 +309,15 @@ namespace ServerControlCenterApplication
             this.delyaTime_textBox.TabIndex = 147;
             this.delyaTime_textBox.Text = "200";
             // 
-            // GetCommitRecepitonStateButton
+            // CheckCommitRecepitonStateButton
             // 
-            this.GetCommitRecepitonStateButton.Location = new System.Drawing.Point(11, 3);
-            this.GetCommitRecepitonStateButton.Name = "GetCommitRecepitonStateButton";
-            this.GetCommitRecepitonStateButton.Size = new System.Drawing.Size(218, 36);
-            this.GetCommitRecepitonStateButton.TabIndex = 144;
-            this.GetCommitRecepitonStateButton.Text = "CommitRecepitonState\r\nｺﾐｯﾄ操作受付可能か?";
-            this.GetCommitRecepitonStateButton.UseVisualStyleBackColor = true;
-            this.GetCommitRecepitonStateButton.Click += new System.EventHandler(this.GetCommitRecepitonStateButton_Click);
+            this.CheckCommitRecepitonStateButton.Location = new System.Drawing.Point(11, 3);
+            this.CheckCommitRecepitonStateButton.Name = "CheckCommitRecepitonStateButton";
+            this.CheckCommitRecepitonStateButton.Size = new System.Drawing.Size(218, 36);
+            this.CheckCommitRecepitonStateButton.TabIndex = 144;
+            this.CheckCommitRecepitonStateButton.Text = "CommitRecepitonState\r\nｺﾐｯﾄ操作受付可能か?";
+            this.CheckCommitRecepitonStateButton.UseVisualStyleBackColor = true;
+            this.CheckCommitRecepitonStateButton.Click += new System.EventHandler(this.CheckCommitRecepitonStateButton_Click);
             // 
             // RecepitonStateLoadTest_CheckBox
             // 
@@ -289,65 +329,21 @@ namespace ServerControlCenterApplication
             this.RecepitonStateLoadTest_CheckBox.Text = "過負荷テストモード";
             this.RecepitonStateLoadTest_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // GetApprovalRecepitonStateButton
+            // CheckApprovalRecepitonState
             // 
-            this.GetApprovalRecepitonStateButton.Location = new System.Drawing.Point(11, 43);
-            this.GetApprovalRecepitonStateButton.Name = "GetApprovalRecepitonStateButton";
-            this.GetApprovalRecepitonStateButton.Size = new System.Drawing.Size(218, 36);
-            this.GetApprovalRecepitonStateButton.TabIndex = 145;
-            this.GetApprovalRecepitonStateButton.Text = "ApprovalRecepitonState\r\n承認操作受付可能か?";
-            this.GetApprovalRecepitonStateButton.UseVisualStyleBackColor = true;
-            this.GetApprovalRecepitonStateButton.Click += new System.EventHandler(this.GetApprovalRecepitonStateButton_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.DC_ConnectTest_button);
-            this.panel10.Controls.Add(this.DR_ConnectTest_button);
-            this.panel10.Controls.Add(this.PIPETESTMSG_textBox);
-            this.panel10.Location = new System.Drawing.Point(347, 173);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(161, 121);
-            this.panel10.TabIndex = 127;
-            // 
-            // DC_ConnectTest_button
-            // 
-            this.DC_ConnectTest_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DC_ConnectTest_button.Location = new System.Drawing.Point(3, 33);
-            this.DC_ConnectTest_button.Name = "DC_ConnectTest_button";
-            this.DC_ConnectTest_button.Size = new System.Drawing.Size(153, 21);
-            this.DC_ConnectTest_button.TabIndex = 126;
-            this.DC_ConnectTest_button.Text = "DC_ConnectTest";
-            this.DC_ConnectTest_button.UseVisualStyleBackColor = true;
-            this.DC_ConnectTest_button.Click += new System.EventHandler(this.DC_ConnectTest_button_Click);
-            // 
-            // DR_ConnectTest_button
-            // 
-            this.DR_ConnectTest_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DR_ConnectTest_button.Location = new System.Drawing.Point(3, 60);
-            this.DR_ConnectTest_button.Name = "DR_ConnectTest_button";
-            this.DR_ConnectTest_button.Size = new System.Drawing.Size(153, 21);
-            this.DR_ConnectTest_button.TabIndex = 1;
-            this.DR_ConnectTest_button.Text = "DR_ConnectTest";
-            this.DR_ConnectTest_button.UseVisualStyleBackColor = true;
-            this.DR_ConnectTest_button.Click += new System.EventHandler(this.DR_ConnectTest_button_Click);
-            // 
-            // PIPETESTMSG_textBox
-            // 
-            this.PIPETESTMSG_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PIPETESTMSG_textBox.Location = new System.Drawing.Point(3, 7);
-            this.PIPETESTMSG_textBox.Name = "PIPETESTMSG_textBox";
-            this.PIPETESTMSG_textBox.Size = new System.Drawing.Size(153, 20);
-            this.PIPETESTMSG_textBox.TabIndex = 125;
-            this.PIPETESTMSG_textBox.Text = "送出テスト文字列";
+            this.CheckApprovalRecepitonState.Location = new System.Drawing.Point(11, 43);
+            this.CheckApprovalRecepitonState.Name = "CheckApprovalRecepitonState";
+            this.CheckApprovalRecepitonState.Size = new System.Drawing.Size(218, 36);
+            this.CheckApprovalRecepitonState.TabIndex = 145;
+            this.CheckApprovalRecepitonState.Text = "ApprovalRecepitonState\r\n承認操作受付可能か?";
+            this.CheckApprovalRecepitonState.UseVisualStyleBackColor = true;
+            this.CheckApprovalRecepitonState.Click += new System.EventHandler(this.CheckApprovalRecepitonState_Click);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.GetAuthorizedUser_LoopCheck_checkBox);
             this.groupBox4.Controls.Add(this.GetAuthorizedUser_button);
-            this.groupBox4.Controls.Add(this.DW_GetPipeCommandLog_button);
+            this.groupBox4.Controls.Add(this.SW_GetPipeCommandLog_button);
             this.groupBox4.Controls.Add(this.DR_GetPipeCommandLog_button);
             this.groupBox4.Controls.Add(this.DC_GetPipeCommandLog_button);
             this.groupBox4.Location = new System.Drawing.Point(139, 173);
@@ -377,15 +373,15 @@ namespace ServerControlCenterApplication
             this.GetAuthorizedUser_button.UseVisualStyleBackColor = true;
             this.GetAuthorizedUser_button.Click += new System.EventHandler(this.GetAuthorizedUser_button_Click);
             // 
-            // DW_GetPipeCommandLog_button
+            // SW_GetPipeCommandLog_button
             // 
-            this.DW_GetPipeCommandLog_button.Location = new System.Drawing.Point(7, 63);
-            this.DW_GetPipeCommandLog_button.Name = "DW_GetPipeCommandLog_button";
-            this.DW_GetPipeCommandLog_button.Size = new System.Drawing.Size(189, 25);
-            this.DW_GetPipeCommandLog_button.TabIndex = 92;
-            this.DW_GetPipeCommandLog_button.Text = "DW_GetPipeCommandLog";
-            this.DW_GetPipeCommandLog_button.UseVisualStyleBackColor = true;
-            this.DW_GetPipeCommandLog_button.Click += new System.EventHandler(this.DW_GetPipeCommandLog_button_Click);
+            this.SW_GetPipeCommandLog_button.Location = new System.Drawing.Point(7, 63);
+            this.SW_GetPipeCommandLog_button.Name = "SW_GetPipeCommandLog_button";
+            this.SW_GetPipeCommandLog_button.Size = new System.Drawing.Size(189, 25);
+            this.SW_GetPipeCommandLog_button.TabIndex = 92;
+            this.SW_GetPipeCommandLog_button.Text = "SW_GetPipeCommandLog";
+            this.SW_GetPipeCommandLog_button.UseVisualStyleBackColor = true;
+            this.SW_GetPipeCommandLog_button.Click += new System.EventHandler(this.DW_GetPipeCommandLog_button_Click);
             // 
             // DR_GetPipeCommandLog_button
             // 
@@ -458,14 +454,14 @@ namespace ServerControlCenterApplication
             this.panel9.Controls.Add(this.DRGetFalseMSGButton);
             this.panel9.Location = new System.Drawing.Point(7, 93);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(501, 74);
+            this.panel9.Size = new System.Drawing.Size(440, 74);
             this.panel9.TabIndex = 72;
             // 
             // AutoGetFalseMSG_CcheckBox
             // 
             this.AutoGetFalseMSG_CcheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AutoGetFalseMSG_CcheckBox.AutoSize = true;
-            this.AutoGetFalseMSG_CcheckBox.Location = new System.Drawing.Point(413, 54);
+            this.AutoGetFalseMSG_CcheckBox.Location = new System.Drawing.Point(352, 54);
             this.AutoGetFalseMSG_CcheckBox.Name = "AutoGetFalseMSG_CcheckBox";
             this.AutoGetFalseMSG_CcheckBox.Size = new System.Drawing.Size(87, 17);
             this.AutoGetFalseMSG_CcheckBox.TabIndex = 68;
@@ -475,23 +471,23 @@ namespace ServerControlCenterApplication
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(3, 30);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(333, 20);
+            this.textBox1.Size = new System.Drawing.Size(272, 20);
             this.textBox1.TabIndex = 69;
             this.textBox1.Text = "\"Status\" \"CURRENT MODE\"";
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(3, 3);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(333, 20);
+            this.textBox2.Size = new System.Drawing.Size(272, 20);
             this.textBox2.TabIndex = 66;
             this.textBox2.Text = "\"Status\" \"CURRENT MODE\"";
             // 
@@ -499,7 +495,7 @@ namespace ServerControlCenterApplication
             // 
             this.DCGetFalseMSGButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DCGetFalseMSGButton.Font = new System.Drawing.Font("MS UI Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.DCGetFalseMSGButton.Location = new System.Drawing.Point(344, 29);
+            this.DCGetFalseMSGButton.Location = new System.Drawing.Point(283, 29);
             this.DCGetFalseMSGButton.Name = "DCGetFalseMSGButton";
             this.DCGetFalseMSGButton.Size = new System.Drawing.Size(152, 22);
             this.DCGetFalseMSGButton.TabIndex = 70;
@@ -511,7 +507,7 @@ namespace ServerControlCenterApplication
             // 
             this.DRGetFalseMSGButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DRGetFalseMSGButton.Font = new System.Drawing.Font("MS UI Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.DRGetFalseMSGButton.Location = new System.Drawing.Point(344, 2);
+            this.DRGetFalseMSGButton.Location = new System.Drawing.Point(283, 2);
             this.DRGetFalseMSGButton.Name = "DRGetFalseMSGButton";
             this.DRGetFalseMSGButton.Size = new System.Drawing.Size(152, 22);
             this.DRGetFalseMSGButton.TabIndex = 67;
@@ -528,14 +524,14 @@ namespace ServerControlCenterApplication
             this.panel7.Controls.Add(this.CheckDRServerModeButton);
             this.panel7.Location = new System.Drawing.Point(7, 15);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(501, 74);
+            this.panel7.Size = new System.Drawing.Size(440, 74);
             this.panel7.TabIndex = 71;
             // 
             // AutoDRCurrentModCcheckBox
             // 
             this.AutoDRCurrentModCcheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AutoDRCurrentModCcheckBox.AutoSize = true;
-            this.AutoDRCurrentModCcheckBox.Location = new System.Drawing.Point(413, 54);
+            this.AutoDRCurrentModCcheckBox.Location = new System.Drawing.Point(352, 54);
             this.AutoDRCurrentModCcheckBox.Name = "AutoDRCurrentModCcheckBox";
             this.AutoDRCurrentModCcheckBox.Size = new System.Drawing.Size(87, 17);
             this.AutoDRCurrentModCcheckBox.TabIndex = 68;
@@ -545,30 +541,30 @@ namespace ServerControlCenterApplication
             // 
             // CheckDCServerAnserTextBox
             // 
-            this.CheckDCServerAnserTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.CheckDCServerAnserTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CheckDCServerAnserTextBox.Location = new System.Drawing.Point(3, 30);
             this.CheckDCServerAnserTextBox.Name = "CheckDCServerAnserTextBox";
             this.CheckDCServerAnserTextBox.ReadOnly = true;
-            this.CheckDCServerAnserTextBox.Size = new System.Drawing.Size(333, 20);
+            this.CheckDCServerAnserTextBox.Size = new System.Drawing.Size(272, 20);
             this.CheckDCServerAnserTextBox.TabIndex = 69;
             this.CheckDCServerAnserTextBox.Text = "\"Status\" \"CURRENT MODE\"";
             // 
             // CheckDRServerAnserTextBox
             // 
-            this.CheckDRServerAnserTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.CheckDRServerAnserTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CheckDRServerAnserTextBox.Location = new System.Drawing.Point(3, 3);
             this.CheckDRServerAnserTextBox.Name = "CheckDRServerAnserTextBox";
             this.CheckDRServerAnserTextBox.ReadOnly = true;
-            this.CheckDRServerAnserTextBox.Size = new System.Drawing.Size(333, 20);
+            this.CheckDRServerAnserTextBox.Size = new System.Drawing.Size(272, 20);
             this.CheckDRServerAnserTextBox.TabIndex = 66;
             this.CheckDRServerAnserTextBox.Text = "\"Status\" \"CURRENT MODE\"";
             // 
             // CheckDCServerModeButton
             // 
             this.CheckDCServerModeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CheckDCServerModeButton.Location = new System.Drawing.Point(344, 29);
+            this.CheckDCServerModeButton.Location = new System.Drawing.Point(283, 29);
             this.CheckDCServerModeButton.Name = "CheckDCServerModeButton";
             this.CheckDCServerModeButton.Size = new System.Drawing.Size(152, 22);
             this.CheckDCServerModeButton.TabIndex = 70;
@@ -579,7 +575,7 @@ namespace ServerControlCenterApplication
             // CheckDRServerModeButton
             // 
             this.CheckDRServerModeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CheckDRServerModeButton.Location = new System.Drawing.Point(344, 2);
+            this.CheckDRServerModeButton.Location = new System.Drawing.Point(283, 2);
             this.CheckDRServerModeButton.Name = "CheckDRServerModeButton";
             this.CheckDRServerModeButton.Size = new System.Drawing.Size(152, 22);
             this.CheckDRServerModeButton.TabIndex = 67;
@@ -589,17 +585,16 @@ namespace ServerControlCenterApplication
             // 
             // preInputTikectCode_textBox
             // 
-            this.preInputTikectCode_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.preInputTikectCode_textBox.Location = new System.Drawing.Point(753, 363);
+            this.preInputTikectCode_textBox.Location = new System.Drawing.Point(3, 52);
             this.preInputTikectCode_textBox.Name = "preInputTikectCode_textBox";
-            this.preInputTikectCode_textBox.Size = new System.Drawing.Size(221, 20);
+            this.preInputTikectCode_textBox.Size = new System.Drawing.Size(212, 20);
             this.preInputTikectCode_textBox.TabIndex = 154;
             this.preInputTikectCode_textBox.Text = "チケットコード";
+            this.preInputTikectCode_textBox.TextChanged += new System.EventHandler(this.preInputTikectCode_textBox_TextChanged);
             // 
             // RemovePreInputTIKECTCODEs_button
             // 
-            this.RemovePreInputTIKECTCODEs_button.Location = new System.Drawing.Point(753, 340);
+            this.RemovePreInputTIKECTCODEs_button.Location = new System.Drawing.Point(221, 3);
             this.RemovePreInputTIKECTCODEs_button.Name = "RemovePreInputTIKECTCODEs_button";
             this.RemovePreInputTIKECTCODEs_button.Size = new System.Drawing.Size(221, 21);
             this.RemovePreInputTIKECTCODEs_button.TabIndex = 153;
@@ -609,17 +604,15 @@ namespace ServerControlCenterApplication
             // 
             // DRAWNUMBER_textBox
             // 
-            this.DRAWNUMBER_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DRAWNUMBER_textBox.Location = new System.Drawing.Point(537, 363);
+            this.DRAWNUMBER_textBox.Location = new System.Drawing.Point(5, 26);
             this.DRAWNUMBER_textBox.Name = "DRAWNUMBER_textBox";
             this.DRAWNUMBER_textBox.Size = new System.Drawing.Size(210, 20);
             this.DRAWNUMBER_textBox.TabIndex = 152;
-            this.DRAWNUMBER_textBox.Text = "XX-12345-001";
+            this.DRAWNUMBER_textBox.Text = "XX-13465-001";
             // 
             // AddClientPreInputTICKETCODE_button
             // 
-            this.AddClientPreInputTICKETCODE_button.Location = new System.Drawing.Point(537, 340);
+            this.AddClientPreInputTICKETCODE_button.Location = new System.Drawing.Point(5, 3);
             this.AddClientPreInputTICKETCODE_button.Name = "AddClientPreInputTICKETCODE_button";
             this.AddClientPreInputTICKETCODE_button.Size = new System.Drawing.Size(210, 21);
             this.AddClientPreInputTICKETCODE_button.TabIndex = 151;
@@ -679,11 +672,10 @@ namespace ServerControlCenterApplication
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.ListAllValue_button);
+            this.panel1.Controls.Add(this.objectConvNew_checkBox);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.GropBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.StageServerConfig_VarbleName_comboBox);
@@ -692,16 +684,18 @@ namespace ServerControlCenterApplication
             this.panel1.Size = new System.Drawing.Size(1427, 96);
             this.panel1.TabIndex = 146;
             // 
-            // ListAllValue_button
+            // objectConvNew_checkBox
             // 
-            this.ListAllValue_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ListAllValue_button.Location = new System.Drawing.Point(1318, 10);
-            this.ListAllValue_button.Name = "ListAllValue_button";
-            this.ListAllValue_button.Size = new System.Drawing.Size(96, 20);
-            this.ListAllValue_button.TabIndex = 11;
-            this.ListAllValue_button.Text = "変数全取得";
-            this.ListAllValue_button.UseVisualStyleBackColor = true;
-            this.ListAllValue_button.Click += new System.EventHandler(this.ListAllValue_button_Click);
+            this.objectConvNew_checkBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.objectConvNew_checkBox.AutoSize = true;
+            this.objectConvNew_checkBox.Checked = true;
+            this.objectConvNew_checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.objectConvNew_checkBox.Location = new System.Drawing.Point(1301, 4);
+            this.objectConvNew_checkBox.Name = "objectConvNew_checkBox";
+            this.objectConvNew_checkBox.Size = new System.Drawing.Size(113, 17);
+            this.objectConvNew_checkBox.TabIndex = 161;
+            this.objectConvNew_checkBox.Text = "objectConvNew";
+            this.objectConvNew_checkBox.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -712,53 +706,9 @@ namespace ServerControlCenterApplication
             this.label3.TabIndex = 10;
             this.label3.Text = "StageServerConfig.Config\r\n オブジェクト問合せ＆設定";
             // 
-            // GropBox1
-            // 
-            this.GropBox1.Controls.Add(this.STAGINGSYSTEMwatch_radiobutton);
-            this.GropBox1.Controls.Add(this.DRAWREGISTservice_radioButton);
-            this.GropBox1.Controls.Add(this.DRAWCAPTUREservice_radioButton);
-            this.GropBox1.Location = new System.Drawing.Point(312, 3);
-            this.GropBox1.Name = "GropBox1";
-            this.GropBox1.Size = new System.Drawing.Size(502, 47);
-            this.GropBox1.TabIndex = 9;
-            this.GropBox1.TabStop = false;
-            this.GropBox1.Text = "接続先サービス選択";
-            // 
-            // STAGINGSYSTEMwatch_radiobutton
-            // 
-            this.STAGINGSYSTEMwatch_radiobutton.AutoSize = true;
-            this.STAGINGSYSTEMwatch_radiobutton.Checked = true;
-            this.STAGINGSYSTEMwatch_radiobutton.Location = new System.Drawing.Point(331, 20);
-            this.STAGINGSYSTEMwatch_radiobutton.Name = "STAGINGSYSTEMwatch_radiobutton";
-            this.STAGINGSYSTEMwatch_radiobutton.Size = new System.Drawing.Size(160, 17);
-            this.STAGINGSYSTEMwatch_radiobutton.TabIndex = 2;
-            this.STAGINGSYSTEMwatch_radiobutton.TabStop = true;
-            this.STAGINGSYSTEMwatch_radiobutton.Text = "STAGINGSYSTEMwatch";
-            this.STAGINGSYSTEMwatch_radiobutton.UseVisualStyleBackColor = true;
-            // 
-            // DRAWREGISTservice_radioButton
-            // 
-            this.DRAWREGISTservice_radioButton.AutoSize = true;
-            this.DRAWREGISTservice_radioButton.Location = new System.Drawing.Point(182, 19);
-            this.DRAWREGISTservice_radioButton.Name = "DRAWREGISTservice_radioButton";
-            this.DRAWREGISTservice_radioButton.Size = new System.Drawing.Size(143, 17);
-            this.DRAWREGISTservice_radioButton.TabIndex = 1;
-            this.DRAWREGISTservice_radioButton.Text = "DRAWREGISTservice";
-            this.DRAWREGISTservice_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // DRAWCAPTUREservice_radioButton
-            // 
-            this.DRAWCAPTUREservice_radioButton.AutoSize = true;
-            this.DRAWCAPTUREservice_radioButton.Location = new System.Drawing.Point(7, 20);
-            this.DRAWCAPTUREservice_radioButton.Name = "DRAWCAPTUREservice_radioButton";
-            this.DRAWCAPTUREservice_radioButton.Size = new System.Drawing.Size(156, 17);
-            this.DRAWCAPTUREservice_radioButton.TabIndex = 0;
-            this.DRAWCAPTUREservice_radioButton.Text = "DRAWCAPTUREservice";
-            this.DRAWCAPTUREservice_radioButton.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.StageServerConfig_VarbleType_textbox);
@@ -771,7 +721,7 @@ namespace ServerControlCenterApplication
             // 
             // StageServerConfig_VarbleType_textbox
             // 
-            this.StageServerConfig_VarbleType_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.StageServerConfig_VarbleType_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StageServerConfig_VarbleType_textbox.Location = new System.Drawing.Point(3, 3);
             this.StageServerConfig_VarbleType_textbox.Name = "StageServerConfig_VarbleType_textbox";
@@ -877,8 +827,65 @@ namespace ServerControlCenterApplication
             this.StageServerConfig_VarbleName_comboBox.TabIndex = 3;
             this.StageServerConfig_VarbleName_comboBox.Text = "IsLoggingPIPE_NormalStatus";
             // 
+            // ListAllValue_button
+            // 
+            this.ListAllValue_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListAllValue_button.Location = new System.Drawing.Point(511, 20);
+            this.ListAllValue_button.Name = "ListAllValue_button";
+            this.ListAllValue_button.Size = new System.Drawing.Size(96, 20);
+            this.ListAllValue_button.TabIndex = 11;
+            this.ListAllValue_button.Text = "変数全取得";
+            this.ListAllValue_button.UseVisualStyleBackColor = true;
+            this.ListAllValue_button.Click += new System.EventHandler(this.ListAllValue_button_Click);
+            // 
+            // GropBox1
+            // 
+            this.GropBox1.Controls.Add(this.STAGINGSYSTEMwatch_radiobutton);
+            this.GropBox1.Controls.Add(this.ListAllValue_button);
+            this.GropBox1.Controls.Add(this.DRAWREGISTservice_radioButton);
+            this.GropBox1.Controls.Add(this.DRAWCAPTUREservice_radioButton);
+            this.GropBox1.Location = new System.Drawing.Point(672, 122);
+            this.GropBox1.Name = "GropBox1";
+            this.GropBox1.Size = new System.Drawing.Size(613, 40);
+            this.GropBox1.TabIndex = 9;
+            this.GropBox1.TabStop = false;
+            this.GropBox1.Text = "接続先サービス選択";
+            // 
+            // STAGINGSYSTEMwatch_radiobutton
+            // 
+            this.STAGINGSYSTEMwatch_radiobutton.AutoSize = true;
+            this.STAGINGSYSTEMwatch_radiobutton.Checked = true;
+            this.STAGINGSYSTEMwatch_radiobutton.Location = new System.Drawing.Point(331, 20);
+            this.STAGINGSYSTEMwatch_radiobutton.Name = "STAGINGSYSTEMwatch_radiobutton";
+            this.STAGINGSYSTEMwatch_radiobutton.Size = new System.Drawing.Size(160, 17);
+            this.STAGINGSYSTEMwatch_radiobutton.TabIndex = 2;
+            this.STAGINGSYSTEMwatch_radiobutton.TabStop = true;
+            this.STAGINGSYSTEMwatch_radiobutton.Text = "STAGINGSYSTEMwatch";
+            this.STAGINGSYSTEMwatch_radiobutton.UseVisualStyleBackColor = true;
+            // 
+            // DRAWREGISTservice_radioButton
+            // 
+            this.DRAWREGISTservice_radioButton.AutoSize = true;
+            this.DRAWREGISTservice_radioButton.Location = new System.Drawing.Point(182, 19);
+            this.DRAWREGISTservice_radioButton.Name = "DRAWREGISTservice_radioButton";
+            this.DRAWREGISTservice_radioButton.Size = new System.Drawing.Size(143, 17);
+            this.DRAWREGISTservice_radioButton.TabIndex = 1;
+            this.DRAWREGISTservice_radioButton.Text = "DRAWREGISTservice";
+            this.DRAWREGISTservice_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // DRAWCAPTUREservice_radioButton
+            // 
+            this.DRAWCAPTUREservice_radioButton.AutoSize = true;
+            this.DRAWCAPTUREservice_radioButton.Location = new System.Drawing.Point(7, 20);
+            this.DRAWCAPTUREservice_radioButton.Name = "DRAWCAPTUREservice_radioButton";
+            this.DRAWCAPTUREservice_radioButton.Size = new System.Drawing.Size(156, 17);
+            this.DRAWCAPTUREservice_radioButton.TabIndex = 0;
+            this.DRAWCAPTUREservice_radioButton.Text = "DRAWCAPTUREservice";
+            this.DRAWCAPTUREservice_radioButton.UseVisualStyleBackColor = true;
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.groupBox8);
             this.panel3.Controls.Add(this.groupBox6);
             this.panel3.Controls.Add(this.groupBox5);
             this.panel3.Controls.Add(this.groupBox1);
@@ -886,6 +893,26 @@ namespace ServerControlCenterApplication
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1427, 50);
             this.panel3.TabIndex = 146;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.ArcSuiteTicketConfigSave_button);
+            this.groupBox8.Location = new System.Drawing.Point(917, 5);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(272, 42);
+            this.groupBox8.TabIndex = 154;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "ArcSuiteTicketConfig.XML 強制保存";
+            // 
+            // ArcSuiteTicketConfigSave_button
+            // 
+            this.ArcSuiteTicketConfigSave_button.Location = new System.Drawing.Point(10, 16);
+            this.ArcSuiteTicketConfigSave_button.Name = "ArcSuiteTicketConfigSave_button";
+            this.ArcSuiteTicketConfigSave_button.Size = new System.Drawing.Size(113, 23);
+            this.ArcSuiteTicketConfigSave_button.TabIndex = 143;
+            this.ArcSuiteTicketConfigSave_button.Text = "PipeNameDR";
+            this.ArcSuiteTicketConfigSave_button.UseVisualStyleBackColor = true;
+            this.ArcSuiteTicketConfigSave_button.Click += new System.EventHandler(this.ArcSuiteTicketConfigSave_button_Click);
             // 
             // groupBox6
             // 
@@ -966,12 +993,22 @@ namespace ServerControlCenterApplication
             this.groupBox3.Controls.Add(this.DR_SAVE_STAGESERVERCONFIG_button);
             this.groupBox3.Controls.Add(this.DW_SAVE_STAGESERVERCONFIG_button);
             this.groupBox3.Controls.Add(this.DC_SAVE_STAGESERVERCONFIG_button);
-            this.groupBox3.Location = new System.Drawing.Point(275, 4);
+            this.groupBox3.Location = new System.Drawing.Point(293, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(391, 42);
             this.groupBox3.TabIndex = 151;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "StageServerConfig.XML, StampConf.XML 強制保存";
+            // 
+            // DR_SAVE_STAGESERVERCONFIG_button
+            // 
+            this.DR_SAVE_STAGESERVERCONFIG_button.Location = new System.Drawing.Point(139, 16);
+            this.DR_SAVE_STAGESERVERCONFIG_button.Name = "DR_SAVE_STAGESERVERCONFIG_button";
+            this.DR_SAVE_STAGESERVERCONFIG_button.Size = new System.Drawing.Size(113, 23);
+            this.DR_SAVE_STAGESERVERCONFIG_button.TabIndex = 144;
+            this.DR_SAVE_STAGESERVERCONFIG_button.Text = "PipeNameDR";
+            this.DR_SAVE_STAGESERVERCONFIG_button.UseVisualStyleBackColor = true;
+            this.DR_SAVE_STAGESERVERCONFIG_button.Click += new System.EventHandler(this.DR_SAVE_STAGESERVERCONFIG_button_Click);
             // 
             // DW_SAVE_STAGESERVERCONFIG_button
             // 
@@ -995,7 +1032,7 @@ namespace ServerControlCenterApplication
             // 
             // GetCommonApprovalWaitingTicketList_button
             // 
-            this.GetCommonApprovalWaitingTicketList_button.Location = new System.Drawing.Point(992, 343);
+            this.GetCommonApprovalWaitingTicketList_button.Location = new System.Drawing.Point(460, 6);
             this.GetCommonApprovalWaitingTicketList_button.Name = "GetCommonApprovalWaitingTicketList_button";
             this.GetCommonApprovalWaitingTicketList_button.Size = new System.Drawing.Size(248, 21);
             this.GetCommonApprovalWaitingTicketList_button.TabIndex = 155;
@@ -1003,75 +1040,101 @@ namespace ServerControlCenterApplication
             this.GetCommonApprovalWaitingTicketList_button.UseVisualStyleBackColor = true;
             this.GetCommonApprovalWaitingTicketList_button.Click += new System.EventHandler(this.GetCommonApprovalWaitingTicketList_button_Click);
             // 
-            // logWindowControl
-            // 
-            this.logWindowControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.logWindowControl.Location = new System.Drawing.Point(534, 393);
-            this.logWindowControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.logWindowControl.Name = "logWindowControl";
-            this.logWindowControl.Size = new System.Drawing.Size(896, 367);
-            this.logWindowControl.TabIndex = 148;
-            // 
-            // accountUserForm
-            // 
-            this.accountUserForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.accountUserForm.Location = new System.Drawing.Point(20, -1);
-            this.accountUserForm.Name = "accountUserForm";
-            this.accountUserForm.parentControl = null;
-            this.accountUserForm.Size = new System.Drawing.Size(1031, 110);
-            this.accountUserForm.TabIndex = 147;
-            this.accountUserForm.Paint += new System.Windows.Forms.PaintEventHandler(this.accountUserForm4_Paint);
-            this.accountUserForm.Leave += new System.EventHandler(this.accountUserForm_Leave);
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.groupBox2);
             this.panel6.Controls.Add(this.groupBox3);
-            this.panel6.Location = new System.Drawing.Point(552, 286);
+            this.panel6.Location = new System.Drawing.Point(647, 286);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(879, 49);
+            this.panel6.Size = new System.Drawing.Size(777, 49);
             this.panel6.TabIndex = 156;
             // 
-            // DR_SAVE_STAGESERVERCONFIG_button
+            // panel11
             // 
-            this.DR_SAVE_STAGESERVERCONFIG_button.Location = new System.Drawing.Point(139, 16);
-            this.DR_SAVE_STAGESERVERCONFIG_button.Name = "DR_SAVE_STAGESERVERCONFIG_button";
-            this.DR_SAVE_STAGESERVERCONFIG_button.Size = new System.Drawing.Size(113, 23);
-            this.DR_SAVE_STAGESERVERCONFIG_button.TabIndex = 144;
-            this.DR_SAVE_STAGESERVERCONFIG_button.Text = "PipeNameDR";
-            this.DR_SAVE_STAGESERVERCONFIG_button.UseVisualStyleBackColor = true;
-            this.DR_SAVE_STAGESERVERCONFIG_button.Click += new System.EventHandler(this.DR_SAVE_STAGESERVERCONFIG_button_Click);
+            this.panel11.Controls.Add(this.objcetConvNew_checkBox2);
+            this.panel11.Controls.Add(this.AddClientPreInputTICKETCODE_button);
+            this.panel11.Controls.Add(this.DRAWNUMBER_textBox);
+            this.panel11.Controls.Add(this.GetCommonApprovalWaitingTicketList_button);
+            this.panel11.Controls.Add(this.RemovePreInputTIKECTCODEs_button);
+            this.panel11.Controls.Add(this.preInputTikectCode_textBox);
+            this.panel11.Location = new System.Drawing.Point(647, 341);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(777, 82);
+            this.panel11.TabIndex = 157;
+            // 
+            // objcetConvNew_checkBox2
+            // 
+            this.objcetConvNew_checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.objcetConvNew_checkBox2.AutoSize = true;
+            this.objcetConvNew_checkBox2.Checked = true;
+            this.objcetConvNew_checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.objcetConvNew_checkBox2.Location = new System.Drawing.Point(657, 37);
+            this.objcetConvNew_checkBox2.Name = "objcetConvNew_checkBox2";
+            this.objcetConvNew_checkBox2.Size = new System.Drawing.Size(113, 17);
+            this.objcetConvNew_checkBox2.TabIndex = 160;
+            this.objcetConvNew_checkBox2.Text = "objectConvNew";
+            this.objcetConvNew_checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // logwindowClear_button
+            // 
+            this.logwindowClear_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.logwindowClear_button.Location = new System.Drawing.Point(1355, 784);
+            this.logwindowClear_button.Name = "logwindowClear_button";
+            this.logwindowClear_button.Size = new System.Drawing.Size(75, 23);
+            this.logwindowClear_button.TabIndex = 158;
+            this.logwindowClear_button.Text = "区切り線";
+            this.logwindowClear_button.UseVisualStyleBackColor = true;
+            this.logwindowClear_button.Click += new System.EventHandler(this.logwindowClear_button_Click);
+            // 
+            // logWindowControl
+            // 
+            this.logWindowControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logWindowControl.Location = new System.Drawing.Point(647, 429);
+            this.logWindowControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.logWindowControl.Name = "logWindowControl";
+            this.logWindowControl.Size = new System.Drawing.Size(783, 341);
+            this.logWindowControl.TabIndex = 148;
+            // 
+            // accountUserForm
+            // 
+            this.accountUserForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.accountUserForm.Location = new System.Drawing.Point(20, -1);
+            this.accountUserForm.Name = "accountUserForm";
+            this.accountUserForm.parentControl = null;
+            this.accountUserForm.Size = new System.Drawing.Size(1226, 110);
+            this.accountUserForm.TabIndex = 147;
+            this.accountUserForm.WriteLine = null;
+            this.accountUserForm.Load += new System.EventHandler(this.accountUserForm_Load);
+            this.accountUserForm.Leave += new System.EventHandler(this.accountUserForm_Leave);
             // 
             // TabControl05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.logwindowClear_button);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.GetCommonApprovalWaitingTicketList_button);
-            this.Controls.Add(this.preInputTikectCode_textBox);
+            this.Controls.Add(this.GropBox1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.RemovePreInputTIKECTCODEs_button);
-            this.Controls.Add(this.DRAWNUMBER_textBox);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.AddClientPreInputTICKETCODE_button);
             this.Controls.Add(this.logWindowControl);
             this.Controls.Add(this.accountUserForm);
             this.Controls.Add(this.groupBox16);
             this.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Name = "TabControl05";
-            this.Size = new System.Drawing.Size(1434, 773);
+            this.Size = new System.Drawing.Size(1434, 820);
             this.Load += new System.EventHandler(this.TabControl05_Load);
             this.VisibleChanged += new System.EventHandler(this.TabControl05_VisibleChanged);
             this.groupBox16.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1081,19 +1144,21 @@ namespace ServerControlCenterApplication
             this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.GropBox1.ResumeLayout(false);
-            this.GropBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.GropBox1.ResumeLayout(false);
+            this.GropBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1116,16 +1181,13 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button GetDRAWWATCHEserviceVersioButton;
         private System.Windows.Forms.Button GetDRAWREGISTserviceVersionButton;
         private System.Windows.Forms.Button GetDRAWCAPTUREserviceVersioButton;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button DR_ConnectTest_button;
-        private System.Windows.Forms.TextBox PIPETESTMSG_textBox;
         private System.Windows.Forms.Button DC_SAVE_STAGESERVERDATABASECONFIG_button;
         private System.Windows.Forms.Button DC_SAVE_STAGESERVERCONFIG_button;
         private System.Windows.Forms.Button DW_RELOAD_STAGESERVERCONFIG_button;
         private System.Windows.Forms.Button DC_ReloadConfig_button;
         private System.Windows.Forms.Button DR_ReloadConfig_button;
-        private System.Windows.Forms.Button GetApprovalRecepitonStateButton;
-        private System.Windows.Forms.Button GetCommitRecepitonStateButton;
+        private System.Windows.Forms.Button CheckApprovalRecepitonState;
+        private System.Windows.Forms.Button CheckCommitRecepitonStateButton;
         private AccountUserForm accountUserForm;
         private LogWindowControl logWindowControl;
         private System.Windows.Forms.Panel panel1;
@@ -1150,7 +1212,7 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox delyaTime_textBox;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button DW_GetPipeCommandLog_button;
+        private System.Windows.Forms.Button SW_GetPipeCommandLog_button;
         private System.Windows.Forms.Button DR_GetPipeCommandLog_button;
         private System.Windows.Forms.Button DC_GetPipeCommandLog_button;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -1174,10 +1236,18 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.TextBox waitMin_textBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button DC_ConnectTest_button;
         private System.Windows.Forms.Button DC_StressTest_button;
         private System.Windows.Forms.Button DW_SAVE_STAGESERVERCONFIG_button;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button DR_SAVE_STAGESERVERCONFIG_button;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.CheckBox objectConvNew_heckBox;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.CheckBox objcetConvNew_checkBox2;
+        private System.Windows.Forms.CheckBox objectConvNew_checkBox;
+        private System.Windows.Forms.Button logwindowClear_button;
+        private System.Windows.Forms.Button GetCommitPath_button;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button ArcSuiteTicketConfigSave_button;
     }
 }

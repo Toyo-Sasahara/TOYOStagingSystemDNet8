@@ -42,6 +42,7 @@ namespace ServerControlCenterApplication
 
         private void TabControl06_Load(object sender, EventArgs e)
         {
+            accountUserForm.WriteLine = logWindowControl.WriteLine;
         }
 
         /// <summary>
@@ -110,7 +111,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void GetContent_button_Click(object sender, EventArgs e)
         {
-            logWindowControl.WriteLine($"未完成\r\n");
+            logWindowControl.WriteLine($"アークスイートから図面を検索しコンテンツファイルとして取得します");
 
             string target_ServiceID_CabinetID = target_ServiceID_CabinetID_textBox.Text;
 
@@ -120,16 +121,16 @@ namespace ServerControlCenterApplication
             List<string> ZUBANstrings = new List<string>(ZUBANz);
 
             List<string> resultList;
-            RemoteClientDRAWREGIST remoteClientDRAWREGIST = new RemoteClientDRAWREGIST(
-                DomainName:SccConfig.Config.ClientDomainName,
-                UserName:SccConfig.Config.ClientUserName,
-                UserPassword:SccConfig.Config.ClientUserPassword,
-                ClsLogon:SccConfig.Config.ClsLogon,
-                PipeServerName:SccConfig.Config.StageServerHost,
-                PipeName:SccConfig.Config.PipeNameDR
+            RemoteClientDRAWREGIST rmc_DRAWREGIST = new RemoteClientDRAWREGIST(
+                DomainName: SccConfig.Config.ClientDomainName,
+                UserName: SccConfig.Config.ClientUserName,
+                UserPassword: SccConfig.Config.ClientUserPassword,
+                ClsLogon: SccConfig.Config.ClsLogon,
+                PipeServerName: SccConfig.Config.StageServerHost,
+                PipeName: SccConfig.Config.PipeNameDR
                 );
 
-            if (Command_MAINCOMMAND.GetArcSuiteContents(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, out resultList, objectConvNew:true, WriteLine:logWindowControl.WriteLine) != false)
+            if (Command_MAINCOMMAND.GetArcSuiteContents(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, out resultList, objectConvNew: objectConvNew_heckBox.Checked, logWindowControl.WriteLine) != false)
             {
                 foreach (var downloadFilePath in resultList)
                 {
@@ -155,9 +156,9 @@ namespace ServerControlCenterApplication
             List<string> ZUBANstrings = new List<string>(ZUBANz);
 
             List<KeyValuePair<string, string>> fileLists = new List<KeyValuePair<string, string>>();
-            string  resultMsg;
+            string resultMsg;
 
-            RemoteClientDRAWREGIST remoteClientDRAWREGIST = new RemoteClientDRAWREGIST(
+            RemoteClientDRAWREGIST rmc_DRAWREGIST = new RemoteClientDRAWREGIST(
                 DomainName: SccConfig.Config.ClientDomainName,
                 UserName: SccConfig.Config.ClientUserName,
                 UserPassword: SccConfig.Config.ClientUserPassword,
@@ -165,7 +166,7 @@ namespace ServerControlCenterApplication
                 PipeServerName: SccConfig.Config.StageServerHost,
                 PipeName: SccConfig.Config.PipeNameDR
                 );
-            remoteClientDRAWREGIST.GetArcSuiteLatestDrawingFiles(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, ref fileLists, out resultMsg, WriteLine:logWindowControl.WriteLine);
+            rmc_DRAWREGIST.GetArcSuiteLatestDrawingFiles(target_ServiceID_CabinetID, ZUBANstrings, DOWNLOADFOLDER_textBox.Text, ref fileLists, out resultMsg, objectConvNew: objectConvNew_heckBox.Checked, WriteLine: logWindowControl.WriteLine);
         }
 
 
@@ -174,7 +175,7 @@ namespace ServerControlCenterApplication
             logWindowControl.WriteLine($"【GetArcSuiteLatestDrawing】コマンドテスト開始。検索図番：{GetArcSuiteZUBAN_textBox.Text}");
 
             var zuban = GetArcSuiteZUBAN_textBox.Text;
-            var img = Command_MAINCOMMAND.GetArcSuiteLatestDrawing(zuban, objectConvNew:true, WriteLine:logWindowControl.WriteLine);
+            var img = Command_MAINCOMMAND.GetArcSuiteLatestDrawing(zuban, objectConvNew: objectConvNew_heckBox.Checked, WriteLine: logWindowControl.WriteLine);
 
             if (previewArcSuiteForm.Visible == false)
                 previewArcSuiteForm.Show(this);
@@ -187,7 +188,7 @@ namespace ServerControlCenterApplication
         {
             var zuban = GetArcSuiteZUBAN_textBox.Text;
             var target_ServiceID_CabinetID = serviceID_cabinetID2_textBox.Text;
-            var result = Command_MAINCOMMAND.GetArcSuiteLatestDrawingFile(target_ServiceID_CabinetID, zuban, DrawingFileSavePath_textBox.Text);
+            var result = Command_MAINCOMMAND.GetArcSuiteLatestDrawingFile(target_ServiceID_CabinetID, zuban, DrawingFileSavePath_textBox.Text, logWindowControl.WriteLine);
         }
 
         CancellationTokenSource tokenSource;
@@ -201,7 +202,7 @@ namespace ServerControlCenterApplication
 
             await Aa(cancelToken);
 
-            MessageBox.Show(this,"完了");
+            MessageBox.Show(this, "完了");
 
         }
 
@@ -229,24 +230,30 @@ namespace ServerControlCenterApplication
             return "";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sanitizedNumber"></param>
+        /// <param name="CadDataFullFileName"></param>
+        /// <returns></returns>
         private string arcsuite(string sanitizedNumber, string CadDataFullFileName)
         {
             try
             {
                 /// リモート操作をするオブジェクトを生成
-                RemoteClientDRAWREGIST remoteClientDR = new RemoteClientDRAWREGIST(
+                RemoteClientDRAWREGIST rmc_DRAWREGIST = new RemoteClientDRAWREGIST(
                     SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon,
                     SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR
                     );
 
-                remoteClientDR.ClientTimeOut = 8000;
+                rmc_DRAWREGIST.ClientTimeOut = 8000;
 
                 CancellationTokenSource cts = new CancellationTokenSource();
                 CancellationToken ct = cts.Token;
 
                 ///ｱｰｸｽｲｰﾄへ問合せを実行する。時間コスト高い処理
-                CheckArcSuiteData arcSuiteDuplicateConfirm = new CheckArcSuiteData(remoteClientDR);
-                ArcsuitePreview s_arcSuitePreview = arcSuiteDuplicateConfirm.QueryStart(sanitizedNumber,ct, null);
+                CheckArcSuiteData arcSuiteDuplicateConfirm = new CheckArcSuiteData(rmc_DRAWREGIST, objectConvNew: objectConvNew_heckBox.Checked);
+                ArcsuitePreview s_arcSuitePreview = arcSuiteDuplicateConfirm.QueryStart(sanitizedNumber, ct, null);
 
                 if (s_arcSuitePreview.Normality == true)
                 {
@@ -311,5 +318,10 @@ namespace ServerControlCenterApplication
 
         }
 
+        private void logwindowClear_button_Click(object sender, EventArgs e)
+        {
+            logWindowControl.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
+
+        }
     }
 }

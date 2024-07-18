@@ -29,8 +29,10 @@ namespace ServerControlCenterApplication
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabControl01));
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.VARIANT_PARTNUMBER_textBox = new System.Windows.Forms.TextBox();
+            this.VARIANT_Type_checkBox = new System.Windows.Forms.CheckBox();
             this.GetCommitPrinterStatusButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.objectConvNew2_CheckBox = new System.Windows.Forms.CheckBox();
@@ -38,8 +40,6 @@ namespace ServerControlCenterApplication
             this.objectConvNew_CheckBox = new System.Windows.Forms.CheckBox();
             this.ShowPrinterQueue_button = new System.Windows.Forms.Button();
             this.reloadPrinter_button = new System.Windows.Forms.Button();
-            this.VARIANT_Type_checkBox = new System.Windows.Forms.CheckBox();
-            this.VARIANT_PARTNUMBER_textBox = new System.Windows.Forms.TextBox();
             this.AUTHDATE_textBox = new System.Windows.Forms.TextBox();
             this.AUTHORUSER_textBox = new System.Windows.Forms.TextBox();
             this.MATERIAL_textBox = new System.Windows.Forms.TextBox();
@@ -63,16 +63,15 @@ namespace ServerControlCenterApplication
             this.TESTIMAGE_comboBox2 = new System.Windows.Forms.ComboBox();
             this.TESTIMAGEDraw_TexstTextBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logwindowClear_button = new System.Windows.Forms.Button();
             this.logWindowControl = new ServerControlCenterApplication.LogWindowControl();
             this.accountUserForm = new ServerControlCenterApplication.AccountUserForm();
-            this.logwindowClear_button = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox11.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DebugForm_PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox11
@@ -98,6 +97,41 @@ namespace ServerControlCenterApplication
             this.groupBox11.TabIndex = 91;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "ｺﾐｯﾄ動作ﾃｽﾄ";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.VARIANT_PARTNUMBER_textBox);
+            this.panel3.Controls.Add(this.VARIANT_Type_checkBox);
+            this.panel3.Location = new System.Drawing.Point(147, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(183, 85);
+            this.panel3.TabIndex = 110;
+            // 
+            // VARIANT_PARTNUMBER_textBox
+            // 
+            this.VARIANT_PARTNUMBER_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.VARIANT_PARTNUMBER_textBox.Enabled = false;
+            this.VARIANT_PARTNUMBER_textBox.Location = new System.Drawing.Point(45, 6);
+            this.VARIANT_PARTNUMBER_textBox.Multiline = true;
+            this.VARIANT_PARTNUMBER_textBox.Name = "VARIANT_PARTNUMBER_textBox";
+            this.VARIANT_PARTNUMBER_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.VARIANT_PARTNUMBER_textBox.Size = new System.Drawing.Size(135, 76);
+            this.VARIANT_PARTNUMBER_textBox.TabIndex = 102;
+            this.VARIANT_PARTNUMBER_textBox.Text = "XX-12345-070\r\nXX-12345-071\r\nXX-12345-072\r\nXX-12345-073\r\nXX-12345-074\r\nXX-12345-07" +
+    "5";
+            // 
+            // VARIANT_Type_checkBox
+            // 
+            this.VARIANT_Type_checkBox.AutoSize = true;
+            this.VARIANT_Type_checkBox.Location = new System.Drawing.Point(3, 6);
+            this.VARIANT_Type_checkBox.Name = "VARIANT_Type_checkBox";
+            this.VARIANT_Type_checkBox.Size = new System.Drawing.Size(36, 16);
+            this.VARIANT_Type_checkBox.TabIndex = 103;
+            this.VARIANT_Type_checkBox.Text = "表";
+            this.VARIANT_Type_checkBox.UseVisualStyleBackColor = true;
+            this.VARIANT_Type_checkBox.CheckedChanged += new System.EventHandler(this.VARIANT_Type_checkBox_CheckedChanged);
             // 
             // GetCommitPrinterStatusButton
             // 
@@ -173,32 +207,6 @@ namespace ServerControlCenterApplication
             this.reloadPrinter_button.UseVisualStyleBackColor = true;
             this.reloadPrinter_button.Click += new System.EventHandler(this.reloadPrinter_button_Click);
             // 
-            // VARIANT_Type_checkBox
-            // 
-            this.VARIANT_Type_checkBox.AutoSize = true;
-            this.VARIANT_Type_checkBox.Location = new System.Drawing.Point(3, 6);
-            this.VARIANT_Type_checkBox.Name = "VARIANT_Type_checkBox";
-            this.VARIANT_Type_checkBox.Size = new System.Drawing.Size(36, 16);
-            this.VARIANT_Type_checkBox.TabIndex = 103;
-            this.VARIANT_Type_checkBox.Text = "表";
-            this.VARIANT_Type_checkBox.UseVisualStyleBackColor = true;
-            this.VARIANT_Type_checkBox.CheckedChanged += new System.EventHandler(this.VARIANT_Type_checkBox_CheckedChanged);
-            // 
-            // VARIANT_PARTNUMBER_textBox
-            // 
-            this.VARIANT_PARTNUMBER_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.VARIANT_PARTNUMBER_textBox.Enabled = false;
-            this.VARIANT_PARTNUMBER_textBox.Location = new System.Drawing.Point(45, 6);
-            this.VARIANT_PARTNUMBER_textBox.Multiline = true;
-            this.VARIANT_PARTNUMBER_textBox.Name = "VARIANT_PARTNUMBER_textBox";
-            this.VARIANT_PARTNUMBER_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.VARIANT_PARTNUMBER_textBox.Size = new System.Drawing.Size(135, 76);
-            this.VARIANT_PARTNUMBER_textBox.TabIndex = 102;
-            this.VARIANT_PARTNUMBER_textBox.Text = "XX-12345-070\r\nXX-12345-071\r\nXX-12345-072\r\nXX-12345-073\r\nXX-12345-074\r\nXX-12345-07" +
-    "5";
-            // 
             // AUTHDATE_textBox
             // 
             this.AUTHDATE_textBox.Location = new System.Drawing.Point(149, 234);
@@ -258,6 +266,7 @@ namespace ServerControlCenterApplication
             this.PrinterSel_comboBox.Size = new System.Drawing.Size(182, 20);
             this.PrinterSel_comboBox.TabIndex = 96;
             this.PrinterSel_comboBox.Text = "プリンタ定義を選択";
+            this.PrinterSel_comboBox.DropDown += new System.EventHandler(this.PrinterSel_comboBox_DropDown);
             this.PrinterSel_comboBox.SelectedIndexChanged += new System.EventHandler(this.PrinterSel_comboBox_SelectedIndexChanged);
             // 
             // CommitTest_Button
@@ -454,7 +463,6 @@ namespace ServerControlCenterApplication
             this.TESTIMAGEDraw_TexstTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.TESTIMAGEDraw_TexstTextBox2.Size = new System.Drawing.Size(182, 400);
             this.TESTIMAGEDraw_TexstTextBox2.TabIndex = 88;
-            this.TESTIMAGEDraw_TexstTextBox2.Text = resources.GetString("TESTIMAGEDraw_TexstTextBox2.Text");
             this.TESTIMAGEDraw_TexstTextBox2.TextChanged += new System.EventHandler(this.TESTIMAGEDraw_TexstTextBox2_TextChanged);
             // 
             // panel1
@@ -468,6 +476,17 @@ namespace ServerControlCenterApplication
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 197);
             this.panel1.TabIndex = 138;
+            // 
+            // logwindowClear_button
+            // 
+            this.logwindowClear_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.logwindowClear_button.Location = new System.Drawing.Point(1169, 614);
+            this.logwindowClear_button.Name = "logwindowClear_button";
+            this.logwindowClear_button.Size = new System.Drawing.Size(75, 23);
+            this.logwindowClear_button.TabIndex = 139;
+            this.logwindowClear_button.Text = "区切り線";
+            this.logwindowClear_button.UseVisualStyleBackColor = true;
+            this.logwindowClear_button.Click += new System.EventHandler(this.logwindowClear_button_Click);
             // 
             // logWindowControl
             // 
@@ -486,30 +505,10 @@ namespace ServerControlCenterApplication
             this.accountUserForm.Location = new System.Drawing.Point(0, 0);
             this.accountUserForm.Name = "accountUserForm";
             this.accountUserForm.parentControl = null;
-            this.accountUserForm.Size = new System.Drawing.Size(1250, 110);
+            this.accountUserForm.Size = new System.Drawing.Size(1218, 110);
             this.accountUserForm.TabIndex = 135;
-            this.accountUserForm.WriteLine = ((SasaLib.SasaLibDelegateWriteLine)(resources.GetObject("accountUserForm.WriteLine")));
+            this.accountUserForm.WriteLine = null;
             this.accountUserForm.Leave += new System.EventHandler(this.accountUserForm_Leave);
-            // 
-            // logwindowClear_button
-            // 
-            this.logwindowClear_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.logwindowClear_button.Location = new System.Drawing.Point(1169, 614);
-            this.logwindowClear_button.Name = "logwindowClear_button";
-            this.logwindowClear_button.Size = new System.Drawing.Size(75, 23);
-            this.logwindowClear_button.TabIndex = 139;
-            this.logwindowClear_button.Text = "区切り線";
-            this.logwindowClear_button.UseVisualStyleBackColor = true;
-            this.logwindowClear_button.Click += new System.EventHandler(this.logwindowClear_button_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.VARIANT_PARTNUMBER_textBox);
-            this.panel3.Controls.Add(this.VARIANT_Type_checkBox);
-            this.panel3.Location = new System.Drawing.Point(147, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(183, 85);
-            this.panel3.TabIndex = 110;
             // 
             // TabControl01
             // 
@@ -527,6 +526,8 @@ namespace ServerControlCenterApplication
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TabControl01_Paint);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DebugForm_PictureBox)).EndInit();
@@ -534,8 +535,6 @@ namespace ServerControlCenterApplication
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

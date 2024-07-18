@@ -5,11 +5,14 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Generic;
-
+using ToyoStageService;
+using ToyoMcMfg.Staging;
 using System.Data;
-
+using System.Text.Json;
 #if NETCOREAPP
 using System.Runtime.Versioning;
+using ToyoMcMfg.Staging.RemoteObjects;
+using ToyoMcMfg.Staging.DataBaseConfig;
 #endif
 
 namespace ServerControlCenterApplication
@@ -22,27 +25,6 @@ namespace ServerControlCenterApplication
     {
         Form1 mainForm;
 
-        public struct ParamX
-        {
-            public string Field { get; set; }
-            public object Value { get; set; }
-            public SqlDbType SqlDBType { get; set; }
-        }
-
-        public class SqlFieldValuex
-        {
-            /// <summary>
-            /// フィールド
-            /// </summary>
-            public string Field { get; set; }
-
-            /// <summary>
-            /// データタイプ
-            /// </summary>
-            public SqlDbType SqlDBType { get; set; }
-
-            public List<ParamX> ParamXs = new List<ParamX>();
-        }
 
         /// <summary>
         /// ■コンストラクタ
@@ -64,6 +46,7 @@ namespace ServerControlCenterApplication
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
+            accountUserForm.WriteLine = logWindowControl.WriteLine;
         }
 
         /// <summary>
@@ -141,15 +124,24 @@ namespace ServerControlCenterApplication
             SourceFromLocalFullFileName_textBox.Text = SourceFromLocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
             SendToServerRullFileName.Text = SendToServerRullFileName.Text.TrimStart('\"').TrimEnd('\"');
 
-            RemoteClientDRAWCAPTURE remoteClientDC = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
+            RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                                                 SccConfig.Config.ClientUserName,
                                                 SccConfig.Config.ClientUserPassword,
                                                 SccConfig.Config.ClsLogon,
                                                  SccConfig.Config.StageServerHost,
                                                  SccConfig.Config.PipeNameDC
                                                 );
-            string msg;
-            var ans = remoteClientDC.FileSend(SourceFromLocalFullFileName_textBox.Text, SendToServerRullFileName.Text, out msg, WriteLine:LogWindowWriteLine) ;
+            if (System.IO.File.Exists(SourceFromLocalFullFileName_textBox.Text))
+            {
+                string msg;
+                var ans = rmc_DRAWCAPTURE.FileSend(SourceFromLocalFullFileName_textBox.Text, SendToServerRullFileName.Text, out msg, objectConvNew: FileSendWriteObjectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine);
+
+                logWindowControl.WriteLine($"FileSend 事項結果 out msg = {msg}, result = {ans}");
+            }
+            else
+            {
+                MessageBox.Show($"{SourceFromLocalFullFileName_textBox.Text} が存在しません");
+            }
         }
 
         /// <summary>
@@ -169,7 +161,7 @@ namespace ServerControlCenterApplication
             ReceveFullFileName_textBox.Text = ReceveFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
             ReceveToLocalFullFileName_textBox.Text = ReceveToLocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
 
-            RemoteClientDRAWCAPTURE remoteClientDC = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
+            RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                                     SccConfig.Config.ClientUserName,
                                     SccConfig.Config.ClientUserPassword,
                                     SccConfig.Config.ClsLogon,
@@ -179,7 +171,28 @@ namespace ServerControlCenterApplication
 
 
             string msg;
-            var ans = remoteClientDC.FileRecv(ReceveFullFileName_textBox.Text, ReceveToLocalFullFileName_textBox.Text, out msg, WriteLine: LogWindowWriteLine);
+            var ans = rmc_DRAWCAPTURE.FileRecv(ReceveFullFileName_textBox.Text, ReceveToLocalFullFileName_textBox.Text, out msg, objectConvNew: ReceveFileObjectConvNew_checkBox.Checked, WriteLine: LogWindowWriteLine);
+
+        }
+
+        private void GetFileList_button_Click(object sender, EventArgs e)
+        {
+            ReceveFullFileName_textBox.Text = ReceveFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            ReceveToLocalFullFileName_textBox.Text = ReceveToLocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+
+            RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
+                                    SccConfig.Config.ClientUserName,
+                                    SccConfig.Config.ClientUserPassword,
+                                    SccConfig.Config.ClsLogon,
+                                     SccConfig.Config.StageServerHost,
+                                     SccConfig.Config.PipeNameDC
+                                    );
+
+
+            string msg;
+            List<string> GetFileLists;
+            string ResultAndMsg;
+            var ans = rmc_DRAWCAPTURE.GetFileList(ServerSourceFolderNaeme_textBox.Text, SearchPath_textBox.Text, out GetFileLists, out ResultAndMsg, objectConvNew: objectConvNew_GetFileLst_CheckBox.Checked, logWindowControl.WriteLine);
 
         }
 
@@ -195,7 +208,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void GetAvailableMemory_button_Click(object sender, EventArgs e)
         {
-            RemoteClientSYSTEMWATCH remoteClientSW = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
+            RemoteClientSYSTEMWATCH rmc_SYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                                                 SccConfig.Config.ClientUserName,
                                                 SccConfig.Config.ClientUserPassword,
                                                 SccConfig.Config.ClsLogon,
@@ -203,13 +216,13 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             float availableMemory;
-            var result = remoteClientSW.GetAvailableMemory(out availableMemory, WriteLine: LogWindowWriteLine);
+            var result = rmc_SYSTEMWATCH.GetAvailableMemory(out availableMemory, objectConvNew: objectConvNew_checkBox.Checked, WriteLine: LogWindowWriteLine);
 
         }
 
         private void GetDRusedMemory_button_Click(object sender, EventArgs e)
         {
-            RemoteClientSYSTEMWATCH remoteClientSW = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
+            RemoteClientSYSTEMWATCH rmc_SYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                                                 SccConfig.Config.ClientUserName,
                                                 SccConfig.Config.ClientUserPassword,
                                                 SccConfig.Config.ClsLogon,
@@ -217,13 +230,13 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             long availableMemory;
-            var result = remoteClientSW.GetUsedMemory("ToyoDRAWREGISTservice", out availableMemory, WriteLine: LogWindowWriteLine);
+            var result = rmc_SYSTEMWATCH.GetUsedMemory("ToyoDRAWREGISTservice", out availableMemory, objectConvNew: objectConvNew_checkBox.Checked, WriteLine: LogWindowWriteLine);
 
         }
 
         private void GetDCusedMemory_button_Click(object sender, EventArgs e)
         {
-            RemoteClientSYSTEMWATCH remoteClientSW = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
+            RemoteClientSYSTEMWATCH rmc_SYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                                                 SccConfig.Config.ClientUserName,
                                                 SccConfig.Config.ClientUserPassword,
                                                 SccConfig.Config.ClsLogon,
@@ -231,13 +244,13 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             long availableMemory;
-            var result = remoteClientSW.GetUsedMemory("ToyoDRAWCAPTUREservice", out availableMemory, WriteLine: LogWindowWriteLine);
+            var result = rmc_SYSTEMWATCH.GetUsedMemory("ToyoDRAWCAPTUREservice", out availableMemory, objectConvNew: objectConvNew_checkBox.Checked, WriteLine: LogWindowWriteLine);
 
         }
 
         private void GetSWusedMemory_button_Click(object sender, EventArgs e)
         {
-            RemoteClientSYSTEMWATCH remoteClientSW = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
+            RemoteClientSYSTEMWATCH rmc_SYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                                                 SccConfig.Config.ClientUserName,
                                                 SccConfig.Config.ClientUserPassword,
                                                 SccConfig.Config.ClsLogon,
@@ -245,82 +258,228 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.PipeNameSW
                                                 );
             long availableMemory;
-            var result = remoteClientSW.GetUsedMemory("ToyoSTAGINGSYSTEMwatch", out availableMemory, WriteLine: LogWindowWriteLine);
+            var result = rmc_SYSTEMWATCH.GetUsedMemory("ToyoSTAGINGSYSTEMwatch", out availableMemory, objectConvNew: objectConvNew_checkBox.Checked, WriteLine: LogWindowWriteLine);
 
         }
 
-        private void ObjecttoByteViaJsonSerializer_Click(object sender, EventArgs e)
+        public struct ParamX
         {
-            Bitmap orgObject = Properties.Resources.イメージ読込中;
+            public string Field { get; set; }
+            public object Value { get; set; }
+            public SqlDbType SqlDBType { get; set; }
+        }
 
-            DebugForm_PictureBox.Image = null;
+        public class SqlFieldValuex
+        {
+            /// <summary>
+            /// フィールド
+            /// </summary>
+            public string Field { get; set; }
 
-            // オブジェクトをバイト配列に変換
-            var converter = new ObjectConverter<Bitmap>();
-            long sz;
-            Exception ex;
+            /// <summary>
+            /// データタイプ
+            /// </summary>
+            public SqlDbType SqlDBType { get; set; }
+
+            public List<ParamX> ParamXs = new List<ParamX>();
+        }
+
+
+        private void JsonTest_button_Click(object sender, EventArgs e)
+        {
+
+            SqlFieldValuex fieldValue = new SqlFieldValuex
+            {
+                Field = "FieldName",
+                SqlDBType = SqlDbType.VarChar,
+                ParamXs = new List<ParamX>
+                {
+                    new ParamX
+                    {
+                        Field = "ParamField1",
+                        Value = "ParamValue1",
+                        SqlDBType = SqlDbType.VarChar
+                    },
+                    new ParamX
+                    {
+                        Field = "ParamField2",
+                        Value = 123,  // 例として数値を設定
+                        SqlDBType = SqlDbType.Int
+                    }
+                    // 追加の ParamX を必要に応じて初期化することができます
+                }
+            };
+
+            List<SqlFieldValuex> sqlFieldValues = new List<SqlFieldValuex>() { fieldValue, fieldValue, fieldValue };
+
+            var options = new JsonSerializerOptions { Converters = { new SqlFieldValuexConverter() }, WriteIndented = true };
+
+            var objectConverter = new SasaLib.PIPE.ObjectConverter<List<SqlFieldValuex>>();
 
             string jsontxt;
-            var bytes = converter.ToByteArrayViaJsonSerializer(orgObject);
-            Bitmap anserobject = converter.FromByteArrayViaJsonSerializer(bytes);
+            var a = objectConverter.ToByteArrayViaJsonSerializer(sqlFieldValues, out jsontxt, options: options);
 
-            DebugForm_PictureBox.Image = anserobject;
+            string jsontxt2;
+            List<SqlFieldValuex> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(a, out jsontxt2, options);
 
-        }
-
-        private void ObjecttoBytebutton_Click(object sender, EventArgs e)
-        {
-            Image orgObject = Properties.Resources.イメージ読込中;
-
-            DebugForm_PictureBox.Image = null;
-
-            // オブジェクトをバイト配列に変換
-            var converter = new ObjectConverter<Image>();
-            long sz;
-            Exception ex;
-
-            var bytes = converter.ToByteArray(orgObject);
-
-            Image image = converter.FromByteArray(bytes);
-
-            DebugForm_PictureBox.Image = image;
-        }
-
-        private void Direct2_button_Click(object sender, EventArgs e)
-        {
-            Image orgObject = Properties.Resources.イメージ読込中;
-
-            DebugForm_PictureBox.Image = null;
-
-            // オブジェクトをバイト配列に変換
-            var converter = new ObjectConverter<Image>();
-            long sz;
-            Exception ex;
-
-            var bytes = converter.ToByteArrayViaDirect2((Bitmap)orgObject);
-
-            Bitmap input = (Bitmap)converter.FromByteArrayViaDirect2(bytes);
-
-            DebugForm_PictureBox.Image = input;
 
         }
 
-        private void FromByteArrayToBitmap_button_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            DebugForm_PictureBox.Image = null;
+            List<SqlSearchStringValue> sqlSearchStringValues = new List<SqlSearchStringValue>()
+            {
+                new SqlSearchStringValue {Field = "0", Logic = "A", Ooperator ="D" , Value = "E"},
+                new SqlSearchStringValue {Field = "1", Logic = "B", Ooperator ="E" , Value = "R"},
+                new SqlSearchStringValue {Field = "2", Logic = "C", Ooperator ="F" , Value = "T"},
+            };
 
-            Image orgObject = Properties.Resources.イメージ読込中;
 
-            // オブジェクトをバイト配列に変換
-            var converter = new ObjectConverter<Image>();
-            long sz;
-            Exception ex;
+            var objectConverter = new SasaLib.PIPE.ObjectConverter<List<SqlSearchStringValue>>();
 
-            var bytes = converter.ToByteArrayFromBitmap((Bitmap)orgObject, System.Drawing.Imaging.ImageFormat.Jpeg);
+            string jsonText;
+            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(sqlSearchStringValues, out jsonText);
 
-            Bitmap input = (Bitmap)converter.FromByteArrayToBitmap(bytes);
+            string jsontxt2;
+            List<SqlSearchStringValue> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(bytes, out jsontxt2);
 
-            DebugForm_PictureBox.Image = input;
+        }
+
+        private void FieldValuseSets_JSONCONV_button_Click(object sender, EventArgs e)
+        {
+            List<FieldValueSet> fieldValueSets = new List<FieldValueSet>()
+            {
+                new FieldValueSet
+                {
+                    Message = "AA", Sucess = true,
+                    Params = new List<FieldValueSet.Param>
+                    {
+                        new FieldValueSet.Param
+                        {Field = "", SqlDBType = SqlDbType.Int, Value = 100
+                        }
+                    }
+                },
+                new FieldValueSet
+                {
+                    Message = "BB", Sucess = true,
+                    Params = new List<FieldValueSet.Param>
+                    {
+                        new FieldValueSet.Param
+                        {Field = "", SqlDBType = SqlDbType.Int, Value = 100
+                        }
+                    }
+                }
+
+            };
+
+            var options = new JsonSerializerOptions { Converters = { new FieldValueSetJsonConverter() }, WriteIndented = true };
+
+            var objectConverter = new SasaLib.PIPE.ObjectConverter<List<FieldValueSet>>();
+
+            string outtext1;
+            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(fieldValueSets, out outtext1, options: options);
+
+            string outtext2;
+            List<FieldValueSet> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(bytes, out outtext2, options);
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // サンプルデータの作成
+            List<ApprovedCancel> approvedCancels = new List<ApprovedCancel>
+            {
+                new ApprovedCancel
+                {
+                    FieldValueSet = new FieldValueSet
+                    {
+                        Message = "Sample Message",
+                        Params = new List<FieldValueSet.Param>
+                        {
+                            new FieldValueSet.Param { Field = "Field1", Value = "Value1", SqlDBType = SqlDbType.VarChar },
+                            new FieldValueSet.Param { Field = "Field2", Value = 123, SqlDBType = SqlDbType.Int }
+                        }
+                    },
+                    AUTHOR = true
+                },
+                new ApprovedCancel
+                {
+                    FieldValueSet = new FieldValueSet
+                    {
+                        Message = "Another Message",
+                        Params = new List<FieldValueSet.Param>
+                        {
+                            new FieldValueSet.Param { Field = "Field3", Value = DateTime.Now, SqlDBType = SqlDbType.DateTime }
+                        }
+                    },
+                    AUTHOR = false
+            }
+        };
+            var options = new JsonSerializerOptions { Converters = { new ApprovedCancelJsonConverter() }, WriteIndented = true };
+
+            var objectConverter = new SasaLib.PIPE.ObjectConverter<List<ApprovedCancel>>();
+
+            string outtext1;
+            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(approvedCancels, out outtext1, options: options);
+
+            string outtext2;
+            List<ApprovedCancel> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(bytes, out outtext2, options: options);
+
+            if (approvedCancels == fieldValueSetRet)
+            {
+                MessageBox.Show("等しい");
+            }
+            else
+            {
+                MessageBox.Show("等しくない");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FieldValueSet fieldValueSet_in = new FieldValueSet
+            {
+                Message = "AA",
+                Sucess = true,
+                Params = new List<FieldValueSet.Param>
+                    {
+                        new FieldValueSet.Param
+                        {Field = "", SqlDBType = SqlDbType.Int, Value = 100
+                        }
+                    }
+            };
+
+
+            var options = new JsonSerializerOptions { Converters = { new FieldValueSetJsonConverter() }, WriteIndented = true };
+            var objectConverter = new SasaLib.PIPE.ObjectConverter<FieldValueSet>();
+
+            string outtext1;
+            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(fieldValueSet_in, out outtext1, options: null);
+
+            string outtext2;
+            FieldValueSet fieldValue_out = objectConverter.FromByteArrayViaJsonSerializer(bytes, out outtext2, null);
+
+
+            if (fieldValueSet_in == fieldValue_out)
+            {
+                MessageBox.Show("等しい");
+            }
+            else
+            {
+                MessageBox.Show("等しくない");
+            }
+
+        }
+
+        private void logwindowClear_button_Click(object sender, EventArgs e)
+        {
+            logWindowControl.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
 
         }
     }

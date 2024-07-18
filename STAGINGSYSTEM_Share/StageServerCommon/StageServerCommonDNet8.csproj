@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="ServiceBase" Version="6.0.2" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ObjectLock.cs" />
@@ -62,20 +64,21 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseUpdate.cs" Link="DataBaseUpdate.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileHundling.cs" Link="FileHundling.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileLockContorol.cs" Link="FileLockContorol.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_AcceptCommand.cs" Link="List_Client_AcceptCommand.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_GetArcSuiteAwaitingRegist.cs" Link="List_Client_GetArcSuiteAwaitingRegist.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_InputTICKET.cs" Link="List_Client_InputTICKET.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\MemoryMapdFile.cs" Link="MemoryMapdFile.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEClient.cs" Link="PIPEClient.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEServer.cs" Link="PIPEServer.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_ConnectTest.cs" Link="RemoteServerCommand_ConnectTest.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_GetAvailableMemory.cs" Link="RemoteServerCommand_GetAvailableMemory.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_GetMemMapdFile.cs" Link="RemoteServerCommand_GetMemMapdFile.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_MakePrinterConfigTemplate .cs" Link="RemoteServerCommand_MakePrinterConfigTemplate .cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_SetMemMapdFile.cs" Link="RemoteServerCommand_SetMemMapdFile.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_ShowPrinterQueue.cs" Link="RemoteServerCommand_ShowPrinterQueue.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\RemoteServerCommand_TitleFieldTest.cs" Link="RemoteServerCommand_TitleFieldTest.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StageServerCommon.cs" Link="StageServerCommon.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_ConnectTest.cs" Link="ServerCMD_ConnectTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_GetAvailableMemory.cs" Link="ServerCMD_GetAvailableMemory.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_GetMemMapdFile.cs" Link="ServerCMD_GetMemMapdFile.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_MakePrinterConfigTemplate.cs" Link="ServerCMD_MakePrinterConfigTemplate.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_ServerControl.cs" Link="ServerCMD_ServerControl.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_SetMemMapdFile.cs" Link="ServerCMD_SetMemMapdFile.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_ShowPrinterQueue.cs" Link="ServerCMD_ShowPrinterQueue.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_TitleFieldTest.cs" Link="ServerCMD_TitleFieldTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServiceBaseHelper.cs" Link="ServiceBaseHelper.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StageServerCommonInfo.cs" Link="StageServerCommonInfo.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\TicketProcess.cs" Link="TicketProcess.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\UserDataBase.cs" Link="UserDataBase.cs" />
   </ItemGroup>

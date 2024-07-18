@@ -29,430 +29,433 @@ namespace ServerControlCenterApplication
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox9 = new System.Windows.Forms.GroupBox();
-            TICKETCODE_DIRECT_panel = new System.Windows.Forms.Panel();
-            objectConvNew_CheckBox = new System.Windows.Forms.CheckBox();
-            groupBox1 = new System.Windows.Forms.GroupBox();
-            button1 = new System.Windows.Forms.Button();
-            TextBox = new System.Windows.Forms.TextBox();
-            panel2 = new System.Windows.Forms.Panel();
-            UnSetPRIORITYREGISTFLAGisNullButton = new System.Windows.Forms.Button();
-            SetPRIORITYREGISTFLAGisNullButton = new System.Windows.Forms.Button();
-            panel1 = new System.Windows.Forms.Panel();
-            ArcSuiteTestRegistButton = new System.Windows.Forms.Button();
-            ArcSuiteTestRegistResetButton = new System.Windows.Forms.Button();
-            Drawing_pictureBox = new System.Windows.Forms.PictureBox();
-            groupBox6 = new System.Windows.Forms.GroupBox();
-            curGUIDBASE64Label = new System.Windows.Forms.Label();
-            DirectPrintButton = new System.Windows.Forms.Button();
-            PrinterSelcomboBox = new System.Windows.Forms.ComboBox();
-            TICKETCODE_textBox = new System.Windows.Forms.TextBox();
-            DirectSearchButton = new System.Windows.Forms.Button();
-            ApprovedRsetOneButton = new System.Windows.Forms.Button();
-            DirectDeleteButton = new System.Windows.Forms.Button();
-            UserID_textBox = new System.Windows.Forms.TextBox();
-            ApprovedMainProcessDebugButton = new System.Windows.Forms.Button();
-            panel3 = new System.Windows.Forms.Panel();
-            GetArcSuiteAwaitingRegist_button = new System.Windows.Forms.Button();
-            groupBox12 = new System.Windows.Forms.GroupBox();
-            CheckDrwingTypeAnserTextBox = new System.Windows.Forms.TextBox();
-            CheckDrawingTypeButton = new System.Windows.Forms.Button();
-            PARTNUMBERtextBox = new System.Windows.Forms.TextBox();
-            logWindowControl = new LogWindowControl();
-            accountUserForm = new AccountUserForm();
-            groupBox9.SuspendLayout();
-            TICKETCODE_DIRECT_panel.SuspendLayout();
-            groupBox1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Drawing_pictureBox).BeginInit();
-            groupBox6.SuspendLayout();
-            panel3.SuspendLayout();
-            groupBox12.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabControl03));
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.TICKETCODE_DIRECT_panel = new System.Windows.Forms.Panel();
+            this.objectConvNew_CheckBox = new System.Windows.Forms.CheckBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.GetArcSuiteAwaitingRegist_button = new System.Windows.Forms.Button();
+            this.ApprovedMainProcessDebugButton = new System.Windows.Forms.Button();
+            this.UserID_textBox = new System.Windows.Forms.TextBox();
+            this.DirectSearchButton = new System.Windows.Forms.Button();
+            this.DirectDeleteButton = new System.Windows.Forms.Button();
+            this.ApprovedRsetOneButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TextBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.UnSetPRIORITYREGISTFLAGisNullButton = new System.Windows.Forms.Button();
+            this.SetPRIORITYREGISTFLAGisNullButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ArcSuiteTestRegistButton = new System.Windows.Forms.Button();
+            this.ArcSuiteTestRegistResetButton = new System.Windows.Forms.Button();
+            this.Drawing_pictureBox = new System.Windows.Forms.PictureBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.curGUIDBASE64Label = new System.Windows.Forms.Label();
+            this.DirectPrintButton = new System.Windows.Forms.Button();
+            this.PrinterSelcomboBox = new System.Windows.Forms.ComboBox();
+            this.TICKETCODE_textBox = new System.Windows.Forms.TextBox();
+            this.accountUserForm = new ServerControlCenterApplication.AccountUserForm();
+            this.logWindowControl = new ServerControlCenterApplication.LogWindowControl();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.CheckDrwingTypeAnserTextBox = new System.Windows.Forms.TextBox();
+            this.CheckDrawingTypeButton = new System.Windows.Forms.Button();
+            this.PARTNUMBERtextBox = new System.Windows.Forms.TextBox();
+            this.logwindowClear_button = new System.Windows.Forms.Button();
+            this.groupBox9.SuspendLayout();
+            this.TICKETCODE_DIRECT_panel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Drawing_pictureBox)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.SuspendLayout();
             // 
             // groupBox9
             // 
-            groupBox9.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            groupBox9.Controls.Add(TICKETCODE_DIRECT_panel);
-            groupBox9.Location = new System.Drawing.Point(5, 136);
-            groupBox9.Margin = new System.Windows.Forms.Padding(4);
-            groupBox9.Name = "groupBox9";
-            groupBox9.Padding = new System.Windows.Forms.Padding(4);
-            groupBox9.Size = new System.Drawing.Size(747, 715);
-            groupBox9.TabIndex = 92;
-            groupBox9.TabStop = false;
-            groupBox9.Text = "標準機能テスト";
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox9.Controls.Add(this.TICKETCODE_DIRECT_panel);
+            this.groupBox9.Location = new System.Drawing.Point(4, 121);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(640, 536);
+            this.groupBox9.TabIndex = 92;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "標準機能テスト";
             // 
             // TICKETCODE_DIRECT_panel
             // 
-            TICKETCODE_DIRECT_panel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            TICKETCODE_DIRECT_panel.Controls.Add(objectConvNew_CheckBox);
-            TICKETCODE_DIRECT_panel.Controls.Add(groupBox1);
-            TICKETCODE_DIRECT_panel.Controls.Add(panel2);
-            TICKETCODE_DIRECT_panel.Controls.Add(panel1);
-            TICKETCODE_DIRECT_panel.Controls.Add(Drawing_pictureBox);
-            TICKETCODE_DIRECT_panel.Controls.Add(groupBox6);
-            TICKETCODE_DIRECT_panel.Controls.Add(TICKETCODE_textBox);
-            TICKETCODE_DIRECT_panel.Controls.Add(DirectSearchButton);
-            TICKETCODE_DIRECT_panel.Controls.Add(ApprovedRsetOneButton);
-            TICKETCODE_DIRECT_panel.Controls.Add(DirectDeleteButton);
-            TICKETCODE_DIRECT_panel.Location = new System.Drawing.Point(7, 15);
-            TICKETCODE_DIRECT_panel.Margin = new System.Windows.Forms.Padding(4);
-            TICKETCODE_DIRECT_panel.Name = "TICKETCODE_DIRECT_panel";
-            TICKETCODE_DIRECT_panel.Size = new System.Drawing.Size(733, 681);
-            TICKETCODE_DIRECT_panel.TabIndex = 96;
-            TICKETCODE_DIRECT_panel.Paint += TICKETCODE_DIRECT_panel_Paint;
+            this.TICKETCODE_DIRECT_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.objectConvNew_CheckBox);
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.panel3);
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.groupBox1);
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.panel2);
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.panel1);
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.Drawing_pictureBox);
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.groupBox6);
+            this.TICKETCODE_DIRECT_panel.Controls.Add(this.TICKETCODE_textBox);
+            this.TICKETCODE_DIRECT_panel.Location = new System.Drawing.Point(6, 18);
+            this.TICKETCODE_DIRECT_panel.Name = "TICKETCODE_DIRECT_panel";
+            this.TICKETCODE_DIRECT_panel.Size = new System.Drawing.Size(628, 503);
+            this.TICKETCODE_DIRECT_panel.TabIndex = 96;
+            this.TICKETCODE_DIRECT_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.TICKETCODE_DIRECT_panel_Paint);
             // 
             // objectConvNew_CheckBox
             // 
-            objectConvNew_CheckBox.AutoSize = true;
-            objectConvNew_CheckBox.Location = new System.Drawing.Point(620, 8);
-            objectConvNew_CheckBox.Name = "objectConvNew_CheckBox";
-            objectConvNew_CheckBox.Size = new System.Drawing.Size(110, 19);
-            objectConvNew_CheckBox.TabIndex = 115;
-            objectConvNew_CheckBox.Text = "objectConvNew";
-            objectConvNew_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(TextBox);
-            groupBox1.Location = new System.Drawing.Point(499, 30);
-            groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            groupBox1.Size = new System.Drawing.Size(220, 205);
-            groupBox1.TabIndex = 114;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
-            // 
-            // button1
-            // 
-            button1.Location = new System.Drawing.Point(55, 172);
-            button1.Margin = new System.Windows.Forms.Padding(4);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(114, 25);
-            button1.TabIndex = 114;
-            button1.Text = "承認情報リセット(Cancel2)";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // TextBox
-            // 
-            TextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            TextBox.Location = new System.Drawing.Point(7, 22);
-            TextBox.Margin = new System.Windows.Forms.Padding(4);
-            TextBox.Multiline = true;
-            TextBox.Name = "TextBox";
-            TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            TextBox.Size = new System.Drawing.Size(206, 130);
-            TextBox.TabIndex = 113;
-            // 
-            // panel2
-            // 
-            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel2.Controls.Add(UnSetPRIORITYREGISTFLAGisNullButton);
-            panel2.Controls.Add(SetPRIORITYREGISTFLAGisNullButton);
-            panel2.Location = new System.Drawing.Point(243, 114);
-            panel2.Margin = new System.Windows.Forms.Padding(4);
-            panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(229, 62);
-            panel2.TabIndex = 112;
-            // 
-            // UnSetPRIORITYREGISTFLAGisNullButton
-            // 
-            UnSetPRIORITYREGISTFLAGisNullButton.Location = new System.Drawing.Point(4, 4);
-            UnSetPRIORITYREGISTFLAGisNullButton.Margin = new System.Windows.Forms.Padding(4);
-            UnSetPRIORITYREGISTFLAGisNullButton.Name = "UnSetPRIORITYREGISTFLAGisNullButton";
-            UnSetPRIORITYREGISTFLAGisNullButton.Size = new System.Drawing.Size(220, 25);
-            UnSetPRIORITYREGISTFLAGisNullButton.TabIndex = 109;
-            UnSetPRIORITYREGISTFLAGisNullButton.Text = "ArcSuite優先登録フラグを立てる";
-            UnSetPRIORITYREGISTFLAGisNullButton.UseVisualStyleBackColor = true;
-            UnSetPRIORITYREGISTFLAGisNullButton.Click += UnSetPRIORITYREGISTFLAGisNullButton_Click_1;
-            // 
-            // SetPRIORITYREGISTFLAGisNullButton
-            // 
-            SetPRIORITYREGISTFLAGisNullButton.Location = new System.Drawing.Point(5, 32);
-            SetPRIORITYREGISTFLAGisNullButton.Margin = new System.Windows.Forms.Padding(4);
-            SetPRIORITYREGISTFLAGisNullButton.Name = "SetPRIORITYREGISTFLAGisNullButton";
-            SetPRIORITYREGISTFLAGisNullButton.Size = new System.Drawing.Size(220, 25);
-            SetPRIORITYREGISTFLAGisNullButton.TabIndex = 87;
-            SetPRIORITYREGISTFLAGisNullButton.Text = "ArcSuite優先登録フラグを解除";
-            SetPRIORITYREGISTFLAGisNullButton.UseVisualStyleBackColor = true;
-            SetPRIORITYREGISTFLAGisNullButton.Click += UnsetPRIORITYREGISTFLAGisNullButton_Click;
-            // 
-            // panel1
-            // 
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel1.Controls.Add(ArcSuiteTestRegistButton);
-            panel1.Controls.Add(ArcSuiteTestRegistResetButton);
-            panel1.Location = new System.Drawing.Point(10, 114);
-            panel1.Margin = new System.Windows.Forms.Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(229, 62);
-            panel1.TabIndex = 111;
-            // 
-            // ArcSuiteTestRegistButton
-            // 
-            ArcSuiteTestRegistButton.Location = new System.Drawing.Point(4, 5);
-            ArcSuiteTestRegistButton.Margin = new System.Windows.Forms.Padding(4);
-            ArcSuiteTestRegistButton.Name = "ArcSuiteTestRegistButton";
-            ArcSuiteTestRegistButton.Size = new System.Drawing.Size(220, 25);
-            ArcSuiteTestRegistButton.TabIndex = 63;
-            ArcSuiteTestRegistButton.Text = "登録予定フラグを立てる";
-            ArcSuiteTestRegistButton.UseVisualStyleBackColor = true;
-            ArcSuiteTestRegistButton.Click += ArcSuiteTestRegistButton_Click;
-            // 
-            // ArcSuiteTestRegistResetButton
-            // 
-            ArcSuiteTestRegistResetButton.Location = new System.Drawing.Point(4, 32);
-            ArcSuiteTestRegistResetButton.Margin = new System.Windows.Forms.Padding(4);
-            ArcSuiteTestRegistResetButton.Name = "ArcSuiteTestRegistResetButton";
-            ArcSuiteTestRegistResetButton.Size = new System.Drawing.Size(220, 25);
-            ArcSuiteTestRegistResetButton.TabIndex = 110;
-            ArcSuiteTestRegistResetButton.Text = "登録予定フラグを解除";
-            ArcSuiteTestRegistResetButton.UseVisualStyleBackColor = true;
-            ArcSuiteTestRegistResetButton.Click += ArcSuiteTestRegistResetButton_Click;
-            // 
-            // Drawing_pictureBox
-            // 
-            Drawing_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            Drawing_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            Drawing_pictureBox.Location = new System.Drawing.Point(10, 304);
-            Drawing_pictureBox.Margin = new System.Windows.Forms.Padding(4);
-            Drawing_pictureBox.Name = "Drawing_pictureBox";
-            Drawing_pictureBox.Size = new System.Drawing.Size(709, 363);
-            Drawing_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            Drawing_pictureBox.TabIndex = 105;
-            Drawing_pictureBox.TabStop = false;
-            // 
-            // groupBox6
-            // 
-            groupBox6.Controls.Add(curGUIDBASE64Label);
-            groupBox6.Controls.Add(DirectPrintButton);
-            groupBox6.Controls.Add(PrinterSelcomboBox);
-            groupBox6.Enabled = false;
-            groupBox6.Location = new System.Drawing.Point(10, 184);
-            groupBox6.Margin = new System.Windows.Forms.Padding(4);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            groupBox6.Size = new System.Drawing.Size(294, 112);
-            groupBox6.TabIndex = 88;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "印刷制御";
-            // 
-            // curGUIDBASE64Label
-            // 
-            curGUIDBASE64Label.AutoSize = true;
-            curGUIDBASE64Label.Location = new System.Drawing.Point(18, 51);
-            curGUIDBASE64Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            curGUIDBASE64Label.Name = "curGUIDBASE64Label";
-            curGUIDBASE64Label.Size = new System.Drawing.Size(90, 15);
-            curGUIDBASE64Label.TabIndex = 79;
-            curGUIDBASE64Label.Text = "curGUIDBASE64";
-            // 
-            // DirectPrintButton
-            // 
-            DirectPrintButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            DirectPrintButton.Font = new System.Drawing.Font("MS UI Gothic", 9F);
-            DirectPrintButton.Location = new System.Drawing.Point(7, 74);
-            DirectPrintButton.Margin = new System.Windows.Forms.Padding(4);
-            DirectPrintButton.Name = "DirectPrintButton";
-            DirectPrintButton.Size = new System.Drawing.Size(276, 29);
-            DirectPrintButton.TabIndex = 28;
-            DirectPrintButton.Text = "チケットコードの図面を印刷";
-            DirectPrintButton.UseVisualStyleBackColor = true;
-            // 
-            // PrinterSelcomboBox
-            // 
-            PrinterSelcomboBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            PrinterSelcomboBox.FormattingEnabled = true;
-            PrinterSelcomboBox.Location = new System.Drawing.Point(7, 22);
-            PrinterSelcomboBox.Margin = new System.Windows.Forms.Padding(4);
-            PrinterSelcomboBox.Name = "PrinterSelcomboBox";
-            PrinterSelcomboBox.Size = new System.Drawing.Size(276, 23);
-            PrinterSelcomboBox.TabIndex = 78;
-            // 
-            // TICKETCODE_textBox
-            // 
-            TICKETCODE_textBox.Location = new System.Drawing.Point(7, 6);
-            TICKETCODE_textBox.Margin = new System.Windows.Forms.Padding(4);
-            TICKETCODE_textBox.Name = "TICKETCODE_textBox";
-            TICKETCODE_textBox.Size = new System.Drawing.Size(209, 23);
-            TICKETCODE_textBox.TabIndex = 64;
-            TICKETCODE_textBox.Text = "コード入力";
-            TICKETCODE_textBox.Click += TICKETCODEtextBox_Click;
-            // 
-            // DirectSearchButton
-            // 
-            DirectSearchButton.Location = new System.Drawing.Point(224, 5);
-            DirectSearchButton.Margin = new System.Windows.Forms.Padding(4);
-            DirectSearchButton.Name = "DirectSearchButton";
-            DirectSearchButton.Size = new System.Drawing.Size(147, 25);
-            DirectSearchButton.TabIndex = 65;
-            DirectSearchButton.Text = "チケットコードで検索";
-            DirectSearchButton.UseVisualStyleBackColor = true;
-            DirectSearchButton.Click += DirectSearchButton_Click;
-            // 
-            // ApprovedRsetOneButton
-            // 
-            ApprovedRsetOneButton.Location = new System.Drawing.Point(378, 6);
-            ApprovedRsetOneButton.Margin = new System.Windows.Forms.Padding(4);
-            ApprovedRsetOneButton.Name = "ApprovedRsetOneButton";
-            ApprovedRsetOneButton.Size = new System.Drawing.Size(114, 25);
-            ApprovedRsetOneButton.TabIndex = 67;
-            ApprovedRsetOneButton.Text = "承認情報リセット(Cancel2)";
-            ApprovedRsetOneButton.UseVisualStyleBackColor = true;
-            ApprovedRsetOneButton.Click += ApprovedRsetOneButton_Click;
-            // 
-            // DirectDeleteButton
-            // 
-            DirectDeleteButton.Location = new System.Drawing.Point(224, 36);
-            DirectDeleteButton.Margin = new System.Windows.Forms.Padding(4);
-            DirectDeleteButton.Name = "DirectDeleteButton";
-            DirectDeleteButton.Size = new System.Drawing.Size(147, 25);
-            DirectDeleteButton.TabIndex = 86;
-            DirectDeleteButton.Text = "チケットコードで削除";
-            DirectDeleteButton.UseVisualStyleBackColor = true;
-            DirectDeleteButton.Click += DirectDeleteButton_Click;
-            // 
-            // UserID_textBox
-            // 
-            UserID_textBox.Location = new System.Drawing.Point(4, 4);
-            UserID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            UserID_textBox.Name = "UserID_textBox";
-            UserID_textBox.Size = new System.Drawing.Size(47, 23);
-            UserID_textBox.TabIndex = 107;
-            UserID_textBox.Text = "0003";
-            // 
-            // ApprovedMainProcessDebugButton
-            // 
-            ApprovedMainProcessDebugButton.Location = new System.Drawing.Point(59, 2);
-            ApprovedMainProcessDebugButton.Margin = new System.Windows.Forms.Padding(4);
-            ApprovedMainProcessDebugButton.Name = "ApprovedMainProcessDebugButton";
-            ApprovedMainProcessDebugButton.Size = new System.Drawing.Size(102, 25);
-            ApprovedMainProcessDebugButton.TabIndex = 63;
-            ApprovedMainProcessDebugButton.Text = "手動押印実行";
-            ApprovedMainProcessDebugButton.UseVisualStyleBackColor = true;
-            ApprovedMainProcessDebugButton.Click += ApprovedMainProcessDebugButton_Click;
+            this.objectConvNew_CheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.objectConvNew_CheckBox.AutoSize = true;
+            this.objectConvNew_CheckBox.Checked = true;
+            this.objectConvNew_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.objectConvNew_CheckBox.Location = new System.Drawing.Point(514, 9);
+            this.objectConvNew_CheckBox.Name = "objectConvNew_CheckBox";
+            this.objectConvNew_CheckBox.Size = new System.Drawing.Size(103, 16);
+            this.objectConvNew_CheckBox.TabIndex = 115;
+            this.objectConvNew_CheckBox.Text = "objectConvNew";
+            this.objectConvNew_CheckBox.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
-            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel3.Controls.Add(GetArcSuiteAwaitingRegist_button);
-            panel3.Controls.Add(ApprovedMainProcessDebugButton);
-            panel3.Controls.Add(UserID_textBox);
-            panel3.Location = new System.Drawing.Point(24, 184);
-            panel3.Margin = new System.Windows.Forms.Padding(4);
-            panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(168, 69);
-            panel3.TabIndex = 137;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.GetArcSuiteAwaitingRegist_button);
+            this.panel3.Controls.Add(this.ApprovedMainProcessDebugButton);
+            this.panel3.Controls.Add(this.UserID_textBox);
+            this.panel3.Controls.Add(this.DirectSearchButton);
+            this.panel3.Controls.Add(this.DirectDeleteButton);
+            this.panel3.Controls.Add(this.ApprovedRsetOneButton);
+            this.panel3.Location = new System.Drawing.Point(7, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(393, 87);
+            this.panel3.TabIndex = 137;
             // 
             // GetArcSuiteAwaitingRegist_button
             // 
-            GetArcSuiteAwaitingRegist_button.Location = new System.Drawing.Point(4, 38);
-            GetArcSuiteAwaitingRegist_button.Margin = new System.Windows.Forms.Padding(4);
-            GetArcSuiteAwaitingRegist_button.Name = "GetArcSuiteAwaitingRegist_button";
-            GetArcSuiteAwaitingRegist_button.Size = new System.Drawing.Size(157, 25);
-            GetArcSuiteAwaitingRegist_button.TabIndex = 108;
-            GetArcSuiteAwaitingRegist_button.Text = "登録予定フラグ調査";
-            GetArcSuiteAwaitingRegist_button.UseVisualStyleBackColor = true;
-            GetArcSuiteAwaitingRegist_button.Click += GetArcSuiteAwaitingRegist_button_Click;
+            this.GetArcSuiteAwaitingRegist_button.Location = new System.Drawing.Point(3, 30);
+            this.GetArcSuiteAwaitingRegist_button.Name = "GetArcSuiteAwaitingRegist_button";
+            this.GetArcSuiteAwaitingRegist_button.Size = new System.Drawing.Size(140, 20);
+            this.GetArcSuiteAwaitingRegist_button.TabIndex = 108;
+            this.GetArcSuiteAwaitingRegist_button.Text = "登録予定フラグ調査";
+            this.GetArcSuiteAwaitingRegist_button.UseVisualStyleBackColor = true;
+            this.GetArcSuiteAwaitingRegist_button.Click += new System.EventHandler(this.GetArcSuiteAwaitingRegist_button_Click);
+            // 
+            // ApprovedMainProcessDebugButton
+            // 
+            this.ApprovedMainProcessDebugButton.Location = new System.Drawing.Point(48, 2);
+            this.ApprovedMainProcessDebugButton.Name = "ApprovedMainProcessDebugButton";
+            this.ApprovedMainProcessDebugButton.Size = new System.Drawing.Size(95, 20);
+            this.ApprovedMainProcessDebugButton.TabIndex = 63;
+            this.ApprovedMainProcessDebugButton.Text = "手動押印実行";
+            this.ApprovedMainProcessDebugButton.UseVisualStyleBackColor = true;
+            this.ApprovedMainProcessDebugButton.Click += new System.EventHandler(this.ApprovedMainProcessDebugButton_Click);
+            // 
+            // UserID_textBox
+            // 
+            this.UserID_textBox.Location = new System.Drawing.Point(1, 3);
+            this.UserID_textBox.Name = "UserID_textBox";
+            this.UserID_textBox.Size = new System.Drawing.Size(41, 19);
+            this.UserID_textBox.TabIndex = 107;
+            this.UserID_textBox.Text = "0003";
+            // 
+            // DirectSearchButton
+            // 
+            this.DirectSearchButton.Location = new System.Drawing.Point(249, 6);
+            this.DirectSearchButton.Name = "DirectSearchButton";
+            this.DirectSearchButton.Size = new System.Drawing.Size(126, 20);
+            this.DirectSearchButton.TabIndex = 65;
+            this.DirectSearchButton.Text = "チケットコードで検索";
+            this.DirectSearchButton.UseVisualStyleBackColor = true;
+            this.DirectSearchButton.Click += new System.EventHandler(this.DirectSearchButton_Click);
+            // 
+            // DirectDeleteButton
+            // 
+            this.DirectDeleteButton.Location = new System.Drawing.Point(249, 32);
+            this.DirectDeleteButton.Name = "DirectDeleteButton";
+            this.DirectDeleteButton.Size = new System.Drawing.Size(126, 20);
+            this.DirectDeleteButton.TabIndex = 86;
+            this.DirectDeleteButton.Text = "チケットコードで削除";
+            this.DirectDeleteButton.UseVisualStyleBackColor = true;
+            this.DirectDeleteButton.Click += new System.EventHandler(this.DirectDeleteButton_Click);
+            // 
+            // ApprovedRsetOneButton
+            // 
+            this.ApprovedRsetOneButton.Location = new System.Drawing.Point(249, 58);
+            this.ApprovedRsetOneButton.Name = "ApprovedRsetOneButton";
+            this.ApprovedRsetOneButton.Size = new System.Drawing.Size(126, 20);
+            this.ApprovedRsetOneButton.TabIndex = 67;
+            this.ApprovedRsetOneButton.Text = "承認情報リセット(Cancel2)";
+            this.ApprovedRsetOneButton.UseVisualStyleBackColor = true;
+            this.ApprovedRsetOneButton.Click += new System.EventHandler(this.ApprovedRsetOneButton_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.TextBox);
+            this.groupBox1.Location = new System.Drawing.Point(420, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(189, 142);
+            this.groupBox1.TabIndex = 114;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(44, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 20);
+            this.button1.TabIndex = 114;
+            this.button1.Text = "承認情報リセット(Cancel2)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // TextBox
+            // 
+            this.TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBox.Location = new System.Drawing.Point(6, 18);
+            this.TextBox.Multiline = true;
+            this.TextBox.Name = "TextBox";
+            this.TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.TextBox.Size = new System.Drawing.Size(177, 93);
+            this.TextBox.TabIndex = 113;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.UnSetPRIORITYREGISTFLAGisNullButton);
+            this.panel2.Controls.Add(this.SetPRIORITYREGISTFLAGisNullButton);
+            this.panel2.Location = new System.Drawing.Point(207, 123);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(197, 50);
+            this.panel2.TabIndex = 112;
+            // 
+            // UnSetPRIORITYREGISTFLAGisNullButton
+            // 
+            this.UnSetPRIORITYREGISTFLAGisNullButton.Location = new System.Drawing.Point(3, 3);
+            this.UnSetPRIORITYREGISTFLAGisNullButton.Name = "UnSetPRIORITYREGISTFLAGisNullButton";
+            this.UnSetPRIORITYREGISTFLAGisNullButton.Size = new System.Drawing.Size(189, 20);
+            this.UnSetPRIORITYREGISTFLAGisNullButton.TabIndex = 109;
+            this.UnSetPRIORITYREGISTFLAGisNullButton.Text = "ArcSuite優先登録フラグを立てる";
+            this.UnSetPRIORITYREGISTFLAGisNullButton.UseVisualStyleBackColor = true;
+            this.UnSetPRIORITYREGISTFLAGisNullButton.Click += new System.EventHandler(this.UnSetPRIORITYREGISTFLAGisNullButton_Click_1);
+            // 
+            // SetPRIORITYREGISTFLAGisNullButton
+            // 
+            this.SetPRIORITYREGISTFLAGisNullButton.Location = new System.Drawing.Point(4, 26);
+            this.SetPRIORITYREGISTFLAGisNullButton.Name = "SetPRIORITYREGISTFLAGisNullButton";
+            this.SetPRIORITYREGISTFLAGisNullButton.Size = new System.Drawing.Size(189, 20);
+            this.SetPRIORITYREGISTFLAGisNullButton.TabIndex = 87;
+            this.SetPRIORITYREGISTFLAGisNullButton.Text = "ArcSuite優先登録フラグを解除";
+            this.SetPRIORITYREGISTFLAGisNullButton.UseVisualStyleBackColor = true;
+            this.SetPRIORITYREGISTFLAGisNullButton.Click += new System.EventHandler(this.UnsetPRIORITYREGISTFLAGisNullButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.ArcSuiteTestRegistButton);
+            this.panel1.Controls.Add(this.ArcSuiteTestRegistResetButton);
+            this.panel1.Location = new System.Drawing.Point(7, 123);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(197, 50);
+            this.panel1.TabIndex = 111;
+            // 
+            // ArcSuiteTestRegistButton
+            // 
+            this.ArcSuiteTestRegistButton.Location = new System.Drawing.Point(3, 4);
+            this.ArcSuiteTestRegistButton.Name = "ArcSuiteTestRegistButton";
+            this.ArcSuiteTestRegistButton.Size = new System.Drawing.Size(189, 20);
+            this.ArcSuiteTestRegistButton.TabIndex = 63;
+            this.ArcSuiteTestRegistButton.Text = "登録予定フラグを立てる";
+            this.ArcSuiteTestRegistButton.UseVisualStyleBackColor = true;
+            this.ArcSuiteTestRegistButton.Click += new System.EventHandler(this.ArcSuiteTestRegistButton_Click);
+            // 
+            // ArcSuiteTestRegistResetButton
+            // 
+            this.ArcSuiteTestRegistResetButton.Location = new System.Drawing.Point(3, 26);
+            this.ArcSuiteTestRegistResetButton.Name = "ArcSuiteTestRegistResetButton";
+            this.ArcSuiteTestRegistResetButton.Size = new System.Drawing.Size(189, 20);
+            this.ArcSuiteTestRegistResetButton.TabIndex = 110;
+            this.ArcSuiteTestRegistResetButton.Text = "登録予定フラグを解除";
+            this.ArcSuiteTestRegistResetButton.UseVisualStyleBackColor = true;
+            this.ArcSuiteTestRegistResetButton.Click += new System.EventHandler(this.ArcSuiteTestRegistResetButton_Click);
+            // 
+            // Drawing_pictureBox
+            // 
+            this.Drawing_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Drawing_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Drawing_pictureBox.Location = new System.Drawing.Point(9, 289);
+            this.Drawing_pictureBox.Name = "Drawing_pictureBox";
+            this.Drawing_pictureBox.Size = new System.Drawing.Size(608, 131);
+            this.Drawing_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Drawing_pictureBox.TabIndex = 105;
+            this.Drawing_pictureBox.TabStop = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.curGUIDBASE64Label);
+            this.groupBox6.Controls.Add(this.DirectPrintButton);
+            this.groupBox6.Controls.Add(this.PrinterSelcomboBox);
+            this.groupBox6.Location = new System.Drawing.Point(9, 187);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(252, 90);
+            this.groupBox6.TabIndex = 88;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "印刷制御";
+            // 
+            // curGUIDBASE64Label
+            // 
+            this.curGUIDBASE64Label.AutoSize = true;
+            this.curGUIDBASE64Label.Location = new System.Drawing.Point(15, 41);
+            this.curGUIDBASE64Label.Name = "curGUIDBASE64Label";
+            this.curGUIDBASE64Label.Size = new System.Drawing.Size(90, 12);
+            this.curGUIDBASE64Label.TabIndex = 79;
+            this.curGUIDBASE64Label.Text = "curGUIDBASE64";
+            // 
+            // DirectPrintButton
+            // 
+            this.DirectPrintButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DirectPrintButton.Font = new System.Drawing.Font("MS UI Gothic", 9F);
+            this.DirectPrintButton.Location = new System.Drawing.Point(6, 59);
+            this.DirectPrintButton.Name = "DirectPrintButton";
+            this.DirectPrintButton.Size = new System.Drawing.Size(237, 23);
+            this.DirectPrintButton.TabIndex = 28;
+            this.DirectPrintButton.Text = "チケットコードの図面を印刷";
+            this.DirectPrintButton.UseVisualStyleBackColor = true;
+            this.DirectPrintButton.Click += new System.EventHandler(this.DirectPrintButton_Click);
+            // 
+            // PrinterSelcomboBox
+            // 
+            this.PrinterSelcomboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PrinterSelcomboBox.FormattingEnabled = true;
+            this.PrinterSelcomboBox.Location = new System.Drawing.Point(6, 18);
+            this.PrinterSelcomboBox.Name = "PrinterSelcomboBox";
+            this.PrinterSelcomboBox.Size = new System.Drawing.Size(237, 20);
+            this.PrinterSelcomboBox.TabIndex = 78;
+            // 
+            // TICKETCODE_textBox
+            // 
+            this.TICKETCODE_textBox.Location = new System.Drawing.Point(11, 5);
+            this.TICKETCODE_textBox.Name = "TICKETCODE_textBox";
+            this.TICKETCODE_textBox.Size = new System.Drawing.Size(278, 19);
+            this.TICKETCODE_textBox.TabIndex = 64;
+            this.TICKETCODE_textBox.Text = "コード入力";
+            this.TICKETCODE_textBox.Click += new System.EventHandler(this.TICKETCODEtextBox_Click);
+            // 
+            // accountUserForm
+            // 
+            this.accountUserForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.accountUserForm.Location = new System.Drawing.Point(4, 5);
+            this.accountUserForm.Name = "accountUserForm";
+            this.accountUserForm.parentControl = null;
+            this.accountUserForm.Size = new System.Drawing.Size(1043, 110);
+            this.accountUserForm.TabIndex = 135;
+            this.accountUserForm.WriteLine = ((SasaLib.SasaLibDelegateWriteLine)(resources.GetObject("accountUserForm.WriteLine")));
+            this.accountUserForm.Paint += new System.Windows.Forms.PaintEventHandler(this.accountUserForm3_Paint);
+            this.accountUserForm.Leave += new System.EventHandler(this.accountUserForm_Leave);
+            // 
+            // logWindowControl
+            // 
+            this.logWindowControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logWindowControl.Location = new System.Drawing.Point(650, 279);
+            this.logWindowControl.Name = "logWindowControl";
+            this.logWindowControl.Size = new System.Drawing.Size(556, 338);
+            this.logWindowControl.TabIndex = 136;
             // 
             // groupBox12
             // 
-            groupBox12.Controls.Add(CheckDrwingTypeAnserTextBox);
-            groupBox12.Controls.Add(CheckDrawingTypeButton);
-            groupBox12.Controls.Add(PARTNUMBERtextBox);
-            groupBox12.Location = new System.Drawing.Point(758, 159);
-            groupBox12.Margin = new System.Windows.Forms.Padding(4);
-            groupBox12.Name = "groupBox12";
-            groupBox12.Padding = new System.Windows.Forms.Padding(4);
-            groupBox12.Size = new System.Drawing.Size(180, 135);
-            groupBox12.TabIndex = 138;
-            groupBox12.TabStop = false;
-            groupBox12.Text = "図面種類を調査";
+            this.groupBox12.Controls.Add(this.CheckDrwingTypeAnserTextBox);
+            this.groupBox12.Controls.Add(this.CheckDrawingTypeButton);
+            this.groupBox12.Controls.Add(this.PARTNUMBERtextBox);
+            this.groupBox12.Location = new System.Drawing.Point(650, 127);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(154, 108);
+            this.groupBox12.TabIndex = 138;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "図面種類を調査";
             // 
             // CheckDrwingTypeAnserTextBox
             // 
-            CheckDrwingTypeAnserTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            CheckDrwingTypeAnserTextBox.Location = new System.Drawing.Point(7, 101);
-            CheckDrwingTypeAnserTextBox.Margin = new System.Windows.Forms.Padding(4);
-            CheckDrwingTypeAnserTextBox.Name = "CheckDrwingTypeAnserTextBox";
-            CheckDrwingTypeAnserTextBox.ReadOnly = true;
-            CheckDrwingTypeAnserTextBox.Size = new System.Drawing.Size(165, 23);
-            CheckDrwingTypeAnserTextBox.TabIndex = 2;
-            CheckDrwingTypeAnserTextBox.Text = "図面タイプ";
+            this.CheckDrwingTypeAnserTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CheckDrwingTypeAnserTextBox.Location = new System.Drawing.Point(6, 81);
+            this.CheckDrwingTypeAnserTextBox.Name = "CheckDrwingTypeAnserTextBox";
+            this.CheckDrwingTypeAnserTextBox.ReadOnly = true;
+            this.CheckDrwingTypeAnserTextBox.Size = new System.Drawing.Size(142, 19);
+            this.CheckDrwingTypeAnserTextBox.TabIndex = 2;
+            this.CheckDrwingTypeAnserTextBox.Text = "図面タイプ";
             // 
             // CheckDrawingTypeButton
             // 
-            CheckDrawingTypeButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            CheckDrawingTypeButton.Location = new System.Drawing.Point(7, 54);
-            CheckDrawingTypeButton.Margin = new System.Windows.Forms.Padding(4);
-            CheckDrawingTypeButton.Name = "CheckDrawingTypeButton";
-            CheckDrawingTypeButton.Size = new System.Drawing.Size(166, 40);
-            CheckDrawingTypeButton.TabIndex = 1;
-            CheckDrawingTypeButton.Text = "図面種類\r\n特定メソッドをテスト";
-            CheckDrawingTypeButton.UseVisualStyleBackColor = true;
-            CheckDrawingTypeButton.Click += CheckDrawingTypeButton_Click;
+            this.CheckDrawingTypeButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CheckDrawingTypeButton.Location = new System.Drawing.Point(6, 43);
+            this.CheckDrawingTypeButton.Name = "CheckDrawingTypeButton";
+            this.CheckDrawingTypeButton.Size = new System.Drawing.Size(142, 32);
+            this.CheckDrawingTypeButton.TabIndex = 1;
+            this.CheckDrawingTypeButton.Text = "図面種類\r\n特定メソッドをテスト";
+            this.CheckDrawingTypeButton.UseVisualStyleBackColor = true;
+            this.CheckDrawingTypeButton.Click += new System.EventHandler(this.CheckDrawingTypeButton_Click);
             // 
             // PARTNUMBERtextBox
             // 
-            PARTNUMBERtextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            PARTNUMBERtextBox.Location = new System.Drawing.Point(7, 22);
-            PARTNUMBERtextBox.Margin = new System.Windows.Forms.Padding(4);
-            PARTNUMBERtextBox.Name = "PARTNUMBERtextBox";
-            PARTNUMBERtextBox.Size = new System.Drawing.Size(165, 23);
-            PARTNUMBERtextBox.TabIndex = 0;
-            PARTNUMBERtextBox.Text = "01-01001-TM";
+            this.PARTNUMBERtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PARTNUMBERtextBox.Location = new System.Drawing.Point(6, 18);
+            this.PARTNUMBERtextBox.Name = "PARTNUMBERtextBox";
+            this.PARTNUMBERtextBox.Size = new System.Drawing.Size(142, 19);
+            this.PARTNUMBERtextBox.TabIndex = 0;
+            this.PARTNUMBERtextBox.Text = "01-01001-TM";
             // 
-            // logWindowControl1
+            // logwindowClear_button
             // 
-            logWindowControl.Location = new System.Drawing.Point(760, 302);
-            logWindowControl.Margin = new System.Windows.Forms.Padding(4);
-            logWindowControl.Name = "logWindowControl1";
-            logWindowControl.Size = new System.Drawing.Size(593, 530);
-            logWindowControl.TabIndex = 139;
-            // 
-            // accountUserForm1
-            // 
-            accountUserForm.Location = new System.Drawing.Point(12, 4);
-            accountUserForm.Margin = new System.Windows.Forms.Padding(4);
-            accountUserForm.Name = "accountUserForm1";
-            accountUserForm.parentControl = null;
-            accountUserForm.Size = new System.Drawing.Size(1003, 126);
-            accountUserForm.TabIndex = 140;
+            this.logwindowClear_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.logwindowClear_button.Location = new System.Drawing.Point(1124, 634);
+            this.logwindowClear_button.Name = "logwindowClear_button";
+            this.logwindowClear_button.Size = new System.Drawing.Size(75, 23);
+            this.logwindowClear_button.TabIndex = 139;
+            this.logwindowClear_button.Text = "区切り線";
+            this.logwindowClear_button.UseVisualStyleBackColor = true;
+            this.logwindowClear_button.Click += new System.EventHandler(this.logwindowClear_button_Click);
             // 
             // TabControl03
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(accountUserForm);
-            Controls.Add(logWindowControl);
-            Controls.Add(groupBox12);
-            Controls.Add(panel3);
-            Controls.Add(groupBox9);
-            Margin = new System.Windows.Forms.Padding(4);
-            Name = "TabControl03";
-            Size = new System.Drawing.Size(1653, 855);
-            Load += TabControl3_Load;
-            VisibleChanged += TabControl3_VisibleChanged;
-            groupBox9.ResumeLayout(false);
-            TICKETCODE_DIRECT_panel.ResumeLayout(false);
-            TICKETCODE_DIRECT_panel.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)Drawing_pictureBox).EndInit();
-            groupBox6.ResumeLayout(false);
-            groupBox6.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            groupBox12.ResumeLayout(false);
-            groupBox12.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.logwindowClear_button);
+            this.Controls.Add(this.groupBox12);
+            this.Controls.Add(this.logWindowControl);
+            this.Controls.Add(this.accountUserForm);
+            this.Controls.Add(this.groupBox9);
+            this.Name = "TabControl03";
+            this.Size = new System.Drawing.Size(1209, 666);
+            this.Load += new System.EventHandler(this.TabControl3_Load);
+            this.VisibleChanged += new System.EventHandler(this.TabControl3_VisibleChanged);
+            this.groupBox9.ResumeLayout(false);
+            this.TICKETCODE_DIRECT_panel.ResumeLayout(false);
+            this.TICKETCODE_DIRECT_panel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Drawing_pictureBox)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -471,6 +474,8 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button ApprovedRsetOneButton;
         private System.Windows.Forms.Button DirectDeleteButton;
         private System.Windows.Forms.Button ArcSuiteTestRegistButton;
+        internal AccountUserForm accountUserForm;
+        private LogWindowControl logWindowControl;
         private System.Windows.Forms.TextBox UserID_textBox;
         private System.Windows.Forms.Button UnSetPRIORITYREGISTFLAGisNullButton;
         private System.Windows.Forms.Button ArcSuiteTestRegistResetButton;
@@ -486,7 +491,6 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GetArcSuiteAwaitingRegist_button;
         private System.Windows.Forms.CheckBox objectConvNew_CheckBox;
-        private LogWindowControl logWindowControl;
-        private AccountUserForm accountUserForm;
+        private System.Windows.Forms.Button logwindowClear_button;
     }
 }

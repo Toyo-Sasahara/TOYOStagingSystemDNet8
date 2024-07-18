@@ -28,7 +28,7 @@ namespace ServerControlCenterApplication
         CommitPrinters CommitPrinters = new CommitPrinters();
 
 
-        readonly RemoteClientMemoryMapdFile mmapdFile = new RemoteClientMemoryMapdFile(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost);
+        readonly RemoteClientMemoryMapdFile rmc_MemoryMapdFile = new RemoteClientMemoryMapdFile(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost);
 
 
         /// <summary>
@@ -61,6 +61,7 @@ namespace ServerControlCenterApplication
         private void TabControl04_Load(object sender, EventArgs e)
         {
             logWindowControl.WriteLine($"TabControl04.load(..)実行開始");
+            accountUserForm.WriteLine = logWindowControl.WriteLine;
         }
 
         /// <summary>
@@ -103,7 +104,8 @@ namespace ServerControlCenterApplication
             string DRAWCAPTUREservice_DebugLevel = null;
             string STAGINGSYSTEMwatch_DebugLevel = null;
 
-            RestoreTargetServer_label.Text = SccConfig.Config.StageServerHost;
+            BackupOrderTargetServer_label.Text = SccConfig.Config.StageServerHost;
+            RestoreOrderTargetServer_label.Text = SccConfig.Config.StageServerHost;
 
             await Task.Run(() =>
             {
@@ -115,9 +117,7 @@ namespace ServerControlCenterApplication
 
                         accountUserForm.SetToControls();
 
-                        mainForm.CommitPrinters.GetData(objectConvNew: true, WriteLine: logWindowControl.WriteLine);
-
-                        ReadMMPFAndSetInTheFormContorols();
+                        ReadMMPFAndSetInTheFormContorols(objectConvNew: objectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine);
                         DRAWREGISTservice_DebugLevel = Command_ServerControl.SetOrGet_DRAWREGISTserviceDEBUGLevel(int.Parse(DRAWREGISTservice_DebugLevelComboBox.Text), false, logWindowControl.WriteLine).ToString();
                         DRAWCAPTUREservice_DebugLevel = Command_ServerControl.SetOrGet_DRAWCAPTUREserviceDEBUGLevel(int.Parse(DRAWCAPTUREservice_DebugLevelComboBox.Text), false, logWindowControl.WriteLine).ToString();
                         STAGINGSYSTEMwatch_DebugLevel = Command_ServerControl.SetOrGet_STAGINGSYSTEMwatchDEBUGLevel(int.Parse(STAGINGSYSTEMwatch_DebugLevelComboBox.Text), false, logWindowControl.WriteLine).ToString();
@@ -136,12 +136,6 @@ namespace ServerControlCenterApplication
             });
 
 
-            //if (mainForm.CommitPrinters.resultGetCommitPrinterShortCutName != null && mainForm.CommitPrinters.resultGetCommitPrinterShortCutName.Count > 0)
-            //{
-            //    PrinterSel_comboBox.DataSource = mainForm.CommitPrinters.resultGetCommitPrinterShortCutName;
-            //    PrinterSel_comboBox.DisplayMember = "key";
-            //    PrinterSel_comboBox.ValueMember = "value";
-            //}
 
         }
 
@@ -181,40 +175,48 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private bool ReadFormControlsAndSetInTheMMPF()
+        private bool ReadFormControlsAndSetInTheMMPF(bool objectConvNew = false, SasaLibDelegateWriteLine WriteLine = null)
         {
             if (MessageBox.Show(caption: "最終確認", text: $"接続先は {accountUserForm.StageServerHostName_comboBox.Text} です。\r\n" +
                 $"正しいですか？", buttons: MessageBoxButtons.OKCancel) != DialogResult.OK)
             {
                 return true;
             }
-            mmapdFile.StageServerHost = accountUserForm.StageServerHostName_comboBox.Text;
+            rmc_MemoryMapdFile.StageServerHost = accountUserForm.StageServerHostName_comboBox.Text;
 
             if (SERVERMODE_Master_RadioButton.Checked)
             {
-                mmapdFile.SERVERMODE = RemoteClientMemoryMapdFile.ServerMode.Master;
+                rmc_MemoryMapdFile.SERVERMODE = RemoteClientMemoryMapdFile.ServerMode.Master;
             }
             else if (SERVERMODE_Slave_RadioButton.Checked)
             {
-                mmapdFile.SERVERMODE = RemoteClientMemoryMapdFile.ServerMode.Slave;
+                rmc_MemoryMapdFile.SERVERMODE = RemoteClientMemoryMapdFile.ServerMode.Slave;
             }
-            mmapdFile.ArcSuiteRegistrationCycle = ArcSuiteRegistrationCycle_CheckBox.Checked;
+            rmc_MemoryMapdFile.ArcSuiteRegistrationCycle = ArcSuiteRegistrationCycle_CheckBox.Checked;
 
-            mmapdFile.COMMITACCEPT = COMMITACCEPT_CheckBox.Checked;
+            rmc_MemoryMapdFile.COMMITACCEPT = COMMITACCEPT_CheckBox.Checked;
 
-            mmapdFile.COMMITACCEPTFALSEMSG = COMMITACCEPTFALSEMSG_TextBox.Text;
+            rmc_MemoryMapdFile.COMMITACCEPTFALSEMSG = COMMITACCEPTFALSEMSG_TextBox.Text;
 
-            mmapdFile.APPROVINGACCEPT = APPROVINGACCEPT_CheckBox.Checked;
+            rmc_MemoryMapdFile.APPROVINGACCEPT = APPROVINGACCEPT_CheckBox.Checked;
 
-            mmapdFile.APPROVINGACCEPTFALSEMSG = APPROVINGACCEPTFALSEMSG_TextBox.Text;
+            rmc_MemoryMapdFile.APPROVINGACCEPTFALSEMSG = APPROVINGACCEPTFALSEMSG_TextBox.Text;
 
-            mmapdFile.ImmediateryPrinting = ImmediateryPrinting_CheckBox.Checked;
+            rmc_MemoryMapdFile.ImmediateryPrinting = ImmediateryPrinting_CheckBox.Checked;
 
-            mmapdFile.TESTMODE = TESTMODE_CheckBox.Checked;
+            rmc_MemoryMapdFile.TESTMODE = TESTMODE_CheckBox.Checked;
 
-            mmapdFile.RemoteServerCommand_DATABASE_EventView_Send = RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Checked;
+            rmc_MemoryMapdFile.RemoteServerCommand_DATABASE_EventView_Send = RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Checked;
 
-            bool ans = mmapdFile.ReadPropertiesAndSetInTheMMPF(WriteLine:logWindowControl.WriteLine);
+            rmc_MemoryMapdFile.REPLICATIONTOSUBHOST = REPLICATIONTOSUBHOST_checkBox.Checked;
+
+            rmc_MemoryMapdFile.SUB_DBHOST = SUB_DBHOST_textBox.Text;
+
+            rmc_MemoryMapdFile.SUB_DATASOURCE = SUB_DATASOURCE_textBox.Text;
+
+            rmc_MemoryMapdFile.SUB_FileStoreForderUNC = SUB_FileStoreForderUNC_textBox.Text;
+
+            bool ans = rmc_MemoryMapdFile.ReadPropertiesAndSetInTheMMPF(objectConvNew: objectConvNew, WriteLine: WriteLine);
 
             return ans;
         }
@@ -225,13 +227,13 @@ namespace ServerControlCenterApplication
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
 
-            RemoteClientDataBase rMCdataBaseTestmd = new RemoteClientDataBase(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+            RemoteClientDataBase rmc_DataBase = new RemoteClientDataBase(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
 
             int topcount = 9999;
             string ORDDERBY = "ORDER BY ID DESC";
 
             List<FieldValueSet> anser = null;
-            anser = rMCdataBaseTestmd.DataBaseSearch4a(sqlSearchStringValues, topcount, ORDDERBY);
+            anser = rmc_DataBase.DataBaseSearch4a(sqlSearchStringValues, topcount, ORDDERBY, objectConvNew: objectConvNew_checkBox.Checked, Verbose: true);
 
             if (anser != null && anser.Count > 1)
             {
@@ -252,6 +254,12 @@ namespace ServerControlCenterApplication
         private void DATABASEbackupButton_Click(object sender, EventArgs e)
         {
             Command_ServerControl.Backup(BackupFolderPathTextBox.Text, 1, logWindowControl.WriteLine);
+
+        }
+
+        private void GetBackupStatusButton_Click(object sender, EventArgs e)
+        {
+            Command_ServerControl.GetStatus(logWindowControl.WriteLine);
 
         }
 
@@ -295,7 +303,12 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void SetMMapdButton_Click(object sender, EventArgs e)
         {
-            ReadFormControlsAndSetInTheMMPF();
+            bool result = ReadFormControlsAndSetInTheMMPF(objectConvNew: objectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine);
+            if (result == false)
+                MessageBox.Show($"書き込みにすべて失敗、または一部失敗。戻り値 {result}");
+
+            //書き込んだ結果をリロード
+            ReadMMPFAndSetInTheFormContorols(objectConvNew: objectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine);
         }
 
         /// <summary>
@@ -305,7 +318,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void GetMMapdButton_Click(object sender, EventArgs e)
         {
-            ReadMMPFAndSetInTheFormContorols();
+            ReadMMPFAndSetInTheFormContorols(objectConvNew: objectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine);
         }
 
         private void SERVERMODE_MasterAndSlave_RadioButton_CheckedChanged(object sender, EventArgs e)
@@ -368,13 +381,13 @@ namespace ServerControlCenterApplication
 
         private void GetTextFileTestButton_Click(object sender, EventArgs e)
         {
-            RemoteClientDRAWCAPTURE remoteClientDC = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
+            RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
                 SccConfig.Config.ClientUserPassword,
                 SccConfig.Config.ClsLogon,
                 SccConfig.Config.StageServerHost,
                 SccConfig.Config.PipeNameDC);
-            var ans = remoteClientDC.GetTextFileFromPIPE(LoadTextFileSource_textBox.Text, WriteTextFileDist_textbox.Text, logWindowControl.WriteLine);
+            var ans = rmc_DRAWCAPTURE.GetTextFileFromPIPE(LoadTextFileSource_textBox.Text, WriteTextFileDist_textbox.Text, logWindowControl.WriteLine);
             if (ans)
                 MessageBox.Show($"読み出し成功");
             else
@@ -396,8 +409,8 @@ namespace ServerControlCenterApplication
                 /// <summary>
                 /// メンテナンス用ユーティリティーを初期化
                 /// </summary>
-                RemoteClientMaintenance maintenace = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
-                var ans = maintenace.FILESTORECehck(logWindowControl.WriteLine);
+                RemoteClientMaintenance rmc_Maintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+                var ans = rmc_Maintenance.FILESTORECehck(logWindowControl.WriteLine);
 
                 logWindowControl.WriteLine($"FILESTORE不要ファイル総数は {ans}件");
             });
@@ -419,9 +432,9 @@ namespace ServerControlCenterApplication
                 /// <summary>
                 /// メンテナンス用ユーティリティーを初期化
                 /// </summary>
-                RemoteClientMaintenance maintenace = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+                RemoteClientMaintenance rmc_Maintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
 
-                linkdownans = maintenace.TICKETFILEexistCHeck();
+                linkdownans = rmc_Maintenance.TICKETFILEexistCHeck();
                 foreach (var fieldValuseSet in linkdownans)
                 {
                     logWindowControl.WriteLine($"リン先ファイルが無いチケットコード：{fieldValuseSet.SearchKey("TICKETCODE")}");
@@ -443,15 +456,6 @@ namespace ServerControlCenterApplication
 
         }
 
-        /// <summary>
-        /// ●
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         /// <summary>
         /// ●FILESTORE内のファイルをすべて検索し、データベースにリンクされていないファイルをゴミとして削除
@@ -466,8 +470,8 @@ namespace ServerControlCenterApplication
                 /// <summary>
                 /// メンテナンス用ユーティリティーを初期化
                 /// </summary>
-                RemoteClientMaintenance maintenace = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
-                maintenace.FILESTORERepare();
+                RemoteClientMaintenance rmc_Maintenance = new RemoteClientMaintenance(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
+                rmc_Maintenance.FILESTORERepare();
                 logWindowControl.WriteLine("FILESTORE不要ファイル清掃終了");
             });
 
@@ -558,21 +562,19 @@ namespace ServerControlCenterApplication
         /// <summary>
         /// ■メモリマップドファイル(MMPF)の内容を読み出し該当するフォームコントロールにセットする
         /// </summary>
-        internal void ReadMMPFAndSetInTheFormContorols()
+        internal void ReadMMPFAndSetInTheFormContorols(bool objectConvNew = false, SasaLibDelegateWriteLine WriteLine = null)
         {
-            mmapdFile.StageServerHost = accountUserForm.StageServerHostName_comboBox.Text;
-
+            rmc_MemoryMapdFile.StageServerHost = accountUserForm.StageServerHostName_comboBox.Text;
 
             /// 処理１
             // メモリマップドファイルをプロパティに読込する
-            var ans = mmapdFile.ReadMMPFAndSetInTheProperties(WriteLine:logWindowControl.WriteLine);
-
+            var ans = rmc_MemoryMapdFile.ReadMMPFAndSetInTheProperties(objectConvNew: objectConvNew, WriteLine: logWindowControl.WriteLine);
 
             if (ans)
             {
                 MMapdValue_panel.Enabled = true;
 
-                switch (mmapdFile.SERVERMODE)
+                switch (rmc_MemoryMapdFile.SERVERMODE)
                 {
                     case RemoteClientMemoryMapdFile.ServerMode.Master:
                         SERVERMODE_Master_RadioButton.Checked = true;
@@ -584,15 +586,18 @@ namespace ServerControlCenterApplication
                         break;
                 }
 
-                ArcSuiteRegistrationCycle_CheckBox.Checked = mmapdFile.ArcSuiteRegistrationCycle;
-                COMMITACCEPT_CheckBox.Checked = mmapdFile.COMMITACCEPT;
-                COMMITACCEPTFALSEMSG_TextBox.Text = mmapdFile.COMMITACCEPTFALSEMSG;
-                APPROVINGACCEPT_CheckBox.Checked = mmapdFile.APPROVINGACCEPT;
-                APPROVINGACCEPTFALSEMSG_TextBox.Text = mmapdFile.APPROVINGACCEPTFALSEMSG;
-                ImmediateryPrinting_CheckBox.Checked = mmapdFile.ImmediateryPrinting;
-                TESTMODE_CheckBox.Checked = mmapdFile.TESTMODE;
-                RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Checked = mmapdFile.RemoteServerCommand_DATABASE_EventView_Send;
-
+                ArcSuiteRegistrationCycle_CheckBox.Checked = rmc_MemoryMapdFile.ArcSuiteRegistrationCycle;
+                COMMITACCEPT_CheckBox.Checked = rmc_MemoryMapdFile.COMMITACCEPT;
+                COMMITACCEPTFALSEMSG_TextBox.Text = rmc_MemoryMapdFile.COMMITACCEPTFALSEMSG;
+                APPROVINGACCEPT_CheckBox.Checked = rmc_MemoryMapdFile.APPROVINGACCEPT;
+                APPROVINGACCEPTFALSEMSG_TextBox.Text = rmc_MemoryMapdFile.APPROVINGACCEPTFALSEMSG;
+                ImmediateryPrinting_CheckBox.Checked = rmc_MemoryMapdFile.ImmediateryPrinting;
+                TESTMODE_CheckBox.Checked = rmc_MemoryMapdFile.TESTMODE;
+                RemoteServRemoteServerCommand_DATABASE_EventView_Send_checkBox.Checked = rmc_MemoryMapdFile.RemoteServerCommand_DATABASE_EventView_Send;
+                REPLICATIONTOSUBHOST_checkBox.Checked = rmc_MemoryMapdFile.REPLICATIONTOSUBHOST;
+                SUB_DBHOST_textBox.Text = rmc_MemoryMapdFile.SUB_DBHOST;
+                SUB_DATASOURCE_textBox.Text = rmc_MemoryMapdFile.SUB_DATASOURCE;
+                SUB_FileStoreForderUNC_textBox.Text = rmc_MemoryMapdFile.SUB_FileStoreForderUNC;
                 return;
             }
             else
@@ -649,13 +654,13 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void GetNumberOfJob_button_Click(object sender, EventArgs e)
         {
-            RemoteClientSYSTEMWATCH remoteClientSW = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
+            RemoteClientSYSTEMWATCH rmc_SYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
                 SccConfig.Config.ClientUserPassword,
                 SccConfig.Config.ClsLogon,
                 SccConfig.Config.StageServerHost,
                 SccConfig.Config.PipeNameSW);
-            var ans = remoteClientSW.ShowPrinterQueue(SccConfig.Config.StageServerHost, PrinterSel_comboBox.Text, logWindowControl.WriteLine);
+            var ans = rmc_SYSTEMWATCH.ShowPrinterQueue(SccConfig.Config.StageServerHost, PrinterSel_comboBox.Text, logWindowControl.WriteLine);
 
             logWindowControl.WriteLine(ans);
 
@@ -666,6 +671,11 @@ namespace ServerControlCenterApplication
             Command_ServerControl.SetOrGet_DRAWREGISTserviceDEBUGLevel(int.Parse(DRAWREGISTservice_DebugLevelComboBox.Text), true, logWindowControl.WriteLine);
             Command_ServerControl.SetOrGet_DRAWCAPTUREserviceDEBUGLevel(int.Parse(DRAWCAPTUREservice_DebugLevelComboBox.Text), true, logWindowControl.WriteLine);
             Command_ServerControl.SetOrGet_STAGINGSYSTEMwatchDEBUGLevel(int.Parse(STAGINGSYSTEMwatch_DebugLevelComboBox.Text), true, logWindowControl.WriteLine);
+        }
+
+        private void logwindowClear_button_Click(object sender, EventArgs e)
+        {
+            logWindowControl.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
         }
 
     }

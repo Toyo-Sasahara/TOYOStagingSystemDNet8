@@ -1081,7 +1081,7 @@ namespace CommonCommitLogic
                             string rangeEnd;
                             string suffix;
 
-                            helper.ParseString2(variant.PRARTNUMBER, out prefix, out rangePart, out rangeStart, out rangeEnd, out suffix);
+                            bool checkResult = helper.ParseToyoVariantDrawingNumberString(variant.PRARTNUMBER, out prefix, out bool isVariant, out rangePart, out rangeStart, out rangeEnd, out suffix);
 
                             int number;
                             bool success = int.TryParse(rangeStart, out number);
