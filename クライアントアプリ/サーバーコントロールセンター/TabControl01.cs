@@ -1,4 +1,5 @@
 ﻿using SasaLib;
+using SharedClassLibrary;
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace ServerControlCenterApplication
         int printerSelIndex1;
         int printerSelIndex2;
 
-        
+
 
 
         /// <summary>
@@ -46,7 +47,7 @@ namespace ServerControlCenterApplication
 
             // カスタムイベントのハンドラを追加
             accountUserForm.AccountChanged += accountUserForm_AccountChanged;
-
+            accountUserForm.HostChanged += accountUserForm_HostChanged;
             DebugForm_PictureBox.AllowDrop = true;
         }
 
@@ -60,13 +61,31 @@ namespace ServerControlCenterApplication
                 {
                     accountUserForm.SetToControls();
 
-                    mainForm.CommitPrinters.GetData(objectConvNew:true, WriteLine:logWindowControl.WriteLine);
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
 
-            //mainForm.CommitPrinters.SetComboBox(ref PrinterSel_comboBox);
-            //mainForm.CommitPrinters.SetComboBox(ref PrinterSel_comboBox2);
+
+
+        }
+
+        private async void accountUserForm_HostChanged(object sender, EventArgs e)
+        {
+            logWindowControl.WriteLine("accountUserForm_AccountChanged(..)実行・・・\r\n");
+
+            await Task.Run(() =>
+            {
+                MethodInvoker method = () =>
+                {
+                    accountUserForm.SetToControls();
+
+                    mainForm.CommitPrinters.GetData(objectConvNew_CheckBox.Checked);
+
+                }; if (InvokeRequired) { Invoke(method); } else { method(); }
+            });
+
+            mainForm.CommitPrinters.SetComboBox(ref PrinterSel_comboBox);
+            mainForm.CommitPrinters.SetComboBox(ref PrinterSel_comboBox2);
 
             if (mainForm.CommitPrinters.resultGetCommitPrinterShortCutName != null && mainForm.CommitPrinters.resultGetCommitPrinterShortCutName.Count > 0)
             {
@@ -90,7 +109,7 @@ namespace ServerControlCenterApplication
         {
             accountUserForm.StageServerHostName_comboBox_SetText(SccConfig.Config.StageServerHost);
 
-            logWindowControl.WriteLine("TabControl01_Load(..) 実行");
+            accountUserForm.WriteLine = logWindowControl.WriteLine;
         }
 
         /// <summary>
@@ -100,7 +119,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private async void TabControl01_VisibleChanged(object sender, EventArgs e)
         {
-            logWindowControl.WriteLine("TabControl01_VisibleChanged(..)実行・・・\r\n");          
+            logWindowControl.WriteLine("TabControl01_VisibleChanged(..)実行・・・\r\n");
 
             await Task.Run(() =>
             {
@@ -108,7 +127,7 @@ namespace ServerControlCenterApplication
                 {
                     accountUserForm.SetToControls();
 
-                    mainForm.CommitPrinters.GetData(objectConvNew: true, WriteLine: logWindowControl.WriteLine);
+                    mainForm.CommitPrinters.GetData(objectConvNew_CheckBox.Checked);
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
@@ -128,11 +147,6 @@ namespace ServerControlCenterApplication
             accountUserForm.ControlChanged(sender, e);
         }
 
-        private void accountUserForm2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// 
         /// </summary>
@@ -140,9 +154,8 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void reloadPrinter_button_Click(object sender, EventArgs e)
         {
-            mainForm.CommitPrinters.GetData(objectConvNew: true, WriteLine: logWindowControl.WriteLine);
-
-            logWindowControl.WriteLine(" mainForm.CommitPrinters.GetData(..) 実行されました");
+            logWindowControl.Clear();
+            mainForm.CommitPrinters.GetData(objectConvNew_CheckBox.Checked, logWindowControl.WriteLine);
         }
 
 
@@ -323,15 +336,20 @@ namespace ServerControlCenterApplication
             return TICKETCODE;
         }
 
+        /// <summary>
+        /// ■
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ShowPrinterQueue_button_Click(object sender, EventArgs e)
         {
-            RemoteClientSYSTEMWATCH remoteClientSW = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
+            RemoteClientSYSTEMWATCH rmc_SYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName,
                 SccConfig.Config.ClientUserPassword,
                 SccConfig.Config.ClsLogon,
                 SccConfig.Config.StageServerHost,
                 SccConfig.Config.PipeNameSW);
-            var ans = remoteClientSW.ShowPrinterQueue(SccConfig.Config.StageServerHost, PrinterSel_comboBox.Text, logWindowControl.WriteLine);
+            var ans = rmc_SYSTEMWATCH.ShowPrinterQueue(SccConfig.Config.StageServerHost, PrinterSel_comboBox.Text, logWindowControl.WriteLine);
 
             logWindowControl.WriteLine(ans);
         }
@@ -413,7 +431,83 @@ namespace ServerControlCenterApplication
         private void VARIANT_Type_checkBox_CheckedChanged(object sender, EventArgs e)
         {
             VARIANT_PARTNUMBER_textBox.Enabled = VARIANT_Type_checkBox.Checked;
+
+            List<string> lines = VARIANT_PARTNUMBER_textBox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
+            var oneline = ConvertToRangeString(lines);
+            TESTIMAGEDraw_TexstTextBox.Text = oneline;
         }
+
+        /// <summary>
+        /// コレクション
+        ///  "XX-12345-060",
+        ///  "XX-12345-061",
+        ///  "XX-12345-062",
+        ///  から、文字列　"XX-12345-060~062"を得る
+        /// </summary>
+        /// <param name="inputList"></param>
+        /// <returns></returns>
+        public string ConvertToRangeString(List<string> inputList)
+        {
+            if (inputList == null || inputList.Count == 0)
+            {
+                return string.Empty;
+            }
+
+            inputList.Sort(); // 文字列をソート
+
+            string currentPrefix = null;
+            int? startNumber = null;
+            int? endNumber = null;
+            string prefix = null;
+
+            foreach (var item in inputList)
+            {
+                string[] parts = item.Split('-');
+                if (parts.Length != 3)
+                {
+                    continue; // フォーマットが異なる場合は無視
+                }
+
+                prefix = $"{parts[0]}-{parts[1]}";
+                int number;
+                if (!int.TryParse(parts[2], out number))
+                {
+                    continue; // 数字部分が変換できない場合は無視
+                }
+
+                if (currentPrefix == null)
+                {
+                    currentPrefix = prefix;
+                    startNumber = number;
+                    endNumber = number;
+                }
+                else if (prefix == currentPrefix && number == endNumber + 1)
+                {
+                    endNumber = number;
+                }
+                else
+                {
+                    currentPrefix = prefix;
+                    startNumber = number;
+                    endNumber = number;
+                }
+            }
+
+            if (startNumber != null && endNumber != null)
+            {
+                if (startNumber == endNumber)
+                {
+                    return $"{currentPrefix}-{startNumber:D3}";
+                }
+                else
+                {
+                    return $"{currentPrefix}-{startNumber:D3}~{endNumber:D3}";
+                }
+            }
+
+            return string.Empty;
+        }
+
 
         private void TabControl01_Paint(object sender, PaintEventArgs e)
         {
@@ -429,6 +523,72 @@ namespace ServerControlCenterApplication
         private void PrinterSel_comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             printerSelIndex2 = PrinterSel_comboBox2.SelectedIndex;
+
+        }
+
+        private void GetPrinterStatus_button_Click(object sender, EventArgs e)
+        {
+            StringBuffer stringBuffer = new StringBuffer();
+
+
+            List<PrinterInfo> resultGetCommitPrinterInfo = Task.Run(() =>
+            {
+                RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDC);
+                rmc_DRAWCAPTURE.ClientTimeOut = 10000;
+
+                List<PrinterInfo> result = rmc_DRAWCAPTURE.GetCommitPrinterInfo(objectConvNew: objectConvNew2_CheckBox.Checked, WriteLine: stringBuffer.AppendLine);
+
+                return result;
+            }).Result;
+
+            stringBuffer.AppendLine($"----------------------------------------------------------------------");
+
+            foreach (var x in resultGetCommitPrinterInfo)
+            {
+                stringBuffer.AppendLine(
+                    $"{x.PrinterName} Ready: {x.Ready}\r\n" +
+                    $"\tIsPrinterFailure: {x.IsPrinterFailure}\r\n" +
+                    $"\tPrinterXmlFileName: {x.PrinterXmlFileName}\r\n" +
+                    $" \tPrinterDescription: {x.PrinterDescription}\r\n" +
+                    $"----------------------------------------------------------------------");
+
+            }
+
+            logWindowControl.WriteLine(stringBuffer.GetBufferContents());
+
+        }
+
+        private void GetCommitPrinterStatusButton_Click(object sender, EventArgs e)
+        {
+            StringBuffer stringBuffer = new StringBuffer();
+
+
+
+            List<SharedClassLibrary.PrinterStatus> printerStatuses = Task.Run(() =>
+            {
+                RemoteClientSYSTEMWATCH rmc_SYSTEMWATCH = new RemoteClientSYSTEMWATCH(SccConfig.Config.StageServerHost, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameSW);
+                rmc_SYSTEMWATCH.ClientTimeOut = 10000;
+
+                var result2 = rmc_SYSTEMWATCH.GetJSON_CommitPrinterStatuss(SccConfig.Config.StageServerHost, WriteLine: stringBuffer.AppendLine);
+                return result2;
+            }).Result;
+
+            if (printerStatuses != null)
+            {
+                foreach (var x in printerStatuses)
+                {
+                    stringBuffer.AppendLine($"{x.PrinterName} NumberOfJobs : {x.NumberOfJobs}");
+                }
+
+                logWindowControl.WriteLine(stringBuffer.GetBufferContents());
+            }
+
+
+        }
+
+        private void logwindowClear_button_Click(object sender, EventArgs e)
+        {
+            logWindowControl.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
 
         }
     }

@@ -62,7 +62,7 @@
             this.panel10.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // サービス接続情報
             // 
@@ -86,8 +86,10 @@
             this.サービス接続情報.Controls.Add(this.DrawcapturePIPEnameTextBox);
             this.サービス接続情報.Dock = System.Windows.Forms.DockStyle.Fill;
             this.サービス接続情報.Location = new System.Drawing.Point(0, 0);
+            this.サービス接続情報.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.サービス接続情報.Name = "サービス接続情報";
-            this.サービス接続情報.Size = new System.Drawing.Size(1049, 105);
+            this.サービス接続情報.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.サービス接続情報.Size = new System.Drawing.Size(1221, 129);
             this.サービス接続情報.TabIndex = 0;
             this.サービス接続情報.TabStop = false;
             this.サービス接続情報.Text = "サービス接続情報";
@@ -98,54 +100,55 @@
             this.panel10.Controls.Add(this.DC_ConnectTest_button);
             this.panel10.Controls.Add(this.DR_ConnectTest_button);
             this.panel10.Controls.Add(this.PIPETESTMSG_textBox);
-            this.panel10.Location = new System.Drawing.Point(800, 15);
+            this.panel10.Location = new System.Drawing.Point(898, 19);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(121, 80);
+            this.panel10.Size = new System.Drawing.Size(141, 100);
             this.panel10.TabIndex = 128;
             // 
             // SW_ConnectTest_button
             // 
-            this.SW_ConnectTest_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SW_ConnectTest_button.Location = new System.Drawing.Point(5, 57);
+            this.SW_ConnectTest_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.SW_ConnectTest_button.Location = new System.Drawing.Point(6, 71);
+            this.SW_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SW_ConnectTest_button.Name = "SW_ConnectTest_button";
-            this.SW_ConnectTest_button.Size = new System.Drawing.Size(113, 18);
+            this.SW_ConnectTest_button.Size = new System.Drawing.Size(132, 22);
             this.SW_ConnectTest_button.TabIndex = 127;
             this.SW_ConnectTest_button.Text = "SW_ConnectTest";
             this.SW_ConnectTest_button.UseVisualStyleBackColor = true;
-            this.SW_ConnectTest_button.Click += new System.EventHandler(this.SW_ConnectTest_button_Click);
+            this.SW_ConnectTest_button.Click += SW_ConnectTest_button_Click;
             // 
             // DC_ConnectTest_button
             // 
-            this.DC_ConnectTest_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DC_ConnectTest_button.Location = new System.Drawing.Point(6, 21);
+            this.DC_ConnectTest_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.DC_ConnectTest_button.Location = new System.Drawing.Point(7, 26);
+            this.DC_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DC_ConnectTest_button.Name = "DC_ConnectTest_button";
-            this.DC_ConnectTest_button.Size = new System.Drawing.Size(113, 18);
+            this.DC_ConnectTest_button.Size = new System.Drawing.Size(132, 22);
             this.DC_ConnectTest_button.TabIndex = 126;
             this.DC_ConnectTest_button.Text = "DC_ConnectTest";
             this.DC_ConnectTest_button.UseVisualStyleBackColor = true;
-            this.DC_ConnectTest_button.Click += new System.EventHandler(this.DC_ConnectTest_button_Click);
+            this.DC_ConnectTest_button.Click += DC_ConnectTest_button_Click;
             // 
             // DR_ConnectTest_button
             // 
-            this.DR_ConnectTest_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DR_ConnectTest_button.Location = new System.Drawing.Point(5, 39);
+            this.DR_ConnectTest_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.DR_ConnectTest_button.Location = new System.Drawing.Point(6, 49);
+            this.DR_ConnectTest_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DR_ConnectTest_button.Name = "DR_ConnectTest_button";
-            this.DR_ConnectTest_button.Size = new System.Drawing.Size(113, 18);
+            this.DR_ConnectTest_button.Size = new System.Drawing.Size(132, 22);
             this.DR_ConnectTest_button.TabIndex = 1;
             this.DR_ConnectTest_button.Text = "DR_ConnectTest";
             this.DR_ConnectTest_button.UseVisualStyleBackColor = true;
-            this.DR_ConnectTest_button.Click += new System.EventHandler(this.DR_ConnectTest_button_Click);
+            this.DR_ConnectTest_button.Click += DR_ConnectTest_button_Click;
             // 
             // PIPETESTMSG_textBox
             // 
-            this.PIPETESTMSG_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PIPETESTMSG_textBox.Location = new System.Drawing.Point(8, 3);
+            this.PIPETESTMSG_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.PIPETESTMSG_textBox.Location = new System.Drawing.Point(9, 4);
+            this.PIPETESTMSG_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PIPETESTMSG_textBox.Name = "PIPETESTMSG_textBox";
-            this.PIPETESTMSG_textBox.Size = new System.Drawing.Size(110, 19);
+            this.PIPETESTMSG_textBox.Size = new System.Drawing.Size(128, 23);
             this.PIPETESTMSG_textBox.TabIndex = 125;
             this.PIPETESTMSG_textBox.Text = "送出テスト文字列";
             // 
@@ -154,49 +157,55 @@
             this.groupBox2.Controls.Add(this.DC_Shudown_button);
             this.groupBox2.Controls.Add(this.SW_Shudown_button);
             this.groupBox2.Controls.Add(this.DR_Shudown_button);
-            this.groupBox2.Location = new System.Drawing.Point(927, 15);
+            this.groupBox2.Location = new System.Drawing.Point(1046, 19);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(116, 80);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(135, 100);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "サービスシャットダウン";
             // 
             // DC_Shudown_button
             // 
-            this.DC_Shudown_button.Location = new System.Drawing.Point(6, 12);
+            this.DC_Shudown_button.Location = new System.Drawing.Point(7, 15);
+            this.DC_Shudown_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DC_Shudown_button.Name = "DC_Shudown_button";
-            this.DC_Shudown_button.Size = new System.Drawing.Size(104, 20);
+            this.DC_Shudown_button.Size = new System.Drawing.Size(121, 25);
             this.DC_Shudown_button.TabIndex = 18;
             this.DC_Shudown_button.Text = "DC";
             this.DC_Shudown_button.UseVisualStyleBackColor = true;
-            this.DC_Shudown_button.Click += new System.EventHandler(this.DC_Shudown_button_Click);
+            this.DC_Shudown_button.Click += DC_Shudown_button_Click;
             // 
             // SW_Shudown_button
             // 
-            this.SW_Shudown_button.Location = new System.Drawing.Point(6, 52);
+            this.SW_Shudown_button.Location = new System.Drawing.Point(7, 65);
+            this.SW_Shudown_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SW_Shudown_button.Name = "SW_Shudown_button";
-            this.SW_Shudown_button.Size = new System.Drawing.Size(104, 20);
+            this.SW_Shudown_button.Size = new System.Drawing.Size(121, 25);
             this.SW_Shudown_button.TabIndex = 16;
             this.SW_Shudown_button.Text = "SW";
             this.SW_Shudown_button.UseVisualStyleBackColor = true;
-            this.SW_Shudown_button.Click += new System.EventHandler(this.SW_Shudown_button_Click);
+            this.SW_Shudown_button.Click += SW_Shudown_button_Click;
             // 
             // DR_Shudown_button
             // 
-            this.DR_Shudown_button.Location = new System.Drawing.Point(6, 32);
+            this.DR_Shudown_button.Location = new System.Drawing.Point(7, 40);
+            this.DR_Shudown_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DR_Shudown_button.Name = "DR_Shudown_button";
-            this.DR_Shudown_button.Size = new System.Drawing.Size(104, 20);
+            this.DR_Shudown_button.Size = new System.Drawing.Size(121, 25);
             this.DR_Shudown_button.TabIndex = 17;
             this.DR_Shudown_button.Text = "DR";
             this.DR_Shudown_button.UseVisualStyleBackColor = true;
-            this.DR_Shudown_button.Click += new System.EventHandler(this.DR_Shudown_button_Click);
+            this.DR_Shudown_button.Click += DR_Shudown_button_Click;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(432, 59);
+            this.label3.Location = new System.Drawing.Point(504, 74);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 12);
+            this.label3.Size = new System.Drawing.Size(134, 15);
             this.label3.TabIndex = 10;
             this.label3.Text = "DRAWWATCH用パイプ名";
             // 
@@ -206,36 +215,43 @@
             this.groupBox1.Controls.Add(this.CommitShareNameTextBox);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.CommitServerHostLabel);
-            this.groupBox1.Location = new System.Drawing.Point(578, 15);
+            this.groupBox1.Location = new System.Drawing.Point(674, 19);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(216, 80);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(221, 100);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "コミット先URL";
             // 
             // CommitPathTextBox
             // 
-            this.CommitPathTextBox.Location = new System.Drawing.Point(88, 45);
+            this.CommitPathTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.CommitPathTextBox.Location = new System.Drawing.Point(103, 56);
+            this.CommitPathTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CommitPathTextBox.Name = "CommitPathTextBox";
             this.CommitPathTextBox.ReadOnly = true;
-            this.CommitPathTextBox.Size = new System.Drawing.Size(116, 19);
+            this.CommitPathTextBox.Size = new System.Drawing.Size(105, 23);
             this.CommitPathTextBox.TabIndex = 3;
             this.CommitPathTextBox.Text = "---";
             // 
             // CommitShareNameTextBox
             // 
-            this.CommitShareNameTextBox.Location = new System.Drawing.Point(88, 16);
+            this.CommitShareNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.CommitShareNameTextBox.Location = new System.Drawing.Point(103, 20);
+            this.CommitShareNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CommitShareNameTextBox.Name = "CommitShareNameTextBox";
-            this.CommitShareNameTextBox.Size = new System.Drawing.Size(116, 19);
+            this.CommitShareNameTextBox.Size = new System.Drawing.Size(105, 23);
             this.CommitShareNameTextBox.TabIndex = 1;
             this.CommitShareNameTextBox.Text = "COMMIT$";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(38, 19);
+            this.label11.Location = new System.Drawing.Point(44, 24);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 12);
+            this.label11.Size = new System.Drawing.Size(43, 15);
             this.label11.TabIndex = 0;
             this.label11.Text = "共有名";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -243,160 +259,165 @@
             // CommitServerHostLabel
             // 
             this.CommitServerHostLabel.AutoSize = true;
-            this.CommitServerHostLabel.Location = new System.Drawing.Point(7, 48);
+            this.CommitServerHostLabel.Location = new System.Drawing.Point(8, 60);
+            this.CommitServerHostLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CommitServerHostLabel.Name = "CommitServerHostLabel";
-            this.CommitServerHostLabel.Size = new System.Drawing.Size(72, 12);
+            this.CommitServerHostLabel.Size = new System.Drawing.Size(76, 15);
             this.CommitServerHostLabel.TabIndex = 2;
             this.CommitServerHostLabel.Text = "ｺﾐｯﾄ先ﾌｫﾙﾀﾞ:";
             this.CommitServerHostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // DrawWatchPIPEnameTextBox
             // 
-            this.DrawWatchPIPEnameTextBox.Location = new System.Drawing.Point(435, 77);
+            this.DrawWatchPIPEnameTextBox.Location = new System.Drawing.Point(507, 96);
+            this.DrawWatchPIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DrawWatchPIPEnameTextBox.Name = "DrawWatchPIPEnameTextBox";
             this.DrawWatchPIPEnameTextBox.ReadOnly = true;
-            this.DrawWatchPIPEnameTextBox.Size = new System.Drawing.Size(137, 19);
+            this.DrawWatchPIPEnameTextBox.Size = new System.Drawing.Size(159, 23);
             this.DrawWatchPIPEnameTextBox.TabIndex = 14;
             this.DrawWatchPIPEnameTextBox.Text = "WatchService";
             // 
             // StageServerHostName_comboBox
             // 
-            this.StageServerHostName_comboBox.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.StageServerHostName_comboBox.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.StageServerHostName_comboBox.FormattingEnabled = true;
-            this.StageServerHostName_comboBox.Items.AddRange(new object[] {
-            "CS1",
-            "CS2",
-            "CS3",
-            "ADS1",
-            "ADS2",
-            "DC3",
-            "DC4",
-            "ACVLT1",
-            "ACVLT3",
-            "SWEPDM2",
-            "localhost"});
-            this.StageServerHostName_comboBox.Location = new System.Drawing.Point(8, 33);
+            this.StageServerHostName_comboBox.Items.AddRange(new object[] { "CS1", "CS2", "CS3", "ADS1", "ADS2", "DC3", "DC4", "ACVLT1", "ACVLT3", "SWEPDM2", "localhost" });
+            this.StageServerHostName_comboBox.Location = new System.Drawing.Point(9, 41);
+            this.StageServerHostName_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StageServerHostName_comboBox.Name = "StageServerHostName_comboBox";
-            this.StageServerHostName_comboBox.Size = new System.Drawing.Size(129, 43);
+            this.StageServerHostName_comboBox.Size = new System.Drawing.Size(150, 43);
             this.StageServerHostName_comboBox.TabIndex = 11;
             this.StageServerHostName_comboBox.Text = "CS2";
-            this.StageServerHostName_comboBox.SelectedIndexChanged += new System.EventHandler(this.StageServerHostName_comboBox_SelectedIndexChanged);
+            this.StageServerHostName_comboBox.SelectedIndexChanged += StageServerHostName_comboBox_SelectedIndexChanged;
             // 
             // ClientImpersonationCheckBox
             // 
             this.ClientImpersonationCheckBox.AutoSize = true;
-            this.ClientImpersonationCheckBox.Location = new System.Drawing.Point(148, 32);
+            this.ClientImpersonationCheckBox.Location = new System.Drawing.Point(173, 40);
+            this.ClientImpersonationCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClientImpersonationCheckBox.Name = "ClientImpersonationCheckBox";
-            this.ClientImpersonationCheckBox.Size = new System.Drawing.Size(88, 16);
+            this.ClientImpersonationCheckBox.Size = new System.Drawing.Size(86, 19);
             this.ClientImpersonationCheckBox.TabIndex = 3;
             this.ClientImpersonationCheckBox.Text = "ｸﾗｲｱﾝﾄ偽装";
             this.ClientImpersonationCheckBox.UseVisualStyleBackColor = true;
-            this.ClientImpersonationCheckBox.Leave += new System.EventHandler(this.ClientImpersonationCheckBox_Leave);
+            this.ClientImpersonationCheckBox.Leave += ClientImpersonationCheckBox_Leave;
             // 
             // LogonPasswordTextBox
             // 
-            this.LogonPasswordTextBox.Location = new System.Drawing.Point(406, 31);
+            this.LogonPasswordTextBox.Location = new System.Drawing.Point(474, 39);
+            this.LogonPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogonPasswordTextBox.Name = "LogonPasswordTextBox";
             this.LogonPasswordTextBox.PasswordChar = '*';
-            this.LogonPasswordTextBox.Size = new System.Drawing.Size(86, 19);
+            this.LogonPasswordTextBox.Size = new System.Drawing.Size(100, 23);
             this.LogonPasswordTextBox.TabIndex = 6;
-            this.LogonPasswordTextBox.Leave += new System.EventHandler(this.LogonPasswordTextBox_Leave);
+            this.LogonPasswordTextBox.Leave += LogonPasswordTextBox_Leave;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(286, 59);
+            this.label10.Location = new System.Drawing.Point(334, 74);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 12);
+            this.label10.Size = new System.Drawing.Size(129, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "DRAWREGIST用パイプ名";
             // 
             // LogonUserTextBox
             // 
-            this.LogonUserTextBox.Location = new System.Drawing.Point(314, 31);
+            this.LogonUserTextBox.Location = new System.Drawing.Point(366, 39);
+            this.LogonUserTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogonUserTextBox.Name = "LogonUserTextBox";
-            this.LogonUserTextBox.Size = new System.Drawing.Size(86, 19);
+            this.LogonUserTextBox.Size = new System.Drawing.Size(100, 23);
             this.LogonUserTextBox.TabIndex = 5;
-            this.LogonUserTextBox.Leave += new System.EventHandler(this.LogonUserTextBox_Leave);
+            this.LogonUserTextBox.Leave += LogonUserTextBox_Leave;
             // 
             // DrawregistPIPEnameTextBox
             // 
-            this.DrawregistPIPEnameTextBox.Location = new System.Drawing.Point(289, 77);
+            this.DrawregistPIPEnameTextBox.Location = new System.Drawing.Point(337, 96);
+            this.DrawregistPIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DrawregistPIPEnameTextBox.Name = "DrawregistPIPEnameTextBox";
             this.DrawregistPIPEnameTextBox.ReadOnly = true;
-            this.DrawregistPIPEnameTextBox.Size = new System.Drawing.Size(137, 19);
+            this.DrawregistPIPEnameTextBox.Size = new System.Drawing.Size(159, 23);
             this.DrawregistPIPEnameTextBox.TabIndex = 13;
             this.DrawregistPIPEnameTextBox.Text = "ApprovalServer";
             // 
             // LogonDomainTextBox
             // 
-            this.LogonDomainTextBox.Location = new System.Drawing.Point(242, 31);
+            this.LogonDomainTextBox.Location = new System.Drawing.Point(282, 39);
+            this.LogonDomainTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogonDomainTextBox.Name = "LogonDomainTextBox";
-            this.LogonDomainTextBox.Size = new System.Drawing.Size(66, 19);
+            this.LogonDomainTextBox.Size = new System.Drawing.Size(76, 23);
             this.LogonDomainTextBox.TabIndex = 4;
-            this.LogonDomainTextBox.Leave += new System.EventHandler(this.LogonDomainTextBox_Leave);
+            this.LogonDomainTextBox.Leave += LogonDomainTextBox_Leave;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 15);
+            this.label8.Location = new System.Drawing.Point(7, 19);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 12);
+            this.label8.Size = new System.Drawing.Size(70, 15);
             this.label8.TabIndex = 7;
             this.label8.Text = "接続先ホスト";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(255, 16);
+            this.label5.Location = new System.Drawing.Point(298, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 12);
+            this.label5.Size = new System.Drawing.Size(40, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "ドメイン";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(143, 59);
+            this.label9.Location = new System.Drawing.Point(167, 74);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 12);
+            this.label9.Size = new System.Drawing.Size(142, 15);
             this.label9.TabIndex = 8;
             this.label9.Text = "DRAWCAPTURE用パイプ名";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(332, 16);
+            this.label6.Location = new System.Drawing.Point(387, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 12);
+            this.label6.Size = new System.Drawing.Size(43, 15);
             this.label6.TabIndex = 1;
             this.label6.Text = "ユーザー";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(424, 16);
+            this.label7.Location = new System.Drawing.Point(495, 20);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 12);
+            this.label7.Size = new System.Drawing.Size(51, 15);
             this.label7.TabIndex = 2;
             this.label7.Text = "パスワード";
             // 
             // DrawcapturePIPEnameTextBox
             // 
-            this.DrawcapturePIPEnameTextBox.Location = new System.Drawing.Point(146, 77);
+            this.DrawcapturePIPEnameTextBox.Location = new System.Drawing.Point(170, 96);
+            this.DrawcapturePIPEnameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DrawcapturePIPEnameTextBox.Name = "DrawcapturePIPEnameTextBox";
             this.DrawcapturePIPEnameTextBox.ReadOnly = true;
-            this.DrawcapturePIPEnameTextBox.Size = new System.Drawing.Size(137, 19);
+            this.DrawcapturePIPEnameTextBox.Size = new System.Drawing.Size(159, 23);
             this.DrawcapturePIPEnameTextBox.TabIndex = 12;
             this.DrawcapturePIPEnameTextBox.Text = "CaptureService";
             // 
             // AccountUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.サービス接続情報);
-            this.Name = "AccountUserForm";
-            this.Size = new System.Drawing.Size(1049, 105);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(this.サービス接続情報);
+            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Name = "AccountUserForm";
+            Size = new System.Drawing.Size(1221, 129);
             this.サービス接続情報.ResumeLayout(false);
             this.サービス接続情報.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -404,8 +425,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-
+            ResumeLayout(false);
         }
 
         #endregion
