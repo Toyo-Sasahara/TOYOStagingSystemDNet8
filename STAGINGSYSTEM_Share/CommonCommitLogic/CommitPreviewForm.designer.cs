@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BigPreviewForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.commitPreviewImage1 = new CommonCommitLogic.CommitPreviewImage();
             this.BigPreviewPictureBox = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.Button();
-            this.commitPreviewImage1 = new CommonCommitLogic.CommitPreviewImage();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BigPreviewPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.commitPreviewImage1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -47,8 +48,22 @@
             this.panel1.Size = new System.Drawing.Size(909, 453);
             this.panel1.TabIndex = 0;
             // 
+            // commitPreviewImage1
+            // 
+            this.commitPreviewImage1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commitPreviewImage1.DebugMode = false;
+            this.commitPreviewImage1.ErrorImage = null;
+            this.commitPreviewImage1.Image = ((System.Drawing.Image)(resources.GetObject("commitPreviewImage1.Image")));
+            this.commitPreviewImage1.Location = new System.Drawing.Point(4, 4);
+            this.commitPreviewImage1.Name = "commitPreviewImage1";
+            this.commitPreviewImage1.Size = new System.Drawing.Size(902, 446);
+            this.commitPreviewImage1.TabIndex = 1;
+            // 
             // BigPreviewPictureBox
             // 
+            this.BigPreviewPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BigPreviewPictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BigPreviewPictureBox.Location = new System.Drawing.Point(742, 473);
             this.BigPreviewPictureBox.Name = "BigPreviewPictureBox";
@@ -68,23 +83,10 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // commitPreviewImage1
-            // 
-            this.commitPreviewImage1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.commitPreviewImage1.DebugMode = false;
-            this.commitPreviewImage1.ErrorImage = null;
-            this.commitPreviewImage1.Image = null;
-            this.commitPreviewImage1.Location = new System.Drawing.Point(4, 4);
-            this.commitPreviewImage1.Name = "commitPreviewImage1";
-            this.commitPreviewImage1.Size = new System.Drawing.Size(902, 446);
-            this.commitPreviewImage1.TabIndex = 1;
-            // 
             // BigPreviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(933, 508);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.BigPreviewPictureBox);

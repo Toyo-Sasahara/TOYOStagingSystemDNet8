@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.MiniPreviewPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.MiniPreviewPictureBox)).BeginInit();
-            this.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)this.MiniPreviewPictureBox).BeginInit();
+            SuspendLayout();
             // 
             // MiniPreviewPictureBox
             // 
@@ -39,26 +39,26 @@
             this.MiniPreviewPictureBox.Location = new System.Drawing.Point(0, 0);
             this.MiniPreviewPictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.MiniPreviewPictureBox.Name = "MiniPreviewPictureBox";
-            this.MiniPreviewPictureBox.Size = new System.Drawing.Size(547, 311);
+            this.MiniPreviewPictureBox.Size = new System.Drawing.Size(638, 389);
             this.MiniPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MiniPreviewPictureBox.TabIndex = 17;
             this.MiniPreviewPictureBox.TabStop = false;
-            this.MiniPreviewPictureBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MiniPreviewPictureBox_MouseDoubleClick);
-            this.MiniPreviewPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BigPreviewPictureBox_MouseDown);
-            this.MiniPreviewPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BigPreviewPictureBox_MouseMove);
-            this.MiniPreviewPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BigPreviewPictureBox_MouseUp);
+            this.MiniPreviewPictureBox.MouseDoubleClick += MiniPreviewPictureBox_MouseDoubleClick;
+            this.MiniPreviewPictureBox.MouseDown += BigPreviewPictureBox_MouseDown;
+            this.MiniPreviewPictureBox.MouseMove += BigPreviewPictureBox_MouseMove;
+            this.MiniPreviewPictureBox.MouseUp += BigPreviewPictureBox_MouseUp;
             // 
             // CommitPreviewImage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.MiniPreviewPictureBox);
-            this.Name = "CommitPreviewImage";
-            this.Size = new System.Drawing.Size(547, 311);
-            this.Load += new System.EventHandler(this.PreviewArcSuiteForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.MiniPreviewPictureBox)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            Controls.Add(this.MiniPreviewPictureBox);
+            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Name = "CommitPreviewImage";
+            Size = new System.Drawing.Size(638, 389);
+            Load += PreviewArcSuiteForm_Load;
+            ((System.ComponentModel.ISupportInitialize)this.MiniPreviewPictureBox).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

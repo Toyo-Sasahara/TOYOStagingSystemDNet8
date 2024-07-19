@@ -1,37 +1,47 @@
-﻿using SasaLib.ArcSuitePreview;
+﻿#if NETCOREAPP
+using CommonCommitLogicDNet8.Properties;
+#else
+using CommonCommitLogic.Properties;
+#endif
+using SasaLib;
+using SasaLib.ArcSuitePreview;
 using SasaLib.NumberingSupport;
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+#if NETCOREAPP
 using System.Data;
-using System.Diagnostics;
+#endif
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SasaLib;
-using System.Threading;
-using System.Security.Cryptography;
-using System.Runtime.Versioning;
-using CommonCommitLogicDNet8.Properties;
-using System.Globalization;
-using System.Text.RegularExpressions;
+#if NETCOREAPP
 using EnvDTE;
+#endif
 
 namespace CommonCommitLogic
 {
     /// <summary>
     /// コミットダイアログクラス
     /// </summary>
+#if NETCOREAPP
     [SupportedOSPlatform("windows")]
+#endif
     public partial class CommitDialogForm : Form
     {
         /// <summary>
         /// 
         /// </summary>
         private CommitParam commitParam;
+
+        private bool isVariant;
 
         /// <summary>
         /// 
@@ -71,7 +81,12 @@ namespace CommonCommitLogic
         /// <summary>
         /// nullの場合はまだ確認されていない
         /// </summary>
-        private CadDrawingFile _cadDrwingFile;
+        //private CadDrawingFile _cadDrwingFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private CommitSupportCadDrawingFile supportCadDrawingFile;
 
         /// <summary>
         /// nullの場合はまだ確認されていない
@@ -121,11 +136,6 @@ namespace CommonCommitLogic
 
 
         /// <summary>
-        /// 
-        /// </summary>
-        private CommitSupportCadDrawingFile supportCadDrawingFile;
-
-        /// <summary>
         /// 採番サーバーとの通信をつかさどる
         /// </summary>
         private CommitSupportNumbering supportNumbering;
@@ -135,6 +145,9 @@ namespace CommonCommitLogic
         /// </summary>
         private CommitSupportArcSuite supportArcSuite;
 
+        /// <summary>
+        /// 表図面に対応した処理に切り替えることが可能かを設定するフラグ
+        /// </summary>
         private bool CanUseVariantTypeDrawing { get; set; }
 
         private Helper helper = new Helper();
@@ -159,22 +172,23 @@ namespace CommonCommitLogic
             ////string activeDocName = System.IO.Path.GetFileName(activeDocFullFileName);
             //string activeDocName = supportCadDrawingFile.CadDocumentFileName;
 
-
             InitializeComponent();
 
+#if NETCOREAPP
+            this.DoubleBuffered = true;
+#endif
             // CADファイル関連表示・ボタン 初期化
 
             InvokeRequired_Control_Text(CadFileWarningIgnore_button, "調査中", default, default);
             InvokeRequired_Control_Enabled(CadFileInformation_label, false, false);
 
-            InvokeRequired_Control_Text(CadFileWarningIgnore_button, "調査中", default, default);
-            InvokeRequired_Control_Enabled(CadFileWarningIgnore_button, false, false);
 
             NumberingWebServer_button.Image = default;
 
             // 採番関連表示・ボタン 初期化
 
-            InvokeRequired_Control_Enabled(NumberingInformation_label, false, false);
+            InvokeRequired_Control_Enabled(NumberingInformation_label, true, true);
+            InvokeRequired_Control_Text(NumberingInformation_label, "--", default, default);
 
             InvokeRequired_Control_Text(NumberingWarningIgnore_button, "調査中", default, default);
             InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, true, true);
@@ -187,6 +201,7 @@ namespace CommonCommitLogic
             // ArcSuite関連表示・ボタン 初期化
 
             InvokeRequired_Control_Enabled(ArcSuiteInformation_label, false, false);
+            InvokeRequired_Control_Text(ArcSuiteInformation_label, "--", default, default);
 
             InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "調査中", default, default);
             InvokeRequired_Control_Enabled(ArcSuiteWarningIgnore_button, true, true);
@@ -203,10 +218,29 @@ namespace CommonCommitLogic
 
             ErrorOccurred_Label.Visible = false; // コミットロック中ラベルを非表示へ
 
+
             Variant_panel.Visible = false;
             Variant_panel.Enabled = false;
             PARTNUMBER_CAUTION_label.Text = $"";
 
+        }
+
+
+        /// <summary>
+        /// コミット実行を許可不許可するﾒｯｾｰｼﾞとボタンの状態を初期化
+        /// </summary>
+        private void ResetNumberingCheckArcSuiteRegistCheck()
+        {
+            // ArcSuite関連 Rev比較警告ボタン初期化
+            InvokeRequired_Control_Text(SameRevWarningIgnore_button, " -- ", default, default);
+            InvokeRequired_Control_Enabled(SameRevWarningIgnore_button, false, false);
+
+            InvokeRequired_Control_Enabled(CommitExecute_Button, false); // コミット開始ボタンを開始直後にディスエイブル
+
+            ArcSuiteDrawingShow_button.Image = default;
+
+            InvokeRequired_Control_Text(NumberingInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
+            InvokeRequired_Control_Text(ArcSuiteInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
         }
 
         /// <summary>
@@ -215,17 +249,14 @@ namespace CommonCommitLogic
         /// <param name="sender"></param>
         /// <param name="cadDrawingFile"></param>
         /// <exception cref="NotImplementedException"></exception>
+        //private void SupportCadDrawingFile_CadDrawingFileChanged(object sender, CadDrawingFile cadDrawingFile)
         private void SupportCadDrawingFile_CadDrawingFileChanged(object sender, CadDrawingFile cadDrawingFile)
         {
             DebugConsole.WriteLine(@"CadDrawingFileChanged イベントがキックされました");
 
-            _cadDrwingFile = cadDrawingFile;
-
-            ActiveDocumentWithoutPathAndExtension = cadDrawingFile.CadDrawingFileNameWithoutExtension;
-
             if (cadDrawingFile.WarrningButtonEnabled)
             {
-                InvokeRequired_Control_Text(CadFileInformation_label, cadDrawingFile.CompareResultMsg, Color.Red);
+                InvokeRequired_Control_Text(CadFileInformation_label, supportCadDrawingFile.CadDrawingFile.CompareResultMsg, Color.Red);
                 InvokeRequired_Control_Text(CadFileWarningIgnore_button, "警告無視", Color.Red, Color.Yellow);
                 InvokeRequired_Control_Enabled(CadFileWarningIgnore_button, true, true);
             }
@@ -494,7 +525,9 @@ namespace CommonCommitLogic
         /// </summary>
         private void CommitButtonEnableJudge()
         {
-            if (_cadDrwingFile == null || _typeNumber == null || _reserveNumber == null || _arcSuiteSearchResult == null)
+            //if (_cadDrwingFile == null || _typeNumber == null || _reserveNumber == null || _arcSuiteSearchResult == null)
+            //    return;
+            if (supportCadDrawingFile.CadDrawingFile == null || _typeNumber == null || _reserveNumber == null || _arcSuiteSearchResult == null)
                 return;
 
             if (CadFileWarningIgnore_button.Visible || NumberingWarningIgnore_button.Visible || ArcSuiteWarningIgnore_button.Visible || SameRevWarningIgnore_button.Visible)
@@ -516,136 +549,7 @@ namespace CommonCommitLogic
         }
 
         /// <summary>
-        /// CommitDialogForm フォームロード時
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void CommitDialogForm_Load(object sender, EventArgs e)
-        {
-            if (PrintOutOnly == false)
-            {
-                ArcSuiteDrawingShow_button.Enabled = false;
-
-                NumberingWarningIgnore_button.Enabled = false;
-
-                ArcSuiteWarningIgnore_button.Enabled = false;
-
-                if (supportCadDrawingFile != null)
-                    supportCadDrawingFile.CadDrwingFileChanged += SupportCadDrawingFile_CadDrawingFileChanged;
-
-                if (supportNumbering != null)
-                {
-                    supportNumbering.ReserveNumberChanged += SupportNumbering_ReserveNumberChanged; // ｲﾍﾞﾝﾄはこの後にキックされることを確認すること
-                    supportNumbering.TypeNumberChanged += SupportNumbering_TypeNumberChanged; // ｲﾍﾞﾝﾄはこの後にキックされることを確認すること
-
-                }
-
-                if (supportArcSuite != null)
-                    supportArcSuite.ArcSuiteSearchResultChanged += SupportArcSuite_ArcSuiteSearchResultChanged; // ｲﾍﾞﾝﾄはこの後にキックされることを確認すること
-
-
-                #region 採番チェックおよびArcSuite登録済みかのチェック。この指令後にプロパティチェンジｲﾍﾞﾝﾄはキックされる
-
-                CancellationToken ct = cts.Token;
-
-                supportCadDrawingFile.CheckCadFileName(PARTNUMBER_linklabel.Text, this);
-
-                supportNumbering.CheckReserveNumber(PARTNUMBER_linklabel.Text, this);
-
-                var resultCheckNumberType = supportNumbering.CheckNumberType(PARTNUMBER_linklabel.Text, this);
-                if (resultCheckNumberType)
-                {
-                    WriteLine($"■CommitDialogForm.CommitDialogForm_Load(..)　PARTNUMBER_linklabel.Text = 【{PARTNUMBER_linklabel.Text}】の図面種類および表図面か否かをチェックしました。.結果 NumberTypeConfig.drawingType = {supportNumbering.TypeNumber.drawingType}");
-
-                    // アークスイート登録確認開始
-                    supportArcSuite.CheckArcSuiteRegisted(PARTNUMBER_linklabel.Text, TITLE_Label_label.Text, ArcSuitePARTNUMBER_ContainSuffixs, ct);
-
-                    #endregion
-
-                    CommitButtonEnableJudge();
-
-                }
-                else
-                {
-                    this.Close();
-                }
-            }
-            else
-            {
-                CADTITLE_groupBox.Enabled = false;
-                CadFileInformation_groupBox.Enabled = false;
-                NUMBERING_groupBox.Enabled = false;
-                ArcSuite_groupBox.Enabled = false;
-                CommitExecute_Button.Enabled = true;
-                CommitExecute_Button.Text = "ﾊﾞｰｺｰﾄﾞ無し印刷開始";
-            }
-        }
-
-
-
-        /// <summary>
-        /// CommitDialogForm フォームが閉じる時
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void CommitDialogForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-            if (!close_permition)
-            {
-                close_permition = true;
-                e.Cancel = true;
-            }
-        }
-
-        /// <summary>
-        /// フォームが閉じるたび、フォームが閉じた後
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void CommitDialogForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (_arcSuiteSearchResult != null && _arcSuiteSearchResult.arcSuitePreviews != null)
-            {
-
-                if (string.IsNullOrWhiteSpace(ArcsuitePreview.temporalyDrawingImageFullFileName) == false)
-                {
-                    string fullfilename = ArcsuitePreview.temporalyDrawingImageFullFileName;
-                    if (System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(fullfilename)))
-                    {
-                        bool result = SasaLib.FileFolder.RemoveFolder(System.IO.Path.GetDirectoryName(fullfilename), true);
-                        if (result)
-                            WriteLine($"■ｱｰｸｽｲｰﾄﾌﾟﾚﾋﾞｭｰｷｬｯｼｭﾌｫﾙﾀﾞ {System.IO.Path.GetDirectoryName(fullfilename)}の削除に成功しました");
-                        else
-                            WriteLine($"※ｱｰｸｽｲｰﾄﾌﾟﾚﾋﾞｭｰｷｬｯｼｭﾌｫﾙﾀﾞ {System.IO.Path.GetDirectoryName(fullfilename)}の削除に失敗しました");
-                    }
-                    else
-                        WriteLine($"※ｱｰｸｽｲｰﾄﾌﾟﾚﾋﾞｭｰｷｬｯｼｭﾌｫﾙﾀﾞ {System.IO.Path.GetDirectoryName(fullfilename)}はすでにありませんでした。");
-                }
-
-            }
-        }
-
-        /// <summary>
-        /// ■コミットするCADイメージをダイアログへロード
-        /// </summary>
-        /// <param name="FullImagePath"></param>
-        internal void SetImage(string FullImagePath)
-        {
-            //MiniPreviewPictureBox.Load(FullImagePath);
-            //WriteLine($"画像ﾌｧｲﾙ{FullImagePath}をPicutreBoxへロード。 DPI:{MiniPreviewPictureBox.Image.HorizontalResolution}");
-
-            commitPreviewImage.LoadImage(FullImagePath);
-            WriteLine($"■CommitDialogForm.SetImage(..) 画像ﾌｧｲﾙ \"{FullImagePath}\" を CommitPreviewImageへロード。 DPI:{commitPreviewImage.Image.HorizontalResolution}");
-
-            ImageRezolutonInfo_label.Text = $"印刷イメージ：解像度 {commitPreviewImage.OrignalResolution}[DPI] (推奨値400[DPI])";
-
-            commitPreviewImage.TitleBlockFit();
-            TitleFit_button.Tag = true;
-        }
-
-        /// <summary>
-        /// ■チケットデータをダイアログへセット
+        /// ■チケットデータをダイアログへセット.フォームを表示する直前に実行する必要があります
         /// </summary>
         /// <param name="ticketXml"></param>
         public bool SetData(CommonTicket ticketXml, out string ErrMsg)
@@ -712,8 +616,10 @@ namespace CommonCommitLogic
                     result = false;
                 }
             }
+
             // 設計者
             DESIGNERlabel.Text = (string)ticketXml.GetParamKeyValue("DESIGNER");
+
             // 設計日
             if (string.IsNullOrWhiteSpace(DESIGNERlabel.Text) == false)
             {
@@ -734,7 +640,6 @@ namespace CommonCommitLogic
                 }
             }
 
-
             if (commitParam.PrinterDriverName != "")
             {
                 PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commitParam.PrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
@@ -749,7 +654,183 @@ namespace CommonCommitLogic
                 PlotFileCreate_label.Text = $"";
             }
 
+
+            string prefix;
+            string rangePart;
+            string rangeStart;
+            string rangeEnd;
+            string suffix;
+            // 表図面か否かを図番のみでチェックします。
+            bool checkResult = helper.ParseToyoVariantDrawingNumberString(PARTNUMBER_linklabel.Text, out prefix, out isVariant, out rangePart, out rangeStart, out rangeEnd, out suffix);
+
+            // 表図面判定 表図面の場合は専用コントロールを表示させます
+            if (CanUseVariantTypeDrawing && isVariant)
+            {
+                Variant_panel.Enabled = isVariant;
+                VariantNumber_MIN_label.Enabled = isVariant;
+                VariantNumber_MIN_label.Text = rangeStart;
+                VariantNumber_MIN_textBox2.Text = rangeStart;
+                VariantNumber_MAX_label.Enabled = isVariant;
+                VariantNumber_MAX_label.Text = rangeEnd;
+                VariantNumber_Prefix_label.Text = prefix;
+                VariantNumber_Suffix_label.Text = suffix;
+                ActiveVariantEnd_textBox.Enabled = isVariant;
+                ActiveVariantEnd_textBox.BackColor = Color.Yellow;
+            }
+
             return result;
+        }
+
+        /// <summary>
+        /// CommitDialogForm フォームロード時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommitDialogForm_Load(object sender, EventArgs e)
+        {
+            if (PrintOutOnly == false)
+            {
+                ArcSuiteDrawingShow_button.Enabled = false;
+
+                NumberingWarningIgnore_button.Enabled = false;
+
+                ArcSuiteWarningIgnore_button.Enabled = false;
+
+                if (supportCadDrawingFile != null)
+                    supportCadDrawingFile.CadDrwingFileChanged += SupportCadDrawingFile_CadDrawingFileChanged;
+
+                if (supportNumbering != null)
+                {
+                    supportNumbering.ReserveNumberChanged += SupportNumbering_ReserveNumberChanged; // ｲﾍﾞﾝﾄはこの後にキックされることを確認すること
+                    supportNumbering.TypeNumberChanged += SupportNumbering_TypeNumberChanged; // ｲﾍﾞﾝﾄはこの後にキックされることを確認すること
+
+                }
+
+                if (supportArcSuite != null)
+                    supportArcSuite.ArcSuiteSearchResultChanged += SupportArcSuite_ArcSuiteSearchResultChanged; // ｲﾍﾞﾝﾄはこの後にキックされることを確認すること
+
+
+                #region 採番チェックおよびArcSuite登録済みかのチェック。この指令後にプロパティチェンジｲﾍﾞﾝﾄはキックされる
+
+                CancellationToken ct = cts.Token;
+
+                supportCadDrawingFile.CheckCadFileName(PARTNUMBER_linklabel.Text, this);
+
+                if (isVariant == false)　//表図面判定を受けていない場合は、即採番システムに問合せを開始します
+                {
+                    supportNumbering.CheckReserveNumber(PARTNUMBER_linklabel.Text, this);
+                    InvokeRequired_Control_Text(NumberingInformation_label, "サーバーからの返答を待機しています・・・", Color.Red, default);
+                    InvokeRequired_Control_Text(NumberingWarningIgnore_button, "調査中", default, default);
+                }
+                else
+                {
+                    InvokeRequired_Control_Text(NumberingInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
+                    InvokeRequired_Control_Text(NumberingWarningIgnore_button, "待機中", default, default);
+                }
+
+                var resultCheckNumberType = supportNumbering.CheckNumberType(PARTNUMBER_linklabel.Text, this);
+                if (resultCheckNumberType)
+                {
+                    WriteLine($"■CommitDialogForm.CommitDialogForm_Load(..)　PARTNUMBER_linklabel.Text = 【{PARTNUMBER_linklabel.Text}】の図面種類および表図面か否かをチェックしました。.結果 NumberTypeConfig.drawingType = {supportNumbering.TypeNumber.drawingType}");
+
+                    if (isVariant == false) // //表図面判定を受けていない場合は、即アークスイートに問い合わせを開始します
+                    {
+                        // アークスイート登録確認開始
+                        supportArcSuite.CheckArcSuiteRegisted(PARTNUMBER_linklabel.Text, TITLE_Label_label.Text, ArcSuitePARTNUMBER_ContainSuffixs, ct);
+                        InvokeRequired_Control_Text(ArcSuiteInformation_label, "サーバーからの返答を待機しています・・・", Color.Red, default);
+                        InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "調査中", default, default);
+                    }
+                    else
+                    {
+                        InvokeRequired_Control_Text(ArcSuiteInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
+                        InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "待機中", default, default);
+                    }
+                    #endregion
+
+                    CommitButtonEnableJudge();
+
+                }
+                else
+                {
+                    this.Close();
+                }
+
+
+            }
+            else
+            {
+                InvokeRequired_Control_Text(CadFileWarningIgnore_button, "---", default, default);
+                InvokeRequired_Control_Text(NumberingWarningIgnore_button, "---", default, default);
+                InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "---", default, default);
+
+                CADTITLE_groupBox.Enabled = false;
+                CadFileInformation_groupBox.Enabled = false;
+                NUMBERING_groupBox.Enabled = false;
+                ArcSuite_groupBox.Enabled = false;
+                CommitExecute_Button.Enabled = true;
+                CommitExecute_Button.Text = "ﾊﾞｰｺｰﾄﾞ無し印刷開始";
+            }
+        }
+
+        /// <summary>
+        /// CommitDialogForm フォームが閉じる時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommitDialogForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (!close_permition)
+            {
+                close_permition = true;
+                e.Cancel = true;
+            }
+        }
+
+        /// <summary>
+        /// フォームが閉じるたび、フォームが閉じた後
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommitDialogForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_arcSuiteSearchResult != null && _arcSuiteSearchResult.arcSuitePreviews != null)
+            {
+
+                if (string.IsNullOrWhiteSpace(ArcsuitePreview.temporalyDrawingImageFullFileName) == false)
+                {
+                    string fullfilename = ArcsuitePreview.temporalyDrawingImageFullFileName;
+                    if (System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(fullfilename)))
+                    {
+                        bool result = SasaLib.FileFolder.RemoveFolder(System.IO.Path.GetDirectoryName(fullfilename), true);
+                        if (result)
+                            WriteLine($"■ｱｰｸｽｲｰﾄﾌﾟﾚﾋﾞｭｰｷｬｯｼｭﾌｫﾙﾀﾞ {System.IO.Path.GetDirectoryName(fullfilename)}の削除に成功しました");
+                        else
+                            WriteLine($"※ｱｰｸｽｲｰﾄﾌﾟﾚﾋﾞｭｰｷｬｯｼｭﾌｫﾙﾀﾞ {System.IO.Path.GetDirectoryName(fullfilename)}の削除に失敗しました");
+                    }
+                    else
+                        WriteLine($"※ｱｰｸｽｲｰﾄﾌﾟﾚﾋﾞｭｰｷｬｯｼｭﾌｫﾙﾀﾞ {System.IO.Path.GetDirectoryName(fullfilename)}はすでにありませんでした。");
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// ■コミットするCADイメージをダイアログへロード
+        /// </summary>
+        /// <param name="FullImagePath"></param>
+        internal void SetImage(string FullImagePath)
+        {
+            //MiniPreviewPictureBox.Load(FullImagePath);
+            //WriteLine($"画像ﾌｧｲﾙ{FullImagePath}をPicutreBoxへロード。 DPI:{MiniPreviewPictureBox.Image.HorizontalResolution}");
+
+            commitPreviewImage.LoadImage(FullImagePath);
+            WriteLine($"■CommitDialogForm.SetImage(..) 画像ﾌｧｲﾙ \"{FullImagePath}\" を CommitPreviewImageへロード。 DPI:{commitPreviewImage.Image.HorizontalResolution}");
+
+            ImageRezolutonInfo_label.Text = $"印刷イメージ：解像度 {commitPreviewImage.OrignalResolution}[DPI] (推奨値400[DPI])";
+
+            commitPreviewImage.TitleBlockFit();
+            TitleFit_button.Tag = true;
         }
 
         /// <summary>
@@ -1195,10 +1276,10 @@ namespace CommonCommitLogic
                 commitParam.StageServerHost, commitParam.PipeNameDC);
 
 
-            var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: true);
-            var printerAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(objectConvNew: true);
-            var printerFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(objectConvNew: true);
-            var printerSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize(objectConvNew: true);
+            var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: Commit.objectConvNew);
+            var printerAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(objectConvNew: Commit.objectConvNew);
+            var printerFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(objectConvNew: Commit.objectConvNew);
+            var printerSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize(objectConvNew: Commit.objectConvNew);
 
             StringBuilder sb = new StringBuilder();
 
@@ -1390,8 +1471,8 @@ namespace CommonCommitLogic
         /// <summary>
         /// ■スレッド対応のコントロールのEnabledﾌﾟﾛﾊﾟﾃｨのセット
         /// </summary>
-        /// <param name="control"></param>
-        /// <param name="Enabled"></param>
+        /// <param name="control">true:コントロール Enable </param>
+        /// <param name="Enabled">true:コントロール Visible</param>
         [System.Diagnostics.DebuggerStepThrough]
         private void InvokeRequired_Control_Enabled(Control control, bool Enabled, bool Visible = true)
         {
@@ -1406,10 +1487,79 @@ namespace CommonCommitLogic
 
         }
 
-        private void ChangeNormalOrVariant_button_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 表図面でｺﾐｯﾄする枝番号を入力した時に発生するイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ActiveVariantEnd_textBox_TextChanged(object sender, EventArgs e)
+        {
+            ResetNumberingCheckArcSuiteRegistCheck();
+
+            if (_IsThreeDigitInt(ActiveVariantEnd_textBox.Text))
+            {
+                string prefix; string rangePart; string rangeStart; string rangeEnd; string suffix;
+                bool isVariant;
+                bool checkResult = helper.ParseToyoVariantDrawingNumberString(PARTNUMBER_linklabel.Text, out prefix, out isVariant, out rangePart, out rangeStart, out rangeEnd, out suffix);
+
+                int.TryParse(ActiveVariantEnd_textBox.Text, out int _ActiveVarianInt);
+                int.TryParse(rangeStart, out int _suffixStartInt);
+                int.TryParse(rangeEnd, out int _suffixEndInt);
+
+                if (_ActiveVarianInt < _suffixStartInt || _ActiveVarianInt > _suffixEndInt)
+                {
+                    MessageBox.Show(this, $"表の範囲外です。{rangeStart} から {rangeEnd} までの必要があります", caption: "範囲外", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+                    ActiveVariantEnd_textBox.Text = null;
+                    Variant_End_Input_label.ForeColor = Color.Red;
+                }
+                else
+                {
+                    Variant_End_Input_label.ForeColor = DefaultForeColor;
+                }
+
+                string variantofOnePartnumber = prefix + "-" + ActiveVariantEnd_textBox.Text + suffix;
+
+                ActiveVariantEnd_textBox.BackColor = DefaultBackColor;
+
+                // 採番サーバに検索開始
+                supportNumbering.CheckReserveNumber(variantofOnePartnumber, this);
+
+                CancellationToken ct = cts.Token;
+                // アークスイートに検索開始
+                supportArcSuite.CheckArcSuiteRegisted(variantofOnePartnumber, TITLE_Label_label.Text, ArcSuitePARTNUMBER_ContainSuffixs, ct);
+
+            } // 数値として認識できる３ケタが入力された場合
+            else
+            {
+                Variant_End_Input_label.ForeColor = Color.Red;
+                ActiveVariantEnd_textBox.BackColor = Color.Yellow;
+            }
+
+            // 長さが３ケタで数値変換可能ならtrueを返す
+            bool _IsThreeDigitInt(string s)
+            {
+                // 長さが3であるかを確認
+                if (s.Length != 3)
+                {
+                    return false;
+                }
+
+                // 数字かどうかを確認
+                foreach (char c in s)
+                {
+                    if (!char.IsDigit(c))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+        }
+
+        private void Variant_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
     }
 }
