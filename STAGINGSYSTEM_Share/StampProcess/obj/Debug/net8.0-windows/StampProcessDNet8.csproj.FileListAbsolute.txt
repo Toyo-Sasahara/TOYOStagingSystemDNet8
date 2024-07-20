@@ -78,4 +78,4 @@ C:\Users\sasahara\Source\Repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampP
 C:\Users\sasahara\Source\Repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\bin\Debug\net8.0-windows\BarcodeLib.pdb
 C:\Users\sasahara\Source\Repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\ILLink.Substitutions.xml
 C:\Users\sasahara\Source\Repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\ref\StampProcessDNet8.dll
-C:\Users\sasahara\Source\Repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampProcessDNet8.csproj.CopyComplete
+C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\STAGINGSYSTEM_Share\StampProcess\obj\Debug\net8.0-windows\StampPro.9771CC7C.Up2Date
