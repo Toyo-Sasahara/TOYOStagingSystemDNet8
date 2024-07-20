@@ -3,25 +3,21 @@ using SasaLib.PIPE;
 using STAGINGSYSTEM_COMMANDS;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.IO.Pipes;
 using System.IO;
-using System.Linq;
-using System.Runtime.Versioning;
+using System.IO.Pipes;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoStageService;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
+#if NETCOREAPP
     [SupportedOSPlatform("windows")]
+#endif
     public partial class AccountUserForm : UserControl
     {
         public System.Windows.Forms.Control parentControl { get; set; }

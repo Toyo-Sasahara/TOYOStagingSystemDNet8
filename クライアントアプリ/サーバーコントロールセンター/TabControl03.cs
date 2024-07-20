@@ -1,23 +1,22 @@
 ﻿using SasaLib;
-using SasaLib.Winlogon;
 using SharedClassLibrary;
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-//using ToyoMcMfg.Staging.RemoteObjects;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
 
 namespace ServerControlCenterApplication
 {
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl03 : UserControl
     {
         Form1 mainForm;

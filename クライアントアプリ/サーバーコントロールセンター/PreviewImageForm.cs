@@ -1,18 +1,18 @@
 ﻿using SasaLib;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
 
 namespace ClientApp.Forms
 {
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     public partial class PreviewImageForm : Form
     {
         static bool EnableLeftButtonDrag = false;
@@ -55,6 +55,8 @@ namespace ClientApp.Forms
         /// 図面イメージのソースBitmapオブジェクト
         /// </summary>        
         private Bitmap sourceBitmap = null;
+        private static readonly object sourceBitmap_LockHandler = new object();
+
 
         /// <summary>
         /// pictureBoxImage描画オブジェクト
@@ -125,6 +127,11 @@ namespace ClientApp.Forms
         /// </summary>
         SasaLibDelegateWriteLine WriteLine;
 
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="CallDestination"></param>
         public PreviewImageForm(SasaLibDelegateWriteLine CallDestination = null)
         {
             // デバッグメッセージデリゲート先選択
@@ -140,7 +147,7 @@ namespace ClientApp.Forms
         {
             FormShow = true;
             // ウィンド位置を指定
-            this.Location = new Point(this.Owner.Location.X + (this.Owner.Width - this.Width) / 4 +300 , this.Owner.Location.Y + (this.Owner.Height - this.Height) / 4);
+            this.Location = new Point(this.Owner.Location.X + (this.Owner.Width - this.Width) / 4 + 300, this.Owner.Location.Y + (this.Owner.Height - this.Height) / 4);
 
         }
 
@@ -244,6 +251,7 @@ namespace ClientApp.Forms
         /// <param name="e"></param>
         private void BigPreviewPictureBox_MouseMove(object sender, MouseEventArgs e)
         {
+
             //if (DebugMode)
             //    showTestlabel();
 
@@ -502,7 +510,8 @@ namespace ClientApp.Forms
 
             try
             {
-                pictureBoxImageGraphics.InterpolationMode = interpolationMode;
+                if (pictureBoxImageGraphics != null)
+                    pictureBoxImageGraphics.InterpolationMode = interpolationMode;
             }
             catch (Exception ex)
             {
@@ -514,7 +523,6 @@ namespace ClientApp.Forms
             InvokeRequired_Graphics_DrawImage(pictureBoxImageGraphics, sourceBitmap, 0, 0);
 
             //Debug_panel.BackColor = Color.Transparent;
-
 
             // ピクチャボックスをリフレッシュし再描画          
             if (InvokeRequired)
@@ -593,13 +601,16 @@ namespace ClientApp.Forms
         {
             try
             {
-
                 if (InvokeRequired)
                 {
                     Invoke(new Action(() =>
                     {
                         /// UIを操作する処理
-                        graphics.Transform = matrix;
+                        try
+                        {
+                            graphics.Transform = matrix;
+                        }
+                        catch { }
                     }));
                 }
                 else
@@ -611,7 +622,6 @@ namespace ClientApp.Forms
             {
                 this.WriteLine($"※InvokeRequired_Graphics_Transform(...)にて例外{ex.Message}");
             }
-
         }
 
         /// <summary>
@@ -673,38 +683,47 @@ namespace ClientApp.Forms
         /// </summary>
         private void ViewFit()
         {
-            //this.X_numericUpDown.ValueChanged -= new System.EventHandler(this.numericUpDown_ValueChanged);
-            //this.Y_numericUpDown.ValueChanged -= new System.EventHandler(this.numericUpDown_ValueChanged);
-            //this.SCALE_numericUpDown.ValueChanged -= new System.EventHandler(this.SCALE_numericUpDown_ValueChanged);
+            lock (sourceBitmap_LockHandler)
+            {
 
-            if (PreviewArcSuitePictureBox.Image == null) return;
+                try
+                {
 
-            int PictureBoxSizeWidth = PreviewArcSuitePictureBox.Size.Width;
-            int PictureBoxSizeHeight = PreviewArcSuitePictureBox.Size.Height;
-            //Console.WriteLine($"{PictureBoxSizeWidth},{PictureBoxSizeHeight}");
+                    //this.X_numericUpDown.ValueChanged -= new System.EventHandler(this.numericUpDown_ValueChanged);
+                    //this.Y_numericUpDown.ValueChanged -= new System.EventHandler(this.numericUpDown_ValueChanged);
+                    //this.SCALE_numericUpDown.ValueChanged -= new System.EventHandler(this.SCALE_numericUpDown_ValueChanged);
+
+                    if (PreviewArcSuitePictureBox.Image == null) return;
+
+                    int PictureBoxSizeWidth = PreviewArcSuitePictureBox.Size.Width;
+                    int PictureBoxSizeHeight = PreviewArcSuitePictureBox.Size.Height;
+                    //Console.WriteLine($"{PictureBoxSizeWidth},{PictureBoxSizeHeight}");
+
+                    int ImageSizeWidth = sourceBitmap.Width;
+                    int ImageSizeHeight = sourceBitmap.Height;
+                    //Console.WriteLine($"{ImageSizeWidth},{ImageSizeHeight}");
 
 
-            int ImageSizeWidth = sourceBitmap.Width;
-            int ImageSizeHeight = sourceBitmap.Height;
-            //Console.WriteLine($"{ImageSizeWidth},{ImageSizeHeight}");
+                    float scaleWidth = ((float)ImageSizeWidth / sourceBitmap.HorizontalResolution) / (PictureBoxSizeWidth / PreviewArcSuitePictureBox.Image.HorizontalResolution);
+                    float scaleHeigth = ((float)ImageSizeHeight / sourceBitmap.VerticalResolution) / (PictureBoxSizeHeight / PreviewArcSuitePictureBox.Image.VerticalResolution);
 
+                    float _scale = (float)(1 / System.Math.Max(scaleWidth, scaleHeigth));
 
-            float scaleWidth = ((float)ImageSizeWidth / sourceBitmap.HorizontalResolution) / (PictureBoxSizeWidth / PreviewArcSuitePictureBox.Image.HorizontalResolution);
-            float scaleHeigth = ((float)ImageSizeHeight / sourceBitmap.VerticalResolution) / (PictureBoxSizeHeight / PreviewArcSuitePictureBox.Image.VerticalResolution);
+                    // アフィン変換行列をリセット 
+                    _sourceMatAffine.Reset();
 
-            float _scale = (float)(1 / System.Math.Max(scaleWidth, scaleHeigth));
+                    _sourceMatAffine.Scale(_scale, _scale);
 
-            // アフィン変換行列をリセット 
-            _sourceMatAffine.Reset();
+                }
+                catch { }
 
-            _sourceMatAffine.Scale(_scale, _scale);
+                // 画像の描画  
+                DrawImage();
 
-            // 画像の描画  
-            DrawImage();
-
-            //this.X_numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            //this.Y_numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            //this.SCALE_numericUpDown.ValueChanged += new System.EventHandler(this.SCALE_numericUpDown_ValueChanged);
+                //this.X_numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+                //this.Y_numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+                //this.SCALE_numericUpDown.ValueChanged += new System.EventHandler(this.SCALE_numericUpDown_ValueChanged);
+            }
         }
 
         /// <summary>
@@ -713,19 +732,25 @@ namespace ClientApp.Forms
         /// <param name="img"></param>
         public void SetImage(Image img)
         {
-            // イメージの読み込みとセット
-            sourceBitmap = (Bitmap)img;
-            orignalResolution = System.Math.Max(sourceBitmap.HorizontalResolution, sourceBitmap.VerticalResolution);
-            // インデックス付き対策のため
-            sourceBitmap = (Bitmap)sourceBitmap.GetThumbnailImage(sourceBitmap.Width, sourceBitmap.Height, new Image.GetThumbnailImageAbort(_dummy), IntPtr.Zero);
+            lock (sourceBitmap_LockHandler)
             {
-                var Width = sourceBitmap.Width;
-                var Height = sourceBitmap.Height;
-                var VerticalResolution = sourceBitmap.VerticalResolution;
-                var HorizontalResolution = sourceBitmap.HorizontalResolution;
-                WriteLine($"Width,Height = ({Width}{Height}) VerticalResolution={VerticalResolution} , HorizontalResolution={HorizontalResolution}");
-            }
 
+
+
+                sourceBitmap = (Bitmap)img;
+
+                // イメージの読み込みとセット
+                orignalResolution = System.Math.Max(sourceBitmap.HorizontalResolution, sourceBitmap.VerticalResolution);
+                // インデックス付き対策のため
+                sourceBitmap = (Bitmap)sourceBitmap.GetThumbnailImage(sourceBitmap.Width, sourceBitmap.Height, new Image.GetThumbnailImageAbort(_dummy), IntPtr.Zero);
+                {
+                    var Width = sourceBitmap.Width;
+                    var Height = sourceBitmap.Height;
+                    var VerticalResolution = sourceBitmap.VerticalResolution;
+                    var HorizontalResolution = sourceBitmap.HorizontalResolution;
+                    WriteLine($"Width,Height = ({Width}{Height}) VerticalResolution={VerticalResolution} , HorizontalResolution={HorizontalResolution}");
+                }
+            }
             // 初期化の為リサイズイベントを強制的に実行
             BigPreviewForm_Resize(null, null);
 

@@ -3,26 +3,21 @@ using SharedClassLibrary;
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
-using System.Runtime.Versioning;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoStageService;
-using static CommonTicket;
-//using ToyoMcMfg.Staging.RemoteObjects;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
+#if NETCOREAPP
     [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl01 : UserControl
     {
         Form1 mainForm;

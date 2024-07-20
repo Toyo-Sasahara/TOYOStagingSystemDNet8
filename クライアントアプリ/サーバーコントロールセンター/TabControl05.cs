@@ -1,30 +1,27 @@
-﻿using SasaLib;
+﻿using RemoteClient;
+using SasaLib;
+using SasaLib.PIPE;
+using StageServerRemote;
+using STAGINGSYSTEM_COMMANDS;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.IO.Pipes;
 using System.IO;
-using System.Linq;
+using System.IO.Pipes;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoStageService;
-using SasaLib.PIPE;
-using StageServerRemote;
-using RemoteClient;
-using STAGINGSYSTEM_COMMANDS;
+#if NETCOREAPP
 using System.Runtime.Versioning;
-using System.Text.Json;
+#endif
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
+#if NETCOREAPP
     [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl05 : UserControl
     {
         int count;
@@ -1360,3 +1357,4 @@ namespace ServerControlCenterApplication
         }
     }
 }
+

@@ -1,26 +1,22 @@
-﻿using SasaLib.PIPE;
-using StageServerRemote;
+﻿using StageServerRemote;
 using System;
-using System.Drawing;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Collections.Generic;
-using ToyoStageService;
-using ToyoMcMfg.Staging;
 using System.Data;
 using System.Text.Json;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using ToyoMcMfg.Staging.DataBaseConfig;
+using ToyoMcMfg.Staging.RemoteObjects;
+using ToyoStageService;
 #if NETCOREAPP
 using System.Runtime.Versioning;
-using ToyoMcMfg.Staging.RemoteObjects;
-using ToyoMcMfg.Staging.DataBaseConfig;
 #endif
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
+#if NETCOREAPP
     [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl07 : UserControl
     {
         Form1 mainForm;

@@ -1,27 +1,23 @@
-﻿using SasaLib;
+﻿using ClientApp.Forms;
+using SasaLib;
+using SasaLib.ArcSuitePreview;
+using SasaLib.NumberingSupport;
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SasaLib.NumberingSupport;
-using System.Threading;
-using SasaLib.ArcSuitePreview;
-using ClientApp.Forms;
+#if NETCOREAPP
 using System.Runtime.Versioning;
+#endif
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
+#if NETCOREAPP
     [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl06 : UserControl
     {
         Form1 mainForm;

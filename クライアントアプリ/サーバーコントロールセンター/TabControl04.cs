@@ -2,26 +2,19 @@
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO.Pipes;
-using System.IO;
-using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoMcMfg.Staging.DataBaseConfig;
-using SasaLib.PIPE;
 using ToyoStageService;
-using RemoteClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+#if NETCOREAPP
 using System.Runtime.Versioning;
+#endif
 
 namespace ServerControlCenterApplication
 {
-    /// <summary>
-    /// 
-    /// </summary>
+#if NETCOREAPP
     [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl04 : UserControl
     {
         Form1 mainForm;
@@ -74,7 +67,7 @@ namespace ServerControlCenterApplication
             logWindowControl.WriteLine($"TabControl04_VisibleChanged(..)実行開始");
             Task.Run(() =>
             {
-                System.Windows.Forms.MethodInvoker method = () =>
+                MethodInvoker method = () =>
                 {
                     accountUserForm.SetToControls();
 
@@ -110,7 +103,7 @@ namespace ServerControlCenterApplication
             await Task.Run(() =>
             {
                 logWindowControl.WriteLine("■accountUserForm_AccountChanged(..)Task.Run実行中・・・");
-                System.Windows.Forms.MethodInvoker method = () =>
+                MethodInvoker method = () =>
                 {
                     try
                     {

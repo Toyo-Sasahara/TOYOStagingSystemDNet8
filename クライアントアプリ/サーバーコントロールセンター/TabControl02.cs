@@ -1,25 +1,22 @@
 ﻿using ClientApp.Forms;
 using SasaLib;
-using SharedClassLibrary;
 using StageServerRemote;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
 using ToyoStageService;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
 
 namespace ServerControlCenterApplication
 {
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     public partial class TabControl02 : UserControl
     {
         Form1 mainForm;
@@ -739,12 +736,25 @@ namespace ServerControlCenterApplication
         {
             sdhelper.clear();
 
-            var sqlSearchStringValues = SqlSyntax.IsValiant();
+            var sqlSearchStringValues = SqlSyntax.IsValiant_NOTNULL();
             var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
 
             logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
 
             sdhelper.Search(sqlSearchStringValues, "VARIANT が NULL以外のもの", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: objectConvNew_CheckBox2.Checked);
+
+        }
+
+        private void IsVariant_True_button_Click(object sender, EventArgs e)
+        {
+            sdhelper.clear();
+
+            var sqlSearchStringValues = SqlSyntax.IsValiant_True();
+            var CommandText = SQLSearchConditions.Create(sqlSearchStringValues);
+
+            logWindowControl.WriteLine($"WHERE句が生成されました ： \"{CommandText}\"");
+
+            sdhelper.Search(sqlSearchStringValues, "VARIANT が True のもの", int.Parse(MAXSEARCHtextBox2.Text), ORDERBY_comboBox.Text, objectConvNew: objectConvNew_CheckBox2.Checked);
 
         }
     }

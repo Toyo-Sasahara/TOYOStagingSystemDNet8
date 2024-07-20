@@ -28,57 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label4 = new System.Windows.Forms.Label();
-            LogWindow_textBox = new System.Windows.Forms.TextBox();
-            panel1 = new System.Windows.Forms.Panel();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LogWindow_textBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(4, 0);
-            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(134, 15);
-            label4.TabIndex = 136;
-            label4.Text = "CurrentStageServer.label";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 12);
+            this.label4.TabIndex = 136;
+            this.label4.Text = "CurrentStageServer.label";
             // 
             // LogWindow_textBox
             // 
-            LogWindow_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            LogWindow_textBox.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
-            LogWindow_textBox.Location = new System.Drawing.Point(6, 19);
-            LogWindow_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            LogWindow_textBox.Multiline = true;
-            LogWindow_textBox.Name = "LogWindow_textBox";
-            LogWindow_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            LogWindow_textBox.Size = new System.Drawing.Size(508, 232);
-            LogWindow_textBox.TabIndex = 135;
+            this.LogWindow_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogWindow_textBox.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LogWindow_textBox.Location = new System.Drawing.Point(5, 15);
+            this.LogWindow_textBox.Multiline = true;
+            this.LogWindow_textBox.Name = "LogWindow_textBox";
+            this.LogWindow_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.LogWindow_textBox.Size = new System.Drawing.Size(545, 191);
+            this.LogWindow_textBox.TabIndex = 135;
             // 
             // panel1
             // 
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(LogWindow_textBox);
-            panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Location = new System.Drawing.Point(0, 0);
-            panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(518, 255);
-            panel1.TabIndex = 137;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.LogWindow_textBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(553, 209);
+            this.panel1.TabIndex = 137;
             // 
             // LogWindowControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(panel1);
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            Name = "LogWindowControl";
-            Size = new System.Drawing.Size(518, 255);
-            Load += LogWindowControl_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.panel1);
+            this.Name = "LogWindowControl";
+            this.Size = new System.Drawing.Size(553, 209);
+            this.Load += new System.EventHandler(this.LogWindowControl_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

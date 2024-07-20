@@ -66,8 +66,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.PreviewArcSuitePictureBox);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -77,7 +77,7 @@
             // 
             // ArcSuitePARTNAMEandDESCRIPTION_textBox
             // 
-            this.ArcSuitePARTNAMEandDESCRIPTION_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.ArcSuitePARTNAMEandDESCRIPTION_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ArcSuitePARTNAMEandDESCRIPTION_textBox.Location = new System.Drawing.Point(304, 475);
             this.ArcSuitePARTNAMEandDESCRIPTION_textBox.Name = "ArcSuitePARTNAMEandDESCRIPTION_textBox";
@@ -132,8 +132,8 @@
             // 
             // PreviewImageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(699, 501);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ArcSuitePARTNAMEandDESCRIPTION_textBox);

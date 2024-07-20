@@ -532,8 +532,8 @@ namespace ServerControlCenterApplication
             // 
             // TabControl06
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.logwindowClear_button);
             this.Controls.Add(this.objectConvNew_heckBox);
             this.Controls.Add(this.groupBox3);

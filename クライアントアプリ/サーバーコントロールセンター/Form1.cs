@@ -1,24 +1,16 @@
-﻿using RemoteClient;
-using SasaLib;
-using StageServerRemote;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ToyoMcMfg.Staging.DataBaseConfig;
-////using ToyoMcMfg.Staging.RemoteObjects;
-using ToyoStageService;
+#if NETCOREAPP
+using System.Runtime.Versioning;
+#endif
+
 
 namespace ServerControlCenterApplication
 {
+#if NETCOREAPP
+    [SupportedOSPlatform("windows")]
+#endif
     public partial class Form1 : Form
     {
 
@@ -26,6 +18,7 @@ namespace ServerControlCenterApplication
 
         public LogWindow LogWindow;
 
+        // アプリケーション全体で使用するプリンタ情報を保持
         internal CommitPrinters CommitPrinters = new CommitPrinters();
 
 
@@ -105,7 +98,7 @@ namespace ServerControlCenterApplication
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
     }
