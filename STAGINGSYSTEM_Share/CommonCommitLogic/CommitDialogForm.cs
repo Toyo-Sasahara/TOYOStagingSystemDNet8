@@ -40,7 +40,7 @@ namespace CommonCommitLogic
         /// <summary>
         /// コミット処理に必要な共通設定
         /// </summary>
-        private CommitParam commitParam;
+        private CommitCommonSettings commitCommonSettings;
 
         /// <summary>
         /// コミット対象CADファイルから収集したチケットファイルを作成する属性・値データ
@@ -156,11 +156,11 @@ namespace CommonCommitLogic
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public CommitDialogForm(CommitParam Config, CommitHelperCadDrawingFile supportCadDrawingFile,
+        public CommitDialogForm(CommitCommonSettings commitCommonSettings, CommitHelperCadDrawingFile supportCadDrawingFile,
             CommitHelperArcSuite supportArcSuite, CommitHelperNumbering supportNumbering,
             SasaLibDelegateWriteLine WriteLine, bool PrintOutOnly = false, bool CanUseVariantTypeDrawing = false)
         {
-            this.commitParam = Config;
+            this.commitCommonSettings = commitCommonSettings;
             this.PrintOutOnly = PrintOutOnly;
             this.WriteLine = WriteLine;
 
@@ -335,7 +335,7 @@ namespace CommonCommitLogic
             /// 採番システムからの結果を反映させる
             if (supportNumbering.ReserveNumber.CheckAcquiredNumberedNormal == true)
             {
-                WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) 採番システム {commitParam.NumberingServerName} との通信は既に成功しています");
+                WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) 採番システム {commitCommonSettings.NumberingServerName} との通信は既に成功しています");
 
                 if (supportNumbering.ReserveNumber.NumberingRecordAvailable == false)
                 {
@@ -666,7 +666,7 @@ namespace CommonCommitLogic
             bool result = true;
             ErrMsg = null;
 
-            StageServerHostLabel.Text = commitParam.StageServerHost;
+            StageServerHostLabel.Text = commitCommonSettings.StageServerHost;
 
 
 
@@ -747,13 +747,13 @@ namespace CommonCommitLogic
                 }
             }
 
-            if (commitParam.PrinterDriverName != "")
+            if (commitCommonSettings.PrinterDriverName != "")
             {
-                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commitParam.PrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
+                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commitCommonSettings.PrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
             }
-            else if (commitParam.PC3FileName != "")
+            else if (commitCommonSettings.PC3FileName != "")
             {
-                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commitParam.PC3FileName}】のﾍﾟｰｼﾞ設定にて決まります";
+                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commitCommonSettings.PC3FileName}】のﾍﾟｰｼﾞ設定にて決まります";
 
             }
             else
@@ -1071,7 +1071,7 @@ namespace CommonCommitLogic
                 string NumberingUpdateAddress = null;
                 string numberingString = NumberingSupport.RemoveSuffixNumber(PARTNUMBER_linklabel.Text, out drawingTypeEnum);
                 WriteLine($"numberingString = \"{numberingString}\"");
-                string NumberingServerWebAddr = commitParam.NumberingServerWebAddr;
+                string NumberingServerWebAddr = commitCommonSettings.NumberingServerWebAddr;
                 WriteLine($"NumberingServerWebAddr = \"{NumberingServerWebAddr}\"");
 
                 NumberTypeConfig.DrawingType drawingType;
@@ -1081,8 +1081,8 @@ namespace CommonCommitLogic
                 string DRAWINGTYPEMSG;
                 if (ToyoDrawingTypeClassify.CheckNumber(numberingString, out drawingType, ref isVariant, ref suffixMIN, ref suffixMAX, out DRAWINGTYPEMSG) == false)
                 {
-                    MessageBox.Show($"※ｺﾐｯﾄ受付ｻｰﾊﾞｰ{commitParam.StageServerHost}からの警告\n図面番号{PARTNUMBER_linklabel.Text}は対応していない図番形式です。図面種類が定まりませんでした");
-                    WriteLine($"※ｺﾐｯﾄ受付ｻｰﾊﾞｰ{commitParam.StageServerHost}からの警告\n図面番号{PARTNUMBER_linklabel.Text}は対応していない図番形式です。図面種類が定まりませんでした");
+                    MessageBox.Show($"※ｺﾐｯﾄ受付ｻｰﾊﾞｰ{commitCommonSettings.StageServerHost}からの警告\n図面番号{PARTNUMBER_linklabel.Text}は対応していない図番形式です。図面種類が定まりませんでした");
+                    WriteLine($"※ｺﾐｯﾄ受付ｻｰﾊﾞｰ{commitCommonSettings.StageServerHost}からの警告\n図面番号{PARTNUMBER_linklabel.Text}は対応していない図番形式です。図面種類が定まりませんでした");
                 }
 
 
@@ -1091,19 +1091,19 @@ namespace CommonCommitLogic
                     if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Part)
                     {
                         WriteLine($"before NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                        NumberingUpdateAddress = commitParam.NumberingPartDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
+                        NumberingUpdateAddress = commitCommonSettings.NumberingPartDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
                         WriteLine($"after NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
                     }
                     else if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Assy)
                     {
                         WriteLine($"before NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                        NumberingUpdateAddress = commitParam.NumberingAssyDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
+                        NumberingUpdateAddress = commitCommonSettings.NumberingAssyDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
                         WriteLine($"after NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
                     }
                     else if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Layout)
                     {
                         WriteLine($"before NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                        NumberingUpdateAddress = commitParam.NumberingLayoutDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
+                        NumberingUpdateAddress = commitCommonSettings.NumberingLayoutDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
                         WriteLine($"after NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
                     }
                     else if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Other)
@@ -1146,12 +1146,12 @@ namespace CommonCommitLogic
                     {
 
                         // ArcSuiteに問い合わせるURL
-                        string ArcSuiteDrawingSearchURL = commitParam.ArcSuiteSearchURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
+                        string ArcSuiteDrawingSearchURL = commitCommonSettings.ArcSuiteSearchURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
 
                         // コミット対象のCADファイル
                         string activeDocumentFullFileName = AtiveDocFullFilename;
 
-                        if (commitParam.ArcSuiteDrawingDownloadMode)
+                        if (commitCommonSettings.ArcSuiteDrawingDownloadMode)
                         {
                             ///
                             ArcSuitePreviewOnlyForm arcSuitePreviewOnlyForm = null;
@@ -1164,7 +1164,7 @@ namespace CommonCommitLogic
                             // 一度ダウンロードした状態かを確認。ない場合は取出し
 
                             Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
-                            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commitParam.PipeConnection31Password); //復号化
+                            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commitCommonSettings.PipeConnection31Password); //復号化
 
                             await Task.Run(() =>
                             {
@@ -1174,12 +1174,12 @@ namespace CommonCommitLogic
                                     WriteLine($"■CommitDialogForm.SearchRegistedArcSuiteDrawing_button_Click(..) ArcSuite登録図ﾌﾟﾚﾋﾞｭｰ用TIFFファイルをダウンロードします");
                                     /// リモート操作をするオブジェクトを生成
                                     RemoteClientDRAWREGIST remoteClientDR = new RemoteClientDRAWREGIST(
-                                        commitParam.ClientDomainName,
-                                        commitParam.ClientUserName,
+                                        commitCommonSettings.ClientDomainName,
+                                        commitCommonSettings.ClientUserName,
                                         PipeClientPlanePass,
-                                        commitParam.ClsLogon,
-                                        commitParam.StageServerHost,
-                                        commitParam.PipeNameDR
+                                        commitCommonSettings.ClsLogon,
+                                        commitCommonSettings.StageServerHost,
+                                        commitCommonSettings.PipeNameDR
                                         );
 
                                     ArcsuitePreview originalStruct = arcsuitePreview;
@@ -1195,7 +1195,7 @@ namespace CommonCommitLogic
 
 
                             Encryption sasaLibencryptionArcSuite = new Encryption("SasaAuth3.1");
-                            string ArcSuiteUserPlanePass = sasaLibencryptionArcSuite.Decoding(commitParam.ArcSuiteCrypt31UserPass); //復号化
+                            string ArcSuiteUserPlanePass = sasaLibencryptionArcSuite.Decoding(commitCommonSettings.ArcSuiteCrypt31UserPass); //復号化
 
                             //テンポラリﾌｫﾙﾀﾞに表示すべきﾌｧｲﾙがあるか確認
                             if (System.IO.File.Exists(arcsuitePreview.temporalyDrawingImageFullFileName) == true)
@@ -1205,14 +1205,14 @@ namespace CommonCommitLogic
                                 arcSuitePreviewOnlyForm.PreviewSet(arcsuitePreview, ArcSuiteDrawingSearchURL, activeDocumentFullFileName);
                                 arcSuitePreviewOnlyForm.MessageSet("");
                                 arcSuitePreviewOnlyForm.SetUnsetCadTypeFlagControlDatas(
-                                        commitParam.StageServerHost,
-                                        commitParam.PipeNameDR,
-                                        commitParam.ClientDomainName,
-                                        commitParam.ClientUserName,
+                                        commitCommonSettings.StageServerHost,
+                                        commitCommonSettings.PipeNameDR,
+                                        commitCommonSettings.ClientDomainName,
+                                        commitCommonSettings.ClientUserName,
                                         PipeClientPlanePass,
-                                        commitParam.ClsLogon,
+                                        commitCommonSettings.ClsLogon,
                                         RemoteClientCADtype.CadType.InventorModel,
-                                        commitParam.ArcSuiteUserName,
+                                        commitCommonSettings.ArcSuiteUserName,
                                         ArcSuiteUserPlanePass
                                 );
 
@@ -1231,7 +1231,7 @@ namespace CommonCommitLogic
                             if (string.IsNullOrWhiteSpace(arcsuitePreview.createdOnMessage) != true)
                             {
                                 //string ArcSuiteURL = Config.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", CommitDialogForm.stArcSuitePreview.user_zuban);
-                                string ArcSuiteURL = commitParam.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
+                                string ArcSuiteURL = commitCommonSettings.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
                                 System.Diagnostics.Process.Start(ArcSuiteURL);
                             }
                         } // WebでArcSuite図面検索
@@ -1398,12 +1398,12 @@ namespace CommonCommitLogic
         private void Printer_Info_button_Click(object sender, EventArgs e)
         {
             Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
-            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commitParam.PipeConnection31Password); //復号化
+            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commitCommonSettings.PipeConnection31Password); //復号化
 
             RemoteClientDRAWCAPTURE remoteClientDRAWCAPTURE = new RemoteClientDRAWCAPTURE(
-                commitParam.ClientDomainName, commitParam.ClientUserName,
-                PipeClientPlanePass, commitParam.ClsLogon,
-                commitParam.StageServerHost, commitParam.PipeNameDC);
+                commitCommonSettings.ClientDomainName, commitCommonSettings.ClientUserName,
+                PipeClientPlanePass, commitCommonSettings.ClsLogon,
+                commitCommonSettings.StageServerHost, commitCommonSettings.PipeNameDC);
 
 
             var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: Commit.objectConvNew);

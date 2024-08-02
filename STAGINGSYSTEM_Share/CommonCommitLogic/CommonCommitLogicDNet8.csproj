@@ -18,11 +18,12 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ArcSuiteSearchResult.cs" Link="ArcSuiteSearchResult.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CadDrawingFIle.cs" Link="CadDrawingFIle.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\Commit.cs" Link="Commit.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitCommonSettings.cs" Link="CommitCommonSettings.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelper.cs" Link="CommitHelper.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperArcSuite.cs" Link="CommitHelperArcSuite.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperCadDrawingFile.cs" Link="CommitHelperCadDrawingFile.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperNumbering.cs" Link="CommitHelperNumbering.cs" />
-	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitParam.cs" Link="CommitParam.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperNumbering_Partial.cs" Link="CommitHelperNumbering_Partial.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ReserveNumber.cs" Link="ReserveNumber.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TestForm1.cs" Link="TestForm1.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TestForm1.Designer.cs" Link="TestForm1.Designer.cs" />

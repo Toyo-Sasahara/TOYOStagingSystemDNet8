@@ -1,4 +1,8 @@
-﻿using SasaLib;
+﻿using CommonCommitLogic;
+using InventorTOYOaddin.CommitLogic;
+using SasaLib;
+using SasaLib.NumberingSupport;
+using SasaLib.PrintConfig;
 using SharedClassLibrary;
 using StageServerRemote;
 using System;
@@ -154,7 +158,6 @@ namespace ServerControlCenterApplication
         }
 
 
-
         /// <summary>
         /// ■コミットテストボタン
         /// </summary>
@@ -164,42 +167,46 @@ namespace ServerControlCenterApplication
         {
             string TemplateFile = TESTIMAGE_comboBox.Text;
 
-            string PARTNUMBER = TESTIMAGEDraw_TexstTextBox.Text;
+            string PARTNUMBER = PARTNUMBER_TextBox.Text;
             string AUTHOR = AUTHORUSER_textBox.Text;
             string AUTHDATE = AUTHDATE_textBox.Text;
             string TITLE = DESCRIPTION_textBox.Text;
             string PARTSNAME = DESCRIPTION_textBox.Text;
             string DESCRIPTION = DESCRIPTION_textBox.Text;
             string MATERIAL = MATERIAL_textBox.Text;
+            string MATERIALCODE = MATERIALCODE_textBox.Text;
+            string MACHINETYPE = MACHINETYPE_textBox.Text;
+            string FIRSTCUSTOMER = FIRSTCUSTOMER_textBox.Text;
+            string CUSTOMER = CUSTOMER_textBox.Text;
+
+            CommonTicket commonTicket = new CommonTicket();
 
 
+            Test_CommitExecute.sample_Params = new List<CommonTicket.Param>();
 
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "PARTNUMBER", PARTNUMBER);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "SANITIZEDPARTNUMBER", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "REV", null);
 
-            List<CommonTicket.Param> prms = new List<CommonTicket.Param>();
-            CommitTest.UpdateComonTicketParam(ref prms, "PARTNUMBER", PARTNUMBER);
-            CommitTest.UpdateComonTicketParam(ref prms, "SANITIZEDPARTNUMBER", null);
-            CommitTest.UpdateComonTicketParam(ref prms, "REV", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "AUTHOR", AUTHOR);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "AUTHORDATE", AUTHDATE);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "AUTHOR", AUTHOR);
-            CommitTest.UpdateComonTicketParam(ref prms, "AUTHORDATE", AUTHDATE);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "DESIGNER", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "CHECKDATE", null);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "DESIGNER", null);
-            CommitTest.UpdateComonTicketParam(ref prms, "CHECKDATE", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "DRAWINGTYPE", null);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "DRAWINGTYPE", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "ORDERNUMBER", null);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "ORDERNUMBER", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "TITLE", TITLE);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "DESCRIPTION", DESCRIPTION);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "PARTSNAME", PARTSNAME);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "MATERIAL", MATERIAL);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "MATERIALCODE", MATERIALCODE);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "TITLE", TITLE);
-            CommitTest.UpdateComonTicketParam(ref prms, "DESCRIPTION", DESCRIPTION);
-            CommitTest.UpdateComonTicketParam(ref prms, "PARTSNAME", PARTSNAME);
-            CommitTest.UpdateComonTicketParam(ref prms, "MATERIAL", MATERIAL);
-            CommitTest.UpdateComonTicketParam(ref prms, "MATERIALCODE", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "MACHINETYPE", null);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "MACHINETYPE", null);
-
-            CommitTest.UpdateComonTicketParam(ref prms, "FIRSTCUSTOMER", "〇１製薬");
-            CommitTest.UpdateComonTicketParam(ref prms, "CUSTOMER", "〇２製薬");
+            Test_CommitExecute.UpdateComonTicketParam(ref Test_CommitExecute.sample_Params, "CUSTOMER", CUSTOMER);
 
             List<CommonTicket.Variant> variant = new List<CommonTicket.Variant>();
 
@@ -208,49 +215,154 @@ namespace ServerControlCenterApplication
                 // TextBox.Text を改行で分割して List<string> に変換
                 List<string> lines = VARIANT_PARTNUMBER_textBox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
 
-                CommitTest.UpdateComonTicketVariant(ref variant, lines, true);
+                Test_CommitExecute.UpdateComonTicketVariant(ref variant, lines, true);
             }
 
-            string printerName = (string)PrinterSel_comboBox.SelectedValue;
+            string printerName;
+            if (CommtiNoPrintout1_checkBox.Checked)
+            {
+                printerName = KWD.NoPrintCommitPrinter;
+            }
+            else
+            {
+                printerName = (string)PrinterSel_comboBox.SelectedValue;
+            }
 
-            ComitTestStart(TemplateFile, prms, variant, printerName);
+
+            ComitTestStart(TemplateFile, Test_CommitExecute.sample_Params, variant, printerName);
+        }
+
+        public NativeWindow GetParentFormNativeWindow()
+        {
+            // 親フォームを取得
+            Form parentForm = this.Parent.Parent.Parent as Form;
+
+            // 親フォームが null でないこと、および Form 型であることを確認
+            if (parentForm != null)
+            {
+                // 親フォームのハンドルを使用して NativeWindow を作成
+                NativeWindow nativeWindow = new NativeWindow();
+                nativeWindow.AssignHandle(parentForm.Handle);
+                return nativeWindow;
+            }
+
+            return null;
+        }
+
+        private void CommitDialogTest_button_Click(object sender, EventArgs e)
+        {
+            var nativeWindow = SasaLib.WindowControl.GetParentFormNativeWindow(this);
+
+            ///// 図面種類を特定するデータベース、 マテリアルコードを判別するデータベースを受信
+            NumberingSuppportConfigs numberingSupportConfigs = new NumberingSuppportConfigs(
+                                                            SccConfig.Config.ClientDomainName,
+                                                            SccConfig.Config.ClientUserName,
+                                                            new Encryption("SasaAuth3.1").Decoding(SccConfig.Config.PipeConnection31Password),
+                                                            SccConfig.Config.ClsLogon,
+                                                            SccConfig.Config.StageServerHost,
+                                                            SccConfig.Config.PipeNameDC);
+            bool reloadRsult = numberingSupportConfigs.ExecuteDownloadAndDeserialize();
+
+
+
+            string ticketCode = null;
+            bool commitStatusl = false;
+
+            string printerName;
+            if (CommtiNoPrintout1_checkBox.Checked)
+            {
+                printerName = KWD.NoPrintCommitPrinter;
+            }
+            else
+            {
+                printerName = (string)PrinterSel_comboBox.SelectedValue;
+            }
+
+            CommitCommonSettings commitCommonSettings = Test_CommitExecute.CreateComitParam();
+
+            Commit commitLogic = new Commit(nativeWindow,
+                                                commitCommonSettings,
+                                                Test_CommitExecute.Test_ModifyAttrObject,
+                                                Test_CommitExecute.Test_ExecuteTiffExport,
+                                                System.IO.Path.Combine(SccConfigWork.GetAppConfigFolder(), SccConfig.Config.TemplateTicketFile),
+                                                System.IO.Path.Combine(SccConfigWork.GetAppConfigFolder(), "TIFFpositonChangeTemplate.XML"),
+                                                logWindowControl.WriteLine, CanUseVariant: true,
+                                                objectConvNew: true
+                                                );
+
+            List<CommonTicket.Param> result = Test_CommitExecute.CreateTestParam(
+                TemplateTiffFullFilename: FileFolder.GetFolderName(FileFolder.GetCurrentProcessePath()) + System.IO.Path.DirectorySeparatorChar + @"TestImages" + System.IO.Path.DirectorySeparatorChar + TESTIMAGE_comboBox.Text + ".TIF",
+                PARTNUMBER: PARTNUMBER_TextBox.Text,
+                REV: REV_textBox.Text,
+                AUTHOR: AUTHORUSER_textBox.Text,
+                AUTHDATE: AUTHDATE_textBox.Text,
+                DESIGNER: DESIGNER_textBox.Text,
+                CHECKDATE: CHECKDATE_textBox.Text,
+                TITLE: DESCRIPTION_textBox.Text,
+                PARTSNAME: DESCRIPTION_textBox.Text,
+                DESCRIPTION: DESCRIPTION_textBox.Text,
+                MATERIAL: MATERIAL_textBox.Text,
+                MATERIALCODE: MATERIALCODE_textBox.Text,
+                MACHINETYPE: MACHINETYPE_textBox.Text,
+                FIRSTCUSTOMER: FIRSTCUSTOMER_textBox.Text,
+                CUSTOMER: CUSTOMER_textBox.Text
+            );
+
+            var ans = commitLogic.CommitStart(
+                            CADDocumentFullFileName: System.IO.Path.Combine(SccConfigWork.GetAppConfigFolder(), PARTNUMBER_TextBox.Text + ".DWG"),
+                            RequestPrinterStr: printerName,
+                            RecentTicketCode: ref ticketCode, RecentCommitStatus: ref commitStatusl);
+
+            if (ans)
+                logWindowControl.WriteLine($"■CommitExecute.CommitStart(..) 実行結果{ans},コミット処理は正常終了");
+            else
+                logWindowControl.WriteLine($"※CommitExecute.CommitStart(..) 実行結果{ans},コミット処理は失敗したか、キャンセルされました");
+
         }
 
         private void CommitContinuouslyTest_Button_Click(object sender, EventArgs e)
         {
 
-            string PARTNUMBER = TESTIMAGEDraw_TexstTextBox.Text;
+            string PARTNUMBER = PARTNUMBER_TextBox.Text;
+            string REV = REV_textBox.Text;
             string AUTHOR = AUTHORUSER_textBox.Text;
             string AUTHDATE = AUTHDATE_textBox.Text;
+            string DESINER = DESIGNER_textBox.Text;
+            string CHECKDATE = CHECKDATE_textBox.Text;
             string TITLE = DESCRIPTION_textBox.Text;
             string PARTSNAME = DESCRIPTION_textBox.Text;
             string DESCRIPTION = DESCRIPTION_textBox.Text;
             string MATERIAL = MATERIAL_textBox.Text;
+            string MATERIALCODE = MATERIALCODE_textBox.Text;
+            string MACHINETYPE = MACHINETYPE_textBox.Text;
+            string FIRSTCUSTOMER = FIRSTCUSTOMER_textBox.Text;
+            string CUSTOMER = CUSTOMER_textBox.Text;
 
             List<CommonTicket.Param> prms = new List<CommonTicket.Param>();
-            CommitTest.UpdateComonTicketParam(ref prms, "SANITIZEDPARTNUMBER", null);
-            CommitTest.UpdateComonTicketParam(ref prms, "REV", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "PARTNUMBER", PARTNUMBER);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "SANITIZEDPARTNUMBER", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "REV", REV);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "AUTHOR", AUTHOR);
-            CommitTest.UpdateComonTicketParam(ref prms, "AUTHORDATE", AUTHDATE);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "AUTHOR", AUTHOR);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "AUTHORDATE", AUTHDATE);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "DESIGNER", null);
-            CommitTest.UpdateComonTicketParam(ref prms, "CHECKDATE", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "DESIGNER", DESINER);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "CHECKDATE", CHECKDATE);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "DRAWINGTYPE", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "DRAWINGTYPE", null);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "ORDERNUMBER", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "ORDERNUMBER", null);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "TITLE", TITLE);
-            CommitTest.UpdateComonTicketParam(ref prms, "DESCRIPTION", DESCRIPTION);
-            CommitTest.UpdateComonTicketParam(ref prms, "PARTSNAME", PARTSNAME);
-            CommitTest.UpdateComonTicketParam(ref prms, "MATERIAL", MATERIAL);
-            CommitTest.UpdateComonTicketParam(ref prms, "MATERIALCODE", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "TITLE", TITLE);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "DESCRIPTION", DESCRIPTION);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "PARTSNAME", PARTSNAME);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "MATERIAL", MATERIAL);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "MATERIALCODE", MATERIALCODE);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "MACHINETYPE", null);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "MACHINETYPE", MACHINETYPE);
 
-            CommitTest.UpdateComonTicketParam(ref prms, "FIRSTCUSTOMER", "〇１製薬");
-            CommitTest.UpdateComonTicketParam(ref prms, "CUSTOMER", "〇２製薬");
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "FIRSTCUSTOMER", FIRSTCUSTOMER);
+            Test_CommitExecute.UpdateComonTicketParam(ref prms, "CUSTOMER", CUSTOMER);
 
 
             List<CommonTicket.Variant> variantparams = new List<CommonTicket.Variant>();
@@ -261,7 +373,7 @@ namespace ServerControlCenterApplication
                 if (string.IsNullOrWhiteSpace(pp) == false)
                 {
                     string TemplateFile = TESTIMAGE_comboBox.Text;
-                    CommitTest.UpdateComonTicketParam(ref prms, "PARTNUMBER", pp);
+                    Test_CommitExecute.UpdateComonTicketParam(ref prms, "PARTNUMBER", pp);
 
                     string printerName;
 
@@ -292,16 +404,48 @@ namespace ServerControlCenterApplication
                 = FileFolder.GetFolderName(CurrentProcessPath) + System.IO.Path.DirectorySeparatorChar + @"TestImages" + System.IO.Path.DirectorySeparatorChar + TemplateFile + ".TIF";
 
 
-            string TIFFpositonChangeTemplateConfigFullFileName = SccConfigWork.GetAppConfigFolder() + System.IO.Path.DirectorySeparatorChar + "TIFFpositonChangeTemplate.XML";
-            logWindowControl.WriteLine($"テスト図面用オフセット設定ﾌｧｲﾙは  {TIFFpositonChangeTemplateConfigFullFileName}が指定されます");
+            string ImagePositionConfigXML = SccConfigWork.GetAppConfigFolder() + System.IO.Path.DirectorySeparatorChar + "TIFFpositonChangeTemplate.XML";
+            logWindowControl.WriteLine($"テスト図面用オフセット設定ﾌｧｲﾙは  {ImagePositionConfigXML}が指定されます");
+
+
+            // IMAGEPOS.XMLを読込。このファイルはTIFF用紙サイズごとのオフセット情報が含まれる
+            if (ImagePositonConfigWork.ReadImagePositionConfig(ImagePositionConfigXML) != true)
+            {
+                DebugConsole.WriteLine($"※CommitExecute.ExecuteTiffExport(..) オフセット設定ファイル \"{ImagePositionConfigXML}\" が読み込まれていない");
+                MessageBox.Show($"イメージポジションオフセット設定ファイル \"{ImagePositionConfigXML}\" が読み込まれていない");
+
+                return null;
+            }
+
+            DebugConsole.WriteLine($"■CommitExecute.ExecuteTiffExport(..) イメージポジションオフセット設定ファイル \"{ImagePositionConfigXML}\" を読み込みました");
+
+
+            // IMAGEPOS.XMLが読み込み済みか？
+            if (ImagePositonConfig.Config.Already == false)
+            {
+                DebugConsole.WriteLine($"※CommitExecute.ExecuteTiffExport(..) イメージポジションオフセット設定ファイル \"{ImagePositionConfigXML}\" が読み込まれていない");
+                MessageBox.Show($"イメージポジションオフセット設定ファイル \"{ImagePositionConfigXML}\" が読み込まれていない");
+
+                return null;
+            }
+
+            DebugConsole.WriteLine($"■CommitExecute.ExecuteTiffExport(..) Inventorの印刷を実行します");
+
 
             logWindowControl.WriteLine($"プリンタ設定ファイルは  \"{printerName}\"が指定されます");
 
 
-            string TICKETCODE;
 
+            // ② GUIDを更新
+            StaticCommonVars.guid = new GUIDExtensions(true);
+            // チケットコードのベースファイル名はGUIDをBase64エンコードし'/'を'_'としたものです。
+            StaticCommonVars.TICKETCODE = StaticCommonVars.guid.B64FnameString;
+            string TICKETCODE = StaticCommonVars.TICKETCODE;
+            logWindowControl.WriteLine($"チケットコードを取得 {StaticCommonVars.TICKETCODE}");
+
+            var tiffexportFullpath = SccConfig.Config.CommitPath + System.IO.Path.DirectorySeparatorChar + StaticCommonVars.TICKETCODE + @".TIF";
             /// テスト用イメージとチケットファイル作成
-            bool ans = CommitTest.CreateTicketAndTiffImage(SccConfig.Config.CommitPath, TemplateTiffFullpath, out TICKETCODE, prms, variantparams, TIFFpositonChangeTemplateConfigFullFileName, printerName, PrintOutOnly: PrintOUtOnly_checkBox.Checked, WriteLine: LogWindowWriteLine);
+            bool ans = Test_CommitExecute.Test_OrderToCADsaveTiffImage(TemplateTiffFullpath, tiffexportFullpath, out CommonPaperSize commonPaperSize, WriteLine: LogWindowWriteLine);
 
             if (ans)
             {
@@ -423,13 +567,22 @@ namespace ServerControlCenterApplication
 
         }
 
+        public static void UpdateComonTicketParam(ref List<CommonTicket.Param> cticketParam, string KEY, string VALUE)
+        {
+            CommonTicket.Param param = new CommonTicket.Param() { Key = KEY, Value = VALUE };
+            if (cticketParam.Where(p => p.Key == KEY).Count() > 0)
+                cticketParam.RemoveAll(x => x.Key == KEY);
+            cticketParam.Add(param);
+        }
+
+
         private void VARIANT_Type_checkBox_CheckedChanged(object sender, EventArgs e)
         {
             VARIANT_PARTNUMBER_textBox.Enabled = VARIANT_Type_checkBox.Checked;
 
             List<string> lines = VARIANT_PARTNUMBER_textBox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
             var oneline = ConvertToRangeString(lines);
-            TESTIMAGEDraw_TexstTextBox.Text = oneline;
+            PARTNUMBER_TextBox.Text = oneline;
         }
 
         /// <summary>
@@ -595,6 +748,7 @@ namespace ServerControlCenterApplication
             mainForm.CommitPrinters.SetComboBox(ref PrinterSel_comboBox);
 
         }
+
     }
 
 
