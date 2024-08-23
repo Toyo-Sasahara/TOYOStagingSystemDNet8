@@ -40,7 +40,7 @@ namespace CommonCommitLogic
         /// <summary>
         /// コミット処理に必要な共通設定
         /// </summary>
-        private CommitCommonSettings commitCommonSettings;
+        private CommitCommonSettings commmitCommonSettings;
 
         /// <summary>
         /// コミット対象CADファイルから収集したチケットファイルを作成する属性・値データ
@@ -63,9 +63,9 @@ namespace CommonCommitLogic
         private string AtiveDocFullFilename { get; set; }
 
         /// <summary>
-        /// コミット対象が表図面形式の範囲指定枝番を持っている場合true
+        /// 表図面形式の範囲指定枝番を持っている場合true
         /// </summary>
-        private bool isVariant;
+        private bool isVariantTypeTitleBlockPARTNUMBER;
 
         /// <summary>
         /// ログ出力先のデフォルトを設定
@@ -156,11 +156,11 @@ namespace CommonCommitLogic
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public CommitDialogForm(CommitCommonSettings commitCommonSettings, CommitHelperCadDrawingFile supportCadDrawingFile,
+        public CommitDialogForm(CommitCommonSettings Config, CommitHelperCadDrawingFile supportCadDrawingFile,
             CommitHelperArcSuite supportArcSuite, CommitHelperNumbering supportNumbering,
             SasaLibDelegateWriteLine WriteLine, bool PrintOutOnly = false, bool CanUseVariantTypeDrawing = false)
         {
-            this.commitCommonSettings = commitCommonSettings;
+            this.commmitCommonSettings = Config;
             this.PrintOutOnly = PrintOutOnly;
             this.WriteLine = WriteLine;
 
@@ -191,6 +191,7 @@ namespace CommonCommitLogic
             InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, true, true);
 
             InvokeRequired_Control_Enabled(NumberingWebServer_button, false, false);
+            InvokeRequired_Control_Enabled(NumberingReCheck_button, false, false);
 
             NumberingWebServer_button.Image = default;
 
@@ -216,8 +217,10 @@ namespace CommonCommitLogic
             ErrorOccurred_Label.Visible = false; // コミットロック中ラベルを非表示へ
 
 
-            Variant_panel.Visible = false;
-            Variant_panel.Enabled = false;
+            Variant_panel1.Visible = false;
+            Variant_panel1.Enabled = false;
+            Variant_panel2.Visible = false;
+            Variant_panel2.Enabled = false;
             PARTNUMBER_CAUTION_label.Text = $"";
 
         }
@@ -236,8 +239,8 @@ namespace CommonCommitLogic
 
             ArcSuiteDrawingShow_button.Image = default;
 
-            InvokeRequired_Control_Text(NumberingInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
-            InvokeRequired_Control_Text(ArcSuiteInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
+            InvokeRequired_Control_Text(NumberingInformation_label, "【表形式】図面です。追加する枝番号の入力を待っています", Color.Red, Color.Yellow);
+            InvokeRequired_Control_Text(ArcSuiteInformation_label, "【表形式】図面です。追加する枝番号の入力を待っています", Color.Red, Color.Yellow);
 
         }
 
@@ -286,13 +289,17 @@ namespace CommonCommitLogic
             {
                 if (typeNumber.isVariant)
                 {
-                    Variant_panel.Enabled = true;
-                    Variant_panel.Visible = true;
+                    Variant_panel1.Enabled = true;
+                    Variant_panel1.Visible = true;
+                    Variant_panel2.Enabled = true;
+                    Variant_panel2.Visible = true;
                 }
                 else
                 {
-                    Variant_panel.Enabled = false;
-                    Variant_panel.Visible = false;
+                    Variant_panel1.Enabled = false;
+                    Variant_panel1.Visible = false;
+                    Variant_panel2.Enabled = false;
+                    Variant_panel2.Visible = false;
                 }
 
             }
@@ -301,20 +308,20 @@ namespace CommonCommitLogic
                 if (typeNumber.isVariant)
                 {
 
-                    CommitExecute_Button.Text = "表形式図はコミット非対応";
+                    CommitExecute_Button.Text = "【表形式】図面はコミット非対応";
 
-                    Variant_panel.Enabled = false;
-                    Variant_panel.Visible = false;
+                    Variant_panel1.Enabled = false;
+                    Variant_panel1.Visible = false;
+                    Variant_panel2.Enabled = false;
+                    Variant_panel2.Visible = false;
 
-                    MessageBox.Show("表形式図はコミット操作ができません。\r\n登録担当者による手動スキャニングおよび登録依頼が必要です", "重要");
-                }
-                else
-                {
-                    Variant_panel.Enabled = false;
-                    Variant_panel.Visible = false;
+                    MessageBox.Show("【表形式】図面はコミット操作ができません。\r\n登録担当者による手動スキャニングおよび登録依頼が必要です", "重要");
 
+                    this.Close();
+                    return;
                 }
             }
+
 
 
             CommitButtonEnableJudge();
@@ -335,31 +342,87 @@ namespace CommonCommitLogic
             /// 採番システムからの結果を反映させる
             if (supportNumbering.ReserveNumber.CheckAcquiredNumberedNormal == true)
             {
-                WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) 採番システム {commitCommonSettings.NumberingServerName} との通信は既に成功しています");
+                WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) 採番システム {commmitCommonSettings.NumberingServerName} との通信は既に成功しています");
 
-                if (supportNumbering.ReserveNumber.NumberingRecordAvailable == false)
+                if (supportNumbering.ReserveNumber.NumberingRecordAvailable == true)
                 {
-                    InvokeRequired_Control_Text(this.NumberingInformation_label, $"{this.reserveNumber.commitTarget_partnumber} の採番情報が見つかりません。採番システムを確認してください.", System.Drawing.Color.Red);
-                    InvokeRequired_Control_Text(NumberingWebServer_button, "Web採番システムを開く", default);
+                    if (isVariantTypeTitleBlockPARTNUMBER == true)
+                    {
+                        if (supportNumbering.ReserveNumber.IsHyou == true)
+                        {
+                            InvokeRequired_Control_Text(NumberingWebServer_button, "Web採番システムを開く", default);
+                            InvokeRequired_Control_Text(NumberingReCheck_button, "再ﾁｪｯｸ", default);
 
-                    this.WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) {this.reserveNumber.commitTarget_partnumber}の採番情報は見つかりませんでした。。警告ボタンを表示します\"");
 
-                    if (isVariant == false)
-                        InvokeRequired_Control_Text(NumberingWarningIgnore_button, "警告無視", Color.Red, Color.Yellow);
+                            InvokeRequired_Control_Enabled(NumberingInformation_label, true, true);
+                            InvokeRequired_Control_Text(NumberingInformation_label, supportNumbering.ReserveNumber.CheckNumberdHistoryAnser, default);
+
+                            this.WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) {this.reserveNumber.commitTarget_partnumber}の採番情報は見つかっています。 警告ボタンを非表示にします");
+                            InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, false);
+
+                        }
+                        else
+                        {
+                            InvokeRequired_Control_Text(NumberingWebServer_button, "Web採番システムを開く", default);
+                            InvokeRequired_Control_Text(NumberingReCheck_button, "再ﾁｪｯｸ", default);
+
+
+                            InvokeRequired_Control_Enabled(NumberingInformation_label, true, true);
+                            string labelText = $"\"{supportNumbering.ReserveNumber.commitTarget_partnumber}\" は、採番システムに【表形式】として採番されていません。確認が必要です";
+                            InvokeRequired_Control_Text(NumberingInformation_label, labelText, Color.Red, Color.Yellow);
+
+                            this.WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) {this.reserveNumber.commitTarget_partnumber}は【表形式】として指定されていますが、採番情報は非表形式です！！");
+
+                            InvokeRequired_Control_Text(NumberingWarningIgnore_button, "警告無視\r\nできません", DefaultForeColor, DefaultBackColor);
+                            InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, true);
+
+                        }
+
+                    }
                     else
                     {
-                        InvokeRequired_Control_Text(NumberingWarningIgnore_button, "警告無視不可", DefaultForeColor, DefaultBackColor);
-                        InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, true);
-                    }
+                        if (supportNumbering.ReserveNumber.IsHyou == true)
+                        {
+                            InvokeRequired_Control_Text(NumberingWebServer_button, "Web採番システムを開く", default);
+                            InvokeRequired_Control_Text(NumberingReCheck_button, "再ﾁｪｯｸ", default);
 
+                            InvokeRequired_Control_Enabled(NumberingInformation_label, true, true);
+                            InvokeRequired_Control_Text(NumberingInformation_label, "採番システムには【表形式】で採番されていますがこの図面は一般図面番号形式です", Color.Red);
+
+                            this.WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) {this.reserveNumber.commitTarget_partnumber}の採番情報は【表形式】として見つかっていますが、表題欄図面番号は一般図面形式です");
+                            InvokeRequired_Control_Text(NumberingWarningIgnore_button, "警告無視\r\nできません", DefaultForeColor, DefaultBackColor);
+                            InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, true);
+                        }
+                        else
+                        {
+                            InvokeRequired_Control_Enabled(NumberingInformation_label, true, true);
+                            InvokeRequired_Control_Text(NumberingInformation_label, supportNumbering.ReserveNumber.CheckNumberdHistoryAnser, default);
+                            this.WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) {this.reserveNumber.commitTarget_partnumber}の採番情報は見つかっています。 警告ボタンを非表示にします");
+                            InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, false);
+                        }
+
+                    }
                 }
                 else
                 {
-                    InvokeRequired_Control_Enabled(NumberingInformation_label, true, true);
-                    InvokeRequired_Control_Text(NumberingInformation_label, supportNumbering.ReserveNumber.CheckNumberdHistoryAnser, default);
+                    WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) 採番システムには {supportNumbering.ReserveNumber.commitTarget_partnumber} は採番されておりません");
 
-                    this.WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) {this.reserveNumber.commitTarget_partnumber}の採番情報は見つかっています。 警告ボタンを非表示にします");
-                    InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, false);
+                    InvokeRequired_Control_Text(NumberingWebServer_button, "Web採番システムを開く", default);
+                    InvokeRequired_Control_Text(NumberingReCheck_button, "再ﾁｪｯｸ", default);
+
+                    if (isVariantTypeTitleBlockPARTNUMBER == true)
+                    {
+                        InvokeRequired_Control_Text(this.NumberingInformation_label, $"{this.reserveNumber.commitTarget_partnumber} は 【表形式】としては採番情報が見つかりません。採番システムを確認してください.", System.Drawing.Color.Red);
+
+                        InvokeRequired_Control_Text(NumberingWarningIgnore_button, "警告無視\r\nできません", DefaultForeColor, DefaultBackColor);
+                        InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, true);
+                    }
+                    else
+                    {
+                        InvokeRequired_Control_Text(this.NumberingInformation_label, $"{this.reserveNumber.commitTarget_partnumber} の採番情報が見つかりません。採番システムを確認してください.", System.Drawing.Color.Red);
+
+                        InvokeRequired_Control_Text(NumberingWarningIgnore_button, "警告無視", Color.Red, Color.Yellow);
+                    }
                 }
             }
             else
@@ -372,6 +435,7 @@ namespace CommonCommitLogic
                     InvokeRequired_Control_Text(NumberingWarningIgnore_button, "警告無視", Color.Red, Color.Yellow);
 
                     ButtonBackgroundImageWarrningSet(NumberingWebServer_button, "採番システムへ接続不能");  // 検索結果異常時のＵＩをセット
+                    InvokeRequired_Control_Text(NumberingReCheck_button, "不可", default);
 
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
@@ -396,7 +460,7 @@ namespace CommonCommitLogic
 
             if (arcSuiteSearchResult.arcSuitePreviews != null)
             {
-                if (isVariant == false)
+                if (isVariantTypeTitleBlockPARTNUMBER == false)
                 {
                     switch (arcSuiteSearchResult.dESCRIPTION_ComparResult_MessagetypeEnum)
                     {
@@ -420,7 +484,7 @@ namespace CommonCommitLogic
                             InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸして類番を確認", Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true); // アークスイート結果表示ボタンイネーブル
 
-                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "警告無視不可", System.Drawing.Color.Red);
+                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "警告無視\r\nできません", System.Drawing.Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteWarningIgnore_button, false, true);// ArcSuite検索結果無視ボタンをイネーブル
 
                             break;
@@ -489,7 +553,7 @@ namespace CommonCommitLogic
                             InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸしてArcuSuiteの\r\n図面を検索", Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true);// ArcSuite検索結果表示ボタンをイネーブル
 
-                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, $"警告無視不可", System.Drawing.Color.Red);
+                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, $"警告無視\r\nできません", System.Drawing.Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteWarningIgnore_button, false, true);// ArcSuite検索結果表示ボタンをイネーブル
                             break;
 
@@ -526,7 +590,7 @@ namespace CommonCommitLogic
                             InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸして類番を確認", Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true); // アークスイート結果表示ボタンイネーブル
 
-                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "警告無視不可", System.Drawing.Color.Red);
+                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "警告無視\r\nできません", System.Drawing.Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteWarningIgnore_button, false, true);// ArcSuite検索結果無視ボタンをイネーブル
 
                             break;
@@ -595,7 +659,7 @@ namespace CommonCommitLogic
                             InvokeRequired_Control_Text(ArcSuiteDrawingShow_button, "ｸﾘｯｸしてArcuSuiteの\r\n図面を検索", Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, true, true);// ArcSuite検索結果表示ボタンをイネーブル
 
-                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, $"警告無視不可", System.Drawing.Color.Red);
+                            InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, $"警告無視\r\nできません", System.Drawing.Color.Red);
                             InvokeRequired_Control_Enabled(ArcSuiteWarningIgnore_button, false, true);// ArcSuite検索結果表示ボタンをイネーブル
                             break;
 
@@ -666,7 +730,7 @@ namespace CommonCommitLogic
             bool result = true;
             ErrMsg = null;
 
-            StageServerHostLabel.Text = commitCommonSettings.StageServerHost;
+            StageServerHostLabel.Text = commmitCommonSettings.StageServerHost;
 
 
 
@@ -678,10 +742,10 @@ namespace CommonCommitLogic
             TicketCodeLinkLabel.Text = ticketXml.TICKETCODE;
 
             // 材質 材質コード
-            MATERIALlabel.Text = $"{(string)ticketXml.GetParamKeyValue("MATERIAL")} , {(string)ticketXml.GetParamKeyValue("MATERIALCODE")}";
+            TitleBlock_MATERIAL_And_MATERIALCODE_label.Text = $"{(string)ticketXml.GetParamKeyValue("MATERIAL")} , {(string)ticketXml.GetParamKeyValue("MATERIALCODE")}";
 
             // 機種
-            MachineTypelabel.Text = (string)ticketXml.GetParamKeyValue("MACHINETYPE");
+            TitleBlock_MACHINETYPE_label.Text = (string)ticketXml.GetParamKeyValue("MACHINETYPE");
 
             // 顧客
             string firstcustomer = (string)ticketXml.GetParamKeyValue("FIRSTCUSTOMER");
@@ -693,17 +757,17 @@ namespace CommonCommitLogic
                 lFIRSTCUSTOMERlabe.Text = CUSTOMER;
 
             // 表題
-            TITLE_Label_label.Text = (string)ticketXml.GetParamKeyValue("TITLE");
+            TitleBlock_TITLE_label.Text = (string)ticketXml.GetParamKeyValue("TITLE");
 
             // 図面番号
-            PARTNUMBER_linklabel.Text = (string)ticketXml.GetParamKeyValue("PARTNUMBER");
+            TitleBlock_PARTNUMBER_linklabel.Text = (string)ticketXml.GetParamKeyValue("PARTNUMBER");
 
             // 改定番号
-            REVNUMBERtextBox.Text = (string)ticketXml.GetParamKeyValue("REV");
+            TitleBlock_REV_textBox.Text = (string)ticketXml.GetParamKeyValue("REV");
 
             // 製図者
-            AUTHORlabel.Text = (string)ticketXml.GetParamKeyValue("AUTHOR");
-            if (string.IsNullOrWhiteSpace(AUTHORlabel.Text) == false)
+            TitleBlock_AUTHOR_label.Text = (string)ticketXml.GetParamKeyValue("AUTHOR");
+            if (string.IsNullOrWhiteSpace(TitleBlock_AUTHOR_label.Text) == false)
             {
                 CultureInfo provider = CultureInfo.CurrentCulture;
                 // 製図日
@@ -711,9 +775,10 @@ namespace CommonCommitLogic
                 try
                 {
                     DateTime authorDatetime;
-                    bool result1 = StringUtil.TryParseExactMultiple_CurrentCulture(strAUTHORDATE, new List<string> { "yyyy/MM/dd", "yyyy/MM/dd[ddd] H:mm:ss" }.ToArray(), out authorDatetime);
+                    //bool result1 = StringUtil.TryParseExactMultiple_CurrentCulture(strAUTHORDATE, new List<string> { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy/MM/dd[ddd] H:mm:ss" }.ToArray(), out authorDatetime);
+                    bool result1 = StringUtil.ConvertFromDateTimeStringToDateTime(strAUTHORDATE, out authorDatetime);
                     if (result)
-                        AUTHORDATElabel.Text = authorDatetime.ToString("yyyy/MM/dd");
+                        TitleBlock_AUTHORDATE_label.Text = authorDatetime.ToString("yyyy/MM/dd");
                     else
                         throw new Exception();
                 }
@@ -725,18 +790,19 @@ namespace CommonCommitLogic
             }
 
             // 設計者
-            DESIGNERlabel.Text = (string)ticketXml.GetParamKeyValue("DESIGNER");
+            TitleBlock_DESIGNER_label.Text = (string)ticketXml.GetParamKeyValue("DESIGNER");
 
             // 設計日
-            if (string.IsNullOrWhiteSpace(DESIGNERlabel.Text) == false)
+            if (string.IsNullOrWhiteSpace(TitleBlock_DESIGNER_label.Text) == false)
             {
                 string strCHECKDATE = (string)ticketXml.GetParamKeyValue("CHECKDATE");
                 try
                 {
                     DateTime checkDatetime;
-                    bool result1 = StringUtil.TryParseExactMultiple_CurrentCulture(strCHECKDATE, new List<string> { "yyyy/MM/dd", "yyyy/MM/dd[ddd] H:mm:ss" }.ToArray(), out checkDatetime);
+                    // bool result1 = StringUtil.TryParseExactMultiple_CurrentCulture(strCHECKDATE, new List<string> { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy/MM/dd[ddd] H:mm:ss" }.ToArray(), out checkDatetime);
+                    bool result1 = StringUtil.ConvertFromDateTimeStringToDateTime(strCHECKDATE, out checkDatetime);
                     if (result)
-                        CHECKDATElabel.Text = checkDatetime.ToString("yyyy/MM/dd");
+                        TitleBlock_CHECKDATE_label.Text = checkDatetime.ToString("yyyy/MM/dd");
                     else
                         throw new Exception();
                 }
@@ -747,13 +813,13 @@ namespace CommonCommitLogic
                 }
             }
 
-            if (commitCommonSettings.PrinterDriverName != "")
+            if (commmitCommonSettings.PrinterDriverName != "")
             {
-                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commitCommonSettings.PrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
+                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commmitCommonSettings.PrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
             }
-            else if (commitCommonSettings.PC3FileName != "")
+            else if (commmitCommonSettings.PC3FileName != "")
             {
-                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commitCommonSettings.PC3FileName}】のﾍﾟｰｼﾞ設定にて決まります";
+                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commmitCommonSettings.PC3FileName}】のﾍﾟｰｼﾞ設定にて決まります";
 
             }
             else
@@ -762,35 +828,35 @@ namespace CommonCommitLogic
             }
 
 
-            string prefix;
-            string rangePart;
-            string rangeStart;
-            string rangeEnd;
-            string suffix;
+
+
             // 表図面か否かを図番のみでチェックします。
-            bool checkResult = variantDrawingNumberSupport.ParseToyoVariantDrawingNumberString(PARTNUMBER_linklabel.Text, out prefix, out isVariant, out rangePart, out rangeStart, out rangeEnd, out suffix);
+            bool checkResult = variantDrawingNumberSupport.ParseToyoVariantDrawingNumberString(TitleBlock_PARTNUMBER_linklabel.Text, out string baseNumber, out isVariantTypeTitleBlockPARTNUMBER, out string rangePart, out string rangeStart, out string rangeEnd, out string suffixCode);
 
             if (checkResult)
             {
                 // 表図面判定 表図面の場合は専用コントロールを表示させます
-                if (CanUseVariantTypeDrawing && isVariant)
+                if (CanUseVariantTypeDrawing && isVariantTypeTitleBlockPARTNUMBER)
                 {
-                    Variant_panel.Enabled = isVariant;
-                    VariantNumber_MIN_label.Enabled = isVariant;
-                    VariantNumber_MIN_label.Text = rangeStart;
-                    VariantNumber_MAX_label.Enabled = isVariant;
+                    Variant_panel1.Enabled = isVariantTypeTitleBlockPARTNUMBER;
+                    Variant_panel2.Enabled = isVariantTypeTitleBlockPARTNUMBER;
+                    VariantNumber_MIN_label1.Enabled = isVariantTypeTitleBlockPARTNUMBER;
+                    VariantNumber_MIN_label1.Text = rangeStart;
+                    VariantNumber_MIN_label2.Enabled = isVariantTypeTitleBlockPARTNUMBER;
+                    VariantNumber_MIN_label2.Text = rangeStart;
+                    VariantNumber_MAX_label.Enabled = isVariantTypeTitleBlockPARTNUMBER;
                     VariantNumber_MAX_label.Text = rangeEnd;
-                    VariantNumber_Prefix_label.Text = prefix;
-                    VariantNumber_Suffix_label.Text = suffix;
-                    ActiveVariantEnd_textBox.Enabled = isVariant;
-                    ActiveVariantEnd_textBox.BackColor = Color.Yellow;
-                    VariantOnlyMemo_textBox.Enabled = isVariant;
-                    VariantOnlyMemo_textBox.BackColor = Color.Yellow;
+                    VariantNumber_Prefix_label.Text = baseNumber;
+                    VariantNumber_Suffix_label.Text = suffixCode;
+                    ActiveVariantEnd_textBox.Enabled = isVariantTypeTitleBlockPARTNUMBER;
+                    ActiveVariantEnd_textBox.BackColor = Color.MistyRose;
+                    VariantOnlyMemo_textBox.Enabled = isVariantTypeTitleBlockPARTNUMBER;
+                    VariantOnlyMemo_textBox.BackColor = Color.MistyRose;
                 }
             }
             else
             {
-                throw new Exception($"図面番号 \"{PARTNUMBER_linklabel.Text}\" を ParseToyoVariantDrawingNumberString(..)メソッドで解析に失敗");
+                throw new Exception($"図面番号 \"{TitleBlock_PARTNUMBER_linklabel.Text}\" を ParseToyoVariantDrawingNumberString(..)メソッドで解析に失敗");
 
             }
             return result;
@@ -829,36 +895,25 @@ namespace CommonCommitLogic
 
                 CancellationToken ct = cts.Token;
 
-                supportCadDrawingFile.CheckCadFileName(PARTNUMBER_linklabel.Text, this);
+                supportCadDrawingFile.CheckCadFileName(TitleBlock_PARTNUMBER_linklabel.Text, this);
 
-                if (isVariant == false)　//表図面判定を受けていない場合は、即採番システムに問合せを開始します
-                {
-                    supportNumbering.CheckReserveNumber(PARTNUMBER_linklabel.Text, this);
-                    InvokeRequired_Control_Text(NumberingInformation_label, "サーバーからの返答を待機しています・・・", Color.Red, default);
-                    InvokeRequired_Control_Text(NumberingWarningIgnore_button, "調査中", default, default);
-                }
-                else
-                {
-                    InvokeRequired_Control_Text(NumberingInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
-                    InvokeRequired_Control_Text(NumberingWarningIgnore_button, "待機中", default, default);
-                    InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, true);
-                }
+                CheckReserveNumberStart(); // 採番サーバーにチェック指示
 
-                var resultCheckNumberType = supportNumbering.CheckNumberType(PARTNUMBER_linklabel.Text, this);
+                var resultCheckNumberType = supportNumbering.CheckNumberType(TitleBlock_PARTNUMBER_linklabel.Text, this);
                 if (resultCheckNumberType)
                 {
-                    WriteLine($"■CommitDialogForm.CommitDialogForm_Load(..)　PARTNUMBER_linklabel.Text = 【{PARTNUMBER_linklabel.Text}】の図面種類および表図面か否かをチェックしました。.結果 NumberTypeConfig.drawingType = {supportNumbering.TypeNumber.drawingType}");
+                    WriteLine($"■CommitDialogForm.CommitDialogForm_Load(..)　PARTNUMBER_linklabel.Text = 【{TitleBlock_PARTNUMBER_linklabel.Text}】の図面種類および表図面か否かをチェックしました。.結果 NumberTypeConfig.drawingType = {supportNumbering.TypeNumber.drawingType}");
 
-                    if (isVariant == false) // //表図面判定を受けていない場合は、即アークスイートに問い合わせを開始します
+                    if (isVariantTypeTitleBlockPARTNUMBER == false) // //表図面判定を受けていない場合は、即アークスイートに問い合わせを開始します
                     {
                         // アークスイート登録確認開始
-                        supportArcSuite.CheckArcSuiteRegisted(PARTNUMBER_linklabel.Text, TITLE_Label_label.Text, arcSuitePARTNUMBER_ContainSuffixs, ct);
+                        supportArcSuite.CheckArcSuiteRegisted(TitleBlock_PARTNUMBER_linklabel.Text, TitleBlock_TITLE_label.Text, arcSuitePARTNUMBER_ContainSuffixs, ct);
                         InvokeRequired_Control_Text(ArcSuiteInformation_label, "サーバーからの返答を待機しています・・・", Color.Red, default);
                         InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "調査中", default, default);
                     }
                     else
                     {
-                        InvokeRequired_Control_Text(ArcSuiteInformation_label, "表形式図面のためユーザーからの 登録取替範囲の入力を待っています", Color.Red, Color.Yellow);
+                        InvokeRequired_Control_Text(ArcSuiteInformation_label, "【表形式】図面です。追加する枝番号の入力を待っています", Color.Red, Color.Yellow);
                         InvokeRequired_Control_Text(ArcSuiteWarningIgnore_button, "待機中", default, default);
                         InvokeRequired_Control_Enabled(ArcSuiteWarningIgnore_button, false, true);
 
@@ -888,6 +943,27 @@ namespace CommonCommitLogic
                 CommitExecute_Button.Enabled = true;
                 CommitExecute_Button.Text = "ﾊﾞｰｺｰﾄﾞ無し印刷開始";
             }
+        }
+
+        /// <summary>
+        /// ■採番サーバーへ採番チェック開始
+        /// </summary>
+        private void CheckReserveNumberStart()
+        {
+
+            if (isVariantTypeTitleBlockPARTNUMBER == false) //表図面判定を受けていない場合は、即採番システムに問合せを開始します
+            {
+                supportNumbering.CheckReserveNumber(TitleBlock_PARTNUMBER_linklabel.Text, this);
+                InvokeRequired_Control_Text(NumberingInformation_label, "サーバーからの返答を待機しています・・・", Color.Red, default);
+                InvokeRequired_Control_Text(NumberingWarningIgnore_button, "調査中", default, default);
+            }
+            else
+            {
+                InvokeRequired_Control_Text(NumberingInformation_label, "【表形式】図面です。追加する枝番号の入力を待っています", Color.Red, Color.Yellow);
+                InvokeRequired_Control_Text(NumberingWarningIgnore_button, "待機中", default, default);
+                InvokeRequired_Control_Enabled(NumberingWarningIgnore_button, false, true);
+            }
+
         }
 
         /// <summary>
@@ -970,8 +1046,8 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private void PARTNUMBER_linklabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Clipboard.SetText(PARTNUMBER_linklabel.Text);
-            MessageBox.Show($"図面番号 \"{PARTNUMBER_linklabel.Text}\"をｸﾘｯﾌﾟﾎﾞｰﾄﾞにコピーしました");
+            Clipboard.SetText(TitleBlock_PARTNUMBER_linklabel.Text);
+            MessageBox.Show($"図面番号 \"{TitleBlock_PARTNUMBER_linklabel.Text}\"をｸﾘｯﾌﾟﾎﾞｰﾄﾞにコピーしました");
         }
 
         /// <summary>
@@ -988,7 +1064,7 @@ namespace CommonCommitLogic
             else
                 InvokeRequired_Control_Text(CadFileInformation_label, CadFileInformation_label.Text + $" → {CadFileInformation_label.Tag}", Color.BlueViolet);
 
-            WriteLine($"※【重要】\"{PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") CADファイルのエラーを無視するボタンが押されました。この時のエラー情報:\"{CadFileInformation_label.Text}\"");
+            WriteLine($"※【重要】\"{TitleBlock_PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") CADファイルのエラーを無視するボタンが押されました。この時のエラー情報:\"{CadFileInformation_label.Text}\"");
 
             CommitButtonEnableJudge();
         }
@@ -1008,7 +1084,7 @@ namespace CommonCommitLogic
             else
                 InvokeRequired_Control_Text(NumberingInformation_label, NumberingInformation_label.Text + $" → {NumberingInformation_label.Tag}", Color.BlueViolet);
 
-            WriteLine($"※【重要】\"{PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") 採番時のエラーを無視するボタンが押されました。この時のエラー情報:\"{NumberingInformation_label.Text}\"");
+            WriteLine($"※【重要】\"{TitleBlock_PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") 採番時のエラーを無視するボタンが押されました。この時のエラー情報:\"{NumberingInformation_label.Text}\"");
 
             CommitButtonEnableJudge();
         }
@@ -1028,7 +1104,7 @@ namespace CommonCommitLogic
             else
                 InvokeRequired_Control_Text(ArcSuiteInformation_label, ArcSuiteInformation_label.Text + $" → {ArcSuiteInformation_label.Tag}", Color.BlueViolet);
 
-            WriteLine($"※【重要】\"{PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") ArcSuiteに関するエラーを無視するボタンが押されました。この時のエラー情報:\"{ArcSuiteInformation_label.Text}\"");
+            WriteLine($"※【重要】\"{TitleBlock_PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") ArcSuiteに関するエラーを無視するボタンが押されました。この時のエラー情報:\"{ArcSuiteInformation_label.Text}\"");
 
             CheckRevNumberForUpdate();
 
@@ -1048,9 +1124,11 @@ namespace CommonCommitLogic
             if (string.IsNullOrWhiteSpace(ArcSuiteInformation_label.Text))
                 InvokeRequired_Control_Text(ArcSuiteInformation_label, ArcSuiteInformation_label.Text + $" →  Rev番号が同じでも再コミットすることを指示しました", Color.BlueViolet);
             else
+            {
                 InvokeRequired_Control_Text(ArcSuiteInformation_label, $"表題欄Rev番号についての警告を無視すると指示されました", Color.BlueViolet);
-
-            WriteLine($"※【重要】\"{PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") ArcSuiteの既存最新図の表題欄ﾘﾋﾞｼﾞｮﾝ番号と同じ表題欄ﾘﾋﾘﾋﾞｼﾞｮﾝ番号でコミットされたことへの警告ボタンがを無視するように指示されました。この時のエラー情報:\"{ArcSuiteInformation_label.Text}\"");
+                InvokeRequired_Control_Enabled(ArcSuiteDrawingShow_button, false, false);
+            }
+            WriteLine($"※【重要】\"{TitleBlock_PARTNUMBER_linklabel.Text}\"  (\"{ticketXml.TICKETCODE}\") ArcSuiteの既存最新図の表題欄ﾘﾋﾞｼﾞｮﾝ番号と同じ表題欄ﾘﾋﾘﾋﾞｼﾞｮﾝ番号でコミットされたことへの警告ボタンがを無視するように指示されました。この時のエラー情報:\"{ArcSuiteInformation_label.Text}\"");
 
             CommitButtonEnableJudge();
 
@@ -1063,64 +1141,32 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private void NumberingWebServer_button_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(PARTNUMBER_linklabel.Text)) return;
+            if (string.IsNullOrEmpty(TitleBlock_PARTNUMBER_linklabel.Text)) return;
 
             try
             {
-                NumberingSupport.DrawingTypeEnum drawingTypeEnum;
-                string NumberingUpdateAddress = null;
-                string numberingString = NumberingSupport.RemoveSuffixNumber(PARTNUMBER_linklabel.Text, out drawingTypeEnum);
-                WriteLine($"numberingString = \"{numberingString}\"");
-                string NumberingServerWebAddr = commitCommonSettings.NumberingServerWebAddr;
-                WriteLine($"NumberingServerWebAddr = \"{NumberingServerWebAddr}\"");
-
-                NumberTypeConfig.DrawingType drawingType;
-                bool isVariant = true;
-                string suffixMIN = null;
-                string suffixMAX = null;
-                string DRAWINGTYPEMSG;
-                if (ToyoDrawingTypeClassify.CheckNumber(numberingString, out drawingType, ref isVariant, ref suffixMIN, ref suffixMAX, out DRAWINGTYPEMSG) == false)
-                {
-                    MessageBox.Show($"※ｺﾐｯﾄ受付ｻｰﾊﾞｰ{commitCommonSettings.StageServerHost}からの警告\n図面番号{PARTNUMBER_linklabel.Text}は対応していない図番形式です。図面種類が定まりませんでした");
-                    WriteLine($"※ｺﾐｯﾄ受付ｻｰﾊﾞｰ{commitCommonSettings.StageServerHost}からの警告\n図面番号{PARTNUMBER_linklabel.Text}は対応していない図番形式です。図面種類が定まりませんでした");
-                }
-
-
-                if (numberingString != null)
-                {
-                    if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Part)
-                    {
-                        WriteLine($"before NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                        NumberingUpdateAddress = commitCommonSettings.NumberingPartDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
-                        WriteLine($"after NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                    }
-                    else if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Assy)
-                    {
-                        WriteLine($"before NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                        NumberingUpdateAddress = commitCommonSettings.NumberingAssyDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
-                        WriteLine($"after NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                    }
-                    else if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Layout)
-                    {
-                        WriteLine($"before NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                        NumberingUpdateAddress = commitCommonSettings.NumberingLayoutDrawingUpdateAddress.Replace("{NUMBERINGWEBADD}", NumberingServerWebAddr).Replace("{SEARCHNUMBER}", numberingString);
-                        WriteLine($"after NumberingUpdateAddress = \"{NumberingUpdateAddress}\"");
-                    }
-                    else if (drawingTypeEnum == NumberingSupport.DrawingTypeEnum.Other)
-                    {
-
-                    }
-                    if (string.IsNullOrWhiteSpace(NumberingUpdateAddress) == false)
-                    {
-                        System.Diagnostics.Process.Start(NumberingUpdateAddress);
-                    }
-                }
-
+                NumberingWebHelper.OpenNumberingWebServer(TitleBlock_PARTNUMBER_linklabel.Text,
+                    commmitCommonSettings.NumberingServerWebAddr,
+                    commmitCommonSettings.NumberingPartDrawingUpdateAddress,
+                    commmitCommonSettings.NumberingAssyDrawingUpdateAddress,
+                    commmitCommonSettings.NumberingLayoutDrawingUpdateAddress, WriteLine);
             }
             catch (Exception ex)
             {
                 WriteLine($"Web採番システムオープン時に例外検知 {ex.Message} {ex.InnerException}");
             }
+        }
+
+        /// <summary>
+        /// ●採番済みﾁｪｯｸをリトライ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NumberingReCheck_button_Click(object sender, EventArgs e)
+        {
+            VariantOnlyMemo_textBox.Focus();
+            ActiveVariantEnd_textBox.Focus();
+            CheckReserveNumberStart(); // 採番サーバーにチェック指示
         }
 
         /// <summary>
@@ -1146,12 +1192,12 @@ namespace CommonCommitLogic
                     {
 
                         // ArcSuiteに問い合わせるURL
-                        string ArcSuiteDrawingSearchURL = commitCommonSettings.ArcSuiteSearchURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
+                        string ArcSuiteDrawingSearchURL = commmitCommonSettings.ArcSuiteSearchURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
 
                         // コミット対象のCADファイル
                         string activeDocumentFullFileName = AtiveDocFullFilename;
 
-                        if (commitCommonSettings.ArcSuiteDrawingDownloadMode)
+                        if (commmitCommonSettings.ArcSuiteDrawingDownloadMode)
                         {
                             ///
                             ArcSuitePreviewOnlyForm arcSuitePreviewOnlyForm = null;
@@ -1164,7 +1210,7 @@ namespace CommonCommitLogic
                             // 一度ダウンロードした状態かを確認。ない場合は取出し
 
                             Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
-                            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commitCommonSettings.PipeConnection31Password); //復号化
+                            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commmitCommonSettings.PipeConnection31Password); //復号化
 
                             await Task.Run(() =>
                             {
@@ -1174,12 +1220,12 @@ namespace CommonCommitLogic
                                     WriteLine($"■CommitDialogForm.SearchRegistedArcSuiteDrawing_button_Click(..) ArcSuite登録図ﾌﾟﾚﾋﾞｭｰ用TIFFファイルをダウンロードします");
                                     /// リモート操作をするオブジェクトを生成
                                     RemoteClientDRAWREGIST remoteClientDR = new RemoteClientDRAWREGIST(
-                                        commitCommonSettings.ClientDomainName,
-                                        commitCommonSettings.ClientUserName,
+                                        commmitCommonSettings.ClientDomainName,
+                                        commmitCommonSettings.ClientUserName,
                                         PipeClientPlanePass,
-                                        commitCommonSettings.ClsLogon,
-                                        commitCommonSettings.StageServerHost,
-                                        commitCommonSettings.PipeNameDR
+                                        commmitCommonSettings.ClsLogon,
+                                        commmitCommonSettings.StageServerHost,
+                                        commmitCommonSettings.PipeNameDR
                                         );
 
                                     ArcsuitePreview originalStruct = arcsuitePreview;
@@ -1195,7 +1241,7 @@ namespace CommonCommitLogic
 
 
                             Encryption sasaLibencryptionArcSuite = new Encryption("SasaAuth3.1");
-                            string ArcSuiteUserPlanePass = sasaLibencryptionArcSuite.Decoding(commitCommonSettings.ArcSuiteCrypt31UserPass); //復号化
+                            string ArcSuiteUserPlanePass = sasaLibencryptionArcSuite.Decoding(commmitCommonSettings.ArcSuiteCrypt31UserPass); //復号化
 
                             //テンポラリﾌｫﾙﾀﾞに表示すべきﾌｧｲﾙがあるか確認
                             if (System.IO.File.Exists(arcsuitePreview.temporalyDrawingImageFullFileName) == true)
@@ -1205,14 +1251,14 @@ namespace CommonCommitLogic
                                 arcSuitePreviewOnlyForm.PreviewSet(arcsuitePreview, ArcSuiteDrawingSearchURL, activeDocumentFullFileName);
                                 arcSuitePreviewOnlyForm.MessageSet("");
                                 arcSuitePreviewOnlyForm.SetUnsetCadTypeFlagControlDatas(
-                                        commitCommonSettings.StageServerHost,
-                                        commitCommonSettings.PipeNameDR,
-                                        commitCommonSettings.ClientDomainName,
-                                        commitCommonSettings.ClientUserName,
+                                        commmitCommonSettings.StageServerHost,
+                                        commmitCommonSettings.PipeNameDR,
+                                        commmitCommonSettings.ClientDomainName,
+                                        commmitCommonSettings.ClientUserName,
                                         PipeClientPlanePass,
-                                        commitCommonSettings.ClsLogon,
+                                        commmitCommonSettings.ClsLogon,
                                         RemoteClientCADtype.CadType.InventorModel,
-                                        commitCommonSettings.ArcSuiteUserName,
+                                        commmitCommonSettings.ArcSuiteUserName,
                                         ArcSuiteUserPlanePass
                                 );
 
@@ -1231,7 +1277,7 @@ namespace CommonCommitLogic
                             if (string.IsNullOrWhiteSpace(arcsuitePreview.createdOnMessage) != true)
                             {
                                 //string ArcSuiteURL = Config.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", CommitDialogForm.stArcSuitePreview.user_zuban);
-                                string ArcSuiteURL = commitCommonSettings.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
+                                string ArcSuiteURL = commmitCommonSettings.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
                                 System.Diagnostics.Process.Start(ArcSuiteURL);
                             }
                         } // WebでArcSuite図面検索
@@ -1263,7 +1309,7 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private void CommitExecute_Button_Click(object sender, EventArgs e)
         {
-            if (isVariant)
+            if (isVariantTypeTitleBlockPARTNUMBER)
             {
                 if (string.IsNullOrWhiteSpace(VariantOnlyMemo_textBox.Text))
                 {
@@ -1331,7 +1377,7 @@ namespace CommonCommitLogic
                 {
                     close_permition = false;
 
-                    DialogResult dialogResult = MessageBox.Show("※表形式です！！現時点は非対応。印刷したら手動承認後、表図面登録棚に提出してください", $"", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("※【表形式】です！！現時点は非対応。印刷したら手動承認後、表図面登録棚に提出してください", $"", MessageBoxButtons.YesNo);
 
 
                     this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -1398,12 +1444,12 @@ namespace CommonCommitLogic
         private void Printer_Info_button_Click(object sender, EventArgs e)
         {
             Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
-            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commitCommonSettings.PipeConnection31Password); //復号化
+            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commmitCommonSettings.PipeConnection31Password); //復号化
 
             RemoteClientDRAWCAPTURE remoteClientDRAWCAPTURE = new RemoteClientDRAWCAPTURE(
-                commitCommonSettings.ClientDomainName, commitCommonSettings.ClientUserName,
-                PipeClientPlanePass, commitCommonSettings.ClsLogon,
-                commitCommonSettings.StageServerHost, commitCommonSettings.PipeNameDC);
+                commmitCommonSettings.ClientDomainName, commmitCommonSettings.ClientUserName,
+                PipeClientPlanePass, commmitCommonSettings.ClsLogon,
+                commmitCommonSettings.StageServerHost, commmitCommonSettings.PipeNameDC);
 
 
             var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: Commit.objectConvNew);
@@ -1492,7 +1538,7 @@ namespace CommonCommitLogic
                                 if (arcSuiteUserDrawingRev >= cadRevInt)
                                 {
                                     // MessageBox.Show(this, $"警告.CAD側の表題欄Rev番号が {cadRev} です。ArcSuite側の表題欄Rev番号は {arcSuiteUserDrawingRev} です", "■東陽ｱﾄﾞｲﾝ警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    WriteLine($"※【警告】\"{PARTNUMBER_linklabel.Text}\" CAD側の表題欄Rev番号が {cadRev}は取替図にふさわしくありません。ArcSuite側の図面は {arcSuiteUserDrawingRev} です。ダイアログは閉じられます");
+                                    WriteLine($"※【警告】\"{TitleBlock_PARTNUMBER_linklabel.Text}\" CAD側の表題欄Rev番号が {cadRev}は取替図にふさわしくありません。ArcSuite側の図面は {arcSuiteUserDrawingRev} です。ダイアログは閉じられます");
 
                                     InvokeRequired_Control_Text(SameRevWarningIgnore_button, "警告解除", Color.Red, Color.Yellow);
                                     InvokeRequired_Control_Enabled(SameRevWarningIgnore_button, true, true);
@@ -1508,7 +1554,7 @@ namespace CommonCommitLogic
                             if (cadRevInt == 0)
                             {
                                 //MessageBox.Show(this, $"警告.CAD側の表題欄Rev番号が {cadRev} です。取替図にふさわしくありません。ダイアログは閉じられます", "■東陽ｱﾄﾞｲﾝ警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                WriteLine($"※【警告】\"{PARTNUMBER_linklabel.Text}\" .CAD側の表題欄Rev番号が {cadRev} , ArcSuite側表題欄Rev番号は \"{arcsuitePreview.user_drawingrevision}\"");
+                                WriteLine($"※【警告】\"{TitleBlock_PARTNUMBER_linklabel.Text}\" .CAD側の表題欄Rev番号が {cadRev} , ArcSuite側表題欄Rev番号は \"{arcsuitePreview.user_drawingrevision}\"");
 
                                 InvokeRequired_Control_Text(SameRevWarningIgnore_button, "警告解除", Color.Red, Color.Yellow);
                                 InvokeRequired_Control_Enabled(SameRevWarningIgnore_button, true, true);
@@ -1527,7 +1573,7 @@ namespace CommonCommitLogic
                 else
                 {
                     MessageBox.Show(this, $"警告.CAD側の表題欄Rev番号が空文字がnullです。コミットダイアログは強制終了します", "■東陽ｱﾄﾞｲﾝ警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    WriteLine($"※【警告】\"{PARTNUMBER_linklabel.Text}\" CAD側の表題欄Rev番号が空文字化null ダイアログは閉じます");
+                    WriteLine($"※【警告】\"{TitleBlock_PARTNUMBER_linklabel.Text}\" CAD側の表題欄Rev番号が空文字化null ダイアログは閉じます");
                     this.Close();
 
                 }
@@ -1629,9 +1675,9 @@ namespace CommonCommitLogic
 
             if (_IsThreeDigitInt(ActiveVariantEnd_textBox.Text))
             {
-                string prefix; string rangePart; string rangeStart; string rangeEnd; string suffix;
+                string baseNumber; string rangePart; string rangeStart; string rangeEnd; string suffixCode;
                 bool isVariant;
-                bool checkResult = variantDrawingNumberSupport.ParseToyoVariantDrawingNumberString(PARTNUMBER_linklabel.Text, out prefix, out isVariant, out rangePart, out rangeStart, out rangeEnd, out suffix);
+                bool checkResult = variantDrawingNumberSupport.ParseToyoVariantDrawingNumberString(TitleBlock_PARTNUMBER_linklabel.Text, out baseNumber, out isVariant, out rangePart, out rangeStart, out rangeEnd, out suffixCode);
 
                 int.TryParse(ActiveVariantEnd_textBox.Text, out int _ActiveVarianInt);
                 int.TryParse(rangeStart, out int _suffixStartInt);
@@ -1649,16 +1695,18 @@ namespace CommonCommitLogic
                     Variant_End_Input_label.ForeColor = DefaultForeColor;
                 }
 
-                variantofOnePartnumber = prefix + "-" + ActiveVariantEnd_textBox.Text + suffix;
-
-                ActiveVariantEnd_textBox.BackColor = DefaultBackColor;
+                variantofOnePartnumber = baseNumber + "-" + ActiveVariantEnd_textBox.Text + suffixCode;
+                ActiveVariantEnd_abel.Text = ActiveVariantEnd_textBox.Text;
 
                 // 採番サーバに検索開始
                 supportNumbering.CheckReserveNumber(variantofOnePartnumber, this);
 
                 CancellationToken ct = cts.Token;
                 // アークスイートに検索開始
-                supportArcSuite.CheckArcSuiteRegisted(variantofOnePartnumber, TITLE_Label_label.Text, arcSuitePARTNUMBER_ContainSuffixs, ct);
+                supportArcSuite.CheckArcSuiteRegisted(variantofOnePartnumber, TitleBlock_TITLE_label.Text, arcSuitePARTNUMBER_ContainSuffixs, ct);
+
+                InvokeRequired_Control_Enabled(ArcSuiteInformation_label, true, true);
+                InvokeRequired_Control_Text(ArcSuiteInformation_label, "ArcSuiteへ問合せ中です・・", Color.Red, Color.Yellow);
 
                 var range = variantDrawingNumberSupport.GenerateSuffixRange(rangeStart, rangeEnd);
 
@@ -1670,11 +1718,13 @@ namespace CommonCommitLogic
                 VariantOnlyMemo_textBox.Focus();
                 VariantOnlyMemo_textBox.SelectAll();
 
+                ActiveVariantEnd_textBox.BackColor = Color.LightCyan;
+
             } // 数値として認識できる３ケタが入力された場合
             else
             {
                 Variant_End_Input_label.ForeColor = Color.Red;
-                ActiveVariantEnd_textBox.BackColor = Color.Yellow;
+                ActiveVariantEnd_textBox.BackColor = Color.MistyRose;
 
             }
 
@@ -1708,6 +1758,21 @@ namespace CommonCommitLogic
         private void VariantOnlyMemo_textBox_Enter(object sender, EventArgs e)
         {
             VariantOnlyMemo_textBox.Clear();
+        }
+
+        private void VariantOnlyMemo_textBox_TextChanged(object sender, EventArgs e)
+        {
+            if (VariantOnlyMemo_textBox.Text.Length > 0)
+                VariantOnlyMemo_textBox.BackColor = Color.LightCyan;
+            else
+                VariantOnlyMemo_textBox.BackColor = Color.MistyRose;
+
+        }
+
+        private void Variant_panel1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (Variant_panel1.Visible)
+                ActiveVariantEnd_textBox.Focus();
         }
     }
 }
