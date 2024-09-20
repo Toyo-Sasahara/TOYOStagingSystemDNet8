@@ -1230,7 +1230,7 @@ namespace CommonCommitLogic
 
                                     ArcsuitePreview originalStruct = arcsuitePreview;
 
-                                    var resule = CheckArcSuiteData.GetArcSuiteImagePipe(remoteClientDR, arcsuitePreview.user_zuban, out originalStruct.temporalyDrawingImageFullFileName, WriteLine);
+                                    var resule = CheckArcSuiteData.GetArcSuiteImagePipe(remoteClientDR, arcsuitePreview.user_zuban, out originalStruct.temporalyDrawingImageFullFileName, objectConvNew: Commit.objectConvNew, WriteLine);
                                     arcSuiteSearchResult.arcSuitePreviews[0] = originalStruct;
                                 }
                                 else

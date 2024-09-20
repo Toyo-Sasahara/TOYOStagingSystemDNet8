@@ -278,7 +278,7 @@ namespace ServerControlCenterApplication
                 printerName = (string)PrinterSel_comboBox.SelectedValue;
             }
 
-            CommitCommonSettings commitCommonSettings = Test_CommitExecute.CreateComitParam();
+            CommitCommonSettings commitCommonSettings = Test_CommitExecute.CreateCommitCommonSettings();
 
             Commit commitLogic = new Commit(nativeWindow,
                                                 commitCommonSettings,
@@ -308,10 +308,14 @@ namespace ServerControlCenterApplication
                 CUSTOMER: CUSTOMER_textBox.Text
             );
 
+            string tepmlatefile = null;
+
             var ans = commitLogic.CommitStart(
                             CADDocumentFullFileName: System.IO.Path.Combine(SccConfigWork.GetAppConfigFolder(), PARTNUMBER_TextBox.Text + ".DWG"),
                             RequestPrinterStr: printerName,
-                            RecentTicketCode: ref ticketCode, RecentCommitStatus: ref commitStatusl);
+                            RecentTicketCode: ref ticketCode,
+                            tempBaseFileFullpathWithoutExt: ref tepmlatefile,
+                            RecentCommitStatus: ref commitStatusl);
 
             if (ans)
                 logWindowControl.WriteLine($"■CommitExecute.CommitStart(..) 実行結果{ans},コミット処理は正常終了");
