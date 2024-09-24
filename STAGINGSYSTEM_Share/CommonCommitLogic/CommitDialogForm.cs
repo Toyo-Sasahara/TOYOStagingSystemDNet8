@@ -1262,7 +1262,14 @@ namespace CommonCommitLogic
                                         ArcSuiteUserPlanePass
                                 );
 
-                                arcSuitePreviewOnlyForm.ShowDialog(this);
+                                try
+                                {
+                                    arcSuitePreviewOnlyForm.ShowDialog(this);
+                                }
+                                catch (Exception ex)
+                                {
+                                    WriteLine($"※アークスイートﾌﾟﾚﾋﾞｭｰダイアログのShowDialog()niteにて例外検知 {ex.Message}");
+                                }
                             }
                             else
                             {

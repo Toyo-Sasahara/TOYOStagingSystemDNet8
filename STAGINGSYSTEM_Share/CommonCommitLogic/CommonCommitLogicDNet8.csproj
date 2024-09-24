@@ -15,6 +15,11 @@
 		<RootNamespace>CommonCommitLogic</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="TESTFILE\XX-12345-701~720.dwg" />
+	  <None Remove="TESTFILE\XX-12345-993.dwg" />
+	  <None Remove="TESTFILE\XX-12345-998RL.dwg" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ArcSuiteSearchResult.cs" Link="ArcSuiteSearchResult.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CadDrawingFIle.cs" Link="CadDrawingFIle.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\Commit.cs" Link="Commit.cs" />
@@ -28,6 +33,11 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TestForm1.cs" Link="TestForm1.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TestForm1.Designer.cs" Link="TestForm1.Designer.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TypeNumber.cs" Link="TypeNumber.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="TESTFILE\XX-12345-701~720.dwg" />
+	  <Content Include="TESTFILE\XX-12345-993.dwg" />
+	  <Content Include="TESTFILE\XX-12345-998RL.dwg" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Update="CommitPreviewImage.cs">
