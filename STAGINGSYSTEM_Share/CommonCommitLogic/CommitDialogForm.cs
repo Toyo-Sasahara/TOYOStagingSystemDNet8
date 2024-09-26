@@ -25,6 +25,7 @@ using System.Windows.Forms;
 using static CommonCommitLogic.ArcSuiteSearchResult;
 #if NETCOREAPP
 using EnvDTE;
+using System.Diagnostics;
 #endif
 
 namespace CommonCommitLogic
@@ -1285,7 +1286,17 @@ namespace CommonCommitLogic
                             {
                                 //string ArcSuiteURL = Config.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", CommitDialogForm.stArcSuitePreview.user_zuban);
                                 string ArcSuiteURL = commmitCommonSettings.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
-                                System.Diagnostics.Process.Start(ArcSuiteURL);
+
+#if NETCOREAPP
+                                System.Diagnostics.Process.Start(new ProcessStartInfo
+                                {
+                                    FileName = ArcSuiteURL,
+                                    UseShellExecute = true // システムのデフォルトアプリケーションを使用
+                                });
+#else
+                            System.Diagnostics.Process.Start(ArcSuiteURL);
+#endif
+
                             }
                         } // WebでArcSuite図面検索
                     }
