@@ -24,5 +24,5 @@
 	<ItemGroup>
 		<Folder Include="Properties\" />
 	</ItemGroup>
-	<Import Project="..\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.projitems" Label="Shared" />
+	<Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
 </Project>
