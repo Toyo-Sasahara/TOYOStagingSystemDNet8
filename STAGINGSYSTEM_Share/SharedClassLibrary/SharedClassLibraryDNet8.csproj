@@ -14,6 +14,12 @@
 		<RootNamespace>ToyoStageService</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Remove="Properties\**" />
+	  <EmbeddedResource Remove="Properties\**" />
+	  <None Remove="Properties\**" />
+	  <Page Remove="Properties\**" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\AcceptPipeCommand.cs" Link="AcceptPipeCommand.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\BinaryReadWriterManager.cs" Link="BinaryReadWriterManager.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\ClientPreInputTICKET.cs" Link="ClientPreInputTICKET.cs" />
@@ -37,8 +43,5 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
 		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-	</ItemGroup>
-	<ItemGroup>
-		<Folder Include="Properties\" />
 	</ItemGroup>
 </Project>
