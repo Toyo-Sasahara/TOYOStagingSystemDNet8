@@ -157,6 +157,13 @@ namespace CommonCommitLogic
         /// <summary>
         /// コンストラクタ
         /// </summary>
+        /// <param name="Config"></param>
+        /// <param name="supportCadDrawingFile"></param>
+        /// <param name="supportArcSuite"></param>
+        /// <param name="supportNumbering"></param>
+        /// <param name="WriteLine"></param>
+        /// <param name="PrintOutOnly"></param>
+        /// <param name="CanUseVariantTypeDrawing"></param>
         public CommitDialogForm(CommitCommonSettings Config, CommitHelperCadDrawingFile supportCadDrawingFile,
             CommitHelperArcSuite supportArcSuite, CommitHelperNumbering supportNumbering,
             SasaLibDelegateWriteLine WriteLine, bool PrintOutOnly = false, bool CanUseVariantTypeDrawing = false)
@@ -1327,82 +1334,91 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private void CommitExecute_Button_Click(object sender, EventArgs e)
         {
-            if (isVariantTypeTitleBlockPARTNUMBER)
+            if (PrintOutOnly == true)
             {
-                if (string.IsNullOrWhiteSpace(VariantOnlyMemo_textBox.Text))
-                {
-                    MessageBox.Show(this, "表図面では備考欄に文字列が必要です", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-            if (CanUseVariantTypeDrawing)
-            {
-                if (ticketXml.Variants != null && ticketXml.Variants.Count > 0)
-                {
-                    if (string.IsNullOrWhiteSpace(ActiveVariantEnd_textBox.Text))
-                    {
-                        close_permition = false;
-
-                        DialogResult dialogResult = MessageBox.Show("※表図面の場合は有効な最大枝番の指定が必要です", $"", MessageBoxButtons.YesNo);
-
-                        this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-                        return;
-                    }
-                    else
-                    {
-                        //ticketXml.Variants;
-                        List<CommonTicket.Variant> newVariants = new List<CommonTicket.Variant>();
-                        foreach (CommonTicket.Variant variant in ticketXml.Variants)
-                        {
-
-                            bool checkResult = variantDrawingNumberSupport.ParseToyoVariantDrawingNumberString(variant.PRARTNUMBER, out string prefix, out bool isVariant, out string rangePart, out string rangeStart, out string rangeEnd, out string suffixCode);
-
-                            bool success = int.TryParse(rangeStart, out int number);
-
-                            bool success2 = int.TryParse(ActiveVariantEnd_textBox.Text, out int number2);
-
-                            if (success && success2)
-                            {
-                                // 変換成功した場合の処理
-                                if (number <= number2)
-                                {
-                                    if (variantofOnePartnumber == variant.PRARTNUMBER)
-                                        newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = true, COMMENTS = VariantOnlyMemo_textBox.Text });
-                                    else
-                                        newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = true });
-                                }
-                                else
-                                {
-                                    newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = false });
-                                }
-
-                            }
-                            else
-                            {
-                                // 変換失敗した場合の処理
-                                throw new Exception("表図面の範囲文字列の取得・変換に失敗");
-                            }
-                        }
-                        ticketXml.Variants = newVariants;
-                    }
-                }
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.Close();
             }
             else
             {
-                if (ticketXml.Variants != null && ticketXml.Variants.Count > 0)
+
+                if (isVariantTypeTitleBlockPARTNUMBER)
                 {
-                    close_permition = false;
-
-                    DialogResult dialogResult = MessageBox.Show("※【表形式】です！！現時点は非対応。印刷したら手動承認後、表図面登録棚に提出してください", $"", MessageBoxButtons.YesNo);
-
-
-                    this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-                    return;
+                    if (string.IsNullOrWhiteSpace(VariantOnlyMemo_textBox.Text))
+                    {
+                        MessageBox.Show(this, "表図面では備考欄に文字列が必要です", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                this.Close();
+                if (CanUseVariantTypeDrawing)
+                {
+                    if (ticketXml.Variants != null && ticketXml.Variants.Count > 0)
+                    {
+                        if (string.IsNullOrWhiteSpace(ActiveVariantEnd_textBox.Text))
+                        {
+                            close_permition = false;
+
+                            DialogResult dialogResult = MessageBox.Show("※表図面の場合は有効な最大枝番の指定が必要です", $"", MessageBoxButtons.YesNo);
+
+                            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                            return;
+                        }
+                        else
+                        {
+                            //ticketXml.Variants;
+                            List<CommonTicket.Variant> newVariants = new List<CommonTicket.Variant>();
+                            foreach (CommonTicket.Variant variant in ticketXml.Variants)
+                            {
+
+                                bool checkResult = variantDrawingNumberSupport.ParseToyoVariantDrawingNumberString(variant.PRARTNUMBER, out string prefix, out bool isVariant, out string rangePart, out string rangeStart, out string rangeEnd, out string suffixCode);
+
+                                bool success = int.TryParse(rangeStart, out int number);
+
+                                bool success2 = int.TryParse(ActiveVariantEnd_textBox.Text, out int number2);
+
+                                if (success && success2)
+                                {
+                                    // 変換成功した場合の処理
+                                    if (number <= number2)
+                                    {
+                                        if (variantofOnePartnumber == variant.PRARTNUMBER)
+                                            newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = true, COMMENTS = VariantOnlyMemo_textBox.Text });
+                                        else
+                                            newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = true });
+                                    }
+                                    else
+                                    {
+                                        newVariants.Add(new CommonTicket.Variant { PRARTNUMBER = variant.PRARTNUMBER, IsActive = false });
+                                    }
+
+                                }
+                                else
+                                {
+                                    // 変換失敗した場合の処理
+                                    throw new Exception("表図面の範囲文字列の取得・変換に失敗");
+                                }
+                            }
+                            ticketXml.Variants = newVariants;
+                        }
+                    }
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    if (ticketXml.Variants != null && ticketXml.Variants.Count > 0)
+                    {
+                        close_permition = false;
+
+                        DialogResult dialogResult = MessageBox.Show("※【表形式】です！！現時点は非対応。印刷したら手動承認後、表図面登録棚に提出してください", $"", MessageBoxButtons.YesNo);
+
+
+                        this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                        return;
+                    }
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+                }
             }
         }
 
