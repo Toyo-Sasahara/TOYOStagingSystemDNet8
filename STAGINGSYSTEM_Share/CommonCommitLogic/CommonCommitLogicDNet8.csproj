@@ -68,6 +68,7 @@
 		<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
 		<PackageReference Include="System.IO.Packaging" Version="9.0.0" />
 		<PackageReference Include="System.Memory" Version="4.6.0" />
+		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <EmbeddedResource Update="Properties\Resources.resx">
