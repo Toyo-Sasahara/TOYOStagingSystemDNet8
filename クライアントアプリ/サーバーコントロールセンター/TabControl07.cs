@@ -188,7 +188,7 @@ namespace ServerControlCenterApplication
             string msg;
             List<string> GetFileLists;
             string ResultAndMsg;
-            var ans = rmc_DRAWCAPTURE.GetFileList(ServerSourceFolderNaeme_textBox.Text, SearchPath_textBox.Text, out GetFileLists, out ResultAndMsg, objectConvNew: objectConvNew_GetFileLst_CheckBox.Checked, logWindowControl.WriteLine);
+            var ans = rmc_DRAWCAPTURE.GetFileList(ServerSourceFolderNaeme_textBox.Text, SearchPath_textBox.Text, out GetFileLists, out ResultAndMsg, objectConvNew: objectConvNew_GetFileLst_CheckBox.Checked, true, logWindowControl.WriteLine);
 
         }
 
