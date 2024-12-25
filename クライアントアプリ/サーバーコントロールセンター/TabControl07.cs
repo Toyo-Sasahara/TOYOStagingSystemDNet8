@@ -313,10 +313,10 @@ namespace ServerControlCenterApplication
             var objectConverter = new SasaLib.PIPE.ObjectConverter<List<SqlFieldValuex>>();
 
             string jsontxt;
-            var a = objectConverter.ToByteArrayViaJsonSerializer(sqlFieldValues, out jsontxt, options: options);
+            var a = objectConverter.FromObjectToByteArrayViaJsonSerializer(sqlFieldValues, out jsontxt, options: options);
 
             string jsontxt2;
-            List<SqlFieldValuex> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(a, out jsontxt2, options);
+            List<SqlFieldValuex> fieldValueSetRet = objectConverter.FromByteArrayToObjectViaJsonSerializer(a, out jsontxt2, options);
 
 
         }
@@ -334,10 +334,10 @@ namespace ServerControlCenterApplication
             var objectConverter = new SasaLib.PIPE.ObjectConverter<List<SqlSearchStringValue>>();
 
             string jsonText;
-            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(sqlSearchStringValues, out jsonText);
+            byte[] bytes = objectConverter.FromObjectToByteArrayViaJsonSerializer(sqlSearchStringValues, out jsonText);
 
             string jsontxt2;
-            List<SqlSearchStringValue> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(bytes, out jsontxt2);
+            List<SqlSearchStringValue> fieldValueSetRet = objectConverter.FromByteArrayToObjectViaJsonSerializer(bytes, out jsontxt2);
 
         }
 
@@ -373,10 +373,10 @@ namespace ServerControlCenterApplication
             var objectConverter = new SasaLib.PIPE.ObjectConverter<List<FieldValueSet>>();
 
             string outtext1;
-            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(fieldValueSets, out outtext1, options: options);
+            byte[] bytes = objectConverter.FromObjectToByteArrayViaJsonSerializer(fieldValueSets, out outtext1, options: options);
 
             string outtext2;
-            List<FieldValueSet> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(bytes, out outtext2, options);
+            List<FieldValueSet> fieldValueSetRet = objectConverter.FromByteArrayToObjectViaJsonSerializer(bytes, out outtext2, options);
 
 
         }
@@ -417,10 +417,10 @@ namespace ServerControlCenterApplication
             var objectConverter = new SasaLib.PIPE.ObjectConverter<List<ApprovedCancel>>();
 
             string outtext1;
-            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(approvedCancels, out outtext1, options: options);
+            byte[] bytes = objectConverter.FromObjectToByteArrayViaJsonSerializer(approvedCancels, out outtext1, options: options);
 
             string outtext2;
-            List<ApprovedCancel> fieldValueSetRet = objectConverter.FromByteArrayViaJsonSerializer(bytes, out outtext2, options: options);
+            List<ApprovedCancel> fieldValueSetRet = objectConverter.FromByteArrayToObjectViaJsonSerializer(bytes, out outtext2, options: options);
 
             if (approvedCancels == fieldValueSetRet)
             {
@@ -456,10 +456,10 @@ namespace ServerControlCenterApplication
             var objectConverter = new SasaLib.PIPE.ObjectConverter<FieldValueSet>();
 
             string outtext1;
-            byte[] bytes = objectConverter.ToByteArrayViaJsonSerializer(fieldValueSet_in, out outtext1, options: null);
+            byte[] bytes = objectConverter.FromObjectToByteArrayViaJsonSerializer(fieldValueSet_in, out outtext1, options: null);
 
             string outtext2;
-            FieldValueSet fieldValue_out = objectConverter.FromByteArrayViaJsonSerializer(bytes, out outtext2, null);
+            FieldValueSet fieldValue_out = objectConverter.FromByteArrayToObjectViaJsonSerializer(bytes, out outtext2, null);
 
 
             if (fieldValueSet_in == fieldValue_out)
