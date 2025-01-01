@@ -30,6 +30,11 @@ namespace ServerControlCenterApplication
         {
             this.mainForm = form;
             InitializeComponent();
+
+            FileRecvTest_Source_ServerFullFIleName_textBox.Text = FileSendTest_Dist_ServerFuleFileName_textBox.Text;
+
+            FileRecvTest_Dist_Server_FullFileName_textBox.Text = System.IO.Path.Combine(@"D:\", System.IO.Path.GetFileName(FileRecvTest_Source_ServerFullFIleName_textBox.Text));
+
         }
 
         private void TabControl07_Load(object sender, EventArgs e)
@@ -105,20 +110,24 @@ namespace ServerControlCenterApplication
         private void SelectSouceFileName_button_Click(object sender, EventArgs e)
         {
             var result = openFileDialog1.ShowDialog();
-            SourceFromLocalFullFileName_textBox.Text = openFileDialog1.FileName;
-            SetSamePath_button_Click(sender, e);
+            if (result == DialogResult.OK)
+            {
+                FileSendTest_Souce_LocalFullFileName_textBox.Text = openFileDialog1.FileName;
+
+                FileSendTest_Souce_LocalFullFileName_textBox.Text = FileSendTest_Souce_LocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            }
         }
 
         private void SetSamePath_button_Click(object sender, EventArgs e)
         {
-            SourceFromLocalFullFileName_textBox.Text = SourceFromLocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
-            SendToServerRullFileName.Text = System.IO.Path.Combine(@"D:\", System.IO.Path.GetFileName(SourceFromLocalFullFileName_textBox.Text));
+            FileSendTest_Souce_LocalFullFileName_textBox.Text = FileSendTest_Souce_LocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileSendTest_Dist_ServerFuleFileName_textBox.Text = System.IO.Path.Combine(@"D:\", System.IO.Path.GetFileName(FileSendTest_Souce_LocalFullFileName_textBox.Text));
         }
 
         private void FileSendStart_button_Click(object sender, EventArgs e)
         {
-            SourceFromLocalFullFileName_textBox.Text = SourceFromLocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
-            SendToServerRullFileName.Text = SendToServerRullFileName.Text.TrimStart('\"').TrimEnd('\"');
+            FileSendTest_Souce_LocalFullFileName_textBox.Text = FileSendTest_Souce_LocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileSendTest_Dist_ServerFuleFileName_textBox.Text = FileSendTest_Dist_ServerFuleFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
 
             RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                                                 SccConfig.Config.ClientUserName,
@@ -127,16 +136,18 @@ namespace ServerControlCenterApplication
                                                  SccConfig.Config.StageServerHost,
                                                  SccConfig.Config.PipeNameDC
                                                 );
-            if (System.IO.File.Exists(SourceFromLocalFullFileName_textBox.Text))
+            if (System.IO.File.Exists(FileSendTest_Souce_LocalFullFileName_textBox.Text))
             {
-                string msg;
-                var ans = rmc_DRAWCAPTURE.FileSend(SourceFromLocalFullFileName_textBox.Text, SendToServerRullFileName.Text, out msg, objectConvNew: FileSendWriteObjectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine);
+                string resultMsg;
+                var ans = rmc_DRAWCAPTURE.FileSend(
+                    FileSendTest_Souce_LocalFullFileName_textBox.Text, FileSendTest_Dist_ServerFuleFileName_textBox.Text,
+                    resultMsg: out resultMsg, objectConvNew: FileSendWriteObjectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine, IsDebugMsgWriteLine: true);
 
-                logWindowControl.WriteLine($"FileSend 事項結果 out msg = {msg}, result = {ans}");
+                logWindowControl.WriteLine($"■FileSend(..)  実行結果戻り値 = {ans},  out resultMsg = {resultMsg}");
             }
             else
             {
-                MessageBox.Show($"{SourceFromLocalFullFileName_textBox.Text} が存在しません");
+                MessageBox.Show($"{FileSendTest_Souce_LocalFullFileName_textBox.Text} が存在しません");
             }
         }
 
@@ -147,15 +158,15 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private void SetSamePathServer_button_Click(object sender, EventArgs e)
         {
-            ReceveFullFileName_textBox.Text = ReceveFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
-            ReceveToLocalFullFileName_textBox.Text = System.IO.Path.Combine(@"D:\", System.IO.Path.GetFileName(ReceveFullFileName_textBox.Text));
+            FileRecvTest_Source_ServerFullFIleName_textBox.Text = FileRecvTest_Source_ServerFullFIleName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileRecvTest_Dist_Server_FullFileName_textBox.Text = System.IO.Path.Combine(@"D:\", System.IO.Path.GetFileName(FileRecvTest_Source_ServerFullFIleName_textBox.Text));
 
         }
 
         private void FileReceveStart_button_Click(object sender, EventArgs e)
         {
-            ReceveFullFileName_textBox.Text = ReceveFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
-            ReceveToLocalFullFileName_textBox.Text = ReceveToLocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileRecvTest_Source_ServerFullFIleName_textBox.Text = FileRecvTest_Source_ServerFullFIleName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileRecvTest_Dist_Server_FullFileName_textBox.Text = FileRecvTest_Dist_Server_FullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
 
             RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                                     SccConfig.Config.ClientUserName,
@@ -167,14 +178,14 @@ namespace ServerControlCenterApplication
 
 
             string msg;
-            var ans = rmc_DRAWCAPTURE.FileRecv(ReceveFullFileName_textBox.Text, ReceveToLocalFullFileName_textBox.Text, out msg, objectConvNew: ReceveFileObjectConvNew_checkBox.Checked, WriteLine: LogWindowWriteLine);
+            var ans = rmc_DRAWCAPTURE.FileRecv(FileRecvTest_Source_ServerFullFIleName_textBox.Text, FileRecvTest_Dist_Server_FullFileName_textBox.Text, out msg, objectConvNew: ReceveFileObjectConvNew_checkBox.Checked, WriteLine: LogWindowWriteLine, Verbose: true);
 
         }
 
         private void GetFileList_button_Click(object sender, EventArgs e)
         {
-            ReceveFullFileName_textBox.Text = ReceveFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
-            ReceveToLocalFullFileName_textBox.Text = ReceveToLocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileRecvTest_Source_ServerFullFIleName_textBox.Text = FileRecvTest_Source_ServerFullFIleName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileRecvTest_Dist_Server_FullFileName_textBox.Text = FileRecvTest_Dist_Server_FullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
 
             RemoteClientDRAWCAPTURE rmc_DRAWCAPTURE = new RemoteClientDRAWCAPTURE(SccConfig.Config.ClientDomainName,
                                     SccConfig.Config.ClientUserName,
@@ -476,6 +487,34 @@ namespace ServerControlCenterApplication
         private void logwindowClear_button_Click(object sender, EventArgs e)
         {
             logWindowControl.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
+
+        }
+
+        private void SourceFromLocalFullFileName_textBox_TextChanged(object sender, EventArgs e)
+        {
+            FileSendTest_Souce_LocalFullFileName_textBox.Text = FileSendTest_Souce_LocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            FileSendTest_Dist_ServerFuleFileName_textBox.Text = System.IO.Path.Combine(@"D:\", System.IO.Path.GetFileName(FileSendTest_Souce_LocalFullFileName_textBox.Text));
+        }
+
+        private void FileSendTest_Dist_ServerFuleFileName_textBox_TextChanged(object sender, EventArgs e)
+        {
+            FileRecvTest_Source_ServerFullFIleName_textBox.Text = FileSendTest_Dist_ServerFuleFileName_textBox.Text;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetSamePathServer_button_Click_1(object sender, EventArgs e)
+        {
+            var result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                FileRecvTest_Source_ServerFullFIleName_textBox.Text = openFileDialog1.FileName;
+
+                FileRecvTest_Source_ServerFullFIleName_textBox.Text = FileRecvTest_Source_ServerFullFIleName_textBox.Text.TrimStart('\"').TrimEnd('\"');
+            }
 
         }
     }
