@@ -111,7 +111,7 @@ namespace CommonCommitLogic
             this.CADTITLE_groupBox = new System.Windows.Forms.GroupBox();
             this.CommitPreview_groupBox = new System.Windows.Forms.GroupBox();
             this.TitleFit_button = new System.Windows.Forms.Button();
-            this.commitPreviewImage = new CommonCommitLogic.CommitPreviewImage();
+            this.commitPreviewImage = new CommitPreviewImage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.CadFileInformation_groupBox = new System.Windows.Forms.GroupBox();
             this.panel2.SuspendLayout();
@@ -132,12 +132,11 @@ namespace CommonCommitLogic
             this.CADTITLE_groupBox.SuspendLayout();
             this.CommitPreview_groupBox.SuspendLayout();
             this.CadFileInformation_groupBox.SuspendLayout();
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.panel2.Controls.Add(this.Variant_panel2);
             this.panel2.Controls.Add(this.Variant_panel1);
             this.panel2.Controls.Add(this.panel4);
@@ -168,9 +167,8 @@ namespace CommonCommitLogic
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label15.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            this.label15.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.label15.ForeColor = System.Drawing.Color.Red;
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label15.Location = new System.Drawing.Point(3, 21);
@@ -181,11 +179,10 @@ namespace CommonCommitLogic
             // 
             // ActiveVariantEnd_abel
             // 
-            this.ActiveVariantEnd_abel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ActiveVariantEnd_abel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.ActiveVariantEnd_abel.AutoSize = true;
             this.ActiveVariantEnd_abel.Enabled = false;
-            this.ActiveVariantEnd_abel.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ActiveVariantEnd_abel.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.ActiveVariantEnd_abel.Location = new System.Drawing.Point(73, 4);
             this.ActiveVariantEnd_abel.Name = "ActiveVariantEnd_abel";
             this.ActiveVariantEnd_abel.Size = new System.Drawing.Size(34, 15);
@@ -194,11 +191,10 @@ namespace CommonCommitLogic
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Enabled = false;
-            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label10.Location = new System.Drawing.Point(44, 4);
             this.label10.Name = "label10";
@@ -208,11 +204,10 @@ namespace CommonCommitLogic
             // 
             // VariantNumber_MIN_label2
             // 
-            this.VariantNumber_MIN_label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.VariantNumber_MIN_label2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.VariantNumber_MIN_label2.AutoSize = true;
             this.VariantNumber_MIN_label2.Enabled = false;
-            this.VariantNumber_MIN_label2.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VariantNumber_MIN_label2.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.VariantNumber_MIN_label2.Location = new System.Drawing.Point(4, 4);
             this.VariantNumber_MIN_label2.Name = "VariantNumber_MIN_label2";
             this.VariantNumber_MIN_label2.Size = new System.Drawing.Size(34, 15);
@@ -221,8 +216,7 @@ namespace CommonCommitLogic
             // 
             // Variant_panel1
             // 
-            this.Variant_panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Variant_panel1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.Variant_panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Variant_panel1.Controls.Add(this.label9);
             this.Variant_panel1.Controls.Add(this.VariantOnlyMemo_textBox);
@@ -239,14 +233,13 @@ namespace CommonCommitLogic
             this.Variant_panel1.Name = "Variant_panel1";
             this.Variant_panel1.Size = new System.Drawing.Size(343, 60);
             this.Variant_panel1.TabIndex = 83;
-            this.Variant_panel1.VisibleChanged += new System.EventHandler(this.Variant_panel1_VisibleChanged);
+            this.Variant_panel1.VisibleChanged += Variant_panel1_VisibleChanged;
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label9.Location = new System.Drawing.Point(246, 3);
@@ -257,26 +250,24 @@ namespace CommonCommitLogic
             // 
             // VariantOnlyMemo_textBox
             // 
-            this.VariantOnlyMemo_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.VariantOnlyMemo_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.VariantOnlyMemo_textBox.BackColor = System.Drawing.Color.MistyRose;
-            this.VariantOnlyMemo_textBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VariantOnlyMemo_textBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.VariantOnlyMemo_textBox.Location = new System.Drawing.Point(208, 23);
             this.VariantOnlyMemo_textBox.Name = "VariantOnlyMemo_textBox";
             this.VariantOnlyMemo_textBox.Size = new System.Drawing.Size(129, 31);
             this.VariantOnlyMemo_textBox.TabIndex = 1;
             this.VariantOnlyMemo_textBox.Text = "備考";
             this.VariantOnlyMemo_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.VariantOnlyMemo_textBox.TextChanged += new System.EventHandler(this.VariantOnlyMemo_textBox_TextChanged);
-            this.VariantOnlyMemo_textBox.Enter += new System.EventHandler(this.VariantOnlyMemo_textBox_Enter);
+            this.VariantOnlyMemo_textBox.TextChanged += VariantOnlyMemo_textBox_TextChanged;
+            this.VariantOnlyMemo_textBox.Enter += VariantOnlyMemo_textBox_Enter;
             // 
             // VariantNumber_Prefix_label
             // 
-            this.VariantNumber_Prefix_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.VariantNumber_Prefix_label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.VariantNumber_Prefix_label.AutoSize = true;
             this.VariantNumber_Prefix_label.Enabled = false;
-            this.VariantNumber_Prefix_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VariantNumber_Prefix_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.VariantNumber_Prefix_label.Location = new System.Drawing.Point(0, 3);
             this.VariantNumber_Prefix_label.Name = "VariantNumber_Prefix_label";
             this.VariantNumber_Prefix_label.Size = new System.Drawing.Size(88, 15);
@@ -285,11 +276,10 @@ namespace CommonCommitLogic
             // 
             // VariantNumber_Suffix_label
             // 
-            this.VariantNumber_Suffix_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.VariantNumber_Suffix_label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.VariantNumber_Suffix_label.AutoSize = true;
             this.VariantNumber_Suffix_label.Enabled = false;
-            this.VariantNumber_Suffix_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VariantNumber_Suffix_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.VariantNumber_Suffix_label.Location = new System.Drawing.Point(197, 3);
             this.VariantNumber_Suffix_label.Name = "VariantNumber_Suffix_label";
             this.VariantNumber_Suffix_label.Size = new System.Drawing.Size(34, 15);
@@ -298,10 +288,9 @@ namespace CommonCommitLogic
             // 
             // Variant_End_Input_label
             // 
-            this.Variant_End_Input_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Variant_End_Input_label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.Variant_End_Input_label.AutoSize = true;
-            this.Variant_End_Input_label.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Variant_End_Input_label.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.Variant_End_Input_label.ForeColor = System.Drawing.Color.Red;
             this.Variant_End_Input_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Variant_End_Input_label.Location = new System.Drawing.Point(3, 21);
@@ -312,11 +301,10 @@ namespace CommonCommitLogic
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
             this.label14.Enabled = false;
-            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label14.Location = new System.Drawing.Point(75, 3);
             this.label14.Name = "label14";
@@ -326,12 +314,10 @@ namespace CommonCommitLogic
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
             this.label13.Enabled = false;
-            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label13.Location = new System.Drawing.Point(183, 3);
             this.label13.Name = "label13";
@@ -341,11 +327,10 @@ namespace CommonCommitLogic
             // 
             // VariantNumber_MAX_label
             // 
-            this.VariantNumber_MAX_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.VariantNumber_MAX_label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.VariantNumber_MAX_label.AutoSize = true;
             this.VariantNumber_MAX_label.Enabled = false;
-            this.VariantNumber_MAX_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VariantNumber_MAX_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.VariantNumber_MAX_label.Location = new System.Drawing.Point(153, 3);
             this.VariantNumber_MAX_label.Name = "VariantNumber_MAX_label";
             this.VariantNumber_MAX_label.Size = new System.Drawing.Size(34, 15);
@@ -354,11 +339,10 @@ namespace CommonCommitLogic
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Enabled = false;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label11.Location = new System.Drawing.Point(135, 3);
             this.label11.Name = "label11";
@@ -368,27 +352,25 @@ namespace CommonCommitLogic
             // 
             // ActiveVariantEnd_textBox
             // 
-            this.ActiveVariantEnd_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ActiveVariantEnd_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.ActiveVariantEnd_textBox.BackColor = System.Drawing.Color.MistyRose;
             this.ActiveVariantEnd_textBox.Enabled = false;
-            this.ActiveVariantEnd_textBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ActiveVariantEnd_textBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.ActiveVariantEnd_textBox.Location = new System.Drawing.Point(148, 23);
             this.ActiveVariantEnd_textBox.Name = "ActiveVariantEnd_textBox";
             this.ActiveVariantEnd_textBox.Size = new System.Drawing.Size(56, 31);
             this.ActiveVariantEnd_textBox.TabIndex = 0;
             this.ActiveVariantEnd_textBox.Text = "枝番号";
             this.ActiveVariantEnd_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ActiveVariantEnd_textBox.TextChanged += new System.EventHandler(this.ActiveVariantEnd_textBox_TextChanged);
-            this.ActiveVariantEnd_textBox.Enter += new System.EventHandler(this.ActiveVariantEnd_textBox_Enter);
+            this.ActiveVariantEnd_textBox.TextChanged += ActiveVariantEnd_textBox_TextChanged;
+            this.ActiveVariantEnd_textBox.Enter += ActiveVariantEnd_textBox_Enter;
             // 
             // VariantNumber_MIN_label1
             // 
-            this.VariantNumber_MIN_label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.VariantNumber_MIN_label1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.VariantNumber_MIN_label1.AutoSize = true;
             this.VariantNumber_MIN_label1.Enabled = false;
-            this.VariantNumber_MIN_label1.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VariantNumber_MIN_label1.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.VariantNumber_MIN_label1.Location = new System.Drawing.Point(106, 3);
             this.VariantNumber_MIN_label1.Name = "VariantNumber_MIN_label1";
             this.VariantNumber_MIN_label1.Size = new System.Drawing.Size(34, 15);
@@ -407,9 +389,7 @@ namespace CommonCommitLogic
             // 
             // DrawingTypeTextBox
             // 
-            this.DrawingTypeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DrawingTypeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.DrawingTypeTextBox.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             this.DrawingTypeTextBox.Location = new System.Drawing.Point(81, 2);
             this.DrawingTypeTextBox.Name = "DrawingTypeTextBox";
@@ -457,15 +437,15 @@ namespace CommonCommitLogic
             this.TicketCodeLinkLabel.Location = new System.Drawing.Point(76, 11);
             this.TicketCodeLinkLabel.Margin = new System.Windows.Forms.Padding(3);
             this.TicketCodeLinkLabel.Name = "TicketCodeLinkLabel";
-            this.TicketCodeLinkLabel.Size = new System.Drawing.Size(143, 12);
+            this.TicketCodeLinkLabel.Size = new System.Drawing.Size(168, 15);
             this.TicketCodeLinkLabel.TabIndex = 77;
             this.TicketCodeLinkLabel.TabStop = true;
             this.TicketCodeLinkLabel.Text = "#######################";
-            this.TicketCodeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TicketCodeLinkLabel_LinkClicked);
+            this.TicketCodeLinkLabel.LinkClicked += TicketCodeLinkLabel_LinkClicked;
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.TitleBlock_AUTHOR_label);
@@ -578,7 +558,7 @@ namespace CommonCommitLogic
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.TitleBlock_DESIGNER_label);
@@ -625,8 +605,7 @@ namespace CommonCommitLogic
             // 
             // PanelCustomer
             // 
-            this.PanelCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.PanelCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelCustomer.Controls.Add(this.lFIRSTCUSTOMERlabe);
             this.PanelCustomer.Controls.Add(this.TitleBlock_CUSTOMER_label);
@@ -673,9 +652,9 @@ namespace CommonCommitLogic
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label16.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label16.Location = new System.Drawing.Point(260, 21);
             this.label16.Name = "label16";
@@ -685,10 +664,9 @@ namespace CommonCommitLogic
             // 
             // TitleBlock_REV_textBox
             // 
-            this.TitleBlock_REV_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TitleBlock_REV_textBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.TitleBlock_REV_textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TitleBlock_REV_textBox.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TitleBlock_REV_textBox.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.TitleBlock_REV_textBox.Location = new System.Drawing.Point(257, 41);
             this.TitleBlock_REV_textBox.Name = "TitleBlock_REV_textBox";
             this.TitleBlock_REV_textBox.ReadOnly = true;
@@ -698,9 +676,9 @@ namespace CommonCommitLogic
             // 
             // PARTNUMBER_CAUTION_label
             // 
-            this.PARTNUMBER_CAUTION_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PARTNUMBER_CAUTION_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.PARTNUMBER_CAUTION_label.AutoSize = true;
-            this.PARTNUMBER_CAUTION_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PARTNUMBER_CAUTION_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.PARTNUMBER_CAUTION_label.ForeColor = System.Drawing.Color.Red;
             this.PARTNUMBER_CAUTION_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.PARTNUMBER_CAUTION_label.Location = new System.Drawing.Point(5, 80);
@@ -723,11 +701,9 @@ namespace CommonCommitLogic
             // 
             // TitleBlock_PARTNUMBER_linklabel
             // 
-            this.TitleBlock_PARTNUMBER_linklabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TitleBlock_PARTNUMBER_linklabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.TitleBlock_PARTNUMBER_linklabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TitleBlock_PARTNUMBER_linklabel.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TitleBlock_PARTNUMBER_linklabel.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.TitleBlock_PARTNUMBER_linklabel.Location = new System.Drawing.Point(3, 41);
             this.TitleBlock_PARTNUMBER_linklabel.Margin = new System.Windows.Forms.Padding(0);
             this.TitleBlock_PARTNUMBER_linklabel.Name = "TitleBlock_PARTNUMBER_linklabel";
@@ -736,12 +712,12 @@ namespace CommonCommitLogic
             this.TitleBlock_PARTNUMBER_linklabel.TabStop = true;
             this.TitleBlock_PARTNUMBER_linklabel.Text = "図面番号";
             this.TitleBlock_PARTNUMBER_linklabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TitleBlock_PARTNUMBER_linklabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PARTNUMBER_linklabel_LinkClicked);
+            this.TitleBlock_PARTNUMBER_linklabel.LinkClicked += PARTNUMBER_linklabel_LinkClicked;
             // 
             // TitleBlock_TITLE_label
             // 
             this.TitleBlock_TITLE_label.AutoSize = true;
-            this.TitleBlock_TITLE_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TitleBlock_TITLE_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.TitleBlock_TITLE_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TitleBlock_TITLE_label.Location = new System.Drawing.Point(3, 21);
             this.TitleBlock_TITLE_label.Name = "TitleBlock_TITLE_label";
@@ -751,9 +727,9 @@ namespace CommonCommitLogic
             // 
             // CadFileWarningIgnore_button
             // 
-            this.CadFileWarningIgnore_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CadFileWarningIgnore_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.CadFileWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
-            this.CadFileWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CadFileWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.CadFileWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
             this.CadFileWarningIgnore_button.Location = new System.Drawing.Point(521, 16);
             this.CadFileWarningIgnore_button.Name = "CadFileWarningIgnore_button";
@@ -761,14 +737,12 @@ namespace CommonCommitLogic
             this.CadFileWarningIgnore_button.TabIndex = 0;
             this.CadFileWarningIgnore_button.Text = "CADﾌｧｲﾙ名警告";
             this.CadFileWarningIgnore_button.UseVisualStyleBackColor = false;
-            this.CadFileWarningIgnore_button.Click += new System.EventHandler(this.CadFileWarningIgnore_button_Click);
+            this.CadFileWarningIgnore_button.Click += CadFileWarningIgnore_button_Click;
             // 
             // CadFileInformation_label
             // 
-            this.CadFileInformation_label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CadFileInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CadFileInformation_label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.CadFileInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.CadFileInformation_label.ForeColor = System.Drawing.Color.Red;
             this.CadFileInformation_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CadFileInformation_label.Location = new System.Drawing.Point(8, 16);
@@ -780,13 +754,12 @@ namespace CommonCommitLogic
             // 
             // ArcSuite_groupBox
             // 
-            this.ArcSuite_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ArcSuite_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.ArcSuite_groupBox.Controls.Add(this.SameRevWarningIgnore_button);
             this.ArcSuite_groupBox.Controls.Add(this.ArcSuiteWarningIgnore_button);
             this.ArcSuite_groupBox.Controls.Add(this.ArcSuiteInformation_label);
             this.ArcSuite_groupBox.Controls.Add(this.ArcSuiteDrawingShow_button);
-            this.ArcSuite_groupBox.Location = new System.Drawing.Point(9, 739);
+            this.ArcSuite_groupBox.Location = new System.Drawing.Point(9, 761);
             this.ArcSuite_groupBox.Name = "ArcSuite_groupBox";
             this.ArcSuite_groupBox.Size = new System.Drawing.Size(664, 93);
             this.ArcSuite_groupBox.TabIndex = 82;
@@ -795,9 +768,9 @@ namespace CommonCommitLogic
             // 
             // SameRevWarningIgnore_button
             // 
-            this.SameRevWarningIgnore_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SameRevWarningIgnore_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.SameRevWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
-            this.SameRevWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SameRevWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.SameRevWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
             this.SameRevWarningIgnore_button.Location = new System.Drawing.Point(521, 49);
             this.SameRevWarningIgnore_button.Name = "SameRevWarningIgnore_button";
@@ -805,13 +778,13 @@ namespace CommonCommitLogic
             this.SameRevWarningIgnore_button.TabIndex = 1;
             this.SameRevWarningIgnore_button.Text = "同Rev警告";
             this.SameRevWarningIgnore_button.UseVisualStyleBackColor = false;
-            this.SameRevWarningIgnore_button.Click += new System.EventHandler(this.SameRevWarningIgnore_button_Click);
+            this.SameRevWarningIgnore_button.Click += SameRevWarningIgnore_button_Click;
             // 
             // ArcSuiteWarningIgnore_button
             // 
-            this.ArcSuiteWarningIgnore_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ArcSuiteWarningIgnore_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.ArcSuiteWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
-            this.ArcSuiteWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ArcSuiteWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.ArcSuiteWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
             this.ArcSuiteWarningIgnore_button.Location = new System.Drawing.Point(521, 15);
             this.ArcSuiteWarningIgnore_button.Name = "ArcSuiteWarningIgnore_button";
@@ -819,14 +792,12 @@ namespace CommonCommitLogic
             this.ArcSuiteWarningIgnore_button.TabIndex = 0;
             this.ArcSuiteWarningIgnore_button.Text = "ArcSuite警告";
             this.ArcSuiteWarningIgnore_button.UseVisualStyleBackColor = false;
-            this.ArcSuiteWarningIgnore_button.Click += new System.EventHandler(this.ArcSuiteWarningIgnore_button_Click);
+            this.ArcSuiteWarningIgnore_button.Click += ArcSuiteWarningIgnore_button_Click;
             // 
             // ArcSuiteInformation_label
             // 
-            this.ArcSuiteInformation_label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ArcSuiteInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ArcSuiteInformation_label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.ArcSuiteInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.ArcSuiteInformation_label.ForeColor = System.Drawing.Color.Red;
             this.ArcSuiteInformation_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ArcSuiteInformation_label.Location = new System.Drawing.Point(6, 19);
@@ -838,7 +809,7 @@ namespace CommonCommitLogic
             // 
             // ArcSuiteDrawingShow_button
             // 
-            this.ArcSuiteDrawingShow_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ArcSuiteDrawingShow_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.ArcSuiteDrawingShow_button.ImageKey = "(なし)";
             this.ArcSuiteDrawingShow_button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ArcSuiteDrawingShow_button.Location = new System.Drawing.Point(384, 15);
@@ -848,12 +819,11 @@ namespace CommonCommitLogic
             this.ArcSuiteDrawingShow_button.TabIndex = 17;
             this.ArcSuiteDrawingShow_button.Text = "ArcSuiteDrawingShow_button";
             this.ArcSuiteDrawingShow_button.UseVisualStyleBackColor = true;
-            this.ArcSuiteDrawingShow_button.Click += new System.EventHandler(this.SearchRegistedArcSuiteDrawing_button_Click);
+            this.ArcSuiteDrawingShow_button.Click += SearchRegistedArcSuiteDrawing_button_Click;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.panel3.Controls.Add(this.PlotFileCreate_label);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.PaperSizeLabel);
@@ -864,8 +834,8 @@ namespace CommonCommitLogic
             // 
             // PlotFileCreate_label
             // 
-            this.PlotFileCreate_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PlotFileCreate_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PlotFileCreate_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            this.PlotFileCreate_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.PlotFileCreate_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.PlotFileCreate_label.Location = new System.Drawing.Point(5, 27);
             this.PlotFileCreate_label.Margin = new System.Windows.Forms.Padding(3);
@@ -889,7 +859,7 @@ namespace CommonCommitLogic
             // PaperSizeLabel
             // 
             this.PaperSizeLabel.AutoSize = true;
-            this.PaperSizeLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PaperSizeLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.PaperSizeLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.PaperSizeLabel.Location = new System.Drawing.Point(64, 4);
             this.PaperSizeLabel.Margin = new System.Windows.Forms.Padding(3);
@@ -900,18 +870,18 @@ namespace CommonCommitLogic
             // 
             // ImageRezolutonInfo_label
             // 
-            this.ImageRezolutonInfo_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ImageRezolutonInfo_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.ImageRezolutonInfo_label.AutoSize = true;
             this.ImageRezolutonInfo_label.Location = new System.Drawing.Point(11, 249);
             this.ImageRezolutonInfo_label.Name = "ImageRezolutonInfo_label";
-            this.ImageRezolutonInfo_label.Size = new System.Drawing.Size(132, 12);
+            this.ImageRezolutonInfo_label.Size = new System.Drawing.Size(143, 15);
             this.ImageRezolutonInfo_label.TabIndex = 3;
             this.ImageRezolutonInfo_label.Text = "ImageRezolutonInfo_label";
             this.ImageRezolutonInfo_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // PreviewButton
             // 
-            this.PreviewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviewButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.PreviewButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.PreviewButton.Location = new System.Drawing.Point(521, 244);
             this.PreviewButton.Margin = new System.Windows.Forms.Padding(0);
@@ -920,11 +890,11 @@ namespace CommonCommitLogic
             this.PreviewButton.TabIndex = 1;
             this.PreviewButton.Text = "大きいウィンドウで表示";
             this.PreviewButton.UseVisualStyleBackColor = true;
-            this.PreviewButton.Click += new System.EventHandler(this.PreviewButton_Click);
+            this.PreviewButton.Click += PreviewButton_Click;
             // 
             // Cancel_Button
             // 
-            this.Cancel_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.Cancel_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Cancel_Button.Location = new System.Drawing.Point(576, 35);
             this.Cancel_Button.Margin = new System.Windows.Forms.Padding(0);
@@ -933,11 +903,11 @@ namespace CommonCommitLogic
             this.Cancel_Button.TabIndex = 1;
             this.Cancel_Button.Text = "キャンセル";
             this.Cancel_Button.UseVisualStyleBackColor = true;
-            this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
+            this.Cancel_Button.Click += Cancel_Button_Click;
             // 
             // CommitExecute_Button
             // 
-            this.CommitExecute_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CommitExecute_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.CommitExecute_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CommitExecute_Button.Location = new System.Drawing.Point(441, 35);
             this.CommitExecute_Button.Margin = new System.Windows.Forms.Padding(0);
@@ -946,19 +916,18 @@ namespace CommonCommitLogic
             this.CommitExecute_Button.TabIndex = 0;
             this.CommitExecute_Button.Text = "コミット開始";
             this.CommitExecute_Button.UseVisualStyleBackColor = true;
-            this.CommitExecute_Button.Click += new System.EventHandler(this.CommitExecute_Button_Click);
+            this.CommitExecute_Button.Click += CommitExecute_Button_Click;
             // 
             // COMMITSTART_groupBox
             // 
-            this.COMMITSTART_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.COMMITSTART_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.COMMITSTART_groupBox.Controls.Add(this.ErrorOccurred_Label);
             this.COMMITSTART_groupBox.Controls.Add(this.Printer_Info_button);
             this.COMMITSTART_groupBox.Controls.Add(this.StageServerHostLabel);
             this.COMMITSTART_groupBox.Controls.Add(this.label6);
             this.COMMITSTART_groupBox.Controls.Add(this.CommitExecute_Button);
             this.COMMITSTART_groupBox.Controls.Add(this.Cancel_Button);
-            this.COMMITSTART_groupBox.Location = new System.Drawing.Point(9, 832);
+            this.COMMITSTART_groupBox.Location = new System.Drawing.Point(9, 854);
             this.COMMITSTART_groupBox.Name = "COMMITSTART_groupBox";
             this.COMMITSTART_groupBox.Size = new System.Drawing.Size(664, 63);
             this.COMMITSTART_groupBox.TabIndex = 15;
@@ -966,8 +935,8 @@ namespace CommonCommitLogic
             // 
             // ErrorOccurred_Label
             // 
-            this.ErrorOccurred_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ErrorOccurred_Label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ErrorOccurred_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            this.ErrorOccurred_Label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.ErrorOccurred_Label.ForeColor = System.Drawing.Color.Red;
             this.ErrorOccurred_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ErrorOccurred_Label.Location = new System.Drawing.Point(81, 18);
@@ -980,20 +949,20 @@ namespace CommonCommitLogic
             // 
             // Printer_Info_button
             // 
-            this.Printer_Info_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Printer_Info_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.Printer_Info_button.Location = new System.Drawing.Point(356, 36);
             this.Printer_Info_button.Name = "Printer_Info_button";
             this.Printer_Info_button.Size = new System.Drawing.Size(78, 22);
             this.Printer_Info_button.TabIndex = 16;
             this.Printer_Info_button.Text = "印刷機状態";
             this.Printer_Info_button.UseVisualStyleBackColor = true;
-            this.Printer_Info_button.Click += new System.EventHandler(this.Printer_Info_button_Click);
+            this.Printer_Info_button.Click += Printer_Info_button_Click;
             // 
             // StageServerHostLabel
             // 
-            this.StageServerHostLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.StageServerHostLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.StageServerHostLabel.AutoSize = true;
-            this.StageServerHostLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.StageServerHostLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.StageServerHostLabel.Location = new System.Drawing.Point(83, 34);
             this.StageServerHostLabel.Name = "StageServerHostLabel";
             this.StageServerHostLabel.Size = new System.Drawing.Size(132, 24);
@@ -1002,20 +971,18 @@ namespace CommonCommitLogic
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(4, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 12);
+            this.label6.Size = new System.Drawing.Size(80, 15);
             this.label6.TabIndex = 14;
             this.label6.Text = "コミット先ホスト:";
             // 
             // NumberingInformation_label
             // 
-            this.NumberingInformation_label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NumberingInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NumberingInformation_label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            this.NumberingInformation_label.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             this.NumberingInformation_label.ForeColor = System.Drawing.Color.Red;
             this.NumberingInformation_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.NumberingInformation_label.Location = new System.Drawing.Point(6, 15);
@@ -1027,13 +994,12 @@ namespace CommonCommitLogic
             // 
             // NUMBERING_groupBox
             // 
-            this.NUMBERING_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUMBERING_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.NUMBERING_groupBox.Controls.Add(this.NumberingReCheck_button);
             this.NUMBERING_groupBox.Controls.Add(this.NumberingWebServer_button);
             this.NUMBERING_groupBox.Controls.Add(this.NumberingWarningIgnore_button);
             this.NUMBERING_groupBox.Controls.Add(this.NumberingInformation_label);
-            this.NUMBERING_groupBox.Location = new System.Drawing.Point(9, 667);
+            this.NUMBERING_groupBox.Location = new System.Drawing.Point(9, 689);
             this.NUMBERING_groupBox.Name = "NUMBERING_groupBox";
             this.NUMBERING_groupBox.Size = new System.Drawing.Size(664, 66);
             this.NUMBERING_groupBox.TabIndex = 86;
@@ -1042,7 +1008,7 @@ namespace CommonCommitLogic
             // 
             // NumberingReCheck_button
             // 
-            this.NumberingReCheck_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumberingReCheck_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.NumberingReCheck_button.ImageKey = "(なし)";
             this.NumberingReCheck_button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.NumberingReCheck_button.Location = new System.Drawing.Point(485, 9);
@@ -1052,11 +1018,11 @@ namespace CommonCommitLogic
             this.NumberingReCheck_button.TabIndex = 80;
             this.NumberingReCheck_button.Text = "再ﾁｪｯｸ";
             this.NumberingReCheck_button.UseVisualStyleBackColor = true;
-            this.NumberingReCheck_button.Click += new System.EventHandler(this.NumberingReCheck_button_Click);
+            this.NumberingReCheck_button.Click += NumberingReCheck_button_Click;
             // 
             // NumberingWebServer_button
             // 
-            this.NumberingWebServer_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumberingWebServer_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.NumberingWebServer_button.ImageKey = "(なし)";
             this.NumberingWebServer_button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.NumberingWebServer_button.Location = new System.Drawing.Point(384, 9);
@@ -1066,13 +1032,13 @@ namespace CommonCommitLogic
             this.NumberingWebServer_button.TabIndex = 79;
             this.NumberingWebServer_button.Text = "NumberingWebServer_button";
             this.NumberingWebServer_button.UseVisualStyleBackColor = true;
-            this.NumberingWebServer_button.Click += new System.EventHandler(this.NumberingWebServer_button_Click);
+            this.NumberingWebServer_button.Click += NumberingWebServer_button_Click;
             // 
             // NumberingWarningIgnore_button
             // 
-            this.NumberingWarningIgnore_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumberingWarningIgnore_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this.NumberingWarningIgnore_button.BackColor = System.Drawing.Color.OrangeRed;
-            this.NumberingWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NumberingWarningIgnore_button.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 128);
             this.NumberingWarningIgnore_button.ForeColor = System.Drawing.Color.Yellow;
             this.NumberingWarningIgnore_button.Location = new System.Drawing.Point(521, 9);
             this.NumberingWarningIgnore_button.Name = "NumberingWarningIgnore_button";
@@ -1080,12 +1046,11 @@ namespace CommonCommitLogic
             this.NumberingWarningIgnore_button.TabIndex = 0;
             this.NumberingWarningIgnore_button.Text = "採番警告";
             this.NumberingWarningIgnore_button.UseVisualStyleBackColor = false;
-            this.NumberingWarningIgnore_button.Click += new System.EventHandler(this.NumberingWarningIgnore_button_Click);
+            this.NumberingWarningIgnore_button.Click += NumberingWarningIgnore_button_Click;
             // 
             // CADTITLE_groupBox
             // 
-            this.CADTITLE_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CADTITLE_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.CADTITLE_groupBox.Controls.Add(this.panel2);
             this.CADTITLE_groupBox.Location = new System.Drawing.Point(9, 331);
             this.CADTITLE_groupBox.Margin = new System.Windows.Forms.Padding(0);
@@ -1097,8 +1062,7 @@ namespace CommonCommitLogic
             // 
             // CommitPreview_groupBox
             // 
-            this.CommitPreview_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CommitPreview_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.CommitPreview_groupBox.Controls.Add(this.TitleFit_button);
             this.CommitPreview_groupBox.Controls.Add(this.commitPreviewImage);
             this.CommitPreview_groupBox.Controls.Add(this.ImageRezolutonInfo_label);
@@ -1113,7 +1077,7 @@ namespace CommonCommitLogic
             // 
             // TitleFit_button
             // 
-            this.TitleFit_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TitleFit_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this.TitleFit_button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TitleFit_button.Location = new System.Drawing.Point(436, 244);
             this.TitleFit_button.Margin = new System.Windows.Forms.Padding(0);
@@ -1122,15 +1086,14 @@ namespace CommonCommitLogic
             this.TitleFit_button.TabIndex = 0;
             this.TitleFit_button.Text = "全体表示";
             this.TitleFit_button.UseVisualStyleBackColor = true;
-            this.TitleFit_button.Click += new System.EventHandler(this.TitleFit_button_Click);
+            this.TitleFit_button.Click += TitleFit_button_Click;
             // 
             // commitPreviewImage
             // 
-            this.commitPreviewImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commitPreviewImage.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.commitPreviewImage.DebugMode = false;
             this.commitPreviewImage.ErrorImage = null;
-            this.commitPreviewImage.Image = ((System.Drawing.Image)(resources.GetObject("commitPreviewImage.Image")));
+            this.commitPreviewImage.Image = (System.Drawing.Image)resources.GetObject("commitPreviewImage.Image");
             this.commitPreviewImage.Location = new System.Drawing.Point(6, 18);
             this.commitPreviewImage.Margin = new System.Windows.Forms.Padding(1);
             this.commitPreviewImage.Name = "commitPreviewImage";
@@ -1139,11 +1102,10 @@ namespace CommonCommitLogic
             // 
             // CadFileInformation_groupBox
             // 
-            this.CadFileInformation_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CadFileInformation_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             this.CadFileInformation_groupBox.Controls.Add(this.CadFileInformation_label);
             this.CadFileInformation_groupBox.Controls.Add(this.CadFileWarningIgnore_button);
-            this.CadFileInformation_groupBox.Location = new System.Drawing.Point(9, 584);
+            this.CadFileInformation_groupBox.Location = new System.Drawing.Point(9, 606);
             this.CadFileInformation_groupBox.Name = "CadFileInformation_groupBox";
             this.CadFileInformation_groupBox.Size = new System.Drawing.Size(664, 75);
             this.CadFileInformation_groupBox.TabIndex = 89;
@@ -1152,26 +1114,26 @@ namespace CommonCommitLogic
             // 
             // CommitDialogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(684, 899);
-            this.ControlBox = false;
-            this.Controls.Add(this.CadFileInformation_groupBox);
-            this.Controls.Add(this.COMMITSTART_groupBox);
-            this.Controls.Add(this.CommitPreview_groupBox);
-            this.Controls.Add(this.CADTITLE_groupBox);
-            this.Controls.Add(this.NUMBERING_groupBox);
-            this.Controls.Add(this.ArcSuite_groupBox);
-            this.MaximumSize = new System.Drawing.Size(700, 960);
-            this.Name = "CommitDialogForm";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "●東陽ﾂｰﾙ コミット最終確認(各種CAD共通版)";
-            this.TopMost = true;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CommitDialogForm_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CommitDialogForm_FormClosed);
-            this.Load += new System.EventHandler(this.CommitDialogForm_Load);
+            AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            AutoScroll = true;
+            ClientSize = new System.Drawing.Size(684, 921);
+            ControlBox = false;
+            Controls.Add(this.CadFileInformation_groupBox);
+            Controls.Add(this.COMMITSTART_groupBox);
+            Controls.Add(this.CommitPreview_groupBox);
+            Controls.Add(this.CADTITLE_groupBox);
+            Controls.Add(this.NUMBERING_groupBox);
+            Controls.Add(this.ArcSuite_groupBox);
+            MaximumSize = new System.Drawing.Size(700, 960);
+            Name = "CommitDialogForm";
+            SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            Text = "●東陽ﾂｰﾙ コミット最終確認(各種CAD共通版)";
+            TopMost = true;
+            FormClosing += CommitDialogForm_FormClosing;
+            FormClosed += CommitDialogForm_FormClosed;
+            Load += CommitDialogForm_Load;
             this.panel2.ResumeLayout(false);
             this.Variant_panel2.ResumeLayout(false);
             this.Variant_panel2.PerformLayout();
@@ -1203,8 +1165,7 @@ namespace CommonCommitLogic
             this.CommitPreview_groupBox.ResumeLayout(false);
             this.CommitPreview_groupBox.PerformLayout();
             this.CadFileInformation_groupBox.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            ResumeLayout(false);
         }
 
         #endregion
