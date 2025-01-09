@@ -110,7 +110,7 @@ namespace CommonCommitLogic
         {
             get
             {
-                if (arcSuiteSearchResult.arcSuitePreviews != null && arcSuiteSearchResult.arcSuitePreviews.Count == 1 && arcSuiteSearchResult.arcSuitePreviews[0].Found == true)
+                if (arcSuiteSearchResult !=null && arcSuiteSearchResult.arcSuitePreviews != null && arcSuiteSearchResult.arcSuitePreviews.Count == 1 && arcSuiteSearchResult.arcSuitePreviews[0].Found == true)
                 {
 
                     WriteLine($"[プロパティ:CommitDialogForm.ArcsuitePreview]が要求されました ,1件の検索結果を返します");
