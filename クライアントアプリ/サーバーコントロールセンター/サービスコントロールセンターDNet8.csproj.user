@@ -12,6 +12,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
+    <_LastSelectedProfileId>C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\クライアントアプリ\サーバーコントロールセンター\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="Form1.cs">

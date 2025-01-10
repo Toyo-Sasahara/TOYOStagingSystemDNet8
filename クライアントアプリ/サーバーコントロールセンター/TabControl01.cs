@@ -261,7 +261,7 @@ namespace ServerControlCenterApplication
                                                             SccConfig.Config.ClsLogon,
                                                             SccConfig.Config.StageServerHost,
                                                             SccConfig.Config.PipeNameDC);
-            bool reloadRsult = numberingSupportConfigs.ExecuteDownloadAndDeserialize();
+            bool reloadRsult = numberingSupportConfigs.DataSetDownload();
 
 
 

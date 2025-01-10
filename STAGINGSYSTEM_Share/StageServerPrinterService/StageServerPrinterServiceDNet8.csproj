@@ -50,8 +50,12 @@
   <ItemGroup>
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\DocuCentre-V5080.XML" />
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\DocuCentre-VII C3373 試作開発課.XML" />
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055.XML" />
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055Folder.XML" />
+    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055.XML">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055Folder.XML">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-A.XML" />
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-B.XML" />
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\SII Teriostar LP-1030.XML" />
