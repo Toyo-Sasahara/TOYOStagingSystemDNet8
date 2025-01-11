@@ -261,8 +261,9 @@ namespace ServerControlCenterApplication
                                                             SccConfig.Config.ClsLogon,
                                                             SccConfig.Config.StageServerHost,
                                                             SccConfig.Config.PipeNameDC);
-            bool reloadRsult = numberingSupportConfigs.ExecuteDownloadAndDeserialize();
+            bool reloadRsult = numberingSupportConfigs.DataSetDownload();
 
+            bool reloadRsult2 = numberingSupportConfigs.ExecuteDeserialize(logWindowControl.WriteLine, logWindowControl.WriteLine);
 
 
             string ticketCode = null;

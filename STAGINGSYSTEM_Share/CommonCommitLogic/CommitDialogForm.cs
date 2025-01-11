@@ -821,9 +821,9 @@ namespace CommonCommitLogic
                 }
             }
 
-            if (commmitCommonSettings.PrinterDriverName != "")
+            if (commmitCommonSettings.CommitPrinterDriverName != "")
             {
-                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commmitCommonSettings.PrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
+                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commmitCommonSettings.CommitPrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
             }
             else if (commmitCommonSettings.PC3FileName != "")
             {
