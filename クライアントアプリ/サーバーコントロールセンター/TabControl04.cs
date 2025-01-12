@@ -21,8 +21,6 @@ namespace ServerControlCenterApplication
         CommitPrinters CommitPrinters = new CommitPrinters();
 
 
-        readonly RemoteClientMemoryMapdFile rmc_MemoryMapdFile = new RemoteClientMemoryMapdFile(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost);
-
 
         /// <summary>
         /// ■コンストラクタ
@@ -170,6 +168,8 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private bool ReadFormControlsAndSetInTheMMPF(bool objectConvNew = false, SasaLibDelegateWriteLine WriteLine = null)
         {
+            RemoteClientMemoryMapdFile rmc_MemoryMapdFile = new RemoteClientMemoryMapdFile(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, WriteLine: logWindowControl.WriteLine);
+
             if (MessageBox.Show(caption: "最終確認", text: $"接続先は {accountUserForm.StageServerHostName_comboBox.Text} です。\r\n" +
                 $"正しいですか？", buttons: MessageBoxButtons.OKCancel) != DialogResult.OK)
             {
@@ -557,6 +557,8 @@ namespace ServerControlCenterApplication
         /// </summary>
         internal void ReadMMPFAndSetInTheFormContorols(bool objectConvNew = false, SasaLibDelegateWriteLine WriteLine = null)
         {
+            RemoteClientMemoryMapdFile rmc_MemoryMapdFile = new RemoteClientMemoryMapdFile(SccConfig.Config.ClientDomainName, SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, SccConfig.Config.StageServerHost, WriteLine: logWindowControl.WriteLine);
+
             rmc_MemoryMapdFile.StageServerHost = accountUserForm.StageServerHostName_comboBox.Text;
 
             /// 処理１

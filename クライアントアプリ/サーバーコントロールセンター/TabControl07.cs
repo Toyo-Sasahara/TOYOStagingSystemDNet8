@@ -124,6 +124,11 @@ namespace ServerControlCenterApplication
             FileSendTest_Dist_ServerFuleFileName_textBox.Text = System.IO.Path.Combine(@"D:\", System.IO.Path.GetFileName(FileSendTest_Souce_LocalFullFileName_textBox.Text));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FileSendStart_button_Click(object sender, EventArgs e)
         {
             FileSendTest_Souce_LocalFullFileName_textBox.Text = FileSendTest_Souce_LocalFullFileName_textBox.Text.TrimStart('\"').TrimEnd('\"');
@@ -141,7 +146,7 @@ namespace ServerControlCenterApplication
                 string resultMsg;
                 var ans = rmc_DRAWCAPTURE.FileSend(
                     FileSendTest_Souce_LocalFullFileName_textBox.Text, FileSendTest_Dist_ServerFuleFileName_textBox.Text,
-                    resultMsg: out resultMsg, objectConvNew: FileSendWriteObjectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine, IsDebugMsgWriteLine: true);
+                    resultMsg: out resultMsg, objectConvNew: FileSendWriteObjectConvNew_checkBox.Checked, WriteLine: logWindowControl.WriteLine, verbose: true);
 
                 logWindowControl.WriteLine($"■FileSend(..)  実行結果戻り値 = {ans},  out resultMsg = {resultMsg}");
             }
