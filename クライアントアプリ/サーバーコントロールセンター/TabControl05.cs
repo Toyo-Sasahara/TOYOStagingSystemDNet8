@@ -702,17 +702,17 @@ namespace ServerControlCenterApplication
                 {
 
                     DebugConsole.WriteLine($"ServerResPon1 = {ServerResPon1}");
-                    string command = StageServerConfig_VarbleName_comboBox.Text;
-                    stst.WriteString(command);
+                    string VariableName = StageServerConfig_VarbleName_comboBox.Text;
+                    stst.WriteString(VariableName); // 書き込む変数を送信
 
                     ObjectWithType objectWithType;
                     using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                     {
-                        objectWithType = reader.ReadObject<ObjectWithType>(binaryConvertType: BinaryConvertTYPE.JsonSerializer);
+                        objectWithType = reader.ReadObject<ObjectWithType>(binaryConvertType: BinaryConvertTYPE.JsonSerializer);  // 現在の変数の値を受信
                         if (objectWithType != null)
                         {
                             StageServerConfig_VarbleType_textbox.Text = objectWithType.TypeName;
-                            Console.WriteLine($"hostname:{hostname} , receveFieldType = {objectWithType}");
+                            Console.WriteLine($"hostname:{hostname} , VariableName = {VariableName} , 現在の変数型 = {objectWithType.TypeName}, 現在のデータ  = {objectWithType.Data}");
 
                             using (var writer = new BinaryWriter(pipeCltStream, Encoding.UTF8, true))
                             {
@@ -810,19 +810,19 @@ namespace ServerControlCenterApplication
             //
             bool _Method_GetCommitConfigValue_V2(NamedPipeClientStream pipeCltStream)
             {
-                logWindowControl.WriteLine("GetCommitConfigValue(..) スタート");
+                logWindowControl.WriteLine("_Method_GetCommitConfigValue_V2(..) スタート");
 
                 StreamString stst = new StreamString(pipeCltStream);
 
-                string ServerResPon1 = stst.ReadString(10000, null);
+                string ServerResPon1 = stst.ReadString(1000, null);
 
                 if (ServerResPon1 != null)
                 {
-                    logWindowControl.WriteLine($"ServerResPon1 = {ServerResPon1}");
+                    logWindowControl.WriteLine($"_Method_GetCommitConfigValue_V2(..) ServerResPon1 = {ServerResPon1}");
 
                     stst.WriteString(StageServerConfig_VarbleName_comboBox.Text); // 変数名送信
 
-                    logWindowControl.WriteLine($"ターゲット:{hostname} 問い合わせる変数名 = 【{StageServerConfig_VarbleName_comboBox.Text}】");
+                    logWindowControl.WriteLine($"_Method_GetCommitConfigValue_V2(..) ターゲットサーバー:{hostname} 問い合わせる変数名 = 【{StageServerConfig_VarbleName_comboBox.Text}】");
 
 
                     ObjectWithType receveObj;
@@ -833,17 +833,17 @@ namespace ServerControlCenterApplication
                         if (receveObj != null)
                         {
                             StageServerConfig_VarbleType_textbox.Text = receveObj.TypeName;
-                            logWindowControl.WriteLine($"サーバー:{hostname} 名前付きPIPE:{PIPENAME} 、公開変数【{StageServerConfig_VarbleName_comboBox.Text}】＝【{receveObj.Data}】 型：{receveObj.TypeName}");
+                            logWindowControl.WriteLine($"_Method_GetCommitConfigValue_V2(..) サーバー:{hostname} 名前付きPIPE:{PIPENAME} 、公開変数【{StageServerConfig_VarbleName_comboBox.Text}】の 値は【{receveObj.Data}】です（型：{receveObj.TypeName}）");
                         }
                         else
-                            logWindowControl.WriteLine($"戻り値がnull");
+                            logWindowControl.WriteLine($"_Method_GetCommitConfigValue_V2(..) 戻り値が null");
                     }
 
                     return true;
                 }
                 else
                 {
-                    logWindowControl.WriteLine($"接続失敗 タイムアウト");
+                    logWindowControl.WriteLine($"_Method_GetCommitConfigValue_V2(..) 接続失敗 タイムアウト");
                     return false;
                 }
             }

@@ -107,17 +107,19 @@ namespace ServerControlCenterApplication
         /// <returns></returns>
         public bool Command_ConnnectStart(string CommandName, delegate_CommandHandShakeStart delegate_ExecuteCommandMessageSendFunc, SasaLibDelegateWriteLine WriteLine = null)
         {
-            if (WriteLine == null) WriteLine = DebugConsole.WriteLine;
-
             if (pingOK == false)
                 return false;
-
             DebugConsole.WriteLine($"接続先 {serverHostname} {pipeName} 接続文字列:{CMDS.ConnectKeyword}");
-            bool result = false;
-            
+
             // TODO: ClsLogonDummy を 書き換えた
-            new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, () =>
+            WithFakeAccount withFakeAccount = new WithFakeAccount(DomainName, UserName, UserPassword, ClsLogon, _fakeExecute);
+            bool fakedExecuteresult = (bool)withFakeAccount.GetResult();
+            return fakedExecuteresult;
+
+            object _fakeExecute()
             {
+                if (WriteLine == null) WriteLine = DebugConsole.WriteLine;
+
                 NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(serverHostname, pipeName);
                 try
                 {
@@ -129,9 +131,8 @@ namespace ServerControlCenterApplication
                     catch (Exception ex)
                     {
                         ////PipeConnectionStatus = false;
-                        DebugConsole.WriteLine($"※Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname} PIPE名:{pipeName} 実行コマンド:{CommandName} NamedPipeClientStream.Connect(..)にて例外検知 {ex.Message}");
-                        result = false;
-                        return;
+                        WriteLine($"※Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname} PIPE名:{pipeName} 実行コマンド:{CommandName} NamedPipeClientStream.Connect(..)にて例外検知 {ex.Message}");
+                        return false;
                     }
                     // サーバーからのサーバ識別文字列を受け取ります。
                     StreamString stst = new StreamString(pipeCltStream);
@@ -142,46 +143,48 @@ namespace ServerControlCenterApplication
                     if (OperationCanceledException || AggregateException)
                     {
                         SasaLib.Eventlog.Log.WriteEntry("TOYOCOMMON", EventLogEntryType.Error, 6004, $"RemotePipeClient.Command_ConnnectStart(..) PIPE接続失敗。ハンドシェイクでタイムアウト");
-                        result = false;
-                        return;
+                        return false;
                     }
                     if (CheckFirstMessage(input0))
                     {
-                        DebugConsole.WriteLine($"PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} からの接続文字列{input0}は期待値です");
+                        WriteLine($"Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} からの接続文字列{input0}は期待値です");
                         stst.WriteString(CommandName);
 
-                        //WriteLine($"≫[{DateTime.Now}]:[{serverHostname}:{pipeName}]:ｺﾏﾝﾄﾞ:{CommandName} 接続しました。回答待ち・・・");
+                        WriteLine($"Command_ConnnectStart(..) [{DateTime.Now}]:[{serverHostname}:{pipeName}]:ｺﾏﾝﾄﾞ:【{CommandName}】 接続しました。回答待ち・・・");
 
                         bool result = delegate_ExecuteCommandMessageSendFunc(pipeCltStream);
 
-                        //DebugConsole.WriteLine($"※PIPEｻｰﾊﾞｰ:{serverHostname} PIPE名:{pipeName} コマンド:{CommandName} 処理関数の結果 {result} です");
+                        if (result)
+                            WriteLine($"Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname} PIPE名:{pipeName} コマンド:【{CommandName}】 処理関数の結果 {result} です");
+                        else
+                            WriteLine($"※Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname} PIPE名:{pipeName} コマンド:【{CommandName}】 処理に失敗しました");
                     }
                     else
                     {
-                        WriteLine($"※PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} ステージサーバーからの接続文字列{input0}が期待と違います");
+                        WriteLine($"※Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} ステージサーバーからの接続文字列{input0}が期待と違います");
                         pipeCltStream.Close();
-                        result = false;
-                        return;
+                        return false;
                     }
                     // Give the client process some time to display results before exiting.
                 }
                 catch (Exception ex)
                 {
-                    //PipeConnectionStatus = false;
 
                     if (pipeCltStream.IsConnected == false)
                     {
-                        WriteLine($"※PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} コマンド:{CommandName} 、サーバーから途中で切断されました");
+                        WriteLine($"※Command_ConnnectStart(..) PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} コマンド:{CommandName} 、サーバーから途中で切断されました\n");
                     }
                     else
                     {
                         SasaLib.Eventlog.Log.WriteEntry("TOYODATABASE", EventLogEntryType.Error, 6002, $"RemotePipeClient.Command_ConnnectStart(..) 、PIPEｻｰﾊﾞｰ:{serverHostname}PIPE名:{pipeName} 例外発生 {ex.Message} ");
                     }
                 }
-            });
-
-
-            return result;
+                finally
+                {
+                    WriteLine("");
+                }
+                return false;
+            }
         }
 
         /// <summary>
