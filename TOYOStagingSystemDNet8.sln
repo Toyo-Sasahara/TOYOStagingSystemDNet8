@@ -73,6 +73,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SasaLibDNet8.PictureBoxCont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieldValueSetDNet8", "STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetDNet8.csproj", "{C66417A1-6E8D-43B3-B467-D555B2B4128E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SasaLibDNet8.LDAP", "..\SaSaLibDNet8\SasaLibDNet8.LDAP\SasaLibDNet8.LDAP.csproj", "{78F6AC67-8F60-49AB-906F-D8065EBEFA86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -305,6 +307,14 @@ Global
 		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Release|x64.ActiveCfg = Release|Any CPU
 		{C66417A1-6E8D-43B3-B467-D555B2B4128E}.Release|x64.Build.0 = Release|Any CPU
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Debug|x64.ActiveCfg = Debug|x64
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Debug|x64.Build.0 = Debug|x64
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Release|x64.ActiveCfg = Release|x64
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -340,6 +350,7 @@ Global
 		{E65C2EA3-7361-41F4-9309-83E502449CD7} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{63EB64A1-25DC-4781-80E0-DA1286F29732} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{C66417A1-6E8D-43B3-B467-D555B2B4128E} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
+		{78F6AC67-8F60-49AB-906F-D8065EBEFA86} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69119819-4D3C-4E24-B854-453C41AA04D3}
@@ -363,6 +374,7 @@ Global
 		STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems*{66ab9a02-40c3-42b4-827f-a617e68faadb}*SharedItemsImports = 5
 		STAGINGSYSTEM_Share\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.projitems*{6f60c0d5-a5ad-4b6e-8974-4544426311b5}*SharedItemsImports = 4
 		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{70461995-4efb-4f3d-9ae1-c3905ba6a58d}*SharedItemsImports = 5
+		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{78f6ac67-8f60-49ab-906f-d8065ebefa86}*SharedItemsImports = 5
 		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{89c74189-ee5e-44d5-9fdf-9550ad88a8cf}*SharedItemsImports = 5
 		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{8be14356-60c6-4aab-bc0e-96e2d06cb30c}*SharedItemsImports = 5
 		STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems*{920e4898-5862-4601-9ca4-d98baa04dba3}*SharedItemsImports = 5
