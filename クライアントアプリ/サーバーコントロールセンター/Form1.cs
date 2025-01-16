@@ -44,8 +44,6 @@ namespace ServerControlCenterApplication
         {
             InitializeComponent();
 
-            // ■PIPEコントロールサーバー実行  
-            VariableControlPipeServer PipeServer = new VariableControlPipeServer("SERVERCONTROLCENTER", "Accept Ver 1.22.08", SccConfig.Config, Console.WriteLine, (int)this.Handle, PipeServerUserMsgBoxShow);
 
 
             tabControl01 = new TabControl01(this);
@@ -106,19 +104,6 @@ namespace ServerControlCenterApplication
 
         }
 
-        /// <summary>
-        /// ■クライアント側 パイプサーバー用MessageBox.Show(..)型メソッド
-        /// </summary>
-        /// <param name="Message"></param>
-        /// <param name="Title"></param>
-        /// <param name="messageBoxButtons"></param>
-        /// <param name="messageBoxIcon"></param>
-        /// <returns></returns>
-        DialogResult PipeServerUserMsgBoxShow(string Message, string Title, MessageBoxButtons messageBoxButtons, MessageBoxIcon messageBoxIcon)
-        {
-            var result = MessageBox.Show(owner: this, Message, Title, messageBoxButtons, messageBoxIcon);
-            return result;
-        }
 
     }
 }

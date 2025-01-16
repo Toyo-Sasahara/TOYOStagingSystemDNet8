@@ -90,11 +90,15 @@ namespace ServerControlCenterApplication
             panel6 = new System.Windows.Forms.Panel();
             PIPECMDNAME_comboBox = new System.Windows.Forms.ComboBox();
             label12 = new System.Windows.Forms.Label();
-            PIPENAME_comboBox = new System.Windows.Forms.ComboBox();
+            ClientSidePIPENAME_comboBox = new System.Windows.Forms.ComboBox();
             label10 = new System.Windows.Forms.Label();
             PIPETEST_button = new System.Windows.Forms.Button();
             PIPEHOSTNAME_textBox = new System.Windows.Forms.TextBox();
             label11 = new System.Windows.Forms.Label();
+            panel7 = new System.Windows.Forms.Panel();
+            ServerSidePIPENAME_comboBox = new System.Windows.Forms.ComboBox();
+            label13 = new System.Windows.Forms.Label();
+            PiepServerStart_button = new System.Windows.Forms.Button();
             groupBox11.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -105,6 +109,7 @@ namespace ServerControlCenterApplication
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             panel6.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox11
@@ -711,6 +716,7 @@ namespace ServerControlCenterApplication
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(panel7);
             groupBox2.Controls.Add(panel6);
             groupBox2.Location = new System.Drawing.Point(389, 549);
             groupBox2.Name = "groupBox2";
@@ -723,14 +729,14 @@ namespace ServerControlCenterApplication
             // 
             panel6.Controls.Add(PIPECMDNAME_comboBox);
             panel6.Controls.Add(label12);
-            panel6.Controls.Add(PIPENAME_comboBox);
+            panel6.Controls.Add(ClientSidePIPENAME_comboBox);
             panel6.Controls.Add(label10);
             panel6.Controls.Add(PIPETEST_button);
             panel6.Controls.Add(PIPEHOSTNAME_textBox);
             panel6.Controls.Add(label11);
-            panel6.Location = new System.Drawing.Point(6, 22);
+            panel6.Location = new System.Drawing.Point(6, 58);
             panel6.Name = "panel6";
-            panel6.Size = new System.Drawing.Size(340, 114);
+            panel6.Size = new System.Drawing.Size(352, 99);
             panel6.TabIndex = 88;
             // 
             // PIPECMDNAME_comboBox
@@ -752,15 +758,15 @@ namespace ServerControlCenterApplication
             label12.TabIndex = 89;
             label12.Text = "CMD名";
             // 
-            // PIPENAME_comboBox
+            // ClientSidePIPENAME_comboBox
             // 
-            PIPENAME_comboBox.FormattingEnabled = true;
-            PIPENAME_comboBox.Items.AddRange(new object[] { "SERVERCONTROLCENTER", "Inventor2025TOYOaddin", "AutoCad2025TOYOaddin", "Vault2025TOYOaddin", "ToyoRegistClient" });
-            PIPENAME_comboBox.Location = new System.Drawing.Point(61, 37);
-            PIPENAME_comboBox.Name = "PIPENAME_comboBox";
-            PIPENAME_comboBox.Size = new System.Drawing.Size(182, 23);
-            PIPENAME_comboBox.TabIndex = 88;
-            PIPENAME_comboBox.Text = "SERVERCONTROLCENTER";
+            ClientSidePIPENAME_comboBox.FormattingEnabled = true;
+            ClientSidePIPENAME_comboBox.Items.AddRange(new object[] { "SERVERCONTROLCENTER1", "SERVERCONTROLCENTER2", "SERVERCONTROLCENTER3", "SERVERCONTROLCENTER4", "SERVERCONTROLCENTER5", "Inventor2025TOYOaddin", "AutoCad2025TOYOaddin", "Vault2025TOYOaddin", "ToyoRegistClient" });
+            ClientSidePIPENAME_comboBox.Location = new System.Drawing.Point(61, 37);
+            ClientSidePIPENAME_comboBox.Name = "ClientSidePIPENAME_comboBox";
+            ClientSidePIPENAME_comboBox.Size = new System.Drawing.Size(182, 23);
+            ClientSidePIPENAME_comboBox.TabIndex = 88;
+            ClientSidePIPENAME_comboBox.Text = "SERVERCONTROLCENTER1";
             // 
             // label10
             // 
@@ -798,6 +804,44 @@ namespace ServerControlCenterApplication
             label11.TabIndex = 3;
             label11.Text = "PIPE名";
             // 
+            // panel7
+            // 
+            panel7.Controls.Add(ServerSidePIPENAME_comboBox);
+            panel7.Controls.Add(label13);
+            panel7.Controls.Add(PiepServerStart_button);
+            panel7.Location = new System.Drawing.Point(6, 13);
+            panel7.Name = "panel7";
+            panel7.Size = new System.Drawing.Size(352, 39);
+            panel7.TabIndex = 89;
+            // 
+            // ServerSidePIPENAME_comboBox
+            // 
+            ServerSidePIPENAME_comboBox.FormattingEnabled = true;
+            ServerSidePIPENAME_comboBox.Items.AddRange(new object[] { "SERVERCONTROLCENTER1", "SERVERCONTROLCENTER2", "SERVERCONTROLCENTER3", "SERVERCONTROLCENTER4", "SERVERCONTROLCENTER5" });
+            ServerSidePIPENAME_comboBox.Location = new System.Drawing.Point(9, 9);
+            ServerSidePIPENAME_comboBox.Name = "ServerSidePIPENAME_comboBox";
+            ServerSidePIPENAME_comboBox.Size = new System.Drawing.Size(173, 23);
+            ServerSidePIPENAME_comboBox.TabIndex = 90;
+            ServerSidePIPENAME_comboBox.Text = "SERVERCONTROLCENTER1";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new System.Drawing.Point(3, 13);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(0, 15);
+            label13.TabIndex = 89;
+            // 
+            // PiepServerStart_button
+            // 
+            PiepServerStart_button.Location = new System.Drawing.Point(261, 7);
+            PiepServerStart_button.Name = "PiepServerStart_button";
+            PiepServerStart_button.Size = new System.Drawing.Size(88, 24);
+            PiepServerStart_button.TabIndex = 87;
+            PiepServerStart_button.Text = "サーバースタート";
+            PiepServerStart_button.UseVisualStyleBackColor = true;
+            PiepServerStart_button.Click += PiepServerStart_button_Click;
+            // 
             // TabControl01
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -831,6 +875,8 @@ namespace ServerControlCenterApplication
             groupBox2.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -900,7 +946,11 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.TextBox PIPEHOSTNAME_textBox;
         private System.Windows.Forms.ComboBox PIPECMDNAME_comboBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox PIPENAME_comboBox;
+        private System.Windows.Forms.ComboBox ClientSidePIPENAME_comboBox;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox ServerSidePIPENAME_comboBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button PiepServerStart_button;
     }
 }

@@ -34,16 +34,23 @@ namespace ServerControlCenterApplication
         {
             try
             {
+
                 Invoke(new Action(() =>
                 {
                     /// UIを操作する処理
                     LogWindow_textBox.AppendText(msg + "\r\n");
                 }));
+
             }
             catch (Exception ex)
             {
                 DebugConsole.WriteLine(ex.Message);
             }
+        }
+
+        public void WriteLine2(string msg)
+        {
+            LogWindow_textBox.AppendText(msg + "\r\n");
         }
 
     }

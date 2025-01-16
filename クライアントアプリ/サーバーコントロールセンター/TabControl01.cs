@@ -760,7 +760,7 @@ namespace ServerControlCenterApplication
 
         private async void PIPETEST_button_Click(object sender, EventArgs e)
         {
-            VariableControlPipeClient oVCPipeClient = new VariableControlPipeClient("", "", "", false, PIPEHOSTNAME_textBox.Text, PIPENAME_comboBox.Text);
+            VariableControlPipeClient oVCPipeClient = new VariableControlPipeClient("", "", "", false, PIPEHOSTNAME_textBox.Text, ClientSidePIPENAME_comboBox.Text);
 
             string result_UserDomainFullName = "";
 
@@ -776,6 +776,28 @@ namespace ServerControlCenterApplication
                 logWindowControl.WriteLine($"\n■VariableControlPipeClient.GetZeroValue_DataCommand(..) 実行結果： {result_UserDomainFullName}");
 
         }
+
+        private void PiepServerStart_button_Click(object sender, EventArgs e)
+        {
+            // ■PIPEコントロールサーバー実行  
+            VariableControlPipeServer PipeServer = new VariableControlPipeServer(ServerSidePIPENAME_comboBox.Text, "Accept Ver 1.22.08", SccConfig.Config, DebugConsole.WriteLine, (int)this.Handle, PipeServerUserMsgBoxShow);
+
+        }
+
+        /// <summary>
+        /// ■クライアント側 パイプサーバー用MessageBox.Show(..)型メソッド
+        /// </summary>
+        /// <param name="Message"></param>
+        /// <param name="Title"></param>
+        /// <param name="messageBoxButtons"></param>
+        /// <param name="messageBoxIcon"></param>
+        /// <returns></returns>
+        DialogResult PipeServerUserMsgBoxShow(string Message, string Title, MessageBoxButtons messageBoxButtons, MessageBoxIcon messageBoxIcon)
+        {
+            var result = MessageBox.Show(owner: this, Message, Title, messageBoxButtons, messageBoxIcon);
+            return result;
+        }
+
     }
 
 
