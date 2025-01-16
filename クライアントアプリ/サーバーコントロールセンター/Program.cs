@@ -1,4 +1,5 @@
 ﻿using SasaLib;
+using SasaLib.VariableControlPipeServer;
 using SharedClassLibrary;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,8 @@ namespace ServerControlCenterApplication
 
             }
 
-            GlovalValues.Mylog.WriteLine("■アプリケーションスタート MainConfig.xml読み込み済み");
+            GlovalValues.Mylog.WriteLine("■アプリケーションスタート ServerControlConfig.xml読み込み済み");
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

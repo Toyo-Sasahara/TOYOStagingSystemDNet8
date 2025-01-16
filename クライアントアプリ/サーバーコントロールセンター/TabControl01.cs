@@ -13,6 +13,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToyoStageService;
+using SasaLib.VariableControlPipeClient;
+using SasaLib.VariableControlPipeServer;
+
+using Windows.Networking;
+
 #if NETCOREAPP
 using System.Runtime.Versioning;
 #endif
@@ -751,9 +756,26 @@ namespace ServerControlCenterApplication
             mainForm.CommitPrinters.GetData(objectConvNew: true, logWindowControl.WriteLine);
 
             mainForm.CommitPrinters.SetComboBox(ref PrinterSel_comboBox);
-
         }
 
+        private async void PIPETEST_button_Click(object sender, EventArgs e)
+        {
+            VariableControlPipeClient oVCPipeClient = new VariableControlPipeClient("", "", "", false, PIPEHOSTNAME_textBox.Text, PIPENAME_comboBox.Text);
+
+            string result_UserDomainFullName = "";
+
+            // コントロールに対する処理
+            logWindowControl.WriteLine($"VariableControlPipeClient.GetZeroValue_DataCommand(..) 開始（同期モード）");
+            //result_UserDomainFullName = oVCPipeClient.GetZeroValue_DataCommandAsync(CMDNAME.GetCurrentUserDomainFullName, WriteLine: DebugConsole.WriteLine).Result;
+
+            result_UserDomainFullName = oVCPipeClient.GetZeroValue_DataCommand(PIPECMDNAME_comboBox.Text, WriteLine: logWindowControl.WriteLine);
+
+            if (result_UserDomainFullName == null)
+                logWindowControl.WriteLine($"\n※VariableControlPipeClient.GetZeroValue_DataCommand(..) 実行結果： 失敗。null が返されました");
+            else
+                logWindowControl.WriteLine($"\n■VariableControlPipeClient.GetZeroValue_DataCommand(..) 実行結果： {result_UserDomainFullName}");
+
+        }
     }
 
 

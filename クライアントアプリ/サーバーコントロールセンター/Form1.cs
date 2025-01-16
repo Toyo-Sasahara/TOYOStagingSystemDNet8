@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using SasaLib.VariableControlPipeServer;
+
 #if NETCOREAPP
 using System.Runtime.Versioning;
 #endif
@@ -41,6 +43,9 @@ namespace ServerControlCenterApplication
         public Form1()
         {
             InitializeComponent();
+
+            // ■PIPEコントロールサーバー実行  
+            VariableControlPipeServer PipeServer = new VariableControlPipeServer("SERVERCONTROLCENTER", "Accept Ver 1.22.08", SccConfig.Config, Console.WriteLine, (int)this.Handle, PipeServerUserMsgBoxShow);
 
 
             tabControl01 = new TabControl01(this);
@@ -99,6 +104,20 @@ namespace ServerControlCenterApplication
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// ■クライアント側 パイプサーバー用MessageBox.Show(..)型メソッド
+        /// </summary>
+        /// <param name="Message"></param>
+        /// <param name="Title"></param>
+        /// <param name="messageBoxButtons"></param>
+        /// <param name="messageBoxIcon"></param>
+        /// <returns></returns>
+        DialogResult PipeServerUserMsgBoxShow(string Message, string Title, MessageBoxButtons messageBoxButtons, MessageBoxIcon messageBoxIcon)
+        {
+            var result = MessageBox.Show(owner: this, Message, Title, messageBoxButtons, messageBoxIcon);
+            return result;
         }
 
     }
