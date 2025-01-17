@@ -13,7 +13,11 @@
 		<Deterministic>false</Deterministic>
 		<Nullable>disable</Nullable>
 		<RootNamespace>CommonCommitLogic</RootNamespace>
+		<AssemblyName>CommonCommitLogic</AssemblyName>
 	</PropertyGroup>
+	<ItemGroup>
+	  <EmbeddedResource Remove="TestForm1.resx" />
+	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="TESTFILE\XX-12345-701~720.dwg" />
 	  <None Remove="TESTFILE\XX-12345-993.dwg" />
@@ -29,9 +33,9 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperCadDrawingFile.cs" Link="CommitHelperCadDrawingFile.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperNumbering.cs" Link="CommitHelperNumbering.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperNumbering_Partial.cs" Link="CommitHelperNumbering_Partial.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\DebugForm.cs" Link="DebugForm.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\DebugForm.Designer.cs" Link="DebugForm.Designer.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ReserveNumber.cs" Link="ReserveNumber.cs" />
-	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TestForm1.cs" Link="TestForm1.cs" />
-	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TestForm1.Designer.cs" Link="TestForm1.Designer.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TypeNumber.cs" Link="TypeNumber.cs" />
 	</ItemGroup>
 	<ItemGroup>
@@ -82,6 +86,9 @@
 	  <None Update="Properties\Settings.settings">
 	    <Generator>SettingsSingleFileGenerator</Generator>
 	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
+	  <None Update="Resources\エマージェンシーバックグラウンド.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
 	<Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />

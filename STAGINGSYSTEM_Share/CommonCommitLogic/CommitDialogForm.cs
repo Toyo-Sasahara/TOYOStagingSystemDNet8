@@ -1,5 +1,5 @@
 ﻿#if NETCOREAPP
-using CommonCommitLogicDNet8.Properties;
+using CommonCommitLogic.Properties;
 #else
 using CommonCommitLogic.Properties;
 #endif
@@ -104,13 +104,18 @@ namespace CommonCommitLogic
         private ArcSuiteSearchResult arcSuiteSearchResult;
 
         /// <summary>
+        /// デバッグフォームのインスタンス
+        /// </summary>
+        private DebugForm debugForm;
+
+        /// <summary>
         /// 検索結果が1件のみに通用するアークスイート検索図
         /// </summary>
         private ArcsuitePreview arcsuitePreview
         {
             get
             {
-                if (arcSuiteSearchResult !=null && arcSuiteSearchResult.arcSuitePreviews != null && arcSuiteSearchResult.arcSuitePreviews.Count == 1 && arcSuiteSearchResult.arcSuitePreviews[0].Found == true)
+                if (arcSuiteSearchResult != null && arcSuiteSearchResult.arcSuitePreviews != null && arcSuiteSearchResult.arcSuitePreviews.Count == 1 && arcSuiteSearchResult.arcSuitePreviews[0].Found == true)
                 {
 
                     WriteLine($"[プロパティ:CommitDialogForm.ArcsuitePreview]が要求されました ,1件の検索結果を返します");
@@ -1535,7 +1540,7 @@ namespace CommonCommitLogic
         /// <summary>
         /// ■エマージェンシーイメージを指定ボタンに表示します。
         /// </summary>
-        private void ButtonBackgroundImageWarrningSet(System.Windows.Forms.Button button, string buttonMsg)
+        internal void ButtonBackgroundImageWarrningSet(System.Windows.Forms.Button button, string buttonMsg)
         {
             ArcSuiteDrawingShow_button.Enabled = true;
 
@@ -1807,6 +1812,36 @@ namespace CommonCommitLogic
         {
             if (Variant_panel1.Visible)
                 ActiveVariantEnd_textBox.Focus();
+        }
+
+        /// <summary>
+        /// デバッグフォームボタン
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DEBUG_button_Click(object sender, EventArgs e)
+        {
+            // Shiftキーが押されているかを確認
+            if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
+            {
+                // DebugFormが既に開かれているか確認
+                if (debugForm == null || debugForm.IsDisposed)
+                {
+                    // 新しいDebugFormを作成
+                    debugForm = new DebugForm(this);
+                    debugForm.Show(this); // モードレスで開く
+                }
+                else
+                {
+                    // 既に開かれている場合はアクティブにする
+                    debugForm.BringToFront();
+                }
+            }
+            else
+            {
+                // Shiftキーが押されていない場合は通知
+                MessageBox.Show("Shiftキーを押しながらボタンをクリックしてください。", "注意", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
