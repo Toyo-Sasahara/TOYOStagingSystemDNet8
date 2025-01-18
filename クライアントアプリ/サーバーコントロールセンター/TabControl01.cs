@@ -55,6 +55,11 @@ namespace ServerControlCenterApplication
             DebugForm_PictureBox.AllowDrop = true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void accountUserForm_AccountChanged(object sender, EventArgs e)
         {
             logWindowControl.WriteLine("accountUserForm_AccountChanged(..)実行・・・\r\n");
@@ -68,11 +73,13 @@ namespace ServerControlCenterApplication
 
                 }; if (InvokeRequired) { Invoke(method); } else { method(); }
             });
-
-
-
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void accountUserForm_HostChanged(object sender, EventArgs e)
         {
             logWindowControl.WriteLine("accountUserForm_AccountChanged(..)実行・・・\r\n");
@@ -762,18 +769,37 @@ namespace ServerControlCenterApplication
         {
             VariableControlPipeClient oVCPipeClient = new VariableControlPipeClient("", "", "", false, PIPEHOSTNAME_textBox.Text, ClientSidePIPENAME_comboBox.Text);
 
-            string result_UserDomainFullName = "";
+            switch (PIPECMDNAME_comboBox.Text)
+            {
+                case CMDNAME.GetCurrentUserInformation:
+                case CMDNAME.GetCurrentUserName:
+                case CMDNAME.GetCurrentUserDomainName:
+                case CMDNAME.GetCurrentUserDomainFullName:
 
-            // コントロールに対する処理
-            logWindowControl.WriteLine($"VariableControlPipeClient.GetZeroValue_DataCommand(..) 開始（同期モード）");
-            //result_UserDomainFullName = oVCPipeClient.GetZeroValue_DataCommandAsync(CMDNAME.GetCurrentUserDomainFullName, WriteLine: DebugConsole.WriteLine).Result;
+                    string result_UserDomainFullName = "";
 
-            result_UserDomainFullName = oVCPipeClient.GetZeroValue_DataCommand(PIPECMDNAME_comboBox.Text, WriteLine: logWindowControl.WriteLine);
+                    // コントロールに対する処理
+                    logWindowControl.WriteLine($"VariableControlPipeClient.GetZeroValue_DataCommand(..) 開始（同期モード）");
+                    //result_UserDomainFullName = oVCPipeClient.GetZeroValue_DataCommandAsync(CMDNAME.GetCurrentUserDomainFullName, WriteLine: DebugConsole.WriteLine).Result;
 
-            if (result_UserDomainFullName == null)
-                logWindowControl.WriteLine($"\n※VariableControlPipeClient.GetZeroValue_DataCommand(..) 実行結果： 失敗。null が返されました");
-            else
-                logWindowControl.WriteLine($"\n■VariableControlPipeClient.GetZeroValue_DataCommand(..) 実行結果： {result_UserDomainFullName}");
+                    result_UserDomainFullName = oVCPipeClient.GetZeroValue_DataCommand(PIPECMDNAME_comboBox.Text, WriteLine: logWindowControl.WriteLine);
+
+                    if (result_UserDomainFullName == null)
+                        logWindowControl.WriteLine($"\n※VariableControlPipeClient.GetZeroValue_DataCommand(..) 実行結果： 失敗。null が返されました");
+                    else
+                        logWindowControl.WriteLine($"\n■VariableControlPipeClient.GetZeroValue_DataCommand(..) 実行結果： {result_UserDomainFullName}");
+                    break;
+
+                case CMDNAME.GetValue_V2:
+                    logWindowControl.WriteLine($"VariableControlPipeClient.GetZeroValue_DataCommand(..) 開始（同期モード）");
+
+                    object startDateTImeObj;
+
+                    startDateTImeObj = oVCPipeClient.GetValueAndValueType_DataCommand(Value1_textBox.Text, objectConvNew: false, WriteLine: logWindowControl.WriteLine);
+
+                    break;
+
+            }
 
         }
 
@@ -798,6 +824,10 @@ namespace ServerControlCenterApplication
             return result;
         }
 
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 

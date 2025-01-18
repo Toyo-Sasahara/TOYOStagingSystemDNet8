@@ -20,21 +20,55 @@ namespace ServerControlCenterApplication
 #endif
     public partial class AccountUserForm : UserControl
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public System.Windows.Forms.Control parentControl { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SasaLibDelegateWriteLine WriteLine { get; set; } = DebugConsole.WriteLine;
 
-        // カスタムイベントの定義
+        /// <summary>
+        /// カスタムイベントの定義
+        /// </summary>
         public event EventHandler AccountChanged;
-        // カスタムイベントの定義
+
+        /// <summary>
+        /// カスタムイベントの定義
+        /// </summary>
         public event EventHandler HostChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public AccountUserForm()
         {
             InitializeComponent();
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        protected virtual void OnHostChange(EventArgs e)
+        {
+            //WriteLine("OnHostChange(..)実行・・・");
+            // カスタムイベントを発生させる
+            HostChanged?.Invoke(this, e);
+        }
+
+        protected virtual void OnAccountChanged(EventArgs e)
+        {
+            // カスタムイベントを発生させる
+            AccountChanged?.Invoke(this, e);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public void SetToControls()
         {
             Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
@@ -53,6 +87,11 @@ namespace ServerControlCenterApplication
             CommitPathTextBox.Text = SccConfig.Config.CommitPath;               // 8
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ControlChanged(object sender, EventArgs e)
         {
             Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
@@ -74,11 +113,20 @@ namespace ServerControlCenterApplication
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="text"></param>
         public void StageServerHostName_comboBox_SetText(string text)
         {
             StageServerHostName_comboBox.Text = text;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StageServerHostName_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SccConfig.Config.StageServerHost = StageServerHostName_comboBox.Text;    // 5
@@ -90,74 +138,79 @@ namespace ServerControlCenterApplication
             OnHostChange(EventArgs.Empty);
         }
 
-        protected virtual void OnHostChange(EventArgs e)
-        {
-            //WriteLine("OnHostChange(..)実行・・・");
 
-
-            HostChanged?.Invoke(this, e);
-        }
-
-        protected virtual void OnAccountChanged(EventArgs e)
-        {
-            // カスタムイベントを発生させる
-            AccountChanged?.Invoke(this, e);
-        }
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DR_ConnectTest_button_Click(object sender, EventArgs e)
         {
             Command_Status.DR_ConnectTest($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
 
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DC_ConnectTest_button_Click(object sender, EventArgs e)
         {
             Command_Status.DC_ConnectTest($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SW_ConnectTest_button_Click(object sender, EventArgs e)
         {
             Command_Status.SW_ConnectTest($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
 
         }
-        public void saveAccount()
-        {
-            SccConfig.Config.ClsLogon = ClientImpersonationCheckBox.Checked;// 1
-
-            SccConfig.Config.ClientDomainName = LogonDomainTextBox.Text;    // 2
-            SccConfig.Config.ClientUserName = LogonUserTextBox.Text;        // 3
-            SccConfig.Config.ClientUserPassword = LogonPasswordTextBox.Text;// 4
-
-            Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
-            SccConfig.Config.ClientUserCryptUserPass = sasaLibencryption.Encoding(SccConfig.Config.ClientUserPassword);
-
-        }
 
         private void LogonDomainTextBox_Leave(object sender, EventArgs e)
         {
-            saveAccount();
+            SccConfig.Config.ClientDomainName = LogonDomainTextBox.Text;    // 2
+            // カスタムイベントを発生
+            OnAccountChanged(EventArgs.Empty);
         }
 
         private void LogonUserTextBox_Leave(object sender, EventArgs e)
         {
-            saveAccount();
+            SccConfig.Config.ClientUserName = LogonUserTextBox.Text;        // 3
+            // カスタムイベントを発生
+            OnAccountChanged(EventArgs.Empty);
 
         }
 
         private void LogonPasswordTextBox_Leave(object sender, EventArgs e)
         {
-            saveAccount();
+            SccConfig.Config.ClientUserPassword = LogonPasswordTextBox.Text;// 4
+
+            Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
+            SccConfig.Config.ClientUserCryptUserPass = sasaLibencryption.Encoding(SccConfig.Config.ClientUserPassword);
+            // カスタムイベントを発生
+            OnAccountChanged(EventArgs.Empty);
         }
 
         private void ClientImpersonationCheckBox_Leave(object sender, EventArgs e)
         {
-            saveAccount();
+            SccConfig.Config.ClsLogon = ClientImpersonationCheckBox.Checked;// 1
+
+            // カスタムイベントを発生
+            OnAccountChanged(EventArgs.Empty);
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DC_Shudown_button_Click(object sender, EventArgs e)
         {
             var result = serviceShutdown(SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDC);
@@ -172,6 +225,11 @@ namespace ServerControlCenterApplication
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DR_Shudown_button_Click(object sender, EventArgs e)
         {
             var result = serviceShutdown(SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
@@ -186,6 +244,11 @@ namespace ServerControlCenterApplication
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SW_Shudown_button_Click(object sender, EventArgs e)
         {
             var result = serviceShutdown(SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameSW);
@@ -200,6 +263,12 @@ namespace ServerControlCenterApplication
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="PipeServerName"></param>
+        /// <param name="pipename"></param>
+        /// <returns></returns>
         private List<AcceptPipeCommand> serviceShutdown(string PipeServerName, string pipename)
         {
             // TODO: ClsLogonDummy を 書き換えた

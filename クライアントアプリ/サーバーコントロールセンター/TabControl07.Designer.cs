@@ -51,6 +51,10 @@ namespace ServerControlCenterApplication
             label18 = new System.Windows.Forms.Label();
             openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             groupBox1 = new System.Windows.Forms.GroupBox();
+            Object_pictureBox = new System.Windows.Forms.PictureBox();
+            FromObject_to_JSON_button = new System.Windows.Forms.Button();
+            FromJSON_to_Object_button = new System.Windows.Forms.Button();
+            JSONSTR_textBox = new System.Windows.Forms.TextBox();
             button4 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
@@ -73,10 +77,12 @@ namespace ServerControlCenterApplication
             SearchPath_textBox = new System.Windows.Forms.TextBox();
             ServerSourceFolderNaeme_textBox = new System.Windows.Forms.TextBox();
             toolTip1 = new System.Windows.Forms.ToolTip(components);
+            object_textBox = new System.Windows.Forms.TextBox();
             groupBox4.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Object_pictureBox).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -291,6 +297,10 @@ namespace ServerControlCenterApplication
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(Object_pictureBox);
+            groupBox1.Controls.Add(FromObject_to_JSON_button);
+            groupBox1.Controls.Add(FromJSON_to_Object_button);
+            groupBox1.Controls.Add(JSONSTR_textBox);
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button3);
@@ -300,10 +310,46 @@ namespace ServerControlCenterApplication
             groupBox1.Controls.Add(JsonTest_button);
             groupBox1.Location = new System.Drawing.Point(3, 405);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new System.Drawing.Size(679, 176);
+            groupBox1.Size = new System.Drawing.Size(679, 251);
             groupBox1.TabIndex = 137;
             groupBox1.TabStop = false;
             groupBox1.Text = "サーバー利用可能メモリ取得";
+            // 
+            // Object_pictureBox
+            // 
+            Object_pictureBox.Location = new System.Drawing.Point(573, 170);
+            Object_pictureBox.Name = "Object_pictureBox";
+            Object_pictureBox.Size = new System.Drawing.Size(100, 69);
+            Object_pictureBox.TabIndex = 158;
+            Object_pictureBox.TabStop = false;
+            // 
+            // FromObject_to_JSON_button
+            // 
+            FromObject_to_JSON_button.Location = new System.Drawing.Point(316, 217);
+            FromObject_to_JSON_button.Name = "FromObject_to_JSON_button";
+            FromObject_to_JSON_button.Size = new System.Drawing.Size(138, 23);
+            FromObject_to_JSON_button.TabIndex = 157;
+            FromObject_to_JSON_button.Text = "←オブジェクトからJSON";
+            FromObject_to_JSON_button.UseVisualStyleBackColor = true;
+            FromObject_to_JSON_button.Click += FromObject_to_JSON_button_Click;
+            // 
+            // FromJSON_to_Object_button
+            // 
+            FromJSON_to_Object_button.Location = new System.Drawing.Point(316, 176);
+            FromJSON_to_Object_button.Name = "FromJSON_to_Object_button";
+            FromJSON_to_Object_button.Size = new System.Drawing.Size(138, 23);
+            FromJSON_to_Object_button.TabIndex = 156;
+            FromJSON_to_Object_button.Text = "JSOｎからオブジェクト→";
+            FromJSON_to_Object_button.UseVisualStyleBackColor = true;
+            FromJSON_to_Object_button.Click += FromJSON_to_Object_button_Click;
+            // 
+            // JSONSTR_textBox
+            // 
+            JSONSTR_textBox.Location = new System.Drawing.Point(6, 176);
+            JSONSTR_textBox.Multiline = true;
+            JSONSTR_textBox.Name = "JSONSTR_textBox";
+            JSONSTR_textBox.Size = new System.Drawing.Size(304, 69);
+            JSONSTR_textBox.TabIndex = 155;
             // 
             // button4
             // 
@@ -427,9 +473,9 @@ namespace ServerControlCenterApplication
             // 
             JsonTest_button.Location = new System.Drawing.Point(287, 21);
             JsonTest_button.Name = "JsonTest_button";
-            JsonTest_button.Size = new System.Drawing.Size(183, 23);
+            JsonTest_button.Size = new System.Drawing.Size(375, 23);
             JsonTest_button.TabIndex = 116;
-            JsonTest_button.Text = "JsonTest";
+            JsonTest_button.Text = "JsonTest(SqlFieldValuexConverter)";
             JsonTest_button.UseVisualStyleBackColor = true;
             JsonTest_button.Click += JsonTest_button_Click;
             // 
@@ -529,10 +575,19 @@ namespace ServerControlCenterApplication
             ServerSourceFolderNaeme_textBox.TabIndex = 100;
             ServerSourceFolderNaeme_textBox.Text = "C:\\TOYOSVC";
             // 
+            // object_textBox
+            // 
+            object_textBox.Location = new System.Drawing.Point(463, 575);
+            object_textBox.Multiline = true;
+            object_textBox.Name = "object_textBox";
+            object_textBox.Size = new System.Drawing.Size(107, 69);
+            object_textBox.TabIndex = 158;
+            // 
             // TabControl07
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            Controls.Add(object_textBox);
             Controls.Add(panel4);
             Controls.Add(logwindowClear_button);
             Controls.Add(groupBox1);
@@ -549,11 +604,14 @@ namespace ServerControlCenterApplication
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Object_pictureBox).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -601,5 +659,10 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button SetSamePathServer_button;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox JSONSTR_textBox;
+        private System.Windows.Forms.Button FromObject_to_JSON_button;
+        private System.Windows.Forms.Button FromJSON_to_Object_button;
+        private System.Windows.Forms.TextBox object_textBox;
+        private System.Windows.Forms.PictureBox Object_pictureBox;
     }
 }

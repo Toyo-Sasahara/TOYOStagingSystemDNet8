@@ -223,6 +223,7 @@
             // 
             CommitShareNameTextBox.Location = new System.Drawing.Point(88, 16);
             CommitShareNameTextBox.Name = "CommitShareNameTextBox";
+            CommitShareNameTextBox.ReadOnly = true;
             CommitShareNameTextBox.Size = new System.Drawing.Size(116, 23);
             CommitShareNameTextBox.TabIndex = 1;
             CommitShareNameTextBox.Text = "COMMIT$";

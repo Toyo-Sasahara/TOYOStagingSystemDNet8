@@ -36,6 +36,17 @@ namespace ServerControlCenterApplication
             ShowPrinterQueue_button = new System.Windows.Forms.Button();
             GetCommitPrinterStatusButton = new System.Windows.Forms.Button();
             panel4 = new System.Windows.Forms.Panel();
+            panel9 = new System.Windows.Forms.Panel();
+            PrinterSel_comboBox = new System.Windows.Forms.ComboBox();
+            reloadPrinter_button = new System.Windows.Forms.Button();
+            panel8 = new System.Windows.Forms.Panel();
+            PARTNUMBER_TextBox = new System.Windows.Forms.TextBox();
+            REV_textBox = new System.Windows.Forms.TextBox();
+            TESTIMAGE_comboBox = new System.Windows.Forms.ComboBox();
+            FIRSTCUSTOMER_label = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             DESIGNER_label1 = new System.Windows.Forms.Label();
             DESIGNER_textBox = new System.Windows.Forms.TextBox();
@@ -43,23 +54,14 @@ namespace ServerControlCenterApplication
             CUSTOMER_textBox = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
             FIRSTCUSTOMER_textBox = new System.Windows.Forms.TextBox();
-            FIRSTCUSTOMER_label = new System.Windows.Forms.Label();
             MACHINETYPE_textBox = new System.Windows.Forms.TextBox();
-            label7 = new System.Windows.Forms.Label();
-            TESTIMAGE_comboBox = new System.Windows.Forms.ComboBox();
-            REV_textBox = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
-            PARTNUMBER_TextBox = new System.Windows.Forms.TextBox();
             MATERIALCODE_textBox = new System.Windows.Forms.TextBox();
-            PrinterSel_comboBox = new System.Windows.Forms.ComboBox();
             label5 = new System.Windows.Forms.Label();
             DESCRIPTION_textBox = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
             MATERIAL_textBox = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
             AUTHORUSER_textBox = new System.Windows.Forms.TextBox();
             AUTHDATE_textBox = new System.Windows.Forms.TextBox();
-            reloadPrinter_button = new System.Windows.Forms.Button();
             panel2 = new System.Windows.Forms.Panel();
             objectConvNew2_CheckBox = new System.Windows.Forms.CheckBox();
             GetPrinterStatus_button = new System.Windows.Forms.Button();
@@ -87,7 +89,13 @@ namespace ServerControlCenterApplication
             logWindowControl = new LogWindowControl();
             accountUserForm = new AccountUserForm();
             groupBox2 = new System.Windows.Forms.GroupBox();
+            panel7 = new System.Windows.Forms.Panel();
+            ServerSidePIPENAME_comboBox = new System.Windows.Forms.ComboBox();
+            label13 = new System.Windows.Forms.Label();
+            PiepServerStart_button = new System.Windows.Forms.Button();
             panel6 = new System.Windows.Forms.Panel();
+            Value2_textBox = new System.Windows.Forms.TextBox();
+            Value1_textBox = new System.Windows.Forms.TextBox();
             PIPECMDNAME_comboBox = new System.Windows.Forms.ComboBox();
             label12 = new System.Windows.Forms.Label();
             ClientSidePIPENAME_comboBox = new System.Windows.Forms.ComboBox();
@@ -95,27 +103,24 @@ namespace ServerControlCenterApplication
             PIPETEST_button = new System.Windows.Forms.Button();
             PIPEHOSTNAME_textBox = new System.Windows.Forms.TextBox();
             label11 = new System.Windows.Forms.Label();
-            panel7 = new System.Windows.Forms.Panel();
-            ServerSidePIPENAME_comboBox = new System.Windows.Forms.ComboBox();
-            label13 = new System.Windows.Forms.Label();
-            PiepServerStart_button = new System.Windows.Forms.Button();
             groupBox11.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
+            panel9.SuspendLayout();
+            panel8.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DebugForm_PictureBox).BeginInit();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
-            panel6.SuspendLayout();
             panel7.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox11
             // 
             groupBox11.Controls.Add(panel5);
-            groupBox11.Controls.Add(objectConvNew_CheckBox);
             groupBox11.Location = new System.Drawing.Point(3, 109);
             groupBox11.Name = "groupBox11";
             groupBox11.Size = new System.Drawing.Size(379, 434);
@@ -136,12 +141,12 @@ namespace ServerControlCenterApplication
             panel5.Controls.Add(PrintOUtOnly_checkBox);
             panel5.Location = new System.Drawing.Point(6, 34);
             panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(367, 361);
+            panel5.Size = new System.Drawing.Size(367, 394);
             panel5.TabIndex = 140;
             // 
             // CommitDialogTest_button
             // 
-            CommitDialogTest_button.Location = new System.Drawing.Point(9, 183);
+            CommitDialogTest_button.Location = new System.Drawing.Point(12, 207);
             CommitDialogTest_button.Name = "CommitDialogTest_button";
             CommitDialogTest_button.Size = new System.Drawing.Size(170, 52);
             CommitDialogTest_button.TabIndex = 111;
@@ -154,7 +159,7 @@ namespace ServerControlCenterApplication
             CommtiNoPrintout1_checkBox.AutoSize = true;
             CommtiNoPrintout1_checkBox.Checked = true;
             CommtiNoPrintout1_checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            CommtiNoPrintout1_checkBox.Location = new System.Drawing.Point(15, 280);
+            CommtiNoPrintout1_checkBox.Location = new System.Drawing.Point(13, 304);
             CommtiNoPrintout1_checkBox.Name = "CommtiNoPrintout1_checkBox";
             CommtiNoPrintout1_checkBox.Size = new System.Drawing.Size(109, 19);
             CommtiNoPrintout1_checkBox.TabIndex = 118;
@@ -163,9 +168,9 @@ namespace ServerControlCenterApplication
             // 
             // ShowPrinterQueue_button
             // 
-            ShowPrinterQueue_button.Location = new System.Drawing.Point(242, 311);
+            ShowPrinterQueue_button.Location = new System.Drawing.Point(259, 336);
             ShowPrinterQueue_button.Name = "ShowPrinterQueue_button";
-            ShowPrinterQueue_button.Size = new System.Drawing.Size(103, 37);
+            ShowPrinterQueue_button.Size = new System.Drawing.Size(103, 52);
             ShowPrinterQueue_button.TabIndex = 105;
             ShowPrinterQueue_button.Text = "ﾌﾟﾘﾝﾀｷｭｰ\"ShowPrinterQueue\"";
             ShowPrinterQueue_button.UseVisualStyleBackColor = true;
@@ -173,9 +178,9 @@ namespace ServerControlCenterApplication
             // 
             // GetCommitPrinterStatusButton
             // 
-            GetCommitPrinterStatusButton.Location = new System.Drawing.Point(133, 311);
+            GetCommitPrinterStatusButton.Location = new System.Drawing.Point(150, 334);
             GetCommitPrinterStatusButton.Name = "GetCommitPrinterStatusButton";
-            GetCommitPrinterStatusButton.Size = new System.Drawing.Size(103, 37);
+            GetCommitPrinterStatusButton.Size = new System.Drawing.Size(103, 55);
             GetCommitPrinterStatusButton.TabIndex = 109;
             GetCommitPrinterStatusButton.Text = "GetPrinterStatus";
             GetCommitPrinterStatusButton.UseVisualStyleBackColor = true;
@@ -184,6 +189,12 @@ namespace ServerControlCenterApplication
             // panel4
             // 
             panel4.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            panel4.Controls.Add(panel9);
+            panel4.Controls.Add(panel8);
+            panel4.Controls.Add(FIRSTCUSTOMER_label);
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(label4);
+            panel4.Controls.Add(label1);
             panel4.Controls.Add(label9);
             panel4.Controls.Add(DESIGNER_label1);
             panel4.Controls.Add(DESIGNER_textBox);
@@ -191,32 +202,129 @@ namespace ServerControlCenterApplication
             panel4.Controls.Add(CUSTOMER_textBox);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(FIRSTCUSTOMER_textBox);
-            panel4.Controls.Add(FIRSTCUSTOMER_label);
             panel4.Controls.Add(MACHINETYPE_textBox);
-            panel4.Controls.Add(label7);
-            panel4.Controls.Add(TESTIMAGE_comboBox);
-            panel4.Controls.Add(REV_textBox);
             panel4.Controls.Add(label6);
-            panel4.Controls.Add(PARTNUMBER_TextBox);
             panel4.Controls.Add(MATERIALCODE_textBox);
-            panel4.Controls.Add(PrinterSel_comboBox);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(DESCRIPTION_textBox);
-            panel4.Controls.Add(label4);
             panel4.Controls.Add(MATERIAL_textBox);
-            panel4.Controls.Add(label1);
             panel4.Controls.Add(AUTHORUSER_textBox);
             panel4.Controls.Add(AUTHDATE_textBox);
-            panel4.Controls.Add(reloadPrinter_button);
             panel4.Location = new System.Drawing.Point(3, 3);
             panel4.Name = "panel4";
-            panel4.Size = new System.Drawing.Size(359, 174);
+            panel4.Size = new System.Drawing.Size(359, 194);
             panel4.TabIndex = 140;
+            panel4.Paint += panel4_Paint;
+            // 
+            // panel9
+            // 
+            panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel9.Controls.Add(PrinterSel_comboBox);
+            panel9.Controls.Add(reloadPrinter_button);
+            panel9.Location = new System.Drawing.Point(7, 4);
+            panel9.Name = "panel9";
+            panel9.Size = new System.Drawing.Size(146, 55);
+            panel9.TabIndex = 142;
+            // 
+            // PrinterSel_comboBox
+            // 
+            PrinterSel_comboBox.AllowDrop = true;
+            PrinterSel_comboBox.Items.AddRange(new object[] { "PRINTER1.LNK", "PRINTER2.LNK", "PRINTER3.LNK", "PRINTER4.LNK", "PRINTER5.LNK", "PRINTER6.LNK", "PRINTER7.LNK", "PRINTER8.LNK" });
+            PrinterSel_comboBox.Location = new System.Drawing.Point(3, 3);
+            PrinterSel_comboBox.Name = "PrinterSel_comboBox";
+            PrinterSel_comboBox.Size = new System.Drawing.Size(135, 23);
+            PrinterSel_comboBox.TabIndex = 96;
+            PrinterSel_comboBox.Text = "プリンタ定義を選択";
+            PrinterSel_comboBox.DropDown += PrinterSel_comboBox_DropDown;
+            PrinterSel_comboBox.SelectedIndexChanged += PrinterSel_comboBox_SelectedIndexChanged;
+            // 
+            // reloadPrinter_button
+            // 
+            reloadPrinter_button.Location = new System.Drawing.Point(3, 28);
+            reloadPrinter_button.Name = "reloadPrinter_button";
+            reloadPrinter_button.Size = new System.Drawing.Size(135, 23);
+            reloadPrinter_button.TabIndex = 104;
+            reloadPrinter_button.Text = "プリンタリロード";
+            reloadPrinter_button.UseVisualStyleBackColor = true;
+            reloadPrinter_button.Click += reloadPrinter_button_Click;
+            // 
+            // panel8
+            // 
+            panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel8.Controls.Add(PARTNUMBER_TextBox);
+            panel8.Controls.Add(REV_textBox);
+            panel8.Controls.Add(TESTIMAGE_comboBox);
+            panel8.Location = new System.Drawing.Point(171, 4);
+            panel8.Name = "panel8";
+            panel8.Size = new System.Drawing.Size(185, 55);
+            panel8.TabIndex = 141;
+            // 
+            // PARTNUMBER_TextBox
+            // 
+            PARTNUMBER_TextBox.Location = new System.Drawing.Point(4, 26);
+            PARTNUMBER_TextBox.Name = "PARTNUMBER_TextBox";
+            PARTNUMBER_TextBox.Size = new System.Drawing.Size(142, 23);
+            PARTNUMBER_TextBox.TabIndex = 88;
+            PARTNUMBER_TextBox.Text = "XX-12345-002";
+            // 
+            // REV_textBox
+            // 
+            REV_textBox.Location = new System.Drawing.Point(152, 26);
+            REV_textBox.Name = "REV_textBox";
+            REV_textBox.Size = new System.Drawing.Size(29, 23);
+            REV_textBox.TabIndex = 117;
+            REV_textBox.Text = "0";
+            // 
+            // TESTIMAGE_comboBox
+            // 
+            TESTIMAGE_comboBox.FormattingEnabled = true;
+            TESTIMAGE_comboBox.Items.AddRange(new object[] { "TESTIMAGE-A0", "TESTIMAGE-A1", "TESTIMAGE-A2", "TESTIMAGE-A3", "TESTIMAGE-A4" });
+            TESTIMAGE_comboBox.Location = new System.Drawing.Point(4, 2);
+            TESTIMAGE_comboBox.Name = "TESTIMAGE_comboBox";
+            TESTIMAGE_comboBox.Size = new System.Drawing.Size(137, 23);
+            TESTIMAGE_comboBox.TabIndex = 89;
+            TESTIMAGE_comboBox.Text = "TESTIMAGE-A4";
+            // 
+            // FIRSTCUSTOMER_label
+            // 
+            FIRSTCUSTOMER_label.AutoSize = true;
+            FIRSTCUSTOMER_label.Location = new System.Drawing.Point(5, 145);
+            FIRSTCUSTOMER_label.Name = "FIRSTCUSTOMER_label";
+            FIRSTCUSTOMER_label.Size = new System.Drawing.Size(95, 15);
+            FIRSTCUSTOMER_label.TabIndex = 121;
+            FIRSTCUSTOMER_label.Text = "FIRSTCUSTOMER";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(5, 119);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(86, 15);
+            label7.TabIndex = 119;
+            label7.Text = "MACHINETYPE";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(5, 93);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(62, 15);
+            label4.TabIndex = 113;
+            label4.Text = "MATERIAL";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(5, 67);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(78, 15);
+            label1.TabIndex = 112;
+            label1.Text = "DESCRIPTION";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new System.Drawing.Point(204, 117);
+            label9.Location = new System.Drawing.Point(195, 145);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(71, 15);
             label9.TabIndex = 127;
@@ -225,7 +333,7 @@ namespace ServerControlCenterApplication
             // DESIGNER_label1
             // 
             DESIGNER_label1.AutoSize = true;
-            DESIGNER_label1.Location = new System.Drawing.Point(216, 94);
+            DESIGNER_label1.Location = new System.Drawing.Point(195, 119);
             DESIGNER_label1.Name = "DESIGNER_label1";
             DESIGNER_label1.Size = new System.Drawing.Size(60, 15);
             DESIGNER_label1.TabIndex = 126;
@@ -233,7 +341,7 @@ namespace ServerControlCenterApplication
             // 
             // DESIGNER_textBox
             // 
-            DESIGNER_textBox.Location = new System.Drawing.Point(283, 91);
+            DESIGNER_textBox.Location = new System.Drawing.Point(283, 115);
             DESIGNER_textBox.Name = "DESIGNER_textBox";
             DESIGNER_textBox.Size = new System.Drawing.Size(71, 23);
             DESIGNER_textBox.TabIndex = 124;
@@ -241,7 +349,7 @@ namespace ServerControlCenterApplication
             // 
             // CHECKDATE_textBox
             // 
-            CHECKDATE_textBox.Location = new System.Drawing.Point(283, 114);
+            CHECKDATE_textBox.Location = new System.Drawing.Point(283, 141);
             CHECKDATE_textBox.Name = "CHECKDATE_textBox";
             CHECKDATE_textBox.Size = new System.Drawing.Size(71, 23);
             CHECKDATE_textBox.TabIndex = 125;
@@ -249,7 +357,7 @@ namespace ServerControlCenterApplication
             // 
             // CUSTOMER_textBox
             // 
-            CUSTOMER_textBox.Location = new System.Drawing.Point(270, 149);
+            CUSTOMER_textBox.Location = new System.Drawing.Point(270, 170);
             CUSTOMER_textBox.Name = "CUSTOMER_textBox";
             CUSTOMER_textBox.Size = new System.Drawing.Size(85, 23);
             CUSTOMER_textBox.TabIndex = 122;
@@ -258,7 +366,7 @@ namespace ServerControlCenterApplication
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(197, 152);
+            label8.Location = new System.Drawing.Point(195, 174);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(67, 15);
             label8.TabIndex = 123;
@@ -266,97 +374,41 @@ namespace ServerControlCenterApplication
             // 
             // FIRSTCUSTOMER_textBox
             // 
-            FIRSTCUSTOMER_textBox.Location = new System.Drawing.Point(108, 149);
+            FIRSTCUSTOMER_textBox.Location = new System.Drawing.Point(99, 141);
             FIRSTCUSTOMER_textBox.Name = "FIRSTCUSTOMER_textBox";
-            FIRSTCUSTOMER_textBox.Size = new System.Drawing.Size(77, 23);
+            FIRSTCUSTOMER_textBox.Size = new System.Drawing.Size(93, 23);
             FIRSTCUSTOMER_textBox.TabIndex = 120;
             FIRSTCUSTOMER_textBox.Text = "〇×製薬";
             // 
-            // FIRSTCUSTOMER_label
-            // 
-            FIRSTCUSTOMER_label.AutoSize = true;
-            FIRSTCUSTOMER_label.Location = new System.Drawing.Point(4, 152);
-            FIRSTCUSTOMER_label.Name = "FIRSTCUSTOMER_label";
-            FIRSTCUSTOMER_label.Size = new System.Drawing.Size(95, 15);
-            FIRSTCUSTOMER_label.TabIndex = 121;
-            FIRSTCUSTOMER_label.Text = "FIRSTCUSTOMER";
-            // 
             // MACHINETYPE_textBox
             // 
-            MACHINETYPE_textBox.Location = new System.Drawing.Point(89, 97);
+            MACHINETYPE_textBox.Location = new System.Drawing.Point(99, 115);
             MACHINETYPE_textBox.Name = "MACHINETYPE_textBox";
-            MACHINETYPE_textBox.Size = new System.Drawing.Size(51, 23);
+            MACHINETYPE_textBox.Size = new System.Drawing.Size(93, 23);
             MACHINETYPE_textBox.TabIndex = 118;
             MACHINETYPE_textBox.Text = "MS55(H)";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(4, 100);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(86, 15);
-            label7.TabIndex = 119;
-            label7.Text = "MACHINETYPE";
-            // 
-            // TESTIMAGE_comboBox
-            // 
-            TESTIMAGE_comboBox.FormattingEnabled = true;
-            TESTIMAGE_comboBox.Items.AddRange(new object[] { "TESTIMAGE-A0", "TESTIMAGE-A1", "TESTIMAGE-A2", "TESTIMAGE-A3", "TESTIMAGE-A4" });
-            TESTIMAGE_comboBox.Location = new System.Drawing.Point(172, 3);
-            TESTIMAGE_comboBox.Name = "TESTIMAGE_comboBox";
-            TESTIMAGE_comboBox.Size = new System.Drawing.Size(137, 23);
-            TESTIMAGE_comboBox.TabIndex = 89;
-            TESTIMAGE_comboBox.Text = "TESTIMAGE-A4";
-            // 
-            // REV_textBox
-            // 
-            REV_textBox.Location = new System.Drawing.Point(320, 27);
-            REV_textBox.Name = "REV_textBox";
-            REV_textBox.Size = new System.Drawing.Size(29, 23);
-            REV_textBox.TabIndex = 117;
-            REV_textBox.Text = "0";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(195, 71);
+            label6.Location = new System.Drawing.Point(195, 93);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(82, 15);
             label6.TabIndex = 117;
             label6.Text = "AUTHORDATE";
             // 
-            // PARTNUMBER_TextBox
-            // 
-            PARTNUMBER_TextBox.Location = new System.Drawing.Point(172, 27);
-            PARTNUMBER_TextBox.Name = "PARTNUMBER_TextBox";
-            PARTNUMBER_TextBox.Size = new System.Drawing.Size(142, 23);
-            PARTNUMBER_TextBox.TabIndex = 88;
-            PARTNUMBER_TextBox.Text = "XX-12345-002";
-            // 
             // MATERIALCODE_textBox
             // 
-            MATERIALCODE_textBox.Location = new System.Drawing.Point(157, 72);
+            MATERIALCODE_textBox.Location = new System.Drawing.Point(163, 89);
             MATERIALCODE_textBox.Name = "MATERIALCODE_textBox";
             MATERIALCODE_textBox.Size = new System.Drawing.Size(29, 23);
             MATERIALCODE_textBox.TabIndex = 116;
             MATERIALCODE_textBox.Text = "31";
             // 
-            // PrinterSel_comboBox
-            // 
-            PrinterSel_comboBox.AllowDrop = true;
-            PrinterSel_comboBox.Items.AddRange(new object[] { "PRINTER1.LNK", "PRINTER2.LNK", "PRINTER3.LNK", "PRINTER4.LNK", "PRINTER5.LNK", "PRINTER6.LNK", "PRINTER7.LNK", "PRINTER8.LNK" });
-            PrinterSel_comboBox.Location = new System.Drawing.Point(5, 9);
-            PrinterSel_comboBox.Name = "PrinterSel_comboBox";
-            PrinterSel_comboBox.Size = new System.Drawing.Size(135, 23);
-            PrinterSel_comboBox.TabIndex = 96;
-            PrinterSel_comboBox.Text = "プリンタ定義を選択";
-            PrinterSel_comboBox.DropDown += PrinterSel_comboBox_DropDown;
-            PrinterSel_comboBox.SelectedIndexChanged += PrinterSel_comboBox_SelectedIndexChanged;
-            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(195, 51);
+            label5.Location = new System.Drawing.Point(195, 67);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(81, 15);
             label5.TabIndex = 114;
@@ -364,41 +416,23 @@ namespace ServerControlCenterApplication
             // 
             // DESCRIPTION_textBox
             // 
-            DESCRIPTION_textBox.Location = new System.Drawing.Point(89, 51);
+            DESCRIPTION_textBox.Location = new System.Drawing.Point(99, 63);
             DESCRIPTION_textBox.Name = "DESCRIPTION_textBox";
-            DESCRIPTION_textBox.Size = new System.Drawing.Size(97, 23);
+            DESCRIPTION_textBox.Size = new System.Drawing.Size(93, 23);
             DESCRIPTION_textBox.TabIndex = 98;
             DESCRIPTION_textBox.Text = "ブラケットAABB";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(15, 75);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(62, 15);
-            label4.TabIndex = 113;
-            label4.Text = "MATERIAL";
-            // 
             // MATERIAL_textBox
             // 
-            MATERIAL_textBox.Location = new System.Drawing.Point(89, 72);
+            MATERIAL_textBox.Location = new System.Drawing.Point(99, 89);
             MATERIAL_textBox.Name = "MATERIAL_textBox";
             MATERIAL_textBox.Size = new System.Drawing.Size(62, 23);
             MATERIAL_textBox.TabIndex = 99;
             MATERIAL_textBox.Text = "SUS303";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(4, 54);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(78, 15);
-            label1.TabIndex = 112;
-            label1.Text = "DESCRIPTION";
-            // 
             // AUTHORUSER_textBox
             // 
-            AUTHORUSER_textBox.Location = new System.Drawing.Point(283, 45);
+            AUTHORUSER_textBox.Location = new System.Drawing.Point(283, 63);
             AUTHORUSER_textBox.Name = "AUTHORUSER_textBox";
             AUTHORUSER_textBox.Size = new System.Drawing.Size(71, 23);
             AUTHORUSER_textBox.TabIndex = 100;
@@ -406,30 +440,20 @@ namespace ServerControlCenterApplication
             // 
             // AUTHDATE_textBox
             // 
-            AUTHDATE_textBox.Location = new System.Drawing.Point(283, 68);
+            AUTHDATE_textBox.Location = new System.Drawing.Point(283, 89);
             AUTHDATE_textBox.Name = "AUTHDATE_textBox";
             AUTHDATE_textBox.Size = new System.Drawing.Size(71, 23);
             AUTHDATE_textBox.TabIndex = 101;
             AUTHDATE_textBox.Text = "2020.01.01";
-            // 
-            // reloadPrinter_button
-            // 
-            reloadPrinter_button.Location = new System.Drawing.Point(3, 29);
-            reloadPrinter_button.Name = "reloadPrinter_button";
-            reloadPrinter_button.Size = new System.Drawing.Size(137, 19);
-            reloadPrinter_button.TabIndex = 104;
-            reloadPrinter_button.Text = "プリンタリロード";
-            reloadPrinter_button.UseVisualStyleBackColor = true;
-            reloadPrinter_button.Click += reloadPrinter_button_Click;
             // 
             // panel2
             // 
             panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             panel2.Controls.Add(objectConvNew2_CheckBox);
             panel2.Controls.Add(GetPrinterStatus_button);
-            panel2.Location = new System.Drawing.Point(14, 302);
+            panel2.Location = new System.Drawing.Point(4, 334);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(113, 46);
+            panel2.Size = new System.Drawing.Size(130, 54);
             panel2.TabIndex = 96;
             // 
             // objectConvNew2_CheckBox
@@ -437,7 +461,7 @@ namespace ServerControlCenterApplication
             objectConvNew2_CheckBox.AutoSize = true;
             objectConvNew2_CheckBox.Checked = true;
             objectConvNew2_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            objectConvNew2_CheckBox.Location = new System.Drawing.Point(8, 24);
+            objectConvNew2_CheckBox.Location = new System.Drawing.Point(6, 27);
             objectConvNew2_CheckBox.Name = "objectConvNew2_CheckBox";
             objectConvNew2_CheckBox.Size = new System.Drawing.Size(110, 19);
             objectConvNew2_CheckBox.TabIndex = 108;
@@ -446,9 +470,9 @@ namespace ServerControlCenterApplication
             // 
             // GetPrinterStatus_button
             // 
-            GetPrinterStatus_button.Location = new System.Drawing.Point(3, 3);
+            GetPrinterStatus_button.Location = new System.Drawing.Point(3, 2);
             GetPrinterStatus_button.Name = "GetPrinterStatus_button";
-            GetPrinterStatus_button.Size = new System.Drawing.Size(103, 19);
+            GetPrinterStatus_button.Size = new System.Drawing.Size(103, 24);
             GetPrinterStatus_button.TabIndex = 107;
             GetPrinterStatus_button.Text = "PrinterInfo";
             GetPrinterStatus_button.UseVisualStyleBackColor = true;
@@ -461,9 +485,9 @@ namespace ServerControlCenterApplication
             panel3.Controls.Add(VARIANT_PARTNUMBER_textBox);
             panel3.Controls.Add(VARIANT_Type_checkBox);
             panel3.Controls.Add(CommitTest_Button);
-            panel3.Location = new System.Drawing.Point(189, 183);
+            panel3.Location = new System.Drawing.Point(189, 203);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(173, 118);
+            panel3.Size = new System.Drawing.Size(173, 125);
             panel3.TabIndex = 110;
             // 
             // VARIANT_PARTNUMBER_textBox
@@ -474,7 +498,7 @@ namespace ServerControlCenterApplication
             VARIANT_PARTNUMBER_textBox.Multiline = true;
             VARIANT_PARTNUMBER_textBox.Name = "VARIANT_PARTNUMBER_textBox";
             VARIANT_PARTNUMBER_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            VARIANT_PARTNUMBER_textBox.Size = new System.Drawing.Size(132, 77);
+            VARIANT_PARTNUMBER_textBox.Size = new System.Drawing.Size(132, 84);
             VARIANT_PARTNUMBER_textBox.TabIndex = 102;
             VARIANT_PARTNUMBER_textBox.Text = "XX-12345-070\r\nXX-12345-071\r\nXX-12345-072\r\nXX-12345-073\r\nXX-12345-074\r\nXX-12345-075";
             // 
@@ -502,7 +526,7 @@ namespace ServerControlCenterApplication
             // PrintOUtOnly_checkBox
             // 
             PrintOUtOnly_checkBox.AutoSize = true;
-            PrintOUtOnly_checkBox.Location = new System.Drawing.Point(14, 260);
+            PrintOUtOnly_checkBox.Location = new System.Drawing.Point(12, 284);
             PrintOUtOnly_checkBox.Name = "PrintOUtOnly_checkBox";
             PrintOUtOnly_checkBox.Size = new System.Drawing.Size(120, 19);
             PrintOUtOnly_checkBox.TabIndex = 97;
@@ -514,7 +538,7 @@ namespace ServerControlCenterApplication
             objectConvNew_CheckBox.AutoSize = true;
             objectConvNew_CheckBox.Checked = true;
             objectConvNew_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            objectConvNew_CheckBox.Location = new System.Drawing.Point(11, 18);
+            objectConvNew_CheckBox.Location = new System.Drawing.Point(1061, 13);
             objectConvNew_CheckBox.Name = "objectConvNew_CheckBox";
             objectConvNew_CheckBox.Size = new System.Drawing.Size(110, 19);
             objectConvNew_CheckBox.TabIndex = 106;
@@ -687,7 +711,7 @@ namespace ServerControlCenterApplication
             // logwindowClear_button
             // 
             logwindowClear_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            logwindowClear_button.Location = new System.Drawing.Point(1223, 697);
+            logwindowClear_button.Location = new System.Drawing.Point(1332, 722);
             logwindowClear_button.Name = "logwindowClear_button";
             logwindowClear_button.Size = new System.Drawing.Size(75, 23);
             logwindowClear_button.TabIndex = 139;
@@ -700,7 +724,7 @@ namespace ServerControlCenterApplication
             logWindowControl.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             logWindowControl.Location = new System.Drawing.Point(785, 111);
             logWindowControl.Name = "logWindowControl";
-            logWindowControl.Size = new System.Drawing.Size(513, 585);
+            logWindowControl.Size = new System.Drawing.Size(639, 608);
             logWindowControl.TabIndex = 136;
             // 
             // accountUserForm
@@ -709,7 +733,7 @@ namespace ServerControlCenterApplication
             accountUserForm.Location = new System.Drawing.Point(0, 0);
             accountUserForm.Name = "accountUserForm";
             accountUserForm.parentControl = null;
-            accountUserForm.Size = new System.Drawing.Size(1272, 110);
+            accountUserForm.Size = new System.Drawing.Size(1181, 110);
             accountUserForm.TabIndex = 135;
             accountUserForm.WriteLine = null;
             accountUserForm.Leave += accountUserForm_Leave;
@@ -720,13 +744,53 @@ namespace ServerControlCenterApplication
             groupBox2.Controls.Add(panel6);
             groupBox2.Location = new System.Drawing.Point(389, 549);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new System.Drawing.Size(390, 179);
+            groupBox2.Size = new System.Drawing.Size(388, 179);
             groupBox2.TabIndex = 140;
             groupBox2.TabStop = false;
             groupBox2.Text = "PIPEサーバーテスト";
             // 
+            // panel7
+            // 
+            panel7.Controls.Add(ServerSidePIPENAME_comboBox);
+            panel7.Controls.Add(label13);
+            panel7.Controls.Add(PiepServerStart_button);
+            panel7.Location = new System.Drawing.Point(6, 13);
+            panel7.Name = "panel7";
+            panel7.Size = new System.Drawing.Size(352, 39);
+            panel7.TabIndex = 89;
+            // 
+            // ServerSidePIPENAME_comboBox
+            // 
+            ServerSidePIPENAME_comboBox.FormattingEnabled = true;
+            ServerSidePIPENAME_comboBox.Items.AddRange(new object[] { "SERVERCONTROLCENTER1", "SERVERCONTROLCENTER2", "SERVERCONTROLCENTER3", "SERVERCONTROLCENTER4", "SERVERCONTROLCENTER5" });
+            ServerSidePIPENAME_comboBox.Location = new System.Drawing.Point(9, 9);
+            ServerSidePIPENAME_comboBox.Name = "ServerSidePIPENAME_comboBox";
+            ServerSidePIPENAME_comboBox.Size = new System.Drawing.Size(173, 23);
+            ServerSidePIPENAME_comboBox.TabIndex = 90;
+            ServerSidePIPENAME_comboBox.Text = "SERVERCONTROLCENTER1";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new System.Drawing.Point(3, 13);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(0, 15);
+            label13.TabIndex = 89;
+            // 
+            // PiepServerStart_button
+            // 
+            PiepServerStart_button.Location = new System.Drawing.Point(261, 7);
+            PiepServerStart_button.Name = "PiepServerStart_button";
+            PiepServerStart_button.Size = new System.Drawing.Size(88, 24);
+            PiepServerStart_button.TabIndex = 87;
+            PiepServerStart_button.Text = "サーバースタート";
+            PiepServerStart_button.UseVisualStyleBackColor = true;
+            PiepServerStart_button.Click += PiepServerStart_button_Click;
+            // 
             // panel6
             // 
+            panel6.Controls.Add(Value2_textBox);
+            panel6.Controls.Add(Value1_textBox);
             panel6.Controls.Add(PIPECMDNAME_comboBox);
             panel6.Controls.Add(label12);
             panel6.Controls.Add(ClientSidePIPENAME_comboBox);
@@ -739,10 +803,24 @@ namespace ServerControlCenterApplication
             panel6.Size = new System.Drawing.Size(352, 99);
             panel6.TabIndex = 88;
             // 
+            // Value2_textBox
+            // 
+            Value2_textBox.Location = new System.Drawing.Point(261, 32);
+            Value2_textBox.Name = "Value2_textBox";
+            Value2_textBox.Size = new System.Drawing.Size(79, 23);
+            Value2_textBox.TabIndex = 92;
+            // 
+            // Value1_textBox
+            // 
+            Value1_textBox.Location = new System.Drawing.Point(261, 8);
+            Value1_textBox.Name = "Value1_textBox";
+            Value1_textBox.Size = new System.Drawing.Size(79, 23);
+            Value1_textBox.TabIndex = 91;
+            // 
             // PIPECMDNAME_comboBox
             // 
             PIPECMDNAME_comboBox.FormattingEnabled = true;
-            PIPECMDNAME_comboBox.Items.AddRange(new object[] { "GetCurrentUserInformation", "GetCurrentUserName", "GetCurrentUserDomainName", "GetCurrentUserDomainFullName" });
+            PIPECMDNAME_comboBox.Items.AddRange(new object[] { "GetCurrentUserInformation", "GetCurrentUserName", "GetCurrentUserDomainName", "GetCurrentUserDomainFullName", "", "GetValue_V2" });
             PIPECMDNAME_comboBox.Location = new System.Drawing.Point(61, 66);
             PIPECMDNAME_comboBox.Name = "PIPECMDNAME_comboBox";
             PIPECMDNAME_comboBox.Size = new System.Drawing.Size(182, 23);
@@ -804,49 +882,12 @@ namespace ServerControlCenterApplication
             label11.TabIndex = 3;
             label11.Text = "PIPE名";
             // 
-            // panel7
-            // 
-            panel7.Controls.Add(ServerSidePIPENAME_comboBox);
-            panel7.Controls.Add(label13);
-            panel7.Controls.Add(PiepServerStart_button);
-            panel7.Location = new System.Drawing.Point(6, 13);
-            panel7.Name = "panel7";
-            panel7.Size = new System.Drawing.Size(352, 39);
-            panel7.TabIndex = 89;
-            // 
-            // ServerSidePIPENAME_comboBox
-            // 
-            ServerSidePIPENAME_comboBox.FormattingEnabled = true;
-            ServerSidePIPENAME_comboBox.Items.AddRange(new object[] { "SERVERCONTROLCENTER1", "SERVERCONTROLCENTER2", "SERVERCONTROLCENTER3", "SERVERCONTROLCENTER4", "SERVERCONTROLCENTER5" });
-            ServerSidePIPENAME_comboBox.Location = new System.Drawing.Point(9, 9);
-            ServerSidePIPENAME_comboBox.Name = "ServerSidePIPENAME_comboBox";
-            ServerSidePIPENAME_comboBox.Size = new System.Drawing.Size(173, 23);
-            ServerSidePIPENAME_comboBox.TabIndex = 90;
-            ServerSidePIPENAME_comboBox.Text = "SERVERCONTROLCENTER1";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(3, 13);
-            label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(0, 15);
-            label13.TabIndex = 89;
-            // 
-            // PiepServerStart_button
-            // 
-            PiepServerStart_button.Location = new System.Drawing.Point(261, 7);
-            PiepServerStart_button.Name = "PiepServerStart_button";
-            PiepServerStart_button.Size = new System.Drawing.Size(88, 24);
-            PiepServerStart_button.TabIndex = 87;
-            PiepServerStart_button.Text = "サーバースタート";
-            PiepServerStart_button.UseVisualStyleBackColor = true;
-            PiepServerStart_button.Click += PiepServerStart_button_Click;
-            // 
             // TabControl01
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             Controls.Add(groupBox2);
+            Controls.Add(objectConvNew_CheckBox);
             Controls.Add(logwindowClear_button);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
@@ -854,15 +895,17 @@ namespace ServerControlCenterApplication
             Controls.Add(accountUserForm);
             Controls.Add(groupBox11);
             Name = "TabControl01";
-            Size = new System.Drawing.Size(1301, 748);
+            Size = new System.Drawing.Size(1427, 748);
             Load += TabControl01_Load;
             Paint += TabControl01_Paint;
             groupBox11.ResumeLayout(false);
-            groupBox11.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
@@ -873,11 +916,12 @@ namespace ServerControlCenterApplication
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox2.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -952,5 +996,9 @@ namespace ServerControlCenterApplication
         private System.Windows.Forms.ComboBox ServerSidePIPENAME_comboBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button PiepServerStart_button;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox Value1_textBox;
+        private System.Windows.Forms.TextBox Value2_textBox;
     }
 }

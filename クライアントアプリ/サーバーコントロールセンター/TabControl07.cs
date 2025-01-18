@@ -8,6 +8,17 @@ using System.Windows.Forms;
 using ToyoMcMfg.Staging.DataBaseConfig;
 using ToyoMcMfg.Staging.RemoteObjects;
 using ToyoStageService;
+using SasaLib;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using static System.Resources.ResXFileRef;
+using System.Xml.Linq;
+using System.Windows.Media.TextFormatting;
+using System.Diagnostics;
+using System.Runtime.Versioning;
+using System.Reflection;
+
 #if NETCOREAPP
 using System.Runtime.Versioning;
 #endif
@@ -41,7 +52,7 @@ namespace ServerControlCenterApplication
         {
             Task.Run(() =>
             {
-                MethodInvoker method = () =>
+                System.Windows.Forms.MethodInvoker method = () =>
                 {
                     accountUserForm.SetToControls();
 
@@ -520,6 +531,16 @@ namespace ServerControlCenterApplication
 
                 FileRecvTest_Source_ServerFullFIleName_textBox.Text = FileRecvTest_Source_ServerFullFIleName_textBox.Text.TrimStart('\"').TrimEnd('\"');
             }
+
+        }
+
+        private void FromJSON_to_Object_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FromObject_to_JSON_button_Click(object sender, EventArgs e)
+        {
 
         }
     }

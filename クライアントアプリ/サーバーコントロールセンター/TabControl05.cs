@@ -323,8 +323,7 @@ namespace ServerControlCenterApplication
                     {
                         if (Command_MAINCOMMAND.CheckCommitRecepitonState(out Message, LogWindowWriteLine) == false)
                         {
-                            //if (RecepitonStateLoadTest_CheckBox.Checked == false)
-                            //    MessageBox.Show($"{Message}");
+                            LogWindowWriteLine($"※問合せ失敗。戻り値 false サーバーからの返答 \"{Message}\"");
                         }
 
                         await Task.Delay(Convert.ToInt32(delyaTime_textBox.Text));
@@ -352,11 +351,7 @@ namespace ServerControlCenterApplication
                     {
                         if (Command_MAINCOMMAND.CheckApprovalRecepitonState(out Message, LogWindowWriteLine) == false)
                         {
-                            LogWindowWriteLine($"※問合せ結果 \"{Message}\"");
-                        }
-                        else
-                        {
-                            LogWindowWriteLine($"※問合せ失敗。戻り値 false");
+                            LogWindowWriteLine($"※問合せ失敗。戻り値 false サーバーからの返答 \"{Message}\"");
                         }
                         await Task.Delay(Convert.ToInt32(delyaTime_textBox.Text));
 
@@ -645,7 +640,7 @@ namespace ServerControlCenterApplication
             //
             bool _Method_SetCommitConfigValue(NamedPipeClientStream pipeCltStream)
             {
-                DebugConsole.WriteLine("SetCommitConfigValue(..) スタート");
+                DebugConsole.WriteLine("_Method_SetCommitConfigValue(..) スタート");
 
                 StreamString stst = new StreamString(pipeCltStream);
 
@@ -692,7 +687,7 @@ namespace ServerControlCenterApplication
             //
             bool _Method_SetCommitConfigValue_V2(NamedPipeClientStream pipeCltStream)
             {
-                DebugConsole.WriteLine("SetCommitConfigValue(..) スタート");
+                logWindowControl.WriteLine("_Method_SetCommitConfigValue_V2(..) スタート");
 
                 StreamString stst = new StreamString(pipeCltStream);
 
@@ -701,14 +696,17 @@ namespace ServerControlCenterApplication
                 if (ServerResPon1 != null)
                 {
 
-                    DebugConsole.WriteLine($"ServerResPon1 = {ServerResPon1}");
+                    logWindowControl.WriteLine($"ServerResPon1 = {ServerResPon1}");
                     string VariableName = StageServerConfig_VarbleName_comboBox.Text;
                     stst.WriteString(VariableName); // 書き込む変数を送信
 
                     ObjectWithType objectWithType;
                     using (BinaryReader reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                     {
-                        objectWithType = reader.ReadObject<ObjectWithType>(binaryConvertType: BinaryConvertTYPE.JsonSerializer);  // 現在の変数の値を受信
+                        var options = new JsonSerializerOptions { Converters = { new ObjectWithTypeJsonConverter() }, WriteIndented = true };
+
+                        objectWithType = reader.ReadObject<ObjectWithType>(binaryConvertType: BinaryConvertTYPE.JsonSerializer,  options: options, WriteLine:logWindowControl.WriteLine,Verbose:true);  // 現在の変数の値を受信
+
                         if (objectWithType != null)
                         {
                             StageServerConfig_VarbleType_textbox.Text = objectWithType.TypeName;
@@ -720,10 +718,9 @@ namespace ServerControlCenterApplication
 
                                 object value = Convert.ChangeType(StageServerConfig_Value_comboBox.Text, targetType);
 
-                                var options = new JsonSerializerOptions { Converters = { new ObjectWithTypeJsonConverter() }, WriteIndented = true };
                                 ObjectWithType outPut_objectWithType = new ObjectWithType { TypeName = objectWithType.TypeName, Data = value }; // 指定したフィールドをカプセル化
 
-                                writer.WriteObject(outPut_objectWithType, binaryConvertType: BinaryConvertTYPE.JsonSerializer, options: options);
+                                writer.WriteObject(outPut_objectWithType, binaryConvertType: BinaryConvertTYPE.JsonSerializer, options: options, WriteLine: logWindowControl.WriteLine, Verbose: true);
                             }
 
                         }
@@ -991,7 +988,7 @@ namespace ServerControlCenterApplication
             {
                 do
                 {
-                    List<AcceptPipeCommand> connectingAuthorizedUser = Command_ServerControl.GetAuthorizedUser(SccConfig.Config.PipeNameDR, objectConvNew: false, WriteLine: LogWindowWriteLine);
+                    List<AcceptPipeCommand> connectingAuthorizedUser = Command_ServerControl.GetAuthorizedUser(SccConfig.Config.PipeNameDR, objectConvNew: objectConvNew9_checkBox.Checked, WriteLine: LogWindowWriteLine);
 
                     if (connectingAuthorizedUser != null)
                     {
@@ -1338,6 +1335,11 @@ namespace ServerControlCenterApplication
             LogWindowWriteLine($"{a}");
         }
 
+        private void CreateTICKETCODE_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void accountUserForm_Load(object sender, EventArgs e)
         {
 
@@ -1355,6 +1357,7 @@ namespace ServerControlCenterApplication
             rmc_ServerControl.SAVE_ARCSUITETICKETCONFIG(SccConfig.Config.StageServerHost, logWindowControl.WriteLine);
 
         }
+
     }
 }
 
