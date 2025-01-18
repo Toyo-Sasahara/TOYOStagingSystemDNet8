@@ -35,6 +35,7 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\CommitHelperNumbering_Partial.cs" Link="CommitHelperNumbering_Partial.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\DebugForm.cs" Link="DebugForm.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\DebugForm.Designer.cs" Link="DebugForm.Designer.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\FileMonitor.cs" Link="FileMonitor.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\ReserveNumber.cs" Link="ReserveNumber.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\CommonCommitLogic\TypeNumber.cs" Link="TypeNumber.cs" />
 	</ItemGroup>

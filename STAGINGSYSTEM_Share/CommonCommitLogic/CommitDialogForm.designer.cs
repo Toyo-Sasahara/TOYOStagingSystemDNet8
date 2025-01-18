@@ -99,10 +99,12 @@ namespace CommonCommitLogic
             Cancel_Button = new System.Windows.Forms.Button();
             CommitExecute_Button = new System.Windows.Forms.Button();
             COMMITSTART_groupBox = new System.Windows.Forms.GroupBox();
+            panel5 = new System.Windows.Forms.Panel();
+            IsNoPrintMode_checkBox = new System.Windows.Forms.CheckBox();
             ErrorOccurred_Label = new System.Windows.Forms.Label();
-            Printer_Info_button = new System.Windows.Forms.Button();
             StageServerHostLabel = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
+            Printer_Info_button = new System.Windows.Forms.Button();
             NumberingInformation_label = new System.Windows.Forms.Label();
             NUMBERING_groupBox = new System.Windows.Forms.GroupBox();
             NumberingReCheck_button = new System.Windows.Forms.Button();
@@ -110,11 +112,11 @@ namespace CommonCommitLogic
             NumberingWarningIgnore_button = new System.Windows.Forms.Button();
             CADTITLE_groupBox = new System.Windows.Forms.GroupBox();
             CommitPreview_groupBox = new System.Windows.Forms.GroupBox();
+            DEBUG_button = new System.Windows.Forms.Button();
             TitleFit_button = new System.Windows.Forms.Button();
             commitPreviewImage = new CommitPreviewImage();
             toolTip1 = new System.Windows.Forms.ToolTip(components);
             CadFileInformation_groupBox = new System.Windows.Forms.GroupBox();
-            DEBUG_button = new System.Windows.Forms.Button();
             panel2.SuspendLayout();
             Variant_panel2.SuspendLayout();
             Variant_panel1.SuspendLayout();
@@ -129,6 +131,7 @@ namespace CommonCommitLogic
             ArcSuite_groupBox.SuspendLayout();
             panel3.SuspendLayout();
             COMMITSTART_groupBox.SuspendLayout();
+            panel5.SuspendLayout();
             NUMBERING_groupBox.SuspendLayout();
             CADTITLE_groupBox.SuspendLayout();
             CommitPreview_groupBox.SuspendLayout();
@@ -830,18 +833,18 @@ namespace CommonCommitLogic
             panel3.Controls.Add(PaperSizeLabel);
             panel3.Location = new System.Drawing.Point(6, 270);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(638, 46);
+            panel3.Size = new System.Drawing.Size(554, 46);
             panel3.TabIndex = 79;
             // 
             // PlotFileCreate_label
             // 
-            PlotFileCreate_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            PlotFileCreate_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             PlotFileCreate_label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             PlotFileCreate_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             PlotFileCreate_label.Location = new System.Drawing.Point(5, 27);
             PlotFileCreate_label.Margin = new System.Windows.Forms.Padding(3);
             PlotFileCreate_label.Name = "PlotFileCreate_label";
-            PlotFileCreate_label.Size = new System.Drawing.Size(574, 17);
+            PlotFileCreate_label.Size = new System.Drawing.Size(546, 17);
             PlotFileCreate_label.TabIndex = 2;
             PlotFileCreate_label.Text = "######################################";
             // 
@@ -895,9 +898,9 @@ namespace CommonCommitLogic
             // 
             // Cancel_Button
             // 
-            Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             Cancel_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            Cancel_Button.Location = new System.Drawing.Point(576, 35);
+            Cancel_Button.Location = new System.Drawing.Point(244, 2);
             Cancel_Button.Margin = new System.Windows.Forms.Padding(0);
             Cancel_Button.Name = "Cancel_Button";
             Cancel_Button.Size = new System.Drawing.Size(80, 23);
@@ -908,9 +911,9 @@ namespace CommonCommitLogic
             // 
             // CommitExecute_Button
             // 
-            CommitExecute_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            CommitExecute_Button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             CommitExecute_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            CommitExecute_Button.Location = new System.Drawing.Point(441, 35);
+            CommitExecute_Button.Location = new System.Drawing.Point(109, 1);
             CommitExecute_Button.Margin = new System.Windows.Forms.Padding(0);
             CommitExecute_Button.Name = "CommitExecute_Button";
             CommitExecute_Button.Size = new System.Drawing.Size(132, 23);
@@ -922,42 +925,51 @@ namespace CommonCommitLogic
             // COMMITSTART_groupBox
             // 
             COMMITSTART_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            COMMITSTART_groupBox.Controls.Add(panel5);
             COMMITSTART_groupBox.Controls.Add(ErrorOccurred_Label);
-            COMMITSTART_groupBox.Controls.Add(Printer_Info_button);
             COMMITSTART_groupBox.Controls.Add(StageServerHostLabel);
             COMMITSTART_groupBox.Controls.Add(label6);
-            COMMITSTART_groupBox.Controls.Add(CommitExecute_Button);
-            COMMITSTART_groupBox.Controls.Add(Cancel_Button);
             COMMITSTART_groupBox.Location = new System.Drawing.Point(9, 854);
             COMMITSTART_groupBox.Name = "COMMITSTART_groupBox";
             COMMITSTART_groupBox.Size = new System.Drawing.Size(664, 63);
             COMMITSTART_groupBox.TabIndex = 15;
             COMMITSTART_groupBox.TabStop = false;
             // 
+            // panel5
+            // 
+            panel5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            panel5.Controls.Add(IsNoPrintMode_checkBox);
+            panel5.Controls.Add(Cancel_Button);
+            panel5.Controls.Add(CommitExecute_Button);
+            panel5.Location = new System.Drawing.Point(334, 36);
+            panel5.Name = "panel5";
+            panel5.Size = new System.Drawing.Size(326, 25);
+            panel5.TabIndex = 88;
+            // 
+            // IsNoPrintMode_checkBox
+            // 
+            IsNoPrintMode_checkBox.AutoSize = true;
+            IsNoPrintMode_checkBox.Font = new System.Drawing.Font("Yu Gothic UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
+            IsNoPrintMode_checkBox.Location = new System.Drawing.Point(5, 4);
+            IsNoPrintMode_checkBox.Name = "IsNoPrintMode_checkBox";
+            IsNoPrintMode_checkBox.Size = new System.Drawing.Size(99, 16);
+            IsNoPrintMode_checkBox.TabIndex = 87;
+            IsNoPrintMode_checkBox.Text = "印刷せずコミット要請";
+            IsNoPrintMode_checkBox.UseVisualStyleBackColor = true;
+            // 
             // ErrorOccurred_Label
             // 
-            ErrorOccurred_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            ErrorOccurred_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             ErrorOccurred_Label.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
             ErrorOccurred_Label.ForeColor = System.Drawing.Color.Red;
             ErrorOccurred_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            ErrorOccurred_Label.Location = new System.Drawing.Point(81, 18);
+            ErrorOccurred_Label.Location = new System.Drawing.Point(7, 13);
             ErrorOccurred_Label.Margin = new System.Windows.Forms.Padding(3);
             ErrorOccurred_Label.Name = "ErrorOccurred_Label";
-            ErrorOccurred_Label.Size = new System.Drawing.Size(577, 12);
+            ErrorOccurred_Label.Size = new System.Drawing.Size(651, 19);
             ErrorOccurred_Label.TabIndex = 86;
             ErrorOccurred_Label.Text = "ErrorOccurred_Label";
             ErrorOccurred_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Printer_Info_button
-            // 
-            Printer_Info_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            Printer_Info_button.Location = new System.Drawing.Point(356, 36);
-            Printer_Info_button.Name = "Printer_Info_button";
-            Printer_Info_button.Size = new System.Drawing.Size(78, 22);
-            Printer_Info_button.TabIndex = 16;
-            Printer_Info_button.Text = "印刷機状態";
-            Printer_Info_button.UseVisualStyleBackColor = true;
-            Printer_Info_button.Click += Printer_Info_button_Click;
             // 
             // StageServerHostLabel
             // 
@@ -979,6 +991,17 @@ namespace CommonCommitLogic
             label6.Size = new System.Drawing.Size(80, 15);
             label6.TabIndex = 14;
             label6.Text = "コミット先ホスト:";
+            // 
+            // Printer_Info_button
+            // 
+            Printer_Info_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            Printer_Info_button.Location = new System.Drawing.Point(566, 270);
+            Printer_Info_button.Name = "Printer_Info_button";
+            Printer_Info_button.Size = new System.Drawing.Size(78, 22);
+            Printer_Info_button.TabIndex = 16;
+            Printer_Info_button.Text = "印刷機状態";
+            Printer_Info_button.UseVisualStyleBackColor = true;
+            Printer_Info_button.Click += Printer_Info_button_Click;
             // 
             // NumberingInformation_label
             // 
@@ -1066,6 +1089,7 @@ namespace CommonCommitLogic
             CommitPreview_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             CommitPreview_groupBox.Controls.Add(DEBUG_button);
             CommitPreview_groupBox.Controls.Add(TitleFit_button);
+            CommitPreview_groupBox.Controls.Add(Printer_Info_button);
             CommitPreview_groupBox.Controls.Add(commitPreviewImage);
             CommitPreview_groupBox.Controls.Add(ImageRezolutonInfo_label);
             CommitPreview_groupBox.Controls.Add(panel3);
@@ -1076,6 +1100,16 @@ namespace CommonCommitLogic
             CommitPreview_groupBox.TabIndex = 0;
             CommitPreview_groupBox.TabStop = false;
             CommitPreview_groupBox.Text = "●ArcSuite登録イメージ   (中央ボタンスクロール 拡大・縮小、ｸﾘｯｸで移動、ﾀﾞﾌﾞﾙｸﾘｯｸでﾘｾｯﾄ)";
+            // 
+            // DEBUG_button
+            // 
+            DEBUG_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            DEBUG_button.Location = new System.Drawing.Point(646, 270);
+            DEBUG_button.Name = "DEBUG_button";
+            DEBUG_button.Size = new System.Drawing.Size(15, 46);
+            DEBUG_button.TabIndex = 80;
+            DEBUG_button.UseVisualStyleBackColor = true;
+            DEBUG_button.Click += DEBUG_button_Click;
             // 
             // TitleFit_button
             // 
@@ -1113,16 +1147,6 @@ namespace CommonCommitLogic
             CadFileInformation_groupBox.TabIndex = 89;
             CadFileInformation_groupBox.TabStop = false;
             CadFileInformation_groupBox.Text = "●CAD図面ファイル調査";
-            // 
-            // DEBUG_button
-            // 
-            DEBUG_button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            DEBUG_button.Location = new System.Drawing.Point(646, 270);
-            DEBUG_button.Name = "DEBUG_button";
-            DEBUG_button.Size = new System.Drawing.Size(15, 46);
-            DEBUG_button.TabIndex = 80;
-            DEBUG_button.UseVisualStyleBackColor = true;
-            DEBUG_button.Click += DEBUG_button_Click;
             // 
             // CommitDialogForm
             // 
@@ -1172,6 +1196,8 @@ namespace CommonCommitLogic
             panel3.PerformLayout();
             COMMITSTART_groupBox.ResumeLayout(false);
             COMMITSTART_groupBox.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             NUMBERING_groupBox.ResumeLayout(false);
             CADTITLE_groupBox.ResumeLayout(false);
             CommitPreview_groupBox.ResumeLayout(false);
@@ -1261,5 +1287,7 @@ namespace CommonCommitLogic
         public System.Windows.Forms.Label label10;
         internal System.Windows.Forms.Label VariantNumber_MIN_label2;
         private System.Windows.Forms.Button DEBUG_button;
+        private System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.CheckBox IsNoPrintMode_checkBox;
     }
 }

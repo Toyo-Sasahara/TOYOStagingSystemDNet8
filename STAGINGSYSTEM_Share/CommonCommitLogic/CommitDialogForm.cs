@@ -115,15 +115,23 @@ namespace CommonCommitLogic
         {
             get
             {
-                if (arcSuiteSearchResult != null && arcSuiteSearchResult.arcSuitePreviews != null && arcSuiteSearchResult.arcSuitePreviews.Count == 1 && arcSuiteSearchResult.arcSuitePreviews[0].Found == true)
+                try
                 {
+                    if (arcSuiteSearchResult != null && arcSuiteSearchResult.arcSuitePreviews != null && arcSuiteSearchResult.arcSuitePreviews.Count == 1 && arcSuiteSearchResult.arcSuitePreviews[0].Found == true)
+                    {
 
-                    WriteLine($"[プロパティ:CommitDialogForm.ArcsuitePreview]が要求されました ,1件の検索結果を返します");
-                    return arcSuiteSearchResult.arcSuitePreviews[0];
+                        WriteLine($"[プロパティ:CommitDialogForm.ArcsuitePreview]が要求されました ,1件の検索結果を返します");
+                        return arcSuiteSearchResult.arcSuitePreviews[0];
+                    }
+                    else
+                    {
+                        WriteLine($"[プロパティ:CommitDialogForm.ArcsuitePreview]が要求されました , List<ArcsuitePreview> 'ArcSuiteSearchResult.arcSuitePreviews'にアクセスされました。１件以外の結果 {arcSuiteSearchResult.arcSuitePreviews.Count}件 のデータを保持していますので new ArcsuitePreview()を返します");
+                        return new ArcsuitePreview();
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    WriteLine($"[プロパティ:CommitDialogForm.ArcsuitePreview]が要求されました , List<ArcsuitePreview> 'ArcSuiteSearchResult.arcSuitePreviews'にアクセスされました。１件以外の結果 {arcSuiteSearchResult.arcSuitePreviews.Count}件 のデータを保持していますので new ArcsuitePreview()を返します");
+                    WriteLine($"SasaLib.ArcsuitePreview.ArcsuitePreview 例外検知 {ex.Message}");
                     return new ArcsuitePreview();
                 }
             }
@@ -1840,7 +1848,7 @@ namespace CommonCommitLogic
             else
             {
                 // Shiftキーが押されていない場合は通知
-                MessageBox.Show("Shiftキーを押しながらボタンをクリックしてください。", "注意", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("デバッグウィンドウは同時押下キーが必要", "注意", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
