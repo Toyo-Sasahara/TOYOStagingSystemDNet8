@@ -100,7 +100,6 @@ namespace CommonCommitLogic
             CommitExecute_Button = new System.Windows.Forms.Button();
             COMMITSTART_groupBox = new System.Windows.Forms.GroupBox();
             panel5 = new System.Windows.Forms.Panel();
-            IsNoPrintMode_checkBox = new System.Windows.Forms.CheckBox();
             ErrorOccurred_Label = new System.Windows.Forms.Label();
             StageServerHostLabel = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
@@ -900,7 +899,7 @@ namespace CommonCommitLogic
             // 
             Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             Cancel_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            Cancel_Button.Location = new System.Drawing.Point(244, 2);
+            Cancel_Button.Location = new System.Drawing.Point(142, 2);
             Cancel_Button.Margin = new System.Windows.Forms.Padding(0);
             Cancel_Button.Name = "Cancel_Button";
             Cancel_Button.Size = new System.Drawing.Size(80, 23);
@@ -913,7 +912,7 @@ namespace CommonCommitLogic
             // 
             CommitExecute_Button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             CommitExecute_Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            CommitExecute_Button.Location = new System.Drawing.Point(109, 1);
+            CommitExecute_Button.Location = new System.Drawing.Point(7, 1);
             CommitExecute_Button.Margin = new System.Windows.Forms.Padding(0);
             CommitExecute_Button.Name = "CommitExecute_Button";
             CommitExecute_Button.Size = new System.Drawing.Size(132, 23);
@@ -938,24 +937,12 @@ namespace CommonCommitLogic
             // panel5
             // 
             panel5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            panel5.Controls.Add(IsNoPrintMode_checkBox);
             panel5.Controls.Add(Cancel_Button);
             panel5.Controls.Add(CommitExecute_Button);
-            panel5.Location = new System.Drawing.Point(334, 36);
+            panel5.Location = new System.Drawing.Point(436, 36);
             panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(326, 25);
+            panel5.Size = new System.Drawing.Size(224, 25);
             panel5.TabIndex = 88;
-            // 
-            // IsNoPrintMode_checkBox
-            // 
-            IsNoPrintMode_checkBox.AutoSize = true;
-            IsNoPrintMode_checkBox.Font = new System.Drawing.Font("Yu Gothic UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
-            IsNoPrintMode_checkBox.Location = new System.Drawing.Point(5, 4);
-            IsNoPrintMode_checkBox.Name = "IsNoPrintMode_checkBox";
-            IsNoPrintMode_checkBox.Size = new System.Drawing.Size(99, 16);
-            IsNoPrintMode_checkBox.TabIndex = 87;
-            IsNoPrintMode_checkBox.Text = "印刷せずコミット要請";
-            IsNoPrintMode_checkBox.UseVisualStyleBackColor = true;
             // 
             // ErrorOccurred_Label
             // 
@@ -1197,7 +1184,6 @@ namespace CommonCommitLogic
             COMMITSTART_groupBox.ResumeLayout(false);
             COMMITSTART_groupBox.PerformLayout();
             panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             NUMBERING_groupBox.ResumeLayout(false);
             CADTITLE_groupBox.ResumeLayout(false);
             CommitPreview_groupBox.ResumeLayout(false);
@@ -1288,6 +1274,5 @@ namespace CommonCommitLogic
         internal System.Windows.Forms.Label VariantNumber_MIN_label2;
         private System.Windows.Forms.Button DEBUG_button;
         private System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.CheckBox IsNoPrintMode_checkBox;
     }
 }
