@@ -816,6 +816,7 @@ namespace ServerControlCenterApplication
             Value1_textBox.Name = "Value1_textBox";
             Value1_textBox.Size = new System.Drawing.Size(79, 23);
             Value1_textBox.TabIndex = 91;
+            Value1_textBox.Text = "CommitPath";
             // 
             // PIPECMDNAME_comboBox
             // 

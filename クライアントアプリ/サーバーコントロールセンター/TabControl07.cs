@@ -541,7 +541,6 @@ namespace ServerControlCenterApplication
 
         private void FromObject_to_JSON_button_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
