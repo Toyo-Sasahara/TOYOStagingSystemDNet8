@@ -15,16 +15,32 @@
     <_LastSelectedProfileId>C:\Users\sasahara\source\repos\TOYOStagingSystemDNet8\クライアントアプリ\サーバーコントロールセンター\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PreviewImageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="TabControl07.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

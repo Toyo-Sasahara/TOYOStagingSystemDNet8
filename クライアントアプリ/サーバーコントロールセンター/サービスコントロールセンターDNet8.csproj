@@ -64,27 +64,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Update="TabControl07.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="TabControl01.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="TabControl03.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="TabControl05.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="TabControl04.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="TabControl02.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="TabControl06.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.ArcSuitePreview\SasaLibDNet8.ArcSuitePreview.csproj" />
@@ -138,6 +117,20 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\SqlSyntax.cs" Link="SqlSyntax.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\StaticCommonVars.cs" Link="StaticCommonVars.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\Test_CommitExecute.cs" Link="Test_CommitExecute.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl01.cs" Link="TabControl01.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl01.Designer.cs" Link="TabControl01.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl02.cs" Link="TabControl02.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl02.Designer.cs" Link="TabControl02.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl03.cs" Link="TabControl03.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl03.Designer.cs" Link="TabControl03.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl04.cs" Link="TabControl04.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl04.Designer.cs" Link="TabControl04.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl05.cs" Link="TabControl05.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl05.Designer.cs" Link="TabControl05.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl06.cs" Link="TabControl06.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl06.Designer.cs" Link="TabControl06.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl07.cs" Link="TabControl07.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl07.Designer.cs" Link="TabControl07.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TestImages\TESTIMAGE-A0.tif">
