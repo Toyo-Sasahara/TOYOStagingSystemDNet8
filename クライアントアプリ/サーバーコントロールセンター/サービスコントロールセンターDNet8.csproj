@@ -106,6 +106,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\Command_Status.cs" Link="Command_Status.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\CommitPrinters.cs" Link="CommitPrinters.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\CommitTest.cs" Link="CommitTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\ConfigValueControler.cs" Link="ConfigValueControler.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\ListViewItemComparer.cs" Link="ListViewItemComparer.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\LogWindow.cs" Link="LogWindow.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\LogWindow2.cs" Link="LogWindow2.cs" />
