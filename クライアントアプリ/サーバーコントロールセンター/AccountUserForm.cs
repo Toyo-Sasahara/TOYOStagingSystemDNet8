@@ -155,9 +155,9 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DC_ConnectTest_button_Click(object sender, EventArgs e)
+        private async void DC_ConnectTest_button_Click(object sender, EventArgs e)
         {
-            Command_Status.DC_ConnectTest($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
+            var result = await Command_Status.DC_ConnectTestAsync($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
 
         }
 
@@ -166,9 +166,9 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void SW_ConnectTest_button_Click(object sender, EventArgs e)
+        private async void SW_ConnectTest_button_Click(object sender, EventArgs e)
         {
-            Command_Status.SW_ConnectTest($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
+            var result = await Command_Status.SW_ConnectTestAsync($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
 
         }
 
