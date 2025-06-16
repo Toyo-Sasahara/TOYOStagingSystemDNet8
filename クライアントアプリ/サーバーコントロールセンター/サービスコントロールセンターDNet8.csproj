@@ -125,6 +125,8 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\LogWindowControl.Designer.cs" Link="LogWindowControl.Designer.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\PreviewImageForm.cs" Link="PreviewImageForm.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\PreviewImageForm.Designer.cs" Link="PreviewImageForm.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\ProcessingForm.cs" Link="ProcessingForm.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\ProcessingForm.Designer.cs" Link="ProcessingForm.Designer.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl01.cs" Link="TabControl01.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl01.Designer.cs" Link="TabControl01.Designer.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl02.cs" Link="TabControl02.cs" />

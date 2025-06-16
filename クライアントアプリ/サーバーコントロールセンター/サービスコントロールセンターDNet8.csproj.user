@@ -24,6 +24,9 @@
     <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\PreviewImageForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\ProcessingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\%40サーバーコントロールセンター\TabControl01.cs">
       <SubType>UserControl</SubType>
     </Compile>
