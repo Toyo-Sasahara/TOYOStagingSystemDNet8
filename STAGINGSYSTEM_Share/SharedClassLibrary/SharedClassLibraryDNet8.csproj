@@ -27,6 +27,7 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\ConsoleOption.cs" Link="ConsoleOption.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\DebugClass.cs" Link="DebugClass.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\GlovalValues.cs" Link="GlovalValues.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PipeCommandContext.cs" Link="PipeCommandContext.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PresentTicketCode.cs" Link="PresentTicketCode.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PrinterInfo.cs" Link="PrinterInfo.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\PrinterStatus.cs" Link="PrinterStatus.cs" />

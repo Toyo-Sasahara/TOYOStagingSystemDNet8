@@ -69,6 +69,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\MemoryMapdFile.cs" Link="MemoryMapdFile.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEClient.cs" Link="PIPEClient.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEServer.cs" Link="PIPEServer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEServerCommandAsync.cs" Link="PIPEServerCommandAsync.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_ConnectTest.cs" Link="ServerCMD_ConnectTest.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_GetAvailableMemory.cs" Link="ServerCMD_GetAvailableMemory.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_GetMemMapdFile.cs" Link="ServerCMD_GetMemMapdFile.cs" />
