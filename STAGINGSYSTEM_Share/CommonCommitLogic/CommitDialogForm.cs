@@ -71,7 +71,7 @@ namespace CommonCommitLogic
         /// <summary>
         /// ログ出力先のデフォルトを設定
         /// </summary>
-        private SasaLibDelegateWriteLine WriteLine = DebugConsole.WriteLine;
+        private Action<string> WriteLine = DebugConsole.WriteLine;
 
         /// <summary>
         /// 
@@ -179,7 +179,7 @@ namespace CommonCommitLogic
         /// <param name="CanUseVariantTypeDrawing"></param>
         public CommitDialogForm(CommitCommonSettings Config, CommitHelperCadDrawingFile supportCadDrawingFile,
             CommitHelperArcSuite supportArcSuite, CommitHelperNumbering supportNumbering,
-            SasaLibDelegateWriteLine WriteLine, bool PrintOutOnly = false, bool CanUseVariantTypeDrawing = false)
+            Action<string> WriteLine, bool PrintOutOnly = false, bool CanUseVariantTypeDrawing = false)
         {
             this.commmitCommonSettings = Config;
             this.PrintOutOnly = PrintOutOnly;
@@ -1278,7 +1278,7 @@ namespace CommonCommitLogic
                                         commmitCommonSettings.ClientUserName,
                                         PipeClientPlanePass,
                                         commmitCommonSettings.ClsLogon,
-                                        RemoteClientCADtype.CadType.InventorModel,
+                                        RemoteClientCadType.CadType.InventorModel,
                                         commmitCommonSettings.ArcSuiteUserName,
                                         ArcSuiteUserPlanePass
                                 );

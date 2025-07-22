@@ -15,7 +15,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
-		<ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

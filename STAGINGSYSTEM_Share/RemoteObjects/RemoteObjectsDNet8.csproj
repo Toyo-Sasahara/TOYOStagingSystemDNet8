@@ -31,7 +31,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
-		<ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
 		<ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
 	</ItemGroup>
 	<ItemGroup>

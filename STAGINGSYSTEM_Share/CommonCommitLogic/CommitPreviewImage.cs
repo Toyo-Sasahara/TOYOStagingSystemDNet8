@@ -194,7 +194,7 @@ namespace CommonCommitLogic
         /// <summary>
         /// デバッグ出力用
         /// </summary>
-        SasaLibDelegateWriteLine WriteLine = DebugConsole.Write;
+        Action<string> WriteLine = DebugConsole.Write;
 
         public CommitPreviewImage()
         {

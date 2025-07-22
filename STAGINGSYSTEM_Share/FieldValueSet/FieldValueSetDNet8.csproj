@@ -26,8 +26,5 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
-  </ItemGroup>
   <Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
 </Project>
