@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Runtime.InteropServices.WindowsRuntime;
+
 
 #if NETCOREAPP
 using System.Runtime.Versioning;
@@ -129,7 +131,7 @@ namespace SasaLib.NumberingSupport
             this.StageServerHost = StageServerHost;
             this.PipeNameDC = PipeNameDC;
 
-            this.IsNewStreamMode = IsNewStreamMode;
+            this.IsNewStreamMode = isNewStreamMode;
 
         }
 
@@ -373,11 +375,63 @@ namespace SasaLib.NumberingSupport
         /// <param name="DistnationFile"></param>
         /// <param name="WriteLine"></param>
         /// <returns></returns>
+        //async Task<bool> LoadConfigFileFromStageServerAsync(string SouceFile, string DistnationFile, Action<string> WriteLine = null)
+        //{
+        //    if (IsNewStreamMode == false)
+        //    {
+        //        if (WriteLine == null) WriteLine = Console.WriteLine;
+
+        //        RemoteClientDRAWCAPTURE remoteClientDC = new RemoteClientDRAWCAPTURE(
+        //                this.ClientDomainName,
+        //                this.ClientUserName,
+        //                this.ClientPassword,
+        //                this.ClsLogon,
+        //                this.StageServerHost,
+        //                this.PipeNameDC);
+
+        //        var ans = await remoteClientDC.FileRecvAsync(SouceFile, DistnationFile, objectConvNew: true, WriteLine: WriteLine, debugMode: false);
+        //        if (ans.Sucess)
+        //        {
+        //            WriteLine($"LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製に成功 {ans.ResultMsg}");
+        //            return ans.Sucess;
+        //        }
+        //        else
+        //        {
+        //            WriteLine($"※LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製に失敗しました {ans.ResultMsg}");
+        //            return ans.Sucess;
+        //        }
+        //    }
+        //    else
+        //    {
+
+        //        var tcpClient = new StreamBasedClient(
+        //        new StreamProvider_Tcp(StageServerHost, 12345, WriteLine), WriteLine);
+
+        //        CMD_ServerControl_FileRecv_Client.Param param = new CMD_ServerControl_FileRecv_Client.Param()
+        //        {
+        //            ServerSourceFullFileName = SouceFile,
+        //            LocalDistFullFileName = DistnationFile,
+        //            debugMode = true,
+        //            WriteLine = WriteLine,
+        //        };
+
+        //        var result = await tcpClient.SendCommandAsync(
+        //                commandName: CMDS.DC_ServerControl_FileRecv, subCommandName: null,
+        //                ExecuteCommandByNameAsync: CMD_ServerControl_FileRecv_Client.ExecuteAsync, commandParam: param,
+        //                userName: Environment.UserName
+        //            );
+
+        //    }
+        //    return true;
+        //}
+
         async Task<bool> LoadConfigFileFromStageServerAsync(string SouceFile, string DistnationFile, Action<string> WriteLine = null)
         {
+            if (WriteLine == null) WriteLine = Console.WriteLine;
+
             if (IsNewStreamMode == false)
             {
-                if (WriteLine == null) WriteLine = Console.WriteLine;
+                WriteLine($"LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製を開始 （旧モード）");
 
                 RemoteClientDRAWCAPTURE remoteClientDC = new RemoteClientDRAWCAPTURE(
                         this.ClientDomainName,
@@ -386,26 +440,26 @@ namespace SasaLib.NumberingSupport
                         this.ClsLogon,
                         this.StageServerHost,
                         this.PipeNameDC);
-
-                //var ans = remoteClientDC.GetTextFileFromPIPE(SouceFile, DistnationFile, WriteLine);
                 string resultMsg;
-                var ans = await remoteClientDC.FileRecvAsync(SouceFile, DistnationFile, objectConvNew: true, WriteLine: WriteLine, debugMode: false);
-                if (ans.Sucess)
+                var ans = remoteClientDC.FileRecv(SouceFile, DistnationFile, out resultMsg, objectConvNew: true, WriteLine: WriteLine, Verbose: false);
+                if (ans)
                 {
-                    WriteLine($"LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製に成功 {ans.ResultMsg}");
-                    return ans.Sucess;
+                    WriteLine($"LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製に成功 {resultMsg}");
+                    return ans;
                 }
                 else
                 {
-                    WriteLine($"※LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製に失敗しました {ans.ResultMsg}");
-                    return ans.Sucess;
+                    WriteLine($"※LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製に失敗しました {resultMsg}");
+                    return ans;
                 }
             }
             else
             {
+                WriteLine($"LoadConfigFileFromStageServer(..) ｽﾃｰｼﾞｻｰﾊﾞｰ {StageServerHost}から \"{SouceFile}\" の複製を開始 （抽象化ストリームモード）");
+
 
                 var tcpClient = new StreamBasedClient(
-                new StreamProvider_Tcp(StageServerHost, 12345, WriteLine),WriteLine);
+                new StreamProvider_Tcp(StageServerHost, 12345, WriteLine), WriteLine);
 
                 CMD_ServerControl_FileRecv_Client.Param param = new CMD_ServerControl_FileRecv_Client.Param()
                 {
@@ -415,14 +469,17 @@ namespace SasaLib.NumberingSupport
                     WriteLine = WriteLine,
                 };
 
+
                 var result = await tcpClient.SendCommandAsync(
                         commandName: CMDS.DC_ServerControl_FileRecv, subCommandName: null,
                         ExecuteCommandByNameAsync: CMD_ServerControl_FileRecv_Client.ExecuteAsync, commandParam: param,
                         userName: Environment.UserName
                     );
-
+                if (result.isError)
+                    return false;
+                else
+                    return true;
             }
-            return true;
         }
 
 
