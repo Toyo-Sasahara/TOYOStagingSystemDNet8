@@ -1488,7 +1488,7 @@ namespace CommonCommitLogic
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Printer_Info_button_Click(object sender, EventArgs e)
+        private async void Printer_Info_button_Click(object sender, EventArgs e)
         {
             Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
             string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commmitCommonSettings.PipeConnection31Password); //復号化
@@ -1501,8 +1501,8 @@ namespace CommonCommitLogic
 
             var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: Commit.objectConvNew);
             var printerAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(objectConvNew: Commit.objectConvNew);
-            var printerFailStatus = remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatus(objectConvNew: Commit.objectConvNew);
-            var printerSettingFromPaperSize = remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSize(objectConvNew: Commit.objectConvNew);
+            var printerFailStatus = await remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatusAsync(objectConvNew: Commit.objectConvNew);
+            var printerSettingFromPaperSize = await remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSizeAsync(objectConvNew: Commit.objectConvNew);
 
             StringBuilder sb = new StringBuilder();
 

@@ -16,6 +16,7 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\delete TOYOSTAGINGSYSTEM.DNet8\STAGINGSYSTEM_Share\SharedClassLibrary\AcceptPipeCommand.cs" Link="AcceptPipeCommand.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientClientPreInputTICKET.cs" Link="RemoteClientClientPreInputTICKET.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDataBase.cs" Link="RemoteClientDataBase.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDRAWCAPTURE.cs" Link="RemoteClientDRAWCAPTURE.cs" />
