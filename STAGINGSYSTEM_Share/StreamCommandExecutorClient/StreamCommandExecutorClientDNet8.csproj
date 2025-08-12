@@ -17,13 +17,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_CommitRecepitonState_Client.cs" Link="CMD_CommitRecepitonState_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetArcSuiteAtrtribute1_Client.cs" Link="CMD_GetArcSuiteAtrtribute1_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetArcSuiteAtrtribute2_Client.cs" Link="CMD_GetArcSuiteAtrtribute2_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetArcSuiteAtrtribute3_Client.cs" Link="CMD_GetArcSuiteAtrtribute3_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetArcSuiteAtrtribute_Client .cs" Link="CMD_GetArcSuiteAtrtribute_Client .cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetArcSuiteLatestDrawingFile_Client.cs" Link="CMD_GetArcSuiteLatestDrawingFile_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetArcSuiteLatestDrawing_Client.cs" Link="CMD_GetArcSuiteLatestDrawing_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetCommitPrinterSettingFromPaperSize_Client.cs" Link="CMD_GetCommitPrinterSettingFromPaperSize_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetVersion_Client.cs" Link="CMD_GetVersion_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_LoadImage2_Client.cs" Link="CMD_LoadImage2_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_LoadImage_Client.cs" Link="CMD_LoadImage_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_ServerControl_FileRecv_Client.cs" Link="CMD_ServerControl_FileRecv_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_ServerControl_FileSend_Client.cs" Link="CMD_ServerControl_FileSend_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_ServerControl_GetFileList_Client.cs" Link="CMD_ServerControl_GetFileList_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\DummyParam.cs" Link="DummyParam.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\ServerInfo.cs" Link="ServerInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />

@@ -17,6 +17,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandBridge\CommandContextExtensions.cs" Link="CommandContextExtensions.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandBridge\CommandLoggingExtensions.cs" Link="CommandLoggingExtensions.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandBridge\CommandTimingExtensions.cs" Link="CommandTimingExtensions.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandBridge\ConnectionType.cs" Link="ConnectionType.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandBridge\ICommandContext.cs" Link="ICommandContext.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandBridge\SequenceNumberProvider.cs" Link="SequenceNumberProvider.cs" />
