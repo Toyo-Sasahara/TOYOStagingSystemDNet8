@@ -26,6 +26,7 @@ using static CommonCommitLogic.ArcSuiteSearchResult;
 #if NETCOREAPP
 using EnvDTE;
 using System.Diagnostics;
+using SharedClassLibrary;
 #endif
 
 namespace CommonCommitLogic
@@ -41,7 +42,7 @@ namespace CommonCommitLogic
         /// <summary>
         /// コミット処理に必要な共通設定
         /// </summary>
-        private CommitCommonSettings commmitCommonSettings;
+        private CommitCommonSettings CommmitCommonSettings { get; }
 
         /// <summary>
         /// コミット対象CADファイルから収集したチケットファイルを作成する属性・値データ
@@ -170,18 +171,18 @@ namespace CommonCommitLogic
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="Config"></param>
+        /// <param name="commitCommonSettings"></param>
         /// <param name="supportCadDrawingFile"></param>
         /// <param name="supportArcSuite"></param>
         /// <param name="supportNumbering"></param>
         /// <param name="WriteLine"></param>
         /// <param name="PrintOutOnly"></param>
         /// <param name="CanUseVariantTypeDrawing"></param>
-        public CommitDialogForm(CommitCommonSettings Config, CommitHelperCadDrawingFile supportCadDrawingFile,
+        public CommitDialogForm(CommitCommonSettings commitCommonSettings, CommitHelperCadDrawingFile supportCadDrawingFile,
             CommitHelperArcSuite supportArcSuite, CommitHelperNumbering supportNumbering,
             Action<string> WriteLine, bool PrintOutOnly = false, bool CanUseVariantTypeDrawing = false)
         {
-            this.commmitCommonSettings = Config;
+            this.CommmitCommonSettings = commitCommonSettings;
             this.PrintOutOnly = PrintOutOnly;
             this.WriteLine = WriteLine;
 
@@ -363,7 +364,7 @@ namespace CommonCommitLogic
             /// 採番システムからの結果を反映させる
             if (supportNumbering.ReserveNumber.CheckAcquiredNumberedNormal == true)
             {
-                WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) 採番システム {commmitCommonSettings.NumberingServerName} との通信は既に成功しています");
+                WriteLine($"■CommitDialogForm.OnEvent_ReserveNumberChanged(..) 採番システム {CommmitCommonSettings.NumberingServerName} との通信は既に成功しています");
 
                 if (supportNumbering.ReserveNumber.NumberingRecordAvailable == true)
                 {
@@ -751,7 +752,7 @@ namespace CommonCommitLogic
             bool result = true;
             ErrMsg = null;
 
-            StageServerHostLabel.Text = commmitCommonSettings.StageServerHost;
+            StageServerHostLabel.Text = CommmitCommonSettings.ConnextionDataSet.StageServerHost;
 
 
 
@@ -834,13 +835,13 @@ namespace CommonCommitLogic
                 }
             }
 
-            if (commmitCommonSettings.CommitPrinterDriverName != "")
+            if (CommmitCommonSettings.CommitPrinterDriverName != "")
             {
-                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commmitCommonSettings.CommitPrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
+                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{CommmitCommonSettings.CommitPrinterDriverName}】のﾍﾟｰｼﾞ設定にて決まります";
             }
-            else if (commmitCommonSettings.PC3FileName != "")
+            else if (CommmitCommonSettings.PC3FileName != "")
             {
-                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{commmitCommonSettings.PC3FileName}】のﾍﾟｰｼﾞ設定にて決まります";
+                PlotFileCreate_label.Text = $"出力用紙ｻｲｽﾞと方向の設定は, ﾌﾟﾘﾝﾀ【{CommmitCommonSettings.PC3FileName}】のﾍﾟｰｼﾞ設定にて決まります";
 
             }
             else
@@ -1167,10 +1168,10 @@ namespace CommonCommitLogic
             try
             {
                 NumberingWebHelper.OpenNumberingWebServer(TitleBlock_PARTNUMBER_linklabel.Text,
-                    commmitCommonSettings.NumberingServerWebAddr,
-                    commmitCommonSettings.NumberingPartDrawingUpdateAddress,
-                    commmitCommonSettings.NumberingAssyDrawingUpdateAddress,
-                    commmitCommonSettings.NumberingLayoutDrawingUpdateAddress, WriteLine);
+                    CommmitCommonSettings.NumberingServerWebAddr,
+                    CommmitCommonSettings.NumberingPartDrawingUpdateAddress,
+                    CommmitCommonSettings.NumberingAssyDrawingUpdateAddress,
+                    CommmitCommonSettings.NumberingLayoutDrawingUpdateAddress, WriteLine);
             }
             catch (Exception ex)
             {
@@ -1213,12 +1214,12 @@ namespace CommonCommitLogic
                     {
 
                         // ArcSuiteに問い合わせるURL
-                        string ArcSuiteDrawingSearchURL = commmitCommonSettings.ArcSuiteSearchURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
+                        string ArcSuiteDrawingSearchURL = CommmitCommonSettings.ArcSuiteSearchURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
 
                         // コミット対象のCADファイル
                         string activeDocumentFullFileName = AtiveDocFullFilename;
 
-                        if (commmitCommonSettings.ArcSuiteDrawingDownloadMode)
+                        if (CommmitCommonSettings.ArcSuiteDrawingDownloadMode)
                         {
                             ///
                             ArcSuitePreviewOnlyForm arcSuitePreviewOnlyForm = null;
@@ -1228,11 +1229,7 @@ namespace CommonCommitLogic
 
                             ArcSuiteDrawingShow_button.Text = "ArcSuiteへ図面検索中\r\n暫くお待ちださい・・・";
 
-                            // 一度ダウンロードした状態かを確認。ない場合は取出し
-
-                            Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
-                            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commmitCommonSettings.PipeConnection31Password); //復号化
-
+                           
                             await Task.Run(() =>
                             {
                                 if (string.IsNullOrWhiteSpace(arcsuitePreview.temporalyDrawingImageFullFileName) == true ||
@@ -1241,17 +1238,23 @@ namespace CommonCommitLogic
                                     WriteLine($"■CommitDialogForm.SearchRegistedArcSuiteDrawing_button_Click(..) ArcSuite登録図ﾌﾟﾚﾋﾞｭｰ用TIFFファイルをダウンロードします");
                                     /// リモート操作をするオブジェクトを生成
                                     RemoteClientDRAWREGIST remoteClientDR = new RemoteClientDRAWREGIST(
-                                        commmitCommonSettings.ClientDomainName,
-                                        commmitCommonSettings.ClientUserName,
-                                        PipeClientPlanePass,
-                                        commmitCommonSettings.ClsLogon,
-                                        commmitCommonSettings.StageServerHost,
-                                        commmitCommonSettings.PipeNameDR
+                                        DomainName:CommmitCommonSettings.ConnextionDataSet.ClientDomainName,
+                                        UserName:CommmitCommonSettings.ConnextionDataSet.ClientUserName,
+                                        UserPassword:CommmitCommonSettings.ConnextionDataSet.StageServerHost,
+                                        ClsLogon:CommmitCommonSettings.ConnextionDataSet.ClsLogon,
+                                        PipeServerName:CommmitCommonSettings.ConnextionDataSet.StageServerHost,
+                                        PipeName:CommmitCommonSettings.ConnextionDataSet.PipeNameDR,
+                                        WriteLine:WriteLine,
+                                        Verbose:true
                                         );
 
                                     ArcsuitePreview originalStruct = arcsuitePreview;
 
-                                    var resule = CheckArcSuiteData.GetArcSuiteImagePipe(remoteClientDR, arcsuitePreview.user_zuban, out originalStruct.temporalyDrawingImageFullFileName, objectConvNew: Commit.objectConvNew, WriteLine);
+                                    CheckArcSuiteData checkArcSuiteData = new CheckArcSuiteData(CommmitCommonSettings.ConnextionDataSet,remoteClientDR, objectConvNew: true);
+
+
+                                    var resule = checkArcSuiteData.GetArcSuiteImagePipe(remoteClientDR, arcsuitePreview.user_zuban, out originalStruct.temporalyDrawingImageFullFileName, objectConvNew: Commit.objectConvNew, WriteLine);
+                                    
                                     arcSuiteSearchResult.arcSuitePreviews[0] = originalStruct;
                                 }
                                 else
@@ -1261,8 +1264,8 @@ namespace CommonCommitLogic
                             });
 
 
-                            Encryption sasaLibencryptionArcSuite = new Encryption("SasaAuth3.1");
-                            string ArcSuiteUserPlanePass = sasaLibencryptionArcSuite.Decoding(commmitCommonSettings.ArcSuiteCrypt31UserPass); //復号化
+                            //Encryption sasaLibencryptionArcSuite = new Encryption("SasaAuth3.1");
+                            //string ArcSuiteUserPlanePass = sasaLibencryptionArcSuite.Decoding(commmitCommonSettings.ArcSuiteCrypt31UserPass); //復号化
 
                             //テンポラリﾌｫﾙﾀﾞに表示すべきﾌｧｲﾙがあるか確認
                             if (System.IO.File.Exists(arcsuitePreview.temporalyDrawingImageFullFileName) == true)
@@ -1272,15 +1275,15 @@ namespace CommonCommitLogic
                                 arcSuitePreviewOnlyForm.PreviewSet(arcsuitePreview, ArcSuiteDrawingSearchURL, activeDocumentFullFileName);
                                 arcSuitePreviewOnlyForm.MessageSet("");
                                 arcSuitePreviewOnlyForm.SetUnsetCadTypeFlagControlDatas(
-                                        commmitCommonSettings.StageServerHost,
-                                        commmitCommonSettings.PipeNameDR,
-                                        commmitCommonSettings.ClientDomainName,
-                                        commmitCommonSettings.ClientUserName,
-                                        PipeClientPlanePass,
-                                        commmitCommonSettings.ClsLogon,
+                                        CommmitCommonSettings.ConnextionDataSet.StageServerHost,
+                                        CommmitCommonSettings.ConnextionDataSet.PipeNameDR,
+                                        CommmitCommonSettings.ConnextionDataSet.ClientDomainName,
+                                        CommmitCommonSettings.ConnextionDataSet.ClientUserName,
+                                        CommmitCommonSettings.ConnextionDataSet.ClientUserPassword,
+                                        CommmitCommonSettings.ConnextionDataSet.ClsLogon,
                                         RemoteClientCadType.CadType.InventorModel,
-                                        commmitCommonSettings.ArcSuiteUserName,
-                                        ArcSuiteUserPlanePass
+                                        CommmitCommonSettings.ConnextionDataSet.ArcSuiteUserName,
+                                        CommmitCommonSettings.ConnextionDataSet.ArcSuiteUserPass
                                 );
 
                                 try
@@ -1305,7 +1308,7 @@ namespace CommonCommitLogic
                             if (string.IsNullOrWhiteSpace(arcsuitePreview.createdOnMessage) != true)
                             {
                                 //string ArcSuiteURL = Config.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", CommitDialogForm.stArcSuitePreview.user_zuban);
-                                string ArcSuiteURL = commmitCommonSettings.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
+                                string ArcSuiteURL = CommmitCommonSettings.ArcSuiteSearchAndContentOpenURL.Replace("{SANITIZEDPARTNUMBER}", arcsuitePreview.user_zuban);
 
 #if NETCOREAPP
                                 System.Diagnostics.Process.Start(new ProcessStartInfo
@@ -1490,13 +1493,13 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private async void Printer_Info_button_Click(object sender, EventArgs e)
         {
-            Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
-            string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commmitCommonSettings.PipeConnection31Password); //復号化
+            //Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
+            //string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commmitCommonSettings.PipeConnection31Password); //復号化
 
             RemoteClientDRAWCAPTURE remoteClientDRAWCAPTURE = new RemoteClientDRAWCAPTURE(
-                commmitCommonSettings.ClientDomainName, commmitCommonSettings.ClientUserName,
-                PipeClientPlanePass, commmitCommonSettings.ClsLogon,
-                commmitCommonSettings.StageServerHost, commmitCommonSettings.PipeNameDC);
+                CommmitCommonSettings.ConnextionDataSet.ClientDomainName, CommmitCommonSettings.ConnextionDataSet.ClientUserName,
+                CommmitCommonSettings.ConnextionDataSet.ClientUserPassword, CommmitCommonSettings.ConnextionDataSet.ClsLogon,
+                CommmitCommonSettings.ConnextionDataSet.StageServerHost, CommmitCommonSettings.ConnextionDataSet.PipeNameDC);
 
 
             var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: Commit.objectConvNew);

@@ -24,6 +24,7 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\BinaryReadWriterManager.cs" Link="BinaryReadWriterManager.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\ClientPreInputTICKET.cs" Link="ClientPreInputTICKET.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\CommonSqlSyntax.cs" Link="CommonSqlSyntax.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\ConnectionDataSet.cs" Link="ConnectionDataSet.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\ConsoleOption.cs" Link="ConsoleOption.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\DebugClass.cs" Link="DebugClass.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SharedClassLibrary\GlovalValues.cs" Link="GlovalValues.cs" />
@@ -37,7 +38,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
-		<ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
 		<ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
 	</ItemGroup>
 	<ItemGroup>
