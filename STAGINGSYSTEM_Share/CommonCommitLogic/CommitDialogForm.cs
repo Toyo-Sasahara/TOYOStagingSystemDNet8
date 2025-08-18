@@ -1261,10 +1261,6 @@ namespace CommonCommitLogic
                                 }
                             });
 
-
-                            //Encryption sasaLibencryptionArcSuite = new Encryption("SasaAuth3.1");
-                            //string ArcSuiteUserPlanePass = sasaLibencryptionArcSuite.Decoding(commmitCommonSettings.ArcSuiteCrypt31UserPass); //復号化
-
                             //テンポラリﾌｫﾙﾀﾞに表示すべきﾌｧｲﾙがあるか確認
                             if (System.IO.File.Exists(arcsuitePreview.temporalyDrawingImageFullFileName) == true)
                             {
@@ -1287,6 +1283,9 @@ namespace CommonCommitLogic
                                 try
                                 {
                                     arcSuitePreviewOnlyForm.ShowDialog(this);
+
+                                    ArcSuiteDrawingShow_button.Text = SearchRegistedArcSuiteDrawing_button_Text;
+
                                 }
                                 catch (Exception ex)
                                 {
