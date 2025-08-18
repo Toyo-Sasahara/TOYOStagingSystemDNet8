@@ -1153,7 +1153,6 @@ namespace CommonCommitLogic
             SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "●東陽ﾂｰﾙ コミット最終確認(各種CAD共通版)";
-            TopMost = true;
             FormClosing += CommitDialogForm_FormClosing;
             FormClosed += CommitDialogForm_FormClosed;
             Load += CommitDialogForm_Load;

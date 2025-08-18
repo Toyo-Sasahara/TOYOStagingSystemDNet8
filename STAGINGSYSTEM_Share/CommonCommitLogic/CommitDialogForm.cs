@@ -1037,8 +1037,6 @@ namespace CommonCommitLogic
         /// <param name="FullImagePath"></param>
         internal void SetImage(string FullImagePath)
         {
-            //MiniPreviewPictureBox.Load(FullImagePath);
-            //WriteLine($"画像ﾌｧｲﾙ{FullImagePath}をPicutreBoxへロード。 DPI:{MiniPreviewPictureBox.Image.HorizontalResolution}");
 
             commitPreviewImage.LoadImage(FullImagePath);
             WriteLine($"■CommitDialogForm.SetImage(..) 画像ﾌｧｲﾙ \"{FullImagePath}\" を CommitPreviewImageへロード。 DPI:{commitPreviewImage.Image.HorizontalResolution}");
@@ -1253,7 +1251,7 @@ namespace CommonCommitLogic
                                     CheckArcSuiteData checkArcSuiteData = new CheckArcSuiteData(CommmitCommonSettings.ConnextionDataSet,remoteClientDR, objectConvNew: true);
 
 
-                                    var resule = checkArcSuiteData.GetArcSuiteImagePipe(remoteClientDR, arcsuitePreview.user_zuban, out originalStruct.temporalyDrawingImageFullFileName, objectConvNew: Commit.objectConvNew, WriteLine);
+                                    var resule = checkArcSuiteData.GetArcSuiteImage(remoteClientDR, arcsuitePreview.user_zuban, out originalStruct.temporalyDrawingImageFullFileName, objectConvNew: Commit.objectConvNew, WriteLine);
                                     
                                     arcSuiteSearchResult.arcSuitePreviews[0] = originalStruct;
                                 }
