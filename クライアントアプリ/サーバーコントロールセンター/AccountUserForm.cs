@@ -28,7 +28,7 @@ namespace ServerControlCenterApplication
         /// <summary>
         /// 
         /// </summary>
-        public SasaLibDelegateWriteLine WriteLine { get; set; } = DebugConsole.WriteLine;
+        public Action<string> WriteLine { get; set; } = DebugConsole.WriteLine;
 
         /// <summary>
         /// カスタムイベントの定義
@@ -71,12 +71,11 @@ namespace ServerControlCenterApplication
         /// </summary>
         public void SetToControls()
         {
-            Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
             ClientImpersonationCheckBox.Checked = SccConfig.Config.ClsLogon;     // 1
             LogonDomainTextBox.Text = SccConfig.Config.ClientDomainName;         // 2
             LogonUserTextBox.Text = SccConfig.Config.ClientUserName;            // 3
 
-            SccConfig.Config.ClientUserPassword = sasaLibencryption.Decoding(SccConfig.Config.ClientUserCryptUserPass);
+            SccConfig.Config.ClientUserPassword = Encryption.Decode(SccConfig.Config.SasaLibEncryptionType, SccConfig.Config.ClientUserCryptUserPass);
             LogonPasswordTextBox.Text = SccConfig.Config.ClientUserPassword;    // 4
 
             StageServerHostName_comboBox.Text = SccConfig.Config.StageServerHost;        // 5
@@ -94,14 +93,13 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         public void ControlChanged(object sender, EventArgs e)
         {
-            Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
 
             SccConfig.Config.ClsLogon = ClientImpersonationCheckBox.Checked;// 1
             SccConfig.Config.ClientDomainName = LogonDomainTextBox.Text;    // 2
             SccConfig.Config.ClientUserName = LogonUserTextBox.Text;        // 3
 
             SccConfig.Config.ClientUserPassword = LogonPasswordTextBox.Text;// 4
-            SccConfig.Config.ClientUserCryptUserPass = sasaLibencryption.Encoding(SccConfig.Config.ClientUserPassword);
+            SccConfig.Config.ClientUserCryptUserPass = Encryption.Encode(SccConfig.Config.SasaLibEncryptionType,SccConfig.Config.ClientUserPassword);
 
             SccConfig.Config.StageServerHost = StageServerHostName_comboBox.Text;    // 5
             SccConfig.Config.PipeNameDR = DrawregistPIPEnameTextBox.Text;   // 6
@@ -191,8 +189,7 @@ namespace ServerControlCenterApplication
         {
             SccConfig.Config.ClientUserPassword = LogonPasswordTextBox.Text;// 4
 
-            Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
-            SccConfig.Config.ClientUserCryptUserPass = sasaLibencryption.Encoding(SccConfig.Config.ClientUserPassword);
+            SccConfig.Config.ClientUserCryptUserPass = Encryption.Encode(SccConfig.Config.SasaLibEncryptionType, SccConfig.Config.ClientUserPassword);
             // カスタムイベントを発生
             OnAccountChanged(EventArgs.Empty);
         }
@@ -269,13 +266,13 @@ namespace ServerControlCenterApplication
         /// <param name="PipeServerName"></param>
         /// <param name="pipename"></param>
         /// <returns></returns>
-        private List<AcceptPipeCommand> serviceShutdown(string PipeServerName, string pipename)
+        private List<AcceptCommand> serviceShutdown(string PipeServerName, string pipename)
         {
             // TODO: ClsLogonDummy を 書き換えた
             WithFakeAccount withFakeAccount = new WithFakeAccount(SccConfig.Config.ClientDomainName,
                 SccConfig.Config.ClientUserName, SccConfig.Config.ClientUserPassword, SccConfig.Config.ClsLogon, _fakeExecute);
 
-            List<AcceptPipeCommand> fakedExecuteresult = (List<AcceptPipeCommand>)withFakeAccount.GetResult();
+            List<AcceptCommand> fakedExecuteresult = (List<AcceptCommand>)withFakeAccount.GetResult();
 
             return fakedExecuteresult;
 
@@ -284,7 +281,7 @@ namespace ServerControlCenterApplication
                 try
                 {
                     object writeResult;
-                    List<AcceptPipeCommand> acceptPIpeCommmands = null;
+                    List<AcceptCommand> acceptPIpeCommmands = null;
 
                     NamedPipeClientStream pipeCltStream = new NamedPipeClientStream(PipeServerName, pipename);
                     // 待機中のサーバーへ接続
@@ -317,7 +314,7 @@ namespace ServerControlCenterApplication
                         // クライアントから送られてきた 検索結果で出力するカラム名のListを取得す
                         using (var reader = new BinaryReader(pipeCltStream, Encoding.UTF8, true))
                         {
-                            acceptPIpeCommmands = BinaryReaderExtensions.ReadObject<List<AcceptPipeCommand>>(reader, binaryConvertType: BinaryConvertTYPE.JsonSerializer);
+                            acceptPIpeCommmands = BinaryReaderExtensions.ReadObject<List<AcceptCommand>>(reader, binaryConvertType: BinaryConvertTYPE.JsonSerializer);
                         }
 
                         if (acceptPIpeCommmands != null && acceptPIpeCommmands.Count > 0)

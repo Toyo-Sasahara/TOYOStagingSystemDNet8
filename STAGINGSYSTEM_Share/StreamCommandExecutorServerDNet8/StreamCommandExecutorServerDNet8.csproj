@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0-windows</TargetFramework>
+	  <OutputType>Library</OutputType>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_CommandSample_Server.cs" Link="CMD_CommandSample_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_CommitRecepitonState_Server.cs" Link="CMD_CommitRecepitonState_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ConnectTest_Server.cs" Link="CMD_ConnectTest_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute1_Server.cs" Link="CMD_GetArcSuiteAtrtribute1_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute2_Server.cs" Link="CMD_GetArcSuiteAtrtribute2_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute3_Server.cs" Link="CMD_GetArcSuiteAtrtribute3_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute_Server.cs" Link="CMD_GetArcSuiteAtrtribute_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteLatestDrawingFile_Server.cs" Link="CMD_GetArcSuiteLatestDrawingFile_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteLatestDrawing_Server.cs" Link="CMD_GetArcSuiteLatestDrawing_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetCommitPrinterIsFailStatus_Server.cs" Link="CMD_GetCommitPrinterIsFailStatus_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetCommitPrinterSettingFromPaperSizes_Server.cs" Link="CMD_GetCommitPrinterSettingFromPaperSizes_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetVersion_Server.cs" Link="CMD_GetVersion_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_LoadImage2_Server.cs" Link="CMD_LoadImage2_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_LoadImage_Server.cs" Link="CMD_LoadImage_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ServerControl_FileRecv_Server.cs" Link="CMD_ServerControl_FileRecv_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ServerControl_FileSend_Server.cs" Link="CMD_ServerControl_FileSend_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ServerControl_GetFileList_Server.cs" Link="CMD_ServerControl_GetFileList_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CommandExecutor.cs" Link="CommandExecutor.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\StreamCommandsDR_Server.cs" Link="StreamCommandsDR_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\StreamCommandsSW_Server.cs" Link="StreamCommandsSW_Server.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\..\..\TOYOSTAGINGSYSTEM\@ToyoDRAWREGISTservice\ArcSuite\ArcSuiteSDK.csproj" />
+    <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+    <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\StageServerCommon\StageServerCommonDNet8.csproj" />
+    <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
+    <ProjectReference Include="..\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
+    <ProjectReference Include="..\StreamCommandBridgeDNet8\StreamCommandBridgeDNet8.csproj" />
+  </ItemGroup>
+
+</Project>
