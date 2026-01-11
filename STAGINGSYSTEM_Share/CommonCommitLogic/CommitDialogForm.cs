@@ -884,6 +884,12 @@ namespace CommonCommitLogic
             return result;
         }
 
+        /// <summary>
+        /// Sets ticket data without committing changes and updates the stage server host label.
+        /// </summary>
+        /// <param name="ticketXml">The ticket data to set.</param>
+        /// <param name="ErrMsg">When this method returns, contains an error message if the operation failed; otherwise, null.</param>
+        /// <returns>true if the data was set successfully; otherwise, false.</returns>
         public bool NoCommitSetData(CommonTicket ticketXml, out string ErrMsg)
         {
             this.ticketXml = ticketXml;
@@ -1722,7 +1728,6 @@ namespace CommonCommitLogic
 
         }
 
-
         /// <summary>
         /// 表図面でｺﾐｯﾄする枝番号を入力した時に発生するイベント
         /// </summary>
@@ -1809,16 +1814,19 @@ namespace CommonCommitLogic
             }
         }
 
+        // 表図面でｺﾐｯﾄする枝番号入力欄にフォーカスが入った時に発生するイベント
         private void ActiveVariantEnd_textBox_Enter(object sender, EventArgs e)
         {
             ActiveVariantEnd_textBox.Clear();
         }
 
+        // 表図面の備考入力欄にフォーカスが入った時に発生するイベント
         private void VariantOnlyMemo_textBox_Enter(object sender, EventArgs e)
         {
             VariantOnlyMemo_textBox.Clear();
         }
 
+        // 表図面の備考入力欄の内容が変更された時に発生するイベント
         private void VariantOnlyMemo_textBox_TextChanged(object sender, EventArgs e)
         {
             if (VariantOnlyMemo_textBox.Text.Length > 0)
@@ -1828,17 +1836,14 @@ namespace CommonCommitLogic
 
         }
 
+        // 表図面パネルが表示状態に変化した時に発生するイベント
         private void Variant_panel1_VisibleChanged(object sender, EventArgs e)
         {
             if (Variant_panel1.Visible)
                 ActiveVariantEnd_textBox.Focus();
         }
 
-        /// <summary>
-        /// デバッグフォームボタン
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // デバッグボタンがクリックされた時に発生するイベント
         private void DEBUG_button_Click(object sender, EventArgs e)
         {
             // Shiftキーが押されているかを確認
