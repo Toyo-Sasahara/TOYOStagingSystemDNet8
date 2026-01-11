@@ -884,6 +884,18 @@ namespace CommonCommitLogic
             return result;
         }
 
+        public bool NoCommitSetData(CommonTicket ticketXml, out string ErrMsg)
+        {
+            this.ticketXml = ticketXml;
+
+            bool result = true;
+            ErrMsg = null;
+
+            StageServerHostLabel.Text = CommmitCommonSettings.ConnextionDataSet.StageServerHost;
+
+            return result;
+        }
+
         /// <summary>
         /// CommitDialogForm フォームロード時
         /// </summary>
