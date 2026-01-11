@@ -1,0 +1,2 @@
+2018-12-16T14:25:39JST,0,error,failed,3,DREP_REGIST-41810010: オブジェクト登録ファイル[D:\STAGING\ARCSUITESEND\DocumentRegist.CSV]が読み込めませんでした。 : D:\STAGING\ARCSUITESEND\DocumentRegist.CSV (指定されたパスが見つかりません。) (java.io.FileNotFoundException),,,
+2018-12-16T14:26:28JST,0,error,failed,3,DREP_REGIST-41810010: オブジェクト登録ファイル[D:\STAGING\ARCSUITESEND\DocumentRegist.CSV]が読み込めませんでした。 : D:\STAGING\ARCSUITESEND\DocumentRegist.CSV (指定されたパスが見つかりません。) (java.io.FileNotFoundException),,,

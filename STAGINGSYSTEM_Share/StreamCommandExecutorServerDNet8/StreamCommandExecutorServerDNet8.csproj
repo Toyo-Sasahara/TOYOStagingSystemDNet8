@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ApprovalRecepitonState_Server.cs" Link="CMD_ApprovalRecepitonState_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_CommandSample_Server.cs" Link="CMD_CommandSample_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_CommitRecepitonState_Server.cs" Link="CMD_CommitRecepitonState_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ConnectTest_Server.cs" Link="CMD_ConnectTest_Server.cs" />
@@ -32,13 +33,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
-    <ProjectReference Include="..\..\..\TOYOSTAGINGSYSTEM\@ToyoDRAWREGISTservice\ArcSuite\ArcSuiteSDK.csproj" />
+    <ProjectReference Include="..\ArcSuiteSdkDnet8\ArcSuiteSdkDNet8.csproj" />
     <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
     <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
     <ProjectReference Include="..\StageServerCommon\StageServerCommonDNet8.csproj" />
     <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
     <ProjectReference Include="..\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
     <ProjectReference Include="..\StreamCommandBridgeDNet8\StreamCommandBridgeDNet8.csproj" />
+    <ProjectReference Include="D:\VSSource\repos\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj" />
   </ItemGroup>
 
 </Project>

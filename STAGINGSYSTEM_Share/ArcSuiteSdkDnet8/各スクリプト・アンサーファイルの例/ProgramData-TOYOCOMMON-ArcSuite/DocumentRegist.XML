@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="shift-jis"?>
+<drregistParameter>
+  <executionParameter>
+    <logFile>D:\STAGING\ARCSUITESEND\SDKANSER.LOG</logFile>
+    <logMode>all</logMode>
+    <entryErrorIgnore>true</entryErrorIgnore>
+  </executionParameter>
+</drregistParameter>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Windows-31J" ?>
+<parameter>
+<logFile>\\dc1\STAGING\ARCSUITESEND\drgetattr.log</logFile>
+<resultFile>\\dc1\STAGING\ARCSUITESEND\drgetattr.result</resultFile>
+<getAtomId>user:zuban|user:torokubi</getAtomId>
+</parameter>

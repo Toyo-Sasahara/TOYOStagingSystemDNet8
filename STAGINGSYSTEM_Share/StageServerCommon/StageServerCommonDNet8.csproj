@@ -35,6 +35,7 @@
     <ProjectReference Include="..\SQLSearchConditonsCreate\SQLSearchConditonsCreateDBNet8.csproj" />
     <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
     <ProjectReference Include="..\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
+    <ProjectReference Include="D:\VSSource\repos\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StampEraceBase.bmp" Link="StampEraceBase.bmp" />
@@ -63,6 +64,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseRestore.cs" Link="DataBaseRestore.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseSearch.cs" Link="DataBaseSearch.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseUpdate.cs" Link="DataBaseUpdate.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileAccessWaiter.cs" Link="Properties\FileAccessWaiter.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileHundling.cs" Link="FileHundling.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileLockContorol.cs" Link="FileLockContorol.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_GetArcSuiteAwaitingRegist.cs" Link="List_Client_GetArcSuiteAwaitingRegist.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\TitleFieldConfig.cs" Link="TitleFieldConfig.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\TitleFieldConfigWork.cs" Link="TitleFieldConfigWork.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\UserDataBase.cs" Link="UserDataBase.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\VariantDataBase.cs" Link="VariantDataBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\CreateNewDB.sql" Link="CreateNewDB.sql" />

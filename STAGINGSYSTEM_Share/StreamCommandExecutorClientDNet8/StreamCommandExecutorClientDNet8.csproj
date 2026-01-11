@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_ApprovalRecepitonState_Client.cs" Link="CMD_ApprovalRecepitonState_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_CommitRecepitonState_Client.cs" Link="CMD_CommitRecepitonState_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_ConnectTest_Client.cs" Link="CMD_ConnectTest_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD_GetArcSuiteAtrtribute1_Client.cs" Link="CMD_GetArcSuiteAtrtribute1_Client.cs" />
