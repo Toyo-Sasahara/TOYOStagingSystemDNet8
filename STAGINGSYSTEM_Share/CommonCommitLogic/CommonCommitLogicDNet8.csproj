@@ -61,6 +61,7 @@
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.NumberingSupport\SasaLibDNet8.NumberingSupport.csproj" />
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
 		<ProjectReference Include="..\CommonTicketClassLibrary\CommonTicketClassLibraryDNet8.csproj" />
+		<ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
 		<ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
 		<ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
 		<ProjectReference Include="..\RemoteClient\RemoteClientDNet8.csproj" />
