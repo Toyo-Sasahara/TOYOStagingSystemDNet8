@@ -30,11 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BigPreviewForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.commitPreviewImage1 = new CommonCommitLogic.CommitPreviewImage();
-            this.BigPreviewPictureBox = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.commitPreviewImage1 = new CommonCommitLogic.CommitPreviewImage();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BigPreviewPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -47,6 +45,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(909, 453);
             this.panel1.TabIndex = 0;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloseButton.Location = new System.Drawing.Point(846, 473);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 1;
+            this.CloseButton.Text = "閉じる";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // commitPreviewImage1
             // 
@@ -61,35 +70,12 @@
             this.commitPreviewImage1.Size = new System.Drawing.Size(902, 446);
             this.commitPreviewImage1.TabIndex = 1;
             // 
-            // BigPreviewPictureBox
-            // 
-            this.BigPreviewPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BigPreviewPictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BigPreviewPictureBox.Location = new System.Drawing.Point(742, 473);
-            this.BigPreviewPictureBox.Name = "BigPreviewPictureBox";
-            this.BigPreviewPictureBox.Size = new System.Drawing.Size(31, 29);
-            this.BigPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BigPreviewPictureBox.TabIndex = 0;
-            this.BigPreviewPictureBox.TabStop = false;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CloseButton.Location = new System.Drawing.Point(846, 473);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(75, 23);
-            this.CloseButton.TabIndex = 1;
-            this.CloseButton.Text = "閉じる";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
             // BigPreviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(933, 508);
             this.Controls.Add(this.CloseButton);
-            this.Controls.Add(this.BigPreviewPictureBox);
             this.Controls.Add(this.panel1);
             this.MinimizeBox = false;
             this.Name = "BigPreviewForm";
@@ -97,7 +83,6 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.BigPreviewForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BigPreviewPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,7 +90,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox BigPreviewPictureBox;
         private System.Windows.Forms.Button CloseButton;
         private CommitPreviewImage commitPreviewImage1;
     }

@@ -99,6 +99,9 @@ namespace CommonCommitLogic
             Cancel_Button = new System.Windows.Forms.Button();
             CommitExecute_Button = new System.Windows.Forms.Button();
             COMMITSTART_groupBox = new System.Windows.Forms.GroupBox();
+            panel8 = new System.Windows.Forms.Panel();
+            NewStreamModeTpPort_textBox = new System.Windows.Forms.TextBox();
+            NewStreamMode_checkBox = new System.Windows.Forms.CheckBox();
             panel5 = new System.Windows.Forms.Panel();
             ErrorOccurred_Label = new System.Windows.Forms.Label();
             StageServerHostLabel = new System.Windows.Forms.Label();
@@ -130,6 +133,7 @@ namespace CommonCommitLogic
             ArcSuite_groupBox.SuspendLayout();
             panel3.SuspendLayout();
             COMMITSTART_groupBox.SuspendLayout();
+            panel8.SuspendLayout();
             panel5.SuspendLayout();
             NUMBERING_groupBox.SuspendLayout();
             CADTITLE_groupBox.SuspendLayout();
@@ -924,6 +928,7 @@ namespace CommonCommitLogic
             // COMMITSTART_groupBox
             // 
             COMMITSTART_groupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            COMMITSTART_groupBox.Controls.Add(panel8);
             COMMITSTART_groupBox.Controls.Add(panel5);
             COMMITSTART_groupBox.Controls.Add(ErrorOccurred_Label);
             COMMITSTART_groupBox.Controls.Add(StageServerHostLabel);
@@ -933,6 +938,36 @@ namespace CommonCommitLogic
             COMMITSTART_groupBox.Size = new System.Drawing.Size(664, 63);
             COMMITSTART_groupBox.TabIndex = 15;
             COMMITSTART_groupBox.TabStop = false;
+            // 
+            // panel8
+            // 
+            panel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            panel8.Controls.Add(NewStreamModeTpPort_textBox);
+            panel8.Controls.Add(NewStreamMode_checkBox);
+            panel8.Location = new System.Drawing.Point(249, 37);
+            panel8.Name = "panel8";
+            panel8.Size = new System.Drawing.Size(180, 25);
+            panel8.TabIndex = 91;
+            // 
+            // NewStreamModeTpPort_textBox
+            // 
+            NewStreamModeTpPort_textBox.Font = new System.Drawing.Font("Yu Gothic UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
+            NewStreamModeTpPort_textBox.Location = new System.Drawing.Point(101, 5);
+            NewStreamModeTpPort_textBox.Name = "NewStreamModeTpPort_textBox";
+            NewStreamModeTpPort_textBox.ReadOnly = true;
+            NewStreamModeTpPort_textBox.Size = new System.Drawing.Size(69, 18);
+            NewStreamModeTpPort_textBox.TabIndex = 90;
+            // 
+            // NewStreamMode_checkBox
+            // 
+            NewStreamMode_checkBox.AutoSize = true;
+            NewStreamMode_checkBox.Location = new System.Drawing.Point(3, 5);
+            NewStreamMode_checkBox.Name = "NewStreamMode_checkBox";
+            NewStreamMode_checkBox.Size = new System.Drawing.Size(92, 19);
+            NewStreamMode_checkBox.TabIndex = 89;
+            NewStreamMode_checkBox.TabStop = false;
+            NewStreamMode_checkBox.Text = "ストリーム通信";
+            NewStreamMode_checkBox.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -1182,6 +1217,8 @@ namespace CommonCommitLogic
             panel3.PerformLayout();
             COMMITSTART_groupBox.ResumeLayout(false);
             COMMITSTART_groupBox.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
             panel5.ResumeLayout(false);
             NUMBERING_groupBox.ResumeLayout(false);
             CADTITLE_groupBox.ResumeLayout(false);
@@ -1273,5 +1310,8 @@ namespace CommonCommitLogic
         internal System.Windows.Forms.Label VariantNumber_MIN_label2;
         private System.Windows.Forms.Button DEBUG_button;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.CheckBox NewStreamMode_checkBox;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox NewStreamModeTpPort_textBox;
     }
 }

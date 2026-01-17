@@ -27,6 +27,7 @@ using static CommonCommitLogic.ArcSuiteSearchResult;
 using EnvDTE;
 using System.Diagnostics;
 using SharedClassLibrary;
+using StreamCommandExecutorClient;
 #endif
 
 namespace CommonCommitLogic
@@ -917,6 +918,9 @@ namespace CommonCommitLogic
 
                 ArcSuiteWarningIgnore_button.Enabled = false;
 
+                NewStreamMode_checkBox.Checked = CommmitCommonSettings.ConnextionDataSet.NewStreamMode;
+                NewStreamModeTpPort_textBox.Text = CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort.ToString();
+
                 if (supportCadDrawingFile != null)
                     supportCadDrawingFile.CadDrwingFileChanged += SupportCadDrawingFile_CadDrawingFileChanged;
 
@@ -1245,7 +1249,7 @@ namespace CommonCommitLogic
 
                             ArcSuiteDrawingShow_button.Text = "ArcSuiteへ図面検索中\r\n暫くお待ちださい・・・";
 
-                           
+
                             await Task.Run(() =>
                             {
                                 if (string.IsNullOrWhiteSpace(arcsuitePreview.temporalyDrawingImageFullFileName) == true ||
@@ -1254,23 +1258,23 @@ namespace CommonCommitLogic
                                     WriteLine($"■CommitDialogForm.SearchRegistedArcSuiteDrawing_button_Click(..) ArcSuite登録図ﾌﾟﾚﾋﾞｭｰ用TIFFファイルをダウンロードします");
                                     /// リモート操作をするオブジェクトを生成
                                     RemoteClientDRAWREGIST remoteClientDR = new RemoteClientDRAWREGIST(
-                                        DomainName:CommmitCommonSettings.ConnextionDataSet.ClientDomainName,
-                                        UserName:CommmitCommonSettings.ConnextionDataSet.ClientUserName,
-                                        UserPassword:CommmitCommonSettings.ConnextionDataSet.StageServerHost,
-                                        ClsLogon:CommmitCommonSettings.ConnextionDataSet.ClsLogon,
-                                        PipeServerName:CommmitCommonSettings.ConnextionDataSet.StageServerHost,
-                                        PipeName:CommmitCommonSettings.ConnextionDataSet.PipeNameDR,
-                                        WriteLine:WriteLine,
-                                        Verbose:true
+                                        DomainName: CommmitCommonSettings.ConnextionDataSet.ClientDomainName,
+                                        UserName: CommmitCommonSettings.ConnextionDataSet.ClientUserName,
+                                        UserPassword: CommmitCommonSettings.ConnextionDataSet.StageServerHost,
+                                        ClsLogon: CommmitCommonSettings.ConnextionDataSet.ClsLogon,
+                                        PipeServerName: CommmitCommonSettings.ConnextionDataSet.StageServerHost,
+                                        PipeName: CommmitCommonSettings.ConnextionDataSet.PipeNameDR,
+                                        WriteLine: WriteLine,
+                                        Verbose: true
                                         );
 
                                     ArcsuitePreview originalStruct = arcsuitePreview;
 
-                                    CheckArcSuiteData checkArcSuiteData = new CheckArcSuiteData(CommmitCommonSettings.ConnextionDataSet,remoteClientDR, objectConvNew: true);
+                                    CheckArcSuiteData checkArcSuiteData = new CheckArcSuiteData(CommmitCommonSettings.ConnextionDataSet, remoteClientDR, objectConvNew: true);
 
 
                                     var resule = checkArcSuiteData.GetArcSuiteImage(remoteClientDR, arcsuitePreview.user_zuban, out originalStruct.temporalyDrawingImageFullFileName, objectConvNew: Commit.objectConvNew, WriteLine);
-                                    
+
                                     arcSuiteSearchResult.arcSuitePreviews[0] = originalStruct;
                                 }
                                 else
@@ -1508,19 +1512,44 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private async void Printer_Info_button_Click(object sender, EventArgs e)
         {
+            List<KeyValuePair<string, string>> printerNames;
+            List<KeyValuePair<string, string>> printerAlias;
+            List<KeyValuePair<string, bool>> printerFailStatus;
+            List<KeyValuePair<string, string>> printerSettingFromPaperSize;
+
             //Encryption sasaLibencryptionPipeConnection = new Encryption("SasaAuth3.1");
             //string PipeClientPlanePass = sasaLibencryptionPipeConnection.Decoding(commmitCommonSettings.PipeConnection31Password); //復号化
+            if (CommmitCommonSettings.ConnextionDataSet.NewStreamMode)
+            {
+                WriteLine($"■抽象化ストリームモードON");
 
-            RemoteClientDRAWCAPTURE remoteClientDRAWCAPTURE = new RemoteClientDRAWCAPTURE(
-                CommmitCommonSettings.ConnextionDataSet.ClientDomainName, CommmitCommonSettings.ConnextionDataSet.ClientUserName,
-                CommmitCommonSettings.ConnextionDataSet.ClientUserPassword, CommmitCommonSettings.ConnextionDataSet.ClsLogon,
-                CommmitCommonSettings.ConnextionDataSet.StageServerHost, CommmitCommonSettings.ConnextionDataSet.PipeNameDC);
+                printerNames = await CMD_GetCommitPrinterShortCutName_Client.ExecuteAsync(new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort), WriteLine);
+                printerAlias = await CMD_GetCommitPrinterNameAndAlias_Client.ExecuteAsync(new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort),
+                        WriteLine:WriteLine
+                    );
+                printerFailStatus = await CMD_GetCommitPrinterIsFailStatus_Client.ExecuteAsync(
+                    new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort),
+                    WriteLine: WriteLine
+                    );
 
+                printerSettingFromPaperSize = await CMD_GetCommitPrinterSettingFromPaperSize_Client.ExecuteAsync(
+                    new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort),
+                        WriteLine: WriteLine
+                    );
+            }
+            else
+            {
+                RemoteClientDRAWCAPTURE remoteClientDRAWCAPTURE = new RemoteClientDRAWCAPTURE(
+                    CommmitCommonSettings.ConnextionDataSet.ClientDomainName, CommmitCommonSettings.ConnextionDataSet.ClientUserName,
+                    CommmitCommonSettings.ConnextionDataSet.ClientUserPassword, CommmitCommonSettings.ConnextionDataSet.ClsLogon,
+                    CommmitCommonSettings.ConnextionDataSet.StageServerHost, CommmitCommonSettings.ConnextionDataSet.PipeNameDC
+                );
 
-            var printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: Commit.objectConvNew);
-            var printerAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(objectConvNew: Commit.objectConvNew);
-            var printerFailStatus = await remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatusAsync(objectConvNew: Commit.objectConvNew);
-            var printerSettingFromPaperSize = await remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSizeAsync(objectConvNew: Commit.objectConvNew);
+                printerNames = remoteClientDRAWCAPTURE.GetCommitPrinterShortCutName(objectConvNew: Commit.objectConvNew);
+                printerAlias = remoteClientDRAWCAPTURE.GetCommitPrinterNameAndAlias(objectConvNew: Commit.objectConvNew);
+                printerFailStatus = await remoteClientDRAWCAPTURE.GetCommitPrinterIsFailStatusAsync(objectConvNew: Commit.objectConvNew);
+                printerSettingFromPaperSize = await remoteClientDRAWCAPTURE.GetCommitPrinterSettingFromPaperSizeAsync(objectConvNew: Commit.objectConvNew);
+            }
 
             StringBuilder sb = new StringBuilder();
 

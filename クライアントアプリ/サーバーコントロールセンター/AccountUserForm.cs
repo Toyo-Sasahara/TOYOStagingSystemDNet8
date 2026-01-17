@@ -4,6 +4,7 @@ using STAGINGSYSTEM_COMMANDS;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.IO.Pipes;
 using System.Text;
@@ -71,6 +72,7 @@ namespace ServerControlCenterApplication
         /// </summary>
         public void SetToControls()
         {
+            //Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
             ClientImpersonationCheckBox.Checked = SccConfig.Config.ClsLogon;     // 1
             LogonDomainTextBox.Text = SccConfig.Config.ClientDomainName;         // 2
             LogonUserTextBox.Text = SccConfig.Config.ClientUserName;            // 3
@@ -84,6 +86,9 @@ namespace ServerControlCenterApplication
             DrawWatchPIPEnameTextBox.Text = SccConfig.Config.PipeNameSW;   // 7.5
 
             CommitPathTextBox.Text = SccConfig.Config.CommitPath;               // 8
+
+            NewStreamMode_checkBox.Checked = SccConfig.Config.NewStreamMode;
+            NewStreamModeTpPort_textBox.Text = SccConfig.Config.NewStreamModeTcpPort.ToString();
         }
 
         /// <summary>
@@ -93,13 +98,14 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         public void ControlChanged(object sender, EventArgs e)
         {
+            //Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
 
             SccConfig.Config.ClsLogon = ClientImpersonationCheckBox.Checked;// 1
             SccConfig.Config.ClientDomainName = LogonDomainTextBox.Text;    // 2
             SccConfig.Config.ClientUserName = LogonUserTextBox.Text;        // 3
 
             SccConfig.Config.ClientUserPassword = LogonPasswordTextBox.Text;// 4
-            SccConfig.Config.ClientUserCryptUserPass = Encryption.Encode(SccConfig.Config.SasaLibEncryptionType,SccConfig.Config.ClientUserPassword);
+            SccConfig.Config.ClientUserCryptUserPass = Encryption.Decode(SccConfig.Config.SasaLibEncryptionType, SccConfig.Config.ClientUserPassword);
 
             SccConfig.Config.StageServerHost = StageServerHostName_comboBox.Text;    // 5
             SccConfig.Config.PipeNameDR = DrawregistPIPEnameTextBox.Text;   // 6
@@ -107,8 +113,24 @@ namespace ServerControlCenterApplication
             SccConfig.Config.PipeNameSW = DrawWatchPIPEnameTextBox.Text;   // 7.5
 
             SccConfig.Config.CommitPath = @"\\" + StageServerHostName_comboBox.Text + @"\" + CommitShareNameTextBox.Text;
+
+            SccConfig.Config.NewStreamMode = NewStreamMode_checkBox.Checked;
+            SccConfig.Config.NewStreamModeTcpPort = StringToInt(NewStreamModeTpPort_textBox.Text);
+
             SccConfig.Config.Save();
 
+        }
+
+        private int StringToInt(string text)
+        {
+            if (int.TryParse(text, out int number))
+            {
+                return number;
+            }
+            else
+            {
+                return 12345;
+            }
         }
 
         /// <summary>
@@ -142,10 +164,9 @@ namespace ServerControlCenterApplication
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DR_ConnectTest_button_Click(object sender, EventArgs e)
+        private async void DR_ConnectTest_button_Click(object sender, EventArgs e)
         {
-            Command_Status.DR_ConnectTest($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
-
+            bool result = await Command_Status.DR_ConnectTestAsync($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
         }
 
         /// <summary>
@@ -155,8 +176,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private async void DC_ConnectTest_button_Click(object sender, EventArgs e)
         {
-            var result = await Command_Status.DC_ConnectTestAsync($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
-
+            bool result = await Command_Status.DC_ConnectTestAsync($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
         }
 
         /// <summary>
@@ -166,8 +186,7 @@ namespace ServerControlCenterApplication
         /// <param name="e"></param>
         private async void SW_ConnectTest_button_Click(object sender, EventArgs e)
         {
-            var result = await Command_Status.SW_ConnectTestAsync($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
-
+            bool result = await Command_Status.SW_ConnectTestAsync($"{PIPETESTMSG_textBox.Text}", 1000, WriteLine);
         }
 
         private void LogonDomainTextBox_Leave(object sender, EventArgs e)
@@ -189,6 +208,7 @@ namespace ServerControlCenterApplication
         {
             SccConfig.Config.ClientUserPassword = LogonPasswordTextBox.Text;// 4
 
+            //Encryption sasaLibencryption = new Encryption(SccConfig.Config.SasaLibEncryptionType);
             SccConfig.Config.ClientUserCryptUserPass = Encryption.Encode(SccConfig.Config.SasaLibEncryptionType, SccConfig.Config.ClientUserPassword);
             // カスタムイベントを発生
             OnAccountChanged(EventArgs.Empty);
@@ -203,11 +223,6 @@ namespace ServerControlCenterApplication
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void DC_Shudown_button_Click(object sender, EventArgs e)
         {
             var result = serviceShutdown(SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDC);
@@ -222,11 +237,6 @@ namespace ServerControlCenterApplication
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void DR_Shudown_button_Click(object sender, EventArgs e)
         {
             var result = serviceShutdown(SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameDR);
@@ -241,11 +251,6 @@ namespace ServerControlCenterApplication
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void SW_Shudown_button_Click(object sender, EventArgs e)
         {
             var result = serviceShutdown(SccConfig.Config.StageServerHost, SccConfig.Config.PipeNameSW);
@@ -260,12 +265,6 @@ namespace ServerControlCenterApplication
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="PipeServerName"></param>
-        /// <param name="pipename"></param>
-        /// <returns></returns>
         private List<AcceptCommand> serviceShutdown(string PipeServerName, string pipename)
         {
             // TODO: ClsLogonDummy を 書き換えた
@@ -362,5 +361,67 @@ namespace ServerControlCenterApplication
 
         }
 
+        private void NewStreamMode_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            SccConfig.Config.NewStreamMode = NewStreamMode_checkBox.Checked;
+        }
+
+        private void NewStreamModeTpPort_textBox_TextChanged(object sender, EventArgs e)
+        {
+            var tb = (TextBox)sender;
+
+            if (tb.Text.Length == 0) return;
+
+            // ① そのまま int にできる？
+            if (int.TryParse(tb.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var val)
+                && val >= 0 && val <= 65535)
+            {
+                // ←← ここで確定反映
+                SccConfig.Config.NewStreamModeTcpPort = val;
+                return;
+            }
+
+            // ② 無効入力：前回に戻す or 補正
+            tb.TextChanged -= NewStreamModeTpPort_textBox_TextChanged;
+
+            string before = tb.Text;
+            tb.Undo();
+
+            if (tb.Text == before)
+            {
+                string cleaned = SanitizeToInt(before);
+
+                if (int.TryParse(cleaned, NumberStyles.Integer, CultureInfo.InvariantCulture, out var fixedVal)
+                    && fixedVal >= 0 && fixedVal <= 65535)
+                {
+                    tb.Text = fixedVal.ToString(CultureInfo.InvariantCulture);
+
+                    // ←← 補正後もここで確定反映
+                    SccConfig.Config.NewStreamModeTcpPort = fixedVal;
+                }
+                else
+                {
+                    tb.Text = string.Empty;
+                }
+            }
+
+            tb.SelectionStart = tb.Text.Length;
+            tb.SelectionLength = 0;
+            tb.TextChanged += NewStreamModeTpPort_textBox_TextChanged;
+            System.Media.SystemSounds.Beep?.Play();
+
+            // ローカル関数：先頭の '-' を許可しつつ、数字以外を除去（ポートなら '-' は最終的に弾かれる）
+            string SanitizeToInt(string s)
+            {
+                if (string.IsNullOrEmpty(s)) return string.Empty;
+                var sb = new System.Text.StringBuilder(s.Length);
+                int i = 0;
+                if (s[0] == '-') { sb.Append('-'); i = 1; }
+                for (; i < s.Length; i++)
+                    if (char.IsDigit(s[i])) sb.Append(s[i]);
+                return sb.ToString();
+            }
+
+        }
     }
 }
