@@ -43,7 +43,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
     <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
-    <ProjectReference Include="..\StreamCommandBridgeDNet8\StreamCommandBridgeDNet8.csproj" />
+    <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
+    <ProjectReference Include="..\StreamCommandBridge\StreamCommandBridgeDNet8.csproj" />
   </ItemGroup>
 
 </Project>

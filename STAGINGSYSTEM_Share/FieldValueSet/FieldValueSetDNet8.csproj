@@ -9,6 +9,7 @@
     <Copyright>Copyright ©  2018</Copyright>
     <InformationalVersion>FieldValueSet 1.22.08.xx [.NET Framework 4.8]</InformationalVersion>
     <AssemblyName>FieldValueSet</AssemblyName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <UseVSHostingProcess>false</UseVSHostingProcess>

@@ -77,9 +77,9 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_GetMemMapdFile.cs" Link="ServerCMD_GetMemMapdFile.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_MakePrinterConfigTemplate.cs" Link="ServerCMD_MakePrinterConfigTemplate.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_ServerControl.cs" Link="ServerCMD_ServerControl.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_SERVER_ALIVE.cs" Link="ServerCMD_SERVER_ALIVE.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_SetMemMapdFile.cs" Link="ServerCMD_SetMemMapdFile.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_ShowPrinterQueue.cs" Link="ServerCMD_ShowPrinterQueue.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_STATUS.cs" Link="ServerCMD_STATUS.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_TitleFieldTest.cs" Link="ServerCMD_TitleFieldTest.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServiceBaseHelper.cs" Link="ServiceBaseHelper.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StageServerCommonInfo.cs" Link="StageServerCommonInfo.cs" />

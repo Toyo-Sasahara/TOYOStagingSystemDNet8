@@ -66,7 +66,7 @@
 		<ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
 		<ProjectReference Include="..\RemoteClient\RemoteClientDNet8.csproj" />
 		<ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
-		<ProjectReference Include="..\StreamCommandBridgeDNet8\StreamCommandBridgeDNet8.csproj" />
+		<ProjectReference Include="..\StreamCommandBridge\StreamCommandBridgeDNet8.csproj" />
 		<ProjectReference Include="..\StreamCommandExecutorClientDNet8\StreamCommandExecutorClientDNet8.csproj" />
 	</ItemGroup>
 	<ItemGroup>
