@@ -37,6 +37,8 @@
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
     <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
     <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\StageServerCommon\StageServerCommonDNet8.csproj" />
+    <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,6 +7,7 @@ using SasaLib;
 using SasaLib.ArcSuitePreview;
 using SasaLib.NumberingSupport;
 using StageServerRemote;
+using StreamCommandExecutorClient;
 using System;
 using System.Collections.Generic;
 #if NETCOREAPP
@@ -1336,7 +1337,7 @@ namespace CommonCommitLogic
                                     UseShellExecute = true // システムのデフォルトアプリケーションを使用
                                 });
 #else
-                            System.Diagnostics.Process.Start(ArcSuiteURL);
+                                System.Diagnostics.Process.Start(ArcSuiteURL);
 #endif
 
                             }
@@ -1523,16 +1524,16 @@ namespace CommonCommitLogic
             {
                 WriteLine($"■抽象化ストリームモードON");
 
-                printerNames = await CMD_GetCommitPrinterShortCutName_Client.ExecuteAsync(new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort), WriteLine);
-                printerAlias = await CMD_GetCommitPrinterNameAndAlias_Client.ExecuteAsync(new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort),
-                        WriteLine:WriteLine
+                printerNames = await CMD19_GetCommitPrinterShortCutName_Client.ExecuteAsync(new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort), WriteLine);
+                printerAlias = await CMD17_GetCommitPrinterNameAndAlias_Client.ExecuteAsync(new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort),
+                        WriteLine: WriteLine
                     );
-                printerFailStatus = await CMD_GetCommitPrinterIsFailStatus_Client.ExecuteAsync(
+                printerFailStatus = await CMD16_GetCommitPrinterIsFailStatus_Client.ExecuteAsync(
                     new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort),
                     WriteLine: WriteLine
                     );
 
-                printerSettingFromPaperSize = await CMD_GetCommitPrinterSettingFromPaperSize_Client.ExecuteAsync(
+                printerSettingFromPaperSize = await CMD18_GetCommitPrinterSettingFromPaperSizes_Client.ExecuteAsync(
                     new ServerInfo(serverName: CommmitCommonSettings.ConnextionDataSet.StageServerHost, tcpPort: CommmitCommonSettings.ConnextionDataSet.NewStreamModeTcpPort),
                         WriteLine: WriteLine
                     );

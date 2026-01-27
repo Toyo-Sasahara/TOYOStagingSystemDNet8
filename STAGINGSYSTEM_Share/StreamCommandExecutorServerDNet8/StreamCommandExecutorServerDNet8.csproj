@@ -8,33 +8,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ApprovalRecepitonState_Server.cs" Link="CMD_ApprovalRecepitonState_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_CommandSample_Server.cs" Link="CMD_CommandSample_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_CommitRecepitonState_Server.cs" Link="CMD_CommitRecepitonState_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ConnectTest_Server.cs" Link="CMD_ConnectTest_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_DataBaseSearch3_Server.cs" Link="CMD_DataBaseSearch3_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_DataBaseSearch4a_Server.cs" Link="CMD_DataBaseSearch4a_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute1_Server.cs" Link="CMD_GetArcSuiteAtrtribute1_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute2_Server.cs" Link="CMD_GetArcSuiteAtrtribute2_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute3_Server.cs" Link="CMD_GetArcSuiteAtrtribute3_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteAtrtribute_Server.cs" Link="CMD_GetArcSuiteAtrtribute_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteLatestDrawingFile_Server.cs" Link="CMD_GetArcSuiteLatestDrawingFile_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetArcSuiteLatestDrawing_Server.cs" Link="CMD_GetArcSuiteLatestDrawing_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetCommitPrinterIsFailStatus_Server.cs" Link="CMD_GetCommitPrinterIsFailStatus_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetCommitPrinterNameAndAlias_Server.cs" Link="CMD_GetCommitPrinterNameAndAlias_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetCommitPrinterSettingFromPaperSizes_Server.cs" Link="CMD_GetCommitPrinterSettingFromPaperSizes_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetCommitPrinterShortCutNameAndDescription_Server .cs" Link="CMD_GetCommitPrinterShortCutNameAndDescription_Server .cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetCommitPrinterShortCutName_Server.cs" Link="CMD_GetCommitPrinterShortCutName_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_GetVersion_Server.cs" Link="CMD_GetVersion_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_LoadImage2_Server.cs" Link="CMD_LoadImage2_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_LoadImage_Server.cs" Link="CMD_LoadImage_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ServerControl_FileRecv_Server.cs" Link="CMD_ServerControl_FileRecv_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ServerControl_FileSend_Server.cs" Link="CMD_ServerControl_FileSend_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_ServerControl_GetFileList_Server.cs" Link="CMD_ServerControl_GetFileList_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD_Status_SERVER_ALIVE_Server.cs" Link="CMD_Status_SERVER_ALIVE_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD01_ApprovalRecepitonState_Server.cs" Link="CMD01_ApprovalRecepitonState_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD02_ClientPreInputTicketCodeAdd_Server.cs" Link="CMD02_ClientPreInputTicketCodeAdd_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD03_ClientPreInputTicketCodeRemove_Server.cs" Link="CMD03_ClientPreInputTicketCodeRemove_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD04_CommandSample_Server.cs" Link="CMD04_CommandSample_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD05_CommitRecepitonState_Server.cs" Link="CMD05_CommitRecepitonState_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD06_ConnectTest_Server.cs" Link="CMD06_ConnectTest_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD07_DataBaseSearch3_Server.cs" Link="CMD07_DataBaseSearch3_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD08_DataBaseSearch4a_Server.cs" Link="CMD08_DataBaseSearch4a_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD09_DR_GetAuthorizedUser_Server.cs" Link="CMD09_DR_GetAuthorizedUser_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD10_GetArcSuiteAtrtribute_Server.cs" Link="CMD10_GetArcSuiteAtrtribute_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD11_GetArcSuiteAtrtribute1_Server.cs" Link="CMD11_GetArcSuiteAtrtribute1_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD12_GetArcSuiteAtrtribute2_Server.cs" Link="CMD12_GetArcSuiteAtrtribute2_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD13_GetArcSuiteAtrtribute3_Server.cs" Link="CMD13_GetArcSuiteAtrtribute3_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD14_GetArcSuiteLatestDrawing_Server.cs" Link="CMD14_GetArcSuiteLatestDrawing_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD15_GetArcSuiteLatestDrawingFile_Server.cs" Link="CMD15_GetArcSuiteLatestDrawingFile_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD16_GetCommitPrinterIsFailStatus_Server.cs" Link="CMD16_GetCommitPrinterIsFailStatus_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD17_GetCommitPrinterNameAndAlias_Server.cs" Link="CMD17_GetCommitPrinterNameAndAlias_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD18_GetCommitPrinterSettingFromPaperSizes_Server.cs" Link="CMD18_GetCommitPrinterSettingFromPaperSizes_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD19_GetCommitPrinterShortCutName_Server.cs" Link="CMD19_GetCommitPrinterShortCutName_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD20_GetCommitPrinterShortCutNameAndDescription_Server.cs" Link="CMD20_GetCommitPrinterShortCutNameAndDescription_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD21_GetVersion_Server.cs" Link="CMD21_GetVersion_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD22_LoadImage_Server.cs" Link="CMD22_LoadImage_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD23_LoadImage2_Server.cs" Link="CMD23_LoadImage2_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD24_ServerControl_FileRecv_Server.cs" Link="CMD24_ServerControl_FileRecv_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD25_ServerControl_FileSend_Server.cs" Link="CMD25_ServerControl_FileSend_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD26_ServerControl_GetFileList_Server.cs" Link="CMD26_ServerControl_GetFileList_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD27_Status_ARCSUITE_SERVERHOST_Server.cs" Link="CMD27_Status_ARCSUITE_SERVERHOST_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD28_Status_SERVER_ALIVE_Server.cs" Link="CMD28_Status_SERVER_ALIVE_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD29_Status_SERVER_CURRENT_MODE_Server.cs" Link="CMD29_Status_SERVER_CURRENT_MODE_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD30_Status_SERVER_MODE_MasterOrSlave_Server.cs" Link="CMD30_Status_SERVER_MODE_MasterOrSlave_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CommandExecutor.cs" Link="CommandExecutor.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\StreamCommandsDR_Server.cs" Link="StreamCommandsDR_Server.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\StreamCommandsSW_Server.cs" Link="StreamCommandsSW_Server.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,6 +50,7 @@
     <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
     <ProjectReference Include="..\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
     <ProjectReference Include="..\StreamCommandBridgeDNet8\StreamCommandBridgeDNet8.csproj" />
+    <ProjectReference Include="..\StreamCommandExecutorClientDNet8\StreamCommandExecutorClientDNet8.csproj" />
     <ProjectReference Include="D:\VSSource\repos\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj" />
   </ItemGroup>
 

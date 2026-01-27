@@ -88,7 +88,7 @@ namespace ServerControlCenterApplication
             CommitPathTextBox.Text = SccConfig.Config.CommitPath;               // 8
 
             NewStreamMode_checkBox.Checked = SccConfig.Config.NewStreamMode;
-            NewStreamModeTpPort_textBox.Text = SccConfig.Config.NewStreamModeTcpPort.ToString();
+            NewStreamModeTpPort_textBox.Text = SccConfig.Config.NewStreamMode_DC_TcpPort.ToString();
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace ServerControlCenterApplication
             SccConfig.Config.CommitPath = @"\\" + StageServerHostName_comboBox.Text + @"\" + CommitShareNameTextBox.Text;
 
             SccConfig.Config.NewStreamMode = NewStreamMode_checkBox.Checked;
-            SccConfig.Config.NewStreamModeTcpPort = StringToInt(NewStreamModeTpPort_textBox.Text);
+            SccConfig.Config.NewStreamMode_DC_TcpPort = StringToInt(NewStreamModeTpPort_textBox.Text);
 
             SccConfig.Config.Save();
 
@@ -129,7 +129,7 @@ namespace ServerControlCenterApplication
             }
             else
             {
-                return 12345;
+                return 28080;
             }
         }
 
@@ -377,7 +377,7 @@ namespace ServerControlCenterApplication
                 && val >= 0 && val <= 65535)
             {
                 // ←← ここで確定反映
-                SccConfig.Config.NewStreamModeTcpPort = val;
+                SccConfig.Config.NewStreamMode_DC_TcpPort = val;
                 return;
             }
 
@@ -397,7 +397,7 @@ namespace ServerControlCenterApplication
                     tb.Text = fixedVal.ToString(CultureInfo.InvariantCulture);
 
                     // ←← 補正後もここで確定反映
-                    SccConfig.Config.NewStreamModeTcpPort = fixedVal;
+                    SccConfig.Config.NewStreamMode_DC_TcpPort = fixedVal;
                 }
                 else
                 {
