@@ -38,6 +38,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD28_Status_SERVER_ALIVE_Server.cs" Link="CMD28_Status_SERVER_ALIVE_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD29_Status_SERVER_CURRENT_MODE_Server.cs" Link="CMD29_Status_SERVER_CURRENT_MODE_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD30_Status_SERVER_MODE_MasterOrSlave_Server.cs" Link="CMD30_Status_SERVER_MODE_MasterOrSlave_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD31_GetArcSuiteAwaitingRegist_Server.cs" Link="CMD31_GetArcSuiteAwaitingRegist_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CommandExecutor.cs" Link="CommandExecutor.cs" />
   </ItemGroup>
 
