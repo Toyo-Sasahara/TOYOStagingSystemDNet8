@@ -14,7 +14,8 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD04_CommandSample_Client.cs" Link="CMD04_CommandSample_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD05_CommitRecepitonState_Client.cs" Link="CMD05_CommitRecepitonState_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD06_ConnectTest_Client.cs" Link="CMD06_ConnectTest_Client.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD07_DataBaseSearch3_Client.cs" Link="CMD07_DataBaseSearch3_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD07a_DataBaseSearch2_Client.cs" Link="CMD07a_DataBaseSearch2_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD07b_DataBaseSearch3_Client.cs" Link="CMD07b_DataBaseSearch3_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD08_DataBaseSearch4a_Client.cs" Link="CMD08_DataBaseSearch4a_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD09_DR_GetAuthorizedUser_Client.cs" Link="CMD09_DR_GetAuthorizedUser_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD10_GetArcSuiteAtrtribute_Client .cs" Link="CMD10_GetArcSuiteAtrtribute_Client .cs" />
@@ -38,6 +39,8 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD28_Status_SERVER_ALIVE_Client.cs" Link="CMD28_Status_SERVER_ALIVE_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD29_Status_SERVER_CURRENT_MODE_Client.cs" Link="CMD29_Status_SERVER_CURRENT_MODE_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD30_Status_SERVER_MODE_MasterOrSlave_Client.cs" Link="CMD30_Status_SERVER_MODE_MasterOrSlave_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD31_GetArcSuiteAwaitingRegist_Client.cs" Link="CMD31_GetArcSuiteAwaitingRegist_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD33_GetCommonApprovalWaitingTicketList_Client.cs" Link="CMD33_GetCommonApprovalWaitingTicketList_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\DummyParam.cs" Link="DummyParam.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\ServerInfo.cs" Link="ServerInfo.cs" />
 	    </ItemGroup>
@@ -49,9 +52,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
     <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
-    <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
-    <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
-    <ProjectReference Include="..\StreamCommandBridge\StreamCommandBridgeDNet8.csproj" />
+    <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />  
+	<ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />  
+	<ProjectReference Include="..\StreamCommandBridge\StreamCommandBridgeDNet8.csproj" />
   </ItemGroup>
 
 </Project>

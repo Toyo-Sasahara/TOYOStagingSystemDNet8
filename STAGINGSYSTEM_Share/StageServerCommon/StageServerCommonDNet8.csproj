@@ -64,13 +64,12 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseRestore.cs" Link="DataBaseRestore.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseSearch.cs" Link="DataBaseSearch.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseUpdate.cs" Link="DataBaseUpdate.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\Data_AuthorizedUserConnectionStatus.cs" Link="Data_AuthorizedUserConnectionStatus.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\Data_PreInputTIKECTCODEs.cs" Link="Data_PreInputTIKECTCODEs.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileAccessWaiter.cs" Link="Properties\FileAccessWaiter.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileHundling.cs" Link="FileHundling.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileLockContorol.cs" Link="FileLockContorol.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_GetArcSuiteAwaitingRegist.cs" Link="List_Client_GetArcSuiteAwaitingRegist.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_Client_InputTICKET.cs" Link="List_Client_InputTICKET.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\InputDataControl_ApprovalClientConnection.cs" Link="InputDataControl_ApprovalClientConnection.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\InputDataControl_ClientInputTicket.cs" Link="InputDataControl_ClientInputTicket.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_CommandRequestCache.cs" Link="List_CommandRequestCache.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\MemoryMapdFile.cs" Link="MemoryMapdFile.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEClient.cs" Link="PIPEClient.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\PIPEServerCommandAsync.cs" Link="PIPEServerCommandAsync.cs" />
@@ -84,6 +83,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_STATUS.cs" Link="ServerCMD_STATUS.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServerCMD_TitleFieldTest.cs" Link="ServerCMD_TitleFieldTest.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ServiceBaseHelper.cs" Link="ServiceBaseHelper.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StageServerCache.cs" Link="StageServerCache.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StageServerCommonInfo.cs" Link="StageServerCommonInfo.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StampConfig.cs" Link="StampConfig.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StampConfigWork.cs" Link="StampConfigWork.cs" />

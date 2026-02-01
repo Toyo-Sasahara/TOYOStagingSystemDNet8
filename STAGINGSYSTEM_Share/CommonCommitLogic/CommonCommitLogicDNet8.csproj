@@ -67,7 +67,7 @@
 		<ProjectReference Include="..\RemoteClient\RemoteClientDNet8.csproj" />
 		<ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
 		<ProjectReference Include="..\StreamCommandBridge\StreamCommandBridgeDNet8.csproj" />
-		<ProjectReference Include="..\StreamCommandExecutorClientDNet8\StreamCommandExecutorClientDNet8.csproj" />
+		<ProjectReference Include="..\StreamCommandExecutorClient\StreamCommandExecutorClientDNet8.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
