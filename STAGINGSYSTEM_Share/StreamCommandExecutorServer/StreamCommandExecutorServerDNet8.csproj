@@ -54,6 +54,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\ApprovedSystemDNet8\ApprovedSystemDNet8.csproj" />
     <ProjectReference Include="..\ArcSuiteSdkDnet8\ArcSuiteSdkDNet8.csproj" />
     <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
     <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
