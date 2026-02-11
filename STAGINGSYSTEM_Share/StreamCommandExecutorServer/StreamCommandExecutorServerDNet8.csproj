@@ -42,6 +42,9 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD31_GetArcSuiteAwaitingRegist_Server.cs" Link="CMD31_GetArcSuiteAwaitingRegist_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD32_MailSend_Server.cs" Link="CMD32_MailSend_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD33_GetCommonApprovalWaitingTicketList_Server.cs" Link="CMD33_GetCommonApprovalWaitingTicketList_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD34_Approved2c_Server.cs" Link="CMD34_Approved2c_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD35_DataBaseUpdate_Server.cs" Link="CMD35_DataBaseUpdate_Server.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CMD36_ApprovedCancels3_Server.cs" Link="CMD36_ApprovedCancels3_Server.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorServer\CommandExecutor.cs" Link="CommandExecutor.cs" />
   </ItemGroup>
 

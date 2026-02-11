@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ApprovedSystem\ApprovedCheck.cs" Link="ApprovedCheck.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ApprovedSystem\ApprovedProcess.cs" Link="ApprovedProcess.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ApprovedSystem\ApprovedProcessTest.cs" Link="ApprovedProcessTest.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ApprovedSystem\ApprovedSystemInfo.cs" Link="ApprovedSystemInfo.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ApprovedSystem\UserInfo.cs" Link="UserInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
+    <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
+    <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\StageServerCommon\StageServerCommonDNet8.csproj" />
+    <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
+  </ItemGroup>
+
+</Project>

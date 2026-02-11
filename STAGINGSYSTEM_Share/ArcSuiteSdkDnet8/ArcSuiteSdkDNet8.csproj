@@ -9,6 +9,7 @@
 		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ArcSuiteSdk\ArcSuiteFlags.cs" Link="ArcSuiteFlags.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ArcSuiteSdk\ArcSuiteKeyValue.cs" Link="ArcSuiteKeyValue.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ArcSuiteSdk\ArcSuiteSdkConfig.cs" Link="ArcSuiteSdkConfig.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\ArcSuiteSdk\ArcSuiteSdkConfigWork.cs" Link="ArcSuiteSdkConfigWork.cs" />

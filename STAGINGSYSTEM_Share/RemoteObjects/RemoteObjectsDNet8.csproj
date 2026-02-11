@@ -26,6 +26,7 @@
 	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedCancel.cs" Link="ApprovedCancel.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedCancelJsonConverter.cs" Link="ApprovedCancelJsonConverter.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedOrder.cs" Link="ApprovedOrder.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedStatus.cs" Link="ApprovedStatus.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsInfo.cs" Link="RemoteObjectsInfo.cs" />
 	</ItemGroup>
