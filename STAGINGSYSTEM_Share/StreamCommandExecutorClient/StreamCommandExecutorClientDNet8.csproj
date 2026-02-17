@@ -41,6 +41,9 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD30_Status_SERVER_MODE_MasterOrSlave_Client.cs" Link="CMD30_Status_SERVER_MODE_MasterOrSlave_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD31_GetArcSuiteAwaitingRegist_Client.cs" Link="CMD31_GetArcSuiteAwaitingRegist_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD33_GetCommonApprovalWaitingTicketList_Client.cs" Link="CMD33_GetCommonApprovalWaitingTicketList_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD34_Approved2c_Client.cs" Link="CMD34_Approved2c_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD35_DataBaseUpdate_Client.cs" Link="CMD35_DataBaseUpdate_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD36_ApprovedCancels3_Client.cs" Link="CMD36_ApprovedCancels3_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\DummyParam.cs" Link="DummyParam.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\ServerInfo.cs" Link="ServerInfo.cs" />
 	    </ItemGroup>

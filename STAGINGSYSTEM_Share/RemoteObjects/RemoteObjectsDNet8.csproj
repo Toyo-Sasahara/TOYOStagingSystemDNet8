@@ -29,6 +29,7 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedOrder.cs" Link="ApprovedOrder.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedStatus.cs" Link="ApprovedStatus.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsInfo.cs" Link="RemoteObjectsInfo.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\UpdateOrder.cs" Link="UpdateOrder.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />

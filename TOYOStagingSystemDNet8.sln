@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SasaLibDNet8.LDAP", "..\SaS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DRAWREGISTservice", "DRAWREGISTservice", "{DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeLib", "D:\VSSource\repos\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj", "{F8646414-0C9C-49BB-9DA3-3923BF78A398}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcSuiteSdkDNet8", "STAGINGSYSTEM_Share\ArcSuiteSdkDnet8\ArcSuiteSdkDNet8.csproj", "{3E39C9EE-8C48-EDEC-C35A-1B3453649504}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamCommandBridgeDNet8", "STAGINGSYSTEM_Share\StreamCommandBridge\StreamCommandBridgeDNet8.csproj", "{BF6BB4A1-0BCD-4541-FB03-DAEF47DF6097}"
@@ -84,6 +82,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamCommandExecutorServerDNet8", "STAGINGSYSTEM_Share\StreamCommandExecutorServer\StreamCommandExecutorServerDNet8.csproj", "{C4CEA29E-8255-AE2B-BBCC-3560816FBF98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovedSystemDNet8", "STAGINGSYSTEM_Share\ApprovedSystemDNet8\ApprovedSystemDNet8.csproj", "{11EC31F1-B2C5-4BD8-BE1F-1E324CBBE7D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeLib", "..\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj", "{F8646414-0C9C-49BB-9DA3-3923BF78A398}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -309,14 +309,6 @@ Global
 		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Release|Any CPU.Build.0 = Release|Any CPU
 		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Release|x64.ActiveCfg = Release|x64
 		{78F6AC67-8F60-49AB-906F-D8065EBEFA86}.Release|x64.Build.0 = Release|x64
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x64.Build.0 = Debug|Any CPU
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x64.ActiveCfg = Release|Any CPU
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x64.Build.0 = Release|Any CPU
 		{3E39C9EE-8C48-EDEC-C35A-1B3453649504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E39C9EE-8C48-EDEC-C35A-1B3453649504}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E39C9EE-8C48-EDEC-C35A-1B3453649504}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -357,6 +349,14 @@ Global
 		{11EC31F1-B2C5-4BD8-BE1F-1E324CBBE7D4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11EC31F1-B2C5-4BD8-BE1F-1E324CBBE7D4}.Release|x64.ActiveCfg = Release|Any CPU
 		{11EC31F1-B2C5-4BD8-BE1F-1E324CBBE7D4}.Release|x64.Build.0 = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x64.Build.0 = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x64.ActiveCfg = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -392,12 +392,12 @@ Global
 		{C66417A1-6E8D-43B3-B467-D555B2B4128E} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{78F6AC67-8F60-49AB-906F-D8065EBEFA86} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97} = {BB6F1E2B-9D87-4928-8ACB-4EED1875D67F}
-		{F8646414-0C9C-49BB-9DA3-3923BF78A398} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 		{3E39C9EE-8C48-EDEC-C35A-1B3453649504} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{BF6BB4A1-0BCD-4541-FB03-DAEF47DF6097} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{A03FF196-118E-9A06-8F04-F00C8B261C09} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{C4CEA29E-8255-AE2B-BBCC-3560816FBF98} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
 		{11EC31F1-B2C5-4BD8-BE1F-1E324CBBE7D4} = {037EBF8C-9FC1-4032-832E-F4ED82E13082}
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398} = {55E0203E-0F67-45AF-AAEE-DB49A87C0FBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69119819-4D3C-4E24-B854-453C41AA04D3}
@@ -431,7 +431,7 @@ Global
 		STAGINGSYSTEM_Share\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo\STAGINGSYSTEM_Share.AssemblyInfo.projitems*{cf5a2aa0-4d6e-484d-97cf-e90d48a4ca5e}*SharedItemsImports = 4
 		STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems*{e56aed0a-8411-4bc8-9ebf-060f6aa75703}*SharedItemsImports = 5
 		STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems*{f1726255-75e5-4129-a1f0-ddcc73e6e3d1}*SharedItemsImports = 5
-		D:\VSSource\repos\SasaLibTestFrame\SasaLib.AssemblyVersion\SasaLib.AssemblyVersion.projitems*{f8646414-0c9c-49bb-9da3-3923bf78a398}*SharedItemsImports = 4
+		..\SasaLibTestFrame\SasaLib.AssemblyVersion\SasaLib.AssemblyVersion.projitems*{f8646414-0c9c-49bb-9da3-3923bf78a398}*SharedItemsImports = 4
 		..\SasaLibDNet8\SasaLibDNet8_AssemblyInfo\SasaLibDNet8_AssemblyInfo.projitems*{f9f67e53-ea93-4968-a446-03f6eb0edd0b}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
