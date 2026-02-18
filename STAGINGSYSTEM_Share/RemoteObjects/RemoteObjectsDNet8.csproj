@@ -44,5 +44,4 @@
 		<PackageReference Include="System.Management" Version="9.0.0" />
 		<PackageReference Include="System.Memory" Version="4.6.0" />
 	</ItemGroup>
-	<Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
 </Project>

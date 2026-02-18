@@ -43,5 +43,4 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
-  <Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
 </Project>
