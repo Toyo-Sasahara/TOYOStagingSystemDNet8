@@ -46,6 +46,9 @@
 	  <Content Include="TESTFILE\XX-12345-998RL.dwg" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Include="CreateImage.cs" />
+	</ItemGroup>
+	<ItemGroup>
 		<Compile Update="CommitPreviewImage.cs">
 			<SubType>UserControl</SubType>
 		</Compile>
