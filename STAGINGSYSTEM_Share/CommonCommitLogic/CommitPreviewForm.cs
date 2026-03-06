@@ -45,6 +45,10 @@ namespace CommonCommitLogic
 
         private void CommitPreviewForm_Load(object sender, EventArgs e)
         {
+            if (this.Owner == null)
+            {
+                return;
+            }
             // ウィンド位置を指定
             this.Location = new Point(this.Owner.Location.X + (this.Owner.Width - this.Width) / 2, this.Owner.Location.Y + (this.Owner.Height - this.Height) / 2);
         }
