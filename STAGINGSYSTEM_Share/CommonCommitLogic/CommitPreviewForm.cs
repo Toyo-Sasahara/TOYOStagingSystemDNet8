@@ -16,9 +16,9 @@ namespace CommonCommitLogic
 #if NETCOREAPP
     [SupportedOSPlatform("windows")]
 #endif
-    public partial class BigPreviewForm : Form
+    public partial class CommitPreviewForm : Form
     {
-        public BigPreviewForm()
+        public CommitPreviewForm()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace CommonCommitLogic
             this.Close();
         }
 
-        private void BigPreviewForm_Load(object sender, EventArgs e)
+        private void CommitPreviewForm_Load(object sender, EventArgs e)
         {
             // ウィンド位置を指定
             this.Location = new Point(this.Owner.Location.X + (this.Owner.Width - this.Width) / 2, this.Owner.Location.Y + (this.Owner.Height - this.Height) / 2);

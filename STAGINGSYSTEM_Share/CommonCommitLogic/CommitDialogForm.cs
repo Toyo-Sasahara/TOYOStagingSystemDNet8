@@ -84,7 +84,7 @@ namespace CommonCommitLogic
         /// <summary>
         /// コミット最大化プレビュー用オブジェクト
         /// </summary>
-        private BigPreviewForm bigPreviewForm;
+        private CommitPreviewForm bigPreviewForm;
 
         /// <summary>
         /// 
@@ -1497,11 +1497,10 @@ namespace CommonCommitLogic
         /// <param name="e"></param>
         private void PreviewButton_Click(object sender, EventArgs e)
         {
-            bigPreviewForm = new BigPreviewForm
+            bigPreviewForm = new CommitPreviewForm
             {
                 WindowState = FormWindowState.Maximized
             };
-            //bigPreviewForm.SetImage(MiniPreviewPictureBox.Image);
             bigPreviewForm.SetImage(commitPreviewImage.Image);
             bigPreviewForm.ShowDialog(this);
         }

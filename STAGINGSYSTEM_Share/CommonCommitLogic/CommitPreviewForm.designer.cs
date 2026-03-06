@@ -1,6 +1,6 @@
 ﻿namespace CommonCommitLogic
 {
-    partial class BigPreviewForm
+    partial class CommitPreviewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BigPreviewForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommitPreviewForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Button();
             this.commitPreviewImage1 = new CommonCommitLogic.CommitPreviewImage();
@@ -81,7 +81,7 @@
             this.Name = "BigPreviewForm";
             this.Text = "コミット直前 プレビュー画面";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.BigPreviewForm_Load);
+            this.Load += new System.EventHandler(this.CommitPreviewForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

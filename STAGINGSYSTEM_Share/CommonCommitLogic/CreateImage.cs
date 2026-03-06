@@ -19,6 +19,18 @@ namespace CommonCommitLogic
 
         private Action<string> _WrteLine;
 
+        private System.Drawing.Image _img;
+        
+        public System.Drawing.Image Image => _img;
+
+        /// <summary>
+        /// Initializes a new instance of the CreateImage class with the specified TIFF export delegate and output
+        /// writer.
+        /// </summary>
+        /// <param name="Delegate_ExecuteTiffExport_Method">A delegate that executes the TIFF export operation. This delegate is used to perform the image export
+        /// process.</param>
+        /// <param name="WriteLine">An action delegate that receives output messages. Typically used to write status or error information as a
+        /// string.</param>
         public CreateImage(Delegate_ExecuteTiffExport_Method Delegate_ExecuteTiffExport_Method, Action<string> WriteLine)
         {
             _Delegate_ExecuteTiffExport_Method = Delegate_ExecuteTiffExport_Method;
@@ -44,16 +56,30 @@ namespace CommonCommitLogic
             try
             {
                 var tiffFullPath = System.IO.Path.ChangeExtension(tiffImageFullPathWithOutExt, "TIF");
-                System.Drawing.Image img = System.Drawing.Image.FromFile(tiffFullPath);
-                bool result = ConvertImageToPDF(img, System.IO.Path.ChangeExtension(tiffImageFullPathWithOutExt, "PDF"), "Microsoft Print to PDF");
-            }
-            catch { }
+                _img = System.Drawing.Image.FromFile(tiffFullPath);
+                bool result = ConvertImageToPDF(_img, System.IO.Path.ChangeExtension(tiffImageFullPathWithOutExt, "PDF"), "Microsoft Print to PDF");
 
-            return true;
+                return result;
+            }
+            catch { return false; }
+           
         }
 
         public bool ConvertImageToPDF(System.Drawing.Image outPutimage, string PrintOutputFullFileName, string PrinterDriverName)
         {
+            if (outPutimage == null)
+                throw new ArgumentNullException(nameof(outPutimage), "変換元イメージが null です。");
+
+            string outputDir = System.IO.Path.GetDirectoryName(PrintOutputFullFileName);
+            if (!string.IsNullOrWhiteSpace(outputDir) && !System.IO.Directory.Exists(outputDir))
+                throw new System.IO.DirectoryNotFoundException($"出力先フォルダが存在しません: \"{outputDir}\"");
+
+            bool printerExists = System.Drawing.Printing.PrinterSettings.InstalledPrinters
+                .Cast<string>()
+                .Any(p => string.Equals(p, PrinterDriverName, StringComparison.OrdinalIgnoreCase));
+            if (!printerExists)
+                throw new InvalidOperationException($"指定されたプリンタドライバが見つかりません: \"{PrinterDriverName}\"");
+
             List<PaperSizeAndSource> PaperSizeAndSources;
 
             PaperSizeAndSources = new List<PaperSizeAndSource>()
@@ -70,7 +96,7 @@ namespace CommonCommitLogic
                 new PaperSizeAndSource{Comment="Microsoft Print to PDF A4縦向き",CommonPaperSizeEnum=SasaLib.PrintConfig.CommonPaperSize.A4P,PaperName="A4",Xoffset=0,Yoffset=0,LandScape=false  ,SourceName="自動" ,BeforeExtractType = PrinterSimple.BeforeExtractType.ページサイズ範囲},
             };
 
-            PrinterSimple printService = new PrinterSimple(outPutimage, PrinterDriverName, PaperSizeAndSources);
+            PrinterSimple printService = new PrinterSimple(outPutimage, PrinterDriverName, PaperSizeAndSources, _WrteLine);
 
             string DocumentName = System.IO.Path.GetFileNameWithoutExtension(PrintOutputFullFileName);
 

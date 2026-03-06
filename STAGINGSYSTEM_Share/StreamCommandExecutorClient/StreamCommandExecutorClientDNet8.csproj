@@ -30,7 +30,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD19_GetCommitPrinterShortCutName_Client.cs" Link="CMD19_GetCommitPrinterShortCutName_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD20_GetCommitPrinterShortCutNameAndDescription_Client.cs" Link="CMD20_GetCommitPrinterShortCutNameAndDescription_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD21_GetVersion_Client.cs" Link="CMD21_GetVersion_Client.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD22_LoadImage_Server_Client.cs" Link="CMD22_LoadImage_Server_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD22_LoadImage_Client.cs" Link="CMD22_LoadImage_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD23_LoadImage2_Client.cs" Link="CMD23_LoadImage2_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD24_ServerControl_FileRecv_Client.cs" Link="CMD24_ServerControl_FileRecv_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD25_ServerControl_FileSend_Client.cs" Link="CMD25_ServerControl_FileSend_Client.cs" />
