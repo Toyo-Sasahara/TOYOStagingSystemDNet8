@@ -19,9 +19,8 @@ namespace CommonCommitLogic
 
         private Action<string> _WrteLine;
 
-        private System.Drawing.Image _img;
-        
-        public System.Drawing.Image Image => _img;
+        //private System.Drawing.Image _img;
+        public System.Drawing.Image Image { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the CreateImage class with the specified TIFF export delegate and output
@@ -56,10 +55,15 @@ namespace CommonCommitLogic
             try
             {
                 var tiffFullPath = System.IO.Path.ChangeExtension(tiffImageFullPathWithOutExt, "TIF");
-                _img = System.Drawing.Image.FromFile(tiffFullPath);
-                bool result = ConvertImageToPDF(_img, System.IO.Path.ChangeExtension(tiffImageFullPathWithOutExt, "PDF"), "Microsoft Print to PDF");
+                Image = System.Drawing.Image.FromFile(tiffFullPath);
 
-                return result;
+                // PrinterSimple 内で currentImage.Dispose() が呼ばれるため、
+                // Image とは別のクローンを ConvertImageToPDF に渡す
+                using (var imageForPdf = (System.Drawing.Image)Image.Clone())
+                {
+                    bool result2 = ConvertImageToPDF(imageForPdf, System.IO.Path.ChangeExtension(tiffImageFullPathWithOutExt, "PDF"), "Microsoft Print to PDF");
+                    return result2;
+                }
             }
             catch { return false; }
            

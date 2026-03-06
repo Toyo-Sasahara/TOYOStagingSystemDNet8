@@ -25,8 +25,17 @@ namespace CommonCommitLogic
 
         public void SetImage(Image img)
         {
-            //BigPreviewPictureBox.Image = img;
-            commitPreviewImage1.Image = img;
+            try
+            {
+                // 画像は Clone 渡し
+                using var cloned = (System.Drawing.Image)img.Clone();
+                commitPreviewImage1.Image = cloned;
+            }
+            catch
+            (Exception ex)
+            {
+                //MessageBox.Show($"画像の表示に失敗しました。\n{ex.Message}", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
