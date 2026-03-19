@@ -98,4 +98,5 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
+	<Import Project="..\..\STAGINGSYSTEM_ShareDNet8.AssemblyInfo\STAGINGSYSTEMDNet8.AssemblyInfo.projitems" Label="Shared" />
 </Project>

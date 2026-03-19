@@ -55,5 +55,5 @@
     <Folder Include="StreamBasedServer\" />
     <Folder Include="StreamBasedClient\" />
   </ItemGroup>
-  <Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
+  <Import Project="..\..\STAGINGSYSTEM_ShareDNet8.AssemblyInfo\STAGINGSYSTEMDNet8.AssemblyInfo.projitems" Label="Shared" />
 </Project>
