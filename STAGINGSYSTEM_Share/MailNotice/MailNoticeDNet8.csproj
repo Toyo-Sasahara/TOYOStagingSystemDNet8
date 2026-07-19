@@ -16,13 +16,18 @@
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\MailNotice\GraphMailAccount.cs" Link="GraphMailAccount.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\MailNotice\MailAccount.cs" Link="MailAccount.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\MailNotice\Mailcontext.cs" Link="Mailcontext.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\MailNotice\MailNotice.cs" Link="MailNotice.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\MailNotice\MailNoticeExchangeOnline.cs" Link="MailNoticeExchangeOnline.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\MailNotice\MailNoticeInfo.cs" Link="MailNoticeInfo.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\MailNotice\MailNoticeMS-GraphAPI.cs" Link="MailNoticeMS-GraphAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
-    <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
+    <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

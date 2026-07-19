@@ -142,6 +142,8 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl06.Designer.cs" Link="TabControl06.Designer.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl07.cs" Link="TabControl07.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl07.Designer.cs" Link="TabControl07.Designer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl08.cs" Link="TabControl08.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_MainApps\@サーバーコントロールセンター\TabControl08.Designer.cs" Link="TabControl08.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TestImages\TESTIMAGE-A0.tif">

@@ -45,5 +45,4 @@
 	<ItemGroup>
 		<Folder Include="Properties\" />
 	</ItemGroup>
-	<Import Project="..\..\STAGINGSYSTEM.AssemblyVersion\SasaLibDNet8.AssemblyVersion.projitems" Label="Shared" />
 </Project>

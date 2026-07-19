@@ -35,7 +35,6 @@
     <ProjectReference Include="..\SQLSearchConditonsCreate\SQLSearchConditonsCreateDBNet8.csproj" />
     <ProjectReference Include="..\StageServerConfig\StageServerConfigDNet8.csproj" />
     <ProjectReference Include="..\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
-    <ProjectReference Include="D:\VSSource\repos\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\StampEraceBase.bmp" Link="StampEraceBase.bmp" />
@@ -52,6 +51,7 @@
     <Compile Remove="ObjectLock.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ApprovedClientConnectionCache.cs" Link="ApprovedClientConnectionCache.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\BarcodeConfig.cs" Link="BarcodeConfig.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\BarcodeConfigWork.cs" Link="BarcodeConfigWork.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\BarcodeProcess.cs" Link="BarcodeProcess.cs" />
@@ -67,7 +67,6 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileAccessWaiter.cs" Link="Properties\FileAccessWaiter.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileHundling.cs" Link="FileHundling.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileLockContorol.cs" Link="FileLockContorol.cs" />
-    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\InputDataControl_ApprovalClientConnection.cs" Link="InputDataControl_ApprovalClientConnection.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\InputDataControl_ClientInputTicket.cs" Link="InputDataControl_ClientInputTicket.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\List_CommandRequestCache.cs" Link="List_CommandRequestCache.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\MemoryMapdFile.cs" Link="MemoryMapdFile.cs" />

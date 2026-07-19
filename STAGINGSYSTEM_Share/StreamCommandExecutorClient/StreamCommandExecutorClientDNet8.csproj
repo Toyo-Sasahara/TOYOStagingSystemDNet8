@@ -13,6 +13,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD02_ClientPreInputTicketCodeAdd_Client.cs" Link="CMD02_ClientPreInputTicketCodeAdd_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD03_ClientPreInputTicketCodeRemove_Client.cs" Link="CMD03_ClientPreInputTicketCodeRemove_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD04_CommandSample_Client.cs" Link="CMD04_CommandSample_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD05a_CommitRecepitonState_Client.cs" Link="CMD05a_CommitRecepitonState_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD05_CommitRecepitonState_Client.cs" Link="CMD05_CommitRecepitonState_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD06_ConnectTest_Client.cs" Link="CMD06_ConnectTest_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD07a_DataBaseSearch2_Client.cs" Link="CMD07a_DataBaseSearch2_Client.cs" />
@@ -45,6 +46,57 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD34_Approved2c_Client.cs" Link="CMD34_Approved2c_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD35_DataBaseUpdate_Client.cs" Link="CMD35_DataBaseUpdate_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD36_ApprovedCancels3_Client.cs" Link="CMD36_ApprovedCancels3_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD37_GetPipeCommandLog_Client.cs" Link="CMD37_GetPipeCommandLog_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD38_ConsoleLogLevelGet_Client.cs" Link="CMD38_ConsoleLogLevelGet_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD39_ConsoleLogLevelSet_Client.cs" Link="CMD39_ConsoleLogLevelSet_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD40_ReloadStageServerConfig_Client.cs" Link="CMD40_ReloadStageServerConfig_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD41_SaveStageServerConfig_Client.cs" Link="CMD41_SaveStageServerConfig_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD42_SaveStageServerDatabaseConfig_Client.cs" Link="CMD42_SaveStageServerDatabaseConfig_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD43_ReloadStampConf_Client.cs" Link="CMD43_ReloadStampConf_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD44_ReloadBarcodeConf_Client.cs" Link="CMD44_ReloadBarcodeConf_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD45_SetCommitAcceptFalseMsg_Client.cs" Link="CMD45_SetCommitAcceptFalseMsg_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD46_GetCommitAcceptFalseMsg_Client.cs" Link="CMD46_GetCommitAcceptFalseMsg_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD47_SetApprovingAcceptFalseMsg_Client.cs" Link="CMD47_SetApprovingAcceptFalseMsg_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD48_GetApprovingAcceptFalseMsg_Client.cs" Link="CMD48_GetApprovingAcceptFalseMsg_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD49_GetBackupStatus_Client.cs" Link="CMD49_GetBackupStatus_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD50_GetRestoreStatus_Client.cs" Link="CMD50_GetRestoreStatus_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD51_DatabaseBackup_Client.cs" Link="CMD51_DatabaseBackup_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD52_DatabaseRestore_Client.cs" Link="CMD52_DatabaseRestore_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD53_ServiceStop_Client.cs" Link="CMD53_ServiceStop_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD54_GetActiveSessionCommandList_Client.cs" Link="CMD54_GetActiveSessionCommandList_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD55_StressTest_Client.cs" Link="CMD55_StressTest_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD56_GetServerVersion_Client.cs" Link="CMD56_GetServerVersion_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD57_ReloadStageServerDatabaseConfig_Client.cs" Link="CMD57_ReloadStageServerDatabaseConfig_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD58_GetValue_Client.cs" Link="CMD58_GetValue_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD59_SetValue_Client.cs" Link="CMD59_SetValue_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD60_GetVauleList_Client.cs" Link="CMD60_GetVauleList_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD61_CreateTicketCode_Client.cs" Link="CMD61_CreateTicketCode_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD62_GetCommitPrinterInfo_Client.cs" Link="CMD62_GetCommitPrinterInfo_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD63_LoadTextFile_Client.cs" Link="CMD63_LoadTextFile_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD64_CheckDrawingType_Client.cs" Link="CMD64_CheckDrawingType_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD65_GetCommitFolder_Client.cs" Link="CMD65_GetCommitFolder_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD66_MailSendLogLevelSet_Client.cs" Link="CMD66_MailSendLogLevelSet_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD67_GetArcSuiteAtrtributeFromObjectID_Client.cs" Link="CMD67_GetArcSuiteAtrtributeFromObjectID_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD68_RecordAndEntityfileDelete_Client.cs" Link="CMD68_RecordAndEntityfileDelete_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD69_GetArcSuiteContents_Client.cs" Link="CMD69_GetArcSuiteContents_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD70_SetRegistWaitingFlag2_Client.cs" Link="CMD70_SetRegistWaitingFlag2_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD71_ShowPrinterQueue_Client.cs" Link="CMD71_ShowPrinterQueue_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD72_TitleFieldTest_Client.cs" Link="CMD72_TitleFieldTest_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD73_DC_TEST1_Client.cs" Link="CMD73_DC_TEST1_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD74_GetAvailableMemory_Client.cs" Link="CMD74_GetAvailableMemory_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD75_GetMemoryUsageWorkingSetSize_Client.cs" Link="CMD75_GetMemoryUsageWorkingSetSize_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD76_GetArcSuiteAttributeFromOBJECTIDList_Client.cs" Link="CMD76_GetArcSuiteAttributeFromOBJECTIDList_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD77_MergeArcSuiteAtrtribute_Client.cs" Link="CMD77_MergeArcSuiteAtrtribute_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD78_GetArcSuiteLatestDrawingFiles_Client.cs" Link="CMD78_GetArcSuiteLatestDrawingFiles_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD79_SaveArcSuiteTicketConfig_Client.cs" Link="CMD79_SaveArcSuiteTicketConfig_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD80_BulkRecordAndEntityfileDeleteByDate_Client.cs" Link="CMD80_BulkRecordAndEntityfileDeleteByDate_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD81_FileStoreCheck_Client.cs" Link="CMD81_FileStoreCheck_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD82_FileStoreRepare_Client.cs" Link="CMD82_FileStoreRepare_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD83_TicketFileExistCheck_Client.cs" Link="CMD83_TicketFileExistCheck_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD84_GetMmapValue_Client.cs" Link="CMD84_GetMmapValue_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD85_SetMmapValue_Client.cs" Link="CMD85_SetMmapValue_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD86_SendTestMail_Client.cs" Link="CMD86_SendTestMail_Client.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\CMD87_PrintStart_Client.cs" Link="CMD87_PrintStart_Client.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\DummyParam.cs" Link="DummyParam.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StreamCommandExecutorClient\ServerInfo.cs" Link="ServerInfo.cs" />
 	    </ItemGroup>
