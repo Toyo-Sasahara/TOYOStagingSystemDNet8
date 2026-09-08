@@ -14,6 +14,7 @@
 		<Nullable>disable</Nullable>
 		<RootNamespace>CommonCommitLogic</RootNamespace>
 		<AssemblyName>CommonCommitLogic</AssemblyName>
+		<Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
 	</PropertyGroup>
 	<ItemGroup>
 	  <EmbeddedResource Remove="TestForm1.resx" />

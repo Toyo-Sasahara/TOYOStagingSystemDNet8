@@ -7,6 +7,7 @@
 		<UseVSHostingProcess>false</UseVSHostingProcess>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<Deterministic>false</Deterministic>
+		<Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
 	</PropertyGroup>
 	<PropertyGroup>
 		<StartupObject />
@@ -19,9 +20,17 @@
 		<OutputPath>bin\x64\Debug\</OutputPath>
 		<UseVSHostingProcess>false</UseVSHostingProcess>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-2027|x64'">
+	  <OutputPath>bin\x64\Debug\</OutputPath>
+	  <UseVSHostingProcess>false</UseVSHostingProcess>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
 		<OutputPath>bin\x64\Release\</OutputPath>
 		<UseVSHostingProcess>false</UseVSHostingProcess>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-2027|x64'">
+	  <OutputPath>bin\x64\Release\</OutputPath>
+	  <UseVSHostingProcess>false</UseVSHostingProcess>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\RemoteObjects\ApprovedCancel.cs" Link="ApprovedCancel.cs" />

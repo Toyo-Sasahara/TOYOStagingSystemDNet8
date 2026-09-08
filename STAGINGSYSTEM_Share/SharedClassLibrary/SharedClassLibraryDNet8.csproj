@@ -12,6 +12,7 @@
 		<PlatformTarget>x64</PlatformTarget>
 		<AssemblyName>SharedClassLibrary</AssemblyName>
 		<RootNamespace>ToyoStageService</RootNamespace>
+		<Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="Properties\**" />

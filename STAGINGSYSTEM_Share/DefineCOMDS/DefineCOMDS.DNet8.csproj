@@ -7,6 +7,7 @@
 		<AssemblyTitle>DefineCOMDS</AssemblyTitle>
 		<Product>DefineCOMDS</Product>
 		<PlatformTarget>AnyCPU</PlatformTarget>
+		<Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\DefineCOMDS\CMDS.cs" Link="CMDS.cs" />

@@ -8,6 +8,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AssemblyName>SasaImagePrinter</AssemblyName>
     <RootNamespace>SasaImagePrinter</RootNamespace>
+    <Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Install.ps1" />
