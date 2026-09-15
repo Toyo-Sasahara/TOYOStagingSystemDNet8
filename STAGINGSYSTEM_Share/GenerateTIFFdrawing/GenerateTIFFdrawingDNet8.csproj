@@ -24,10 +24,13 @@
 	  <UseVSHostingProcess>false</UseVSHostingProcess>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\FileDataTypeDetector.cs" Link="FileDataTypeDetector.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateImageFromPDF.cs" Link="GenerateImageFromPDF.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawing.cs" Link="GenerateTIFFdrawing.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawingInfo.cs" Link="GenerateTIFFdrawingInfo.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\ImagePositonConfig.cs" Link="ImagePositonConfig.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\ImagePositonConfigWork.cs" Link="ImagePositonConfigWork.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\PdfiumNativeLoader.cs" Link="PdfiumNativeLoader.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\GenerateTIFFdrawing\TestGenerateTIFF.cs" Link="TestGenerateTIFF.cs" />
 	</ItemGroup>
 	<ItemGroup>
@@ -35,6 +38,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="PDFtoImage" Version="5.4.0" />
 		<PackageReference Include="System.Buffers" Version="4.6.0" />
 		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
