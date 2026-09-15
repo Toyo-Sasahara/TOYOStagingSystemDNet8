@@ -1,9 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\%40ToyoDRAWREGISTservice\ToyoDRAWREGISTserviceMainLoop\DRservice_Cmd_ArcsuiteSDK.cs" Link="DRservice_Cmd_ArcsuiteSDK.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\%40ToyoDRAWREGISTservice\ToyoDRAWREGISTserviceMainLoop\DRservice_CMD_REGIST.cs" Link="DRservice_CMD_REGIST.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\ApprovedSystemDNet8\ApprovedSystemDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\ArcSuiteSdkDnet8\ArcSuiteSdkDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\MailNotice\MailNoticeDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+  </ItemGroup>
 
 </Project>

@@ -1,9 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\..\TOYOSTAGINGSYSTEM\%40ToyoDRAWCAPTUREservice\ToyoDRAWCAPTUREserviceMainLoop\DCservice_CMD_DataBackupAndRestore.cs" Link="DCservice_CMD_DataBackupAndRestore.cs" />
+    <Compile Include="..\..\..\..\TOYOSTAGINGSYSTEM\%40ToyoDRAWCAPTUREservice\ToyoDRAWCAPTUREserviceMainLoop\DCservice_CMD_DC_TEST1.cs" Link="DCservice_CMD_DC_TEST1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\..\..\STAGINGSYSTEM_Share\MailNotice\MailNoticeDNet8.csproj" />
+    <ProjectReference Include="..\..\..\STAGINGSYSTEM_Share\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\..\..\STAGINGSYSTEM_Share\StageServerCommon\StageServerCommonDNet8.csproj" />
+  </ItemGroup>
 
 </Project>

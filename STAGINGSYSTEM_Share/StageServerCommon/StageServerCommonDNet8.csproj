@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\ApprovedClientConnectionCache.cs" Link="ApprovedClientConnectionCache.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\AutoBulkRecordDeleteByDate.cs" Link="AutoBulkRecordDeleteByDate.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\BarcodeConfig.cs" Link="BarcodeConfig.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\BarcodeConfigWork.cs" Link="BarcodeConfigWork.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\BarcodeProcess.cs" Link="BarcodeProcess.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseRestore.cs" Link="DataBaseRestore.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseSearch.cs" Link="DataBaseSearch.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DataBaseUpdate.cs" Link="DataBaseUpdate.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\DRservice_CMD_SystemCheck.cs" Link="DRservice_CMD_SystemCheck.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileAccessWaiter.cs" Link="Properties\FileAccessWaiter.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileHundling.cs" Link="FileHundling.cs" />
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerCommon\FileLockContorol.cs" Link="FileLockContorol.cs" />
