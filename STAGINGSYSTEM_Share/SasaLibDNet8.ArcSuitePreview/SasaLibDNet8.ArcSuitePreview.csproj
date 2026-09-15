@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <Deterministic>false</Deterministic>
+	  <OutputType>Library</OutputType>
+	  <UseWindowsForms>True</UseWindowsForms>
+	  <Platforms>AnyCPU;x64</Platforms>
+	  <PlatformTarget>x64</PlatformTarget>
+	  <RootNamespace>SasaLib.ArcSuitePreview</RootNamespace>
+	  <NuGetAudit>False</NuGetAudit>
+	  <Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.ArcSuitePreview\ArcsuitePreview.cs" Link="ArcsuitePreview.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.ArcSuitePreview\ArcSuitePreviewFormSearch.cs" Link="ArcSuitePreviewFormSearch.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.ArcSuitePreview\CadTypeArcSuiteControl.cs" Link="CadTypeArcSuiteControl.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.ArcSuitePreview\CheckArcSuiteData.cs" Link="CheckArcSuiteData.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.ArcSuitePreview\MultiImageTiff.cs" Link="MultiImageTiff.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.ArcSuitePreview\RingBuffer.cs" Link="RingBuffer.cs" />
+    <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.ArcSuitePreview\SasaLibArcSuitePreviewInfo.cs" Link="SasaLibArcSuitePreviewInfo.cs" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="NeoSmart.AsyncLock" Version="3.2.1" />
+    <PackageReference Include="System.Buffers" Version="4.6.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.IO.Packaging" Version="9.0.0" />
+    <PackageReference Include="System.Management" Version="9.0.0" />
+    <PackageReference Include="System.Memory" Version="4.6.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonTicketClassLibrary\CommonTicketClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
+    <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
+    <ProjectReference Include="..\SasaLibDNet8.NumberingSupport\SasaLibDNet8.NumberingSupport.csproj" />
+    <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\StreamCommandExecutorClient\StreamCommandExecutorClientDNet8.csproj" />
+  </ItemGroup>
+</Project>

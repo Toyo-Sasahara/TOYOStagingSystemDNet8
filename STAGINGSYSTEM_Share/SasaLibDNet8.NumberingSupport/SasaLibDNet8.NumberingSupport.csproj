@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Deterministic>false</Deterministic>
+		<Platforms>AnyCPU;x64</Platforms>
+		<PlatformTarget>x64</PlatformTarget>
+		<NuGetAudit>False</NuGetAudit>
+		<Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\ArcSuiteSupport.cs" Link="ArcSuiteSupport.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\ConversionFormulaNumberConfig.cs" Link="ConversionFormulaNumberConfig.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\ConversionFormulaNumberConfigWork.cs" Link="ConversionFormulaNumberConfigWork.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\MaterialCodeCheck.cs" Link="MaterialCodeCheck.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\MaterialCodeConfig.cs" Link="MaterialCodeConfig.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\MaterialCodeConfigWork.cs" Link="MaterialCodeConfigWork.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\NumberingSuppportConfigs.cs" Link="NumberingSuppportConfigs.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\NumberingWebHelper.cs" Link="NumberingWebHelper.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\NumberTypeConfig.cs" Link="NumberTypeConfig.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\NumberTypeConfigWork.cs" Link="NumberTypeConfigWork.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\PhrasesToBeAwareConfig.cs" Link="PhrasesToBeAwareConfig.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\PhrasesToBeAwareConfigWork.cs" Link="PhrasesToBeAwareConfigWork.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\PurchasingManufacturerCodeConfig.cs" Link="PurchasingManufacturerCodeConfig.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\PurchasingManufacturerCodeConfigWork.cs" Link="PurchasingManufacturerCodeConfigWork.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\SasaLibNumberingSupportInfo.cs" Link="SasaLibNumberingSupportInfo.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\StageServerDatabaseConfig.cs" Link="StageServerDatabaseConfig.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\StageServerDatabaseConfigWork.cs" Link="StageServerDatabaseConfigWork.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\ToyoDrawingTypeClassify.cs" Link="ToyoDrawingTypeClassify.cs" />
+		<Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.NumberingSupport\VariantDrawingNumberSupport.cs" Link="VariantDrawingNumberSupport.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Buffers" Version="4.6.0" />
+	  <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+	  <PackageReference Include="System.IO.Packaging" Version="9.0.0" />
+	  <PackageReference Include="System.Management" Version="9.0.0" />
+	  <PackageReference Include="System.Memory" Version="4.6.0" />
+	  <PackageReference Include="System.Text.Encodings.Web" Version="9.0.0" />
+	  <PackageReference Include="System.Text.Json" Version="8.0.5" />
+	  <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+	  <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+	  <ProjectReference Include="..\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+
+
+</Project>

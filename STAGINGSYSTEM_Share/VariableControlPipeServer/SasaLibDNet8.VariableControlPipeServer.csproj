@@ -1,0 +1,96 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>disable</Nullable>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<RootNamespace>SasaLib.VariableControlPipeServer</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Deterministic>false</Deterministic>
+		<Platforms>AnyCPU;x64</Platforms>
+		<PlatformTarget>x64</PlatformTarget>
+		<Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\CMDNAME.cs" Link="CMDNAME.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\ExecuteCommands\Execute_FileControl.cs" Link="ExecuteCommands\Execute_FileControl.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\ExecuteCommands\Execute_MessageBox.cs" Link="ExecuteCommands\Execute_MessageBox.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\ExecuteCommands\Execute_MsiTool.cs" Link="ExecuteCommands\Execute_MsiTool.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\ExecuteCommands\Execute_ValueControl.cs" Link="ExecuteCommands\Execute_ValueControl.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\ServerInfo.cs" Link="ServerInfo.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\StreamClient\CCMD_CommandSample_Client.cs" Link="StramClient\CCMD_CommandSample_Client.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\StreamServer\CCMD_CommandSample_Server.cs" Link="StreamServer\CCMD_CommandSample_Server.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\クライアント\ExtensionMethod.cs" Link="クライアント\ExtensionMethod.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\クライアント\TcpStream\CMD_GetOneValue.cs" Link="クライアント\TcpStream\CMD_GetOneValue.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\クライアント\VariableControlPipeClient.cs" Link="クライアント\VariableControlPipeClient.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\サーバー\CommandAnalyze.cs" Link="サーバー\CommandAnalyze.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\サーバー\TcpStream\CMD_VCS_CommandSample_Server.cs" Link="サーバー\TcpStream\CMD_VCS_CommandSample_Server.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\サーバー\TcpStream\CMD_VCS_GetValue_Server.cs" Link="サーバー\TcpStream\CMD_VCS_GetValue_Server.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\サーバー\TcpStream\CommandExecutor.cs" Link="サーバー\TcpStream\CommandExecutor.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\サーバー\TcpStream\TestData.cs" Link="サーバー\TcpStream\TestData.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\サーバー\VariableControlPipeServer.cs" Link="サーバー\VariableControlPipeServer.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Asterisk.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Exclamation.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Hand.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Question.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Buffers" Version="4.6.0" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+		<PackageReference Include="System.IO.Packaging" Version="9.0.0" />
+		<PackageReference Include="System.Management" Version="9.0.0" />
+		<PackageReference Include="System.Memory" Version="4.6.0" />
+		<PackageReference Include="System.Text.Encodings.Web" Version="9.0.0" />
+		<PackageReference Include="System.Text.Json" Version="8.0.5" />
+		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="クライアント\TcpStream\" />
+	  <Folder Include="サーバー\TcpStream\" />
+	  <Folder Include="サーバー\TcpStream\" />
+	  <Folder Include="StreamServer\" />
+	  <Folder Include="StramClient\" />
+	  <Folder Include="ExecuteCommands\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.MSIDLL\SasaLibDNet8.MSIDLL.csproj" />
+	  <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.SysConfigurator\SasaLibDNet8.SysConfigurator.csproj" />
+	  <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+	  <ProjectReference Include="..\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
+	  <ProjectReference Include="..\StreamCommandBridge\StreamCommandBridgeDNet8.csproj" />
+	  <ProjectReference Include="..\StreamCommandExecutorClient\StreamCommandExecutorClientDNet8.csproj" />
+	</ItemGroup>
+</Project>

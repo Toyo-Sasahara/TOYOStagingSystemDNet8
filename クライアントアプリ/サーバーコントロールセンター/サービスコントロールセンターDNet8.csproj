@@ -63,27 +63,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.ArcSuitePreview\SasaLibDNet8.ArcSuitePreview.csproj" />
-    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.NumberingSupport\SasaLibDNet8.NumberingSupport.csproj" />
-    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8.VariableControlPipeServer\SasaLibDNet8.VariableControlPipeServer.csproj" />
-    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
-    <ProjectReference Include="..\..\..\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj" />
-    <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\CommonCommitLogic\CommonCommitLogicDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\CommonTicketClassLibrary\CommonTicketClassLibraryDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\DefineCOMDS\DefineCOMDS.DNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\FieldValueSet\FieldValueSetDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawingDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteClientCADtype\RemoteClientCADtypeDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SQLSearchConditonsCreate\SQLSearchConditonsCreateDBNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\StageServerCommon\StageServerCommonDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\StageServerConfig\StageServerConfigDNet8.csproj" />
-    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 および x64%29</ProductName>
@@ -161,6 +140,21 @@
     <Content Include="TestImages\TESTIMAGE-A4.tif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\CommonCommitLogic\CommonCommitLogicDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\GenerateTIFFdrawing\GenerateTIFFdrawingDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteClient\RemoteClientDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\RemoteObjects\RemoteObjectsDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SasaLibDNet8.ArcSuitePreview\SasaLibDNet8.ArcSuitePreview.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SasaLibDNet8.NumberingSupport\SasaLibDNet8.NumberingSupport.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\SQLSearchConditonsCreate\SQLSearchConditonsCreateDBNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\StageServerPrinterService\StageServerPrinterServiceDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\StreamCommandBridge\StreamCommandBridgeDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\StreamCommandExecutorClient\StreamCommandExecutorClientDNet8.csproj" />
+    <ProjectReference Include="..\..\STAGINGSYSTEM_Share\VariableControlPipeServer\SasaLibDNet8.VariableControlPipeServer.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">

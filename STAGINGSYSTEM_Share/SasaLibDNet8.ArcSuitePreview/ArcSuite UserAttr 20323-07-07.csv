@@ -1,0 +1,41 @@
+attrId	displayName_ja	displayName_en	attrType	length	multivalued	maxItem	dbColumnName
+user:Shireibangou	指令番号	Shireibangou	string	20	singlevalued	0	USHIREIBANGOU
+user:description	説明	Description	string	256	singlevalued	0	DESCRIPTION
+user:bookNo	図書番号	BookNumber	string	128	singlevalued	0	BOOK_NO
+user:bookName	図書名	BookName	string	128	singlevalued	0	BOOK_NAME
+user:unit_typeName1	ユニット小分類１	UnitName1	string	120	singlevalued	0	UNIT_TYPENAME1
+user:unit_typeName2	ユニット小分類２	UnitName2	string	120	singlevalued	0	UNIT_TYPENAME2
+user:createDate	作成日付	CreateDate	date	0	singlevalued	0	CREATE_DATE
+user:CustomerName	客先名	CustomerName	string	128	multivalued	10	U_CUSTOMER
+user:DwgNoReserve	図番予約	DwgNoReserve	string	256	singlevalued	0	DWGNO_RESERVE
+user:model_type	製品型式	ModelType	string	20	multivalued	10	U_MODEL_TYPE
+user:bookType	図書種類	BookType	string	50	singlevalued	0	U_BOOK_TYPE
+user:facilityName	設備名	FacilityName	string	120	singlevalued	0	U_FACILITY_NAME
+user:Sekkeisya	設計者名	Sekkeisya	string	120	singlevalued	0	U_SEKKEISYA
+user:Torokubi	登録日付	Torokubi	string	120	singlevalued	0	U_TOROKUBI
+user:keywords	キーワード	Keywords	string	120	multivalued	10	KEYWORDS
+user:Model3D	3Dモデル	3D Model	boolean	0	singlevalued	0	MODEL3D
+user:partName	部品名	Part Name	string	256	singlevalued	0	PARTNAME
+user:material	材質	Material	string	50	multivalued	5	MATERIAL
+user:surface	表面処理	Surface	string	120	singlevalued	0	SURFACE
+user:GuidCode	GUIDコード	GUID CODE	string	36	singlevalued	0	GUIDCODE
+user:GuidCodeBase64	GUIDコード(Base64)	GuidCode(Base64)	string	24	singlevalued	0	GUIDCODEBASE64
+user:Design_Part_Number	設計部品番号	Design Part Number	string	120	singlevalued	0	DESIGN_PART_NUMBER
+user:Yoshi	用紙サイズ	Yoshi	string	120	singlevalued	0	U_YOSHI
+user:Zuban	図面番号	Zuban	string	120	singlevalued	0	U_ZUBAN
+user:ZumenSyurui	図面種類	ZumenSyurui	string	120	singlevalued	0	U_ZUMENSYURUI
+user:model_name	機種名	ModelName	string	120	singlevalued	0	MODEL_NAME
+user:unit_typeName0	ユニット名	UnitName	string	120	singlevalued	0	UNIT_TYPENAME0
+user:status_explanation	状態説明	StatusExplanation	string	256	singlevalued	0	STATUS_EXPLANATION
+user:CadType	CADコード	CAD Code	integer	0	singlevalued	0	CADTYPE
+user:ApprovedDate	承認日付	Approved Date	date	0	singlevalued	0	APPROVEDDATE
+user:ApprovedUser	承認者名	Approved Usef	string	60	singlevalued	0	APPROVEDUSER
+user:GuidTicketCode	GUIDチケットコード	GuidTicketCode	string	24	singlevalued	0	GUIDTICKETCODE
+user:SourceApplication	作成元アプリケーション	Source Application	string	20	singlevalued	0	SOURCEAPPLICATION
+user:ModelCreationOnOrder	3D作成発注中	3D Model on order	string	60	singlevalued	0	MODELCREATIONONORDER
+user:DrawingRevision	図面リビジョン	Drawing Revison	integer	0	singlevalued	0	DRAWINGREVISON
+user:LeaseNumber	リース番号	Lease Number	string	128	singlevalued	0	LEASENUMBER
+user:ModelNumber	型番	Model Number	string	256	singlevalued	0	MODEL_NUMBER
+user:LeaseEndDate	リース終了日時	Lease end date and time	date	0	singlevalued	0	LEASEENDDATE
+user:LeaseStartDate	リース開始日時	Lease start date and time	date	0	singlevalued	0	LEASESTARTDATEa
+user:InventorContentCenter	コンテントセンター	ContentCenter	boolean	0	singlevalued	0	InventorContentCenter
