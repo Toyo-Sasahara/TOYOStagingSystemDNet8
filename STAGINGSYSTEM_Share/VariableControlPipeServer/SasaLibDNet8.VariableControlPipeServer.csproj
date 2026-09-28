@@ -26,7 +26,7 @@
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\StreamServer\CCMD_GeValue_Server.cs" Link="StreamServer\CCMD_GeValue_Server.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\StreamServer\CCMD_SeValue_Server.cs" Link="StreamServer\CCMD_SeValue_Server.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\StreamServer\CommandExecutor.cs" Link="StreamServer\CommandExecutor.cs" />
-	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\StreamServer\VariableControlStreamServer.cs" Link="StreamServer\VariableControlStreamServer.cs" />
+	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\StreamServer\VariableControlStreamServer.cs" Link="サーバー\TcpStream\VariableControlStreamServer.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\クライアント\ExtensionMethod.cs" Link="クライアント\ExtensionMethod.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\クライアント\TcpStream\CMD_GetOneValue.cs" Link="クライアント\TcpStream\CMD_GetOneValue.cs" />
 	  <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\SasaLib.VariableControlPipeServer\クライアント\VariableControlPipeClient.cs" Link="クライアント\VariableControlPipeClient.cs" />
