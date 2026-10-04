@@ -17,14 +17,14 @@ namespace ToyoDRAWCAPTUREserviceDNet8
         /// <summary>
         /// このアセンブリの内部名
         /// </summary>
-        protected static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
+        protected static string? AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
 
-        MailAccount mailAccount;
+        MailAccount? mailAccount;
 
         /// <summary>
         /// サーバーログシステムオブジェクト
         /// </summary>
-        public SasaLib.Logging Logging;
+        public SasaLib.Logging? Logging;
 
         /// <summary>
         /// □サーバー停止を知らせるフラグ
@@ -45,7 +45,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
         /// <summary>
         /// 
         /// </summary>
-        public LocalPrinterWatcher localPrinterWatcher;
+        public LocalPrinterWatcher? localPrinterWatcher;
 
         /// <summary>
         /// このサービスのバージョン文字列を得る
@@ -125,9 +125,6 @@ namespace ToyoDRAWCAPTUREserviceDNet8
             bool Result = TitleFieldConfigWork.ReadTitleFieldConfig(ConfigFilesFullPath.STTitleFieldConfigFullpath, true);
 
         }
-
-
-
 
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)

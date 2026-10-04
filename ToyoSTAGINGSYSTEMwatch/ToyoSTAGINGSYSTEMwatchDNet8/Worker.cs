@@ -16,15 +16,15 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
         /// <summary>
         /// このアセンブリの内部名
         /// </summary>
-        protected static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
+        protected static string? AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
 
-        MailAccount mailAccount;
+        MailAccount? mailAccount;
 
 
         /// <summary>
         /// サーバーログシステムオブジェクト
         /// </summary>
-        public SasaLib.Logging Logging;
+        public SasaLib.Logging? Logging;
 
         /// <summary>
         /// □サーバー停止を知らせるフラグ
@@ -51,7 +51,7 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
         /// <summary>
         /// 
         /// </summary>
-        public LocalPrinterWatcher localPrinterWatcher;
+        public LocalPrinterWatcher? localPrinterWatcher;
 
         /// <summary>
         /// このサービスのバージョン文字列を得る
@@ -136,12 +136,12 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
         /// <summary>
         /// メモリ残量が最初に閾値未満に到達した時に発火するイベントハンドラ
         /// </summary>
-        public event EventHandler<float> AvailableMemoryLessThanTrigger;
+        public event EventHandler<float>? AvailableMemoryLessThanTrigger;
 
         /// <summary>
         /// メモリ残量が最初に閾値以上に到達した時に発火するイベントハンドラ
         /// </summary>
-        public event EventHandler<float> AvailableMemoryAboveTrigger;
+        public event EventHandler<float>? AvailableMemoryAboveTrigger;
 
         /// <summary>
         /// 設定ファイル読込（起動時のみ）
