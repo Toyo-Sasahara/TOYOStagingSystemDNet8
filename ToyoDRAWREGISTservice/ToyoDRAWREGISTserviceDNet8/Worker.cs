@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ToyoStageService;
 using ToyoStageService.StreamBasedServer;
 
-namespace ToyoDRAWCAPTUREserviceDNet8
+namespace ToyoDRAWREGISTserviceDNet8
 {
     public class Worker(ILogger<Worker> logger) : BackgroundService
     {
@@ -20,6 +20,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
         protected static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
 
         MailAccount mailAccount;
+
 
         /// <summary>
         /// サーバーログシステムオブジェクト
@@ -31,6 +32,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
         /// </summary>
         internal volatile bool serviceStop = false;
 
+
         /// <summary>
         /// このアセンブリのバージョンを得る
         /// </summary>
@@ -41,6 +43,11 @@ namespace ToyoDRAWCAPTUREserviceDNet8
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
+
+        ///// <summary>
+        ///// コミットプリンター一覧
+        ///// </summary>
+        //internal List<PrinterInfo> printerInfos;
 
         /// <summary>
         /// 
@@ -64,7 +71,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
         {
             string MainAssembly = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             string SasaLibAssemblyVer = SasaLibInfo.GetAssemblyVersion();
-            GlovalValues.ServerVersion = $"ToyoDRAWCAPTUREservice ver {MainAssembly}|SasaLib Ver {SasaLibAssemblyVer}";
+            GlovalValues.ServerVersion = $"ToyoDRAWREGISTservice ver {MainAssembly}|SasaLib Ver {SasaLibAssemblyVer}";
         }
 
         /// <summary>
@@ -86,6 +93,15 @@ namespace ToyoDRAWCAPTUREserviceDNet8
         private float _availableMemory;
 
 
+        /// <summary>
+        /// メモリ残量が最初に閾値未満に到達した時に発火するイベントハンドラ
+        /// </summary>
+        public event EventHandler<float> AvailableMemoryLessThanTrigger;
+
+        /// <summary>
+        /// メモリ残量が最初に閾値以上に到達した時に発火するイベントハンドラ
+        /// </summary>
+        public event EventHandler<float> AvailableMemoryAboveTrigger;
 
         /// <summary>
         /// 設定ファイル読込（起動時のみ）
@@ -125,9 +141,6 @@ namespace ToyoDRAWCAPTUREserviceDNet8
             bool Result = TitleFieldConfigWork.ReadTitleFieldConfig(ConfigFilesFullPath.STTitleFieldConfigFullpath, true);
 
         }
-
-
-
 
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -194,6 +207,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
 
         }
 
+
         private void InitializeService()
         {
             /// 設定ファイル初読込
@@ -243,7 +257,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
             DebugClass.ConsoleDebugOut(0, $"●{Environment.MachineName} 図面承認・登録システム 【ローカルプリンタ監視サービス】 {AssemblyInternalName} 起動開始します。\n" +
                 $"コンソールログレベル：{GlovalValues.ConsoleWriteLevel}\n");
 
-            SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Information, 4006,
+            SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWREGISTservice", EventLogEntryType.Information, 4006,
                 $"●{Environment.MachineName} 図面承認・登録システム 【ローカルプリンタ監視サービス】 {AssemblyInternalName}  起動開始します。" +
                 $"コンソールログレベル：{GlovalValues.ConsoleWriteLevel}\n" +
                 $"プリンタキュー監視タスク 注意喚起スプール残 ：{StageServerConfig.Config.LocalPrinterWaitJobThreshold} 件以上\n" +
@@ -426,7 +440,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
                 }
                 catch (Exception ex)
                 {
-                    SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Error, 4006, $"※ローカルプリンタ―ステータス取得メソッドの実行中に例外検知{ex.Message}");
+                    SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWREGISTservice", EventLogEntryType.Error, 4006, $"※ローカルプリンタ―ステータス取得メソッドの実行中に例外検知{ex.Message}");
                     ServerLog.MainLogging.LogRotateWriteLine($"※ローカルプリンタ―ステータス取得メソッドの実行中に例外検知{ex.Message}"); ServerLog.MainLogging.Flash();
                 }
 
@@ -464,7 +478,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
                     serverInfo: new StreamCommandExecutorClient.ServerInfo(
                     serverName: "127.0.0.1",
                     tcpPort: StageServerConfig.Config.NewStreamMode_DR_TcpPort),
-                    testMessage: "ToyoDRAWCAPTUREserviceから実行(ストリーム接続)",
+                    testMessage: "ToyoDRAWREGISTserviceから実行(ストリーム接続)",
                     WriteLine: Console.WriteLine
                 );
 
@@ -474,7 +488,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
                 {
                     if (RecoveryMailFlag == true)
                     {
-                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Information, 1000,
+                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWREGISTservice", EventLogEntryType.Information, 1000,
                             $"復旧報告\nToyoDRAWREGISTserviceとのストリーム通信が再開されました."
                             );
                         ToyoStageService.MailNotice.SendAlertEmailFromService("図面登録承認サービス(SW)", "復旧報告", $"●{Environment.MachineName} ■ToyoDRAWREGISTserviceとのストリーム通信が再開されました."
@@ -497,7 +511,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
 
                     if (eventRecodingCountDown < 1)
                     {
-                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Error, 1000,
+                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWREGISTservice", EventLogEntryType.Error, 1000,
                             $"障害報告\n" +
                             $"ToyoDRAWREGISTserviceとのストリーム通信の接続ができません。" +
                             $"チェック間隔 {StageServerConfig.Config.WatchDocTimeSec}sec.\n" +
@@ -554,7 +568,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
                     serverInfo: new StreamCommandExecutorClient.ServerInfo(
                     serverName: "127.0.0.1",
                     tcpPort: StageServerConfig.Config.NewStreamMode_DC_TcpPort),
-                    testMessage: "ToyoDRAWCAPTUREserviceから実行(ストリーム接続)",
+                    testMessage: "ToyoDRAWREGISTserviceから実行(ストリーム接続)",
                     WriteLine: Console.WriteLine
                 );
 
@@ -564,7 +578,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
                 {
                     if (RecoveryMailFlag == true)
                     {
-                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Information, 1000,
+                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWREGISTservice", EventLogEntryType.Information, 1000,
                             $"復旧報告\nToyoDRAWCAPTUREserviceとのストリーム通信が再開されました."
                             );
                         ToyoStageService.MailNotice.SendAlertEmailFromService("図面登録承認サービス(SW)", "復旧報告", $"●{Environment.MachineName} ■ToyoDRAWCAPTUREserviceとのストリーム通信が再開されました."
@@ -587,7 +601,7 @@ namespace ToyoDRAWCAPTUREserviceDNet8
 
                     if (eventRecodingCountDown < 1)
                     {
-                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Error, 1000,
+                        SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWREGISTservice", EventLogEntryType.Error, 1000,
                             $"障害報告\n" +
                             $"ToyoDRAWCAPTUREserviceとのストリーム通信の接続ができません。" +
                             $"チェック間隔 {StageServerConfig.Config.WatchDocTimeSec}sec.\n" +
@@ -615,7 +629,6 @@ namespace ToyoDRAWCAPTUREserviceDNet8
                 await Task.Delay(TimeSpan.FromSeconds(loopWaitSec), stoppingToken);
             }
         }
-
 
 
     }
