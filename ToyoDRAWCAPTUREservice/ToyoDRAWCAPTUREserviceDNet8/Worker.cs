@@ -6,18 +6,20 @@ using StreamCommandExecutorClient;
 using StreamCommandExecutorServer;
 using System.Diagnostics;
 using System.Reflection;
+using System.Windows.Forms;
 using ToyoStageService;
 using ToyoStageService.StreamBasedServer;
 
-namespace ToyoSTAGINGSYSTEMwatchDNet8
+namespace ToyoDRAWCAPTUREserviceDNet8
 {
     public class Worker(ILogger<Worker> logger) : BackgroundService
     {
-
+        /// <summary>
+        /// このアセンブリの内部名
+        /// </summary>
         protected static string AssemblyInternalName = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).InternalName;
 
         MailAccount mailAccount;
-
 
         /// <summary>
         /// サーバーログシステムオブジェクト
@@ -29,7 +31,6 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
         /// </summary>
         internal volatile bool serviceStop = false;
 
-
         /// <summary>
         /// このアセンブリのバージョンを得る
         /// </summary>
@@ -40,11 +41,6 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
-
-        ///// <summary>
-        ///// コミットプリンター一覧
-        ///// </summary>
-        //internal List<PrinterInfo> printerInfos;
 
         /// <summary>
         /// 
@@ -68,7 +64,7 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
         {
             string MainAssembly = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             string SasaLibAssemblyVer = SasaLibInfo.GetAssemblyVersion();
-            GlovalValues.ServerVersion = $"ToyoSTAGINGSYSTEMwatch ver {MainAssembly}|SasaLib Ver {SasaLibAssemblyVer}";
+            GlovalValues.ServerVersion = $"ToyoDRAWCAPTUREservice ver {MainAssembly}|SasaLib Ver {SasaLibAssemblyVer}";
         }
 
         /// <summary>
@@ -106,7 +102,7 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
 
                 if (_availableMemory < StageServerConfig.Config.TriggerAlertRemaingMemoryMegaByte && LowMemoryState == false)
                 {
-                    SasaLib.Eventlog.Log.WriteEntry("ToyoSTAGINGSYSTEMwatch", EventLogEntryType.Warning, 0001,
+                    SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Warning, 0001,
                         $"※サーバーの使用可能メモリが設定値 {StageServerConfig.Config.TriggerAlertRemaingMemoryMegaByte} 未満に達しました。現在 {value} MByte" +
                         $""
                     , false, true);
@@ -118,7 +114,7 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
 
                 if (_availableMemory >= StageServerConfig.Config.TriggerAlertRemaingMemoryMegaByte && LowMemoryState == true)
                 {
-                    SasaLib.Eventlog.Log.WriteEntry("ToyoSTAGINGSYSTEMwatch", EventLogEntryType.Information, 0001,
+                    SasaLib.Eventlog.Log.WriteEntry("ToyoDRAWCAPTUREservice", EventLogEntryType.Information, 0001,
                         $"■サーバーの使用可能メモリが設定値 {StageServerConfig.Config.TriggerAlertRemaingMemoryMegaByte} 以上に回復しました。現在 {value} MByte" +
                         $""
                     , false, true);
@@ -194,6 +190,7 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
         }
 
 
+
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             if (logger.IsEnabled(LogLevel.Information))
@@ -258,7 +255,6 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
             }
 
         }
-
 
         private void InitializeService()
         {
@@ -713,6 +709,7 @@ namespace ToyoSTAGINGSYSTEMwatchDNet8
                 await Task.Delay(TimeSpan.FromSeconds(loopWaitSec), stoppingToken);
             }
         }
+
 
     }
 }
