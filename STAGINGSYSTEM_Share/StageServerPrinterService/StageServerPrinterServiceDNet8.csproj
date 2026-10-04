@@ -31,6 +31,7 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerPrinterService\PrintProcess.cs" Link="PrintProcess.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\BarcodeLibDnet8\BarcodeLibDNet8\BarcodeLibDNet8.csproj" />
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
     <ProjectReference Include="..\..\..\SasaLibTestFrame\SasaLib.DelegateWriteLine\SasaLib.DelegateWriteLine.csproj" />
     <ProjectReference Include="..\MailNotice\MailNoticeDNet8.csproj" />
@@ -42,23 +43,21 @@
     <PackageReference Include="Indigina.Printing" Version="1.2.14" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.31" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
     <PackageReference Include="System.IO" Version="4.3.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\DocuCentre-V5080.XML" />
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\DocuCentre-VII C3373 試作開発課.XML" />
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055.XML">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-A.XML">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\FUJI XEROX DocuWide 6055Folder.XML">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-B.XML">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-A.XML" />
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\RICOH SPC830M-B.XML" />
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\SII Teriostar LP-1030.XML" />
+    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\SII Teriostar LP-1030.XML">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
     <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\Printers\TEMPLATE.XML" />
   </ItemGroup>
 </Project>

@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\SasaLibDNet8\BarcodeLibDnet8\BarcodeLibDNet8\BarcodeLibDNet8.csproj" />
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
-    <ProjectReference Include="..\..\..\SasaLibTestFrame\Barcode_src_1.0.0.21\BarcodeLib\BarcodeLib.csproj" />
     <ProjectReference Include="..\FieldValueSet\FieldValueSetDNet8.csproj" />
     <ProjectReference Include="..\RemoteObjects\RemoteObjectsDNet8.csproj" />
     <ProjectReference Include="..\SharedClassLibrary\SharedClassLibraryDNet8.csproj" />

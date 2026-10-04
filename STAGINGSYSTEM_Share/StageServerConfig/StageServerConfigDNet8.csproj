@@ -24,7 +24,9 @@
     <Compile Include="..\..\..\TOYOSTAGINGSYSTEM\STAGINGSYSTEM_Share\StageServerConfig\StageServerConfigWork.cs" Link="StageServerConfigWork.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\StageServerConfig.XML" />
+    <Content Include="ProgramData（サーバー側設定ファイル）\TOYOCOMMON\StageServerConfig.XML">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\SasaLibDNet8\SasaLibDNet8\SasaLibDNet8.csproj" />
