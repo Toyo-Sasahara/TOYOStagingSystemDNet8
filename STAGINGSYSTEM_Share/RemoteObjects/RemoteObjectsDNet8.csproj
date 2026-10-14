@@ -7,7 +7,7 @@
 		<UseVSHostingProcess>false</UseVSHostingProcess>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<Deterministic>false</Deterministic>
-		<Configurations>Debug;Release;Debug-2027;Release-2027</Configurations>
+		<Configurations>Debug;Release;Debug-2027;Release-2027;2025-Debug</Configurations>
 	</PropertyGroup>
 	<PropertyGroup>
 		<StartupObject />
