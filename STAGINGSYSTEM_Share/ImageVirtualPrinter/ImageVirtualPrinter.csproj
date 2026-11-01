@@ -26,4 +26,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="PdfRelayPrinter\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PdfRelayPrinter\PdfRelayPrinter.csproj" />
+  </ItemGroup>
 </Project>
