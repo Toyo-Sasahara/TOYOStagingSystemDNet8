@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting.WindowsServices;
 using NetworkPrintService;
+using SasaLib;
 using Serilog;
 using Serilog.Core;
+using ToyoStageService;
 
 Directory.SetCurrentDirectory(AppContext.BaseDirectory);
 
@@ -25,6 +27,8 @@ builder.Services.AddHostedService<Worker>();
 builder.Services.AddSingleton<PrintCoordinator>();
 
 var app = builder.Build();
+
+InitializeServerLogIfNeeded();
 
 app.MapGet("/healthz", (ILogger<Program> logger) =>
 {
@@ -64,4 +68,15 @@ try
 finally
 {
     Log.CloseAndFlush();
+}
+
+static void InitializeServerLogIfNeeded()
+{
+    var logFolder = Path.Combine(AppContext.BaseDirectory, "logs");
+    Directory.CreateDirectory(logFolder);
+
+    ServerLog.MainLogging ??= new Logging(logFolder, "NPS-Main.log");
+    ServerLog.OtherLogging ??= new Logging(logFolder, "NPS-Other.log");
+    ServerLog.PipeLogging ??= new Logging(logFolder, "NPS-Pipe.log");
+    ServerLog.DebugLogging ??= new Logging(logFolder, "NPS-Debug.log");
 }
