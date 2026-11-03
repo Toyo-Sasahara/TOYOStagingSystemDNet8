@@ -26,7 +26,7 @@ public sealed class PrintCoordinator(ILogger<PrintCoordinator> logger)
     /// <returns>HTTP 応答に変換可能な印刷実行結果を返します。</returns>
     public async Task<PrintExecutionResult> PrintAsync(PrintRequestForm request, CancellationToken cancellationToken)
     {
-        logger.LogInformation($"■ネットワークプリントサービス PrintCoordinator.PrintAsync(..)メソッドを開始します。DeviceName：{request.DeviceConfigXMLname} ImageFile:{request.ImageFile?.FileName}");
+        logger.LogInformation($"■ネットワークプリントサービス PrintCoordinator.PrintAsync(..)メソッドを開始します。DeviceConfigXMLname：{request.DeviceConfigXMLname} ImageFile:{request.ImageFile?.FileName}");
 
         if (request.ImageFile is null || request.ImageFile.Length <= 0)
         {
