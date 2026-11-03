@@ -113,7 +113,9 @@ public sealed class PrintCoordinator(ILogger<PrintCoordinator> logger)
             {
                 var successDetail = evt.GetEntry();
 
-                logger.LogInformation("印刷を受け付けました。device={DeviceName}, config={ConfigFile}, paper={Paper}, orientation={Orientation}, detail={Detail}", request.DeviceConfigXMLname, successDetail);
+
+                logger.LogInformation($"印刷を受け付けました。DeviceConfigXMLname：{request.DeviceConfigXMLname} ImageFile:{request.ImageFile?.FileName}");
+
                 return PrintExecutionResult.Success($"印刷キューへ投入しました。config={request.DeviceConfigXMLname}", successDetail);
             }
         }
@@ -130,6 +132,7 @@ public sealed class PrintCoordinator(ILogger<PrintCoordinator> logger)
         {
             _printLock.Release();
             TryDelete(tempFilePath);
+            logger.LogInformation($"印刷処理終了。DeviceConfigXMLname");
         }
     }
 
